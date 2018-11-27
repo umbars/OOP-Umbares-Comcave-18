@@ -1,0 +1,1418 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 4 Der Umgang mit Zeichenketten">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 4 Der Umgang mit Zeichenketten">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 4 Der Umgang mit Zeichenketten</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_04_008.html">
+      <link rel="next" href="javainsel_04_010.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_04_008.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_04_010.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf" class="navnav">4 Der Umgang mit Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_001.html#dodtp3a51a1ce-0978-467c-ad16-4319746a6ccc" class="navnav">4.1 Von ASCII über ISO-8859-1 zu Unicode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp8e3b21e8-9b34-42ae-a6cb-ad9566c9831e" class="navnav">4.1.1 ASCII</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpa59ddfc0-e76b-43a8-a743-a24edff8878e" class="navnav">4.1.2 ISO/IEC 8859-1</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp6a3a3085-1e0d-4be0-aa45-e3b815978e94" class="navnav">4.1.3 Unicode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp11eb937b-c70a-480f-8c2d-eb1bb380f6eb" class="navnav">4.1.4 Unicode-Zeichenkodierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp4bdce7ec-3c88-4fdf-ac19-835a220a3b01" class="navnav">4.1.5 Escape-Sequenzen/Fluchtsymbole</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpb52c4df2-888c-4da6-ad78-58aeea44752e" class="navnav">4.1.6 Schreibweise für Unicode-Zeichen und Unicode-Escapes</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpcfd87265-08d6-4165-bb38-ab0e7d417854" class="navnav">4.1.7 Unicode 4.0 und Java *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_002.html#dodtp6bd433f4-397b-45a7-b83d-2ea9fad079d5" class="navnav">4.2 Die Character-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp9e9ad525-a4db-4c10-96ac-4aef98480de5" class="navnav">4.2.1 Ist das so?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6" class="navnav">4.2.2 Zeichen in Großbuchstaben/Kleinbuchstaben konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp0b270e00-e3a1-4095-aa33-a58a636b5466" class="navnav">4.2.3 Ziffern einer Basis *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_003.html#dodtp723df1c9-19b9-42c1-b2af-b2741046ba8e" class="navnav">4.3 Zeichenfolgen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_004.html#dodtp7f11b4f3-2973-47a1-9c29-5043481df6f4" class="navnav">4.4 Die Klasse String und ihre Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpa9c5593a-0700-4fcc-9e70-da09cc747955" class="navnav">4.4.1 String-Literale als String-Objekte für konstante Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp429c8351-9824-436d-9e06-d476d6a63751" class="navnav">4.4.2 Konkatenation mit +</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp484ac879-c6cd-4606-b3cd-408e6a858da7" class="navnav">4.4.3 String-Länge und Test auf Leerstring</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp79be3a85-e352-4084-b230-beeca740084e" class="navnav">4.4.4 Zugriff auf ein bestimmtes Zeichen mit charAt( )</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp1752f70b-a361-4457-b048-e22492906896" class="navnav">4.4.5 Nach enthaltenen Zeichen und Zeichenfolgen suchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp04c666a0-87e6-43b5-b550-9584095dcebc" class="navnav">4.4.6 Das Hangman-Spiel</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp22cdb802-709c-4397-91c9-aff769409895" class="navnav">4.4.7 Gut, dass wir verglichen haben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp19ca6c7a-b71c-4a0f-8eca-aba970744bfd" class="navnav">4.4.8 Phonetische Vergleiche *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp4e4e59a7-35fb-43d1-b04d-28f9c94df327" class="navnav">4.4.9 String-Teile extrahieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpc832c4d5-3109-4fb2-b781-9e6e3c6a7118" class="navnav">4.4.10 Strings anhängen, Groß-/Kleinschreibung und Leerraum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp519a961b-a9e3-488c-be97-69cfd3802c45" class="navnav">4.4.11 Suchen und ersetzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpd8f01562-7259-4afe-8811-bb6765eb61e6" class="navnav">4.4.12 String-Objekte mit Konstruktoren neu anlegen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_005.html#dodtpa464e970-fb6f-47bd-bf9c-d6cb1f0b5349" class="navnav">4.5 Konvertieren zwischen Primitiven und Strings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp5b81d2bf-a8f5-4be2-a0dd-bda1cdba97fa" class="navnav">4.5.1 Unterschiedliche Typen in String-Repräsentationen konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp5ae45208-c979-4bc7-965d-2b4cd851adfc" class="navnav">4.5.2 Stringinhalt in einen primitiven Wert konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp0d763dea-a664-4e0c-8068-6eb2e89ab8bc" class="navnav">4.5.3 String-Repräsentation im Format Binär, Hex, Oktal *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_006.html#dodtpe9f237e4-4d46-46f4-b620-a81d056423de" class="navnav">4.6 Veränderbare Zeichenketten mit StringBuilder und StringBuffer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp728cdc6b-090d-4897-a985-a0f7f2ebbca0" class="navnav">4.6.1 Anlegen von StringBuilder/StringBuffer-Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp4cbab571-d73d-4d7d-99e9-4940df24117b" class="navnav">4.6.2 StringBuilder/StringBuffer in andere Zeichenkettenformate konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpcdeb7fe1-a269-4b28-8438-d0cb6a406408" class="navnav">4.6.3 Zeichen(folgen) erfragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp19fb2cca-a94c-4f97-819a-84fe45c628f0" class="navnav">4.6.4 Daten anhängen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpe9ab9b5b-d1ca-4a09-baa2-1d47f163c64e" class="navnav">4.6.5 Zeichen(folgen) setzen, löschen und umdrehen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpf9593020-cd4c-4869-b8e1-7858b4a9f1a0" class="navnav">4.6.6 Länge und Kapazität eines StringBuilder/StringBuffer-Objekts *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpeffdf00c-3f8c-4207-8a41-1cef0dea8ffb" class="navnav">4.6.7 Vergleichen von String mit StringBuilder und StringBuffer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpb8b924e4-3caf-45e9-8ec2-534f0e8f3d9e" class="navnav">4.6.8 hashCode() bei StringBuilder/StringBuffer *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_007.html#dodtpc529afc1-a964-4b60-8a24-ddfe58852298" class="navnav">4.7 CharSequence als Basistyp *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_008.html#dodtpfc2734b1-8b35-4dd5-966b-bb008cae0761" class="navnav">4.8 Reguläre Ausdrücke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpb7c12b47-3234-4d45-967e-0e365a0e12e6" class="navnav">4.8.1 Pattern.matches() bzw. String#matches()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpfb7f091e-c01c-4a19-a470-7366b52f345a" class="navnav">4.8.2 Die Klassen Pattern und Matcher</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp9e3adb06-b611-43a6-9a50-6fadd4a21478" class="navnav">4.8.3 Finden und nicht matchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp87f2ce0c-c231-4b87-8bd6-b89d0edbb6d4" class="navnav">4.8.4 Gierige und nicht gierige Operatoren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp373481e4-0487-4d29-a834-c22709d68dc9" class="navnav">4.8.5 Mit MatchResult alle Ergebnisse einsammeln *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpeeae7c60-a038-4447-831b-44fb85df67f8" class="navnav">4.8.6 Suchen und Ersetzen mit Mustern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp65efbd99-e97a-4cc1-acd7-c479c110a5c7" class="navnav">4.8.7 Hangman Version 2</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_009.html#dodtp33e02ca1-cb53-403e-92a2-dfe128dcccb2" class="navh">4.9 Zerlegen von Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtpefe7c494-123b-4037-b77c-064e7bd8785c" class="navh">4.9.1 Splitten von Zeichenketten mit split()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp28631111-29c9-4866-9379-819c91beba51" class="navh">4.9.2 Die Klasse Scanner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75" class="navh">4.9.3 Die Klasse StringTokenizer *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp57db9f11-ff30-4a7c-9ef6-8e49bff9d954" class="navh">4.9.4 BreakIterator als Zeichen-, Wort-, Zeilen- und Satztrenner *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_010.html#dodtpbfd38844-3813-4110-896a-4d493bd19e59" class="navnav">4.10 Zeichenkodierungen, XML/HTML-Entitys, Base64 *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp4779f062-da92-42f4-a915-858f81651fae" class="navnav">4.10.1 Unicode und 8-Bit-Abbildungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp684e7e63-8c2f-4d14-b029-d0fb3acd15ed" class="navnav">4.10.2 Das Paket java.nio.charset und der Typ Charset</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp84e7ce20-060f-4df8-8206-6ec17052cd0a" class="navnav">4.10.3 Konvertieren mit OutputStreamWriter/InputStreamReader-Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtpab9d0a59-fa60-44ce-ad48-dea80359dd3a" class="navnav">4.10.4 XML/HTML-Entitys ausmaskieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp636eea3d-2d27-408c-a621-99a7c86ba0c0" class="navnav">4.10.5 Base64-Kodierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_011.html#dodtp502391df-4eac-4eb6-a246-312c07a323f4" class="navnav">4.11 Ausgaben formatieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpc2c16909-1067-42cb-b079-f9644c983574" class="navnav">4.11.1 Formatieren und Ausgeben mit format()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp8cc5820b-ccb2-4047-aa17-679849894d31" class="navnav">4.11.2 Die Formatter-Klasse *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp71722b5f-7b48-48aa-ba84-3cb99a62564c" class="navnav">4.11.3 Formatieren mit Masken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpa51af71d-2ad9-47b5-a12a-0cbf16156752" class="navnav">4.11.4 Format-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp6223d54a-d5d8-4ea7-a487-03f519d21c6b" class="navnav">4.11.5 Zahlen, Prozente und Währungen mit NumberFormat und DecimalFormat formatieren
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpd959a81d-7820-428f-aa66-28f7760d29c1" class="navnav">4.11.6 MessageFormat und Pluralbildung mit ChoiceFormat</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_012.html#dodtpe218ed3c-67d0-4ed9-99fa-58ca5fdbc2b4" class="navnav">4.12 Sprachabhängiges Vergleichen und Normalisierung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtp96f9c2db-2b20-4717-a00c-b204c0a81542" class="navnav">4.12.1 Die Klasse Collator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtpe74de82c-4244-4a9b-9bcf-5d2a671bbb87" class="navnav">4.12.2 Effiziente interne Speicherung für die Sortierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtp88fb2dee-a4ae-4383-9f29-d0811e8b66f0" class="navnav">4.12.3 Normalisierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_013.html#dodtp27438f7a-cc65-47be-bbee-16eef435c867" class="navnav">4.13 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp33e02ca1-cb53-403e-92a2-dfe128dcccb2" name="dodtp33e02ca1-cb53-403e-92a2-dfe128dcccb2"></a><h2 class="t2"><span class="cfett">4.9</span><span class="cfett"> Zerlegen von Zeichenketten</span><a href="#dodtpefe7c494-123b-4037-b77c-064e7bd8785c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Die Java-Bibliothek bietet einige Klassen und Methoden, um nach bestimmten Mustern
+                                                   große Zeichenketten in kleinere zu zerlegen. In diesem Kontext sind die Begriffe <span class="cbegriff">Token</span> und <span class="cbegriff">Delimiter</span> zu nennen: Ein Token ist ein Teil eines Strings, der durch bestimmte Trennzeichen<a class="indexterm" id="dodtpd2f376f1-2562-46cd-9b09-0a6816325d87"></a> (engl. <span class="cbegriff">delimiter</span><a class="indexterm" id="dodtp224e563d-25a7-437e-9ddc-5c3a7dac50f3"></a>) von anderen Tokens getrennt wird. Nehmen wir als Beispiel den Satz »Moderne Musik
+                                                   ist Instrumentespielen nach Noten« (Peter Sellers). Wählen wir Leerzeichen als Trennzeichen,
+                                                   lauten die einzelnen Tokens »Moderne«, »Musik« und so weiter.
+                                                </p>
+                                                <p>Die Java-Bibliothek bietet eine Reihe von Möglichkeiten zum Zerlegen von Zeichenfolgen,
+                                                   von denen die zwei ersten in den nachfolgenden Abschnitten vorgestellt werden:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">split()</span> von <span class="clisting">String</span>: Aufteilen mit einem Delimiter, der durch reguläre Ausdrücke beschrieben wird.
+                                                   </li>
+                                                   <li><span class="clisting">Scanner</span>: Schöne Klasse zum Ablaufen einer Eingabe.
+                                                   </li>
+                                                   <li><span class="clisting">StringTokenizer</span>: Der Klassiker aus Java 1.0. Delimiter sind nur einzelne Zeichen.
+                                                   </li>
+                                                   <li><span class="clisting">BreakIterator</span>: Findet Zeichen-, Wort-, Zeilen- oder Satz-Grenzen.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpefe7c494-123b-4037-b77c-064e7bd8785c" name="dodtpefe7c494-123b-4037-b77c-064e7bd8785c"></a><h3 class="t3"><span class="cfett">4.9.1</span><span class="cfett"> Splitten von Zeichenketten mit split()</span><a href="#dodtp28631111-29c9-4866-9379-819c91beba51"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp33e02ca1-cb53-403e-92a2-dfe128dcccb2"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Objektmethode <span class="clisting">split()</span><a class="indexterm" id="dodtpda1674a4-788c-4df8-8c6d-6f00e7d4251a"></a> eines String-Objekts zerlegt die eigene Zeichenkette in Teilzeichenketten. Die Trenner
+                                                   sind völlig frei wählbar und als regulärer Ausdruck beschrieben. Die Rückgabe ist
+                                                   ein Feld der Teilzeichenketten.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zerlege einen Domain-Namen in seine Bestandteile:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String path = "www.tutego.com";<br>String[] segs = <span class="cfett">path.split</span>( Pattern.quote( "." ) );<br>System.out.println( Arrays.toString(segs) ); // [www, tutego, com]<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Da der Punkt als Trennzeichen ein Sonderzeichen für reguläre Ausdrücke ist, muss er
+                                                               passend mit dem Backslash auskommentiert werden. Das erledigt die statische Methode
+                                                               <span class="clisting">quote()</span>. Andernfalls liefert <span class="clisting">split(".")</span> auf jedem String ein Feld der Länge 0.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Ein häufiger Trenner ist <span class="clisting">\s</span>, also Weißraum.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zähle die Anzahl der Wörter in einem Satz:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String string = "Hört es euch an, denn das ist mein Gedudel!";<br>int nrOfWords = <span class="cfett">string.split( "(\\s|\\p{Punct})+" )</span>.length;<br>System.out.println( nrOfWords );       // 9<br></pre></div>
+                                                               Der Trenner ist entweder Weißraum oder ein Satzeichen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp15e9b0c0-c547-4a6a-a14b-e7e85761409c" name="dodtp15e9b0c0-c547-4a6a-a14b-e7e85761409c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> String.split() geht auf Pattern#split()</span></h4>
+                                                <p>Die <span class="clisting">split()</span>-Methode aus der <span class="clisting">String</span>-Klasse delegiert wie auch bei <span class="clisting">match()</span> an das <span class="clisting">Pattern</span>-Objekt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public String[] split( String regex, int limit )<br>{<br>  return Pattern.compile( regex ).split( this, limit );<br>}<br>public String[] split( String regex )<br>{<br>  return split( regex, 0 );<br>}<br></pre></div>
+                                                <p>Am Quellcode ist zu erkennen, dass für jeden Methodenaufruf von <span class="clisting">split()</span> auf dem <span class="clisting">String</span>-Objekt ein <span class="clisting">Pattern</span><a class="indexterm" id="dodtp2d092590-1475-4be9-bc0e-e14f3088a0e2"></a> übersetzt wird. Das ist nicht ganz billig, und so soll bei mehrmaligem Split mit
+                                                   dem gleichen Zerlege-Muster gleich ein <span class="clisting">Pattern</span>-Objekt und dort das <span class="clisting">split()</span> verwendet werden:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.lang.<span class="cfett">String</span><br>implements CharSequence, Comparable&lt;String&gt;, Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">String[] split(String regex)</span><br>Zerlegt die aktuelle Zeichenkette mit dem regulären Ausdruck.
+                                                   </li>
+                                                   <li><span class="clisting">String[] split(String regex, int limit)</span><br>Zerlegt die aktuelle Zeichenkette mit dem regulären Ausdruck, liefert jedoch maximal
+                                                      begrenzt viele Teilzeichenfolgen.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.util.regex.<span class="cfett">Pattern</span><br>implements Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">String[] split(CharSequence input)</span><br>Zerlegt die Zeichenfolge <span class="clisting">input</span> in Teilzeichenketten, wie es das aktuelle <span class="clisting">Pattern</span>-Objekt befiehlt.
+                                                   </li>
+                                                   <li><span class="clisting">String[] split(CharSequence input, int limit)</span><br>Wie <span class="clisting">split(CharSequence)</span>, doch nur höchstens <span class="clisting">limit</span> viele Teilzeichenketten.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp28631111-29c9-4866-9379-819c91beba51" name="dodtp28631111-29c9-4866-9379-819c91beba51"></a><h3 class="t3"><span class="cfett">4.9.2</span><span class="cfett"> Die Klasse Scanner</span><a href="#dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp15e9b0c0-c547-4a6a-a14b-e7e85761409c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">java.util.Scanner</span><a class="indexterm" id="dodtp7f820dc1-4b76-47f9-a9d5-1178031d6d8f"></a> kann eine Zeichenkette in Tokens zerlegen und einfach Dateien zeilenweise einlesen.
+                                                   Bei der Zerlegung kann ein regulärer Ausdruck den Delimiter beschreiben. Damit ist
+                                                   <span class="clisting">Scanner</span> flexibler als ein <span class="clisting">StringTokenizer</span>, der nur einzelne Zeichen als Trenner zulässt.
+                                                </p>
+                                                <p>Zum Aufbau der <span class="clisting">Scanner</span>-Objekte bietet die Klasse einige Konstruktoren an, die die zu zerlegenden Zeichenfolgen
+                                                   unterschiedlichen Quellen entnehmen, etwa einem String, einem Datenstrom (beim Einlesen
+                                                   von der Kommandozeile wird das <span class="clisting">System.in</span> sein), einem <span class="clisting">File</span>-Objekt oder diversen NIO-Objekten. Falls ein Objekt vom Typ <span class="clisting">Closeable</span> dahintersteckt, wie ein <span class="clisting">Writer</span>, sollte mit <span class="clisting">close()</span> der Scanner geschlossen werden, der das <span class="clisting">close()</span> zum <span class="clisting">Closeable</span> weiterleitet. Beim String ist das nicht nötig, und bei <span class="clisting">File</span> schließt der <span class="clisting">Scanner</span> selbstständig.
+                                                </p><a href="bilder/04_009.png" rel="lightbox" title="UML-Diagramm der Scanner-Klasse"><img class="bild" border="1" src="bilderklein/klein04_009.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 4.8: </strong>UML-Diagramm der Scanner-Klasse
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.util.<span class="cfett">Scanner</span><br>implements Iterator&lt;String&gt;, Closeable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Scanner(String source)</span></li>
+                                                   <li><span class="clisting">Scanner(File source)</span></li>
+                                                   <li><span class="clisting">Scanner(File source, String charsetName)</span></li>
+                                                   <li><span class="clisting">Scanner(Path source)</span></li>
+                                                   <li><span class="clisting">Scanner(Path source, String charsetName)</span></li>
+                                                   <li><span class="clisting">Scanner(InputStream source)</span></li>
+                                                   <li><span class="clisting">Scanner(InputStream source, String charsetName)</span></li>
+                                                   <li><span class="clisting">Scanner(Readable source)</span></li>
+                                                   <li><span class="clisting">Scanner(ReadableByteChannel source)</span></li>
+                                                   <li><span class="clisting">Scanner(ReadableByteChannel source, String charsetName)</span><br>Erzeugt ein neues <span class="clisting">Scanner</span>-Objekt aus diversen Quellen.
+                                                   </li>
+                                                </ul><a id="dodtpef25fa5e-adc1-44d4-86dd-579b68d54aef" name="dodtpef25fa5e-adc1-44d4-86dd-579b68d54aef"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zeilenweises Einlesen einer Datei</span></h4>
+                                                <p>Ist das <span class="clisting">Scanner</span>-Objekt angelegt, lässt sich mit dem Paar <span class="clisting">hasNextLine()</span><a class="indexterm" id="dodtpb9716ac7-adc7-4264-befc-fa480a63aea1"></a> und <span class="clisting">nextLine()</span><a class="indexterm" id="dodtp840c7979-ed2c-43ae-ae7d-b1c557ed9b5c"></a> einfach eine Datei zeilenweise auslesen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 4.20: </strong>ReadAllLines.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.io.*;<br>import java.util.Scanner;<br><br>public class ReadAllLines<br>{<br>  public static void main( String[] args ) throws FileNotFoundException<br>  {<br>   <span class="cfett"> Scanner scanner = new Scanner( new File("EastOfJava.txt") );</span><br>   <span class="cfett"> while ( scanner.hasNextLine() )</span><br>     <span class="cfett"> System.out.println( scanner.nextLine() );</span><br>   <span class="cfett"> scanner.close();</span><br>  }<br>}<br></pre></div>
+                                                <p>Da der Konstruktor von <span class="clisting">Scanner</span> mit der Datei eine Ausnahme auslösen kann, müssen wir diesen möglichen Fehler behandeln.
+                                                   Wir machen es uns einfach und leiten einen möglichen Fehler an die Laufzeitumgebung
+                                                   weiter. Den Umgang mit Exceptions erklärt das gleichnamige Kapitel 6 genauer. Auch
+                                                   sollte immer die Kodierung angegeben werden, doch auch das sparen wir uns für das
+                                                   kleine Beispiel.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.util.<span class="cfett">Scanner</span><br>implements Iterator&lt;String&gt;, Closeable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean hasNextLine()</span><br>Liefert <span class="clisting">true</span>, wenn eine nächste Zeile gelesen werden kann.
+                                                   </li>
+                                                   <li><span class="clisting">String nextLine()</span><br>Liefert die nächste Zeile.
+                                                   </li>
+                                                </ul><a id="dodtpf3559b6d-2ff1-4cb2-8b53-d0b1d23d2c92" name="dodtpf3559b6d-2ff1-4cb2-8b53-d0b1d23d2c92"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Nächste, bitte</span></h4>
+                                                <p>Nach dem Erzeugen des <span class="clisting">Scanner</span>-Objekts liefert die Methode <span class="clisting">next()</span> die nächste Zeichenfolge, wenn denn ein <span class="clisting">hasNext()</span> die Rückgabe <span class="clisting">true</span> ergibt. (Das sind dann auch die Methoden der Schnittstelle <span class="clisting">Iterator</span>, wobei <span class="clisting">remove()</span> nicht implementiert ist.)
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Von der Standardeingabe soll ein <span class="clisting">String</span> gelesen werden:
+                                                               Scanner scanner = new Scanner( System.in );<br>String s = scanner.next();
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Neben der <span class="clisting">next()</span>-Methode, die nur einen String als Rückgabe liefert, bietet <span class="clisting">Scanner</span> diverse <span class="clisting">next&lt;Typ&gt;()</span>-Methoden an, die das nächste Token einlesen und in ein gewünschtes Format konvertieren,
+                                                   etwa in ein <span class="clisting">double</span> bei <span class="clisting">nextDouble()</span>. Über gleich viele <span class="clisting">hasNext&lt;Typ&gt;()</span>-         Methoden lässt sich erfragen, ob ein weiteres Token von diesem Typ folgt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die einzelnen <span class="clisting">nextXXX()</span>- und <span class="clisting">hasNextXXX()</span>-Methoden in einem Beispiel:
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 4.21: </strong>ScannerDemo.java, main()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Scanner scanner = new Scanner( "tutego 12 1973 12,03 True 123456789000" );<br>System.out.println( scanner.<span class="cfett">hasNext()</span> );        // true<br>System.out.println( scanner.<span class="cfett">next()</span> );           // tutego<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( scanner.<span class="cfett">hasNextByte()</span> );    // true<br>System.out.println( scanner.<span class="cfett">nextByte()</span> );       // 12<br>System.out.println( scanner.<span class="cfett">hasNextInt()</span> );     // true<br>System.out.println( scanner.<span class="cfett">nextInt()</span> );        // 1973<br>System.out.println( scanner.<span class="cfett">hasNextDouble()</span> );  // true<br>System.out.println( scanner.<span class="cfett">nextDouble()</span> );     // 12.03<br>System.out.println( scanner.<span class="cfett">hasNextBoolean()</span> ); // true<br>System.out.println( scanner.<span class="cfett">nextBoolean()</span> );    // true<br>System.out.println( scanner.<span class="cfett">hasNextLong()</span> );    // true<br>System.out.println( scanner.<span class="cfett">nextLong()</span> );       // 123456789000<br>System.out.println( scanner.<span class="cfett">hasNext()</span> );        // false<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Sind nicht alle Tokens interessant, überspringt <span class="clisting">Scanner skip(Pattern pattern)</span> beziehungsweise <span class="clisting">Scanner skip(String pattern)</span> sie &#8211; Delimiter werden nicht beachtet.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.util.<span class="cfett">Scanner</span><br>implements Iterator&lt;String&gt;, Closeable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean hasNext()</span></li>
+                                                   <li><span class="clisting">boolean hasNextBigDecimal()</span></li>
+                                                   <li><span class="clisting">boolean hasNextBigInteger()</span></li>
+                                                   <li><span class="clisting">boolean hasNextBigInteger(int radix)</span></li>
+                                                   <li><span class="clisting">boolean hasNextBoolean()</span></li>
+                                                   <li><span class="clisting">boolean hasNextByte()</span></li>
+                                                   <li><span class="clisting">boolean hasNextByte(int radix)</span></li>
+                                                   <li><span class="clisting">boolean hasNextDouble()</span></li>
+                                                   <li><span class="clisting">boolean hasNextFloat()</span></li>
+                                                   <li><span class="clisting">boolean hasNextInt()</span></li>
+                                                   <li><span class="clisting">boolean hasNextInt(int radix)</span></li>
+                                                   <li><span class="clisting">boolean hasNextLong()</span></li>
+                                                   <li><span class="clisting">boolean hasNextLong(int radix)</span></li>
+                                                   <li><span class="clisting">boolean hasNextShort()</span></li>
+                                                   <li><span class="clisting">boolean hasNextShort(int radix)</span><br>Liefert <span class="clisting">true</span>, wenn ein Token des gewünschten Typs gelesen werden kann.
+                                                   </li>
+                                                   <li><span class="clisting">String next()</span></li>
+                                                   <li><span class="clisting">BigDecimal nextBigDecimal()</span></li>
+                                                   <li><span class="clisting">BigInteger nextBigInteger()</span></li>
+                                                   <li><span class="clisting">BigInteger nextBigInteger(int radix)</span></li>
+                                                   <li><span class="clisting">boolean nextBoolean()</span></li>
+                                                   <li><span class="clisting">byte nextByte()</span></li>
+                                                   <li><span class="clisting">byte nextByte(int radix)</span></li>
+                                                   <li><span class="clisting">double nextDouble()</span></li>
+                                                   <li><span class="clisting">float nextFloat()</span></li>
+                                                   <li><span class="clisting">int nextInt()</span></li>
+                                                   <li><span class="clisting">int nextInt(int radix)</span></li>
+                                                   <li><span class="clisting">long nextLong()</span></li>
+                                                   <li><span class="clisting">long nextLong(int radix)</span></li>
+                                                   <li><span class="clisting">short nextShort()</span></li>
+                                                   <li><span class="clisting">short nextShort(int radix)</span><br>Liefert das nächste Token.
+                                                   </li>
+                                                </ul>
+                                                <p>Die Methode <span class="clisting">useRadix(int)</span> ändert die Basis für Zahlen und <span class="clisting">radix()</span> erfragt sie.
+                                                </p><a id="dodtp5cf9fffa-a777-4322-a9c0-a245b9344da7" name="dodtp5cf9fffa-a777-4322-a9c0-a245b9344da7"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Trennzeichen definieren *</span></h4>
+                                                <p><span class="clisting">useDelimiter()</span><a class="indexterm" id="dodtp22de0ada-51d5-4543-a42c-68f64ac0be8c"></a> setzt für die folgenden Filter-Vorgänge den Delimiter. Um nur lokal für das nächste
+                                                   Zerlegen einen Trenner zu setzen, lässt sich mit <span class="clisting">next(String)</span> oder <span class="clisting">next(Pattern)</span> ein Trennmuster angeben. <span class="clisting">hasNext(String)</span> beziehungsweise <span class="clisting">hasNext(Pattern)</span> liefern <span class="clisting">true</span>, wenn das nächste Token dem Muster entspricht.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der String <span class="clisting">s</span> enthält eine Zeile wie <span class="clisting">a := b</span>. Uns interessieren der linke und der rechte Teil:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String s = "Url := http://www.tutego.com";<br>Scanner scanner = new Scanner( s ).useDelimiter( "\\s*:=\\s*" );<br>System.out.printf( "%s = %s", scanner.next(), scanner.next() );<br>// Url = http://www.tutego.com<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Mit <span class="clisting">findInLine(String)</span> beziehungsweise <span class="clisting">findInLine(Pattern)</span> wird der <span class="clisting">Scanner</span> angewiesen, nach dem Muster nur bis zum nächsten Zeilenendezeichen zu suchen; Delimiter
+                                                   ignoriert er.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Suche mit <span class="clisting">findInLine()</span> nach einem Muster:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String text = "Hänsel-und-Gretel\ngingen-durch-den-Wald";<br>Scanner scanner = new Scanner( text ).useDelimiter( "-" );<br>System.out.println( scanner.findInLine( "Wald" ) ); // null<br>System.out.println( scanner.findInLine( "ete" ) );  // "ete"<br>System.out.println( scanner.next() );               // "l" "gingen"<br>System.out.println( scanner.next() );               // "durch"<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Mit <span class="clisting">findWithinHorizon(Pattern, int)</span> beziehungsweise <span class="clisting">findWithinHorizon(String, int)</span> lässt sich eine Obergrenze von Code-Points (vereinfacht ausgedrückt, von Zeichen)
+                                                   angeben. Liefert die Methode in dieser Grenze kein Token, liefert sie <span class="clisting">null</span> und setzt auch den Positionszeiger nicht weiter.
+                                                </p><a id="dodtp94e8f957-78b1-4d1c-ba3e-68b1275b4f11" name="dodtp94e8f957-78b1-4d1c-ba3e-68b1275b4f11"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Landessprachen *</span></h4>
+                                                <p>Auch ist die <span class="clisting">Scanner</span>-Klasse in der Lage, die Dezimalzahlen unterschiedlicher Sprachen zu erkennen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Mit dem passenden <span class="clisting">Locale</span>-Objekt erkennt der Scanner bei <span class="clisting">nextDouble()</span> auch Fließkommazahlen mit Komma, etwa <span class="clisting">"12,34"</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Scanner scanner = new Scanner( "12,34" ).<span class="cfett">useLocale( Locale.GERMAN )</span>;<br>System.out.println( scanner.nextDouble() );   // 12.34<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Das klingt logisch, funktioniert aber bei einem deutschsprachigerm Betriebssystem
+                                                   in der Regel auch ohne <span class="clisting">useLocale(Locale.GERMAN)</span>. Der Grund ist einfach: Der <span class="clisting">Scanner</span> setzt das <span class="clisting">Locale</span> vorher standardmäßig auf <span class="clisting">Locale.getDefault()</span>, und bei auf Deutsch eingestellten Betriebssystemen ist das eben <span class="clisting">Locale.GERMAN</span>. Andersherum bedeutet das, dass eine in englischer Schreibweise angegebene Zahl wie
+                                                   12.34 nicht erkannt wird und der <span class="clisting">Scanner</span> eine <span class="clisting">java.util.InputMismatchException</span><a class="indexterm" id="dodtpd6d1c73a-952d-4619-8a0a-e6dbca54dbef"></a> meldet.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.util.<span class="cfett">Scanner</span><br>implements Iterator&lt;String&gt;, Closeable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Scanner useLocale(Locale locale)</span><br>Setzt die Sprache zum Erkennen der <span class="cbegriff">lokalisierten Zahlen</span><a class="indexterm" id="dodtp8d67e654-3e1a-4bca-a241-6ca9b85b062c"></a>, insbesondere der Fließkommazahlen.
+                                                   </li>
+                                                   <li><span class="clisting">Locale locale()</span><br>Liefert die eingestellte Sprache.
+                                                   </li>
+                                                </ul><a id="dodtp76c93b44-ba8b-4684-aceb-7604539f6365" name="dodtp76c93b44-ba8b-4684-aceb-7604539f6365"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> IO-Fehler während des Parsens *</span></h4>
+                                                <p>Bezieht der <span class="clisting">Scanner</span> die Daten von einem <span class="clisting">Readable</span>, kann es Ein-/Ausgabefehler in Form von <span class="clisting">IOExceptions</span> geben. Methoden wie <span class="clisting">next()</span> geben diese Fehler nicht weiter, sondern fangen sie ab und speichern sie intern.
+                                                   Die Methode <span class="clisting">ioException()</span> liefert dann das letzte <span class="clisting">IOException</span>-Objekt oder <span class="clisting">null</span>, falls es keinen Fehler gab.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75" name="dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75"></a><h3 class="t3"><span class="cfett">4.9.3</span><span class="cfett"> Die Klasse StringTokenizer *</span><a href="#dodtp57db9f11-ff30-4a7c-9ef6-8e49bff9d954"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp76c93b44-ba8b-4684-aceb-7604539f6365"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">StringTokenizer</span><a class="indexterm" id="dodtp199e66c7-9f71-4d21-95d0-661b587741da"></a> zerlegt ebenfalls eine Zeichenkette in Tokens. Der <span class="clisting">StringTokenizer</span> ist jedoch auf einzelne Zeichen als Trennsymbole beschränkt, während die Methode <span class="clisting">split()</span> und die Klassen um <span class="clisting">Pattern</span> einen regulären Ausdruck zur Beschreibung der Trennsymbole erlauben. Es sind keine
+                                                   Zeichenfolgen wie »:=« denkbar.
+                                                </p><a href="bilder/04_010.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein04_010.png" alt="Abbildung"></a><table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Um einen String mithilfe eines <span class="clisting">StringTokenizer</span>-Objekts zu zerlegen, wird dem Konstruktor der Klasse der zu unterteilende Text als
+                                                               Argument übergeben:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String s = "Faulheit ist der Hang zur Ruhe ohne vorhergehende Arbeit";<span class="cfett"><br>StringTokenizer tokenizer = new StringTokenizer( s );</span><br>while <span class="cfett">( tokenizer.hasMoreTokens()</span> )<br>  System.out.println( <span class="cfett">tokenizer.nextToken()</span> );<br></pre></div>
+                                                               Der Text ist ausschließlich ein Objekt vom Typ <span class="clisting">String</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Um den Text abzulaufen, gibt es die Methoden <span class="clisting">nextToken()</span> und <span class="clisting">hasMoreTokens()</span>.<span class="footnote"><a id="dodtp150a646a-e9ec-4ba3-b4e1-4f71dd6797ee">[124](Die Methode hasMoreElements() ruft direkt hasMoreTokens() auf und wurde nur implementiert, da ein
+StringTokenizer die Schnittstelle Enumeration implementiert.)</a></span> Die Methode <span class="clisting">nextToken()</span> liefert das nächste Token im String. Ist kein Token mehr vorhanden, wird eine <span class="clisting">NoSuchElementException</span> ausgelöst. Damit wir frei von diesen Überraschungen sind, können wir mit der Methode
+                                                   <span class="clisting">hasMoreTokens()</span> nachfragen, ob noch ein weiteres Token vorliegt.
+                                                </p>
+                                                <p><a class="indexterm" id="dodtp994b959c-1b43-456c-968c-5ab2648d1d58"></a>In der Voreinstellung sind Tabulator<a class="indexterm" id="dodtp210ddc2c-2668-400a-b1eb-b70c0468cfd0"></a>, Leerzeichen<a class="indexterm" id="dodtpd901de60-c837-4e6f-a32d-9ba0734fe0c1"></a> und Zeilentrenner<a class="indexterm" id="dodtp87a71a6a-a6ac-4b07-8896-c1e7fc7f08fc"></a> die Delimiter<a class="indexterm" id="dodtp286d20cf-973e-4d78-bc40-aa1453c768c1"></a>. Sollen andere Zeichen als die voreingestellten Trenner den Satz zerlegen, kann dem
+                                                   Konstruktor als zweiter String eine Liste von Trennern übergeben werden. Jedes Zeichen,
+                                                   das in diesem String vorkommt, fungiert als einzelnes Trennzeichen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">StringTokenizer st = new StringTokenizer( "Blue=0000ff\nRed:ff0000\n", "=:\n" );<br></pre></div>
+                                                <p>Neben den beiden Konstruktoren existiert noch ein dritter, der auch die Trennzeichen
+                                                   als eigenständige Bestandteile bei <span class="clisting">nextToken()</span> übermittelt.
+                                                </p><a href="bilder/04_011.png" rel="lightbox" title="UML-Diagramm vom StringTokenizer"><img class="bild" border="1" src="bilderklein/klein04_011.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 4.9: </strong>UML-Diagramm vom StringTokenizer
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.util.<span class="cfett">StringTokenizer</span><br>implements Enumeration&lt;Object&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">StringTokenizer(String str, String delim, boolean returnDelims)</span><br>Ein String-Tokenizer für <span class="clisting">str</span>, wobei jedes Zeichen in <span class="clisting">delim</span> als Trennzeichen gilt. Ist <span class="clisting">returnDelims</span> gleich <span class="clisting">true</span>, so sind auch die Trennzeichen Tokens der Aufzählung.
+                                                   </li>
+                                                   <li><span class="clisting">StringTokenizer(String str, String delim)</span><br>Ein String-Tokenizer für <span class="clisting">str</span>, wobei alle Zeichen in <span class="clisting">delim</span> als Trennzeichen gelten. Entspricht dem Aufruf von <span class="clisting">this(str, delim, false);</span></li>
+                                                   <li><span class="clisting">StringTokenizer(String str)</span><br>Ein String-Tokenizer für <span class="clisting">str</span>. Entspricht dem Aufruf von <span class="clisting">this(str, " \t\n\r\f", false);</span>. Die Trennzeichen sind Leerzeichen, Tabulator, Zeilenende und Seitenvorschub.
+                                                   </li>
+                                                   <li><span class="clisting">boolean hasMoreTokens()</span></li>
+                                                   <li><span class="clisting">boolean hasMoreElements()</span><br>Testet, ob ein weiteres Token verfügbar ist. <span class="clisting">hasMoreElements()</span> implementiert die Methode der Schnittstelle <span class="clisting">Enumeration</span>, aber beide Methoden sind identisch.
+                                                   </li>
+                                                   <li><span class="clisting">String nextToken()</span></li>
+                                                   <li><span class="clisting">Object nextElement()</span><br>Liefert das nächste Token vom String-Tokenizer. <span class="clisting">nextElement()</span> existiert nur, damit der Tokenizer als <span class="clisting">Enumeration</span> benutzt werden kann. Der weniger spezifische Ergebnistyp <span class="clisting">Object</span> macht eine Typumwandlung erforderlich.
+                                                   </li>
+                                                   <li><span class="clisting">String nextToken(String delim)</span><br>Setzt die Delimiter-Zeichen neu und liefert anschließend das nächste Token.
+                                                   </li>
+                                                   <li><span class="clisting">int countTokens()</span><br>Zählt die Anzahl der noch möglichen <span class="clisting">nextToken()</span>-Methodenaufrufe, ohne die aktuelle Position zu berühren. Der Aufruf der Methode ist
+                                                      nicht billig.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp57db9f11-ff30-4a7c-9ef6-8e49bff9d954" name="dodtp57db9f11-ff30-4a7c-9ef6-8e49bff9d954"></a><h3 class="t3"><span class="cfett">4.9.4</span><span class="cfett"> BreakIterator als Zeichen-, Wort-, Zeilen- und Satztrenner *</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Benutzer laufen Zeichenketten aus ganz unterschiedlichen Gründen ab. Ein Anwendungsszenario
+                                                   ist das Ablaufen eines Strings Zeichen für Zeichen. In anderen Fällen sind nur einzelne
+                                                   Wörter interessant, die durch Wort- oder Satztrenner separiert sind. In wieder einem
+                                                   anderen Fall ist eine Textausgabe auf eine bestimmte Zeilenlänge gewünscht.
+                                                </p>
+                                                <p>Zum Zerlegen von Zeichenfolgen sieht die Standardbibliothek im Java-Paket <span class="clisting">java.text</span><a class="indexterm" id="dodtpeff0849a-60d6-4617-a236-1eead383c40d"></a> die Klasse <span class="clisting">BreakIterator</span><a class="indexterm" id="dodtpb2e344c5-1613-4637-be7a-97071bc7c58c"></a> vor. Einen konkreten Iterator erzeugen diverse statische Methoden, die optional auch
+                                                   nach speziellen Kriterien einer Sprache trennen. Wenn keine Sprache übergeben wird,
+                                                   wird automatisch die Standardsprache verwendet.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">abstract class java.text.<span class="cfett">BreakIterator</span><br>implements Cloneable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static BreakIterator getCharacterInstance()</span></li>
+                                                   <li><span class="clisting">static BreakIterator getCharacterInstance(Locale where)</span><br>Trennt nach Zeichen. Vergleichbar mit einer Iteration über <span class="clisting">charAt()</span>.
+                                                   </li>
+                                                   <li><span class="clisting">static BreakIterator getSentenceInstance()</span></li>
+                                                   <li><span class="clisting">static BreakIterator getSentenceInstance(Locale where)</span><br>Trennt nach Sätzen. Delimiter sind übliche Satztrenner wie ».«, »!«, »?«.
+                                                   </li>
+                                                   <li><span class="clisting">static BreakIterator getWordInstance()</span></li>
+                                                   <li><span class="clisting">static BreakIterator getWordInstance(Locale where)</span><br>Trennt nach Wörtern. Trenner wie Leerzeichen und Satzzeichen gelten ebenfalls als
+                                                      Wörter.
+                                                   </li>
+                                                   <li><span class="clisting">static BreakIterator getLineInstance()</span></li>
+                                                   <li><span class="clisting">static BreakIterator getLineInstance(Locale where)</span><br>Trennt nicht nach Zeilen, wie der Name vermuten lässt, sondern ebenfalls nach Wörtern. Nur werden
+                                                      Satzzeichen, die am Wort »hängen«, zum Wort hinzugezählt. Praktisch ist dies für Algorithmen,
+                                                      die Textblöcke in eine bestimmte Breite bringen wollen. Ein Beispiel für die drei
+                                                      Typen zeigt das gleich folgende Programm.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Auf den ersten Blick ergibt ein <span class="clisting">BreakIterator</span> von <span class="clisting">getCharacterInstance()</span> keinen großen Sinn, denn für das Ablaufen einer Zeichenkette ließe sich viel einfacher
+                                                               eine Schleife nehmen und mit <span class="clisting">charAt()</span> arbeiten. Der <span class="clisting">BreakIterator</span> kann jedoch korrekt mit Unicode 4 umgehen, wo zwei <span class="clisting">char</span> ein Unicode 4-Zeichen bilden. Zum zeichenweisen Iterieren über Strings ist auch <span class="clisting">CharacterIterator</span> eine gute Lösung.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp4c63b6c9-a552-45ae-9101-35768e23227e" name="dodtp4c63b6c9-a552-45ae-9101-35768e23227e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Beispiel für die drei BreakIterator-Typen</span></h4>
+                                                <p>Das nächste Beispiel zeigt, wie ohne großen Aufwand durch Zeichenketten gewandert
+                                                   werden kann. Die Verwendung eines String-Tokenizers ist nicht nötig. Unsere statische
+                                                   Hilfsmethode <span class="clisting">out()</span> gibt die Abschnitte der Zeichenkette bezüglich eines <span class="clisting">BreakIterator</span> aus:
+                                                </p><a href="bilder/04_012.png" rel="lightbox" title="Klassendiagramm vom BreakIterator"><img class="bild" border="1" src="bilderklein/klein04_012.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 4.10: </strong>Klassendiagramm vom BreakIterator
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 4.22: </strong>BreakIteratorDemo.java, out()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">static void out( String s,<span class="cfett"> BreakIterator iter</span> )<br>{<br>  iter.setText( s );<br><br>  for (<span class="cfett"> int last = iter.first(),next = iter.next();</span><br>       <span class="cfett"> next != BreakIterator.DONE;</span><br>       <span class="cfett"> last = next, next = iter.next()</span> )<br>  {<br>   <span class="cfett"> CharSequence part = s.subSequence( last, next );<br><br>   </span> if ( Character.isLetterOrDigit( part.charAt( 0 ) ) )<br>      System.out.println( part );<br>  }<br>}<br></pre></div>
+                                                <p>Einmal sollen die Wörter und einmal die Sätze ausgegeben werden:</p>
+                                                <p class="plistingunter"><strong>Listing 4.23: </strong>BreakIteratorDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static void main( String[] args )<br>{<br>  String helmutKohl1 = "Ich weiß, dass ich 1945 fünfzehn war und 1953 achtzehn.",<br>         helmutKohl2 = "Das ist eine klassische journalistische Behauptung. " +<br>                       "Sie ist zwar richtig, aber sie ist nicht die Wahrheit.";<br><br>  BreakIterator sentenceIter = BreakIterator.getSentenceInstance();<br>  BreakIterator wordIter     = BreakIterator.getWordInstance();<br>  BreakIterator lineIter     = BreakIterator.getLineInstance();<br><br>  out( helmutKohl1, sentenceIter );<br>  out( helmutKohl2, sentenceIter  );<br><br>  System.out.println( "-----------------" );<br><br>  out( helmutKohl1, wordIter );<br>  out( helmutKohl2, wordIter );<br><br>  System.out.println( "-----------------" );<br><br>  out( helmutKohl1, lineIter );<br>  out( helmutKohl2, lineIter );<br>}<br></pre></div>
+                                                <p>Die Ausgabe enthält (skizziert):</p>
+                                                <div class="listing"><pre class="prettyprint">Ich weiß, dass ich 1945 fünfzehn war und 1953 achtzehn.<br>Das ist eine klassische journalistische Behauptung.<br>Sie ist zwar richtig, aber sie ist nicht die Wahrheit.<br>-----------------<br>Ich<br>weiß<br>...<br>die<br>Wahrheit<br>-----------------<br>Ich<br>weiß,<br>...<br>die<br>Wahrheit.<br></pre></div>
+                                                <p>Im letzten Beispiel ist gut zu sehen, dass die Wörter am Ende ihre Leer- und Satzzeichen
+                                                   behalten.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_04_009.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="4 Der Umgang mit Zeichenketten"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_04_008.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_04_010.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

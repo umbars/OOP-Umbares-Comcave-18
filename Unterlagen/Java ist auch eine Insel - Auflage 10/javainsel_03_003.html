@@ -1,0 +1,866 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 3 Klassen und Objekte">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 3 Klassen und Objekte">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 3 Klassen und Objekte</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_03_002.html">
+      <link rel="next" href="javainsel_03_004.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_03_002.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_03_004.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74" class="navnav">3 Klassen und Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_001.html#dodtp17d1c7c6-9ac6-4fd8-939c-1b73d0443114" class="navnav">3.1 Objektorientierte Programmierung (OOP)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_001.html#dodtp87e0b434-8d3a-47c4-940f-3f5cff7edbdd" class="navnav">3.1.1 Warum überhaupt OOP?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_001.html#dodtp4593e52b-8a04-4e87-a821-dc1499c407ff" class="navnav">3.1.2 Denk ich an Java, denk ich an Wiederverwendbarkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_002.html#dodtpb2cc8e77-15ca-44d7-a42c-e695c92ffc2a" class="navnav">3.2 Eigenschaften einer Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_002.html#dodtp7c05a791-0aaa-4a93-80d4-e642d4df2df7" class="navnav">3.2.1 Die Klasse Point</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_003.html#dodtp54bc8503-4380-48d2-abb3-6a6742af54d7" class="navh">3.3 Die UML (Unified Modeling Language) *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtp69c23cc9-802f-4a60-aee9-6e4770083fde" class="navh">3.3.1 Hintergrund und Geschichte der UML</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtpc835af77-af38-45e7-9ab8-d8b66a5f9d0f" class="navh">3.3.2 Wichtige Diagrammtypen der UML</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtp9aee7c84-6d57-4b72-ad96-c991af57b6c8" class="navh">3.3.3 UML-Werkzeuge</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_004.html#dodtp7f27e4e3-b862-4acc-8daa-efdbe259745b" class="navnav">3.4 Neue Objekte erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp3370d33c-bdab-4ff8-bd84-550b8af47151" class="navnav">3.4.1 Ein Exemplar einer Klasse mit dem new-Operator anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp35f791fc-c0e8-4c62-af3a-12ca9fc65c91" class="navnav">3.4.2 Garbage-Collector (GC) &#8211; Es ist dann mal weg</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp33da7f74-793a-4046-9460-a75648a0f89e" class="navnav">3.4.3 Deklarieren von Referenzvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp926bbe14-21d2-464d-83fb-33d7c779eeb9" class="navnav">3.4.4 Zugriff auf Objektattribute und -methoden mit dem ».«</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp32371272-c63e-4afe-96c7-7e03a945da00" class="navnav">3.4.5 Überblick über Point-Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtpcd16a155-e835-43db-8722-5fdfcfea44a5" class="navnav">3.4.6 Konstruktoren nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_005.html#dodtpb94d3a89-43d4-45b2-90a6-a0371fb3ed23" class="navnav">3.5 ZZZZZnake</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_006.html#dodtp0e94edcf-f716-42af-a043-e0c9d07d7586" class="navnav">3.6 Kompilationseinheiten, Imports und Pakete schnüren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp5b55007e-09bd-4c54-aba2-9a6f7860c9a7" class="navnav">3.6.1 Volle Qualifizierung und import-Deklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp4b68e2f1-077a-4f7d-a6ec-19377539c7bc" class="navnav">3.6.2 Mit import p1.p2.* alle Typen eines Pakets erreichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpde0fb120-1edb-44e8-96ad-84e62c1ddb35" class="navnav">3.6.3 Hierarchische Strukturen über Pakete</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp09d24adc-3851-4aa1-85d1-001f7e3fdeb7" class="navnav">3.6.4 Die package-Deklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpfcd28b6f-2f50-4b66-bee4-83ee9c438426" class="navnav">3.6.5 Unbenanntes Paket (default package)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpe163327f-0e63-4692-b3d0-21499da1ee59" class="navnav">3.6.6 Klassen mit gleichen Namen in unterschiedlichen Paketen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpd16021f5-d550-4eb8-a153-d059a6264519" class="navnav">3.6.7 Compilationseinheit (Compilation Unit)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpc6ea456e-292a-4264-a2e3-55ead97ded44" class="navnav">3.6.8 Statischer Import *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp56f0731b-b4dd-4f1a-8812-1596b0079a41" class="navnav">3.6.9 Eine Verzeichnisstruktur für eigene Projekte *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_007.html#dodtp3057f0ca-3eba-47da-ba0f-3517ff100a0b" class="navnav">3.7 Mit Referenzen arbeiten, Identität und Gleichheit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp2914d204-f947-4d8d-ab3f-320f556fc36b" class="navnav">3.7.1 Die null-Referenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp4111d3df-1beb-4a22-b66b-40b0d76f237a" class="navnav">3.7.2 null-Referenzen testen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp88979110-b341-458d-95f5-20444a5a6ad4" class="navnav">3.7.3 Zuweisungen bei Referenzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp2a7806e2-5c81-4e05-9344-9f559eba6e72" class="navnav">3.7.4 Methoden mit nicht-primitiven Parametern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5" class="navnav">3.7.5 Identität von Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp60b4b83b-b280-4e66-950f-1adf13899e67" class="navnav">3.7.6 Gleichheit und die Methode equals()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_008.html#dodtp9894e88c-16e7-4052-8cc7-1f947e09e784" class="navnav">3.8 Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpbe0848d3-5f0b-4a95-a16e-84b7dd79fd50" class="navnav">3.8.1 Grundbestandteile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp758015c7-7a6a-4a3f-86cf-19780ce92286" class="navnav">3.8.2 Deklaration von Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp08bd4281-c13d-4f5a-b2fe-ffa623c2aeb3" class="navnav">3.8.3 Arrays mit Inhalt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpc22a1578-bd15-4f12-aa78-dc9c0fd55532" class="navnav">3.8.4 Die Länge eines Arrays über das Attribut length auslesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp3ee641a8-4253-4829-8755-f06ba12ac0f8" class="navnav">3.8.5 Zugriff auf die Elemente über den Index</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp51093125-6053-465c-9772-3643dfe87846" class="navnav">3.8.6 Array-Objekte mit new erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp838ce87c-8c3c-426a-bc8f-8adbb0417a4c" class="navnav">3.8.7 Typische Feldfehler</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpaa3321ba-d8b5-4b88-a390-bc8051507d31" class="navnav">3.8.8 Feld-Objekte als Parametertyp</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpca25c434-c39a-48e4-9be6-b14ce0d6eab8" class="navnav">3.8.9 Vorinitialisierte Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpda3a858b-09a5-48d4-ac23-05326336430b" class="navnav">3.8.10 Die erweiterte for-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpeaa8ed4c-1ec8-4a6f-a1f6-5d872ee53a4b" class="navnav">3.8.11 Arrays mit nicht-primitiven Elementen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp1d6dded8-17de-4120-a92a-a795061c7a46" class="navnav">3.8.12 Mehrdimensionale Arrays *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp578891d6-57f2-4535-8c3c-e7dadb2a7df9" class="navnav">3.8.13 Nichtrechteckige Arrays *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpd3d69c99-9b69-472b-a42e-7c874ecc078a" class="navnav">3.8.14 Die Wahrheit über die Array-Initialisierung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp04d38ffe-e684-412d-b842-912ebe459181" class="navnav">3.8.15 Mehrere Rückgabewerte *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpf7c77f49-759f-456b-a1b2-b9add80da278" class="navnav">3.8.16 Methode mit variabler Argumentanzahl (Vararg)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp5415b2df-a8c3-42c7-94be-e5ffc907f72c" class="navnav">3.8.17 Klonen kann sich lohnen &#8211; Arrays vermehren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp349262f1-51ce-4dd7-90e9-af1a633fe416" class="navnav">3.8.18 Feldinhalte kopieren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp5af27dfb-6309-4364-bcb8-99d7420f50ab" class="navnav">3.8.19 Die Klasse Arrays zum Vergleichen, Füllen, Suchen, Sortieren nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp1ab70d5c-60b8-41be-9bca-a8a27973dfb3" class="navnav">3.8.20 Eine lange Schlange</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_009.html#dodtpd196d0e8-dbd1-4033-a10e-ee4a18c49329" class="navnav">3.9 Der Einstiegspunkt für das Laufzeitsystem: main()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtp9c106829-4aba-45d8-bc6b-5a1c4f1ec3fc" class="navnav">3.9.1 Korrekte Deklaration der Startmethode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtp70f5c4ba-dad8-42c9-b23b-1c780abcc999" class="navnav">3.9.2 Kommandozeilenargumente verarbeiten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtpebc38ab3-66e2-4e61-8313-88c3dc83d281" class="navnav">3.9.3 Der Rückgabetyp von main() und System.exit() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_010.html#dodtpb461357a-d25a-4c95-9e3f-2a693348fcec" class="navnav">3.10 Annotationen und Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpd451af66-52be-482f-b215-441c78eb0c01" class="navnav">3.10.1 Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpc2cd6c23-8d8b-43d6-a6ac-3d0fbbb3047d" class="navnav">3.10.2 Annotationen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpa2ec2821-04bc-4263-af41-dd5813039477" class="navnav">3.10.3 Eigene Metadaten setzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtp8568ffe3-6122-450f-b033-7eaf9cc65dc2" class="navnav">3.10.4 Annotationstypen @Override, @Deprecated, @SuppressWarnings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_011.html#dodtp94286bb6-aada-482a-ac1c-13101d509a33" class="navnav">3.11 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp54bc8503-4380-48d2-abb3-6a6742af54d7" name="dodtp54bc8503-4380-48d2-abb3-6a6742af54d7"></a><h2 class="t2"><span class="cfett">3.3</span><span class="cfett"> Die UML (Unified Modeling Language) *</span><a href="#dodtp69c23cc9-802f-4a60-aee9-6e4770083fde"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Für die Darstellung einer Klasse lässt sich Programmcode verwenden, also eine Textform,
+                                                   oder aber eine grafische Notation. Eine dieser grafischen Beschreibungsformen ist
+                                                   die UML<a class="indexterm" id="dodtpbe6ad344-d80c-4c6d-8e49-d4af1e62fff1"></a>. Grafische Abbildungen sind für Menschen deutlich besser zu verstehen und erhöhen
+                                                   die Übersicht.
+                                                </p>
+                                                <p>Im ersten Abschnitt eines UML-Diagramms lassen sich die Attribute ablesen, im zweiten
+                                                   die Operationen. Das + vor den Eigenschaften zeigt an, dass sie öffentlich sind und
+                                                   jeder sie nutzen kann. Die Typenangabe ist gegenüber Java umgekehrt: Zuerst kommt
+                                                   der Name der Variable, dann der Typ beziehungsweise bei Methoden der Typ des Rückgabewerts.
+                                                </p><a href="bilder/03_001.png" rel="lightbox" title="Die Klasse java.awt.Point in der UML-Darstellung"><img class="bild" border="1" src="bilderklein/klein03_001.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 3.1: </strong>Die Klasse java.awt.Point in der UML-Darstellung
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp69c23cc9-802f-4a60-aee9-6e4770083fde" name="dodtp69c23cc9-802f-4a60-aee9-6e4770083fde"></a><h3 class="t3"><span class="cfett">3.3.1</span><span class="cfett"> Hintergrund und Geschichte der UML</span><a href="#dodtpc835af77-af38-45e7-9ab8-d8b66a5f9d0f"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp54bc8503-4380-48d2-abb3-6a6742af54d7"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die UML ist mehr als eine Notation<a class="indexterm" id="dodtp52f1bc0c-ad17-420b-ad82-1b4fcf05027f"></a> zur Darstellung von Klassen. Mit ihrer Hilfe lassen sich Analyse und Design im Softwareentwicklungsprozess
+                                                   beschreiben. Mittlerweile hat sich die UML jedoch zu einer allgemeinen Notation für
+                                                   andere Beschreibungen entwickelt, zum Beispiel für Datenbanken oder Workflow-Anwendungen.
+                                                </p>
+                                                <p>Vor der UML waren andere Darstellungsvarianten wie OMT oder Booch verbreitet. Diese
+                                                   waren eng mit einer Methode verbunden, die einen Entwicklungsprozess und ein Vorgehensmodell
+                                                   beschrieb. Methoden versuchen, eine Vorgehensweise beim Entwurf von Systemen zu beschreiben,
+                                                   etwa »erst Vererbung einsetzen und dann die Attribute finden« oder »erst die Attribute
+                                                   finden und dann mit Vererbung verfeinern«. Bekannte OO-Methoden<a class="indexterm" id="dodtp74001de3-3cc5-4968-92ed-e5b753542890"></a> sind etwa Shlaer/Mellor, Coad/Yourdon, Booch, OMT und OOSE/Objectory. Aus dem Wunsch
+                                                   heraus, OO-Methoden zusammenzufassen, entstand die UML &#8211; anfangs stand die Abkürzung
+                                                   noch für <span class="cbegriff">Unified Method</span><a class="indexterm" id="dodtp0c3de6f6-36d0-43ff-8c37-ac6eddd46dfb"></a>. Die Urversion 0.8 wurde im Jahre 1995 veröffentlicht. Die Initiatoren waren Jim
+                                                   Rumbaugh und Grady Booch. Später kam Ivar Jacobson<a class="indexterm" id="dodtp08ba0b98-2b2a-4a12-baee-ba5d075d3c4a"></a> dazu, und die drei »Amigos<a class="indexterm" id="dodtp6f6456be-74be-4d37-a438-ad37650b23b9"></a>« erweiterten die UML, die in der Version 1.0 bei der <span class="cbegriff">Object Management Group</span><a class="indexterm" id="dodtp9d2bd1de-85f0-4b82-9c50-3a626c4a3f08"></a> (OMG<a class="indexterm" id="dodtp28b25e44-69db-42e2-94d0-7ed065d0f517"></a>) als Standardisierungsvorschlag eingereicht wurde. Die Amigos nannten die UML nun
+                                                   <span class="cbegriff">Unified Modeling Language</span>, was deutlich macht, dass die UML keine Methode ist, sondern lediglich eine Modellierungssprache.
+                                                   Die Spezifikation erweitert sich ständig mit dem Aufkommen neuer Software-Techniken,
+                                                   und so bildet die UML 2.0 Konzepte wie <span class="cbegriff">Model-Driven Architecture</span> (MDA) und <span class="cbegriff">Geschäftsprozessmodellierung</span> (BPM) ab und unterstützt <span class="cbegriff">Echtzeitmodellierung</span> (RT) durch spezielle Diagrammtypen.
+                                                </p>
+                                                <p>Eine aktuelle Version des Standards lässt sich unter <a href="http://tutego.de/go/uml" target="_blank">http://tutego.de/go/uml</a> einsehen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc835af77-af38-45e7-9ab8-d8b66a5f9d0f" name="dodtpc835af77-af38-45e7-9ab8-d8b66a5f9d0f"></a><h3 class="t3"><span class="cfett">3.3.2</span><span class="cfett"> Wichtige Diagrammtypen der UML</span><a href="#dodtp9aee7c84-6d57-4b72-ad96-c991af57b6c8"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp69c23cc9-802f-4a60-aee9-6e4770083fde"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>UML definiert diverse Diagrammtypen, die unterschiedliche Sichten auf die Software
+                                                   beschreiben können. Für die einzelnen Phasen im Softwareentwurf sind jeweils andere
+                                                   Diagramme wichtig. Wir wollen kurz vier Diagramme und ihr Einsatzgebiet besprechen:
+                                                </p><a id="dodtp6dc5c58f-8a98-4634-970d-116251b840f7" name="dodtp6dc5c58f-8a98-4634-970d-116251b840f7"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Anwendungsfalldiagramm</span></h4>
+                                                <p>Ein <span class="cbegriff">Anwendungsfalldiagramm</span><a class="indexterm" id="dodtp499b514d-2b1a-4ebd-a4f7-8f232587fb39"></a> (Use-Cases-Diagramm)<a class="indexterm" id="dodtpf25bede1-b913-4611-9128-b212d93dcd3a"></a> entsteht meist während der Anforderungsphase und beschreibt die Geschäftsprozesse,
+                                                   indem es die Interaktion von Personen &#8211; oder von bereits existierenden Programmen
+                                                   &#8211; mit dem System darstellt. Die handelnden Personen oder aktiven Systeme werden <span class="cbegriff">Aktoren</span><a class="indexterm" id="dodtpf1c61494-e6bf-4658-9c0a-58149c3ceafa"></a> genannt und sind im Diagramm als kleine (geschlechtslose) Männchen angedeutet. Anwendungsfälle<a class="indexterm" id="dodtp2eb8f34a-d365-46fa-989b-6d1621c97cfb"></a> (Use Cases) beschreiben dann eine Interaktion mit dem System.
+                                                </p><a id="dodtp9de0a8ee-63d2-452b-b892-37f475564426" name="dodtp9de0a8ee-63d2-452b-b892-37f475564426"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Klassendiagramm</span></h4>
+                                                <p>Für die statische Ansicht eines Programmentwurfs ist das <span class="cbegriff">Klassendiagramm</span><a class="indexterm" id="dodtp52378e48-4118-42c3-a725-644e6f22f402"></a> einer der wichtigsten Diagrammtypen. Ein Klassendiagramm stellt zum einen die Elemente
+                                                   der Klasse dar, also die Attribute und Operationen, und zum anderen die Beziehungen
+                                                   der Klassen untereinander. Klassendiagramme werden in diesem Buch häufiger eingesetzt,
+                                                   um insbesondere die Assoziation und Vererbung zu anderen Klassen zu zeigen. Klassen
+                                                   werden in einem solchen Diagramm als Rechteck dargestellt, und die Beziehungen zwischen
+                                                   den Klassen werden durch Linien angedeutet.
+                                                </p><a id="dodtp98f075dc-60b2-487c-b97e-7e436f835b5b" name="dodtp98f075dc-60b2-487c-b97e-7e436f835b5b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Objektdiagramm</span></h4>
+                                                <p>Ein Klassendiagramm und ein Objektdiagramm sind sich auf den ersten Blick sehr ähnlich.
+                                                   Der wesentliche Unterschied besteht aber darin, dass ein <span class="cbegriff">Objektdiagramm</span><a class="indexterm" id="dodtpc067fb76-3c71-4efd-a3cf-0572f4956cd5"></a> die Belegung der Attribute, also den Objektzustand, visualisiert. Dazu werden sogenannte
+                                                   <span class="cbegriff">Ausprägungsspezifikationen</span><a class="indexterm" id="dodtpc59d1006-2fd1-4ea5-be1e-cad1fe8e0e53"></a> verwendet. Mit eingeschlossen sind die Beziehungen, die das Objekt zur Laufzeit mit
+                                                   anderen Objekten hält. Beschreibt zum Beispiel ein Klassendiagramm eine Person, so
+                                                   ist es nur ein Rechteck im Diagramm. Hat diese Person zur Laufzeit Freunde (es gibt
+                                                   also Assoziationen zu anderen Personen-Objekten), so können sehr viele Personen in
+                                                   einem Objektdiagramm verbunden sein, während ein Klassendiagramm diese Ausprägung
+                                                   nicht darstellen kann.
+                                                </p><a id="dodtp1a11adac-1a25-43a6-b269-2a16edda7b51" name="dodtp1a11adac-1a25-43a6-b269-2a16edda7b51"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Sequenzdiagramm</span></h4>
+                                                <p>Das <span class="cbegriff">Sequenzdiagramm</span><a class="indexterm" id="dodtpbebaada8-8d63-4fc5-9531-d9ce0d2796cd"></a> stellt das dynamische Verhalten von Objekten dar. <a class="indexterm" id="dodtpc7ef8dfe-f514-4cbb-bf93-e316c16dd7da"></a>So zeigt es an, in welcher Reihenfolge Operationen aufgerufen und wann neue Objekte
+                                                   erzeugt werden. Die einzelnen Objekte bekommen eine vertikale Lebenslinie, und horizontale
+                                                   Linien zwischen den Lebenslinien der Objekte beschreiben die Operationen oder Objekterzeugungen.
+                                                   Das Diagramm liest sich somit von oben nach unten.
+                                                </p>
+                                                <p>Da das Klassendiagramm und das Objektdiagramm eher die Struktur einer Software beschreiben,
+                                                   heißen die Modelle auch <span class="cbegriff">Strukturdiagramme</span> (neben Paketdiagramm, Komponentendiagramm, Kompositionsstrukturdiagramm und Verteilungsdiagramm).
+                                                   Ein Anwendungsfalldiagramm und ein Sequenzdiagramm zeigen daher eher das dynamische
+                                                   Verhalten und werden <span class="cbegriff">Verhaltensdiagramme</span> genannt. Weitere Verhaltensdiagramme sind das Zustandsdiagramm, das Aktivitätsdiagramm,
+                                                   das Interaktionsübersichtsdiagramm, das Kommunikationsdiagramm und das Zeitverlaufsdiagramm.
+                                                   In der UML ist es aber wichtig, die zentralen Aussagen des Systems in einem Diagramm
+                                                   festzuhalten, sodass sich problemlos Diagrammtypen mischen lassen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9aee7c84-6d57-4b72-ad96-c991af57b6c8" name="dodtp9aee7c84-6d57-4b72-ad96-c991af57b6c8"></a><h3 class="t3"><span class="cfett">3.3.3</span><span class="cfett"> UML-Werkzeuge</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp1a11adac-1a25-43a6-b269-2a16edda7b51"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>In der Softwareentwicklung gibt es nicht nur den Java-Compiler und die Laufzeitumgebung,
+                                                   sondern viele weitere Tools. Eine Kategorie von Produkten bilden Modellierungswerkzeuge,
+                                                   die bei der Abbildung einer Realwelt auf die Softwarewelt helfen. Insbesondere geht
+                                                   es um Software, die alle Phasen im Entwicklungsprozess abbildet.
+                                                </p>
+                                                <p>UML-Werkzeuge formen eine wichtige Gruppe, und ihr zentrales Element ist ein grafisches
+                                                   Werkzeug. Mit ihm lassen sich die UML-Diagramme zeichnen und verändern. Im nächsten
+                                                   Schritt kann ein gutes UML-Tool aus diesen Zeichnungen Java-Code erzeugen. Noch weiter
+                                                   als eine einfache Codeerzeugung gehen Werkzeuge, die aus Java-Code umgekehrt UML-Diagramme
+                                                   generieren. Diese <span class="cbegriff">Reverse-Engineering-Tools</span><a class="indexterm" id="dodtpcc5e735a-df64-4792-bf2b-cef754645f17"></a> haben jedoch eine schwere Aufgabe, da Java-Quellcode semantisch so reichhaltig ist,
+                                                   dass entweder das UML-Diagramm »zu voll« ist, völlig unzureichend formatiert ist oder
+                                                   Dinge nicht kompakt abgebildet werden. Die Königsdisziplin der UML-Tools bildet das
+                                                   <span class="cbegriff">Roundtrip-Engineering</span><a class="indexterm" id="dodtp2d0f82c4-0a68-4331-adfa-87c972eb12c0"></a>. Im Optimalfall sind dann das UML-Diagramm und der Quellcode synchron, und jede Änderung
+                                                   der einen Seite spiegelt sich sofort in einer Änderung auf der anderen Seite wider.
+                                                </p><a id="dodtp6e578f0a-d8bf-4fc8-b6d0-6372f7921a22" name="dodtp6e578f0a-d8bf-4fc8-b6d0-6372f7921a22"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> UML-Produkte</span></h4>
+                                                <p>Global gesehen, ist die Anzahl der UML-Tools groß, doch schmilzt die Zahl der Werkzeuge,
+                                                   die in Eclipse eingebunden werden können, rasch zusammen. Noch kleiner ist die Zahl
+                                                   freier UML-Tools. Hier sind einige Empfehlungen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="cbegriff">eUML2</span> (<a href="http://www.soyatec.com/" target="_blank">http://www.soyatec.com/</a>) und <span class="cbegriff">OMONDO</span> (<a href="http://www.omondo.de/" target="_blank">http://www.omondo.de/</a>): Dies sind Eclipse-basierte UML-Tools. Es gibt freie, eingeschränkte Varianten.
+                                                      Einige Entwickler von OMONDO haben sich abgespalten, und daraus ist eUML2 entstanden.
+                                                   </li>
+                                                   <li><span class="cbegriff">ArgoUML</span> (<a href="http://argouml.tigris.org/" target="_blank">http://argouml.tigris.org/</a>) ist ein freies UML-Werkzeug mit UML 1.4-Notation.
+                                                   </li>
+                                                   <li><span class="cbegriff">Apollo for Eclipse</span> und <span class="cbegriff">Poseidon for UML</span> (basiert auf NetBeans) stammen von der deutschen Gentleware AG (<a href="http://www.gentleware.com/" target="_blank">http://www.gentleware.com/</a>) in Hamburg. Die Firma wirbt mit folgender Aussage: »Poseidon for UML is the world&#8217;s most downloaded commercial UML tool, with over 1,200,000 copies distributed to over
+                                                      100 countries.«<span class="footnote"><a id="dodtp520b727c-ae16-4729-916e-a57144fde697">[92](Der Spruch steht schon ein bisschen länger auf der Webseite.)</a></span></li>
+                                                   <li><span class="cbegriff">Together</span> (<a href="http://www.borland.com/de/products/together/" target="_blank">http://www.borland.com/de/products/together/</a>) ist ein alter Hase unter den UML-Tools. Ursprünglich von Togethersoft als eigenständige
+                                                      UML-Software entwickelt, ist es dann in die Hände Borlands gekommen und in die JBuilder-IDE
+                                                      gewandert. Die aktuelle Version <span class="cbegriff">Borland Together</span> basiert auf Eclipse.
+                                                   </li>
+                                                   <li><span class="cbegriff">Rational Rose</span> (<a href="http://www-01.ibm.com/software/de/rational/design.html" target="_blank">http://www-01.ibm.com/software/de/rational/design.html</a>): Das professionelle UML-Werkzeug von IBM zeichnet sich durch seinen Preis aus, aber
+                                                      auch durch die Integration einer ganzen Reihe weiterer Werkzeuge, etwa für Anforderungsdokumente,
+                                                      Tests usw.
+                                                   </li>
+                                                   <li><span class="cbegriff">NetBeans 6</span> (<a href="http://www.netbeans.org/features/uml/" target="_blank">http://www.netbeans.org/features/uml/</a>). NetBeans brachte viele Jahre ein schönes UML-Tool mit. Wie die NetBeans-IDE auch,
+                                                      war es frei. Leider wurde die Weiterentwicklung auf Eis gelegt, und es ist nur für
+                                                      ältere NetBeans-Versionen lauffähig. Die Entwickler sagen, dass die Code-Qualität
+                                                      so schlecht war, dass eine Weiterentwicklung für NetBeans 7 nicht mehr sinnvoll war;
+                                                      vielmehr wollte man eine Neuimplementierung beginnen.
+                                                   </li>
+                                                </ul><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_03_003.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="3 Klassen und Objekte"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_03_002.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_03_004.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

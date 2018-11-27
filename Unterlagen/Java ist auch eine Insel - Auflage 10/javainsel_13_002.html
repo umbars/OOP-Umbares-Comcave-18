@@ -1,0 +1,638 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 13 Einführung in Datenstrukturen und Algorithmen">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 13 Einführung in Datenstrukturen und Algorithmen">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 13 Einführung in Datenstrukturen und
+         Algorithmen
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_13_001.html">
+      <link rel="next" href="javainsel_13_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_13_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_13_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b" class="navnav">13 Einführung in Datenstrukturen und Algorithmen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_001.html#dodtp7062f5e2-d809-45b3-9df9-2b35265592ad" class="navnav">13.1 Datenstrukturen und die Collection-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp3973665a-f246-4744-8f2f-a9f1649d6048" class="navnav">13.1.1 Designprinzip mit Schnittstellen, abstrakten und konkreten Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp4d4c07eb-d8d3-46d3-a44e-90f8eb052a92" class="navnav">13.1.2 Die Basis-Schnittstellen Collection und Map</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp7b2b895a-510a-4ecb-bb7b-d4c8d0f8cff2" class="navnav">13.1.3 Die Utility-Klassen Collections und Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp1f1494bb-eb0e-483c-9fa7-c2a8742df549" class="navnav">13.1.4 Das erste Programm mit Container-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp31b2f4c0-d4af-426a-98cc-b9bfe520d11e" class="navnav">13.1.5 Die Schnittstelle Collection und Kernkonzepte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp54eaf892-b243-4428-ad3f-2b157e10c9a5" class="navnav">13.1.6 Schnittstellen, die Collection erweitern und Map</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp8749382f-7646-4213-9f7b-bd594c581854" class="navnav">13.1.7 Konkrete Container-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp9d400f4f-ee4f-4773-802c-af91612859f1" class="navnav">13.1.8 Generische Datentypen in der Collection-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_001.html#dodtp81168a1c-c46a-4a80-907d-87d3cace6106" class="navnav">13.1.9 Die Schnittstelle Iterable und das erweiterte for</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_002.html#dodtp5e6355b5-c483-4ca9-92f6-7bb32314150d" class="navh">13.2 Listen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_002.html#dodtp99c5007d-2d9c-4e67-b954-844ed6f99b99" class="navh">13.2.1 Erstes Listen-Beispiel</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_003.html#dodtp623ef2b9-16bc-49ba-8a75-21144715f949" class="navnav">13.3 Mengen (Sets)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_003.html#dodtpde46861f-6f34-46c6-bfda-bb72b8167ea7" class="navnav">13.3.1 Ein erstes Mengen-Beispiel</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_003.html#dodtp35ae15e1-de0d-41d4-801f-aa239850427f" class="navnav">13.3.2 Methoden der Schnittstelle Set</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_004.html#dodtp6da5370b-3e76-4c81-87c1-7c8d2c29c958" class="navnav">13.4 Assoziative Speicher</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_004.html#dodtpa0fe5e88-64cd-4e41-9c55-fb9fd98e0b0c" class="navnav">13.4.1 Die Klassen HashMap und TreeMap</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_004.html#dodtp18d65a24-78ec-4573-a832-b910eeace2cd" class="navnav">13.4.2 Einfügen und Abfragen der Datenstruktur</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_004.html#dodtp0b5388ad-a382-4ff9-92b1-1e5a796c7a13" class="navnav">13.4.3 Über die Bedeutung von equals() und hashCode()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_005.html#dodtp29fc5154-f5af-4eca-bb3d-1ef5fb36dc47" class="navnav">13.5 Mit einem Iterator durch die Daten wandern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_005.html#dodtpa9dedefb-d552-4998-bea6-b71441a6ba15" class="navnav">13.5.1 Die Schnittstelle Iterator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_005.html#dodtpcbf79aea-e7df-4f1e-bf3b-ec244fe5966e" class="navnav">13.5.2 Der Iterator kann (eventuell auch) löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_006.html#dodtp8d5d99a3-87ff-4880-b0a3-92fa686249f5" class="navnav">13.6 Algorithmen in Collections</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_006.html#dodtpc31a082a-2c23-42d5-95cb-809260817dd3" class="navnav">13.6.1 Die Bedeutung von Ordnung mit Comparator und Comparable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_006.html#dodtp39b60947-ab62-4d07-97ce-379e2002612a" class="navnav">13.6.2 Sortieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_13_006.html#dodtp46622a09-56fd-40f9-8f42-7e2f8fa17677" class="navnav">13.6.3 Den größten und kleinsten Wert einer Collection finden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_13_007.html#dodtp7f221945-d6ed-41c2-b8f8-1dfca85bddea" class="navnav">13.7 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5e6355b5-c483-4ca9-92f6-7bb32314150d" name="dodtp5e6355b5-c483-4ca9-92f6-7bb32314150d"></a><h2 class="t2"><span class="cfett">13.2</span><span class="cfett"> Listen</span><a href="#dodtp99c5007d-2d9c-4e67-b954-844ed6f99b99"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Eine Liste steht für eine Sequenz von Daten, bei der die Elemente eine feste Reihenfolge
+                                                   besitzen. Die Schnittstelle <span class="clisting">java.util.List</span><a class="indexterm" id="dodtp31aa7e48-0fea-438e-bf1e-6298d823d364"></a> schreibt Verhalten vor, die alle konkreten Listen implementieren müssen. Interessante
+                                                   Realisierungen der <span class="clisting">List</span>-Schnittstelle sind:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">java.util.ArrayList</span><a class="indexterm" id="dodtp88ea71d0-8862-45ef-a24e-1d4bafa736dc"></a>: Liste auf der Basis eines Feldes
+                                                   </li>
+                                                   <li><span class="clisting">java.util.LinkedList</span><a class="indexterm" id="dodtpad0ee063-bb48-4199-aa96-19c29b48f0c9"></a>: Liste durch verkettete Elemente
+                                                   </li>
+                                                   <li><span class="clisting">java.util.concurrent.CopyOnWriteArrayList</span><a class="indexterm" id="dodtp02fee8a8-367b-437f-9a49-3ae5ab7821e5"></a>: schnelle Liste, optimal für häufige nebenläufige Lesezugriffe
+                                                   </li>
+                                                   <li><span class="clisting">java.util.Vector</span> <a class="indexterm" id="dodtp02926ec0-ec4f-441f-acdf-36064fae6712"></a>: synchronisierte Liste seit Java 1.0, die der <span class="clisting">ArrayList</span> wich. Die Klasse ist zwar nicht deprecated, sollte aber nicht mehr verwendet werden.
+                                                   </li>
+                                                </ul>
+                                                <p>Die Methoden zum Zugriff über die gemeinsame Schnittstelle <span class="clisting">List</span> sind immer die gleichen. So ermöglicht jede Liste einen Punktzugriff über <span class="clisting">get(index)</span>, <a class="indexterm" id="dodtp9bc71df7-9620-4e36-a011-17a901cc5058"></a>und jede Liste kann alle gespeicherten Elemente sequenziell über einen Iterator geben.
+                                                   Doch die Realisierungen einer Liste unterscheiden sich in Eigenschaften wie der Performance,
+                                                   dem Speicherplatzbedarf oder der Möglichkeit der sicheren Nebenläufigkeit.
+                                                </p>
+                                                <p>Da in allen Datenstrukturen jedes Exemplar einer von <span class="clisting">Object</span> abgeleiteten Klasse Platz findet, sind die Listen grundsätzlich nicht auf bestimmte
+                                                   Datentypen fixiert, doch Generics spezifizieren diese Typen genauer.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp99c5007d-2d9c-4e67-b954-844ed6f99b99" name="dodtp99c5007d-2d9c-4e67-b954-844ed6f99b99"></a><h3 class="t3"><span class="cfett">13.2.1</span><span class="cfett"> Erstes Listen-Beispiel</span><a href="#dodtp5e6355b5-c483-4ca9-92f6-7bb32314150d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Listen haben die wichtige Eigenschaft, dass sie sich die Reihenfolge der eingefügten
+                                                   Elemente merken und dass Elemente auch doppelt vorkommen können. Wir wollen diese
+                                                   Listenfähigkeit für ein kleines Gedächtnisspiel nutzen. Der Anwender gibt Städte für
+                                                   eine Route vor, die sich das Programm in einer Liste merkt. Nach der Eingabe eines
+                                                   neuen Ziels auf der Route soll der Anwender alle Städte in der richtigen Reihenfolge
+                                                   wiedergeben. Hat er das geschafft, kommt eine neue Stadt hinzu. Im Prinzip ist das
+                                                   Spiel unendlich, doch da sich kein Mensch unendlich viele Städe in der Reihenfolge
+                                                   merken kann, wird es zu einer Falscheingabe kommen, was das Programm beendet.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 13.2: </strong>com/tutego/insel/util/list/HowDoesYourRouteLooksLike.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.util.list;<br><br>import java.text.*;<br>import java.util.*;<br><br>public class HowDoesYourRouteLooksLike<br>{<br>  public static void main( String[] args )<br>  {<br>   <span class="cfett"> List&lt;String&gt; cities = new ArrayList&lt;String&gt;();<br><br>   </span> while ( true )<br>    {<br>      System.out.println( "Welche neue Stadt kommt hinzu?" );<br>      String newCity = new Scanner( System.in ).nextLine();<br>     <span class="cfett"> cities.add( newCity );<br><br>     </span> System.out.printf( "Wie sieht die gesamte Route aus? (Tipp: %d %s)%n",<br>                        <span class="cfett"> cities.size()</span>,<br>                        <span class="cfett"> cities.size()</span> == 1 ? "Stadt" : "Städte" );<br><br>     <span class="cfett"> for ( String city : cities )</span><br>      {<br>        String guess = new Scanner( System.in ).nextLine();<br>        if ( ! city.equalsIgnoreCase( guess ) )<br>        {<br>          System.out.printf( "%s ist nicht richtig, %s wäre korrekt. Schade!%n",<br>                             guess, city );<br>          return;<br>        }<br>      }<br>      System.out.println( "Prima, alle Städte in der richtigen Reihenfolge!" );<br>    }<br>  }<br>}<br></pre></div>
+                                                <p>Die Methoden der Schnittstelle <span class="clisting">List</span> sind:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">interface java.util.<span class="cfett">List</span>&lt;E&gt;<br>extends Collection&lt;E&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean add(E o)</span><br>Fügt das Element am Ende der Liste an. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">void add(int index, E element)</span><br>Fügt ein Objekt an der angegebenen Stelle in die Liste ein. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">boolean addAll(int index, Collection&lt;? extends E&gt; c)</span><br>Fügt alle Elemente der Collection an der angegebenen Stelle in die Liste ein. Eine
+                                                      optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">void clear()</span><br>Löscht alle Elemente aus der Liste. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">boolean contains(Object o)</span><br>Liefert <span class="clisting">true</span>, wenn das Element <span class="clisting">o</span> in der Liste ist. Den Vergleich übernimmt <span class="clisting">equals()</span>, und es ist kein Referenz-Vergleich.
+                                                   </li>
+                                                   <li><span class="clisting">boolean containsAll(Collection&lt;?&gt; c)</span><br>Liefert <span class="clisting">true</span>, wenn alle Elemente der Sammlung <span class="clisting">c</span> in der aktuellen Liste sind.
+                                                   </li>
+                                                   <li><span class="clisting">E get(int index)</span><br>Wird das Element an dieser angegebenen Stelle der Liste liefern.
+                                                   </li>
+                                                   <li><span class="clisting">int indexOf(Object o)</span><br>Liefert die Position des ersten Vorkommens für <span class="clisting">o</span> oder &#8211;1, wenn kein Listenelement mit <span class="clisting">o</span> inhaltlich &#8211; also per <span class="clisting">equals()</span> und nicht per Referenz &#8211; übereinstimmt. Leider gibt es keine Methode, um ab einer
+                                                      bestimmten Stelle weiterzusuchen, so wie sie die Klasse <span class="clisting">String</span> bietet. Dafür lässt sich jedoch eine Teilliste einsetzen, die <span class="clisting">subList()</span> bildet &#8211; eine Methode, die später in der Aufzählung folgt.
+                                                   </li>
+                                                   <li><span class="clisting">boolean isEmpty()</span><br>Liefert <span class="clisting">true</span>, wenn die Liste leer ist.
+                                                   </li>
+                                                   <li><span class="clisting">Iterator&lt;E&gt; iterator()</span><br>Liefert den Iterator. Die Methode ruft aber <span class="clisting">listIterator()</span> auf und gibt ein <span class="clisting">ListIterator</span>-Objekt zurück.
+                                                   </li>
+                                                   <li><span class="clisting">int lastIndexOf(Object o)</span><br>Sucht von hinten in der Liste nach dem ersten Vorkommen von <span class="clisting">o</span> und liefert &#8211;1, wenn kein Listenelement inhaltlich mit <span class="clisting">o</span> übereinstimmt.
+                                                   </li>
+                                                   <li><span class="clisting">ListIterator&lt;E&gt; listIterator()</span><br>Liefert einen Listen-Iterator für die ganze Liste. Ein Listen-Iterator bietet gegenüber
+                                                      dem allgemeinen Iterator für Container zusätzliche Operationen.
+                                                   </li>
+                                                   <li><span class="clisting">ListIterator&lt;E&gt; listIterator(int index)</span><br>Liefert einen Listen-Iterator, der die Liste ab der Position <span class="clisting">index</span> durchläuft.
+                                                   </li>
+                                                   <li><span class="clisting">E remove(int index)</span><br>Entfernt das Element an der Position <span class="clisting">index</span> aus der Liste.
+                                                   </li>
+                                                   <li><span class="clisting">boolean remove(Object o)</span><br>Entfernt das erste Objekt in der Liste, das <span class="clisting">equals()</span>-gleich mit <span class="clisting">o</span> ist. Liefert <span class="clisting">true</span>, wenn ein Element entfernt wurde. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">boolean removeAll(Collection&lt;?&gt; c)</span><br>Löscht in der eigenen Liste die Elemente aus <span class="clisting">c</span>. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">boolean retainAll(Collection&lt;?&gt; c)</span><br>Optional. Entfernt alle Objekte aus der Liste, die nicht in der Collection <span class="clisting">c</span> vorkommen.
+                                                   </li>
+                                                   <li><span class="clisting">E set(int index, E element)</span><br>Ersetzt das Element an der Stelle <span class="clisting">index</span> durch <span class="clisting">element</span>. Eine optionale Operation.
+                                                   </li>
+                                                   <li><span class="clisting">List&lt;E&gt; subList(int fromIndex, int toIndex)</span><br>Liefert den Ausschnitt dieser Liste von Position <span class="clisting">fromIndex</span> (einschließlich) bis <span class="clisting">toIndex</span> (nicht mit dabei). Die zurückgelieferte Liste stellt eine Ansicht eines Ausschnitts
+                                                      der Originalliste dar. Änderungen an der Teilliste wirken sich auf die ganze Liste
+                                                      aus und umgekehrt (soweit sie den passenden Ausschnitt betreffen).
+                                                   </li>
+                                                   <li><span class="clisting">boolean equals(Object o)</span><br>Vergleicht die Liste mit einer anderen Liste. Zwei Listen-Objekte sind gleich, wenn
+                                                      ihre Elemente paarweise gleich sind.
+                                                   </li>
+                                                   <li><span class="clisting">int hashCode()</span><br>Liefert den Hashcode der Liste.
+                                                   </li>
+                                                </ul>
+                                                <p>Was <span class="clisting">List</span> der <span class="clisting">Collection</span> hinzufügt, sind also die Index-basierten Methoden <span class="clisting">add(int index, E element)</span>, <span class="clisting">addAll(int index, Collection&lt;? extends E&gt; c)</span>, <span class="clisting">get(int index)</span>, <span class="clisting">indexOf(Object o)</span>, <span class="clisting">lastIndexOf(Object o)</span>, <span class="clisting">listIterator()</span>, <span class="clisting">listIterator(int index)</span>, <span class="clisting">remove(int index)</span>, <span class="clisting">set(int index, E element)</span> und <span class="clisting">subList(int fromIndex, int toIndex)</span>.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_13_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="13 Einführung in Datenstrukturen und Algorithmen"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_13_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_13_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

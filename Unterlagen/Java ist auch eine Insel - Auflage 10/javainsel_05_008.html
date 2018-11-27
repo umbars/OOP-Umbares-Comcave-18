@@ -1,0 +1,1268 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 5 Eigene Klassen schreiben">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 5 Eigene Klassen schreiben">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 5 Eigene Klassen schreiben</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_05_007.html">
+      <link rel="next" href="javainsel_05_009.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_05_007.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_05_009.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4" class="navnav">5 Eigene Klassen schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_001.html#dodtpfad8dec2-3342-4f23-a2b0-aacb03d77cd3" class="navnav">5.1 Eigene Klassen mit Eigenschaften deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_001.html#dodtp3f840e12-77bd-43aa-99d2-4b6abb04b376" class="navnav">5.1.1 Attribute deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_001.html#dodtp7486d436-0724-4407-8e7b-b27c2225e1e8" class="navnav">5.1.2 Methoden deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_001.html#dodtp280ffac0-64dd-4d4f-8f06-e5a12cd810dc" class="navnav">5.1.3 Die this-Referenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_002.html#dodtp2f2a18cf-abe8-48d5-843d-dc7a54b6645b" class="navnav">5.2 Privatsphäre und Sichtbarkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtp0734b3e5-b1da-4c0a-89aa-942d15e62581" class="navnav">5.2.1 Für die Öffentlichkeit: public</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtpd27ccc99-e546-4f56-b581-22418de51d7a" class="navnav">5.2.2 Kein Public Viewing &#8211; Passwörter sind privat</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtp3ff34fdb-331c-4bf3-b522-341ecf546d57" class="navnav">5.2.3 Wieso nicht freie Methoden und Variablen für alle?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtp4c6a434f-ab3e-4f47-a263-f1189a63ad9d" class="navnav">5.2.4 Privat ist nicht ganz privat: Es kommt darauf an, wer&#8217;s sieht *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtpce543411-d512-43fb-9f6f-dcead5cfb3c7" class="navnav">5.2.5 Zugriffsmethoden für Attribute deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtpe6811d17-4550-4abe-847a-099e0d912900" class="navnav">5.2.6 Setter und Getter nach der JavaBeans-Spezifikation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtp415b8094-7228-4acb-bdbf-bb8c987ffb68" class="navnav">5.2.7 Paketsichtbar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_002.html#dodtpfb5f7361-adc5-4f6d-bb52-c834da20b996" class="navnav">5.2.8 Zusammenfassung zur Sichtbarkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_003.html#dodtp866b6111-d90d-4a76-b824-b4cb3d527f05" class="navnav">5.3 Statische Methoden und statische Attribute</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtpfa649357-75f2-46a8-bc7a-1cad0549c95c" class="navnav">5.3.1 Warum statische Eigenschaften sinnvoll sind</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtp8995de5a-0fcb-46a1-8117-846a0da8417b" class="navnav">5.3.2 Statische Eigenschaften mit static</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtp95b4efcb-a1be-4c9b-8afb-46a2d6ac2507" class="navnav">5.3.3 Statische Eigenschaften über Referenzen nutzen? *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtp91c03e76-20a7-40e2-874b-8f72e9f8350c" class="navnav">5.3.4 Warum die Groß- und Kleinschreibung wichtig ist *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtp17498c9a-3514-48c6-9cc7-4c2c9069b79c" class="navnav">5.3.5 Statische Variablen zum Datenaustausch *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_003.html#dodtp33ee6230-24ea-446a-a3fc-8e38ec16f6c4" class="navnav">5.3.6 Statische Eigenschaften und Objekteigenschaften *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_004.html#dodtp99fcaeb5-dae4-420d-ba2c-d3994f0dd49c" class="navnav">5.4 Konstanten und Aufzählungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_004.html#dodtpc89f7f5f-6236-46fa-847d-6cb797175a98" class="navnav">5.4.1 Konstanten über öffentliche statische finale Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_004.html#dodtp4b779c3d-089c-4970-8d22-860bf1bec987" class="navnav">5.4.2 Typ(un)sichere Aufzählungen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_004.html#dodtp4a00920c-2407-4586-a0c5-c21d67dc887f" class="navnav">5.4.3 Aufzählungen mit enum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_005.html#dodtp0417aca4-47d5-4253-99cb-23ef7ab6cb84" class="navnav">5.5 Objekte anlegen und zerstören</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtp0fb99ec7-7375-4695-94b1-a87706b8de58" class="navnav">5.5.1 Konstruktoren schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtpf1a376eb-3538-4b9c-8a5e-714c4f6d378c" class="navnav">5.5.2 Der vorgegebene Konstruktor (default constructor)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtp7d30e41e-f8ff-42a4-9ad2-6be9e3694039" class="navnav">5.5.3 Parametrisierte und überladene Konstruktoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtped32f290-648d-4a6f-9cda-825b57623557" class="navnav">5.5.4 Copy-Konstruktor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtp3231b346-a3b5-483d-bbcd-dd84a6afe699" class="navnav">5.5.5 Einen anderen Konstruktor der gleichen Klasse mit this() aufrufen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtpc3f8225a-6b16-4d7c-9af0-e9629d80eba3" class="navnav">5.5.6 Ihr fehlt uns nicht &#8211; der Garbage-Collector</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_005.html#dodtp409603ed-ca7a-4bb7-a712-af63053eeebe" class="navnav">5.5.7 Private Konstruktoren, Utility-Klassen, Singleton, Fabriken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_006.html#dodtpe109f2a5-6db2-4444-9bf9-d06c3437312e" class="navnav">5.6 Klassen- und Objektinitialisierung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtp3adceb77-c404-4257-9fca-64d700ebaaa5" class="navnav">5.6.1 Initialisierung von Objektvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtpf09d4e31-719a-4bdc-bdff-d10f3483aa88" class="navnav">5.6.2 Statische Blöcke als Klasseninitialisierer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtpe7efcf86-dd5d-40de-86ee-33c7aee4db87" class="navnav">5.6.3 Initialisierung von Klassenvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtp27fb8ed1-c55a-4594-aabf-a77b4f1fcff5" class="navnav">5.6.4 Eincompilierte Belegungen der Klassenvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtpf99405f4-9d8b-4470-8d5a-00062c1d68d9" class="navnav">5.6.5 Exemplarinitialisierer (Instanzinitialisierer)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_006.html#dodtp50c7de29-cc38-402f-8a32-eec1057eed9c" class="navnav">5.6.6 Finale Werte im Konstruktor und in statischen Blöcken setzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_007.html#dodtp8bf07782-ef72-4e57-857f-07a575ef5a3f" class="navnav">5.7 Assoziationen zwischen Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_007.html#dodtp45b041f3-6c37-47c9-977d-8ab4564e4bfd" class="navnav">5.7.1 Unidirektionale 1:1-Beziehung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_007.html#dodtp11ce0ed3-e937-4fc6-a772-b6a6b74acb40" class="navnav">5.7.2 Bidirektionale 1:1-Beziehungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_007.html#dodtp3f0fc43b-8ecf-4203-91b1-7eab94895286" class="navnav">5.7.3 Unidirektionale 1:n-Beziehung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_008.html#dodtpb085bfe8-9ffe-48a2-bfb4-87c3b1b69ee8" class="navh">5.8 Vererbung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtp08395b22-06fa-4b3a-a851-c87116c54a84" class="navh">5.8.1 Vererbung in Java</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtpf9895936-8db1-4119-8562-bddf22005a72" class="navh">5.8.2 Spielobjekte modellieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtp57a5901b-2305-4ed4-b95c-af33ce66a63d" class="navh">5.8.3 Die implizite Basisklasse java.lang.Object</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtp6724741e-4e15-4ff5-b868-f5dfc638c585" class="navh">5.8.4 Einfach- und Mehrfachvererbung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtpd49b9b41-933e-488b-b4d3-34e3bdba9a16" class="navh">5.8.5 Die Sichtbarkeit protected</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_008.html#dodtp85e297f7-2373-425c-b4f8-7c0ae7f18cfe" class="navh">5.8.6 Konstruktoren in der Vererbung und super()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_009.html#dodtpbfc3f481-657e-4e1f-8046-9d7c6a4fae08" class="navnav">5.9 Typen in Hierarchien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_009.html#dodtp033506df-a7c2-48a5-8677-335830c6b7ba" class="navnav">5.9.1 Automatische und explizite Typanpassung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_009.html#dodtp2463ba3b-ef66-430b-8b29-0dc597964498" class="navnav">5.9.2 Das Substitutionsprinzip</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_009.html#dodtp14c07ec4-50ad-4e31-a26d-43c37526d8d0" class="navnav">5.9.3 Typen mit dem instanceof-Operator testen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_010.html#dodtpf9f4c5d6-4628-432e-9ed5-962221e6df47" class="navnav">5.10 Methoden überschreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_010.html#dodtp655edc02-99fe-499e-b92a-07a7042c6f4c" class="navnav">5.10.1 Methoden in Unterklassen mit neuem Verhalten ausstatten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_010.html#dodtp23647911-638c-40f4-a5f9-bd123d52b6dd" class="navnav">5.10.2 Mit super an die Eltern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_010.html#dodtpcd7c734d-1ac9-4bc6-8a0a-eab14c6606af" class="navnav">5.10.3 Finale Klassen und finale Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_010.html#dodtpca8aaefb-fd01-4113-953d-24c54f3bfeb0" class="navnav">5.10.4 Kovariante Rückgabetypen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_010.html#dodtp53cb8466-472a-4133-8b65-65c733a940da" class="navnav">5.10.5 Array-Typen und Kovarianz *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_011.html#dodtpdc54ef4d-946a-4af3-8b58-ccc36052b8c9" class="navnav">5.11 Drum prüfe, wer sich ewig dynamisch bindet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_011.html#dodtp9a1e87d1-88eb-4365-b816-4c4b05a08384" class="navnav">5.11.1 Gebunden an toString()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_011.html#dodtp5f2f4405-778d-41b1-bdd3-4b8664f18932" class="navnav">5.11.2 Implementierung von System.out.println(Object)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_011.html#dodtpb325ac90-ff4b-4da2-bd2f-2231ce39e48c" class="navnav">5.11.3 Nicht dynamisch gebunden bei privaten, statischen und finalen Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_011.html#dodtp657d07bb-e569-40f1-8776-ad1a2343f8e5" class="navnav">5.11.4 Dynamisch gebunden auch bei Konstruktoraufrufen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_011.html#dodtpcc56f913-f449-4f9f-8783-4b2ab23ae852" class="navnav">5.11.5 Eine letzte Spielerei mit Javas dynamischer Bindung und überschatteten Attributen
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_012.html#dodtpd2ed3e4a-d795-4c52-9357-cb640e8f256f" class="navnav">5.12 Abstrakte Klassen und abstrakte Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_012.html#dodtp6ad34551-1943-46b4-be1b-54fea0aee6eb" class="navnav">5.12.1 Abstrakte Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_012.html#dodtp9f813e6f-75f1-4eba-a5e2-ffeb4f9266b4" class="navnav">5.12.2 Abstrakte Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_013.html#dodtp4cdf05f9-ab55-4791-9fa2-c6929cc1a19d" class="navnav">5.13 Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp24fd4d7f-b8e2-4060-9d9a-ff190708e44b" class="navnav">5.13.1 Schnittstellen deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtpa7673cb2-2dcb-4fd3-adba-ef12c2e607c9" class="navnav">5.13.2 Implementieren von Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp34c1156b-3f54-4242-ae75-09c3a264fc6b" class="navnav">5.13.3 Markierungsschnittstellen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp8da85051-37e8-4f7c-a61a-35974238fcea" class="navnav">5.13.4 Ein Polymorphie-Beispiel mit Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp1beab676-fa68-4036-9fa0-ac41e5fd5907" class="navnav">5.13.5 Die Mehrfachvererbung bei Schnittstellen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp70c07db9-e53b-4311-80c5-519ccfd05a35" class="navnav">5.13.6 Keine Kollisionsgefahr bei Mehrfachvererbung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtpc4ed2300-c606-4ad8-9e02-736b2d2fb8d6" class="navnav">5.13.7 Erweitern von Interfaces &#8211; Subinterfaces</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp5de8e16f-5571-4c79-b132-3ff1cf50a0de" class="navnav">5.13.8 Konstantendeklarationen bei Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtpd60c1d5b-8a02-463d-a94d-0adfdcf16f0d" class="navnav">5.13.9 Initialisierung von Schnittstellenkonstanten *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_05_013.html#dodtp30827aac-7c53-4e1b-8865-0130e04df96e" class="navnav">5.13.10 Abstrakte Klassen und Schnittstellen im Vergleich</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_05_014.html#dodtp1329ec52-6ab9-47e5-b864-b5721f8f4e62" class="navnav">5.14 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpb085bfe8-9ffe-48a2-bfb4-87c3b1b69ee8" name="dodtpb085bfe8-9ffe-48a2-bfb4-87c3b1b69ee8"></a><h2 class="t2"><span class="cfett">5.8</span><span class="cfett"> Vererbung</span><a href="#dodtp08395b22-06fa-4b3a-a851-c87116c54a84"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Schon von Kindheit an lernen wir, Objekte in Beziehung zu setzen. Assoziationen bilden
+                                                   dabei die Hat-Beziehung zwischen Objekten ab: Ein Teddy hat (nach dem Kauf) zwei Arme,
+                                                   der Tisch hat vier Beine, der Wauwau hat ein Fell. <a class="indexterm" id="dodtp8ff712f6-1a83-44ba-b9e9-984719d13537"></a>Neben der Assoziation von Objekten gibt es eine weitere Form der Beziehung, die Ist-eine-Art-von-Beziehung<span class="footnote"><a id="dodtp28503e35-435b-4f3f-8c4e-5b27cf95de3a">[141](So etwas gibt es auch in der Linguistik; dort heißt der Oberbegriff eines Begriffs Hyperonym und der
+Unterbegriff eines Begriffs Hyponym.)</a></span>. Apfel und Birne sind Obstsorten, Lotad, Seedot und Wingull sind verschiedene Pokémons,
+                                                   und »Berg« ist der Sammelbegriff und die Kategorie für K2 und Mount Everest.
+                                                </p><a href="bilder/05_025.png" rel="lightbox" title="Vererbung und Assoziation"><img class="bild" border="1" src="bilderklein/klein05_025.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 5.23: </strong>Vererbung und Assoziation
+                                                </p>
+                                                <p>Das Besondere bei der Ist-eine-Art-von-Beziehung ist die Tatsache, dass die Gruppe
+                                                   gewisse Merkmale für alle Elemente der Gruppe vorgibt.<span class="footnote"><a id="dodtpff440f6f-9cd9-4d6f-93f8-97019d168db8">[142](Semantische Netzwerke sind in der kognitiven Psychologie ein Erklärungsmodell zur Wissensrepräsentation.
+Eigenschaften gehören zu Kategorien, die durch Ist-eine-Art-von-Beziehungen hierarchisch
+verbunden sind. Informationen, die nicht bei einem speziellen Konzept abgespeichert sind,
+lassen sich von einem übergeordneten Konzept abrufen.)</a></span> Bei Obst haben wir eine intuitive Vorstellung, und jeder Berg hat eine Höhe und einen
+                                                   Namen sowie eine Reihe von Besteigern.
+                                                </p>
+                                                <p>Programmiersprachen drücken Gruppierung und Hierarchiebildung über die Vererbung aus.
+                                                   Vererbung basiert auf der Vorstellung, dass Eltern ihren Kindern Eigenschaften mitgeben.
+                                                   Vererbung bindet die Klassen sehr dicht aneinander. Mittels dieser engen Verbindung
+                                                   können wir später sehen, dass Klassen in gewisser Weise austauschbar sind. Ein Programm
+                                                   kann ausdrücken: Gib mir irgendein Obststück, und es bekommt dann vielleicht einen
+                                                   Apfel oder eine Birne.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp08395b22-06fa-4b3a-a851-c87116c54a84" name="dodtp08395b22-06fa-4b3a-a851-c87116c54a84"></a><h3 class="t3"><span class="cfett">5.8.1</span><span class="cfett"> Vererbung in Java</span><a href="#dodtpf9895936-8db1-4119-8562-bddf22005a72"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpb085bfe8-9ffe-48a2-bfb4-87c3b1b69ee8"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Java ordnet Klassen in hierarchischen Relationen an, in der sie Ist-eine-Art-von-Beziehungen
+                                                   bilden. Eine neu deklarierte Klasse erweitert durch das Schlüsselwort <a class="indexterm" id="dodtp5ab804e2-a6e2-49af-812f-401a23e30c49"></a><span class="clisting">extends</span> eine andere Klasse. Sie wird dann zur <span class="cbegriff">Unterklasse</span><a class="indexterm" id="dodtp71b317e8-92d6-4aa5-9a0a-3c6805369122"></a> (auch <a class="indexterm" id="dodtpf686a100-3ad1-43fa-89a2-d7bc5ca5d0aa"></a><span class="cbegriff">Subklasse</span>, <span class="cbegriff">Kindklasse</span> oder <span class="cbegriff">Erweiterungsklasse</span><a class="indexterm" id="dodtpe6c906ff-7336-4e34-8830-9d4a43bfa525"></a> genannt)<a class="indexterm" id="dodtp1da07513-b508-4fda-a5c7-cbfcdd74919d"></a>. Die Klasse, von der die Unterklasse erbt, heißt <span class="cbegriff">Oberklasse</span><a class="indexterm" id="dodtp5e684b4e-6f68-4d2c-8075-62a54a13c729"></a> (auch <span class="cbegriff">Superklasse</span><a class="indexterm" id="dodtpf034a50a-34ab-4931-9536-b083e8c17bf9"></a> oder <span class="cbegriff">Elternklasse</span><a class="indexterm" id="dodtp187b2ac6-693b-4d41-af5e-321910eb3be3"></a>). Durch den Vererbungsmechanismus werden alle sichtbaren Eigenschaften der Oberklasse
+                                                   auf die Unterklasse übertragen. Eine Oberklasse vererbt also Eigenschaften, und die
+                                                   Unterklasse erbt sie.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In Java können nur Untertypen von Klassen deklariert werden. Einschränkungen von primitiven
+                                                               Typen &#8211; etwa im Wertebereich oder in der Anzahl der Nachkommastellen &#8211; sind nicht
+                                                               möglich. Die Programmiersprache Ada erlaubt das zum Beispiel, und Untertypen sind
+                                                               beim XML-Schema üblich, wo etwa <span class="clisting">xs:short</span> oder <span class="clisting">xs:unsignedByte</span> Untertypen von <span class="clisting">xs:integer</span> sind.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf9895936-8db1-4119-8562-bddf22005a72" name="dodtpf9895936-8db1-4119-8562-bddf22005a72"></a><h3 class="t3"><span class="cfett">5.8.2</span><span class="cfett"> Spielobjekte modellieren</span><a href="#dodtp57a5901b-2305-4ed4-b95c-af33ce66a63d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp08395b22-06fa-4b3a-a851-c87116c54a84"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir wollen nun eine <span class="cbegriff">Klassenhierarchie</span><a class="indexterm" id="dodtp4eaf4659-6d66-4f5e-8ee5-150af963a901"></a> für Objekte in unserem Spiel aufbauen. Bisher haben wir Spieler, Schlüssel und Räume,
+                                                   aber andere Objekte kommen später noch hinzu. Eine Gemeinsamkeit der Objekte ist,
+                                                   dass sie Spielobjekte sind und alle im Spiel einen Namen haben: Der Raum heißt etwa
+                                                   »Knochenbrecherburg«, der Spieler »James Blond« und der Schlüssel »Magic Wand«.
+                                                </p>
+                                                <p>All diese Objekte sind Spielobjekte und durch ihre Eigenschaft, dass sie alle denselben
+                                                   Namen haben, miteinander verwandt. Die Ist-eine-Art-von-Hierarchie muss aber nicht
+                                                   auf einer Ebene aufhören. Wir könnten uns einen privilegierten Spieler als Spezialisierung
+                                                   vom Spieler vorstellen. Der privilegierte Spieler darf zusätzlich Dinge tun, die ein
+                                                   normaler Spieler nicht tun darf. Damit ist ein normaler Spieler eine Art von Spielobjekt,
+                                                   ein privilegierter Spieler ist eine Art von Spieler, und transitiv gilt weiterhin,
+                                                   dass ein privilegierter Spieler eine Art von Spielobjekt ist.
+                                                </p>
+                                                <p>Schreiben wir die Hierarchie für zwei Spielobjekte auf, für den Spieler und den Raum.
+                                                   Der Raum hat zusätzlich eine Größe. Die Basisklasse (Oberklasse) soll <span class="clisting">GameObject</span> sein:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.57: </strong>com/tutego/insel/game/vd/GameObject.java, GameObject
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class GameObject<br>{<br>  public String name;<br>}<br></pre></div>
+                                                <p>Der <span class="clisting">Player</span> soll einfach nur das <span class="clisting">GameObject</span> erweitern und nichts hinzufügen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.58: </strong>com/tutego/insel/game/vd/Player.java, Player
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class<span class="cfett"> Player extends GameObject</span><br>{<br>}<br></pre></div>
+                                                <p>Syntaktisch wird die Vererbung durch das Schlüsselwort <span class="clisting">extends</span> beschrieben. Die Deklaration der Klasse <span class="clisting">Player</span> trägt den Anhang <span class="clisting">extends GameObject</span> und erbt somit alle sichtbaren Eigenschaften der Oberklasse, also das Attribut <span class="clisting">name</span>. Die vererbten Eigenschaften behalten ihre Sichtbarkeit, sodass eine Eigenschaft
+                                                   <span class="clisting">public</span> weiterhin <span class="clisting">public</span> bleibt. Private Eigenschaften sind für andere Klassen nicht sichtbar, also auch nicht
+                                                   für die Unterklassen; sie erben somit private Eigenschaften nicht.
+                                                </p>
+                                                <p>Der Raum soll neben dem geerbten Namen noch eine Größe besitzen:</p>
+                                                <p class="plistingunter"><strong>Listing 5.59: </strong>com/tutego/insel/game/vd/Room.java, Room
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class<span class="cfett"> Room extends GameObject</span><br>{<br>  public int size;<br>}<br></pre></div>
+                                                <p>Die Klasse <span class="clisting">Room</span> kann die geerbten Eigenschaften nutzen, also etwa auf die Variable <span class="clisting">name</span> zurückgreifen. Wenn sich in der Oberklasse der Typ der Variablen oder die Implementierung
+                                                   einer Methode ändert, wird auch die Unterklasse diese Änderung zu spüren bekommen.
+                                                   Daher ist die Kopplung mittels Vererbung sehr eng, denn die Unterklassen sind Änderungen
+                                                   der Oberklassen ausgeliefert, da ja Oberklassen nichts von Unterklassen wissen.
+                                                </p>
+                                                <p>Damit ergibt sich das nachfolgende UML-Diagramm. Die Vererbung ist durch einen Pfeil
+                                                   in Richtung der Oberklasse angegeben.
+                                                </p><a href="bilder/05_026.png" rel="lightbox" title="Room und Player sind zwei Unterklassen von GameObject"><img class="bild" border="1" src="bilderklein/klein05_026.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 5.24: </strong>Room und Player sind zwei Unterklassen von GameObject
+                                                </p>
+                                                <p>Die Unterklassen <span class="clisting">Room</span> und <span class="clisting">Player</span> besitzen alle sichtbaren Eigenschaften der Oberklasse und zusätzlich ihre hinzugefügten:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.60: </strong>com/tutego/insel/game/vd/Playground.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Room clinic = new Room();<br>clinic.name = "Clinic";                 // Geerbtes Attribut<br>clinic.size = 120000;                   // Eigenes Attribut<br><br>Player theDoc = new Player();<br>theDoc.name = "Dr. Schuwibscho";        // Geerbtes Attribut<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp57a5901b-2305-4ed4-b95c-af33ce66a63d" name="dodtp57a5901b-2305-4ed4-b95c-af33ce66a63d"></a><h3 class="t3"><span class="cfett">5.8.3</span><span class="cfett"> Die implizite Basisklasse java.lang.Object</span><a href="#dodtp6724741e-4e15-4ff5-b868-f5dfc638c585"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf9895936-8db1-4119-8562-bddf22005a72"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Steht keine ausdrückliche <span class="clisting">extends</span>-Anweisung hinter einem Klassennamen &#8211; wie in dem Beispiel <span class="clisting">GameObject</span> &#8211;, erbt die Klasse automatisch von <span class="clisting">Object</span>, einer impliziten Basisklasse. Steht also keine ausdrückliche Oberklasse, wie bei
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class GameObject<br></pre></div>
+                                                <p>so ist das gleichwertig zu:</p>
+                                                <div class="listing"><pre class="prettyprint">class GameObject<span class="cfett"> extends Object</span><br></pre></div>
+                                                <p>Alle Klassen haben somit direkt oder indirekt die Klasse <span class="clisting">java.lang.Object</span><a class="indexterm" id="dodtpd384438d-68c1-4544-9517-9bfbc93274a6"></a> als Basisklasse und erben so eine Reihe von Methoden, wie <span class="clisting">toString()</span>.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6724741e-4e15-4ff5-b868-f5dfc638c585" name="dodtp6724741e-4e15-4ff5-b868-f5dfc638c585"></a><h3 class="t3"><span class="cfett">5.8.4</span><span class="cfett"> Einfach- und Mehrfachvererbung *</span><a href="#dodtpd49b9b41-933e-488b-b4d3-34e3bdba9a16"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp57a5901b-2305-4ed4-b95c-af33ce66a63d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>In Java ist auf direktem Weg nur die <a class="indexterm" id="dodtp3feafe9e-a84c-4106-8493-1433f1fbc72b"></a><span class="cbegriff">Einfachvererbung</span> (engl. <span class="cbegriff">single inheritance</span><a class="indexterm" id="dodtp1b1c0fa5-4bf4-4386-a0aa-b044e7a23374"></a>) erlaubt, sodass hinter dem Schlüsselwort <span class="clisting">extends</span> lediglich eine einzige Klasse steht. Andere objektorientierte Programmiersprachen,
+                                                   wie C++<span class="footnote"><a id="dodtpb2089c61-6908-41da-9a1d-7ee579ea1091">[143](Bjarne Stroustrup hat Mehrfachvererbung erst in C++ 2.0 (1985–1987) eingeführt.)</a></span>, Python, Perl oder Eiffel, erlauben Mehrfachvererbung und können mehrere Klassen
+                                                   zu einer neuen verbinden. Doch warum bietet Java neben anderen Sprachen wie C#, Objective-C,
+                                                   Simula, Ruby oder Delphi keine Mehrfachvererbung auf Klassenebene?
+                                                </p>
+                                                <p>Nehmen wir an, die Klassen <span class="clisting">O1</span> und <span class="clisting">O2</span> deklarieren beide eine öffentliche Methode <span class="clisting">f()</span>, und <span class="clisting">U</span> ist eine Klasse, die von <span class="clisting">O1</span> und <span class="clisting">O2</span> erbt. Steht in <span class="clisting">U</span> ein Methodenaufruf <span class="clisting">f()</span>, ist nicht klar, welche der beiden Methoden gemeint ist. In C++ löst der Scope-Operator
+                                                   (<span class="clisting">::</span>) das Problem, indem der Entwickler immer angibt, aus welcher Oberklasse die Funktion
+                                                   anzusprechen ist.
+                                                </p>
+                                                <p>Dazu gesellt sich das <span class="cbegriff">Diamanten-Problem</span> (auch Rauten-Problem genannt). Zwei Klassen, <span class="clisting">K1</span> und <span class="clisting">K2</span>, erben von einer Oberklasse <span class="clisting">O</span> eine Eigenschaft <span class="clisting">x</span>. Eine Unterklasse <span class="clisting">U</span> erbt von den Klassen <span class="clisting">K1</span> und <span class="clisting">K2</span>. Lässt sich in <span class="clisting">U</span> auf die Eigenschaft <span class="clisting">x</span> zugreifen? Eigentlich existiert die Eigenschaft ja nur einmal und dürfte kein Grund
+                                                   zur Sorge sein. Dennoch stellt dieses Szenario ein Problem dar, weil der Compiler
+                                                   »vergessen« hat, dass sich <span class="clisting">x</span> in den Unterklassen <span class="clisting">K1</span> und <span class="clisting">K2</span> nicht verändert hat. Mit der Einfachvererbung kommt es erst gar nicht zu diesem Dilemma.
+                                                </p>
+                                                <p>Immer wieder wird diskutiert, ob das Fehlen der Mehrfachvererbung Java einschränkt.
+                                                   Die Antwort ist zu verneinen. Java erlaubt zwar keine multiplen Oberklassen, es erlaubt
+                                                   aber immer noch, mehrere Schnittstellen (Interfaces) zu implementieren und so unterschiedliche
+                                                   Typen anzunehmen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd49b9b41-933e-488b-b4d3-34e3bdba9a16" name="dodtpd49b9b41-933e-488b-b4d3-34e3bdba9a16"></a><h3 class="t3"><span class="cfett">5.8.5</span><span class="cfett"> Die Sichtbarkeit protected</span><a href="#dodtp85e297f7-2373-425c-b4f8-7c0ae7f18cfe"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6724741e-4e15-4ff5-b868-f5dfc638c585"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine Unterklasse erbt alle sichtbaren Eigenschaften. Dazu gehören alle <span class="clisting">public</span>-Elemente und, falls sich Unterklasse und Oberklasse im gleichen Paket befinden, auch
+                                                   die paketsichtbaren Eigenschaften. <a class="indexterm" id="dodtp1fd68f1d-c4d9-4638-9dcd-489ee1d5103a"></a>Die Vererbung kann durch <span class="clisting">private</span> eingeschränkt werden, dann sieht keine andere Klasse die Eigenschaften, weder fremde
+                                                   noch Unterklassen.
+                                                </p>
+                                                <p>Neben diesen drei Sichtbarkeiten kommt eine vierte hinzu: <span class="clisting">protected</span><a class="indexterm" id="dodtp56bf3230-a35f-46d6-a291-3c3a1b49b915"></a>. Diese Sichtbarkeit umfasst (seltsamerweise) zwei Eigenschaften:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">protected</span>-Eigenschaften werden an alle Unterklassen vererbt.
+                                                   </li>
+                                                   <li>Klassen, die sich im gleichen Paket befinden, können alle <span class="clisting">protected</span>-Eigenschaften sehen, denn <span class="clisting">protected</span> ist eine Erweiterung der Paketsichtbarkeit.
+                                                   </li>
+                                                </ul>
+                                                <p>Sind also weitere Klassen im gleichen Paket und Eigenschaften <span class="clisting">protected</span>, ist die Sichtbarkeit für sie <span class="clisting">public</span>. Für andere Nicht-Unterklassen in anderen Paketen sind die <span class="clisting">protected</span>-Eigenschaften <span class="clisting">private</span>. Damit lassen sich die Sichtbarkeiten so ordnen:
+                                                </p>
+                                                <p><span class="clisting">public</span> &gt; <span class="clisting">protected</span> &gt; paketsichtbar &gt; <span class="clisting">private</span></p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp85e297f7-2373-425c-b4f8-7c0ae7f18cfe" name="dodtp85e297f7-2373-425c-b4f8-7c0ae7f18cfe"></a><h3 class="t3"><span class="cfett">5.8.6</span><span class="cfett"> Konstruktoren in der Vererbung und super()</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd49b9b41-933e-488b-b4d3-34e3bdba9a16"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtpd241fb47-5270-4d95-9730-790cd52211ca"></a>Obwohl Konstruktoren Ähnlichkeit mit Methoden haben, etwa in der Eigenschaft, dass
+                                                   sie überladen werden oder Ausnahmen erzeugen können, werden sie im Gegensatz zu Methoden
+                                                   nicht vererbt. Das heißt, eine Unterklasse muss ganz neue Konstruktoren angeben, denn
+                                                   mit den Konstruktoren der Oberklasse kann ein Objekt der Unterklasse nicht erzeugt
+                                                   werden. Ob das nun reine Objektorientierung ist &#8211; darüber lässt sich streiten; in
+                                                   der Skriptsprache Python etwa werden auch Konstruktoren vererbt. In Java gehören Konstruktoren
+                                                   eigentlich zum statischen Teil einer Klasse. Die Klasse selbst weiß, wie neue Objekte
+                                                   konstruiert werden. Würden wir Konstruktoren eher als Initialisierungsmethoden ansehen,
+                                                   läge es natürlich näher, sie wie Objektmethoden zu behandeln. Dagegen spricht jedoch,
+                                                   dass eine Unterklasse mehr Eigenschaften hat und der Konstruktor der Oberklasse dann
+                                                   nur einen Teil initialisieren würde.
+                                                </p>
+                                                <p>In Java sammelt eine Unterklasse zwar automatisch alle sichtbaren Eigenschaften der
+                                                   Oberklasse, aber die Initialisierung der einzelnen Eigenschaften pro Hierarchie ist
+                                                   immer noch Aufgabe der jeweiligen Konstruktoren in der Hierarchie. Um diese Initialisierung
+                                                   sicherzustellen, ruft Java im Konstruktor einer jeden Klasse (ausgenommen <span class="clisting">java.lang.Object</span>) automatisch den Standard-Konstruktor der Oberklasse auf, damit die Oberklasse »ihre«
+                                                   Attribute initialisieren kann. Es ist dabei egal, ob der Konstruktor in der Unterklasse
+                                                   parametrisiert ist oder nicht; jeder Konstruktor der Unterklasse muss einen Konstruktor
+                                                   der Oberklasse aufrufen.
+                                                </p><a id="dodtp65488902-8ccf-4375-b1b4-26e11939988d" name="dodtp65488902-8ccf-4375-b1b4-26e11939988d"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ein Beispiel mit Konstruktorweiterleitung</span></h4>
+                                                <p><a class="indexterm" id="dodtp36584c93-8320-4748-aa2b-4b0c78938bd5"></a>Sehen wir uns noch einmal die Konstruktorverkettung an:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class GameObject<br>{<br>}<br><br>class Player extends GameObject<br>{<br>}<br></pre></div>
+                                                <p>Da wir keine expliziten Konstruktoren haben, fügt der Compiler diese ein, und da <span class="clisting">GameObject</span> von <span class="clisting">java.lang.Object</span> erbt, sieht die Laufzeitumgebung die Klassen so:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class<span class="cfett"> GameObject</span><br>{<br> <span class="cfett"> GameObject()</span> { }<br>}<br><br>class<span class="cfett"> Player</span> extends GameObject<br>{<br> <span class="cfett"> Player()</span> { }<br>}<br></pre></div><a id="dodtp8ad9bbb6-99d1-4798-89c3-39f84ecc1c3e" name="dodtp8ad9bbb6-99d1-4798-89c3-39f84ecc1c3e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Deutschland sucht den super()-Aufruf</span></h4>
+                                                <p>Dass automatisch jeder Konstruktor einer Klasse den Standard-Konstruktor der Oberklasse
+                                                   aufruft, lässt sich auch explizit formulieren &#8211; das nötige Schlüsselwort ist <span class="clisting">super</span> und formt den Aufruf <span class="clisting">super()</span>. Da der Compiler automatisch <span class="clisting">super()</span> als erste Anweisung in den Konstruktor einfügt, müssen wir das nicht manuell hinschreiben
+                                                   und sollten es uns auch sparen &#8211; unsere Fingerkraft ist für andere Dinge wichtig!
+                                                   Ob wir also nun von Hand <span class="clisting">super()</span> im Konstruktor platzieren oder es vom Compiler einsetzen lassen, für die Laufzeitumgebung
+                                                   ist die vorangehende Schreibweise oder die folgende völlig gleich:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class GameObject extends Object<br>{<br>  GameObject()<br>  {<br>   <span class="cfett"> super()</span>;         // Ruft Standard-Konstruktor von Object auf<br>  }<br>}<br><br>class Player extends GameObject<br>{<br>  Player()<br>  {<br>   <span class="cfett"> super()</span>;         // Ruft Standard-Konstruktor von GameObject auf<br>  }<br>}<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p><span class="clisting">super()</span> muss immer die erste Anweisung im Konstruktor sein. Beim Aufbau neuer Objekte läuft
+                                                               die Laufzeitumgebung daher als Erstes die Hierarchie nach <span class="clisting">java.lang.Object</span> ab und beginnt dort von oben nach unten mit der Initialisierung. Kommt der eigene
+                                                               Konstruktor an die Reihe, konnten die Konstruktoren der Oberklasse ihre Werte schon
+                                                               initialisieren.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpd8e4f4a0-e3da-4c84-9296-a7a6a41f0a67" name="dodtpd8e4f4a0-e3da-4c84-9296-a7a6a41f0a67"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> super() auch bei parametrisierten Konstruktoren</span></h4>
+                                                <p>Nicht nur die Standard-Konstruktoren rufen mit <span class="clisting">super()</span> den Standard-Konstruktor der Oberklasse auf, sondern auch immer die parametrisierten
+                                                   Konstruktoren. Nehmen wir eine Klasse für Außerirdische mit einem parametrisierten
+                                                   Konstruktor für den Namen des Planeten an:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.61: </strong>com/tutego/insel/game/vd/Alien.java, Alien
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Alien extends GameObject<br>{<br>  public String planet;<br><br>  public Alien( String planet )<br>  {<br>    this.planet = planet;<br>  }<br>}<br></pre></div>
+                                                <p>Auch wenn es hier keinen Standard-Konstruktor gibt, sondern nur einen parametrisierten,
+                                                   ruft auch dieser automatisch den Standard-Konstruktor der Basisklasse <span class="clisting">GameObject</span> auf. Explizit ausgeschrieben heißt das:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public Alien( String planet )<br>{<br> <span class="cfett"> super();</span>       // Ruft automatisch den Standard-Konstruktor von GameObject auf<br>  this.planet = planet;<br>}<br></pre></div>
+                                                <p>Natürlich muss <span class="clisting">super()</span> wieder als Erstes stehen.
+                                                </p><a id="dodtp63f2741c-6266-4b77-8ec6-8ddeb156d975" name="dodtp63f2741c-6266-4b77-8ec6-8ddeb156d975"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> super() mit Argumenten füllen</span></h4>
+                                                <p>Mitunter ist es nötig, aus der Unterklasse nicht nur den Standard-Konstruktor anzusteuern,
+                                                   sondern einen anderen (parametrisierten) Konstruktor der Oberklasse anzusprechen.
+                                                   Dazu gibt es das <span class="clisting">super()</span> mit Argumenten.
+                                                </p>
+                                                <p>Der Aufruf von <span class="clisting">super()</span> kann parametrisiert erfolgen, sodass nicht der Standard-Konstruktor, sondern ein
+                                                   parametrisierter Konstruktor aufgerufen wird. Gründe dafür könnten sein:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Ein parametrisierter Konstruktor der Unterklasse leitet die Argumente an die Oberklasse
+                                                      weiter; es soll nicht der Standard-Konstruktor aufgerufen werden, da der Oberklassen-Konstruktor
+                                                      das Attribut annehmen und verarbeiten soll.
+                                                   </li>
+                                                   <li>Wenn wir keinen Standard-Konstruktor in der Oberklasse vorfinden, müssen wir in der
+                                                      Unterklasse mittels <span class="clisting">super(Argument ...)</span> einen speziellen, parametrisierten Konstruktor aufrufen.
+                                                   </li>
+                                                </ul>
+                                                <p>Gehen wir Schritt für Schritt eine Vererbungshierarchie durch, um zu verstehen, dass
+                                                   ein <span class="clisting">super()</span> mit Parameter nötig ist.
+                                                </p>
+                                                <p>Beginnen wir mit einer Klasse <span class="clisting">Alien</span>, die in einem parametrisierten Konstruktor den Planetennamen erwartet:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.62: </strong>Alien.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Alien<br>{<br>  public String planet;<br>  public<span class="cfett"> Alien( String planet )</span> { this.planet = planet; }<br>}<br></pre></div>
+                                                <p>Erweitert eine Klasse <span class="clisting">Grob</span> für eine besondere Art von Außerirdischen die Klasse <span class="clisting">Alien</span>, kommt es zu einem Compilerfehler:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class<span class="cfett"> Grob extends Alien</span> { }   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br></pre></div>
+                                                <p>Der Fehler vom Eclipse-Compiler ist: »Implicit super constructor Alien() is undefined.
+                                                   Must explicitly invoke another constructor.«
+                                                </p>
+                                                <p>Der Grund ist simpel: <span class="clisting">Grob</span> enthält einen vom Compiler generierten vorgegebenen Konstruktor, der mit <span class="clisting">super()</span> nach einem Standard-Konstruktor in <span class="clisting">Alien</span> sucht &#8211; den gibt es aber nicht. Wir müssen daher entweder einen Standard-Konstruktor
+                                                   in der Oberklasse anlegen (was bei nicht modifizierbaren Klassen natürlich nicht geht)
+                                                   oder das <span class="clisting">super()</span> in <span class="clisting">Grob</span> so einsetzen, dass es mit einem Argument den parametrisierten Konstruktor der Oberklasse
+                                                   aufruft. Das kann so aussehen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.63: </strong>Grob.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Grob extends Alien<br>{<br>  public Grob()<br>  {<br>   <span class="cfett"> super( "Locutus" );</span>    // Alle Grobs leben auf Locutus<br>  }<br>}<br></pre></div>
+                                                <p>Es spielt dabei keine Rolle, ob <span class="clisting">Grob</span> einen Standard-Konstruktor oder einen parametrisierten Konstruktor besitzt: In beiden
+                                                   Fällen müssen wir mit <span class="clisting">super()</span> einen Wert an den Konstruktor der Basisklasse übergeben. Oftmals leiten Unterklassen
+                                                   einfach nur den Konstruktorwert an die Oberklasse weiter:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Grob extends Alien<br>{<br> <span class="cfett"> public Grob( String planet )</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> super( planet );</span><br> <span class="cfett"> }</span><br>}<br></pre></div><a id="dodtpe691386e-a319-4bed-ae66-973a1d8524d0" name="dodtpe691386e-a319-4bed-ae66-973a1d8524d0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der this()-und-super()-Konflikt *</span></h4>
+                                                <p><span class="clisting">this()</span> und <span class="clisting">super()</span> haben eine Gemeinsamkeit: Beide wollen die erste Anweisung eines Konstruktors sein.
+                                                   Es kommt vor, dass es mit <span class="clisting">super()</span> einen parametrisierten Aufruf des Konstruktors der Basisklasse gibt, aber gleichzeitig
+                                                   auch ein <span class="clisting">this()</span> mit Parametern, um in einem zentralen Konstruktor alle Initialisierungen vornehmen
+                                                   zu können. Beides geht aber leider nicht. Die Lösung besteht darin, auf das <span class="clisting">this()</span> zu verzichten und den gemeinsamen Programmcode in eine private Methode zu setzen.
+                                                   Das kann so aussehen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 5.64: </strong>ColoredLabel.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.awt.Color;<br>import javax.swing.JLabel;<br><br>public class ColoredLabel extends JLabel<br>{<br>  public ColoredLabel()<br>  {<br>   <span class="cfett"> initialize( Color.BLACK );</span><br>  }<br><br>  public ColoredLabel( String label )<br>  {<br>   super( label );<br>  <span class="cfett"> initialize( Color.BLACK );</span><br>  }<br><br>  public ColoredLabel( String label, Color color )<br>  {<br>    super( label );<br>   <span class="cfett"> initialize( color );</span><br>  }<br><br>  private void<span class="cfett"> initialize( Color color )</span><br>  {<br>    setForeground( color );<br>  }<br>}<br></pre></div>
+                                                <p>Die farbige Beschriftung <span class="clisting">ColoredLabel</span> ist ein spezielles <span class="clisting">JLabel</span>. Es kann auf drei Arten initialisiert werden, wobei bei allen Herangehensweisen die
+                                                   Aufgabe gleich ist, dass eine Farbe gespeichert werden muss. Das übernimmt die Methode
+                                                   <span class="clisting">initialize()</span>, die alle Konstruktoren aufrufen. Hier wird dann Beliebiges platziert, was alle Konstruktoren
+                                                   gerne initialisieren wollen.
+                                                </p><a id="dodtp4db960c1-6ace-4a0d-9879-b252ed4a60e2" name="dodtp4db960c1-6ace-4a0d-9879-b252ed4a60e2"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zusammenfassung: Konstruktoren und Methoden</span></h4>
+                                                <p>Methoden und Konstruktoren haben einige Gemeinsamkeiten in der Signatur, weisen aber
+                                                   auch einige wichtige Unterschiede auf, wie den Rückgabewert oder den Gebrauch von
+                                                   <span class="clisting">this</span> und <span class="clisting">super</span>. Tabelle 5.5 fasst die Unterschiede und Gemeinsamkeiten zusammen:<span class="footnote"><a id="dodtpbabf7200-3033-41e2-9528-b51bcbd60eb1">[144](Schon seltsam, dass synchronized nicht erlaubt ist, aber ein Konstruktor ist implizit synchronized.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 5.6: </strong>Gegenüberstellung von Konstruktoren und Methoden
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Benutzung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Konstruktoren</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Methoden</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Modifizierer
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Sichtbarkeit <span class="clisting">public</span>, <span class="clisting">protected</span>, paketsichtbar und <span class="clisting">private</span>. Können nicht <span class="clisting">abstract</span>, <span class="clisting">final</span>, <span class="clisting">native</span>, <span class="clisting">static</span> oder <span class="clisting">synchronized</span> sein.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Sichtbarkeit <span class="clisting">public</span>, <span class="clisting">protected</span>, paketsichtbar und <span class="clisting">private</span>.<br>Können <span class="clisting">abstract</span>, <span class="clisting">final</span>, <span class="clisting">native</span>, <span class="clisting">static</span> oder <span class="clisting">synchronized</span> sein.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Rückgabewert
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">kein Rückgabewert, auch nicht <span class="clisting">void</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Rückgabetyp oder <span class="clisting">void</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Bezeichnername
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Gleicher Name wie die Klasse. Beginnt mit einem Großbuchstaben.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Beliebig. Beginnt mit einem Kleinbuchstaben.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">this</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext" colspan="2"><span class="clisting">this</span> ist eine Referenz in Objektmethoden und Konstruktoren, die sich auf das aktuelle
+                                                            Exemplar bezieht.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp5e10885c-63ea-47e2-8153-e7e1dfc53714"></a><span class="clisting">this()</span><a class="indexterm" id="dodtpad281fbc-389b-4036-8451-3feef5ee0ffa"></a> bezieht sich auf einen anderen Konstruktor der gleichen Klasse. Wird <span class="clisting">this()</span> benutzt, muss es in der ersten Zeile stehen.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">super</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext" colspan="2"><span class="clisting">super</span> ist eine Referenz mit dem Namensraum der Oberklasse. Damit lassen sich überschriebene
+                                                            Objektmethoden aufrufen.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">super()</span> <a class="indexterm" id="dodtp70b7151e-cfc3-4d36-97e8-19dd653e93d9"></a>ruft einen Konstruktor der Oberklasse auf. Wird es <a class="indexterm" id="dodtp46176b7e-82cd-4f0c-8d94-bed77ec7fb2e"></a>benutzt, muss es die erste Anweisung sein.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Vererbung
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Konstruktoren werden nicht vererbt.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Sichtbare Methoden werden<br>vererbt.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_05_008.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="5 Eigene Klassen schreiben"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_05_007.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_05_009.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

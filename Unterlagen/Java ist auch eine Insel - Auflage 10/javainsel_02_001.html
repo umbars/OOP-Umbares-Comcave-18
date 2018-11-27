@@ -1,0 +1,1594 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 2 Imperative Sprachkonzepte">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_01_009.html">
+      <link rel="next" href="javainsel_02_002.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_01_009.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_02_002.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c" class="navh">2 Imperative Sprachkonzepte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_001.html#dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2" class="navh">2.1 Elemente der Programmiersprache Java</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e" class="navh">2.1.1 Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad" class="navh">2.1.2 Textkodierung durch Unicode-Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp198e6635-37fa-413a-899a-3cd7a20feb60" class="navh">2.1.3 Bezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp38fd5986-30c6-46a2-aa5c-debb5994292e" class="navh">2.1.4 Literale</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43" class="navh">2.1.5 Reservierte Schlüsselwörter</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6" class="navh">2.1.6 Zusammenfassung der lexikalischen Analyse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp285d7310-67e3-4d7d-873d-040210c8559c" class="navh">2.1.7 Kommentare</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_002.html#dodtp79c77b33-232b-4fd9-8020-aed1f814967f" class="navnav">2.2 Von der Klasse zur Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa6db7c65-20a9-4ac3-9632-b2bf5962bc03" class="navnav">2.2.1 Was sind Anweisungen?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpe51e5d37-92ec-4813-bc73-202534c31133" class="navnav">2.2.2 Klassendeklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp61716dd0-9a88-431c-9304-3c5bb9d5046d" class="navnav">2.2.3 Die Reise beginnt am main()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpc07f84a9-2c32-4114-b631-dac342c70c2b" class="navnav">2.2.4 Der erste Methodenaufruf: println()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp5d0320d4-db2a-4699-b8a5-685779fdd208" class="navnav">2.2.5 Atomare Anweisungen und Anweisungssequenzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa64f286a-2280-4789-b0f7-5a48ad1ca82d" class="navnav">2.2.6 Mehr zu print(), println() und printf() für Bildschirmausgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8e70b07f-ab66-44c5-9432-6e16594a838a" class="navnav">2.2.7 Die API-Dokumentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp91287998-6315-4861-a6d9-b44ff6313082" class="navnav">2.2.8 Ausdrücke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpb7641a1d-804e-4ec4-8190-5f21deeb4d80" class="navnav">2.2.9 Ausdrucksanweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp9a52eda5-f73d-49fd-b61a-2c0847ff8137" class="navnav">2.2.10 Erste Idee der Objektorientierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8fe538b5-0223-4bec-a2a0-b0b916fce8fd" class="navnav">2.2.11 Modifizierer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp1469ef70-530f-427b-9a63-6e3109597584" class="navnav">2.2.12 Gruppieren von Anweisungen mit Blöcken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_003.html#dodtpba664243-0cd9-4f96-b1d7-63063559438b" class="navnav">2.3 Datentypen, Typisierung, Variablen und Zuweisungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793" class="navnav">2.3.1 Primitive Datentypen im Überblick</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24" class="navnav">2.3.2 Variablendeklarationen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp0ad9d773-6267-4f17-9485-542bc1a9464d" class="navnav">2.3.3 Konsoleneingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286" class="navnav">2.3.4 Fließkommazahlen mit den Datentypen float und double</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148" class="navnav">2.3.5 Ganzzahlige Datentypen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp650f6f62-69e1-48c9-852f-0267f7008bd5" class="navnav">2.3.6 Wahrheitswerte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp67999bec-e430-40b1-87e6-0f85eca68221" class="navnav">2.3.7 Unterstriche in Zahlen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c" class="navnav">2.3.8 Alphanumerische Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75" class="navnav">2.3.9 Gute Namen, schlechte Namen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp85f17238-94fc-4a32-a473-149941bbef52" class="navnav">2.3.10 Initialisierung von lokalen Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_004.html#dodtp10975d22-c270-4b0c-b104-fefd7c9d42a0" class="navnav">2.4 Ausdrücke, Operanden und Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp8f56fc89-b2d1-4d01-afe8-8a7de6707a72" class="navnav">2.4.1 Zuweisungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp57f3964b-49b1-476c-8776-c0f527294767" class="navnav">2.4.2 Arithmetische Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp0dcc0cab-c0de-4d74-9aff-d7a0088ff8fb" class="navnav">2.4.3 Unäres Minus und Plus</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp15b34aef-38a3-4549-930e-6053c19c8c61" class="navnav">2.4.4 Zuweisung mit Operation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp55ed8bd0-c4f0-4a2d-95b8-421ed8290210" class="navnav">2.4.5 Präfix- oder Postfix-Inkrement und -Dekrement</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb215cb39-b959-4629-8054-0476644a4101" class="navnav">2.4.6 Die relationalen Operatoren und die Gleichheitsoperatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp844cb2de-7840-4ea8-b8e3-1bc7e4c1bd52" class="navnav">2.4.7 Logische Operatoren: Nicht, Und, Oder, Xor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp44c70ec5-17d6-4493-bac6-218399d01cf8" class="navnav">2.4.8 Kurzschluss-Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb218d93c-4f16-4a70-ac88-2cae6c5ba95e" class="navnav">2.4.9 Der Rang der Operatoren in der Auswertungsreihenfolge</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp6da52db5-da51-45ac-b690-bda1a07e51c6" class="navnav">2.4.10 Die Typanpassung (das Casting)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpe890a7d4-e787-432c-861b-6eb511b4efbd" class="navnav">2.4.11 Überladenes Plus für Strings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp9c158ef1-11a0-4e8b-9b03-f0ae48cdacdf" class="navnav">2.4.12 Operator vermisst *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_005.html#dodtp9a8125a4-75a7-444d-bcdf-875237c3c605" class="navnav">2.5 Bedingte Anweisungen oder Fallunterscheidungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpe6d58494-dfd5-496a-b3f1-d511fda06f27" class="navnav">2.5.1 Die if-Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp5eb4de62-f7fe-4496-85c3-a1527fe0add0" class="navnav">2.5.2 Die Alternative mit einer if-else-Anweisung wählen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpdc9312f1-8169-4dd3-932b-26e9ef01812e" class="navnav">2.5.3 Der Bedingungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp8104e320-3a51-46e8-8680-6b90a01d8aa9" class="navnav">2.5.4 Die switch-Anweisung bietet die Alternative</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_006.html#dodtp223e4b55-5535-44b1-95de-1f0a4291fe40" class="navnav">2.6 Schleifen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe" class="navnav">2.6.1 Die while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f" class="navnav">2.6.2 Die do-while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp73f4b249-3332-434d-b850-dcad361f47aa" class="navnav">2.6.3 Die for-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd46bc956-131b-4d54-8228-199da1e4fe2e" class="navnav">2.6.4 Schleifenbedingungen und Vergleiche mit ==</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a" class="navnav">2.6.5 Ausbruch planen mit break und Wiedereinstieg mit continue</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp8d6da46b-1759-4867-b239-b80531c1b4b0" class="navnav">2.6.6 break und continue mit Marken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_007.html#dodtp0e6fae8f-4221-41a2-9467-2728f1eff1c7" class="navnav">2.7 Methoden einer Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp9749288b-d431-4ef2-a6c4-9e5f10d808f5" class="navnav">2.7.1 Bestandteil einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp276c899e-ddba-4bdb-a7e5-8cc151e0d588" class="navnav">2.7.2 Signatur-Beschreibung in der Java-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp30b37ea4-20c6-4a17-8c62-abf43b9ba963" class="navnav">2.7.3 Aufruf einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5bb656c8-555c-450d-aa12-40225755b81d" class="navnav">2.7.4 Methoden ohne Parameter deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp1343592a-eb8c-46bf-8387-3161fb4c4ae5" class="navnav">2.7.5 Statische Methoden (Klassenmethoden)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpfd200f22-4484-4549-b67f-c7ad97e8010a" class="navnav">2.7.6 Parameter, Argument und Wertübergabe</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp93faef7d-ac94-4338-8474-51fd9d9953f5" class="navnav">2.7.7 Methoden vorzeitig mit return beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpc71341eb-ac1c-4bcb-ab3e-d1c520ad66b9" class="navnav">2.7.8 Nicht erreichbarer Quellcode bei Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpe2b68940-abbf-4160-9007-6f198b58f2a4" class="navnav">2.7.9 Methoden mit Rückgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp709659a8-a37a-42b9-bc68-939aae7e848b" class="navnav">2.7.10 Methoden überladen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7ec06014-b9bb-46ba-8e60-7c16421b7ee8" class="navnav">2.7.11 Sichtbarkeit und Gültigkeitsbereich</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7233a4b1-d5da-4d9b-a622-9c12fc6fa223" class="navnav">2.7.12 Vorgegebener Wert für nicht aufgeführte Argumente *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp81f49256-ccc6-4e96-9a2c-166ba4d2d711" class="navnav">2.7.13 Finale lokale Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp38783188-f284-4b11-a176-1a5965b8fc04" class="navnav">2.7.14 Rekursive Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5cf47d83-746c-4cdd-bb56-f959a7802130" class="navnav">2.7.15 Die Türme von Hanoi *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_008.html#dodtp8c954866-e441-4214-8ffb-5b55cdf81c77" class="navnav">2.8 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><a id="dodtp332f236b-44e2-4fc6-a101-14774985570c" name="dodtp332f236b-44e2-4fc6-a101-14774985570c"></a><h1 class="t1"><span class="cfett">2</span><span class="cfett"> Imperative Sprachkonzepte</span><a href="#dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h1>
+                                                <p class="anleser"><em><span class="ckursiv">»Wenn ich eine Oper hundertmal dirigiert habe, dann ist es Zeit, sie wieder zu lernen.«<br>&#8211; Arturo Toscanini (1867&#8211;1957)</span></em></p>
+                                                <p>Ein Programm in Java wird nicht umgangssprachlich beschrieben, sondern ein Regelwerk
+                                                   und eine Grammatik definieren die Syntax und die Semantik. In den nächsten Abschnitten
+                                                   werden wir kleinere Beispiele für Java-Programme kennenlernen, und dann ist der Weg
+                                                   frei für größere Programme.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2" name="dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2"></a><h2 class="t2"><span class="cfett">2.1</span><span class="cfett"> Elemente der Programmiersprache Java</span><a href="#dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp332f236b-44e2-4fc6-a101-14774985570c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h2>
+                                                <p>Wir wollen im Folgenden über das Regelwerk, die <a class="indexterm" id="dodtp8a6af237-b04d-4b9c-835c-7a7a1e75c85e"></a>Grammatik und die Syntax<a class="indexterm" id="dodtp55c2c2ff-d12a-4e81-8f92-df8522374273"></a> der Programmiersprache Java sprechen und uns unter anderem über die Unicode-Kodierung,
+                                                   Tokens sowie Bezeichner Gedanken machen. Bei der Benennung einer Methode zum Beispiel
+                                                   dürfen wir aus einer großen Anzahl Zeichen wählen; der Zeichenvorrat nennt sich <span class="cbegriff">Lexikalik</span><a class="indexterm" id="dodtpe5718f6f-9b1a-4f62-bff7-641d55b817ae"></a>.
+                                                </p>
+                                                <p>Die Syntax eines Java-Programms definiert die Tokens und bildet so das Vokabular.
+                                                   Richtig geschriebene Programme müssen aber dennoch nicht korrekt sein. Unter dem Begriff
+                                                   <span class="cbegriff">Semantik</span><a class="indexterm" id="dodtpbcb82ba7-267b-4faf-a17a-cfb79003bc64"></a> fassen wir daher die Bedeutung eines syntaktisch korrekten Programms zusammen. Die
+                                                   Semantik bestimmt, was das Programm macht. Die Abstraktionsreihenfolge ist also Lexikalik,
+                                                   Syntax und Semantik. Der Compiler durchläuft diese Schritte, bevor er den Bytecode
+                                                   erzeugen kann.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e" name="dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e"></a><h3 class="t3"><span class="cfett">2.1.1</span><span class="cfett"> Token</span><a href="#dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein <span class="cbegriff">Token</span><a class="indexterm" id="dodtp8a5f10b7-e28e-4151-808d-4aeab183f4fa"></a> ist eine lexikalische Einheit, die dem Compiler die Bausteine des Programms liefert.
+                                                   Der Compiler erkennt an der Grammatik einer Sprache, welche Folgen von Zeichen ein
+                                                   Token bilden. Für Bezeichner heißt dies beispielsweise: »Nimm die nächsten Zeichen,
+                                                   solange auf einen Buchstaben nur Buchstaben oder Ziffern folgen.« Eine Zahl wie 1982
+                                                   bildet zum Beispiel ein Token durch folgende Regel: »Lies so lange Ziffern, bis keine
+                                                   Ziffer mehr folgt.« Bei Kommentaren bilden die Kombinationen <span class="clisting">/*</span> und <span class="clisting">*/</span> ein Token.<span class="footnote"><a id="dodtpdd2584fe-4123-42a0-804c-ce052400d592">[48](Das ist in C(++) unglücklich, denn so wird ein Ausdruck *s/*t nicht wie erwartet geparst. Erst ein
+Leerzeichen zwischen dem Geteiltzeichen und dem Stern »hilft« dem Parser, die gewünschte Division
+zu erkennen.)</a></span></p><a id="dodtp31609204-1a5a-43cd-8f0e-d64c12fe6436" name="dodtp31609204-1a5a-43cd-8f0e-d64c12fe6436"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Whitespace</span></h4>
+                                                <p>Problematisch wird es in einer Sprache immer dann, wenn der Compiler die Tokens nicht
+                                                   voneinander unterscheiden kann. Daher fügen wir <span class="cbegriff">Trennzeichen</span><a class="indexterm" id="dodtp0f846dd0-6dfa-41fa-bf41-c2915d337ac7"></a> (engl. <span class="cbegriff">whitespace</span><a class="indexterm" id="dodtp4964a6bf-b15e-469c-9eb1-5981e037d532"></a>) ein, die auch <span class="cbegriff">Wortzwischenräume</span> genannt werden. Zu den Trennern zählen Leerzeichen, Tabulatoren, Zeilenvorschub-
+                                                   und Seitenvorschubzeichen. Außer als Trennzeichen haben diese Zeichen keine Bedeutung.
+                                                   Daher können sie in beliebiger Anzahl zwischen die Tokens gesetzt werden. Das heißt
+                                                   auch, beliebig viele Leerzeichen sind zwischen Tokens gültig. Und da wir damit nicht
+                                                   geizen müssen, können sie einen Programmabschnitt enorm verdeutlichen. Programme sind
+                                                   besser lesbar, wenn sie luftig formatiert sind.
+                                                </p>
+                                                <p>Folgendes ist alles andere als gut zu lesen, obwohl der Compiler es akzeptiert:</p>
+                                                <div class="listing"><pre class="prettyprint">class _{static long _<br>(long __,long  ___) {<br>return __==0 ?___+ 1:<br>___==0?_(__-1,1):_(__<br>-1,_(__, ___-1)) ;  }<br>static  {int _=2 ,___<br>= 2;System.out.print(<br>"a("+_+','+___+ ")="+<br>_ (_,  ___) ) ;System<br>.exit(1);}}//(C) Ulli<br></pre></div>
+                                                <p>Neben den Trennern gibt es noch 9 Zeichen, die als <span class="cbegriff">Separator</span><a class="indexterm" id="dodtp459bb9a7-fe2a-4f7e-87a8-43023c4a3332"></a> definiert werden:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">; , . ( ) { } [ ]<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad" name="dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad"></a><h3 class="t3"><span class="cfett">2.1.2</span><span class="cfett"> Textkodierung durch Unicode-Zeichen</span><a href="#dodtp198e6635-37fa-413a-899a-3cd7a20feb60"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp31609204-1a5a-43cd-8f0e-d64c12fe6436"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Java kodiert Texte durch <a class="indexterm" id="dodtpbecac124-0a1d-44b9-9731-30e24d0d58f6"></a><span class="cbegriff">Unicode-Zeichen</span>. Jedem Zeichen ist ein eindeutiger Zahlenwert<a class="indexterm" id="dodtp0ae916e0-dcfd-40bd-9ecb-2d97300a6aae"></a> (engl. <span class="cbegriff">code point</span><a class="indexterm" id="dodtpcc77d007-0b41-4c5b-b886-5fce841655ca"></a>) zugewiesen, sodass zum Beispiel das große A an Position 65 liegt. Der Unicode-Zeichensatz
+                                                   beinhaltet die ISO-US-<a class="indexterm" id="dodtp62ae9129-bb74-481d-b9f1-aaffef8b5151"></a>ASCII-Zeichen<span class="footnote"><a id="dodtp9314011b-6bdf-47a2-bbb9-1b9a9ff798c8">[49](http://en.wikipedia.org/wiki/ASCII)</a></span> von 0 bis 127 (hexadezimal 0x00 bis 0x7f, also 7 Bit) und die erweiterte Kodierung
+                                                   nach <a class="indexterm" id="dodtp5e68cbba-29b0-4d20-b934-3bc703bae3df"></a>ISO 8859-1 (Latin-1), die Zeichen von 128 bis 255 hinzunimmt. Mehr Details zu Unicode
+                                                   liefert Kapitel 4, »Der Umgang mit Zeichenketten«.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp198e6635-37fa-413a-899a-3cd7a20feb60" name="dodtp198e6635-37fa-413a-899a-3cd7a20feb60"></a><h3 class="t3"><span class="cfett">2.1.3</span><span class="cfett"> Bezeichner</span><a href="#dodtp38fd5986-30c6-46a2-aa5c-debb5994292e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp840fdcbf-689a-4d10-b317-1e7cefe2c4ee"></a>Für Variablen (und damit Konstanten), Methoden, Klassen und Schnittstellen werden
+                                                   <span class="cbegriff">Bezeichner</span> vergeben &#8211; auch <span class="cbegriff">Identifizierer</span><a class="indexterm" id="dodtp8e6c448b-d8f7-4020-925e-db81e0dbdd5f"></a> (von engl. <span class="cbegriff">identifier</span>) genannt &#8211;, die die entsprechenden Bausteine anschließend im Programm identifizieren.
+                                                   Unter Variablen sind dann Daten verfügbar. Methoden sind die Unterprogramme in objektorientierten
+                                                   Programmiersprachen, und Klassen sind die Bausteine objektorientierter Programme.
+                                                </p>
+                                                <p>Ein Bezeichner ist eine Folge von Zeichen, die fast beliebig lang sein kann (die Länge
+                                                   ist nur theoretisch festgelegt). Die Zeichen sind Elemente aus dem Unicode-Zeichensatz,
+                                                   und jedes Zeichen ist für die Identifikation wichtig.<span class="footnote"><a id="dodtp8e42d79d-75b1-4b76-b8f2-8b0d0d7b9b45">[50](Die Java-Methoden Character.isJavaIdentifierStart()/isJavaIdentiferPart() stellen auch fest, ob
+Zeichen Java-Identifier sind.)</a></span> Das heißt, ein Bezeichner, der 100 Zeichen lang ist, muss auch immer mit allen 100
+                                                   Zeichen korrekt angegeben werden. Manche C- und FORTRAN-Compiler sind in dieser Hinsicht
+                                                   etwas großzügiger und bewerten nur die ersten Stellen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Im folgenden Java-Programm sind die Bezeichner fett und unterstrichen gesetzt.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class <span class="clistingfu">Application</span><br>{<br>  public static void <span class="clistingfu">main</span>( <span class="clistingfu">String</span><span class="cfett">[]</span> <span class="clistingfu">args</span> )<br>  {<br>    <span class="clistingfu">System</span><span class="cfett">.</span><span class="clistingfu">out</span><span class="cfett">.</span><span class="clistingfu">println</span>( "Hallo Welt" );<br>  }<br>}<br></pre></div>
+                                                               Dass <span class="clisting">String</span> fett und unterstrichen ist, hat seinen Grund, denn <span class="clisting">String</span> ist eine Klasse und kein eingebauter Datentyp wie <span class="clisting">int</span>. Zwar wird die Klasse <span class="clisting">String</span> in Java bevorzugt behandelt &#8211; das Plus kann Zeichenketten zusammenhängen &#8211;, aber
+                                                               es ist immer noch ein Klassentyp.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp1a13ed8a-fb48-49db-a549-491c344edf24" name="dodtp1a13ed8a-fb48-49db-a549-491c344edf24"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Aufbau der Bezeichner</span></h4>
+                                                <p>Jeder Java-Bezeichner ist eine Folge aus <span class="cbegriff">Java-Buchstaben</span> und <span class="cbegriff">Java-Ziffern,</span><span class="footnote"><a id="dodtp52146737-0403-44fa-b607-c86a13150dc8">[51](Ob ein Zeichen ein Buchstabe ist, stellt die statische Methode Character.isLetter() fest; ob er ein
+gültiger Bezeichner-Buchstabe ist, sagen die Funktionen isJavaIdentifierStart() für den Startbuchstaben
+und isJavaIdentifierPart() für den Rest.)</a></span> wobei der Bezeichner mit einem Java-Buchstaben beginnen muss. Ein Java-Buchstabe umfasst nicht nur unsere lateinischen Buchstaben aus dem Bereich »A« bis »Z« (auch »a« bis »z«), sondern auch viele weitere Zeichen aus dem Unicode-Alphabet, etwa den Unterstrich, Währungszeichen &#8211; wie die Zeichen für Dollar ($), Euro (&euro;), Yen (¥) &#8211; oder griechische Buchstaben. Auch wenn damit viele wilde Zeichen als Bezeichner-Buchstaben grundsätzlich möglich sind, sollte doch die Programmierung mit englischen Bezeichnernamen erfolgen. Es ist noch einmal zu betonen, dass Java streng zwischen Groß- und Kleinschreibung<a class="indexterm" id="dodtp6c12d2d1-156d-4038-8750-e09c455f6d1b"></a> unterscheidet.
+                                                </p>
+                                                <p>Die folgende Tabelle listet einige gültige Bezeichner auf:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.1: </strong>Beispiele für gültige Bezeichner in Java
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Gültige Bezeichner</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Grund</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Mami</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Mami</span> besteht nur aus Alphazeichen und ist daher korrekt.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">__RAPHAEL_IST_LIEB__</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Unterstriche sind erlaubt.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">bóo</span>-lêáñ
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Ist korrekt, auch wenn es Akzente enthält.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">&alpha;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Das griechische Alpha ist ein gültiger Java-Buchstabe.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">REZE$$SION</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Das Dollar-Zeichen ist ein gültiger Java-Buchstabe.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">¥</span>&euro;<span class="clisting">$</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Tatsächlich auch gültige Java-Buchstaben
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Ungültige Bezeichner dagegen sind:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.2: </strong>Beispiele für ungültige Bezeichner in Java
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Ungültige Bezeichner</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Grund</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">2und2macht4</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Das erste Symbol muss ein Java-Buchstabe sein und keine Ziffer.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">hose gewaschen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Leerzeichen sind in Bezeichnern nicht erlaubt.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Faster!</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Das Ausrufezeichen ist, wie viele Sonderzeichen, ungültig.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">null</span>, <span class="clisting">class</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Der Name ist schon von Java belegt. <span class="clisting">Null</span> &#8211; Groß-/Kleinschreibung ist relevant &#8211; oder <span class="clisting">cláss</span> wären möglich.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In Java-Programmen bilden sich Bezeichnernamen oft aus zusammengesetzten Wörtern einer
+                                                               Beschreibung. Dies bedeutet, dass in einem Satz wie »open file read only« die Leerzeichen
+                                                               entfernt werden und die nach dem ersten Wort folgenden Wörter mit Großbuchstaben beginnen.
+                                                               Damit wird aus dem Beispielsatz anschließend »openFileReadOnly«. Sprachwissenschaftler
+                                                               nennen einen Großbuchstaben inmitten von Wörtern <span class="cbegriff">Binnenmajuskel</span><a class="indexterm" id="dodtp5b8a9818-8179-4dfe-bc45-93c211dad68e"></a>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp38fd5986-30c6-46a2-aa5c-debb5994292e" name="dodtp38fd5986-30c6-46a2-aa5c-debb5994292e"></a><h3 class="t3"><span class="cfett">2.1.4</span><span class="cfett"> Literale</span><a href="#dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp1a13ed8a-fb48-49db-a549-491c344edf24"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein Literal<a class="indexterm" id="dodtpf70b25e2-db96-4fe2-bc74-45d6c039ebd7"></a> ist ein konstanter Ausdruck. Es gibt verschiedene Typen von Literalen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>die Wahrheitswerte <span class="clisting">true</span> und <span class="clisting">false</span></li>
+                                                   <li>integrale Literale für Zahlen, etwa <span class="clisting">122</span></li>
+                                                   <li>Zeichenliterale, etwa <span class="clisting">'X'</span> oder <span class="clisting">'\n'</span></li>
+                                                   <li>Fließkommaliterale, etwa <span class="clisting">12.567</span> oder <span class="clisting">9.999E-2</span></li>
+                                                   <li>Stringliterale für Zeichenketten, wie <span class="clisting">"Paolo Pinkas"</span></li>
+                                                   <li><span class="clisting">null</span> steht für einen besonderen Referenztyp.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Im folgenden Java-Programm sind die beiden Literale fett und unterstrichen gesetzt.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class Application<br>{<br>  public static void main( String[] args )<br>  {<br>    System.out.println( <span class="clistingfu">"Hallo</span> <span class="clistingfu">Welt"</span> );<br>    System.out.println( <span class="clistingfu">1</span> + <span class="clistingfu">2</span> );<br>  }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43" name="dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43"></a><h3 class="t3"><span class="cfett">2.1.5</span><span class="cfett"> Reservierte Schlüsselwörter</span><a href="#dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp38fd5986-30c6-46a2-aa5c-debb5994292e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtpb4df9c9f-fcd5-4499-8f98-cf01be50c954"></a>Bestimmte Wörter sind als Bezeichner nicht zulässig, da sie als <span class="cbegriff">Schlüsselwörter</span><a class="indexterm" id="dodtp1c793cad-4784-4ddf-851c-f76d43e0b9e0"></a> vom Compiler besonders behandelt werden. Schlüsselwörter bestimmen die »Sprache«
+                                                   eines Compilers.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Reservierte Schlüsselwörter sind im Folgenden fett und unterstrichen gesetzt.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint"><span class="clistingfu">class</span> Application<br>{<br>  <span class="clistingfu">public</span> <span class="clistingfu">static</span> <span class="clistingfu">void</span> main( String[] args )<br>  {<br>    System.out.println( "Hallo Welt" );<br>  }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp3a8db5e4-b28d-49c9-aa33-f32603114b4a" name="dodtp3a8db5e4-b28d-49c9-aa33-f32603114b4a"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Schlüsselwörter und Literale in Java</span></h4>
+                                                <p>Nachfolgende Zeichenfolgen sind Schlüsselwörter (beziehungsweise Literale im Fall
+                                                   von <span class="clisting">true</span>, <span class="clisting">false</span> und <span class="clisting">null</span>)<span class="footnote"><a id="dodtpcf795079-29d6-46cf-9f85-feab9067ec9b">[52](Siehe dazu Abschnitt 3.9, »Keywords«, der Sprachdefinition unter http://java.sun.com/docs/
+books/jls/third_edition/html/lexical.html#3.9.)</a></span> und sind in Java daher nicht als Bezeichnernamen möglich.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.3: </strong>Reservierte Schlüsselwörter in Java
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            
+                                                            <span class="clisting">abstract</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">continue</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">for</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">new</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">switch</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">assert</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">default</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">goto</span>†
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">package</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">synchronized</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">boolean</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">do</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">if</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">private</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">this</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">break</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">implements</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">protected</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">throw</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">byte</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">else</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">import</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">public</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">throws</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">case</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">enum</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">instanceof</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">return</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">transient</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">catch</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">extends</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">short</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">try</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">char</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">final</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">interface</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">static</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">void</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">class</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">finally</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">long</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">strictfp</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">volatile</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">const</span>†
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">float</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">native</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">super</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">while</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Obwohl die mit † gekennzeichneten Wörter zurzeit nicht von Java benutzt werden, können doch keine Variablen dieses Namens deklariert werden.</p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6" name="dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6"></a><h3 class="t3"><span class="cfett">2.1.6</span><span class="cfett"> Zusammenfassung der lexikalischen Analyse</span><a href="#dodtp285d7310-67e3-4d7d-873d-040210c8559c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp3a8db5e4-b28d-49c9-aa33-f32603114b4a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Übersetzt der Compiler Java-Programme, so beginnt er mit der lexikalischen Untersuchung
+                                                   des Quellcodes. Wir haben dabei die zentralen Elemente schon kennengelernt, und diese
+                                                   sollen hier noch einmal zusammengefasst werden. Nehmen wir dazu das folgende einfache
+                                                   Programm:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class Application<br>{<br>  public static void main( String[] args )<br>  {<br>    String text = "Hallo Welt " + 21;<br>    System.out.println( text );<br>  }<br>}<br></pre></div>
+                                                <p>Der Compiler überliest alle Kommentare, und die Trennzeichen bringen den Compiler
+                                                   von Token zu Token. Folgende Tokens lassen sich im Programm ausmachen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.4: </strong>Token des Beispielprogramms
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Token-Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Beispiel</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Erklärung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Bezeichner
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Application</span>, <span class="clisting">main</span>, <span class="clisting">args</span>, <span class="clisting">text</span>, <span class="clisting">System</span>, <span class="clisting">out</span>, <span class="clisting">println</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Namen für Klasse, Variable, Methode, ...
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Schlüsselwort
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">class</span>, <span class="clisting">public</span>, <span class="clisting">static</span>, <span class="clisting">void</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Reservierte Wörter
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Literal
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">"Hallo Welt"</span>, <span class="clisting">21</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Konstante Werte, wie Strings, Zahlen, ...
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Operator
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">=</span>, <span class="clisting">+</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Operator für Zuweisungen, Berechnungen, ...
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Separator
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">(</span>, <span class="clisting">)</span>, <span class="clisting">{</span>, <span class="clisting">}</span>, <span class="clisting">;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Symbole, die neben dem Trennzeichen die Tokens trennen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp285d7310-67e3-4d7d-873d-040210c8559c" name="dodtp285d7310-67e3-4d7d-873d-040210c8559c"></a><h3 class="t3"><span class="cfett">2.1.7</span><span class="cfett"> Kommentare</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Programmieren heißt nicht nur, einen korrekten Algorithmus in einer Sprache auszudrücken,
+                                                   sondern auch, unsere Gedanken verständlich zu formulieren. Dies geschieht beispielsweise
+                                                   durch eine sinnvolle Namensgebung für Programmobjekte wie Klassen, Methoden und Variablen.
+                                                   Ein selbsterklärender Klassenname hilft den Entwicklern erheblich. Doch die Lösungsidee
+                                                   und der Algorithmus werden auch durch die schönsten Variablennamen nicht zwingend
+                                                   klarer. Damit Außenstehende (und nach Monaten wir selbst) unsere Lösungsidee schnell
+                                                   nachvollziehen und später das Programm erweitern oder abändern können, werden <span class="cbegriff">Kommentare</span> in den Quelltext geschrieben. Sie dienen nur den Lesern der Programme, haben aber
+                                                   auf die Abarbeitung keine Auswirkungen.
+                                                </p><a id="dodtp3b87225b-6ce6-4c99-a9ca-efe164c87c0a" name="dodtp3b87225b-6ce6-4c99-a9ca-efe164c87c0a"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Unterschiedliche Kommentartypen</span></h4>
+                                                <p>In Java gibt es zum Formulieren von Kommentaren drei Möglichkeiten:</p>
+                                                <ul class="gp">
+                                                   <li><span class="cbegriff">Zeilenkommentare</span>: Sie beginnen mit zwei Schrägstrichen<span class="footnote"><a id="dodtp50015cd5-ab9d-4143-ad77-587703a726f1">[53](In C++ haben die Entwickler übrigens das Zeilenkommentarzeichen // aus der Vor-Vorgängersprache
+BCPL wieder eingeführt, das in C entfernt wurde.)</a></span> <span class="clisting">//</span> und kommentieren den Rest einer Zeile aus. Der Kommentar gilt von diesen Zeichen
+                                                      an bis zum Ende der Zeile, also bis zum Zeilenumbruchzeichen.
+                                                   </li>
+                                                   <li><span class="cbegriff">Blockkommentare</span>: Sie kommentieren in <span class="clisting">/* */</span> Abschnitte aus. Der Text im Blockkommentar darf selbst kein <span class="clisting">*/</span> enthalten, denn Blockkommentare dürfen nicht verschachtelt sein.
+                                                   </li>
+                                                   <li><span class="cbegriff">JavaDoc-Kommentare</span>: Das sind besondere Blockkommentare, die JavaDoc-Kommentare mit <span class="clisting">/** */</span> enthalten. Ein JavaDoc-Kommentar beschreibt etwa die Methode oder die Parameter,
+                                                      aus denen sich später die API-Dokumentation generieren lässt.
+                                                   </li>
+                                                </ul>
+                                                <p>Schauen wir uns ein Beispiel an, in dem alle drei Kommentartypen vorkommen:</p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">/*<br> * Der Quellcode ist public domain.<br> */<br>// Magic. Do not touch.<br>/**<br> * @author Christian Ullenboom<br> */</span><br>class DoYouHaveAnyCommentsToMake    <span class="cfett"> // TODO: Umbenennen</span><br>{<br> <span class="cfett"> // When I wrote this, only God and I understood what I was doing</span><br> <span class="cfett"> // Now, God only knows</span><br> <span class="cfett"> </span>public static void main( String[] args<span class="cfett"> /* Kommandozeilenargument */ )</span><br> <span class="cfett"> </span>{<br> <span class="cfett"> </span>}<br>}<br></pre></div>
+                                                <p>Für den Compiler sieht die Klasse mit den Kommentaren genauso aus wie ohne, also wie
+                                                   <span class="clisting">class DoYouHaveAnyCommentsToMake { public static void main( String[] args ) {} }</span>. Im Bytecode steht exakt das Gleiche &#8211; alle Kommentare werden vom Compiler verworfen.
+                                                </p><a id="dodtp65dd8cb4-d448-4cb0-af53-ac029f8de290" name="dodtp65dd8cb4-d448-4cb0-af53-ac029f8de290"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kommentare mit Stil</span></h4>
+                                                <p>Alle Kommentare und Bemerkungen sollten in Englisch verfasst werden, um Projektmitgliedern
+                                                   aus anderen Ländern das Lesen zu erleichtern. Für allgemeine Kommentare sollten wir
+                                                   die Zeichen <span class="clisting">//</span> benutzen. Sie haben zwei Vorteile:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Bei Editoren, die Kommentare nicht farbig hervorheben, oder bei einer einfachen Quellcodeausgabe
+                                                      auf der Kommandozeile lässt sich ersehen, dass eine Zeile, die mit <span class="clisting">//</span> beginnt, ein Kommentar ist. Den Überblick über einen Quelltext zu behalten, der für
+                                                      mehrere Seiten mit den Kommentarzeichen <span class="clisting">/*</span> und <span class="clisting">*/</span> unterbrochen wird, ist schwierig. Zeilenkommentare machen deutlich, wo Kommentare
+                                                      beginnen und wo sie enden.
+                                                   </li>
+                                                   <li>Der Einsatz der Zeilenkommentare eignet sich besser dazu, während der Entwicklungs-
+                                                      und Debug-Phase Codeblöcke auszukommentieren. Benutzen wir zur Programmdokumentation
+                                                      die Blockkommentare, so sind wir eingeschränkt, denn Kommentare dieser Form können
+                                                      wir nicht verschachteln. Zeilenkommentare können einfacher geschachtelt werden.
+                                                   </li>
+                                                </ul>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>Die Tastenkombination <span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/KDcp.gif" alt="7" title="7"></span> &#8211; oder <span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/KC8p.gif" alt="/" title="/"></span>, was das Kommentarzeichen   »/« noch deutlicher macht &#8211; kommentiert eine Zeile aus.
+                                                   Eclipse setzt dann vor die Zeile die Kommentarzeichen <span class="clisting">//</span>. Sind mehrere Zeilen selektiert, kommentiert die Tastenkombination alle markierten
+                                                   Zeilen mit Zeilenkommentaren aus. In einer kommentierten Zeile nimmt ein erneutes
+                                                   <span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/KDcp.gif" alt="7" title="7"></span> die Kommentare einer Zeile wieder zurück.
+                                                </p>
+                                                <p><img class="bild" border="1" src="common/netbeans.png" alt="Abbildung"><br><span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/tastatur_KMKqKQ==.gif" alt="ª" title="ª"></span> + <span class="ctastatur"><img align="top" src="keys/KEMp.gif" alt="C" title="C"></span> in kommentiert eine Zeile bzw. einen Block in NetBeans ein und aus.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_02_001.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="2 Imperative Sprachkonzepte"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_01_009.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_02_002.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

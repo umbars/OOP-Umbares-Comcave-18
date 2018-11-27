@@ -1,0 +1,963 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige
+         Programmierung
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_12_002.html">
+      <link rel="next" href="javainsel_12_004.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_12_002.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_12_004.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566" class="navnav">12 Einführung in die nebenläufige Programmierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_001.html#dodtpeed4c495-0b00-4e2b-9676-b266d43670d5" class="navnav">12.1 Nebenläufigkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46" class="navnav">12.1.1 Threads und Prozesse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6" class="navnav">12.1.2 Wie parallele Programme die Geschwindigkeit steigern können</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397" class="navnav">12.1.3 Was Java für Nebenläufigkeit alles bietet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_002.html#dodtp56e16a45-b15f-400b-bb97-e0f9a4313fc4" class="navnav">12.2 Threads erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtpd3c6f82f-42b0-4766-aee4-e60d30a66a9e" class="navnav">12.2.1 Threads über die Schnittstelle Runnable implementieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp41e7fcab-d074-4be0-931d-38ca2981a5c9" class="navnav">12.2.2 Thread mit Runnable starten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp383a6f30-6252-4913-a5a7-cce7b47762f0" class="navnav">12.2.3 Die Klasse Thread erweitern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_003.html#dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9" class="navh">12.3 Thread-Eigenschaften und -Zustände</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913" class="navh">12.3.1 Der Name eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a" class="navh">12.3.2 Wer bin ich?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp93979653-f7c8-4c77-86b3-349c410ed14c" class="navh">12.3.3 Schläfer gesucht</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp8eec9278-9212-4161-bf08-0a62263c3c4c" class="navh">12.3.4 Mit yield() auf Rechenzeit verzichten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp458bab78-df7d-428f-b1ed-0b4828f1392f" class="navh">12.3.5 Der Thread als Dämon</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8" class="navh">12.3.6 Das Ende eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp97d93180-7f6d-4f05-b952-b259c8972812" class="navh">12.3.7 Einen Thread höflich mit Interrupt beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp365c4a65-1044-4b94-953b-25a3a8b89600" class="navh">12.3.8 UncaughtExceptionHandler für unbehandelte Ausnahmen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_004.html#dodtp8a9c0910-d1bd-4b8d-aec2-afbe936cea6a" class="navnav">12.4 Der Ausführer (Executor) kommt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp1acff417-7dcb-4a59-b33c-622f17b3cefa" class="navnav">12.4.1 Die Schnittstelle Executor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp0564d482-4840-4457-9701-c96abfda3b79" class="navnav">12.4.2 Die Thread-Pools</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_005.html#dodtpc5a3affc-8970-4884-b250-cfb1c87fde60" class="navnav">12.5 Synchronisation über kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae" class="navnav">12.5.1 Gemeinsam genutzte Daten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6" class="navnav">12.5.2 Probleme beim gemeinsamen Zugriff und kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a" class="navnav">12.5.3 Punkte parallel initialisieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp37d4ce22-82cd-4895-9c81-13c593d76390" class="navnav">12.5.4 Kritische Abschnitte schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34" class="navnav">12.5.5 Kritische Abschnitte mit ReentrantLock schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_006.html#dodtp859b3366-b982-41df-9346-d16fd13d8496" class="navnav">12.6 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9" name="dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9"></a><h2 class="t2"><span class="cfett">12.3</span><span class="cfett"> Thread-Eigenschaften und -Zustände</span><a href="#dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Ein Thread hat eine ganze Reihe von Zuständen, wie einen Namen und eine Priorität,
+                                                   die sich erfragen und setzen lassen. Nicht jede Eigenschaft ist nach dem Start änderbar,
+                                                   doch welche das sind, zeigen die folgenden Abschnitte.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913" name="dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913"></a><h3 class="t3"><span class="cfett">12.3.1</span><span class="cfett"> Der Name eines Threads</span><a href="#dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein Thread hat eine ganze Menge Eigenschaften &#8211; wie einen Zustand, eine Priorität
+                                                   und auch einen Namen. Dieser kann mit <span class="clisting">setName()</span> gesetzt und mit <span class="clisting">getName()</span> erfragt werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Thread(String name)</span><br>Erzeugt ein neues Thread-Objekt und setzt den Namen. Sinnvoll bei Unterklassen, die
+                                                      den Konstruktor über <span class="clisting">super(name)</span> aufrufen.
+                                                   </li>
+                                                   <li><span class="clisting">Thread(Runnable target, String name)</span><br>Erzeugt ein neues Thread-Objekt mit einem <span class="clisting">Runnable</span> und setzt den Namen.
+                                                   </li>
+                                                   <li><span class="clisting">final String getName()</span><br>Liefert den Namen des Threads. Der Name wird im Konstruktor angegeben oder mit <span class="clisting">setName()</span> zugewiesen. Standardmäßig ist der Name »Thread-x«, wobei x eine eindeutige Nummer
+                                                      ist.
+                                                   </li>
+                                                   <li><span class="clisting">final void setName(String name)</span><br>Ändert den Namen des Threads.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a" name="dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a"></a><h3 class="t3"><span class="cfett">12.3.2</span><span class="cfett"> Wer bin ich?</span><a href="#dodtp93979653-f7c8-4c77-86b3-349c410ed14c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine Erweiterung der Klasse <span class="clisting">Thread</span> hat den Vorteil, dass geerbte Methoden wie <span class="clisting">getName()</span> sofort genutzt werden können. Wenn wir <span class="clisting">Runnable</span> implementieren, genießen wir diesen Vorteil nicht.
+                                                </p>
+                                                <p>Die Klasse <span class="clisting">Thread</span> liefert mit der statischen Methode <span class="clisting">currentThread()</span><a class="indexterm" id="dodtp9559372c-a432-4c1e-8175-4e7c06be58b6"></a> die Objektreferenz für das <span class="clisting">Thread</span>-Exemplar, das diese Anweisung gerade ausführt. Auf diese Weise lassen sich nicht-statische
+                                                   <span class="clisting">Thread</span>-Methoden wie <span class="clisting">getName()</span> verwenden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Gib die aktuelle Priorität des laufenden Threads und den Namen aus:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( Thread.currentThread().getPriority() ); // z.  B. 5<br>System.out.println( Thread.currentThread().getName() );     // z.  B. main<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Falls es in einer Schleife wiederholten Zugriff auf <span class="clisting">Thread.currentThread()</span> gibt, sollte das Ergebnis zwischengespeichert werden, denn der Aufruf ist nicht ganz
+                                                   billig.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static Thread currentThread()</span><br>Liefert den Thread, der das laufende Programmstück ausführt.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp93979653-f7c8-4c77-86b3-349c410ed14c" name="dodtp93979653-f7c8-4c77-86b3-349c410ed14c"></a><h3 class="t3"><span class="cfett">12.3.3</span><span class="cfett"> Schläfer gesucht</span><a href="#dodtp8eec9278-9212-4161-bf08-0a62263c3c4c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Manchmal ist es notwendig, einen Thread eine bestimmte Zeit lang anzuhalten. Dazu
+                                                   lassen sich Methoden zweier Klassen nutzen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>die überladene statische Methode <span class="clisting">Thread.sleep()</span><a class="indexterm" id="dodtp3fb1e70f-dfa0-4797-b579-ba874317d351"></a>: Etwas erstaunlich ist sicherlich, dass sie keine Objektmethode von einem <span class="clisting">Thread</span>-Objekt ist, sondern eine statische Methode. Ein Grund wäre, dass dadurch verhindert
+                                                      wird, externe Threads zu beeinflussen. Es ist nicht möglich, einen fremden Thread,
+                                                      über dessen Referenz wir verfügen, einfach einige Sekunden lang schlafen zu legen
+                                                      und ihn so von der Ausführung abzuhalten.
+                                                   </li>
+                                                   <li>die Objektmethode <span class="clisting">sleep()</span> auf einem <span class="clisting">TimeUnit</span>-Objekt: Auch sie bezieht sich immer auf den ausführenden Thread. Der Vorteil gegenüber <span class="clisting">sleep()</span> ist, dass hier die Zeiteinheiten besser sichtbar sind.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der ausführende Thread soll zwei Sekunden lang schlafen. Einmal mit <span class="clisting">Thread.sleep()</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">try {<br>  <span class="cfett">Thread.sleep( 2000 );</span><br>} catch ( InterruptedException e ) { }<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Dann mit <span class="clisting">TimeUnit</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">try {<br>  <span class="cfett">TimeUnit.SECONDS.sleep( 2 );</span><br>} catch ( InterruptedException e ) { }<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der Schlaf kann durch eine <span class="clisting">InterruptedException</span><a class="indexterm" id="dodtp9b7ad432-dea5-4210-88dc-bdab28df3a98"></a> unterbrochen werden, etwa durch <span class="clisting">interrupt()</span>. Die Ausnahme muss behandelt werden, da sie keine <span class="clisting">RuntimeException</span> ist.
+                                                </p>
+                                                <p>Praktisch wird das Erweitern der Klasse <span class="clisting">Thread</span> bei inneren anonymen Klassen. Die folgende Anweisung gibt nach zwei Sekunden Schlafzeit
+                                                   eine Meldung auf dem Bildschirm aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 12.6: </strong>com/tutego/insel/thread/SleepInInnerClass.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new Thread() {<br>  @Override public void run() {<br>    try {<br>      Thread.sleep( 2000 );<br>      System.out.println( "Zeit ist um." );<br>    } catch ( InterruptedException e ) { e.printStackTrace(); }<br>  }<br>}.start();<br></pre></div>
+                                                <p>Da <span class="clisting">new Thread(){...}</span> ein Exemplar der anonymen Unterklasse ergibt, lässt die auf dem Ausdruck aufgerufene
+                                                   Objektmethode <span class="clisting">start()</span> den Thread gleich loslaufen. Aufgaben dieser Art lösen auch die Timer gut.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static void sleep(long millis) throws InterruptedException</span><br>Der aktuell ausgeführte Thread wird mindestens <span class="clisting">millis</span> Millisekunden schlafen gelegt. Unterbricht ein anderer Thread den schlafenden, wird
+                                                      vorzeitig eine <span class="clisting">InterruptedException</span> ausgelöst.
+                                                   </li>
+                                                   <li><span class="clisting">static void sleep(long millis, int nanos) throws InterruptedException</span><br>Der aktuell ausgeführte Thread wird mindestens <span class="clisting">millis</span> Millisekunden und zusätzlich <span class="clisting">nanos</span> Nanosekunden schlafen gelegt. Im Gegensatz zu <span class="clisting">sleep(long)</span> wird bei einer negativen Millisekundenanzahl eine <span class="clisting">IllegalArgumentException</span> ausgelöst; auch wird diese Exception ausgelöst, wenn die Nanosekundenanzahl nicht
+                                                      zwischen 0 und 999.999 liegt.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+enum java.util.concurrent.<span class="cfett">TimeUnit</span><br>extends Enum&lt;TimeUnit&gt;<br>implements Serializable, Comparable&lt;TimeUnit&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">NANOSECONDS</span>, <span class="clisting">MICROSECONDS</span>, <span class="clisting">MILLISECONDS</span>, <span class="clisting">SECONDS</span>, <span class="clisting">MINUTES</span>, <span class="clisting">HOURS</span>, <span class="clisting">DAYS</span><br>Aufzählungselemente von <span class="clisting">TimeUnit</span>.
+                                                   </li>
+                                                   <li><span class="clisting">void sleep(long timeout) throws InterruptedException</span><br>Führt ein <span class="clisting">Thread.sleep()</span> für die Zeiteinheit aus.
+                                                   </li>
+                                                </ul>
+                                                <p>Eine überladene Methode <span class="clisting">Thread.sleep(long, TimeUnit)</span> wäre nett, gibt es aber nicht.
+                                                </p><a href="bilder/12_004.png" rel="lightbox" title="UML-Diagramme für Timer und TimerTask"><img class="bild" border="1" src="bilderklein/klein12_004.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 12.4: </strong>UML-Diagramme für Timer und TimerTask
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8eec9278-9212-4161-bf08-0a62263c3c4c" name="dodtp8eec9278-9212-4161-bf08-0a62263c3c4c"></a><h3 class="t3"><span class="cfett">12.3.4</span><span class="cfett"> Mit yield() auf Rechenzeit verzichten</span><a href="#dodtp458bab78-df7d-428f-b1ed-0b4828f1392f"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp93979653-f7c8-4c77-86b3-349c410ed14c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Neben <span class="clisting">sleep()</span> gibt es eine weitere Methode, um kooperative Threads zu programmieren: die Methode
+                                                   <span class="clisting">yield()</span><a class="indexterm" id="dodtp0f1e6533-8ff3-451a-9ed8-9a503d77b649"></a>. Sie funktioniert etwas anders als <span class="clisting">sleep()</span>, da hier nicht nach Ablauf der genannten Millisekunden zum Thread zurückgekehrt wird,
+                                                   sondern <span class="clisting">yield()</span> den Thread bezüglich seiner Priorität wieder in die Thread-Warteschlange des Systems
+                                                   einordnet. Einfach ausgedrückt, sagt <span class="clisting">yield()</span> der Thread-Verwaltung: »Ich setze diese Runde aus und mache weiter, wenn ich das
+                                                   nächste Mal dran bin.«
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static void yield()</span><br>Der laufende Thread gibt freiwillig seine Rechenzeit ab. Die Methode ist für Implementierungen
+                                                      der JVM nicht verbindlich.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp458bab78-df7d-428f-b1ed-0b4828f1392f" name="dodtp458bab78-df7d-428f-b1ed-0b4828f1392f"></a><h3 class="t3"><span class="cfett">12.3.5</span><span class="cfett"> Der Thread als Dämon</span><a href="#dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp8eec9278-9212-4161-bf08-0a62263c3c4c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein Server reagiert oft in einer Endlosschleife auf eingehende Aufträge vom Netzwerk
+                                                   und führt die gewünschte Aufgabe aus. In unseren bisherigen Programmen haben wir oft
+                                                   Endlosschleifen eingesetzt, sodass ein gestarteter Thread nie beendet wird. Wenn also
+                                                   <span class="clisting">run()</span> wie in den vorangehenden Beispielen nie abbricht (Informatiker sprechen hier von
+                                                   terminiert<a class="indexterm" id="dodtp47c9404d-e104-49e3-beab-7a7219ef4c61"></a>), läuft der Thread immer weiter, auch wenn die Hauptapplikation beendet ist. Dies
+                                                   ist nicht immer beabsichtigt, da vielleicht Server-Funktionalität nach dem Beenden
+                                                   der Applikation nicht mehr gefragt ist. Dann sollte auch der endlos laufende Thread
+                                                   beendet werden. Um dies auszudrücken, erhält ein im Hintergrund arbeitender Thread
+                                                   eine spezielle Kennung: Der Thread wird als Dämon<a class="indexterm" id="dodtp10762bd7-7e66-492c-a343-da0e502defa5"></a><span class="footnote"><a id="dodtp0e137461-e74b-424d-bbb4-8098b159216f">[185](Das griechische &#948;&#945;&#943;&#956;&#969;&#957; (engl. daemon) bezeichnet allerlei Wesen zwischen Gott und Teufel. Eine gute
+Einleitung gibt http://de.wikipedia.org/wiki/D%C3%A4mon.)</a></span> gekennzeichnet. Standardmäßig ist ein aufgebauter Thread kein Dämon.
+                                                </p><a href="bilder/12_005.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein12_005.png" alt="Abbildung"></a><p>Ein Dämon ist wie ein Heinzelmännchen im Hintergrund mit einer Aufgabe beschäftigt.
+                                                   Wenn das Hauptprogramm beendet ist und die Laufzeitumgebung erkennt, dass kein normaler
+                                                   Thread mehr läuft, sondern nur Dämonen, dann ist das Ende der Dämonen eingeläutet,
+                                                   und die JVM kommt zum Ende. Denn Dämonen-Threads sind Zulieferer: Gibt es keine Klienten
+                                                   mehr, werden auch sie nicht mehr gebraucht. Das ist wie bei den Göttern der Scheibenwelt:
+                                                   Glaubt keiner an sie, hören sie auf zu existieren. Wir müssen uns also um das Ende
+                                                   des Dämons nicht kümmern. Gleichzeitig heißt das aber auch, dass ein Dämonen-Thread
+                                                   vorsichtig mit Ein-/Ausgabeoperationen sein muss, denn er kann jederzeit &#8211; auch etwa
+                                                   während einer Schreiboperation auf die Festplatte &#8211; abgebrochen werden, was zu beschädigten
+                                                   Daten führen kann.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der Garbage-Collector (GC) ist ein gutes Beispiel für einen Dämon. Nur, wenn es andere
+                                                               Threads gibt, muss der Speicher aufgeräumt werden. Gibt es keine anderen Threads mehr,
+                                                               kann auch die JVM mit beendet werden, was auch die Dämonen-Threads beendet.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpc595e1eb-f81d-4d50-a5cf-78d0f373f373" name="dodtpc595e1eb-f81d-4d50-a5cf-78d0f373f373"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wie ein Thread in Java zum Dämon wird</span></h4>
+                                                <p>Einen Thread in Java als Dämon zu kennzeichnen, heißt, die Methode <span class="clisting">setDaemon()</span> mit dem Argument <span class="clisting">true</span> aufzurufen. Die Methode ist nur vor dem Starten des Threads erlaubt. Danach kann
+                                                   der Status nicht wieder vom Dämon in den normalen Benutzer-Thread umgesetzt werden.
+                                                   Die Auswirkungen von <span class="clisting">setDaemon(true)</span> können wir am folgenden Programm ablesen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 12.7: </strong>com/tutego/insel/thread/DaemonThread.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.thread;<br><br>class DaemonThread extends Thread<br>{<br>  DaemonThread()<br>  {<br>   <span class="cfett"> setDaemon( true );</span><br>  }<br><br>  @Override<br>  public void run()<br>  {<br>    while ( true )<br>      System.out.println( "Lauf, Thread, lauf" );<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    new DaemonThread().start();<br>  }<br>}<br></pre></div>
+                                                <p>In diesem Programm wird der Thread gestartet, und danach ist die Anwendung sofort
+                                                   beendet. Vor dem Ende kann der neue Thread aber schon einige Zeilen auf der Konsole
+                                                   ausgeben. Klammern wir die Anweisung mit <span class="clisting">setDaemon(true)</span> aus, läuft das Programm ewig, da die Laufzeitumgebung auf das natürliche Ende der
+                                                   Thread-Aktivität wartet.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">final void setDaemon(boolean on)</span><br>Markiert den Thread als Dämon oder normalen Thread. Die Methode muss aufgerufen werden,
+                                                      bevor der Thread gestartet wurde, andernfalls folgt eine <span class="clisting">IllegalThreadStateException</span>. Mit anderen Worten: Nachträglich kann ein existierender Thread nicht mehr zu einem
+                                                      Dämon gemacht werden, und ihm kann auch nicht die Dämonenhaftigkeit genommen werden,
+                                                      so er sie hat.
+                                                   </li>
+                                                   <li><span class="clisting">final boolean isDaemon()</span><br>Testet, ob der <span class="clisting">Thread</span> ein Dämon-Thread ist.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8" name="dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8"></a><h3 class="t3"><span class="cfett">12.3.6</span><span class="cfett"> Das Ende eines Threads</span><a href="#dodtp97d93180-7f6d-4f05-b952-b259c8972812"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc595e1eb-f81d-4d50-a5cf-78d0f373f373"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Es gibt Threads, die dauernd laufen, weil sie zum Beispiel Serverfunktionen implementieren.
+                                                   Andere Threads führen einmalig eine Operation aus und sind danach beendet. Allgemein
+                                                   ist ein Thread beendet, wenn eine der folgenden Bedingungen zutrifft:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Die <span class="clisting">run()</span>-Methode wurde ohne Fehler beendet. Wenn wir eine Endlosschleife programmieren, würde
+                                                      diese potenziell einen nie endenden Thread bilden.
+                                                   </li>
+                                                   <li>In der <span class="clisting">run()</span>-Methode tritt eine <span class="clisting">RuntimeException</span> auf, die die Methode beendet. Das beendet weder die anderen Threads noch die JVM
+                                                      als Ganzes.
+                                                   </li>
+                                                   <li>Der Thread wurde von außen abgebrochen. Dazu dient die prinzipbedingt problematische
+                                                      Methode <span class="clisting">stop()</span>, von deren Verwendung abgeraten wird und die auch veraltet ist.
+                                                   </li>
+                                                   <li>Die virtuelle Maschine wird beendet und nimmt alle Threads mit ins Grab.</li>
+                                                </ul><a id="dodtp584300aa-67ed-4d6d-a9cf-d6699823d07c" name="dodtp584300aa-67ed-4d6d-a9cf-d6699823d07c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wenn der Thread einen Fehler melden soll</span></h4>
+                                                <p>Da ein Thread nebenläufig arbeitet, kann die <span class="clisting">run()</span>-Methode synchron schlecht Exceptions melden oder einen Rückgabewert liefern. Wer
+                                                   sollte auch an welcher Stelle darauf hören? Eine Lösung für das Problem ist ein Listener,
+                                                   der sich beim Thread anmeldet und darüber informiert wird, ob der Thread seine Arbeit
+                                                   machen konnte oder nicht. Eine andere Lösung gibt <span class="clisting">Callable</span>, mit dem ein spezieller Fehlercode zurückgegeben oder eine Exception angezeigt werden
+                                                   kann. Speziell für ungeprüfte Ausnahmen kann ein <span class="clisting">UncaughtExceptionHandler</span> weiterhelfen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp97d93180-7f6d-4f05-b952-b259c8972812" name="dodtp97d93180-7f6d-4f05-b952-b259c8972812"></a><h3 class="t3"><span class="cfett">12.3.7</span><span class="cfett"> Einen Thread höflich mit Interrupt beenden</span><a href="#dodtp365c4a65-1044-4b94-953b-25a3a8b89600"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp584300aa-67ed-4d6d-a9cf-d6699823d07c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Thread ist in der Regel zu Ende, wenn die <span class="clisting">run()</span>-Methode ordentlich bis zum Ende ausgeführt wurde. Enthält eine <span class="clisting">run()</span>-Methode jedoch eine Endlosschleife &#8211; wie etwa bei einem Server, der auf eingehende
+                                                   Anfragen wartet &#8211;, so muss der Thread von außen zur Kapitulation gezwungen werden.
+                                                </p>
+                                                <p>Wenn wir den Thread schon nicht von außen beenden wollen, können wir ihn immerhin
+                                                   bitten, seine Arbeit aufzugeben. Periodisch müsste er dann nur überprüfen, ob jemand
+                                                   von außen den Abbruchswunsch geäußert hat.
+                                                </p><a id="dodtpf527838b-23b4-42bb-8133-4b246145d8a6" name="dodtpf527838b-23b4-42bb-8133-4b246145d8a6"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Methoden interrupt() und isInterrupted()</span></h4>
+                                                <p>Die Methode <span class="clisting">interrupt()</span><a class="indexterm" id="dodtpbfb2530c-dd13-46c7-bcf1-319adfdb5d91"></a> setzt von außen in einem Thread-Objekt ein internes Flag, das dann in der <span class="clisting">run()</span>-Methode durch <span class="clisting">isInterrupted()</span><a class="indexterm" id="dodtp909189e3-9f96-4963-9237-e5ceec45fee9"></a> periodisch abgefragt werden kann.
+                                                </p>
+                                                <p>Das folgende Programm soll jede halbe Sekunde eine Meldung auf dem Bildschirm ausgeben.
+                                                   Nach zwei Sekunden wird der Unterbrechungswunsch mit <span class="clisting">interrupt()</span> gemeldet. Auf dieses Signal achtet die sonst unendlich laufende Schleife und bricht
+                                                   ab:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 12.8: </strong>com/tutego/insel/thread/ThreadusInterruptus.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Thread t = new Thread()<br>{<br>  @Override<br>  public void run()<br>  {<br>    System.out.println( "Es gibt ein Leben vor dem Tod.  " );<br><br>    while (<span class="cfett"> ! isInterrupted()</span> )<br>    {<br>      System.out.println( "Und er läuft und er läuft und er läuft" );<br><br>      try<br>      {<br>       Thread.sleep( 500 );<br>      }<br>      catch ( InterruptedException e )<br>      {<br>      <span class="cfett"> interrupt();</span><br>       System.out.println( "Unterbrechung in sleep()" );<br>      }<br>    }<br><br>    System.out.println( "Das Ende" );<br>  }<br>};<br>t.start();<br>Thread.sleep( 2000 );<span class="cfett"><br>t.interrupt();</span><br></pre></div>
+                                                <p>Die Ausgabe zeigt hübsch die Ablaufsequenz:</p>
+                                                <div class="listing"><pre class="prettyprint">Es gibt ein Leben vor dem Tod.<br>Und er läuft und er läuft und er läuft<br>Und er läuft und er läuft und er läuft<br>Und er läuft und er läuft und er läuft<br>Und er läuft und er läuft und er läuft<br>Unterbrechung in sleep()<br>Das Ende<br></pre></div>
+                                                <p>Die <span class="clisting">run()</span>-Methode im Thread ist so implementiert, dass die Schleife genau dann verlassen wird,
+                                                   wenn <span class="clisting">isInterrupted()</span> den Wert <span class="clisting">true</span> ergibt, also von außen die <span class="clisting">interrupt()</span>-Methode für dieses Thread-Exemplar aufgerufen wurde. Genau dies geschieht in der
+                                                   <span class="clisting">main()</span>-Methode. Auf den ersten Blick ist das Programm leicht verständlich, doch vermutlich
+                                                   erzeugt das <span class="clisting">interrupt()</span> im <span class="clisting">catch</span>-Block die Aufmerksamkeit. Stünde diese Zeile dort nicht, würde das Programm aller
+                                                   Wahrscheinlichkeit nach nicht funktionieren. Das Geheimnis ist folgendes: Wenn die
+                                                   Ausgabe nur jede halbe Sekunde stattfindet, befindet sich der Thread fast die gesamte
+                                                   Zeit über in der Schlafmethode <span class="clisting">sleep()</span>. Also wird vermutlich der <span class="clisting">interrupt()</span> den Thread gerade beim Schlafen stören. Genau dann wird <span class="clisting">sleep()</span> durch <span class="clisting">InterruptedException</span><a class="indexterm" id="dodtp980f60fd-d881-4e6a-8a88-cc9d53a887ee"></a> unterbrochen, und der <span class="clisting">catch</span>-Behandler fängt die Ausnahme ein. Jetzt passiert aber etwas Unerwartetes: Durch die
+                                                   Unterbrechung wird das interne Flag zurückgesetzt, sodass <span class="clisting">isInterrupted()</span> meint, die Unterbrechung habe gar nicht stattgefunden. Daher muss <span class="clisting">interrupt()</span> erneut aufgerufen werden, da das Abbruch-Flag neu gesetzt werden muss und <span class="clisting">isInterrupted()</span> das Ende bestimmen kann.
+                                                </p>
+                                                <p>Wenn wir mit der Objektmethode <span class="clisting">isInterrupted()</span> arbeiten, müssen wir beachten, dass neben <span class="clisting">sleep()</span> auch die Methoden <span class="clisting">join()</span> und <span class="clisting">wait()</span> durch die <span class="clisting">InterruptedException</span> das Flag löschen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Methoden <span class="clisting">sleep()</span>, <span class="clisting">wait()</span> und <span class="clisting">join()</span> lösen alle eine <span class="clisting">InterruptedException</span> aus, wenn sie durch die Methode <span class="clisting">interrupt()</span> unterbrochen werden. Das heißt, <span class="clisting">interrupt()</span> beendet diese Methoden mit der Ausnahme.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpc6562f29-1155-4d6b-bddb-085985bcc16c" name="dodtpc6562f29-1155-4d6b-bddb-085985bcc16c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zusammenfassung: interrupted( ), isInterrupted( ) und interrupt( )</span></h4>
+                                                <p>Die Methodennamen sind verwirrend gewählt, sodass wir die Aufgaben noch einmal zusammenfassen
+                                                   wollen: Die Objektmethode <span class="clisting">interrupt()</span> setzt in einem (anderen) Thread-Objekt ein Flag, dass es einen Antrag gab, den Thread
+                                                   zu beenden. Sie beendet aber den Thread nicht, obwohl es der Methodenname nahelegt.
+                                                   Dieses Flag lässt sich mit der Objektmethode <span class="clisting">isInterrupted()</span> abfragen. In der Regel wird dies innerhalb einer Schleife geschehen, die darüber
+                                                   bestimmt, ob die Aktivität des Threads fortgesetzt werden soll. Die statische Methode
+                                                   <span class="clisting">interrupted()</span><a class="indexterm" id="dodtpdf067fc9-6043-43b3-8109-bd94fd4f197f"></a> ist zwar auch eine Anfragemethode und testet das entsprechende Flag des aktuell laufenden
+                                                   Threads, wie <span class="clisting">Thread.currentThread().isInterrupted()</span>, aber zusätzlich löscht es den Interrupt-Status auch, was <span class="clisting">isInterrupted()</span> nicht tut. Zwei aufeinanderfolgende Aufrufe von <span class="clisting">interrupted()</span> führen daher zu einem <span class="clisting">false</span>, es sei denn, in der Zwischenzeit erfolgt eine weitere Unterbrechung.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp365c4a65-1044-4b94-953b-25a3a8b89600" name="dodtp365c4a65-1044-4b94-953b-25a3a8b89600"></a><h3 class="t3"><span class="cfett">12.3.8</span><span class="cfett"> UncaughtExceptionHandler für unbehandelte Ausnahmen</span><a href="#dodtpc6562f29-1155-4d6b-bddb-085985bcc16c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Einer der Gründe für das Ende eines Threads ist eine unbehandelte Ausnahme, etwa von
+                                                   einer nicht aufgefangenen <span class="clisting">RuntimeException</span>. Um in diesem Fall einen kontrollierten Abgang zu ermöglichen, lässt sich an den
+                                                   Thread ein <span class="clisting">UncaughtExceptionHandler</span><a class="indexterm" id="dodtpfd87ece8-43f7-4ec3-acc0-d63095a4f968"></a> hängen, der immer dann benachrichtigt wird, wenn der Thread wegen einer nicht behandelten
+                                                   Ausnahme endet.
+                                                </p>
+                                                <p><span class="clisting">UncaughtExceptionHandler</span> ist eine in <span class="clisting">Thread</span> deklarierte innere Schnittstelle, die eine Operation <span class="clisting">void uncaughtException(Thread t, Throwable e)</span> vorschreibt. Eine Implementierung der Schnittstelle lässt sich entweder einem individuellen
+                                                   Thread oder allen Threads anhängen, sodass im Fall des Abbruchs durch unbehandelte
+                                                   Ausnahmen die JVM die Methode <span class="clisting">uncaughtException()</span> aufruft. Auf diese Weise kann die Applikation im letzten Atemzug noch den Fehler
+                                                   loggen, den die JVM über das <span class="clisting">Throwable e</span> übergibt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">Thread</span><br>implements Runnable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void setUncaughtExceptionHandler(Thread.UncaughtExceptionHandler eh)</span><br>Setzt den <span class="clisting">UncaughtExceptionHandler</span> für den Thread.
+                                                   </li>
+                                                   <li><span class="clisting">Thread.UncaughtExceptionHandler getUncaughtExceptionHandler()</span><br>Liefert den aktuellen <span class="clisting">UncaughtExceptionHandler</span>.
+                                                   </li>
+                                                   <li><span class="clisting">Static void setDefaultUncaughtExceptionHandler(Thread.UncaughtExceptionHandler eh)</span><br>Setzt den <span class="clisting">UncaughtExceptionHandler</span> für alle Threads.
+                                                   </li>
+                                                   <li><span class="clisting">static Thread.UncaughtExceptionHandler getDefaultUncaughtExceptionHandler()</span><br>Liefert den zugewiesenen <span class="clisting">UncaughtExceptionHandler</span> aller Threads.
+                                                   </li>
+                                                </ul>
+                                                <p>Ein mit <span class="clisting">setUncaughtExceptionHandler()</span> lokal gesetzter <span class="clisting">UncaughtExceptionHandler</span> überschreibt den Eintrag für den <span class="clisting">setDefaultUncaughtExceptionHandler()</span>. Zwischen dem mit dem Thread assoziierten Handler und dem globalen gibt es noch einen
+                                                   Handler-Typ für Thread-Gruppen, der jedoch seltener verwendet wird.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_12_003.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="12 Einführung in die nebenläufige Programmierung"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_12_002.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_12_004.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

@@ -1,0 +1,1406 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 2 Imperative Sprachkonzepte">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_02_005.html">
+      <link rel="next" href="javainsel_02_007.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_02_005.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_02_007.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c" class="navnav">2 Imperative Sprachkonzepte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_001.html#dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2" class="navnav">2.1 Elemente der Programmiersprache Java</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e" class="navnav">2.1.1 Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad" class="navnav">2.1.2 Textkodierung durch Unicode-Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp198e6635-37fa-413a-899a-3cd7a20feb60" class="navnav">2.1.3 Bezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp38fd5986-30c6-46a2-aa5c-debb5994292e" class="navnav">2.1.4 Literale</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43" class="navnav">2.1.5 Reservierte Schlüsselwörter</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6" class="navnav">2.1.6 Zusammenfassung der lexikalischen Analyse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp285d7310-67e3-4d7d-873d-040210c8559c" class="navnav">2.1.7 Kommentare</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_002.html#dodtp79c77b33-232b-4fd9-8020-aed1f814967f" class="navnav">2.2 Von der Klasse zur Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa6db7c65-20a9-4ac3-9632-b2bf5962bc03" class="navnav">2.2.1 Was sind Anweisungen?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpe51e5d37-92ec-4813-bc73-202534c31133" class="navnav">2.2.2 Klassendeklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp61716dd0-9a88-431c-9304-3c5bb9d5046d" class="navnav">2.2.3 Die Reise beginnt am main()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpc07f84a9-2c32-4114-b631-dac342c70c2b" class="navnav">2.2.4 Der erste Methodenaufruf: println()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp5d0320d4-db2a-4699-b8a5-685779fdd208" class="navnav">2.2.5 Atomare Anweisungen und Anweisungssequenzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa64f286a-2280-4789-b0f7-5a48ad1ca82d" class="navnav">2.2.6 Mehr zu print(), println() und printf() für Bildschirmausgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8e70b07f-ab66-44c5-9432-6e16594a838a" class="navnav">2.2.7 Die API-Dokumentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp91287998-6315-4861-a6d9-b44ff6313082" class="navnav">2.2.8 Ausdrücke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpb7641a1d-804e-4ec4-8190-5f21deeb4d80" class="navnav">2.2.9 Ausdrucksanweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp9a52eda5-f73d-49fd-b61a-2c0847ff8137" class="navnav">2.2.10 Erste Idee der Objektorientierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8fe538b5-0223-4bec-a2a0-b0b916fce8fd" class="navnav">2.2.11 Modifizierer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp1469ef70-530f-427b-9a63-6e3109597584" class="navnav">2.2.12 Gruppieren von Anweisungen mit Blöcken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_003.html#dodtpba664243-0cd9-4f96-b1d7-63063559438b" class="navnav">2.3 Datentypen, Typisierung, Variablen und Zuweisungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793" class="navnav">2.3.1 Primitive Datentypen im Überblick</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24" class="navnav">2.3.2 Variablendeklarationen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp0ad9d773-6267-4f17-9485-542bc1a9464d" class="navnav">2.3.3 Konsoleneingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286" class="navnav">2.3.4 Fließkommazahlen mit den Datentypen float und double</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148" class="navnav">2.3.5 Ganzzahlige Datentypen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp650f6f62-69e1-48c9-852f-0267f7008bd5" class="navnav">2.3.6 Wahrheitswerte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp67999bec-e430-40b1-87e6-0f85eca68221" class="navnav">2.3.7 Unterstriche in Zahlen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c" class="navnav">2.3.8 Alphanumerische Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75" class="navnav">2.3.9 Gute Namen, schlechte Namen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp85f17238-94fc-4a32-a473-149941bbef52" class="navnav">2.3.10 Initialisierung von lokalen Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_004.html#dodtp10975d22-c270-4b0c-b104-fefd7c9d42a0" class="navnav">2.4 Ausdrücke, Operanden und Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp8f56fc89-b2d1-4d01-afe8-8a7de6707a72" class="navnav">2.4.1 Zuweisungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp57f3964b-49b1-476c-8776-c0f527294767" class="navnav">2.4.2 Arithmetische Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp0dcc0cab-c0de-4d74-9aff-d7a0088ff8fb" class="navnav">2.4.3 Unäres Minus und Plus</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp15b34aef-38a3-4549-930e-6053c19c8c61" class="navnav">2.4.4 Zuweisung mit Operation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp55ed8bd0-c4f0-4a2d-95b8-421ed8290210" class="navnav">2.4.5 Präfix- oder Postfix-Inkrement und -Dekrement</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb215cb39-b959-4629-8054-0476644a4101" class="navnav">2.4.6 Die relationalen Operatoren und die Gleichheitsoperatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp844cb2de-7840-4ea8-b8e3-1bc7e4c1bd52" class="navnav">2.4.7 Logische Operatoren: Nicht, Und, Oder, Xor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp44c70ec5-17d6-4493-bac6-218399d01cf8" class="navnav">2.4.8 Kurzschluss-Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb218d93c-4f16-4a70-ac88-2cae6c5ba95e" class="navnav">2.4.9 Der Rang der Operatoren in der Auswertungsreihenfolge</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp6da52db5-da51-45ac-b690-bda1a07e51c6" class="navnav">2.4.10 Die Typanpassung (das Casting)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpe890a7d4-e787-432c-861b-6eb511b4efbd" class="navnav">2.4.11 Überladenes Plus für Strings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp9c158ef1-11a0-4e8b-9b03-f0ae48cdacdf" class="navnav">2.4.12 Operator vermisst *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_005.html#dodtp9a8125a4-75a7-444d-bcdf-875237c3c605" class="navnav">2.5 Bedingte Anweisungen oder Fallunterscheidungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpe6d58494-dfd5-496a-b3f1-d511fda06f27" class="navnav">2.5.1 Die if-Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp5eb4de62-f7fe-4496-85c3-a1527fe0add0" class="navnav">2.5.2 Die Alternative mit einer if-else-Anweisung wählen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpdc9312f1-8169-4dd3-932b-26e9ef01812e" class="navnav">2.5.3 Der Bedingungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp8104e320-3a51-46e8-8680-6b90a01d8aa9" class="navnav">2.5.4 Die switch-Anweisung bietet die Alternative</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_006.html#dodtp223e4b55-5535-44b1-95de-1f0a4291fe40" class="navh">2.6 Schleifen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe" class="navh">2.6.1 Die while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f" class="navh">2.6.2 Die do-while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp73f4b249-3332-434d-b850-dcad361f47aa" class="navh">2.6.3 Die for-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd46bc956-131b-4d54-8228-199da1e4fe2e" class="navh">2.6.4 Schleifenbedingungen und Vergleiche mit ==</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a" class="navh">2.6.5 Ausbruch planen mit break und Wiedereinstieg mit continue</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp8d6da46b-1759-4867-b239-b80531c1b4b0" class="navh">2.6.6 break und continue mit Marken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_007.html#dodtp0e6fae8f-4221-41a2-9467-2728f1eff1c7" class="navnav">2.7 Methoden einer Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp9749288b-d431-4ef2-a6c4-9e5f10d808f5" class="navnav">2.7.1 Bestandteil einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp276c899e-ddba-4bdb-a7e5-8cc151e0d588" class="navnav">2.7.2 Signatur-Beschreibung in der Java-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp30b37ea4-20c6-4a17-8c62-abf43b9ba963" class="navnav">2.7.3 Aufruf einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5bb656c8-555c-450d-aa12-40225755b81d" class="navnav">2.7.4 Methoden ohne Parameter deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp1343592a-eb8c-46bf-8387-3161fb4c4ae5" class="navnav">2.7.5 Statische Methoden (Klassenmethoden)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpfd200f22-4484-4549-b67f-c7ad97e8010a" class="navnav">2.7.6 Parameter, Argument und Wertübergabe</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp93faef7d-ac94-4338-8474-51fd9d9953f5" class="navnav">2.7.7 Methoden vorzeitig mit return beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpc71341eb-ac1c-4bcb-ab3e-d1c520ad66b9" class="navnav">2.7.8 Nicht erreichbarer Quellcode bei Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpe2b68940-abbf-4160-9007-6f198b58f2a4" class="navnav">2.7.9 Methoden mit Rückgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp709659a8-a37a-42b9-bc68-939aae7e848b" class="navnav">2.7.10 Methoden überladen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7ec06014-b9bb-46ba-8e60-7c16421b7ee8" class="navnav">2.7.11 Sichtbarkeit und Gültigkeitsbereich</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7233a4b1-d5da-4d9b-a622-9c12fc6fa223" class="navnav">2.7.12 Vorgegebener Wert für nicht aufgeführte Argumente *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp81f49256-ccc6-4e96-9a2c-166ba4d2d711" class="navnav">2.7.13 Finale lokale Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp38783188-f284-4b11-a176-1a5965b8fc04" class="navnav">2.7.14 Rekursive Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5cf47d83-746c-4cdd-bb56-f959a7802130" class="navnav">2.7.15 Die Türme von Hanoi *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_008.html#dodtp8c954866-e441-4214-8ffb-5b55cdf81c77" class="navnav">2.8 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp223e4b55-5535-44b1-95de-1f0a4291fe40" name="dodtp223e4b55-5535-44b1-95de-1f0a4291fe40"></a><h2 class="t2"><span class="cfett">2.6</span><span class="cfett"> Schleifen</span><a href="#dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><a class="indexterm" id="dodtp07db44c7-3f02-4f66-9aaf-de66cc76a510"></a>Schleifen dienen dazu, bestimmte Anweisungen immer wieder abzuarbeiten. Zu einer Schleife
+                                                   gehören die Schleifenbedingung und der Rumpf. Die Schleifenbedingung, ein boolescher
+                                                   Ausdruck, entscheidet darüber, unter welcher Bedingung die Wiederholung ausgeführt
+                                                   wird. In Abhängigkeit von der Schleifenbedingung kann der Rumpf mehrmals ausgeführt
+                                                   werden. Dazu wird bei jedem Schleifendurchgang die Schleifenbedingung geprüft. Das
+                                                   Ergebnis entscheidet, ob der Rumpf ein weiteres Mal durchlaufen (<span class="clisting">true</span>) oder die Schleife beendet wird (<span class="clisting">false</span>). Java bietet vier Typen von Schleifen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">while</span>-Schleife
+                                                   </li>
+                                                   <li><span class="clisting">do</span>-<span class="clisting">while</span>-Schleife
+                                                   </li>
+                                                   <li>einfache <span class="clisting">for</span>-Schleife
+                                                   </li>
+                                                   <li>erweiterte <span class="clisting">for</span>-Schleife (auch <span class="cbegriff">For-Each Loop</span><a class="indexterm" id="dodtp5742756b-bade-44e4-8697-317c75a74b4c"></a> genannt)
+                                                   </li>
+                                                </ul>
+                                                <p>Die ersten drei Schleifentypen erklären die folgenden Abschnitte, während die erweiterte
+                                                   <span class="clisting">for</span>-Schleife nur bei Sammlungen nötig ist und daher später bei Feldern (siehe Kapitel
+                                                   3, »Klassen und Objekte«) und dynamischen Datenstrukturen (siehe Kapitel 13, »Datenstrukturen
+                                                   und Algorithmen«) Erwähnung findet.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe" name="dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe"></a><h3 class="t3"><span class="cfett">2.6.1</span><span class="cfett"> Die while-Schleife</span><a href="#dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp223e4b55-5535-44b1-95de-1f0a4291fe40"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp18d29884-3156-43cb-b56d-c0d5d31163fc"></a>Die <span class="clisting">while</span>-Schleife ist eine abweisende Schleife, die vor jedem Schleifeneintritt die Schleifenbedingung
+                                                   prüft. Ist die Bedingung wahr, führt sie den Rumpf aus, andernfalls beendet sie die
+                                                   Schleife. Wie bei <span class="clisting">if</span> muss auch bei den Schleifen der Typ der Bedingungen <span class="clisting">boolean</span> sein.<span class="footnote"><a id="dodtp515868f1-a1ed-4c89-aee3-f9a821cf3e62">[78](Wir hatten das Thema bei if schon angesprochen: In C(++) ließe sich while ( i ) schreiben, was in
+Java while ( i != 0 ) wäre.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zähle von 100 bis 40 in Zehnerschritten herunter:
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 2.21: </strong>WhileLoop.java, main()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">int <span class="cfett">cnt = 100</span>;<br>while ( <span class="cfett">cnt &gt;= 40</span> )<br>{<br>  System.out.printf( "Ich erblickte das Licht der Welt " +<br>                     "in Form einer <span class="cfett">%d</span>-Watt-Glühbirne.%n", <span class="cfett">cnt</span> );<br>  <span class="cfett">cnt -= 10</span>;<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Vor jedem Schleifendurchgang wird der Ausdruck neu ausgewertet, und ist das Ergebnis
+                                                   <span class="clisting">true</span>, so wird der Rumpf ausgeführt. Die Schleife ist beendet, wenn das Ergebnis <span class="clisting">false</span> ist. Ist die Bedingung schon vor dem ersten Eintritt in den Rumpf nicht wahr, so
+                                                   wird der Rumpf erst gar nicht durchlaufen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wird innerhalb des Schleifenkopfs schon alles Interessante erledigt, so muss trotzdem
+                                                               eine Anweisung folgen. Dies ist der passende Einsatz für die leere Anweisung »<span class="clisting">;</span>« oder den leeren Block »<span class="clisting">{}</span>«.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">while ( ! new java.io.File( "c:/dump.bin" ).exists() )<br>  ;<br></pre></div>
+                                                               Nur wenn die Datei existiert, läutet dies das Ende der Schleife ein; andernfalls folgt
+                                                               sofort ein neuer Existenztest. Tipp an dieser Stelle: Anstatt direkt zum nächsten
+                                                               Dateitest überzugehen, sollte eine kurze Verzögerung eingebaut werden.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp3b5d9c79-eab7-4da0-a0a4-a62f372d53e5" name="dodtp3b5d9c79-eab7-4da0-a0a4-a62f372d53e5"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Endlosschleifen</span></h4>
+                                                <p>Ist die Bedingung einer <span class="clisting">while</span>-Schleife immer wahr, dann handelt es sich um eine Endlosschleife. Die Konsequenz
+                                                   ist, dass die Schleife endlos wiederholt wird:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.22: </strong>WhileTrue.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class WhileTrue<br>{<br>  public static void main( String[] args )<br>  {<br>   <span class="cfett"> while ( true )</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> // immer wieder und immer wieder</span><br>   <span class="cfett"> }</span><br>  }<br>}<br></pre></div>
+                                                <p>Endlosschleifen bedeuten normalerweise das Aus für jedes Programm. Doch es gibt Hilfe!
+                                                   Aus dieser Endlosschleife können wir mittels <span class="clisting">break</span> entkommen; das schauen wir uns in Abschnitt 2.6.5 genauer an. Genau genommen beenden
+                                                   aber auch nicht aufgefangene Exceptions oder auch <span class="clisting">System.exit()</span> die Programme.
+                                                </p>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>In Eclipse lassen sich Programme von außen beenden. Dazu bietet die Ansicht Console eine rote Schaltfläche in Form eines Quadrats, die nach der Aktivierung jedes laufende
+                                                   Programm beendet.
+                                                </p><a href="bilder/02_009.png" rel="lightbox" title="Die Ansicht »Console« mit der Schaltfläche zum Beenden von Programmen."><img class="bild" border="1" src="bilderklein/klein02_009.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 2.8: </strong>Die Ansicht »Console« mit der Schaltfläche zum Beenden von Programmen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f" name="dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f"></a><h3 class="t3"><span class="cfett">2.6.2</span><span class="cfett"> Die do-while-Schleife</span><a href="#dodtp73f4b249-3332-434d-b850-dcad361f47aa"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp3b5d9c79-eab7-4da0-a0a4-a62f372d53e5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp6975eabd-b065-4739-b5cd-8d8b0e7ffa19"></a>Dieser Schleifentyp ist eine annehmende Schleife, da <span class="clisting">do</span>-<span class="clisting">while</span> die Schleifenbedingung<a class="indexterm" id="dodtp0c7ff0d3-b368-42be-bb8b-e8d5f902deb2"></a> erst nach jedem Schleifendurchgang prüft. Bevor es zum ersten Test kommt, ist der
+                                                   Rumpf also schon einmal durchlaufen worden. Der Schleifentyp hilft uns bei unserem
+                                                   Zahlenratespiel perfekt, denn es gibt ja mindestens einen Durchlauf mit einer Eingabe,
+                                                   und nur dann, wenn der Benutzer eine falsche Zahl eingibt, soll der Rumpf wiederholt
+                                                   werden.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.23: </strong>TheFinalGuess.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class TheFinalGuess<br>{<br>  public static void main( String[] args )<br>  {<br>    int number = (int) (Math.random() * 5 + 1);<br>    int guess;<br><br>   <span class="cfett"> do</span><br>   <span class="cfett"> {</span><br>     System.out.println( "Welche Zahl denke ich mir zwischen 1 und 5?" );<br>      guess = new java.util.Scanner( System.in ).nextInt();<br><br>      if ( number == guess )<br>        System.out.println( "Super getippt!" );<br>      else if ( number &gt; guess )<br>        System.out.println( "Nee, meine Zahl ist größer als deine!" );<br>      else if ( number &lt; guess )<br>        System.out.println( "Nee, meine Zahl ist kleiner als deine!" );<br>   <span class="cfett"> }</span><br>   <span class="cfett"> while ( number != guess );</span><br>  }<br>}<br></pre></div>
+                                                <p>Es ist wichtig, auf das Semikolon hinter der <span class="clisting">while</span>-Anweisung zu achten. Liefert die Bedingung ein <span class="clisting">true</span>, so wird der Rumpf erneut ausgeführt.<span class="footnote"><a id="dodtpd331300f-68df-486f-bf0a-e0b8a0731fe5">[79](Das ist in Pascal und Delphi anders. Hier läuft eine Schleife der Bauart repeat … until Bedingung (das
+Gegenstrück zu Javas do-while) so lange, bis die Bedingung wahr wird, und bricht dann ab – ist die
+Bedingung nicht erfüllt, also falsch, geht es weiter mit einer Wiederholung. Ist in Java die Bedingung
+nicht erfüllt, bedeutet es das Ende der Schleifendurchläufe; das ist also genau das Gegenteil. Die
+Schleife vom Typ while Bedingung … do in Pascal und Delphi entspricht aber genau der while-Schleife
+in Java.)</a></span> Andernfalls wird die Schleife beendet, und das Programm wird mit der nächsten Anweisung
+                                                   nach der Schleife fortgesetzt. Interessant ist das Detail, dass wir die Variable <span class="clisting">guess</span> nun außerhalb des <span class="clisting">do-while</span>-Blockes deklarieren müssen, da eine im Schleifenblock deklarierte Variable für den
+                                                   Wiederholungstest in <span class="clisting">while</span> nicht sichtbar ist. Auch weiß der Compiler, dass der <span class="clisting">do-while</span>-Block mindestens einmal durchlaufen wird und <span class="clisting">guess</span> auf jeden Fall initialisiert wird; der Zugriff auf nicht initialisierte Variablen
+                                                   ist verboten und wird vom Compiler als Fehler angesehen.
+                                                </p><a id="dodtp578288bf-77e6-456c-b977-9b0dcfd967cc" name="dodtp578288bf-77e6-456c-b977-9b0dcfd967cc"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Äquivalenz einer while- und einer do-while-Schleife *</span></h4>
+                                                <p>Die <span class="clisting">do-while</span>-Schleife wird seltener gebraucht als die <span class="clisting">while</span>-Schleife. Dennoch lassen sich beide ineinander überführen. Zunächst der erste Fall:
+                                                   Wir ersetzen eine <span class="clisting">while</span>-Schleife durch eine <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">while ( <span class="clistingk">Ausdruck</span> )<br>  <span class="clistingk">Anweisung</span><br></pre></div>
+                                                <p>Führen wir uns noch einmal vor Augen, was hier passiert. In Abhängigkeit vom Ausdruck
+                                                   wird der Rumpf ausgeführt. Da zunächst ein Test kommt, wäre die <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife schon eine Blockausführung weiter. So fragen wir in einem ersten Schritt
+                                                   mit einer <span class="clisting">if</span>-Anweisung ab, ob die Bedingung wahr ist oder nicht. Wenn ja, dann lassen wir den
+                                                   Programmcode in einer <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife abarbeiten.
+                                                </p>
+                                                <p>Die äquivalente <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife sieht also wie folgt aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( <span class="clistingk">Ausdruck</span> )<br>  do<br>    <span class="clistingk">Anweisung</span><br>  while ( <span class="clistingk">Ausdruck</span> ) ;<br></pre></div>
+                                                <p>Nun der zweite Fall: Wir ersetzen die <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife durch eine <span class="clisting">while</span>-Schleife:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">do<br>  <span class="clistingk">Anweisung</span><br>while ( <span class="clistingk">Ausdruck</span> ) ;<br></pre></div>
+                                                <p>Da zunächst die Anweisungen ausgeführt werden und anschließend der Test, schreiben
+                                                   wir für die <span class="clisting">while</span>-Variante die Ausdrücke einfach vor den Test. So ist sichergestellt, dass diese zumindest
+                                                   einmal abgearbeitet werden:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint"><span class="clistingk">Anweisung</span><br>while ( <span class="clistingk">Ausdruck</span> )<br>  <span class="clistingk">Anweisung</span><br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp73f4b249-3332-434d-b850-dcad361f47aa" name="dodtp73f4b249-3332-434d-b850-dcad361f47aa"></a><h3 class="t3"><span class="cfett">2.6.3</span><span class="cfett"> Die for-Schleife</span><a href="#dodtpd46bc956-131b-4d54-8228-199da1e4fe2e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp578288bf-77e6-456c-b977-9b0dcfd967cc"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtpb7c53bab-14ee-4d34-b23b-961aa216c0d8"></a>Die <span class="clisting">for</span>-Schleife ist eine spezielle Variante einer <span class="clisting">while</span>-Schleife und wird typischerweise zum Zählen benutzt. Genauso wie <span class="clisting">while</span>-Schleifen sind <span class="clisting">for</span>-Schleifen abweisend, der Rumpf wird also erst dann ausgeführt, wenn die Bedingung
+                                                   wahr ist.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Gib die Zahlen von 1 bis 10 auf dem Bildschirm aus:
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 2.24: </strong>ForLoop.java, main()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">for ( int i = 1; i &lt;= 10; i++ )            // i ist Schleifenzähler<br>  System.out.println( i );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Eine genauere Betrachtung der Schleife zeigt die unterschiedlichen Segmente:</p>
+                                                <ul class="gp">
+                                                   <li><span class="cbegriff">Initialisierung der Schleife:</span> Der erste Teil der <span class="clisting">for</span>-Schleife ist ein Ausdruck wie <span class="clisting">i = 1</span>, der vor der Durchführung der Schleife genau einmal ausgeführt wird. Dann wird das
+                                                      Ergebnis verworfen. Tritt in der Auswertung ein Fehler auf, so wird die Abarbeitung
+                                                      unterbrochen, und die Schleife kann nicht vollständig ausgeführt werden. Der erste
+                                                      Teil kann lokale Variablen deklarieren und initialisieren. Diese Zählvariable ist
+                                                      dann außerhalb des Blocks nicht mehr gültig.<span class="footnote"><a id="dodtp3ea57f78-a754-4bdf-a745-2c49d4891c0c">[80](Im Gegensatz zu C++ ist das Verhalten klar definiert, und es gibt kein Hin und Her. In C++ implementierten
+Compilerbauer die Variante einmal so, dass die Variable nur im Block galt, andere interpretierten
+die Sprachspezifikation so, dass diese auch außerhalb gültig blieb. Die aktuelle C++-Definition
+schreibt nun vor, dass die Variable außerhalb des Blocks nicht mehr gültig ist. Da es jedoch noch
+alten Programmcode gibt, haben viele Compilerbauer eine Option eingebaut, mit der das Verhalten
+der lokalen Variablen bestimmt werden kann.)</a></span> Es darf noch keine lokale Variable mit dem gleichen Namen geben.
+                                                   </li>
+                                                   <li><span class="cbegriff">Schleifentest</span><a class="indexterm" id="dodtp001756aa-5991-4f2c-8106-882e99d23289"></a><span class="cbegriff">/Schleifenbedingung:</span> Der mittlere Teil, wie <span class="clisting">i &lt;= 10</span>, wird vor dem Durchlaufen des Schleifenrumpfs &#8211; also vor jedem Schleifeneintritt
+                                                      &#8211; getestet. Ergibt der Ausdruck <span class="clisting">false</span>, wird die Schleife nicht durchlaufen und beendet. Das Ergebnis muss, wie bei einer
+                                                      <span class="clisting">while</span>-Schleife, vom Typ <span class="clisting">boolean</span> sein. Ist kein Test angegeben, so ist das Ergebnis automatisch <span class="clisting">true</span>.
+                                                   </li>
+                                                   <li><span class="cbegriff">Schleifen-Inkrement</span><a class="indexterm" id="dodtp6249c56d-9b63-4b27-9d68-2734c7290441"></a> <span class="cbegriff">durch einen Fortschaltausdruck:</span> <a class="indexterm" id="dodtp3e876e4a-c172-4a0e-b360-3fa60cc85a95"></a>Der letzte Teil, wie <span class="clisting">i++</span>, wird immer am Ende jedes Schleifendurchlaufs, aber noch vor dem nächsten Schleifeneintritt
+                                                      ausgeführt. Das Ergebnis wird nicht weiter verwendet. Ergibt die Bedingung des Tests
+                                                      <span class="clisting">true</span>, dann befindet sich beim nächsten Betreten des Rumpfs der veränderte Wert im Rumpf.
+                                                   </li>
+                                                </ul>
+                                                <p>Betrachten wir das Beispiel, so ist die Auswertungsreihenfolge folgender Art:</p>
+                                                <ol class="paufz">
+                                                   <li>Initialisiere <span class="clisting">i</span> mit 1.
+                                                   </li>
+                                                   <li>Teste, ob <span class="clisting">i &lt;= 10</span> gilt.
+                                                   </li>
+                                                   <li>Ergibt sich <span class="clisting">true</span>, dann führe den Block aus, sonst ist es das Ende der Schleife.
+                                                   </li>
+                                                   <li>Erhöhe <span class="clisting">i</span> um 1.
+                                                   </li>
+                                                   <li>Gehe zu Schritt 2.</li>
+                                                </ol><a id="dodtpbf0ee645-b6a5-41fe-8406-c956d725aad3" name="dodtpbf0ee645-b6a5-41fe-8406-c956d725aad3"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Schleifenzähler</span></h4>
+                                                <p>Wird die <span class="clisting">for</span>-Schleife zum Durchlaufen einer Variablen genutzt, so heißt der <span class="cbegriff">Schleifenzähler</span><a class="indexterm" id="dodtp4f823b87-b8f7-494a-95bc-8e375c0bbb78"></a> entweder <span class="cbegriff">Zählvariable</span> oder <span class="cbegriff">Laufvariable</span>.
+                                                </p>
+                                                <p>Wichtig sind die Initialisierung und die korrekte Abfrage am Ende. Schnell läuft die
+                                                   Schleife einmal zu oft durch und führt so zu falschen Ergebnissen. Die Fehler bei
+                                                   der Abfrage werden auch <span class="cbegriff">off-by-one error</span><a class="indexterm" id="dodtp1abe9caa-2b42-4f8f-951b-187ca8606619"></a> genannt, wenn zum Beispiel statt <span class="clisting">&lt;=</span> der Operator <span class="clisting">&lt;</span> steht. Dann nämlich läuft die Schleife nur bis 9. Ein anderer Name für den Schleifenfehler
+                                                   lautet <span class="cbegriff">fencepost error</span><a class="indexterm" id="dodtp7fbea5a4-e5bf-4331-a515-36d7dbf98ff7"></a> (Zaunpfahl-Fehler). Es geht um die Frage, wie viele Pfähle für einen 100 m langen
+                                                   Zaun nötig sind, sodass alle Pfähle einen Abstand von 10 m haben: 9, 10 oder 11?
+                                                </p><a id="dodtpa9de2b3a-a22f-4450-b21c-626fb4f4d033" name="dodtpa9de2b3a-a22f-4450-b21c-626fb4f4d033"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wann for- und wann while-Schleife?</span></h4>
+                                                <p>Da sich die <span class="clisting">while</span>- und die <span class="clisting">for</span>-Schleife sehr ähnlich sind, ist die Frage berechtigt, wann die eine und wann die
+                                                   andere zu nutzen ist. Leider verführt die kompakte <span class="clisting">for</span>-Schleife sehr schnell zu einer Überladung. Manche Programmierer packen gerne alles
+                                                   in den Schleifenkopf hinein, und der Rumpf besteht nur aus einer leeren Anweisung.
+                                                   Dies ist ein schlechter Stil und sollte vermieden werden.
+                                                </p>
+                                                <p><span class="clisting">for</span>-Schleifen sollten immer dann benutzt werden, wenn eine Variable um eine konstante
+                                                   Größe erhöht wird. Tritt in der Schleife keine Schleifenvariable auf, die inkrementiert
+                                                   oder dekrementiert wird, sollte eine <span class="clisting">while</span>-Schleife genutzt werden. Eine <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife sollte dann eingesetzt werden, wenn die Abbruchbedingung erst am Ende eines
+                                                   Schleifendurchlaufs ausgewertet werden kann. Auch sollte die <span class="clisting">for</span>-Schleife dort eingesetzt werden, wo sich alle drei Ausdrücke im Schleifenkopf auf
+                                                   dieselbe Variable beziehen. Vermieden werden sollten unzusammenhängende Ausdrücke
+                                                   im Schleifenkopf. Der schreibende Zugriff auf die Schleifenvariable im Rumpf ist eine
+                                                   schlechte Idee, wenn sie auch gleichzeitig im Kopf modifiziert wird &#8211; das ist schwer
+                                                   zu durchschauen und kann leicht zu Endlosschleifen führen.
+                                                </p>
+                                                <p>Die <span class="clisting">for</span>-Schleife ist nicht auf einen bestimmen Typ festgelegt, auch wenn <span class="clisting">for</span>-Schleifen für das Hochzählen den impliziten Typ <span class="clisting">int</span> suggerieren. Der Initialisierungsteil kann alles Mögliche vorbelegen, ob <span class="clisting">int</span>, <span class="clisting">double</span> oder eine Referenzvariable. Die Bedingung kann alles erdenkbare testen, nur das Ergebnis
+                                                   muss hier ein <span class="clisting">boolean</span> sein.
+                                                </p><a id="dodtpb334585b-5600-4826-946c-a3695238439c" name="dodtpb334585b-5600-4826-946c-a3695238439c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Eine Endlosschleife mit for</span></h4>
+                                                <p>Da alle drei Ausdrücke im Kopf der Schleife optional sind, können sie weggelassen
+                                                   werden, und es ergibt sich eine Endlosschleife. Diese Schreibweise ist somit mit <span class="clisting">while(true)</span> semantisch äquivalent:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( ; ; )<br>  ;<br></pre></div>
+                                                <p>Die trennenden Semikola dürfen nicht verschwinden. Falls demnach keine Schleifenbedingung
+                                                   angegeben ist, ist der Ausdruck immer wahr. Es folgt keine Initialisierung und keine
+                                                   Auswertung des Fortschaltausdrucks.
+                                                </p><a id="dodtp3c99d246-2c57-43e1-bfa4-47f5227f0c7c" name="dodtp3c99d246-2c57-43e1-bfa4-47f5227f0c7c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Geschachtelte Schleifen</span></h4>
+                                                <p>Schleifen, und das gilt insbesondere für <span class="clisting">for</span>-Schleifen, können verschachtelt werden. Syntaktisch ist das auch logisch, da sich
+                                                   innerhalb des Schleifenrumpfs beliebige Anweisungen aufhalten dürfen. Um fünf Zeilen
+                                                   von Sternchen auszugeben, wobei in jeder Zeile immer ein Stern mehr erscheinen soll,
+                                                   schreiben wir:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( int i = 1; i &lt;= 5; i++ )<br>{<br>  for ( int j = 1; j &lt;= i; j++ )<br>    System.out.print( "*" );<br>  System.out.println();<br>}<br></pre></div>
+                                                <p>Als besonderes Element ist die Abhängigkeit des Schleifenzählers <span class="clisting">j</span> von <span class="clisting">i</span> zu werten. Es folgt die Ausgabe:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">*<br>**<br>***<br>****<br>*****<br></pre></div>
+                                                <p>Die übergeordnete Schleife nennt sich <span class="cbegriff">äußere Schleife</span>, die untergeordnete <span class="cbegriff">innere Schleife</span><a class="indexterm" id="dodtp697b4760-127c-418f-bb3d-9389e459b56d"></a>. In unserem Beispiel wird die äußere Schleife die Zeilen zählen und die innere die
+                                                   Sternchen in eine Zeile ausgeben, also für die Spalte verantwortlich sein.
+                                                </p>
+                                                <p>Da Schleifen beliebig tief geschachtelt werden können, muss besonderes Augenmerk auf
+                                                   die Laufzeit gelegt werden. Die inneren Schleifen werden immer so oft ausgeführt,
+                                                   wie die äußere Schleife durchlaufen wird.
+                                                </p><a id="dodtpe3f2b30a-b7eb-4064-95c4-1a74d2a639cb" name="dodtpe3f2b30a-b7eb-4064-95c4-1a74d2a639cb"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> for-Schleifen und ihr Komma-Operator *</span></h4>
+                                                <p><a class="indexterm" id="dodtp77e75206-f571-4415-9df4-5ade97343568"></a>Im ersten und letzten Teil einer <span class="clisting">for</span>-Schleife lässt sich ein Komma einsetzen. Damit lassen sich entweder mehrere Variablen
+                                                   gleichen Typs deklarieren &#8211; wie wir es schon kennen &#8211; oder mehrere Ausdrücke nebeneinander
+                                                   schreiben, aber keine beliebigen Anweisungen oder sogar andere Schleifen. Mit den
+                                                   Variablen <span class="clisting">i</span> und <span class="clisting">j</span> können wir so eine kleine Multiplikationstabelle aufbauen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( int i = 1<span class="cfett">,</span> j = 9; i &lt;= j; i++<span class="cfett">,</span> j-- )<br>  System.out.printf( "%d * %d = %d%n", i, j, i*j );<br></pre></div>
+                                                <p>Dann ist die Ausgabe:</p>
+                                                <div class="listing"><pre class="prettyprint">1 * 9 = 9<br>2 * 8 = 16<br>3 * 7 = 21<br>4 * 6 = 24<br>5 * 5 = 25<br></pre></div>
+                                                <p>Ein weiteres Beispiel mit komplexerer Bedingung wäre das folgende, das vor dem Schleifendurchlauf
+                                                   den Startwert für die Variablen <span class="clisting">x</span> und <span class="clisting">y</span> initialisiert, dann <span class="clisting">x</span> und <span class="clisting">y</span> heraufsetzt und die Schleife so lange ausführt, bis <span class="clisting">x</span> und <span class="clisting">y</span> beide 10 sind:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int x, y;<br>for ( x = initX()<span class="cfett">,</span> y = initY()<span class="cfett">,</span> x++<span class="cfett">,</span> y++;<br>      ! (x == 10 &amp;&amp; y == 10);<br>      x += xinc(), y += yinc() )<br>{<br>  // ...<br>}<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Komplizierte <span class="clisting">for</span>-Schleifen sind lesbarer, wenn die drei <span class="clisting">for</span>-Teile in getrennten Zeilen stehen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd46bc956-131b-4d54-8228-199da1e4fe2e" name="dodtpd46bc956-131b-4d54-8228-199da1e4fe2e"></a><h3 class="t3"><span class="cfett">2.6.4</span><span class="cfett"> Schleifenbedingungen und Vergleiche mit ==</span><a href="#dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe3f2b30a-b7eb-4064-95c4-1a74d2a639cb"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine Schleifenabbruchbedingung kann ganz unterschiedlich aussehen. Beim Zählen ist
+                                                   es häufig der Vergleich auf einen Endwert. Oft steckt an dieser Stelle ein absoluter
+                                                   Vergleich mit <span class="clisting">==</span>, der aus zwei Gründen problematisch werden kann.
+                                                </p>
+                                                <p>Sehen wir uns das erste Problem anhand einiger Programmzeilen an:</p>
+                                                <div class="listing"><pre class="prettyprint">for ( int i = 1;<span class="cfett"> i != 11</span>; i++ )        // Zählt bis 10, oder?<br>  System.out.println( i );<br></pre></div>
+                                                <p>Ist der Wert der Variablen <span class="clisting">i</span> kleiner als 11, so haben wir beim Zählen kein Problem, denn dann ist anschließend
+                                                   spätestens bei 11 Schluss und die Schleife bricht ab. Komt der Wert aber aus einer
+                                                   unbekannten Quelle und ist er echt größer als 11, so ist die Bedingung ebenso wahr,
+                                                   und der Schleifenrumpf wird ziemlich lange durchlaufen &#8211; genau genommen so weit, bis
+                                                   wir durch einen Überlauf wieder bei 0 beginnen und dann auch bei 11 und dem Abbruch
+                                                   landen. Die Absicht ist sicherlich eine andere gewesen. Die Schleife sollte nur so
+                                                   lange zählen, wie <span class="clisting">i</span> kleiner 11 ist, und nicht einfach nur ungleich 11. Daher passt Folgendes besser:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( int i = 1;<span class="cfett"> i &lt; 11</span>; i++ )        // Zählt immer nur bis 10<br>  System.out.println( i );<br></pre></div>
+                                                <p>Jetzt rennt der Interpreter bei Zahlen größer 11 nicht endlos weiter, sondern stoppt
+                                                   die Schleife sofort ohne Durchlauf.
+                                                </p><a id="dodtp8abd8c6c-0e58-477f-a553-f577d537b7e5" name="dodtp8abd8c6c-0e58-477f-a553-f577d537b7e5"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Rechenungenauigkeiten</span></h4>
+                                                <p><a class="indexterm" id="dodtp15e322df-c313-49bb-9c23-19f89996a0fe"></a>Das zweite Problem ergibt sich bei Fließkommazahlen. Es ist sehr problematisch, echte
+                                                   Vergleiche zu fordern:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">double d = 0.0;<br>while ( d != 1.0 )               // Achtung! Problematischer Vergleich!<br>{<br>  d += 0.1;<br>  System.out.println( d );<br>}<br></pre></div>
+                                                <p>Lassen wir das Programmsegment laufen, so sehen wir, dass die Schleife hurtig über
+                                                   das Ziel hinausschießt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">0.1<br>0.2<br>0.30000000000000004<br>0.4<br>0.5<br>0.6<br>0.7<br>0.7999999999999999<br>0.8999999999999999<br>0.9999999999999999<br>1.0999999999999999<br>1.2<br>1.3<br></pre></div>
+                                                <p>Und das so lange, bis das Auge müde wird ...</p>
+                                                <p>Bei Fließkommawerten bietet es sich daher immer an, mit den relationalen Operatoren
+                                                   <span class="clisting">&lt;</span>, <span class="clisting">&gt;, &lt;=</span> oder <span class="clisting">&gt;=</span> zu arbeiten.
+                                                </p>
+                                                <p>Eine zweite Möglichkeit neben dem echten Kleiner/Größer-Vergleich ist, eine erlaubte
+                                                   Abweichung (Delta) zu definieren. Mathematiker bezeichnen die Abweichung von zwei
+                                                   Werten mit dem griechischen Kleinbuchstaben Epsilon. Wenn wir einen Vergleich von
+                                                   zwei Fließkommazahlen anstreben und bei einem Gleichheitsvergleich eine Toleranz mit
+                                                   betrachten wollen, so schreiben wir einfach:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( Math.abs(x &#8211; y) &lt;= epsilon )<br>  ...<br></pre></div>
+                                                <p>Epsilon ist die erlaubte Abweichung. <span class="clisting">Math.abs(x)</span> berechnet von einer Zahl <span class="clisting">x</span> den Absolutwert.
+                                                </p><a id="dodtp9f04fa9c-11b5-428f-bc10-06520733d462" name="dodtp9f04fa9c-11b5-428f-bc10-06520733d462"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wie Bereichsangaben schreiben? *</span></h4>
+                                                <p>Für Bereichsangaben der Form <span class="clisting">a &gt;= 23 &amp;&amp; a &lt;= 42</span> empfiehlt es sich, den unteren Wert in den Vergleich einzubeziehen, den Wert für
+                                                   die obere Grenze jedoch nicht (inklusive untere Grenzen und exklusive obere Grenzen).
+                                                   Für unser Beispiel, in dem <span class="clisting">a</span> im Intervall<a class="indexterm" id="dodtp143ccf3b-7658-4571-8891-37278d05dc51"></a> bleiben soll, ist Folgendes besser: <span class="clisting">a &gt;= 23 &amp;&amp; a &lt; 43</span>. Die Begründung dafür ist einleuchtend:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Die Größe des Intervalls ist die Differenz aus den Grenzen.</li>
+                                                   <li>Ist das Intervall leer, so sind die Intervallgrenzen gleich.</li>
+                                                   <li>Die untere Grenze ist nie größer als die obere Grenze.</li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Standardbibliothek verwendet diese Konvention auch durchgängig, etwa im Fall von
+                                                               <span class="clisting">substring()</span> bei String-Objekten oder <span class="clisting">subList()</span> bei Listen oder bei der Angabe von Array-Indexwerten.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Vorschläge können für normale Schleifen mit Vergleichen übernommen werden. So
+                                                   ist eine Schleife mit zehn Durchgängen besser in der Form
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( i = 0; i &lt; 10; i++ )              // Besser<br></pre></div>
+                                                <p>formuliert als in der semantisch äquivalenten Form:</p>
+                                                <div class="listing"><pre class="prettyprint">for ( i = 0; i &lt;= 9; i++ )              // Nicht so gut<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a" name="dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a"></a><h3 class="t3"><span class="cfett">2.6.5</span><span class="cfett"> Ausbruch planen mit break und Wiedereinstieg mit continue</span><a href="#dodtp8d6da46b-1759-4867-b239-b80531c1b4b0"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp9f04fa9c-11b5-428f-bc10-06520733d462"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp84a2126a-b6b3-44db-a905-4968aa4ef9c6"></a>Wird innerhalb einer <span class="clisting">for</span>-, <span class="clisting">while</span>- oder <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife eine <span class="clisting">break</span>-Anweisung eingesetzt, so wird der Schleifendurchlauf beendet und die Abarbeitung
+                                                   bei der ersten Anweisung nach der Schleife fortgeführt.
+                                                </p>
+                                                <p>Dass eine Endlossschleife mit <span class="clisting">break</span> beendet werden kann ist nützlich, wenn eine Bedingung eintritt, die das Ende der
+                                                   Schleife bestimmt. Das lässt sich prima auf unser Zahlenratespiel übertragen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.25: </strong>GuessWhat.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class GuessWhat<br>{<br>  public static void main( String[] args )<br>  {<br>    int number = (int) (Math.random() * 5 + 1);<br><br>   <span class="cfett"> while ( true )</span><br>   <span class="cfett"> {</span><br>     System.out.println( "Welche Zahl denke ich mir zwischen 1 und 5?" );<br>      int guess = new java.util.Scanner( System.in ).nextInt();<br><br>      if ( number == guess )<br>      {<br>        System.out.println( "Super getippt!" );<br>       <span class="cfett"> break;</span>                  <span class="cfett"> // Ende der Schleife</span><br>      }<br>      else if ( number &gt; guess )<br>        System.out.println( "Nee, meine Zahl ist größer als deine!" );<br>      else if ( number &lt; guess )<br>        System.out.println( "Nee, meine Zahl ist kleiner als deine!" );<br>   <span class="cfett"> }</span><br>  }<br>}<br></pre></div>
+                                                <p>Die Fallunterscheidung stellt fest, ob der Benutzer noch einmal in einem weiteren
+                                                   Schleifendurchlauf neu raten muss oder ob der Tipp richtig war; dann beendet die <span class="clisting">break</span>-Anweisung den Spuk.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Da ein kleines <span class="clisting">break</span> schnell im Programmtext verschwindet, seine Bedeutung aber groß ist, sollte ein kleiner
+                                                               Hinweis auf diese Anweisung gesetzt werden.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp87dafcc9-1c06-4886-a616-32dc19fb5982" name="dodtp87dafcc9-1c06-4886-a616-32dc19fb5982"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Flaggen oder break</span></h4>
+                                                <p><span class="clisting">break</span><a class="indexterm" id="dodtpa47c2d60-bce4-4bcb-ab1e-6616eeb720e3"></a> lässt sich gut verwenden, um aus einer Schleife vorzeitig auszubrechen, ohne Flags
+                                                   zu benutzen. Dazu ein Beispiel dafür, was vermieden werden sollte:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean endFlag = false;<br>do<br>{<br>  if ( <span class="clistingk">Bedingung</span> )<br>  {<br>    ...<br>    endFlag = true;<br>  }<br>} while ( <span class="clistingk">AndereBedingung</span> &amp;&amp; ! endFlag );<br></pre></div>
+                                                <p>Stattdessen schreiben wir:</p>
+                                                <div class="listing"><pre class="prettyprint">do<br>{<br>  if ( <span class="clistingk">Bedingung</span> )<br>  {<br>    ...<br>    break;<br>  }<br>} while ( <span class="clistingk">AndereBedingung</span> );<br></pre></div>
+                                                <p>Die alternative Lösung stellt natürlich einen Unterschied dar, wenn nach dem <span class="clisting">if</span> noch Anweisungen in der Schleife stehen.
+                                                </p><a id="dodtp0c7f30b2-2bea-4b6b-96f8-d2ba0a6aafef" name="dodtp0c7f30b2-2bea-4b6b-96f8-d2ba0a6aafef"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> continue</span></h4>
+                                                <p>Innerhalb einer <span class="clisting">for</span>-, <span class="clisting">while</span>- oder <span class="clisting">do</span>-<span class="clisting">while</span>-Schleife lässt sich eine <span class="clisting">continue</span>-Anweisung einsetzen, die nicht wie <span class="clisting">break</span> die Schleife beendet, sondern zum Schleifenkopf zurückgeht. Nach dem Auswerten des
+                                                   Fortschaltausdrucks wird im nächsten Schritt erneut geprüft, ob die Schleife weiter
+                                                   durchlaufen werden soll. Ein häufiges Einsatzfeld sind Schleifen, die im Rumpf immer
+                                                   wieder Werte so lange holen und testen, bis diese für die Weiterverarbeitung geeignet
+                                                   sind.
+                                                </p>
+                                                <p>Dazu ein Beispiel wieder mit dem Ratespiel. Dem Benutzer wird bisher mitgeteilt, dass
+                                                   er nur Zahlen zwischen 1 und 5 (inklusive) eingeben soll, aber wenn er &#8211;1234567 eingibt,
+                                                   ist das auch egal. Das wollen wir ändern, indem wir einen Test vorschalten, der zurück
+                                                   zur Eingabe führt, wenn der Wertbereich falsch ist. <span class="clisting">continue</span> hilft uns dabei, zurück zum Anfang des Blockes zu kommen, und der beginnt mit einer
+                                                   neuen Eingabeaufforderung.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.26: </strong>GuessRight.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class GuessRight<br>{<br>  public static void main( String[] args )<br>  {<br>    int number = (int) (Math.random() * 5 + 1);<br><br>    while ( true )<br>    {<br>      System.out.println( "Welche Zahl denke ich mir zwischen 1 und 5?" );<br>      int guess = new java.util.Scanner( System.in ).nextInt();<br><br>      if ( guess &lt; 1 || guess &gt; 5 )<br>      {<br>        System.out.println( "Nur Zahlen zwischen 1 und 5!" );<br>       <span class="cfett"> continue;</span><br>      }<br><br>      if ( number == guess )<br>      {<br>        System.out.println( "Super getippt!" );<br>        break;                   // Ende der Schleife<br>      }<br>      else if ( number &gt; guess )<br>        System.out.println( "Nee, meine Zahl ist größer als deine!" );<br>      else if ( number &lt; guess )<br>        System.out.println( "Nee, meine Zahl ist kleiner als deine!" );<br>    }<br>  }<br>}<br></pre></div><a href="bilder/02_010.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein02_010.png" alt="Abbildung"></a><p>Manche Programmstücke sind aber ohne <span class="clisting">continue</span><a class="indexterm" id="dodtp53088128-86e9-473a-8766-e8b1ab0ee08e"></a> lesbarer. Ein <span class="clisting">continue</span> am Ende einer <span class="clisting">if</span>-Abfrage kann durch einen <span class="clisting">else</span>-Teil bedeutend klarer gefasst werden. Zunächst das schlechte Beispiel:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">while ( <span class="clistingk">Bedingung</span> )       // Durch continue verzuckert<br>{<br>  if ( <span class="clistingk">AndereBedingung</span> )<br>  {<br>    // Code,Code,Code<br>    continue;<br>  }<br>  // Weiterer schöner Code<br>}<br></pre></div>
+                                                <p>Viel deutlicher ist:</p>
+                                                <div class="listing"><pre class="prettyprint">while ( <span class="clistingk">Bedingung</span> )<br>{<br>  if ( <span class="clistingk">AndereBedingung</span> )<br>  {<br>    // Code, Code, Code<br>  }<br>  else<br>  {<br>    // Weiterer schöner Code<br>  }<br>}<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8d6da46b-1759-4867-b239-b80531c1b4b0" name="dodtp8d6da46b-1759-4867-b239-b80531c1b4b0"></a><h3 class="t3"><span class="cfett">2.6.6</span><span class="cfett"> break und continue mit Marken *</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp0c7f30b2-2bea-4b6b-96f8-d2ba0a6aafef"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp266eb019-172f-4714-887e-b12738205678"></a>Obwohl das Schlüsselwort <a class="indexterm" id="dodtp71370969-e5c6-415b-9119-1ed453319e68"></a><span class="clisting">goto</span> in der Liste der reservierten Wörter auftaucht, erlaubt Java keine beliebigen Sprünge,
+                                                   und <span class="clisting">goto</span> ist ohne Funktionalität. Allerdings lassen sich in Java Anweisungen &#8211; oder ein Block,
+                                                   der eine besondere Anweisung ist &#8211; markieren. Ein Grund für die Einführung von Markierungen
+                                                   ist der, dass <span class="clisting">break</span> bzw. <span class="clisting">continue</span> mehrdeutig ist:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Wenn es zwei ineinander verschachtelte Schleifen gibt, würde ein <span class="clisting">break</span> in der inneren Schleife nur die innere abbrechen. Was ist jedoch, wenn die äußere
+                                                      Schleife beendet werden soll? Das Gleiche gilt für <span class="clisting">continue</span>, wenn die äußere Schleife weiter vorgesetzt werden soll und nicht die innere.
+                                                   </li>
+                                                   <li>Nicht nur Schleifen nutzen das Schlüsselwort <span class="clisting">break</span>, sondern auch die <span class="clisting">switch</span>-Anweisung. Was ist, wenn eine Schleife eine <span class="clisting">switch</span>-Anweisung enthält, doch nicht der lokale <span class="clisting">case</span>-Zweig mit <span class="clisting">break</span> beendet werden soll, sondern die ganze Schleife mit <span class="clisting">break</span> abgebrochen werden soll?
+                                                   </li>
+                                                </ul>
+                                                <p>Die Sprachdesigner von Java haben sich dazu entschlossen, Markierungen einzuführen,
+                                                   sodass <span class="clisting">break</span> und <span class="clisting">continue</span> die markierte Anweisung entweder verlassen oder wieder durchlaufen können. Falsch
+                                                   eingesetzt, können sie natürlich zu Spaghetti-Code wie aus der Welt der unstrukturierten
+                                                   Programmiersprachen führen. Doch als verantwortungsvolle Java-Programmierer werden
+                                                   wir das Feature natürlich nicht missbrauchen.
+                                                </p><a id="dodtp2dc00bb6-5b82-4322-b77d-623913cea075" name="dodtp2dc00bb6-5b82-4322-b77d-623913cea075"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> break mit einer Marke für Schleifen</span></h4>
+                                                <p>Betrachten wir ein erstes Beispiel mit einer Marke (engl. <span class="cbegriff">label</span>), in dem <span class="clisting">break</span> nicht nur aus der inneren Teufelsschleife ausbricht, sondern aus der äußeren gleich
+                                                   mit. Marken werden definiert, indem ein Bezeichner mit Doppelpunkt abgeschlossen und
+                                                   vor eine Anweisung gesetzt wird &#8211; die Anweisung wird damit markiert wie eine Schleife:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.27: </strong>BreakAndContinueWithLabels.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">heaven:</span><br>while ( true )<br>{<br> <span class="cfett"> hell:</span><br>  while ( true )<br>  {<br>   <span class="cfett"> break /* continue */ heaven;</span><br>  }<br>  // System.out.println( "hell" );<br>}<br>System.out.println( "heaven" );<br></pre></div>
+                                                <p>Ein <span class="clisting">break</span> ohne Marke in der inneren <span class="clisting">while</span>-Schleife beendet nur die innere Wiederholung, und ein <span class="clisting">continue</span> würde zur Fortführung dieser inneren <span class="clisting">while</span>-Schleife führen. Unser Beispiel zeigt die Anwendung einer Marke hinter den Schlüsselwörtern
+                                                   <span class="clisting">break</span> und <span class="clisting">continue</span>.
+                                                </p>
+                                                <p>Das Beispiel benutzt die Marke <span class="clisting">hell</span> nicht, und die Zeile mit der Ausgabe »hell« ist bewusst ausgeklammert, denn sie ist
+                                                   nicht erreichbar und würde andernfalls zu einem Compilerfehler führen. Dass die Anweisung
+                                                   nicht erreichbar ist, ist klar, denn mit einem <span class="clisting">break heaven</span> kommt das Programm nie zur nächsten Anweisung hinter der inneren Schleife, und somit
+                                                   ist eine Konsolenausgabe nicht erreichbar.
+                                                </p>
+                                                <p>Setzen wir statt <span class="clisting">break heaven</span> ein <span class="clisting">break hell</span> in die innere Schleife, ändert sich dies:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">heaven:</span><br>while ( true )<br>{<br> <span class="cfett"> hell:</span><br>  while ( true )<br>  {<br>   <span class="cfett"> break /* continue */ hell;</span><br>  }<br>  System.out.println( "hell" );<br>}<br>// System.out.println( "heaven" );<br></pre></div>
+                                                <p>In diesem Szenario ist die Ausgabe »heaven« nicht erreichbar und muss auskommentiert
+                                                   werden. Das <span class="clisting">break hell</span> in der inneren Schleife wirkt wie ein einfaches <span class="clisting">break</span> ohne Marke, und das ablaufende Programm führt laufend zu Bildschirmausgaben von »hell«.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Rätsel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Warum übersetzt der Compiler Folgendes ohne Murren?
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 2.28: </strong>WithoutComplain.java
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class WithoutComplain<br>{<br>  static void main( String[] args )<br>  {<br>    http://www.tutego.de/<br>    System.out.print( "Da gibt's Java-Tipps und -Tricks." );<br>  }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp0a7413d5-b635-4914-8417-0478eb04d52f" name="dodtp0a7413d5-b635-4914-8417-0478eb04d52f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Mit dem break und einer Marke aus dem switch aussteigen</span></h4>
+                                                <p>Da dem <span class="clisting">break</span> mehrere Funktionen in der Sprache Java zukommen, kommt es zu einer Mehrdeutigkeit,
+                                                   wenn im <span class="clisting">case</span>-Block einer <span class="clisting">switch</span>-Anweisung ein <span class="clisting">break</span> eingesetzt wird.
+                                                </p>
+                                                <p>Im folgenden Beispiel läuft eine Schleife einen String ab. Der Zugriff auf ein Zeichen
+                                                   im String realisiert die <span class="clisting">String</span>-Objektmethode <span class="clisting">charAt()</span>; die Länge eines Strings liefert <span class="clisting">length()</span>. Als Zeichen im String sollen C, G, A, T erlaubt sein. Für eine Statistik über die
+                                                   Anzahl der einzelnen Buchstaben zählt eine <span class="clisting">switch</span>-Anweisung beim Treffer jeweils die richtige Variable <span class="clisting">c</span>, <span class="clisting">g</span>, <span class="clisting">a</span>, <span class="clisting">t</span> um <span class="clisting">1</span> hoch. Falls ein falsches Zeichen im String vorkommt, wird die Schleife beendet. Und
+                                                   genau hier bekommt die Markierung ihren Auftritt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.29: </strong>SwitchBreak.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class SwitchBreak<br>{<br>  public static void main( String[] args )<br>  {<br>    String dnaBases = "CGCAGTTCTTCGGXAC";<br>    int a = 0, g = 0, c = 0, t = 0;<br><br>   <span class="cfett"> loop:</span><br>    for ( int i = 0; i &lt; dnaBases.length(); i++ )<br>    {<br>      switch ( dnaBases.charAt( i ) )<br>      {<br>        case 'A': case 'a':<br>          a++;<br>          break;<br>        case 'G': case 'g':<br>          g++;<br>          break;<br>        case 'C': case 'c':<br>          c++;<br>          break;<br>        case 'T': case 't':<br>          t++;<br>          break;<br>        default:<br>          System.err.println( "Unbekannte Nukleinbasen " + dnaBases.charAt( i ) );<br>         <span class="cfett"> break loop;</span><br>      }<br>    }<br>    System.out.printf( "Anzahl: A=%d, G=%d, C=%d, T=%d%n", a, g, c, t );<br>  }<br>}<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Marken können vor allen Anweisungen (und Blöcke sind damit eingeschlossen) definiert
+                                                               werden; in unserem ersten Fall haben wir die Marke vor die <span class="clisting">while(true)</span>-Schleife gesetzt. Interessanterweise kann ein <span class="clisting">break</span> mit einer Marke nicht nur eine Schleife und <span class="clisting">case</span> verlassen, sondern auch einen ganz einfachen Block:
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">label:<br>{<br>  ...<br>  break label;<br>  ...<br>}<br></pre></div>
+                                                               Somit entspricht das <span class="clisting">break label</span> einem <span class="clisting">goto</span> zum Ende des Blocks.
+                                                               Das <span class="clisting">break</span> kann nicht durch <span class="clisting">continue</span> ausgetauscht werden, da <span class="clisting">continue</span> in jedem Fall eine Schleife braucht. Und ein normales <span class="clisting">break</span> ohne Marke wäre im Übrigen nicht gültig und könnte nicht den Block verlassen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <br>
+                                                
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Rätsel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wenn Folgendes in der <span class="clisting">main()</span>-Methode stünde, würde es der Compiler übersetzen? Was wäre die Ausgabe? Achte genau
+                                                               auf die Leerzeichen!
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">int val = 2;<br>switch ( val )<br>{<br>  case 1:<br>    System.out.println( 1 );<br>  case2:<br>    System.out.println( 2 );<br>  default:<br>    System.out.println( 3 );<br>}<br></pre></div>
+                                                               
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_02_006.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="2 Imperative Sprachkonzepte"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_02_005.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_02_007.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

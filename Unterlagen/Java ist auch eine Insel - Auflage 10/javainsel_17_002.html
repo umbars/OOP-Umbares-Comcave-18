@@ -1,0 +1,851 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 17 Einführung ins Datenbankmanagement mit JDBC">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 17 Einführung ins Datenbankmanagement mit JDBC">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 17 Einführung ins Datenbankmanagement
+         mit JDBC
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_17_001.html">
+      <link rel="next" href="javainsel_17_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_17_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_17_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2" class="navnav">17 Einführung ins Datenbankmanagement mit JDBC</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_001.html#dodtp411faa84-2af3-46f8-87fe-b8d3fece9e51" class="navnav">17.1 Relationale Datenbanken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_001.html#dodtp7af29844-550d-4d93-b3c1-a7b58aaf785c" class="navnav">17.1.1 Das relationale Modell</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_002.html#dodtp7c9ff830-e388-4e94-902e-09fd68216a87" class="navh">17.2 Einführung in SQL</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe" class="navh">17.2.1 Ein Rundgang durch SQL-Abfragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtpf9279a21-f629-4a32-a2ff-0ca655b8382e" class="navh">17.2.2 Datenabfrage mit der Data Query Language (DQL)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtpdfcff027-f01c-4620-95f5-8c959411726c" class="navh">17.2.3 Tabellen mit der Data Definition Language (DDL) anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_003.html#dodtpd54beed3-666b-4e1e-9627-ad33ec2c852b" class="navnav">17.3 Datenbanken und Tools</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_003.html#dodtp815c990d-f1e4-4539-b4fa-eb4c845558fc" class="navnav">17.3.1 HSQLDB</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_003.html#dodtp5cf58396-4b00-4d27-8920-2b86fa86e0d3" class="navnav">17.3.2 Eclipse-Plugins zum Durchschauen von Datenbanken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_004.html#dodtp31bd687b-1009-4c3f-830b-f48be4cc3dcf" class="navnav">17.4 JDBC und Datenbanktreiber</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_005.html#dodtp44e54ad6-b4eb-4f1e-89a4-10d270000462" class="navnav">17.5 Eine Beispielabfrage</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128" class="navnav">17.5.1 Schritte zur Datenbankabfrage</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d" class="navnav">17.5.2 Ein Client für die HSQLDB-Datenbank</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp46687731-f234-4387-ba1d-c224c277f0f8" class="navnav">17.5.3 Datenbankbrowser und eine Beispielabfrage unter NetBeans</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp7c9ff830-e388-4e94-902e-09fd68216a87" name="dodtp7c9ff830-e388-4e94-902e-09fd68216a87"></a><h2 class="t2"><span class="cfett">17.2</span><span class="cfett"> Einführung in SQL</span><a href="#dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><a class="indexterm" id="dodtp90d3d0f7-d75c-4f51-8a4b-828f9f7125f5"></a><span class="cbegriff">SQL</span> ist die bedeutendste Abfragesprache für relationale Datenbanken, in der Benutzer
+                                                   angeben, auf welche Daten sie zugreifen möchten.<span class="footnote"><a id="dodtpdd02515d-553c-4676-91b8-7f2f7b19dd4a">[214](Bei einer OODB ist dies OQL und bei XML-Datenbanken in der Regel XQuery.)</a></span> Obgleich die Bezeichnung »Abfragesprache« etwas irreführend klingt, beinhaltet SQL
+                                                   auch Befehle zur Datenmanipulation und Datendefinition, um beispielsweise neue Tabellen
+                                                   zu erstellen. Nachdem Anfang der 1970er-Jahre das relationale Modell für Datenbanken
+                                                   populär geworden war, entstand im IBM-Forschungslabor San José (jetzt Almaden) ein
+                                                   Datenbanksystem namens <span class="cbegriff">System R</span>. Das relationale Modell wurde 1970 von Dr. Edgar F. Codd<span class="footnote"><a id="dodtp52583b98-18aa-4771-baa2-fcdd7fe3f14e">[215](1981 erhielt er für seine Arbeit mit relationalen Datenbanken den Turing-Award – eine Art Nobelpreis
+für Informatiker.)</a></span> entwickelt. System R bot eine Abfragesprache, die <a class="indexterm" id="dodtp762a0009-73da-4ed5-9d9c-8c67a5437487"></a>SEQUEL (<a class="indexterm" id="dodtpaf605ada-b92e-444f-a850-28e3b1ee41c0"></a><span class="cbegriff">Structured English Query Language</span>) genannt wurde. Später wurde SEQUEL in SQL umbenannt. Da sich relationale Systeme
+                                                   großer Beliebtheit erfreuten, wurde 1986 die erste SQL-Norm vom ANSI-Konsortium verabschiedet.
+                                                   1988 wurde der Standard geändert, und 1992 entstand die zweite Version von SQL (SQL-2
+                                                   beziehungsweise SQL-92 genannt). Da die wichtigen Datenbanken alle <a class="indexterm" id="dodtp750ebae0-9815-469c-ba11-fc751a5694f6"></a>SQL-2 verarbeiten, kann ein Programm über diese Befehle die Datenbank steuern, ohne
+                                                   verschiedene proprietäre Schnittstellen nutzen zu müssen. Dennoch können über SQL
+                                                   die speziellen Leistungen einer Datenbank genutzt werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 17.2: </strong>Entwicklung von SQL
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Sprache</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Entwicklung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SQUARE
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1975
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SEQUEL
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1975, IBM Research Labs San José
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SEQUEL2
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1976, IBM Research Labs San José
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SQL
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1982, IBM
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">ANSI-SQL
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1986
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">ISO-SQL (SQL 89, SQL-1)
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1989, drei Sprachen: Level 1, Level 2, +IEF
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SQL-2 (bzw. SQL-92)
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1992
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">SQL-3 (auch SQL-1999)
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1999
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Damit sich ein Datenbanktreiber JDBC-kompatibel nennen kann, muss er mindestens SQL-92
+                                                   unterstützen. Das bedeutet jedoch nicht, dass die existierenden Treiber alle Eigenschaften
+                                                   von SQL-92 implementieren müssen; über Kannst-du-Methoden lässt sich der Treiber fragen,
+                                                   ob er Eigenschaften unterstützt oder nicht.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe" name="dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe"></a><h3 class="t3"><span class="cfett">17.2.1</span><span class="cfett"> Ein Rundgang durch SQL-Abfragen</span><a href="#dodtpf9279a21-f629-4a32-a2ff-0ca655b8382e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp7c9ff830-e388-4e94-902e-09fd68216a87"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Da das Wort »Abfragesprache« eine Art Programmiersprache suggeriert, sind wir an einem
+                                                   Beispiel interessiert. Um es vorwegzusagen: Es gibt nur eine Handvoll wichtiger Befehle,
+                                                   und <span class="clisting">SELECT</span>, <span class="clisting">UPDATE</span> und <span class="clisting">CREATE</span> decken schon einen Großteil davon ab. Obwohl die Groß- und Kleinschreibung der Befehle
+                                                   unbedeutend ist, sind sie zwecks besserer Lesbarkeit im Folgenden großgeschrieben.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Eine einfache Abfrage in SQL:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">SELECT Lfr_Name<br>FROM Lieferanten<br></pre></div>
+                                                               Die Tabellen und Spalten sind auch für die folgenden Beispiele fiktiv.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Tabellen nehmen die Benutzerdaten auf, und mit dem Kommando <span class="clisting">FROM</span> wählen wir die Tabelle <span class="clisting">Lieferanten</span> aus, die für die Berechnung erforderlich ist. Die Tabelle <span class="clisting">Lieferanten</span> enthält drei Attribute (die Spalten), die wir mit <span class="clisting">SELECT</span> auswählen. In einer Datenbank werden normalerweise mehrere Tabellen verwendet, ein
+                                                   sogenanntes <span class="cbegriff">Datenbankschema</span>. Jede Tabelle gehört zu genau einem Schema.
+                                                </p>
+                                                <p>SQL-Abfragen sind nahe an der Umgangssprache formuliert. Im oberen Beispiel liest
+                                                   sich die Abfrage einfach als: »Wähle die Spalte <span class="clisting">Lfr_Name</span> aus der Tabelle <span class="clisting">Lieferanten</span>«. Der Designer einer Datenbank muss sich natürlich vor der Umsetzung der Tabellen
+                                                   und somit der Relationen gründlich Gedanken machen. Eine spätere Änderung der Struktur
+                                                   wird nämlich teuer. So muss schon am Anfang einkalkuliert werden, welche Daten in
+                                                   welchen Ausprägungen auftreten können. Nach Statistiken der amerikanischen <span class="cbegriff">Library of Congress</span> verdoppelt sich insgesamt alle fünf Jahre die Informationsmenge. Was wäre, wenn diese
+                                                   Informationen alles Einträge in einer endlos verzweigten Datenbank wären und jemand
+                                                   feststellen würde, dass das Tabellenschema ungünstig ist? Datenbankdesigner nennen
+                                                   den Vorgang von einem ersten Modell bis zur fertigen Relation <span class="cbegriff">Normalisierung</span>.
+                                                </p>
+                                                <p>Bevor wir mit den einzelnen Sprachelementen von SQL fortfahren, sind an dieser Stelle
+                                                   einige Regeln für SQL-Ausdrücke zusammengefasst:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Die SQL-Anweisungen sind unabhängig von der Groß- und Kleinschreibung. Im Text sind
+                                                      die SQL-Kommandos großgeschrieben, damit die Ausdrücke besser lesbar sind.
+                                                   </li>
+                                                   <li>Leerzeichen, Return und Tabulatoren sind in einer Abfrage bedeutungslos. Im Folgenden
+                                                      werden zur besseren Lesbarkeit Zeilenumbrüche verwendet.
+                                                   </li>
+                                                   <li>SQL-Anweisungen werden mit einer Zeichenkette abgeschlossen. Sie unterscheidet sich
+                                                      aber von Datenbank zu Datenbank. Häufig ist dies ein Semikolon; es kann aber auch
+                                                      ein <span class="clisting">\go</span> sein. Wir werden die Anweisungen in den Beispielen nicht abschließen, da JDBC diesen
+                                                      Abschluss automatisch vornimmt.
+                                                   </li>
+                                                </ul>
+                                                <p>Wir werden uns im Folgenden etwas intensiver um SQL-Abfragen kümmern. Es zeigt sich,
+                                                   dass eine einzelne SQL-Anweisung sehr ausdrucksstark sein kann. JDBC hat mit dieser
+                                                   Ausdrucksstärke aber nichts zu schaffen, es kennt nicht einmal ihre Korrektheit. JDBC
+                                                   leitet den SQL-Befehl einfach an den Treiber, und dieser leitet das Kommando an die
+                                                   Datenbank weiter.
+                                                </p>
+                                                <p>SQL gliedert sich in eine Reihe von unterschiedlichen Abfragetypen &#8211; die einen sind
+                                                   mehr mit der Modifikation von Daten, die anderen eher mit deren Abfrage beschäftigt.
+                                                   Anbei die wichtigsten drei Sprachen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>DDL (Data Definition Language): Erstellen der Tabellen, Beziehungen (mit Schlüsseln) und Indizes. Typische SQL-Anweisungen
+                                                      sind <span class="clisting">CREATE</span>/<span class="clisting">DROP DATABASE</span>, <span class="clisting">CREATE</span>/<span class="clisting">DROP INDEX</span>, <span class="clisting">CREATE</span>/<span class="clisting">DROP SYNONYM</span>, <span class="clisting">CREATE</span>/<span class="clisting">DROP TABLE</span> und <span class="clisting">CREATE</span>/<span class="clisting">DROP VIEW</span>.
+                                                   </li>
+                                                   <li>DML (Data Manipulation Language): Daten hinzufügen und löschen. Typische SQL-Anweisungen sind hier <span class="clisting">INSERT</span>, <span class="clisting">DELETE</span> und <span class="clisting">UPDATE</span>.
+                                                   </li>
+                                                   <li>DQL (Data Query Language): Daten auswählen und filtern. Die typischste SQL-Anweisung ist <span class="clisting">SELECT</span> mit den Spezialisierungen <span class="clisting">ALL</span>, <span class="clisting">DISTINCT</span>, <span class="clisting">ORDER BY</span>, <span class="clisting">GROUP BY</span>, <span class="clisting">HAVING</span>, Unterabfragen (<span class="clisting">IN</span>, <span class="clisting">ANY</span>, <span class="clisting">ALL</span>, <span class="clisting">EXISTS</span>), Schnittmengen und Joins.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf9279a21-f629-4a32-a2ff-0ca655b8382e" name="dodtpf9279a21-f629-4a32-a2ff-0ca655b8382e"></a><h3 class="t3"><span class="cfett">17.2.2</span><span class="cfett"> Datenabfrage mit der Data Query Language (DQL)</span><a href="#dodtpdfcff027-f01c-4620-95f5-8c959411726c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die DQL umfasst Abfragekommandos, um auf die Inhalte zuzugreifen. In SQL steckt auch
+                                                   schon das Wort »Query«, unsere Abfrage. Das wichtigste Element ist hierbei das oben
+                                                   bereits erwähnte <span class="clisting">SELECT</span>:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">SELECT {Feldname, Feldname,..|*} ( * = alle Felder )<br>FROM Tabelle [, Tabelle, Tabelle....]<br>[WHERE {Bedingung}]<br>[ORDER BY Feldname [ASC|DESC]...]<br>[GROUP BY Feldname [HAVING {Bedingung}]]<br></pre></div>
+                                                <p>Das Angenehme an SQL ist die Tatsache, dass wir uns nicht um das Wie kümmern müssen, sondern nur um das Was. Wir fragen also etwa: »Welche Lieferanten wohnen in Aalen?« und formulieren:</p>
+                                                <div class="listing"><pre class="prettyprint">SELECT Lfr_Name<br>FROM Lieferanten<br>WHERE Wohnort='Aalen'<br></pre></div>
+                                                <p>Dabei ist es uns egal, wie die Datenbankimplementierung mit dieser Abfrage umgeht.
+                                                   Hier unterscheiden sich auch die verschiedenen Datenbanken in ihrer Leistungsfähigkeit
+                                                   und in den Preisen.
+                                                </p>
+                                                <p>Kümmern wir uns nun um die verschiedenen Schreibweisen von <span class="clisting">SELECT</span>. Geben wir in <span class="clisting">SELECT</span> einen Spaltennamen oder Spaltenindex an, so bekommen wir nur die Ergebnisse dieser
+                                                   Spalte zurück. Eine Abfrage mit »<span class="clisting">*</span>« liefert alle Spalten zurück. Damit wir also nicht nur den Namen des Kunden bekommen,
+                                                   sondern auch die anderen Angaben &#8211; um ihm gleich einen Auftrag zu geben &#8211;, schreiben
+                                                   wir Folgendes, um eine Liste aller Lieferanten in Aalen zu erhalten:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">SELECT * FROM Lieferanten WHERE Wohnort='Aalen'<br></pre></div>
+                                                <p>Wir sehen, dass es keinen Unterschied macht, ob die Abfragen in mehrere Zeilen aufgespaltet
+                                                   sind oder in einer Zeile stehen.
+                                                </p><a id="dodtpeeab0cae-a61c-4965-9725-6f65aec5f852" name="dodtpeeab0cae-a61c-4965-9725-6f65aec5f852"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zeilen ausfiltern und logische Operatoren</span></h4>
+                                                <p>Die <span class="clisting">SELECT</span>-Anweisung geht über die Spalten, und die <span class="clisting">WHERE</span>-Angabe filtert Zeilen nach einem Kriterium heraus. Wir haben zunächst mit einer Gleich-Abfrage
+                                                   gearbeitet. SQL kennt die üblichen Vergleichsoperatoren: = gleich, &lt;&gt; ungleich, &gt;
+                                                   größer, &lt; kleiner, &gt;= größer gleich, &lt;= kleiner gleich. Vergleiche werden mit einem
+                                                   einfachen Gleichheitszeichen und nicht durch <span class="clisting">==</span> formuliert. Die Vergleichsoperatoren lassen sich durch die Operatoren <span class="clisting">AND</span>, <span class="clisting">OR</span> und <span class="clisting">NOT</span> weiter verfeinern. Bei numerischen Daten können wir auch die Rechenoperatoren (+,
+                                                   &#8211;, *, /) anwenden. Anstelle vielfacher <span class="clisting">AND</span>-Abfragen lässt sich mit zwei SQL-Anweisungen auch der Wertebereich weiter einschränken.
+                                                   Die Einschränkung <span class="clisting">BETWEEN Wert1 AND Wert2</span> testet, ob sich ein Vergleichswert zwischen <span class="clisting">Wert1</span> und <span class="clisting">Wert2</span> befindet. Und <span class="clisting">IN (Werteliste)</span> prüft, ob der Vergleichswert in der angegebenen Werteliste liegt. Für Zeichenketten
+                                                   spielt noch <span class="clisting">LIKE</span> eine Rolle, da hier ein Mustervergleich vorgenommen werden kann. <span class="clisting">IS NULL</span> erlaubt die Abfrage nach einem <span class="clisting">NULL</span>-Wert in der Spalte.
+                                                </p>
+                                                <p>Wenn wir diese SQL-Anweisung von der Datenbank ausführen lassen, wollen wir die Daten
+                                                   gern entsprechend dem Preis sortiert haben. Dazu lässt sich die <span class="clisting">SELECT</span>-Anweisung mit einem <span class="clisting">ORDER BY</span> versehen. Dahinter folgt die Spalte, nach der sortiert wird. Jetzt wird die Tabelle
+                                                   aufsteigend sortiert, also der kleinste Wert unten. Wünschen wir die Sortierung absteigend,
+                                                   dann setzen wir noch <span class="clisting">DESC</span> hintenan.
+                                                </p>
+                                                <p>Wir wollen nun die Informationen mehrerer Tabellen miteinander verbinden. Dazu führen
+                                                   wir eine Tupel-Variable ein. Diese kann eingesetzt werden, wenn sich Attribute nicht
+                                                   eindeutig den Relationen zuordnen lassen. Dies ist genau dann der Fall, wenn zwei
+                                                   Relationen verbunden werden sollen und beide den gleichen Attributnamen besitzen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die SQL-Anweisung zeigt die Verwendung der Variablen, die hier jedoch nicht erforderlich
+                                                               ist, weil wir nur eine Tabelle verwenden:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">SELECT L.Lfr_Name, L.Wohnort<br>FROM Lieferanten L<br>WHERE L.Wohnort = 'Aalen'<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der Buchstabe »<span class="clisting">L</span>« ist hier nur eine Abkürzung, eine Art Variable. Abkürzungen für Spalten werden in
+                                                   SQL auch mit <span class="clisting">AS</span> abgetrennt, etwa so:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">FROM Lieferant AS L<br></pre></div>
+                                                <p>Dann lässt sich auf die Spalte <span class="clisting">Lieferant</span> in der Tabelle <span class="clisting">Lieferanten</span> kurz mit <span class="clisting">L</span> zugreifen.
+                                                </p><a id="dodtp6778aa08-f923-4dca-bf81-4788a679b52f" name="dodtp6778aa08-f923-4dca-bf81-4788a679b52f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Gruppenfunktionen</span></h4>
+                                                <p>Mit <a class="indexterm" id="dodtp00bc791d-d6cc-4b8e-a681-cdbd5068f7a8"></a><span class="cbegriff">Gruppenfunktionen</span> (auch <span class="cbegriff">Aggregationsfunktionen</span><a class="indexterm" id="dodtpff8c05f5-df24-4ac3-a530-33d6c86f6df5"></a> genannt) lassen sich zum Beispiel <a class="indexterm" id="dodtp1c4aa5ce-17c4-4cbb-9a39-3d641aa07419"></a>Durchschnittswerte oder Minima über Spalten beziehen. Sie liefern genau einen Wert,
+                                                   beziehen sich jedoch auf mehrere Tabellenzeilen. Die folgende Abfrage zählt alle Anbieter
+                                                   aus Aalen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">SELECT COUNT(*)<br>FROM Lieferanten<br>WHERE Wohnort = 'Aalen'<br></pre></div>
+                                                <p>Die Spalten, die die Gruppenfunktion bearbeiten, stehen in Klammern hinter dem Namen.
+                                                   Die SQL-Standardfunktionen (es gibt datenbankabhängig noch viel mehr) sind in der
+                                                   folgenden Tabelle aufgeführt:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 17.3: </strong>Die Standardfunktionen in SQL
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Funktion</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Beschreibung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">AVG</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Durchschnittswert
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">COUNT</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpbd09ef35-782e-4c72-8e3e-dc448c74eaf7"></a>Anzahl aller Einträge
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MAX</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp90565496-d93b-4f30-b15c-9f36eb7dc9f9"></a>Maximalwert
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MIN</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Minimalwert<a class="indexterm" id="dodtpa65616e5-9365-47a5-b583-1c9fa0499a02"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">SUM</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp17bc252b-578b-4eab-b53f-423aee615b36"></a>Summe aller Einträge in einer Spalte
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpdfcff027-f01c-4620-95f5-8c959411726c" name="dodtpdfcff027-f01c-4620-95f5-8c959411726c"></a><h3 class="t3"><span class="cfett">17.2.3</span><span class="cfett"> Tabellen mit der Data Definition Language (DDL) anlegen</span><a href="#dodtp6778aa08-f923-4dca-bf81-4788a679b52f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die SQL-Anweisung <span class="clisting">CREATE TABLE</span><a class="indexterm" id="dodtp17a96482-b47a-44a7-9dd1-a4733c803f1f"></a> legt eine neue Tabelle (Relation) an. Dazu gibt die Anweisung die Spalten (Attribute)
+                                                   mit ihren Wertebereichen an. Optional lassen sich Integritätsbedingungen definieren,
+                                                   etwa, ob eine Spalte mit einem Eintrag belegt sein muss (<span class="clisting">NOT NULL</span>) oder welcher Fremdschlüssel eingetragen sein soll:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">CREATE TABLE Tabelle<br>      (Spaltendefinition [,Spaltendefinition] ...<br>      [, Primärschlüsseldefinition]<br>      [, Fremdschlüsseldefinition<br>      [,Fremdschlüsseldefinition] ... ] )<br>      [IN Tabellenspace]<br>      [INDEX IN Tabellenspace2]<br>      [LONG IN Tabellenspace3];<br></pre></div><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_17_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="17 Einführung ins Datenbankmanagement mit JDBC"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_17_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_17_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

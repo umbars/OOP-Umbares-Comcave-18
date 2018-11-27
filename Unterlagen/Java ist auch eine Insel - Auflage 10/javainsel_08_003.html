@@ -1,0 +1,1430 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 8 Besondere Klassen der Java SE">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_08_002.html">
+      <link rel="next" href="javainsel_08_004.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_08_002.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_08_004.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2" class="navnav">8 Besondere Klassen der Java SE</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_001.html#dodtp0f5ac799-f7ce-41d5-9073-b15f98adae5b" class="navnav">8.1 Vergleichen von Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtpf93d4e76-3122-4f02-8495-d7d2908d68bf" class="navnav">8.1.1 Natürlich geordnet oder nicht?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp4a934131-0b47-4f1f-884e-5c9faf8325c7" class="navnav">8.1.2 Die Schnittstelle Comparable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp8edbe604-59a5-420d-a839-74f619e7e1b6" class="navnav">8.1.3 Die Schnittstelle Comparator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp1cf0c0c2-ce45-4c7b-b453-9d3791143c3d" class="navnav">8.1.4 Rückgabewerte kodieren die Ordnung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp544be6d7-a3fd-4d98-b0f8-ea6119e96e0f" class="navnav">8.1.5 Aneinanderreihung von Comparatoren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_002.html#dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c" class="navnav">8.2 Wrapper-Klassen und Autoboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97" class="navnav">8.2.1 Wrapper-Objekte erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4" class="navnav">8.2.2 Konvertierungen in eine String-Repräsentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7" class="navnav">8.2.3 Die Basisklasse Number für numerische Wrapper-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74" class="navnav">8.2.4 Vergleiche durchführen mit compare(), compareTo(), equals()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpba747def-0829-46eb-a791-595b56eff415" class="navnav">8.2.5 Die Klasse Integer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb" class="navnav">8.2.6 Die Klassen Double und Float für Fließkommazahlen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0" class="navnav">8.2.7 Die Long-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a" class="navnav">8.2.8 Die Boolean-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51" class="navnav">8.2.9 Autoboxing: Boxing und Unboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_003.html#dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d" class="navh">8.3 Object ist die Mutter aller Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp1c2db719-9c1c-4e95-9208-64643ed9babc" class="navh">8.3.1 Klassenobjekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpbf055f27-490c-4148-a955-819b36d0cd51" class="navh">8.3.2 Objektidentifikation mit toString()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e" class="navh">8.3.3 Objektgleichheit mit equals() und Identität</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp63daf072-81ed-4188-9a1b-64521d364767" class="navh">8.3.4 Klonen eines Objekts mit clone() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp248f0914-64c9-4589-85de-8cb74c323ed8" class="navh">8.3.5 Hashcodes über hashCode() liefern *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1" class="navh">8.3.6 System.identityHashCode() und das Problem der nicht-eindeutigen Objektverweise
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpad2681f1-8a07-4617-988a-9a64198ded40" class="navh">8.3.7 Aufräumen mit finalize() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpdfced107-4bf2-420c-95bb-0f2b04af7792" class="navh">8.3.8 Synchronisation *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_004.html#dodtpfc49aba3-08d5-430d-bb10-96486332dcb0" class="navnav">8.4 Die Utility-Klasse java.util.Objects</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_005.html#dodtp37a70409-bf30-4fe0-b785-84b4d19a0209" class="navnav">8.5 Die Spezial-Oberklasse Enum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01" class="navnav">8.5.1 Methoden auf Enum-Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtp9f96ff67-0127-4772-963e-6994eda2a76c" class="navnav">8.5.2 enum mit eigenen Konstruktoren und Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_006.html#dodtp1294c04b-60f3-407d-9a84-6333cbf47b24" class="navnav">8.6 Erweitertes for und Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtpd906cbea-163a-42aa-b050-12634ec73599" class="navnav">8.6.1 Die Schnittstelle Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtp306180fa-db47-4be9-911b-c74f5ab3bf58" class="navnav">8.6.2 Einen eigenen Iterable implementieren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_007.html#dodtp7fb05f7b-70ee-4dda-941d-b8aedaf9c55d" class="navnav">8.7 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d" name="dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d"></a><h2 class="t2"><span class="cfett">8.3</span><span class="cfett"> Object ist die Mutter aller Klassen</span><a href="#dodtp1c2db719-9c1c-4e95-9208-64643ed9babc"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><span class="clisting">java.lang.Object</span><a class="indexterm" id="dodtp2cc7d38c-dffe-4524-b34a-3564e4bfe2a0"></a> ist die oberste aller Eltern-Klassen. Somit spielt diese Klasse eine ganz besondere
+                                                   Rolle, da alle anderen Klassen automatisch Unterklassen sind und die Methoden erben
+                                                   beziehungsweise überschreiben.
+                                                </p><a href="bilder/08_009.png" rel="lightbox" title="UML-Diagramm der absoluten Basisklasse Object"><img class="bild" border="1" src="bilderklein/klein08_009.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.9: </strong>UML-Diagramm der absoluten Basisklasse Object
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp1c2db719-9c1c-4e95-9208-64643ed9babc" name="dodtp1c2db719-9c1c-4e95-9208-64643ed9babc"></a><h3 class="t3"><span class="cfett">8.3.1</span><span class="cfett"> Klassenobjekte</span><a href="#dodtpbf055f27-490c-4148-a955-819b36d0cd51"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp7980ce33-556a-4c40-b4f5-eff8f5525b60"></a>Zwar ist jedes Objekt ein Exemplar einer Klasse &#8211; doch was ist eine Klasse? In einer
+                                                   Sprache wie C++ existieren Klassen nicht zur Laufzeit, und der Compiler übersetzt
+                                                   die Klassenstruktur in ein ausführbares Programm. Im absoluten Gegensatz dazu steht
+                                                   Smalltalk: Diese Laufzeitumgebung verwaltet Klassen selbst als Objekte. Diese Idee,
+                                                   Klassen als Objekte zu repräsentieren, übernimmt auch Java &#8211; Klassen sind Objekte
+                                                   vom Typ <span class="clisting">java.lang.Class</span><a class="indexterm" id="dodtpf8522c70-d818-4e79-9d62-ef2e7bbb68a4"></a>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">final Class&lt;? extends Object&gt; getClass()</span><br>Liefert die Referenz auf das Klassenobjekt, die das Objekt konstruiert hat. Das <span class="clisting">Class</span>-Objekt ist immer eindeutig in der JVM, sodass auch mehrere Anfragen an <span class="clisting">getClass()</span><a class="indexterm" id="dodtp88a0cf2b-dcd2-45d9-92c4-84358faeb497"></a> immer dasselbe <span class="clisting">Class</span>-Objekt liefern.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Objektmethode <span class="clisting">getName()</span> eines <span class="clisting">Class</span>-Objekts liefert den Namen der Klassen:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( "Klaviklack".getClass().getName() ); // java.lang.String<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpe506e946-6b44-4530-b6e8-9e93c9cfa5a0" name="dodtpe506e946-6b44-4530-b6e8-9e93c9cfa5a0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Klassen-Literale</span></h4>
+                                                <p>Ein <span class="cbegriff">Klassen-Literal</span><a class="indexterm" id="dodtp0bc2dd79-4842-4910-99b6-531b11fa41cd"></a> (engl. <span class="cbegriff">class literal</span><a class="indexterm" id="dodtp03712b8e-335d-4b48-a3ef-e38efc7252d8"></a>) ist ein Ausdruck der Form <span class="clisting">Datentyp.class</span>, wobei <span class="clisting">Datentyp</span> entweder eine Klasse, eine Schnittstelle, ein Feld oder ein primitiver Typ ist. Beispiele
+                                                   sind <span class="clisting">String.class</span>, <span class="clisting">Integer.class</span><a class="indexterm" id="dodtpa27fd596-8996-44d2-a849-8e85eb443637"></a> oder <span class="clisting">int.class</span> (was nicht mit <span class="clisting">Integer.class</span> identisch ist). Der Ausdruck ist immer vom Typ <span class="clisting">Class</span>. Bei primitiven Typen liefert die Schreibweise <span class="clisting">primitiverTyp.class</span> das gleiche Ergebnis wie <span class="clisting">WrapperTyp.TYPE</span>; es ist also <span class="clisting">Integer.TYPE</span><a class="indexterm" id="dodtpa177177b-ce75-4ea5-877e-8db7957f4fbb"></a> identisch mit <span class="clisting">int.class</span>. <span class="clisting">Class</span>-Objekte spielen insbesondere bei dynamischen Abfragen über die sogenannte Reflection
+                                                   eine Rolle. Zur Laufzeit können so beliebige Klassen geladen, Objekte erzeugt und
+                                                   Methoden aufgerufen werden.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpbf055f27-490c-4148-a955-819b36d0cd51" name="dodtpbf055f27-490c-4148-a955-819b36d0cd51"></a><h3 class="t3"><span class="cfett">8.3.2</span><span class="cfett"> Objektidentifikation mit toString()</span><a href="#dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe506e946-6b44-4530-b6e8-9e93c9cfa5a0"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Jedes Objekt sollte sich durch die Methode <span class="clisting">toString()</span><a class="indexterm" id="dodtp090cea7a-5369-49d5-a791-cde7f2b5cc86"></a> mit einer Zeichenkette identifizieren und den Inhalt der interessanten Attribute
+                                                   als Zeichenkette liefern.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Klasse <span class="clisting">Point</span> implementiert <span class="clisting">toString()</span> so, dass der Rückgabestring die Koordinaten enthält:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( new java.awt.Point() );  // java.awt.Point[x=0,y=0]<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Das Angenehme ist, dass <span class="clisting">toString()</span> automatisch aufgerufen wird, wenn die Methoden <span class="clisting">print()</span> oder <span class="clisting">println()</span> mit einer Objektreferenz als Argument aufgerufen werden. Ähnliches gilt für den Zeichenkettenoperator
+                                                   <span class="clisting">+</span> mit einer Objektreferenz als Operand:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.10: </strong>com/tutego/insel/object/tostring/Player.java, Player
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Player<br>{<br>  String name;<br>  int    age;<br><br> <span class="cfett"> @Override</span><br> <span class="cfett"> public String toString()</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> return getClass().getName() + "[name=" + name + ",age=" + age + "]";</span><br> <span class="cfett"> }</span><br>}<br></pre></div>
+                                                <p>Die Ausgabe mit den Zeilen</p>
+                                                <p class="plistingunter"><strong>Listing 8.11: </strong>com/tutego/insel/object/tostring/PlayerToStringDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Player tinkerbelle = new Player();<br>tinkerbelle.name   = "Tinkerbelle";<br>tinkerbelle.age    = 32;<br>System.out.println( tinkerbelle.toString() );<br>System.out.println( tinkerbelle );<br></pre></div>
+                                                <p>ist damit:</p>
+                                                <div class="listing"><pre class="prettyprint">com.tutego.insel.object.tostring.Player[name=Tinkerbelle,age=32]<br>com.tutego.insel.object.tostring.Player[name=Tinkerbelle,age=32]<br></pre></div>
+                                                <p>Bei einer eigenen Implementierung müssen wir darauf achten, dass die Sichtbarkeit
+                                                   <span class="clisting">public</span> ist, da <span class="clisting">toString()</span> in der Oberklasse <span class="clisting">Object</span> öffentlich vorgegeben ist und wir in der Unterklasse die Sichtbarkeit nicht einschränken
+                                                   können. Zwar bringt die Spezifikation nicht deutlich zum Ausdruck, dass <span class="clisting">toString()</span> nicht <span class="clisting">null</span> als Rückgabe liefern darf, doch ist dann der Leerstring <span class="clisting">""</span> allemal besser. Die Annotation <span class="clisting">@Override</span><a class="indexterm" id="dodtp9a93308b-6df3-4e41-9197-a56f90294f5f"></a> macht das Überschreiben deutlich.
+                                                </p><a id="dodtp8ac59a68-898b-4568-a9d8-c55dbb36fc5e" name="dodtp8ac59a68-898b-4568-a9d8-c55dbb36fc5e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Standardimplementierung</span></h4>
+                                                <p>Neue Klassen sollten <span class="clisting">toString()</span> überschreiben. Ist dies nicht der Fall, gelangt das Programm zur Standardimplementierung
+                                                   in <span class="clisting">Object</span>, wo lediglich der Klassenname und der wenig aussagekräftige Hash-Wert hexadezimal
+                                                   zusammengebunden werden.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public String toString()<br>{<br>  return getClass().getName() + "@" + Integer.toHexString(hashCode());<br>}<br></pre></div>
+                                                <p>Zur Methode:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">String toString()</span><br>Liefert eine String-Repräsentation des Objekts aus Klassenname und Hash-Wert.
+                                                   </li>
+                                                </ul>
+                                                <p>Zwar sagt der Hash-Wert selbst wenig aus, allerdings ist er ein erstes Indiz dafür,
+                                                   dass bei Klassen, die keine <span class="clisting">toString()</span>- und <span class="clisting">hashCode()</span>-Methoden überschreiben, zwei Referenzen nicht identisch sind.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein Objekt der <span class="clisting">class A {}</span> wird gebildet, und <span class="clisting">toString()</span> liefert die ID, die ausgegeben wird:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( new A().toString() );  // A@923e30<br>System.out.println( new A().toString() );  // A@130c19b<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpb356cce8-5d32-40be-8078-61e373b1bd36" name="dodtpb356cce8-5d32-40be-8078-61e373b1bd36"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> toString()-Methode generieren lassen</span></h4>
+                                                <p>Die Methode eignet sich gut zum Debugging, doch ist das manuelle Tippen der Methoden
+                                                   lästig. Zwei Lösungen vereinfachen das Implementieren der Methode <span class="clisting">toString()</span>:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Eclipse und NetBeans können standardmäßig über das Kontextmenü eine <span class="clisting">toString()</span>-Methode anhand ausgewählter Attribute generieren. Das Gleiche gilt im Übrigen auch
+                                                      für <span class="clisting">equals()</span> und <span class="clisting">hashCode()</span>.
+                                                   </li>
+                                                   <li>Die Zustände werden automatisch über Reflection ausgelesen. Hier führt <span class="cbegriff">Apache Commons Lang</span><a class="indexterm" id="dodtp5bacc46b-f005-41f4-884c-a2e11ff1707f"></a> (<a href="http://jakarta.apache.org/commons/lang/" target="_blank">http://jakarta.apache.org/commons/lang/</a>) auf den richtigen Weg.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e" name="dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e"></a><h3 class="t3"><span class="cfett">8.3.3</span><span class="cfett"> Objektgleichheit mit equals() und Identität</span><a href="#dodtp63daf072-81ed-4188-9a1b-64521d364767"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpb356cce8-5d32-40be-8078-61e373b1bd36"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp573b8897-fca9-47b6-bd51-979f8ef431ca"></a>Ob zwei Referenzen dasselbe Objekt repräsentieren, stellt der Vergleichsoperator <span class="clisting">==</span><a class="indexterm" id="dodtpd3cb3fef-328e-4175-8551-dae1c5235998"></a> fest. Er testet die Identität, nicht jedoch automatisch die inhaltliche Gleichheit.
+                                                   Am Beispiel mit Zeichenketten ist das gut zu erkennen: Ein Vergleich mit <span class="clisting">firstname == "Christian"</span> hat im Allgemeinen einen falschen, unbeabsichtigten Effekt, obwohl er syntaktisch
+                                                   korrekt ist. An dieser Stelle sollte der inhaltliche Vergleich stattfinden: Stimmen
+                                                   alle Zeichen der Zeichenkette überein?
+                                                </p>
+                                                <p>Eine <span class="clisting">equals()</span><a class="indexterm" id="dodtp595b18c8-dfba-4fd7-b1f2-d38ff6500165"></a>-Methode sollte Objekte auf Gleichheit prüfen. So besitzt das <span class="clisting">String</span>-Objekt eine Implementierung, die jedes Zeichen vergleicht:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">String firstname = "Christian";<br>if ( firstname.equals( "Christian" ) )<br>  ...<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean equals(Object o)</span><br>Testet, ob das andere Objekt gleich dem eigenen ist. Die Gleichheit definiert jede
+                                                      Klasse für sich anders, doch die Basisklasse vergleicht nur die Referenzen <span class="clisting">o == this</span>.
+                                                   </li>
+                                                </ul><a id="dodtp9d31734b-ae55-4061-96e1-7adb11e92419" name="dodtp9d31734b-ae55-4061-96e1-7adb11e92419"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> equals()-Implementierung aus Object und Unterklassen</span></h4>
+                                                <p>Die Standardimplementierung aus der absoluten Oberklasse <span class="clisting">Object</span> kann über die Gleichheit von speziellen Objekten nichts wissen und testet lediglich
+                                                   die Referenzen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public boolean equals( Object obj )<br>{<br>  return  this == obj;<br>}<br></pre></div>
+                                                <p>Überschreibt eine Klasse <span class="clisting">equals()</span> nicht, ist das Ergebnis von <span class="clisting">o1.equals(o2)</span> gleichwertig mit <span class="clisting">o1 == o2</span>. Unterklassen überschreiben diese Methode, um einen inhaltlichen Vergleich mit ihren
+                                                   Zuständen vorzunehmen. Die Methode ist in Unterklassen gut aufgehoben, denn jede Klasse
+                                                   benötigt eine unterschiedliche Logik, um festzulegen, wann ein Objekt gleich einem
+                                                   anderen Objekt ist.
+                                                </p>
+                                                <p>Nicht jede Klasse implementiert eine eigene <span class="clisting">equals()</span>-Methode, sodass die Laufzeitumgebung unter Umständen ungewollt bei <span class="clisting">Object</span> und seinem Referenzenvergleich landet. Dies hat ungeahnte Folgen, und diese Fehleinschätzung
+                                                   kommt leider bei Exemplaren der Klassen <span class="clisting">StringBuffer</span> und <span class="clisting">StringBuilder</span> vor, die kein eigenes <span class="clisting">equals()</span> implementieren. Wir haben dies bereits in Kapitel 4, »Der Umgang mit Zeichenketten«,
+                                                   erläutert.
+                                                </p><a id="dodtp8ae62b86-3461-4c01-8a36-0956721966a9" name="dodtp8ae62b86-3461-4c01-8a36-0956721966a9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> equals()-Methode überschreiben</span></h4>
+                                                <p>Bei selbst deklarierten Methoden ist Vorsicht geboten, da wir genau auf die Signatur
+                                                   achten müssen. Die Methode muss ein <span class="clisting">Object</span> akzeptieren und <span class="clisting">boolean</span> zurückgeben. Wird diese Signatur falsch verwendet, kommt es statt zu einer <span class="cbegriff">Überschreibung</span> der Methode zu einer <span class="cbegriff">Überladung</span> und bei einer Rückgabe ungleich <span class="clisting">boolean</span> zu einer zweiten Methode mit gleicher Signatur, was Java nicht zulässt (Java erlaubt
+                                                   bisher keine kovarianten Parametertypen). Um das Problem zu minimieren, sollte die
+                                                   Annotation <span class="clisting">@Override</span> an <span class="clisting">equals()</span> angeheftet sein.
+                                                </p>
+                                                <p>Die <span class="clisting">equals()</span>-Methode stellt einige Anforderungen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Heißt der Vergleich <span class="clisting">equals(null)</span>, so ist das Ergebnis immer <span class="clisting">false</span>.
+                                                   </li>
+                                                   <li>Kommt ein <span class="clisting">this</span> hinein, lässt sich eine Abkürzung nehmen und <span class="clisting">true</span> zurückliefern.
+                                                   </li>
+                                                   <li>Das Argument ist zwar vom Typ <span class="clisting">Object</span>, aber dennoch vergleichen wir immer konkrete Typen. Eine <span class="clisting">equals()</span>-Methode einer Klasse <span class="clisting">X</span> wird sich daher nur mit Objekten vom Typ <span class="clisting">X</span> vergleichen lassen. Eine spannende Frage ist, ob <span class="clisting">equals()</span> auch Unterklassen von <span class="clisting">X</span> beachten soll.
+                                                   </li>
+                                                   <li>Eine Implementierung von <span class="clisting">equals()</span> sollte immer eine Implementierung von <span class="clisting">hashCode()</span> bedeuten, denn wenn zwei Objekte <span class="clisting">equals()</span>-gleich sind, müssen auch die Hashwerte gleich sein. Bei einer geerbten <span class="clisting">hashCode()</span>-Methode aus <span class="clisting">Object</span> ist das aber nicht in jedem Fall erfüllt.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der Datentyp für den Parameter in der <span class="clisting">equals()</span>-Methode ist immer <span class="clisting">Object</span> und niemals etwas anderes, da sonst <span class="clisting">equals()</span> nicht überschrieben, sondern überladen wird. Folgendes für eine Klasse <span class="clisting">Player</span> ist also falsch:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">public class Player<br>{<br>  private int age;<br>  public boolean equals( <span class="cfett">Player</span> that ) { return this.age == that.age; }<br>}<br></pre></div>
+                                                               Im Vokabular der Informatiker gesprochen: Java unterstützt bisher keine kovarianten
+                                                               Typ-Parameter, wohl aber seit Java 5 kovariante Rückgabetypen. Daher ist es gut, die
+                                                               Annotation <span class="clisting">@Override</span> zu setzen, denn sie schlägt Alarm, falls wir glauben, eine Methode zu überschreiben,
+                                                               es dann aber doch nicht tun.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp4042de89-ece9-41fd-9c00-801f0801d474" name="dodtp4042de89-ece9-41fd-9c00-801f0801d474"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Beispiel einer eigenen equals()-Methode</span></h4>
+                                                <p>Die beiden ersten Punkte sind leicht erfüllbar, und ein Beispiel für einen <span class="clisting">Club</span> mit den Attributen <span class="clisting">numberOfPersons</span> und <span class="clisting">sm</span> (für die Quadratmeter) ist schnell implementiert:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">@Override<br>public boolean equals( Object o )<br>{<br>  if ( o == null )<br>    return false;<br><br>  if ( o == this )<br>    return true;<br><br>  Club that = (Club) o;<br><br>  return    this.numberOfPersons == that.numberOfPersons<br>         &amp;&amp; this.sm == that.sm;<br>}<br></pre></div>
+                                                <p>Diese Lösung erscheint offensichtlich, führt aber spätestens bei einem Nicht-<span class="clisting">Club</span>-Objekt zu einer <span class="clisting">ClassCastException</span>. Das Problem scheint schnell behoben:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( ! o instanceof Club )<br>  return false;<br></pre></div>
+                                                <p>Jetzt sind wir auf der sicheren Seite, aber das Ziel ist noch nicht ganz erreicht.</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die <span class="clisting">equals()</span>-Methode sollte bei nicht passenden Typen immer <span class="clisting">false</span> zurückgeben und keine Ausnahme auslösen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpef29283e-bfb8-4417-aac4-04ab18bd9e5b" name="dodtpef29283e-bfb8-4417-aac4-04ab18bd9e5b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Das Problem der Symmetrie *</span></h4>
+                                                <p>Zwar funktioniert die aufgeführte Implementierung bei finalen Klassen schön, doch
+                                                   bei Unterklassen ist die Symmetrie gebrochen. Warum? Ganz einfach: <span class="clisting">instanceof</span> testet Typen in der Hierarchie, liefert also auch dann <span class="clisting">true</span>, wenn das an <span class="clisting">equals()</span> übergebene Argument eine Unterklasse von <span class="clisting">Club</span> ist. Diese Unterklasse wird wie die Oberklasse die gleichen Attribute haben, sodass
+                                                   &#8211; aus der Sicht von <span class="clisting">Club</span> &#8211; alles in Ordnung ist. Nehmen wir einmal die Variablen <span class="clisting">club</span> und <span class="clisting">superClub</span> an, die die Typen <span class="clisting">Club</span> und <span class="clisting">SuperClub</span> &#8211; die fiktive Unterklasse von <span class="clisting">Club</span> &#8211; besitzen. Sind beide Objekte gleich, so ergibt <span class="clisting">club.equals(superClub)</span> das Ergebnis <span class="clisting">true</span>. Drehen wir den Spieß um, und fragen wir, was <span class="clisting">superClub.equals(club)</span> ergibt. Zwar haben wir <span class="clisting">SuperClub</span> nicht implementiert, nehmen aber an, dass dort eine <span class="clisting">equals()</span>-Methode steckt, die nach dem gleichen <span class="clisting">instanceof</span>-Schema implementiert wurde wie <span class="clisting">Club</span>. Dann wird dort bei einem Test Folgendes ausgeführt: <span class="clisting">club instanceof superClub</span> &#8211; und das ist <span class="clisting">false</span>. Damit wird aber die Fallunterscheidung mit <span class="clisting">return false</span> beendet. Fassen wir zusammen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">club.equals( superClub ) == true<br>superClub.equals( club ) == false<br></pre></div>
+                                                <p>Das darf nicht sein, und zur Lösung dürfen wir nicht <span class="clisting">instanceof</span> verwenden, sondern müssen fragen, ob der Typ exakt ist. Das geht mit <span class="clisting">getClass()</span>. Korrekt ist daher Folgendes:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.12: </strong>com/tutego/insel/object/equals/Club.java, Club
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Club<br>{<br>  int numberOfPersons;<br>  int sm;<br><br>  @Override<br>  public boolean equals( Object o )<br>  {<br>    if ( o == null )<br>      return false;<br><br>    if ( o == this )<br>      return true;<br><br>   <span class="cfett"> if ( ! o.getClass().equals(getClass()) )</span><br>     <span class="cfett"> return false;<br><br>   </span> Club that = (Club) o;<br><br>    return    this.numberOfPersons == that.numberOfPersons<br>           &amp;&amp; this.sm   == that.sm;<br>  }<br><br>  @Override<br>  public int hashCode()<br>  {<br>    return (31 + numberOfPersons) * 31 + sm;<br>  }<br>}<br></pre></div>
+                                                <p>Die <span class="clisting">hashCode()</span>-Methode besprechen wir in Abschnitt 8.3.5, »Hashcodes über hashCode() liefern« &#8211;
+                                                   sie steht nur der Vollständigkeit halber hier, da <span class="clisting">equals()</span> und <span class="clisting">hashCode()</span> immer Hand in Hand gehen sollten.
+                                                </p>
+                                                <p>Es ist günstig, bei erweiterten Klassen ein neues <span class="clisting">equals()</span> anzugeben, sodass auch die neuen Attribute in den Test einbezogen werden. Bei <span class="clisting">hashCode()</span>-Methoden müssen wir eine ähnliche Strategie anwenden, was wir hier nicht zeigen wollen.
+                                                </p><a id="dodtp25029178-402c-491c-a6b5-a793bbfe4a64" name="dodtp25029178-402c-491c-a6b5-a793bbfe4a64"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Einmal gleich, immer gleich *</span></h4>
+                                                <p>Ein weiterer Aspekt von <span class="clisting">equals()</span><span class="footnote"><a id="dodtpe52ec427-e0ef-4600-b2ac-4c0ce9644472">[162](Eine korrekte Implementierung der Methode equals() bildet eine Äquivalenzrelation. Lassen wir die
+null-Referenz außen vor, ist sie reflexiv, symmetrisch und transitiv.)</a></span> ist der folgende: Das Ergebnis muss während der gesamten Lebensdauer eines Objekts
+                                                   gleich bleiben. Ein kleines Problem steckt dabei in <span class="clisting">equals()</span><a class="indexterm" id="dodtpe0e6035b-ffb1-4a95-8568-e04ae5acd9ca"></a> der Klasse <span class="clisting">URL</span>, die vergleicht, ob zwei URL-Adressen auf die gleiche Ressource zeigen. In der Dokumentation
+                                                   heißt es:
+                                                </p>»Two URL objects are equal if they have the same protocol, reference equivalent hosts,
+                                                have the same port number on the host, and the same file and fragment of the file.«
+                                                <p>Hostnamen gelten als gleich, wenn entweder beide auf dieselbe IP-Adresse zeigen oder
+                                                   &#8211; falls eine nicht auflösbar ist &#8211; beide Hostnamen gleich (ohne Groß-/Kleinschreibung)
+                                                   oder <span class="clisting">null</span> sind. Da hinter den URLs <a href="http://tutego.de/" target="_blank">http://tutego.de/</a> und <a href="http://java-tutor.com/" target="_blank">http://java-tutor.com/</a> aber letztendlich <a href="http://www.tutego.com/" target="_blank">http://www.tutego.com/</a> steckt, liefert <span class="clisting">equals()</span> die Rückgabe <span class="clisting">true</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.13: </strong>com/tutego/insel/object/equals/UrlEquals.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">URL url1 = new URL( "http://tutego.com/" );<br>URL url2 = new URL( "http://www.tutego.com/" );<br>System.out.println( url1.equals(url2) );               // true<br></pre></div>
+                                                <p>Die dynamische Abbildung der Hostnamen auf die IP-Adresse des Rechners kann aus mehreren
+                                                   Gründen problematisch sein:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Der (menschliche) Leser erwartet intuitiv etwas anderes.</li>
+                                                   <li>Wenn keine Netzwerkverbindung besteht, wird keine Namensauflösung durchgeführt, und
+                                                      der Vergleich liefert <span class="clisting">false</span>. Die Rückgabe sollte jedoch nicht davon abhängig sein, ob eine Netzwerkverbindung
+                                                      besteht.
+                                                   </li>
+                                                   <li>Dass die beiden URLs auf den gleichen Server zeigen, könnte sich zur Laufzeit ändern.</li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp63daf072-81ed-4188-9a1b-64521d364767" name="dodtp63daf072-81ed-4188-9a1b-64521d364767"></a><h3 class="t3"><span class="cfett">8.3.4</span><span class="cfett"> Klonen eines Objekts mit clone() *</span><a href="#dodtp248f0914-64c9-4589-85de-8cb74c323ed8"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp25029178-402c-491c-a6b5-a793bbfe4a64"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Zum Replizieren eines Objekts gibt es oft zwei Möglichkeiten:</p>
+                                                <ul class="gp">
+                                                   <li>einen Konstruktor (auch <span class="cbegriff">Copy-Constructor</span><a class="indexterm" id="dodtp69d386e4-3cf4-424c-84ef-4c2f4d4ebb8f"></a> genannt), der ein vorhandenes Objekt als Vorlage nimmt, ein neues Objekt anlegt und
+                                                      die Zustände kopiert
+                                                   </li>
+                                                   <li>eine öffentliche <span class="clisting">clone()</span><a class="indexterm" id="dodtp1dd82145-3e5c-421e-8903-11462848831b"></a>-Methode
+                                                   </li>
+                                                </ul>
+                                                <p>Was eine Klasse nun anbietet, ist in der API-Dokumentation zu erfahren.</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Erzeuge ein Punkt-Objekt, und klone es:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">java.awt.Point p = new java.awt.Point( 12, 23 );<br>java.awt.Point q = (java.awt.Point) <span class="cfett">p.clone()</span>;<br>System.out.println( q );                // java.awt.Point[x=12,y=23]<br></pre></div>
+                                                               Mehr als 300 Klassen der Java-Bibliothek unterstützen ein <span class="clisting">clone()</span>, das ein neues Exemplar mit dem gleichen Zustand zurückgibt. Eine überschriebene
+                                                               Methode kann den Typ der Rückgabe dank kovarianter Rückgabetypen anpassen. Die <span class="clisting">clone()</span>-Methode bei <span class="clisting">java.awt.Point</span> bleibt allerdings bei <span class="clisting">Object</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Felder erlauben standardmäßig <span class="clisting">clone()</span>. Speichern die Arrays jedoch nicht-primitive Werte, liefert <span class="clisting">clone()</span> nur eine flache Kopie, was bedeutet, dass das neue Feldobjekt, der Klon, die exakt
+                                                   gleichen Objekte wie das Original referenziert und die Einträge selbst nicht klont.
+                                                </p><a id="dodtp8ba0ecb4-3e24-42fe-ad1a-75f782d24351" name="dodtp8ba0ecb4-3e24-42fe-ad1a-75f782d24351"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> clone() aus java.lang.Object</span></h4>
+                                                <p>Da <span class="clisting">clone()</span><a class="indexterm" id="dodtp6df754f2-1769-4676-b25f-953901697c46"></a> nicht automatisch unterstützt wird, stellt sich die Frage, wie wir <span class="clisting">clone()</span> für unsere Klassen mit geringstem Aufwand umsetzen können. Einfach <span class="clisting">clone()</span> aufzurufen funktioniert jedoch nicht, da die Methode <span class="clisting">proteced</span> ist, also erst einmal nicht sichtbar ist.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">protected Object clone() throws CloneNotSupportedException</span><br>Liefert eine Kopie des Objekts.
+                                                   </li>
+                                                </ul><a id="dodtp2d622efa-9558-4572-9915-dd3914bedd04" name="dodtp2d622efa-9558-4572-9915-dd3914bedd04"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Eine eigene clone()-Methode</span></h4>
+                                                <p>Eigene Klassen überschreiben die <span class="clisting">protected</span>-Methode <span class="clisting">clone()</span> aus der Oberklasse <span class="clisting">Object</span> und machen sie <span class="clisting">public</span>. Für die Implementierung kommen zwei Möglichkeiten in Betracht:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Wir könnten von Hand ein neues Objekt anlegen, alle Attribute kopieren und die Referenz
+                                                      auf das neue Objekt zurückgeben.
+                                                   </li>
+                                                   <li>Das Laufzeitsystem soll selbst eine Kopie anlegen, und diese geben wir zurück. Lösung
+                                                      zwei verkürzt die Entwicklungszeit und ist auch spannender.
+                                                   </li>
+                                                </ul>
+                                                <p>Um das System zum Klonen zu bewegen, müssen zwei Dinge getan werden:</p>
+                                                <ul class="gp">
+                                                   <li>Der Aufruf <span class="clisting">super.clone()</span> stößt die Methode <span class="clisting">clone()</span> aus <span class="clisting">Object</span> an und veranlasst so die Laufzeitumgebung, ein neues Objekt zu bilden und die nicht-statischen
+                                                      Attribute zu kopieren. Die Methode kopiert elementweise die Daten des aktuellen Objekts
+                                                      in das neue. Die Methode ist in der Oberklasse <span class="clisting">protected</span>, aber das ist der Trick: Nur Unterklassen können <span class="clisting">clone()</span> aufrufen, keiner sonst.
+                                                   </li>
+                                                   <li>Die Klasse implementiert die Markierungsschnittstelle <span class="clisting">Cloneable</span>. Falls von außen ein <span class="clisting">clone()</span> auf einem Objekt aufgerufen wird, dessen Klasse nicht <span class="clisting">Cloneable</span><a class="indexterm" id="dodtpa53b8f00-7e9d-479c-98ec-0e6c5830fa10"></a> implementiert, ist das Ergebnis eine <span class="clisting">CloneNotSupportedException</span><a class="indexterm" id="dodtpe5dc37f9-c538-4a9e-a97f-3a92ab4688d1"></a>. Natürlich implementiert <span class="clisting">Object</span> die Schnittstelle <span class="clisting">Cloneable</span> nicht selbst, denn sonst hätten ja Klassen schon automatisch diesen Typ, was sinnlos wäre.
+                                                   </li>
+                                                </ul>
+                                                <p><span class="clisting">clone()</span> gibt eine Referenz auf das neue Objekt zurück, und wenn es keinen freien Speicher
+                                                   mehr gibt, folgt ein <span class="clisting">OutOfMemoryError</span><a class="indexterm" id="dodtp095fbe18-e6f8-4e78-9115-1baddc4d81ad"></a>.
+                                                </p>
+                                                <p>Nehmen wir an, für ein Spiel sollen <span class="clisting">Player</span> geklont werden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.14: </strong>com/tutego/insel/object/clone/Player.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.object.clone;<br><br>public class Player<span class="cfett"> implements Cloneable</span><br>{<br>  public String name;<br>  public int    age;<br><br> <span class="cfett"> @Override</span><br> <span class="cfett"> public Player clone()</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> try</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> return (Player) super.clone();</span><br>   <span class="cfett"> }</span><br>   <span class="cfett"> catch ( CloneNotSupportedException e ) {</span><br>     <span class="cfett"> // Kann eigentlich nicht passieren, da Cloneable</span><br>     <span class="cfett"> throw new InternalError();</span><br>   <span class="cfett"> }</span><br> <span class="cfett"> }</span><br>}<br></pre></div>
+                                                <p>Da es seit Java 5 kovariante Rückgabetypen gibt, gibt <span class="clisting">clone()</span> nicht lediglich <span class="clisting">Object</span>, sondern den Untertyp <span class="clisting">Player</span> zurück.
+                                                </p><a href="bilder/08_010.png" rel="lightbox" title="Player erweitert Object und implementiert Cloneable"><img class="bild" border="1" src="bilderklein/klein08_010.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.10: </strong>Player erweitert Object und implementiert Cloneable
+                                                </p>
+                                                <p>Testen wir die Klasse etwa so:</p>
+                                                <p class="plistingunter"><strong>Listing 8.15: </strong>com/tutego/insel/object/clone/PlayerCloneDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Player susi = new Player();<br>susi.age  = 29;<br>susi.name = "Susi";<br>Player dolly =<span class="cfett"> susi.clone()</span>;<br>System.out.println( dolly.name + " ist " + dolly.age ); // Susi ist 29<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Erben wir von einer Klasse mit implementierter <span class="clisting">clone()</span>-Methode, die ihrerseits mit <span class="clisting">super.clone()</span> arbeitet, bekommen wir von oben gleich auch die eigenen Zustände kopiert.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp8eaf2510-5af3-418a-9a6f-57cd19334bec" name="dodtp8eaf2510-5af3-418a-9a6f-57cd19334bec"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> clone() und equals()</span></h4>
+                                                <p>Die Methode <span class="clisting">clone()</span> und die Methode <span class="clisting">equals()</span> hängen, wie auch <span class="clisting">equals()</span> und <span class="clisting">hashCode()</span>, miteinander zusammen. Wenn die <span class="clisting">clone()</span>-Methode überschrieben wird, sollte auch <span class="clisting">equals()</span> angepasst werden, denn ohne ein überschriebenes <span class="clisting">equals()</span> bleibt Folgendes in <span class="clisting">Object</span> stehen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public boolean equals( Object obj )<br>{<br>  return (this == obj);<br>}<br></pre></div>
+                                                <p>Das bedeutet aber, dass ein geklontes Objekt &#8211; das ja im Allgemeinen ein neues Objekt
+                                                   ist &#8211; durch seine neue Objektidentität nicht mehr <span class="clisting">equals()</span>-gleich zu seinem Erzeuger ist. Formal heißt das: <span class="clisting">o.clone().equals(o) == false</span>. Diese Semantik dürfte nicht erwünscht sein.
+                                                </p><a id="dodtpac1aa37e-0db7-45d2-baba-a25e1da245c8" name="dodtpac1aa37e-0db7-45d2-baba-a25e1da245c8"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Flach oder tief?</span></h4>
+                                                <p>Das <span class="clisting">clone()</span> vom System erzeugt standardmäßig eine <span class="cbegriff">flache Kopie</span><a class="indexterm" id="dodtpb645ac0c-8257-40ca-a257-7b2ce1ed5d5d"></a><a class="indexterm" id="dodtp81631b54-6ea4-41da-af12-8546ef0711fd"></a> (engl. <span class="cbegriff">shallow copy</span><a class="indexterm" id="dodtp04c7ff05-84d1-495b-8bc9-5dbf05f03c32"></a>). Bei untergeordneten Objekten werden nur die Referenzen kopiert, und das Originalobjekt
+                                                   sowie die Kopie verweisen anschließend auf dieselben untergeordneten Objekte (sie
+                                                   verwenden diese gemeinsam). Wenn zum Beispiel die Bedienung ein Attribut für einen
+                                                   Arbeitgeber besitzt und eine Kopie der Bedienung erzeugt wird, wird der Klon auf den
+                                                   gleichen Arbeitgeber zeigen. Bei einem Arbeitgeber mag das noch stimmig sein, aber
+                                                   bei Datenstrukturen ist mitunter eine <span class="cbegriff">tiefe Kopie</span> <a class="indexterm" id="dodtpc948219d-9899-4a03-85c6-846068db3a96"></a> (engl. <span class="cbegriff">deep copy</span><a class="indexterm" id="dodtp5c611e0e-cca8-4624-abe9-c86fc4b8eb79"></a>) erwünscht. Bei dieser Variante werden rekursiv alle Unterobjekte ebenfalls geklont.
+                                                   Die Bibliotheksimplementierung hinter <span class="clisting">Object</span> kann das nicht.
+                                                </p><a id="dodtpf6c7b406-bb70-4cec-919f-ef178a33374d" name="dodtpf6c7b406-bb70-4cec-919f-ef178a33374d"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Keine Klone bitte!</span></h4>
+                                                <p>Wenn wir weder flach noch tief kopieren wollen, aber aus der Oberklasse eine <span class="clisting">clone()</span>-Implementierung erben, ist folgende Lösung denkbar, um das Klonen zu unterbinden:
+                                                   Wir überschreiben <span class="clisting">clone()</span>, lösen aber eine <span class="clisting">CloneNotSupportedException</span><a class="indexterm" id="dodtpe47f04e8-631e-412a-8812-c03358d4c3d1"></a> aus und signalisieren so, dass wir nicht geklont werden wollen. Allerdings gibt es
+                                                   ein Problem, wenn eine Klasse schon die <span class="clisting">clone()</span>-Methode überschreibt und dabei die Signatur verändert. In <span class="clisting">Object</span> sieht der Methodenkopf so aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Object<br>{<br>  protected native Object clone()<span class="cfett"> throws CloneNotSupportedException;</span><br>  ...<br>}<br></pre></div>
+                                                <p>Eine Unterklasse überschreibt <span class="clisting">clone()</span> und lässt in der Regel das <span class="clisting">throws CloneNotSupportedException</span> weg. Bei <span class="clisting">Point2D</span> (von der <span class="clisting">Point</span> die <span class="clisting">clone()</span>-Methode erbt) ist Folgendes abzulesen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public abstract class Point2D implements Cloneable<br>{<br> <span class="cfett"> public Object clone()</span><br>  ...<br>}<br>public class Point extends Point2D implements java.io.Serializable {<br> ...<br>}<br></pre></div>
+                                                <p>Erbt eine Klasse eine <span class="clisting">clone()</span>-Methode, von der <span class="clisting">throws CloneNotSupportedException</span> entfernt wurde, so kann sie diese nicht mehr wieder einführen &#8211; Unterklassen können
+                                                   <span class="clisting">throws</span>-Klausen weglassen aber nicht hinzufügen. Folgendes ist daher nicht möglich:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class PointSubclass<span class="cfett"> extends java.awt.Point</span><br>{<br>  @Override // aus Point2D<br>  public Object clone()<span class="cfett"> throws CloneNotSupportedException</span> // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler!<br>  ...<br>}<br></pre></div>
+                                                <p>Da die Signatur keine Exception-Klausel mehr aufnehmen kann, müssen wir einen Trick
+                                                   nutzen und die <span class="clisting">CloneNotSupportedException</span> in eine Laufzeitausnahme verpacken:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.16: </strong>com/tutego/insel/object/clone/ColoredPoint.java, ColoredPoint
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class ColoredPoint extends java.awt.Point<br>{<br>  public int rgb;<br><br>  @Override // aus Point2D<br>  public Object clone()<br>  {<br>   <span class="cfett"> throw new RuntimeException( new CloneNotSupportedException() );</span><br>  }<br>}<br></pre></div>
+                                                <p>Ein Klonversuch führt zu etwas wie:</p>
+                                                <div class="listing"><pre class="prettyprint">Exception in thread "main" java.lang.RuntimeException: <br>java.lang.CloneNotSupportedException<br>  at com.tutego.insel.object.clone.ColoredPoint.clone(ColoredPoint.java:10)<br>  at ...<br>Caused by: java.lang.CloneNotSupportedException<br>  ... 2 more<br></pre></div>
+                                                <p>Technisch löst es dann unser Problem, allerdings sollten wir uns bewusst sein, dass
+                                                   wir ein Verhalten, das vorher erlaubt war, nun »abschalten«. Unterklassen sollten
+                                                   Verhalten nicht wegnehmen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp248f0914-64c9-4589-85de-8cb74c323ed8" name="dodtp248f0914-64c9-4589-85de-8cb74c323ed8"></a><h3 class="t3"><span class="cfett">8.3.5</span><span class="cfett"> Hashcodes über hashCode() liefern *</span><a href="#dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf6c7b406-bb70-4cec-919f-ef178a33374d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Methode <span class="clisting">hashCode()</span><a class="indexterm" id="dodtpf9d5a06c-52ba-4ee2-97b4-30d2779a76b7"></a> soll zu jedem Objekt eine möglichst eindeutige Integerzahl (sowohl positiv als auch
+                                                   negativ) liefern, die das Objekt identifiziert. Die Ganzzahl heißt <span class="cbegriff">Hashcode</span><a class="indexterm" id="dodtpeb4ad7ec-9aff-4ee7-b6f9-662450265ab3"></a> beziehungsweise <span class="cbegriff">Hash-Wert</span><a class="indexterm" id="dodtpa77627c0-20b0-4aa3-9ec4-872797642045"></a>, und <span class="clisting">hashCode()</span> ist die Implementierung einer <span class="cbegriff">Hash-Funktion</span><a class="indexterm" id="dodtpe4bca805-6d9c-43c2-b32b-a948ba5f8889"></a>. Nötig sind Hashcodes, wenn die Objekte in speziellen Datenstrukturen untergebracht
+                                                   werden, die nach dem Hashing-Verfahren arbeiten. Datenstrukturen mit Hashing-Algorithmen
+                                                   bieten einen effizienten Zugriff auf ihre Elemente. Die Klasse <span class="clisting">java.util.HashMap</span> implementiert eine solche Datenstruktur.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">int hashCode()</span><br>Liefert den Hash-Wert eines Objekts. Die Basisklasse <span class="clisting">Object</span> implementiert die Methode nativ.
+                                                   </li>
+                                                </ul><a id="dodtp2fcc170a-55ad-476b-bfba-7272952a777a" name="dodtp2fcc170a-55ad-476b-bfba-7272952a777a"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Spieler mit Hash-Funktion</span></h4>
+                                                <p>Im folgenden Beispiel soll die Klasse <span class="clisting">Player</span> die Methode <span class="clisting">hashCode()</span> aus <span class="clisting">Object</span> überschreiben. Um die Objekte erfolgreich in einem Assoziativspeicher abzulegen,
+                                                   ist gleichfalls <span class="clisting">equals()</span> nötig, was die Klasse <span class="clisting">Player</span> ebenfalls implementiert:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.17: </strong>com/tutego/insel/object/hashcode/Player.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.object.hashcode;<br><br>public class Player<br>{<br>  String name;<br>  int    age;<br>  double weight;<br><br>  /**<br>   * Returns a hash code value for this {@code Player} object.<br>   *<br>   * @return A hash code value for this object.<br>   *<br>   * @see java.lang.Object#equals(java.lang.Object)<br>   * @see java.util.HashMap<br>   */<br> <span class="cfett"> @Override public int hashCode()</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> int result = 31 + age;</span><br>   <span class="cfett"> result = 31 * result + ((name == null) ? 0 : name.hashCode());</span><br>   <span class="cfett"> long temp = Double.doubleToLongBits( weight );</span><br>   <span class="cfett"> result = 31 * result + (int) (temp ^ (temp &gt;&gt;&gt; 32));<br><br>    return result;</span><br> <span class="cfett"> }<br><br> </span> /**<br>   * Determines whether or not two players are equal. Two instances of<br>   * {@code Player} are equal if the values of their {@code name}, {@code age}<br>   * and {@code weight} member fields are the same.<br>   *<br>   * @param that an object to be compared with this {@code Player}<br>   *<br>   * @return {@code true} if the object to be compared is an instance of<br>   *         {@code Player} and has the same values; {@code false} otherwise.<br>   */<br>  @Override public boolean equals( Object that )<br>  {<br>    if ( this == that )<br>      return true;<br><br>    if ( that == null )<br>      return false;<br><br>    if ( getClass() != that.getClass() )<br>      return false;<br><br>    if ( age != ((Player)that).age )<br>      return false;<br><br>    if ( name == null )<br>      if ( ((Player)that).name != null )<br>        return false;<br>    else if ( !name.equals( ((Player)that).name ) )<br>      return false;<br><br>    return !( Double.doubleToLongBits( weight ) !=<br>              Double.doubleToLongBits( ((Player)that).weight ) );<br>  }<br>}<br></pre></div>
+                                                <p>Testen können wir die Klasse etwa mit den folgenden Zeilen:</p>
+                                                <p class="plistingunter"><strong>Listing 8.18: </strong>com/tutego/insel/object/hashcode/PlayerHashcodeDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Player bruceWants = new Player();<br>bruceWants.name = "Bruce Wants";<br>bruceWants.age = 32;<br>bruceWants.weight = 70.3;<br><br>Player bruceLii = new Player();<br>bruceLii.name = "Bruce Lii";<br>bruceLii.age = 32;<br>bruceLii.weight = 70.3;;<br><br>System.out.println( bruceWants.hashCode() );                 // &#8211;340931147<br>System.out.println( bruceLii.hashCode() );                   // 301931244<br>System.out.println( System.identityHashCode( bruceWants ) ); // 1671711<br>System.out.println( System.identityHashCode( bruceLii ) );   // 11394033<br>System.out.println( bruceLii.equals( bruceWants ) );         // false<br><br>bruceWants.name = "Bruce Lii";<br>System.out.println( bruceWants.hashCode() );                 // 301931244<br>System.out.println( bruceLii.equals( bruceWants ) );         // true<br></pre></div>
+                                                <p>Die statische Methode <span class="clisting">System.identityHashCode()</span><a class="indexterm" id="dodtp6d289baa-e371-44dc-96c0-2c77a4d4ffc5"></a> liefert für ein Objekt den Hashcode, wie es die Standard-Implementierung von <span class="clisting">Object</span> liefern würde, wenn wir sie nicht überschrieben hätten.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Da der Hashcode negativ sein kann, sind Ausdrücke wie <span class="clisting">array[o.hashCode() % array.length()]</span> problematisch. Ist <span class="clisting">o.hashCode()</span> negativ, ist auch das Ergebnis vom Restwert negativ, und die Folge ist eine <span class="clisting">ArrayIndexOutOfBoundsException</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>Eclipse kann die Methoden <span class="clisting">hashCode()</span> und <span class="clisting">equals()</span> automatisch generieren, wenn wir im Kontextmenü unter Source • Generate hashCode() and equals() auswählen.
+                                                </p><a id="dodtp70e35deb-96cc-4e65-8dc5-881ca4c36471" name="dodtp70e35deb-96cc-4e65-8dc5-881ca4c36471"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Tiefe oder flache Vergleiche/Hash-Werte</span></h4>
+                                                <p>Referenziert ein Objekt Unterobjekte (etwa eine Person ein String-Objekt für den Namen
+                                                   &#8211; keine primitiven Datentypen), so geben die Methoden <span class="clisting">equals()</span> und <span class="clisting">hashCode()</span>den Vergleich beziehungsweise die Berechnung des Hashcodes an das referenzierte Unterobjekt
+                                                   weiter (wenn es denn nicht <span class="clisting">null</span> ist). Ablesen können wir das an folgendem Ausschnitt unserer <span class="clisting">equals()</span>-Methode:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.19: </strong>com/tutego/insel/object/hashcode/Player.java, equals() Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( name == null )<br>  if ( ((Player)that).name != null )<br>    return false;<br>else if ( !<span class="cfett">name.equals( ((Player)that).name</span> ) )<br>  return false;<br></pre></div>
+                                                <p>Es ist demnach die Aufgabe der <span class="clisting">String</span>-Klasse (<span class="clisting">name</span> ist vom Typ <span class="clisting">String</span>), den Gleichheitstest vorzunehmen. Das heißt, dass zwei Personen problemlos <span class="clisting">equals()</span>-gleich sein können, auch wenn sie zwei nicht-identische, aber <span class="clisting">equals()</span>-gleiche <span class="clisting">String</span>-Objekte referenzieren.
+                                                </p>
+                                                <p>Auch bei <span class="clisting">hashCode()</span> ist diese Delegation an das referenzierte Unterobjekt abzulesen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.20: </strong>com/tutego/insel/object/hashcode/Player.java, hashCode() Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">result = 31 * result + ((name == null) ? 0 :<span class="cfett"> name.hashCode()</span>);<br></pre></div>
+                                                <p>Dass eine <span class="clisting">equals()</span>-Methode beziehungsweise <span class="clisting">hashCode()</span> einer Klasse den Vergleich beziehungsweise die Hashcode-Berechnung nicht an die Unterobjekte
+                                                   delegiert, sondern selbst umsetzt, ist unüblich.
+                                                </p><a id="dodtp5cecd388-8529-4d5e-8d64-310d5d7d650f" name="dodtp5cecd388-8529-4d5e-8d64-310d5d7d650f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> equals()- und hashCode()-Berechnung bei (mehrdimensionalen) Arrays</span></h4>
+                                                <p>Einen gewissen Sonderfall bei <span class="clisting">equals()</span>/<span class="clisting">hashCode()</span> nehmen mehrdimensionale Arrays ein. Mehrdimensionale Arrays sind nichts anderes als
+                                                   Arrays von Arrays. Das erste Array für die erste Dimension referenziert jeweils auf
+                                                   Unterarrays für die zweite Dimension. Wichtig wird diese Realisierung bei der Frage,
+                                                   wie diese Verweise der ersten Dimension nun bei <span class="clisting">equals()</span> betrachtet werden sollen. Denn hier stellt sich die Frage, ob die Unterarrays von
+                                                   zwei zu testenden Arrays nur identisch oder auch gleich sein dürfen. Diese Frage hatten
+                                                   wir schon in Abschnitt 3.8.19, »Die Klasse Arrays zum Vergleichen, Füllen, Suchen,
+                                                   Sortieren nutzen«, angesprochen.
+                                                </p>
+                                                <p>Enthält unsere Klasse ein Array und soll es in einem <span class="clisting">equals()</span> mit berücksichtigt werden, so sind prinzipiell drei Varianten zum Umgang mit diesem
+                                                   Array möglich. Felder selbst einfach mit <span class="clisting">==</span> wie primitive Werte zu vergleichen ist keine gute Lösung, da Arrays Objekte sind,
+                                                   die wie Strings nicht einfach mit <span class="clisting">==</span> zu vergleichen sind. Während allerdings Objekte ein <span class="clisting">equals()</span> haben, bieten Arrays keine eigene <span class="clisting">equals()</span>-Methode, sondern diese ist in die Utility-Klasse <span class="clisting">Arrays</span> gewandert. Hier gibt es jedoch zwei Methoden, die infrage kämen. <span class="clisting">Arrays.equals(Object[] a, Object[] a2)</span> <a class="indexterm" id="dodtp523c38e7-5712-45c9-911a-2b808a50d5c7"></a> geht jedes Element von <span class="clisting">a</span>, also bei mehrdimensionalen Arrays jede Referenz auf ein Unterarray durch, und testet,
+                                                   ob es identisch mit einem zweiten Feld <span class="clisting">a2</span> ist. Wenn also zwei gleiche, aber nicht-identische Hauptarrays identische Unterarrays
+                                                   besitzen, liefert <span class="clisting">Arrays.equals()</span> die Rückgabe <span class="clisting">true</span>, aber nicht, wenn die Unterarrays zwar gleich, aber nicht identisch sind. Spielt
+                                                   das eine Rolle, so ist <span class="clisting">Arrays.deepEquals()</span><a class="indexterm" id="dodtpddc5596b-01cd-4b4d-b8da-a81c335461c0"></a> die passende Methode, denn sie fragt immer mit <span class="clisting">equals()</span> die Unterarrays ab.
+                                                </p>
+                                                <p>Bei der Berechnung des Hash-Werts gibt es eine vergleichbare Frage. Die <span class="clisting">Arrays</span>-Klasse bietet zur Berechnung des Hash-Werts eines ganzen Arrays die Methoden <span class="clisting">Arrays.hashCode()</span><a class="indexterm" id="dodtp39c7a716-7740-40d3-a314-22a618f31888"></a> und <span class="clisting">Arrays.deepHashCode()</span><a class="indexterm" id="dodtpe7de33d2-1191-4661-8bfe-06a29d00e5c8"></a>. Die erste Methode fragt jedes Unterelement über die von <span class="clisting">Object</span> angebotene Methode <span class="clisting">hashCode()</span> nach dem Hash-Wert. Nehmen wir ein mehrdimensionales Array an. Dann ist das Unterelement
+                                                   ebenfalls ein Feld. <span class="clisting">Arrays. hashCode()</span> wird dann wie erwähnt nur die <span class="clisting">hashCode()</span>-Methode auf dem Feld-Objekt aufrufen, während <span class="clisting">Arrays.deepHashCode()</span> auch in das Unterarray hinabsteigt und so lange <span class="clisting">Arrays.deepHashCode()</span> auf allen Unterfeldern aufruft, bis ein <span class="clisting">equals()</span>-Vergleich auf einem Nicht-Feld möglich ist.
+                                                </p>
+                                                <p>Was heißt das nun für unsere <span class="clisting">equals()</span>/<span class="clisting">hashCode()</span>-Methode? Üblich ist der Einsatz von <span class="clisting">Arrays.equals()</span> und nicht von <span class="clisting">Arrays.deepEquals()</span>, genauso wie <span class="clisting">Arrays.hashCode()</span> üblicher als <span class="clisting">Arrays.deepHashCode()</span> ist.
+                                                </p>
+                                                <p>Das folgende Beispiel zeigt das in der Anwendung. Die Methoden wurden von Eclipse
+                                                   generiert und etwas kompakter geschrieben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.21: </strong>com/tutego/insel/object/hashcode/Chess.java, Chess
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">char[][] chessboard = new char[8][8];<br><br>@Override public int hashCode()<br>{<br>  return 31 +<span class="cfett"> Arrays.hashCode( chessboard )</span>;<br>}<br><br>@Override public boolean equals( Object obj )<br>{<br>  if ( this == obj )<br>    return true;<br>  if ( obj == null )<br>    return false;<br>  if ( getClass() != obj.getClass() )<br>    return false;<br>  if ( !<span class="cfett"> Arrays.equals( chessboard, ((Chess) obj).chessboard )</span> )<br>    return false;<br>  return true;<br>}<br></pre></div><a id="dodtp0ada4338-0a24-4609-b652-7085f64ae5d9" name="dodtp0ada4338-0a24-4609-b652-7085f64ae5d9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Fließkommazahlen im Hashcode</span></h4>
+                                                <p>Abhängig von den Datentypen sehen die Berechnungen immer etwas unterschiedlich aus.
+                                                   Während Ganzzahlen direkt in einen Ganzzahlausdruck für den Hashcode eingebracht werden
+                                                   können, sind im Fall von <span class="clisting">double</span> die statischen Konvertierungsmethoden <span class="clisting">Double.doubleToLongBits()</span><a class="indexterm" id="dodtp1fd9d891-3288-4674-bb23-a114393ef1c3"></a> beziehungsweise <span class="clisting">Float.floatToIntBits()</span><a class="indexterm" id="dodtp1e665580-86b0-433d-81ec-4112553047ac"></a> im Einsatz.
+                                                </p>
+                                                <p>Die Datentypen <span class="clisting">double</span> und <span class="clisting">float</span> haben eine weitere Spezialität, da <span class="clisting">NaN</span> und das Vorzeichen der 0 zu beachten sind, wie Kapitel 18, »Bits und Bytes und Mathematisches«,
+                                                   näher ausführt. Fazit: Sind <span class="clisting">x =</span> <span class="cfett">+</span><span class="clisting">0.0</span> und <span class="clisting">y = &#8211;0.0</span>, gilt <span class="clisting">x</span> <span class="cfett">==</span> <span class="clisting">y</span>, aber <span class="clisting">Double.doubleToLongBits(x)</span> <span class="cfett">!=</span> <span class="clisting">Double.doubleToLongBits(y).</span> Sind <span class="clisting">x = y = Double.NaN</span>, gilt <span class="clisting">x</span> <span class="cfett">!=</span> <span class="clisting">y</span>, aber <span class="clisting">Double.doubleToLongBits(x)</span> <span class="cfett">==</span> <span class="clisting">Double.doubleToLongBits(y)</span>. Wollen wir die beiden Nullen nicht unterschiedlich behandeln, sondern als gleich werten, ist Folgendes ein übliches
+                                                   Idiom:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">x == 0.0 ? 0L : Double.doubleToLongBits( x )<br></pre></div>
+                                                <p><span class="clisting">Double.doubleToLongBits(0.0)</span> liefert die Rückgabe 0, aber der Aufruf <span class="clisting">Double.doubleToLongBits(-0.0)</span> gibt &#8211;9223372036854775808 zurück.
+                                                </p><a id="dodtp9e92ae6c-7619-4411-a131-8143f1d58d7d" name="dodtp9e92ae6c-7619-4411-a131-8143f1d58d7d"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Equals, die Null und das Hashen</span></h4>
+                                                <p>Inhaltlich gleiche Objekte (gemäß der Methode <span class="clisting">equals()</span>) müssen denselben Wert bekommen.
+                                                </p>
+                                                <p>Die beiden Methoden <span class="clisting">hashCode()</span> und <span class="clisting">equals()</span> hängen miteinander zusammen, sodass in der Regel bei der Implementierung einer Methode
+                                                   auch eine Implementierung der anderen notwendig wird. Denn es gilt, dass bei Gleichheit
+                                                   natürlich auch die Hash-Werte übereinstimmen müssen. Formal gesehen heißt das:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">x.equals( y ) <span class="ctastatur"><img align="top" src="keys/symbol_w54=.gif" alt="Þ" title="Þ"></span> x.hashCode() == y.hashCode()<br></pre></div>
+                                                <p>So berechnet sich der Hashcode bei <span class="clisting">Point</span>-Objekten aus den Koordinaten. Zwei Punkt-Objekte, die inhaltlich gleich sind, haben
+                                                   die gleichen Koordinaten und damit auch den gleichen Hashcode. Wenn Objekte den gleichen
+                                                   Hashcode aufweisen, aber nicht gleich sind, handelt es sich um eine Kollision und
+                                                   den Fall, dass in der Gleichung nicht die Äquivalenz gilt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1" name="dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1"></a><h3 class="t3"><span class="cfett">8.3.6</span><span class="cfett"> System.identityHashCode() und das Problem der nicht-eindeutigen Objektverweise *</span><a href="#dodtpad2681f1-8a07-4617-988a-9a64198ded40"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp9e92ae6c-7619-4411-a131-8143f1d58d7d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Gleichheit von Objekten wird mit der Methode <span class="clisting">equals()</span> neu definiert. Wenn <span class="clisting">equals()</span> neu implementiert wird, dann gilt das in der Regel auch für die Methode <span class="clisting">hashCode()</span>, die ebenfalls überschrieben werden soll. So wird <span class="clisting">hashCode()</span> bei unterschiedlichen Objektzuständen unterschiedliche Werte zurückgeben, und gleiche
+                                                   Objektinhalte müssen den gleichen Hashwert liefern.
+                                                </p>
+                                                <p>Die Standardimplementierung von <span class="clisting">Object</span> sieht nun so aus, dass auch bei Objekten, die gleiche Werte annehmen, unterschiedliche
+                                                   Hashwerte herauskommen &#8211; das ist auch der Grund dafür, warum wir <span class="clisting">hashCode()</span> überschreiben sollten. Doch was liefert denn <span class="clisting">hashCode()</span> von <span class="clisting">Object</span> eigentlich? Es sieht so aus, als ob dies eine Objekt-ID wäre, die das Objekt eindeutig
+                                                   kennzeichnet. Die Ur-ID geht verloren, wenn <span class="clisting">hashCode()</span> neu implementiert wird. Doch interessiert der ursprüngliche <span class="clisting">hashCode()</span>-Wert, so bietet sich <span class="clisting">System.identityHashCode()</span><a class="indexterm" id="dodtp8d486daf-2036-46d0-b00c-4492b6fbec92"></a> an.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Obwohl die Hashwerte zu zwei Objekten gleich sind, liefert <span class="clisting">identityHashCode()</span> in der Regel unterschiedliche Werte:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Point p = new Point( 0, 0 );<br>Point q = new Point( 0, 0 );<br>System.out.println( System.identityHashCode(p) ); // z.  B. 16032330<br>System.out.println( System.identityHashCode(q) ); // z.  B. 13288040<br>System.out.println( p.hashCode() );               // 0<br>System.out.println( q.hashCode() );               // 0<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Wenn <span class="clisting">hashCode()</span> nicht überschrieben wird, dann stimmt der Hashwert mit dem <span class="clisting">identityHashCode()</span> überein.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Klasse <span class="clisting">StringBuffer</span> überschreibt <span class="clisting">hashCode()</span> nicht, sodass <span class="clisting">identityHashCode()</span> gleich dem Hashwert ist:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">StringBuffer sb1 = new StringBuffer();<br>StringBuffer sb2 = new StringBuffer();<br>System.out.println( System.identityHashCode(sb1) +<br>                    " " + sb1.hashCode() ); // z.  B. 7439041 7439041<br>System.out.println( System.identityHashCode(sb2) +<br>                    " " + sb2.hashCode() ); // z.  B. 4152583 4152583<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Diese statische Methode <span class="clisting">identityHashCode()</span> liefert den Original-Identifizierer der Objekte. Auf den ersten Blick sieht sie nach
+                                                   einer eindeutigen ID aus, das stimmt aber nicht immer. Es kann durchaus zwei unterschiedliche
+                                                   Objekte im Speicher geben, für die <span class="clisting">System.identityHashCode()</span> gleich ist. Wir werden gleich ein Beispiel sehen.
+                                                </p><a id="dodtp44c93e31-4b74-4101-b58b-36d65c1ce50c" name="dodtp44c93e31-4b74-4101-b58b-36d65c1ce50c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Abbilden von Objektverweisen in Datenbanken oder Dateien</span></h4>
+                                                <p>Stellen wir uns vor, wir hätten eine Objekthierarchie im Speicher, die zum Beispiel
+                                                   jeder Socke einen Besitzer zuspricht. Wenn wir im Speicher Assoziationen abbilden,
+                                                   dann sollen diese Verweise auch noch nach dem Tod des Programms überleben. Eine Lösung
+                                                   ist die Serialisierung, eine andere eine Objekt-Datenbank oder aber auch eine XML-Datei.
+                                                   Doch überlegen wir selbst, wo bei der Abbildung auf eine Datenbank oder eine Datei
+                                                   das Problem besteht. Zunächst stehen ganz unterschiedliche Objekte mit ihren Eigenschaften
+                                                   im Speicher. Das Speichern der Zustände ist kein Problem, denn nur die Attribute müssten
+                                                   abgespeichert werden. Doch wenn ein Objekt auf ein anderes verweist, muss dieser Verweis
+                                                   gesichert werden. Aber in Java ist ein Verweis durch eine Referenz gegeben, und was
+                                                   sollte es da zu speichern geben? Eine Lösung für das Problem ist, jedem Objekt im
+                                                   Speicher einen Zähler zu geben und beim Speichen etwa zu sagen: »Der Besitzer 2 kennt
+                                                   Socke 5«.
+                                                </p>
+                                                <p>Der Identifizierer für die Objekte muss eindeutig sein, und wir können überlegen,
+                                                   <span class="clisting">System.identityHashCode()</span> zu nutzen. In der Implementierung der virtuellen Maschine von Oracle geht in den
+                                                   Wert von <span class="clisting">identityHashCode()</span> die Information über den wahren Ort des Objekts im Speicher ein. Bei einer 64-Bit-Implementierung
+                                                   würden auch 32 Bit abgeschnitten, und die Eindeutigkeit wäre somit automatisch nicht
+                                                   mehr gewährleistet. Ein weiteres Problem besteht darin, dass zwar die Implementierung
+                                                   von Oracles <span class="clisting">identityHashCode()</span> auf die eindeutige Objektspeicheradresse abbildet, aber dass das nicht jeder Hersteller
+                                                   so machen muss. Damit ist <span class="clisting">identityHashCode()</span> nicht überall gesichert unterschiedlich. Zudem ist es prinzipiell denkbar, dass die
+                                                   Speicherverwaltung die Objekte verschiebt. Was sollte <span class="clisting">identityHashCode()</span> dann machen? Wenn die neue Speicheradresse dahinter steckt, würde sich der Hashcode
+                                                   ändern, und das darf nicht sein. Es käme ebenfalls zu einem Problem, wenn mehr als
+                                                   <span class="clisting">Integer.MAX_INTEGER</span> viele Objekte im Speicher stünden. (Doch wenn wir uns die große Zahl 2^32 = 4.294.967.296
+                                                   vor Augen halten, dann es ist unwahrscheinlich, dass sich mehr als 4 Milliarden Objekte
+                                                   im Speicher tummeln. Zudem bräuchten wir 4 Gigabyte Speicher, wenn jedes Objekt auch
+                                                   nur 1 Byte kosten würde.)
+                                                </p>
+                                                <p>Es ist gar nicht so schwierig, zwei unterschiedliche Objekte mit gleichen <span class="clisting">identityHashCode()</span>-Resultat zu bekommen. Wir erzeugen ein paar String-Objekte und testen, jedes mit
+                                                   jedem, ob <span class="clisting">identityHashCode()</span> den gleichen Wert ergibt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.22: </strong>com/tutego/insel/object/hashcode/IdentityHashCode.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">String[] strings = new String[5000];<br><br>for ( int i = 0; i &lt; strings.length; i++ )<br>  strings[i] = Integer.toString( i );<br><br>int cnt = 0;<br><br>for ( int i = 0; i &lt; strings.length; i++ )<br>{<br>  for ( int j = i + 1; j &lt; strings.length; j++ )<br>  {<br>    int id1 = System.identityHashCode( strings[i] );<br>    int id2 = System.identityHashCode( strings[j] );<br><br>    if ( id1 == id2 )<br>    {<br>      out.println( "Zwei Objekte mit identityHashCode() = " + id1 );<br>      out.println( " Objekt 1: \"" + strings[i] + "\"" );<br>      out.println( " Objekt 2: \"" + strings[j] + "\"" );<br>      out.println( " Object1.hashCode(): " + strings[i].hashCode() );<br>      out.println( " Object2.hashCode(): " + strings[j].hashCode() );<br>      out.println( " Object1.equals(Object2): " + strings[i].equals( strings[j] ) );<br><br>      cnt++;<br>    }<br>  }<br>}<br>System.out.println( cnt + " Objekte mit gleichem identityHashCode() gefunden." );<br></pre></div>
+                                                <p>Ein Durchlauf bringt schnell Ergebnisse wie:</p>
+                                                <div class="listing"><pre class="prettyprint">Zwei Objekte mit identityHashCode() = 9578500<br> Objekt 1: "541"<br> Objekt 2: "2066"<br> Object1.hashCode(): 52594<br> Object2.hashCode(): 1537406<br> Object1.equals(Object2): false<br>Zwei Objekte mit identityHashCode() = 14850080<br> Objekt 1: "2085"<br> Objekt 2: "2365"<br> Object1.hashCode(): 1537467<br> Object2.hashCode(): 1540288<br> Object1.equals(Object2): false<br>2 Objekte mit gleichem identityHashCode() gefunden.<br></pre></div>
+                                                <p>Das Ergebnis ist also, dass <span class="clisting">identityHashCode()</span> nicht sicher bei der Vergabe von Identifizierern ist. Um wirklich allen Problemen
+                                                   aus dem Weg zu gehen, ist ein Zählerobjekt oder eine ID über zum Beispiel die Klasse
+                                                   <span class="clisting">java.util.UUID</span> nötig.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpad2681f1-8a07-4617-988a-9a64198ded40" name="dodtpad2681f1-8a07-4617-988a-9a64198ded40"></a><h3 class="t3"><span class="cfett">8.3.7</span><span class="cfett"> Aufräumen mit finalize() *</span><a href="#dodtpdfced107-4bf2-420c-95bb-0f2b04af7792"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp44c93e31-4b74-4101-b58b-36d65c1ce50c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Einen <span class="cbegriff">Destruktor</span><a class="indexterm" id="dodtpbc878438-1ccb-466f-b3e9-f7f579b30c38"></a><a class="indexterm" id="dodtp045edeab-e209-410e-af07-c95bce06480d"></a>, der wie in C++ am Ende eines Gültigkeitsbereichs einer Variable aufgerufen wird,
+                                                   gibt es in Java nicht. Wohl ist es möglich, eine Methode <span class="clisting">finalize()</span><a class="indexterm" id="dodtpc2eb5d07-26f5-4105-9aa0-78c603090ce1"></a> für Aufräumarbeiten zu überschreiben, die <span class="cbegriff">Finalizer</span><a class="indexterm" id="dodtp060e85c4-4631-4c09-a058-f3856a6f089c"></a> genannt wird (ein Finalizer hat nichts mit dem <span class="clisting">finally</span>-Block einer Exception-Behandlung zu tun). Der Garbage-Collector ruft die Methode
+                                                   immer dann auf, wenn er ein Objekt entfernen möchte. Es kann allerdings sein, dass
+                                                   <span class="clisting">finalize()</span> überhaupt nicht aufgerufen wird, und zwar dann, wenn die virtuelle Maschine Fantastillionen
+                                                   Megabyte an Speicher hat und dann beendet wird &#8211; in dem Fall gibt sie den Heap-Speicher
+                                                   als Ganzes dem Betriebssystem zurück. Ohne Garbage-Collector (GC) als Grabträger gibt
+                                                   es auch kein <span class="clisting">finalize()</span>! Und wann der Garbage-Collector in Aktion tritt, ist auch nicht vorhersehbar, sodass
+                                                   im Gegensatz zu C++ in Java keine Aussage über den Zeitpunkt möglich ist, zu dem das
+                                                   Laufzeitsystem <span class="clisting">finalize()</span> aufruft. Es ist von der Implementierung des GC abhängig. Üblicherweise werden aber
+                                                   Objekte mit <span class="clisting">finalize()</span> von einem extra GC behandelt, und der arbeitet langsamer als der normale GC.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">protected void finalize() throws Throwable</span><br>Wird vom GC aufgerufen, wenn es auf dieses Objekt keinen Verweis mehr gibt. Die Methode
+                                                      ist geschützt, weil sie von uns nicht aufgerufen wird. Auch wenn wir die Methode überschreiben,
+                                                      sollten wir die Sichtbarkeit nicht erhöhen, also <span class="clisting">public</span> setzen.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Klassen sollten <span class="clisting">finalize()</span> überschreiben, um wichtige Ressourcen zur Not freizugeben, etwa File-Handles via
+                                                               <span class="clisting">close()</span> oder Grafik-Kontexte des Betriebssystems, wenn der Entwickler das vergessen hat.
+                                                               Alle diese Freigaben müssten eigentlich vom Entwickler angestoßen werden, und <span class="clisting">finalize()</span> ist nur ein Helfer, der rettend eingreifen kann. Da der GC <span class="clisting">finalize()</span> nur dann aufruft, wenn er tote Objekte freigeben möchte, dürfen wir uns nicht auf
+                                                               die Ausführung verlassen. Gehen zum Beispiel die File-Handles aus, wird der GC nicht
+                                                               aktiv; es erfolgen keine <span class="clisting">finalize()</span>-Aufrufe, und nicht mehr erreichbare, aber noch nicht weggeräumte Objekte belegen
+                                                               weiter die knappen File-Handles.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpe51a5ab1-d60d-436d-b912-94e541c122a4" name="dodtpe51a5ab1-d60d-436d-b912-94e541c122a4"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Einmal Finalizer, vielleicht mehrmals der GC</span></h4>
+                                                <p>Objekte von Klassen, die eine <span class="clisting">finalize()</span>-Methode besitzen, kann Oracles JVM nicht so schnell erzeugen und entfernen wie Klassen
+                                                   ohne <span class="clisting">finalize()</span>. Das liegt auch daran, dass der GC vielleicht mehrmals laufen muss, um das Objekt
+                                                   zu löschen. Es gilt zwar, dass der GC aus dem Grund <span class="clisting">finalize()</span> aufruft, weil das Objekt nicht mehr benötigt wird, es kann aber sein, dass aus der
+                                                   <span class="clisting">finalize()</span>-Methode die <span class="clisting">this</span>-Referenz nach außen gegeben wurde, sodass das Objekt wegen einer bestehenden Referenz
+                                                   nicht gelöscht werden kann. Das Objekt wird zwar irgendwann entfernt, aber der Finalizer
+                                                   läuft nur einmal und nicht immer pro GC-Versuch. Einige Hintergründe erfährt der Leser
+                                                   unter <a href="http://www.iecc.com/gclist/GC-lang.html#Finalization" target="_blank">http://www.iecc.com/gclist/GC-lang.html#Finalization</a>.
+                                                </p>
+                                                <p>Löst eine Anweisung in <span class="clisting">finalize()</span> eine Ausnahme aus, so wird diese ignoriert. Das bedeutet aber, dass die Finalisierung
+                                                   des Objekts stehen bleibt. Den GC beeinflusst das in seiner Arbeit aber nicht.
+                                                </p><a id="dodtp8d853389-1a7c-404b-b797-44a742a5ae9e" name="dodtp8d853389-1a7c-404b-b797-44a742a5ae9e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> super.finalize()</span></h4>
+                                                <p>Überschreiben wir in einer Unterklasse <span class="clisting">finalize()</span>, dann müssen wir auch gewährleisten, dass die Methode <span class="clisting">finalize()</span> der Oberklasse aufgerufen wird. So besitzt zum Beispiel die Klasse <span class="clisting">Font</span> ein <span class="clisting">finalize()</span>, das durch eine eigene Implementierung nicht verschwinden darf. Wir müssen daher
+                                                   in unserer Implementierung <span class="clisting">super.finalize()</span> aufrufen (es wäre gut, wenn der Compiler das wie beim Konstruktoraufruf immer automatisch
+                                                   machen würde). Leere <span class="clisting">finalize()</span>-Methoden ergeben im Allgemeinen keinen Sinn, es sei denn, das <span class="clisting">finalize()</span> der Oberklasse soll explizit übergangen werden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.23: </strong>com/tutego/insel/object/finalize/SuperFont.java, finalize()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">@Override protected void finalize() throws Throwable<br>{<br>  try {<br>    // ...<br>  }<br>  finally {<br>   <span class="cfett"> super.finalize();</span><br>  }<br>}<br></pre></div>
+                                                <p>Der Block vom <span class="clisting">finally</span> wird immer ausgeführt, auch wenn es im oberen Teil eine Ausnahme gab.
+                                                </p>
+                                                <p>Die Methode von Hand aufzurufen, ist ebenfalls keine gute Idee, denn das kann zu Problemen
+                                                   führen, wenn der GC-Thread die Methode auch gerade aufruft. Um das Aufrufen von außen
+                                                   einzuschränken, sollte die Sichtbarkeit von <span class="clisting">protected</span> bleiben und nicht erhöht werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Da beim Programmende vielleicht nicht alle <span class="clisting">finalize()</span>-Methoden abgearbeitet wurden, haben die Entwickler schon früh einen Methodenaufruf
+                                                               <span class="clisting">System.runFinalizersOnExit</span><a class="indexterm" id="dodtpb1694088-a6d9-4403-8a3c-5a82ae23fe40"></a><span class="clisting">(true);</span> vorgesehen. Mittlerweile ist die Methode veraltet und sollte auf keinen Fall aufgerufen
+                                                               werden. Die API-Dokumentation erklärt:
+                                                               »It may result in finalizers being called on live objects while other threads are
+                                                               concurrently manipulating those objects, resulting in erratic behavior or deadlock.«
+                                                               Dazu auch Joshua Bloch, Autor des ausgezeichneten Buchs »Effective Java Programming
+                                                               Language Guide«:
+                                                               »Never call System.runFinalizersOnExit or Runtime.runFinalizersOnExit for any <br>reason: they are among the most dangerous methods in the Java libraries.«
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpdfced107-4bf2-420c-95bb-0f2b04af7792" name="dodtpdfced107-4bf2-420c-95bb-0f2b04af7792"></a><h3 class="t3"><span class="cfett">8.3.8</span><span class="cfett"> Synchronisation *</span><a href="#dodtp8d853389-1a7c-404b-b797-44a742a5ae9e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp848fd460-79bd-41d4-b6e6-dd24f9016fc1"></a>Threads können miteinander kommunizieren und dabei Daten teilen. Sie können außerdem
+                                                   auf das Eintreten bestimmter Bedingungen warten, zum Beispiel auf neue Eingabedaten.
+                                                   Die Klasse <span class="clisting">Object</span> deklariert insgesamt fünf Versionen der Methoden <span class="clisting">wait()</span>, <span class="clisting">notify()</span> und <span class="clisting">notifyAll()</span> zur Beendigungssynchronisation von Threads.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_08_003.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="8 Besondere Klassen der Java SE"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_08_002.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_08_004.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

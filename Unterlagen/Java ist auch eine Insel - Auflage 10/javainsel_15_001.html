@@ -1,0 +1,1040 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 15 Einführung in Dateien und Datenströme">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 15 Einführung in Dateien und Datenströme">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 15 Einführung in Dateien und Datenströme</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_14_010.html">
+      <link rel="next" href="javainsel_15_002.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_14_010.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_15_002.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9" class="navh">15 Einführung in Dateien und Datenströme</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_001.html#dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29" class="navh">15.1 Datei und Verzeichnis</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtpc427dabe-af84-4a0c-bf14-ee4877c3a66e" class="navh">15.1.1 Dateien und Verzeichnisse mit der Klasse File</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtpc369f11c-0f1c-4342-badd-842492934f00" class="navh">15.1.2 Verzeichnis oder Datei? Existiert es?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp6bcb0843-1c23-4706-b6bc-d294200a2b16" class="navh">15.1.3 Verzeichnis- und Dateieigenschaften/-attribute</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6" class="navh">15.1.4 Umbenennen und Verzeichnisse anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9" class="navh">15.1.5 Verzeichnisse auflisten und Dateien filtern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp04c08dc5-0b27-4282-856b-23a617e3c87a" class="navh">15.1.6 Dateien und Verzeichnisse löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_002.html#dodtp4c696222-68aa-4ff1-bc33-61d235d2a749" class="navnav">15.2 Dateien mit wahlfreiem Zugriff</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtpf3427acd-7268-4a9a-b72b-9a9e701eade1" class="navnav">15.2.1 Ein RandomAccessFile zum Lesen und Schreiben öffnen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp6892c9e7-3748-4acf-a950-5cf850834922" class="navnav">15.2.2 Aus dem RandomAccessFile lesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp57a61a41-491b-4fb2-a647-4e98e76cd928" class="navnav">15.2.3 Schreiben mit RandomAccessFile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtpb7a76b35-9333-4d4c-b8ee-db4dba2cd8aa" class="navnav">15.2.4 Die Länge des RandomAccessFile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp0127e3d1-5300-4313-a6d4-d524d0d51e82" class="navnav">15.2.5 Hin und her in der Datei</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_003.html#dodtp3e2f424c-1cb2-4e3b-8b78-a7b0f8fdc4d1" class="navnav">15.3 Dateisysteme unter NIO.2</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_003.html#dodtp0d490b7d-9edc-439b-9ace-e5516e7d33d5" class="navnav">15.3.1 FileSystem und Path</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_003.html#dodtp8ddec814-bdfa-4e08-9339-cd8c2b1d241d" class="navnav">15.3.2 Die Utility-Klasse Files</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_004.html#dodtpac233475-9da3-4cec-9eab-d68a36830773" class="navnav">15.4 Stream-Klassen und Reader/Writer am Beispiel von Dateien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp09d4e761-c431-4b26-ad6d-06f0f6ad7848" class="navnav">15.4.1 Mit dem FileWriter Texte in Dateien schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtpdcab948e-46c1-48d8-88e5-1739e507c4c6" class="navnav">15.4.2 Zeichen mit der Klasse FileReader lesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp86d65943-95bc-468a-9b1b-7e6c791bfb74" class="navnav">15.4.3 Kopieren mit FileOutputStream und FileInputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp8cbafd52-bd65-4813-847c-1579a876d42b" class="navnav">15.4.4 Datenströme über Files mit NIO.2 beziehen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_005.html#dodtpcc7fc739-5818-4c0f-927a-acb10955337c" class="navnav">15.5 Basisklassen für die Ein-/Ausgabe</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpc09b9f8e-c572-4c6e-ad69-1fb5e199f3f0" class="navnav">15.5.1 Die abstrakten Basisklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpa866f584-65ce-43e7-98e8-a06657a5c345" class="navnav">15.5.2 Übersicht über Ein-/Ausgabeklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp87713ea1-19cf-424f-a00c-6cf61fe640f4" class="navnav">15.5.3 Die abstrakte Basisklasse OutputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp4f854473-da5c-4601-a7d0-6f6d6aca8fae" class="navnav">15.5.4 Die Schnittstellen Closeable, AutoCloseable und Flushable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp126a4d65-ae0c-49e2-a6cd-2c6d8310fae5" class="navnav">15.5.5 Die abstrakte Basisklasse InputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp7ea6fb9c-4772-474a-bf5a-263de51866f3" class="navnav">15.5.6 Ressourcen aus dem Klassenpfad und aus Jar?Archiven laden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpd8984e1a-ef54-49c6-8eea-f45eabe308bf" class="navnav">15.5.7 Die abstrakte Basisklasse Writer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp042132dd-20d2-4f14-b3f9-4a4d756b4750" class="navnav">15.5.8 Die abstrakte Basisklasse Reader</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_006.html#dodtp2ebcbe05-dba8-4a9d-bfe2-156d51722f3d" class="navnav">15.6 Datenströme filtern und verketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5" class="navnav">15.6.1 Streams als Filter verketten (verschachteln)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp6b402b94-498d-4acc-8780-28e804c8a72d" class="navnav">15.6.2 Gepufferte Ausgaben mit BufferedWriter und BufferedOutputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp11cf7db5-7bca-4362-80c0-fa5fb3087800" class="navnav">15.6.3 Gepufferte Eingaben mit BufferedReader/BufferedInputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_007.html#dodtp1031bdda-e2df-4b43-ad43-b792113405bf" class="navnav">15.7 Vermittler zwischen Byte-Streams und Unicode-Strömen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_007.html#dodtp97ad15d2-7810-45d8-bcbe-601c0f0d9cc8" class="navnav">15.7.1 Datenkonvertierung durch den OutputStreamWriter</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_007.html#dodtp901ade28-ed9d-4eff-a49d-407c48c624f1" class="navnav">15.7.2 Automatische Konvertierungen mit dem InputStreamReader</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><a id="dodtp20db08f7-f476-462f-ac5e-ba6f524971f9" name="dodtp20db08f7-f476-462f-ac5e-ba6f524971f9"></a><h1 class="t1"><span class="cfett">15</span><span class="cfett"> Einführung in Dateien und Datenströme</span><a href="#dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h1>
+                                                <p class="anleser"><em><span class="ckursiv">»Schlagfertigkeit ist jede Antwort, die so klug ist, dass der Zuhörer wünscht, er
+                                                         hätte sie gegeben.«<br>&#8211; Elbert Green Hubbard (1856&#8211;1915)</span></em></p>
+                                                <p>Computer sind für uns so nützlich, weil sie Daten bearbeiten. Der Bearbeitungszyklus
+                                                   beginnt mit dem Einlesen der Daten, umfasst das Verarbeiten und endet mit der Ausgabe der Daten. In der deutschsprachigen Informatikliteratur wird deswegen auch
+                                                   vom EVA-Prinzip der Datenverarbeitungsanlagen gesprochen. In frühen EDV-Zeiten wurde
+                                                   die Eingabe vom Systemoperator auf Lochkarten gestanzt. Glücklicherweise sind diese
+                                                   Zeiten vorbei. Heutzutage speichern wir unsere Daten in Dateien (engl. <span class="cbegriff">files</span><span class="footnote"><a id="dodtpb8004e2e-195d-4da9-b22d-3c0e69ecffe8">[205](Das englische Wort »file« geht auf das lateinische Wort »filum« zurück. Dies bezeichnete früher eine
+auf Draht aufgereihte Sammlung von Schriftstücken.)</a></span>) und Datenbanken ab. Es ist wichtig, anzumerken, dass eine Datei nur in ihrem Kontext
+                                                   interessant ist, andernfalls beinhaltet sie für uns keine Information &#8211; die Sichtweise
+                                                   auf eine Datei ist demnach wichtig. Auch ein Programm besteht aus Daten und wird oft
+                                                   in Form einer Datei repräsentiert.
+                                                </p>
+                                                <p>Das <span class="clisting">java.io</span>-Paket bietet zahlreiche dateiorientierte Operationen. Dazu zählen Möglichkeiten,
+                                                   Dateien anzulegen, zu löschen, umzubenennen und sie in Verzeichnissen zu strukturieren.
+                                                   Diese gehören schon seit Java 1.0 zur API, und wir wollen uns zuerst damit beschäftigen.
+                                                   Java 7 krempelt diese API um und macht insbesondere die zentrale <span class="clisting">File</span>-Klasse überflüssig. Die neue API liegt getrennt in einem neuen Paket namens <span class="clisting">java.nio.file</span> und wird in dem Buch intensiv nach der traditionellen API vorgestellt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29" name="dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29"></a><h2 class="t2"><span class="cfett">15.1</span><span class="cfett"> Datei und Verzeichnis</span><a href="#dodtpc427dabe-af84-4a0c-bf14-ee4877c3a66e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h2>
+                                                <p>Die Klasse <span class="clisting">File</span> hat die Aufgabe, Dateioperationen plattformunabhängig durchzuführen. Plattformunabhängigkeit
+                                                   ist aber auch eine Einschränkung, denn wie sollen Rechte vergeben werden, wenn dies
+                                                   etwa der Macintosh mit Mac OS X oder ein Android Smartphone nicht unterstützt? Unix
+                                                   und Windows haben zwei völlig verschiedene Ansätze zur Rechteverwaltung. Die <span class="clisting">File</span>-Klasse ignoriert diese Frage und bietet überhaupt keine Lösung. In NIO.2 jedoch geht
+                                                   Java einen anderen Weg und neigt wieder deutlich mehr zu plattformspezifischen Details.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc427dabe-af84-4a0c-bf14-ee4877c3a66e" name="dodtpc427dabe-af84-4a0c-bf14-ee4877c3a66e"></a><h3 class="t3"><span class="cfett">15.1.1</span><span class="cfett"> Dateien und Verzeichnisse mit der Klasse File</span><a href="#dodtpc369f11c-0f1c-4342-badd-842492934f00"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein <span class="clisting">File</span><a class="indexterm" id="dodtp17230295-8979-42f2-916e-1a4959b53e2d"></a>-Objekt repräsentiert einen Datei- oder Verzeichnisnamen im Dateisystem. Die Datei
+                                                   oder das Verzeichnis, das das <span class="clisting">File</span>-Objekt beschreibt, muss nicht physikalisch existieren. Der Verweis wird durch einen
+                                                   Pfadnamen spezifiziert. Dieser kann absolut oder relativ zum aktuellen Verzeichnis
+                                                   angegeben werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Erzeuge ein <span class="clisting">File</span>-Objekt für das Laufwerk C:/:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">File f = <span class="cfett">new File( "C:/" )</span>;<br>System.out.println( f );   // C:\<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Folgende Konstruktoren erzeugen ein <span class="clisting">File</span>-Objekt:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">File(String pathname)</span><br>Erzeugt ein <span class="clisting">File</span>-Objekt aus einem Dateinamen.
+                                                   </li>
+                                                   <li><span class="clisting">File( String parent, String child)</span></li>
+                                                   <li><span class="clisting">File(File parent, String child)</span><br>Setzt ein neues <span class="clisting">File</span>-Objekt aus einem Basisverzeichnis und einem weiteren Teil zusammen, der auch wieder
+                                                      ein Verzeichnis oder ein Dateiname sein kann.
+                                                   </li>
+                                                   <li><span class="clisting">File(URI uri)</span><br>Erfragt von <span class="clisting">uri</span> den Pfadnamen (<span class="clisting">uri.getPath()</span>) und erzeugt ein neues <span class="clisting">File</span>-Objekt. Ist <span class="clisting">uri</span> gleich <span class="clisting">null</span>, folgt eine <span class="clisting">NullPointerException</span>. Ist die URI falsch formuliert, gibt es eine <span class="clisting">IllegalArgumentException</span>.
+                                                   </li>
+                                                </ul>
+                                                <p>Die Pfadangabe kann in allen Fällen absolut sein, muss es aber nicht.</p><a id="dodtp895971c8-9d32-464f-af7b-2e5946c7e1e3" name="dodtp895971c8-9d32-464f-af7b-2e5946c7e1e3"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Pfadtrenner</span></h4>
+                                                <p>Die Angabe des Pfades ist wegen der Pfadtrenner plattformabhängig. Auf Windows-Rechnern
+                                                   trennt ein Backslash »\« die Pfade, auf Unix-Maschinen ein normaler Slash<a class="indexterm" id="dodtpc90f6899-a9ba-4a2f-b6e1-1f25149079b8"></a> »/« und unter dem älteren MAC OS 9 ein Doppelpunkt.
+                                                </p>
+                                                <p>Glücklicherweise speichert die Klasse <span class="clisting">File</span> den Pfadtrenner in zwei öffentlichen Konstanten: <span class="clisting">File.separatorChar</span><a class="indexterm" id="dodtpd6ac2d41-91c5-4bcb-93d6-1b5658278af7"></a><span class="footnote"><a id="dodtpff2ef998-d75f-49a5-a1f6-661fc1905127">[206](Eigentlich sollte der Variablenname großgeschrieben werden, da die Variable als public static final
+char eine Konstante ist.)</a></span> ist ein <span class="clisting">char</span>, und <span class="clisting">File.separator</span> stellt den Pfadtrenner als String bereit (dies ist wiederum auf <span class="clisting">System.getProperty("file.separator")</span> zurückzuführen).
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wie bei den Dateitrennern gibt es einen Unterschied bei der Darstellung des Wurzelverzeichnisses.
+                                                               Unter Unix ist dies ein einzelnes Divis »/«, und unter Windows steht die Laufwerksbezeichnung
+                                                               vor dem Doppelpunkt und dem Backslash-Zeichen (»Z:\«).
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp7f833b24-7c3d-455c-bac3-721cbd36dc6f" name="dodtp7f833b24-7c3d-455c-bac3-721cbd36dc6f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Namen erfragen und auflösen</span></h4>
+                                                <p>Mit einem <span class="clisting">File</span>-Objekt erfragen ganz unterschiedliche Methoden den Dateinamen, den kompletten Pfad,
+                                                   das vorangehende Verzeichnis und ob eine Angabe absolut oder relativ ist. Bei einigen
+                                                   Methoden lässt sich wählen, ob die Rückgabe ein <span class="clisting">String</span>-Objekt mit dem Dateinamen sein soll oder ein <span class="clisting">File</span>-Objekt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Liefere einen Dateinamen, bei dem die relativen Bezüge aufgelöst sind:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">try<br>{<br>  File f = new File("C:/./WasNDas//..\\Programme/")<br>             .<span class="cfett">getCanonicalFile()</span>;<br>  System.out.println( f );                          // C:\Programme<br>}<br>catch ( IOException e ) { e.printStackTrace(); }<br></pre></div>
+                                                               Nicht viele Methoden der <span class="clisting">File</span>-Klasse lösen eine <span class="clisting">IOException</span> aus, diese ist eher eine Ausnahme.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/15_001.png" rel="lightbox" title="Klassendiagramm für File"><img class="bild" border="1" src="bilderklein/klein15_001.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 15.1: </strong>Klassendiagramm für File
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">String getName()</span><br>Gibt den Dateinamen zurück.
+                                                   </li>
+                                                   <li><span class="clisting">String getPath()</span><br>Gibt den Pfadnamen zurück.
+                                                   </li>
+                                                   <li><span class="clisting">String getAbsolutePath()</span></li>
+                                                   <li><span class="clisting">File getAbsoluteFile()</span><br>Liefert den absoluten Pfad. Ist das Objekt kein absoluter Pfadname, so wird ein Objekt
+                                                      aus dem aktuellen Verzeichnis, einem Separator-Zeichen und dem Dateinamen aufgebaut.
+                                                   </li>
+                                                   <li><span class="clisting">String getCanonicalPath</span><a class="indexterm" id="dodtpa9e185ce-13fb-4e78-a9b0-395bb05450ab"></a> <span class="clisting">() throws IOException</span></li>
+                                                   <li><span class="clisting">File getCanonicalFile() throws IOException</span><br>Gibt den Pfadnamen des Dateiobjekts zurück, der keine relativen Pfadangaben mehr enthält.
+                                                      Kann im Gegensatz zu den anderen Pfadmethoden eine <span class="clisting">IOException</span> aufrufen, da mitunter verbotene Dateizugriffe erfolgen.
+                                                   </li>
+                                                   <li><span class="clisting">String getParent()</span>, <span class="clisting">File getParentFile()</span><br>Gibt den Pfad des Vorgängers als <span class="clisting">String</span>- oder <span class="clisting">File</span>-Objekt zurück. Die Rückgabe ist <span class="clisting">null</span>, wenn es keinen Vater gibt, etwa beim Wurzelverzeichnis.
+                                                   </li>
+                                                   <li><span class="clisting">boolean isAbsolute()</span><br>Liefert <span class="clisting">true</span>, wenn der Pfad in der systemabhängigen Notation absolut ist.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc369f11c-0f1c-4342-badd-842492934f00" name="dodtpc369f11c-0f1c-4342-badd-842492934f00"></a><h3 class="t3"><span class="cfett">15.1.2</span><span class="cfett"> Verzeichnis oder Datei? Existiert es?</span><a href="#dodtp6bcb0843-1c23-4706-b6bc-d294200a2b16"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp7f833b24-7c3d-455c-bac3-721cbd36dc6f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Das <span class="clisting">File</span>-Objekt muss nicht unbedingt eine existierende Datei oder ein existierendes Verzeichnis
+                                                   repräsentieren. Für Dateioperationen mit <span class="clisting">File</span>-Objekten und nachfolgendem Zugriff testet <span class="clisting">exists()</span>, ob die Datei oder das Verzeichnis tatsächlich vorhanden ist. Da nun aber ein <span class="clisting">File</span>-Objekt Dateien sowie Verzeichnisse gleichzeitig repräsentiert, ermöglichen <span class="clisting">isDirectory()</span> und <span class="clisting">isFile()</span> eine genauere Aussage über den <span class="clisting">File</span>-Typ. Es kann gut sein, dass für eine <span class="clisting">File</span> weder <span class="clisting">isDirectory()</span> noch <span class="clisting">isFile()</span> die Rückgabe <span class="clisting">true</span> liefert (in Java können nur normale Dateien erzeugt werden).
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean exists()</span><br>Liefert <span class="clisting">true</span>, wenn das <span class="clisting">File</span>-Objekt eine existierende Datei oder einen existierenden Ordner repräsentiert.
+                                                   </li>
+                                                   <li><span class="clisting">boolean isDirectory()</span><br>Gibt <span class="clisting">true</span> zurück, wenn es sich um ein Verzeichnis handelt.
+                                                   </li>
+                                                   <li><span class="clisting">boolean isFile()</span><br>Liefert <span class="clisting">true</span>, wenn es sich um eine »normale« Datei handelt (kein Verzeichnis und keine Datei,
+                                                      die vom zugrunde liegenden Betriebssystem als besonders markiert wird, keine Blockdateien,
+                                                      Verknüpfungen).
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6bcb0843-1c23-4706-b6bc-d294200a2b16" name="dodtp6bcb0843-1c23-4706-b6bc-d294200a2b16"></a><h3 class="t3"><span class="cfett">15.1.3</span><span class="cfett"> Verzeichnis- und Dateieigenschaften/-attribute</span><a href="#dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc369f11c-0f1c-4342-badd-842492934f00"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine Datei oder ein Verzeichnis besitzt zahlreiche Eigenschaften, die sich mit Anfragemethoden
+                                                   auslesen lassen. In einigen wenigen Fällen lassen sich die Attribute auch ändern.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean canExecute()</span></li>
+                                                   <li><span class="clisting">boolean canRead()</span></li>
+                                                   <li><span class="clisting">boolean canWrite()</span></li>
+                                                   <li>Liefert <span class="clisting">true</span>, wenn die Ausführungsrechte/Leserechte/Schreibrechte gesetzt sind.
+                                                   </li>
+                                                   <li><span class="clisting">long length()</span><br>Gibt die Länge der Datei in Byte zurück oder <span class="clisting">0L</span>, wenn die Datei nicht existiert oder es sich um ein Verzeichnis handelt.
+                                                   </li>
+                                                </ul><a id="dodtp67f00d76-57c8-4612-aa37-7786d69c2bd9" name="dodtp67f00d76-57c8-4612-aa37-7786d69c2bd9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Änderungsdatum einer Datei</span></h4>
+                                                <p>Eine Datei verfügt unter jedem Dateisystem nicht nur über Attribute wie Größe und
+                                                   Rechte, sondern verwaltet auch das Datum der letzten Änderung. Letzteres nennt sich
+                                                   <span class="cbegriff">Zeitstempel</span>. Die <span class="clisting">File</span>-Klasse verfügt zum Abfragen dieser Zeit über die Methode <span class="clisting">lastModified()</span> und zum Setzen über <span class="clisting">setLastModified()</span>.
+                                                </p>
+                                                <p>Die Methode <span class="clisting">setLastModified()</span> ändert (wenn möglich) den Zeitstempel, und ein anschließender Aufruf von <span class="clisting">lastModified()</span> liefert die gesetzte Zeit (womöglich gerundet) zurück. Die Methode ist von vielfachem
+                                                   Nutzen, aber in Hinblick auf die Sicherheit bedenklich, denn ein Programm kann den
+                                                   Dateiinhalt einschließlich des Zeitstempels ändern. Auf den ersten Blick ist nicht
+                                                   mehr erkennbar, dass eine Veränderung der Datei vorgenommen wurde. Doch die Methode
+                                                   ist von größerem Nutzen bei der Programmerstellung, wo Quellcodedateien etwa mit Objektdateien
+                                                   verbunden sind. Nur über einen Zeitstempel ist eine einigermaßen intelligente Projektdateiverwaltung
+                                                   möglich.
+                                                </p>
+                                                <p>Dabei bleibt es verwunderlich, warum <span class="clisting">lastModified()</span> nicht als veraltet ausgezeichnet ist und zu <span class="clisting">getLastModified()</span> wurde, wo doch nun die passende Methode zum Setzen der Namensgebung genügt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">long lastModified()</span><br>Liefert den Zeitpunkt, zu dem die Datei zum letzten Mal geändert wurde. Die Zeit wird
+                                                      in Millisekunden ab dem 1. Januar 1970, 00:00:00 UTC, gemessen. Die Methode liefert
+                                                      0, wenn die Datei nicht existiert oder ein Ein-/Ausgabefehler auftritt.
+                                                   </li>
+                                                   <li><span class="clisting">boolean setLastModified(long time)</span><br>Setzt die Zeit (wann die Datei zuletzt geändert wurde). Die Zeit ist wiederum in Millisekunden
+                                                      seit dem 1. Januar 1970 angegeben. Ist das Argument negativ, dann wird eine <span class="clisting">IllegalArgumentException</span> ausgelöst.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zwar lässt Java die Ermittlung der Zeit der letzten Änderung zu, doch gilt dies nicht
+                                                               für die Erzeugungszeit. Das Standard-Dateisystem von Unix-Systemen speichert diese
+                                                               Zeit nicht. Windows speichert sie hingegen schon, sodass hier grundsätzlich der Zugriff,
+                                                               etwa über JNI, möglich wäre. Legt ein Java-Programm die Dateien an, deren Anlegezeiten
+                                                               später wichtig sind, müssen die Zeiten beim Anlegen gemessen und gespeichert werden.
+                                                               Falls die Datei nicht verändert wird, stimmt <span class="clisting">lastModified()</span> mit der Anlegezeit überein.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6" name="dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6"></a><h3 class="t3"><span class="cfett">15.1.4</span><span class="cfett"> Umbenennen und Verzeichnisse anlegen</span><a href="#dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp67f00d76-57c8-4612-aa37-7786d69c2bd9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Mit <span class="clisting">mkdir()</span> lassen sich Verzeichnisse anlegen und mit <span class="clisting">renameTo()</span> Dateien oder Verzeichnisse umbenennen<a class="indexterm" id="dodtp9f5379e3-687e-42ba-93db-6294558525f3"></a>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean mkdir()</span><br>Legt das Unterverzeichnis an.
+                                                   </li>
+                                                   <li><span class="clisting">boolean mkdirs()</span><br>Legt das Unterverzeichnis inklusive weiterer Verzeichnisse an.
+                                                   </li>
+                                                   <li><span class="clisting">boolean renameTo(File d)</span><br>Benennt die Datei in den Namen um, der durch das <span class="clisting">File</span>-Objekt <span class="clisting">d</span> gegeben ist. Ging alles gut, wird <span class="clisting">true</span> zurückgegeben. Bei zwei Dateinamen <span class="clisting">alt</span> und <span class="clisting">neu</span> benennt <span class="clisting">new File(alt).renameTo(new File(neu));</span> die Datei um. Die Methode muss vom Betriebssystem nicht atomar ausgeführt werden,
+                                                      und die tatsächliche Implementierung ist von der JVM und vom Betriebssystem abhängig.
+                                                   </li>
+                                                </ul>
+                                                <p>Über <span class="clisting">renameTo()</span> sollte noch ein Wort verloren werden: <span class="clisting">File</span>-Objekte sind immutable, stehen also immer nur für genau eine Datei. Ändert sich der
+                                                   Dateiname, ist das <span class="clisting">File</span>-Objekt ungültig, und es ist kein Zugriff mehr über dieses <span class="clisting">File</span>-Objekt erlaubt. Auch wenn eine Laufzeitumgebung keine Exception auslöst, sind alle
+                                                   folgenden Ergebnisse von Anfragen unsinnig.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9" name="dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9"></a><h3 class="t3"><span class="cfett">15.1.5</span><span class="cfett"> Verzeichnisse auflisten und Dateien filtern</span><a href="#dodtp04c08dc5-0b27-4282-856b-23a617e3c87a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Um eine Verzeichnisanzeige oder einen Dateiauswahldialog zu programmieren, benötigen
+                                                   wir eine Liste von Dateien, die in einem Verzeichnis liegen. Ein Verzeichnis kann
+                                                   reine Dateien oder auch wieder Unterverzeichnisse besitzen. Die <span class="clisting">list()</span>- und <span class="clisting">listFiles()</span>-Methoden der Klasse <span class="clisting">File</span> geben ein Feld von Zeichenketten mit Dateien und Verzeichnissen beziehungsweise ein
+                                                   Feld von <span class="clisting">File</span>-Objekten mit den enthaltenen Elementen zurück.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">File[] listFiles()</span></li>
+                                                   <li><span class="clisting">String[] list()</span><br>Gibt eine Liste der Dateien in einem Verzeichnis als <span class="clisting">File</span>-Array oder <span class="clisting">String</span>-Array zurück. Das Feld enthält weder ».« noch »..«.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein einfacher Directory-Befehl ist leicht mittels einiger Zeilen programmiert:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String[] entries = new File( "." ).list();<br>System.out.println( Arrays.toString(entries) );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die einfache Methode <span class="clisting">list()</span> liefert dabei nur relative Pfade, also einfach den Dateinamen oder den Verzeichnisnamen.
+                                                   Den absoluten Namen zu einer Dateiquelle müssen wir also erst zusammensetzen. Praktischer
+                                                   ist da schon die Methode <span class="clisting">listFiles()</span>, da wir hier komplette <span class="clisting">File</span>-Objekte bekommen, die ihre ganze Pfadangabe schon kennen. Wir können den Pfad mit
+                                                   <span class="clisting">getName()</span> erfragen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp04c08dc5-0b27-4282-856b-23a617e3c87a" name="dodtp04c08dc5-0b27-4282-856b-23a617e3c87a"></a><h3 class="t3"><span class="cfett">15.1.6</span><span class="cfett"> Dateien und Verzeichnisse löschen</span><a href="#dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Mithilfe der Methode <span class="clisting">delete()</span> auf einem <span class="clisting">File</span>-Objekt lässt sich eine Datei oder ein Verzeichnis entfernen. Diese Methode löscht
+                                                   wirklich! Sie ist nicht so zu verstehen, dass sie <span class="clisting">true</span> liefert, falls die Datei potenziell gelöscht werden kann. Konnte die Laufzeitumgebung
+                                                   <span class="clisting">delete()</span> nicht ausführen, so sollte die Rückgabe <span class="clisting">false</span> sein. Ein zu löschendes Verzeichnis muss leer sein, andernfalls kann das Verzeichnis
+                                                   nicht gelöscht werden. Unsere unten stehende Implementierung geht dieses Problem so
+                                                   an, dass sie rekursiv die Unterverzeichnisse löscht.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">File</span><br>implements Serializable, Comparable&lt;File&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">boolean delete()</span><br>Löscht die Datei oder das leere Verzeichnis. Falls die Datei nicht gelöscht werden
+                                                      konnte, gibt es keine Ausnahme, sondern den Rückgabewert <span class="clisting">false</span>.
+                                                   </li>
+                                                   <li><span class="clisting">void deleteOnExit()</span><br>Löscht die Datei bzw. das Verzeichnis, wenn die virtuelle Maschine korrekt beendet
+                                                      wird. Einmal vorgeschlagen, kann das Löschen nicht mehr rückgängig gemacht werden.
+                                                      Falls die JVM vorzeitig die Grätsche macht &#8211; Reinigungsfachkraft stolpert über Kabel
+                                                      &#8211;, kann natürlich die Datei möglicherweise noch immer nicht gelöscht sein, was insbesondere
+                                                      für temporäre Dateien, die über <span class="clisting">createTempFile()</span> angelegt wurden, eventuell lästig wäre.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Auf manchen Systemen liefert <span class="clisting">delete()</span> die Rückgabe <span class="clisting">true</span>, die Datei ist aber nicht gelöscht. Der Grund kann eine noch geöffnete Datei sein,
+                                                               mit der zum Beispiel ein Eingabestrom verbunden ist und die dadurch gelockt ist.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_15_001.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="15 Einführung in Dateien und Datenströme"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_14_010.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_15_002.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

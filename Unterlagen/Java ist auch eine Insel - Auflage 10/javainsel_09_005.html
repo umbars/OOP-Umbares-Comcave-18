@@ -1,0 +1,1179 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 9 Generics<T&gt;">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 9 Generics<T&gt;">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 9 Generics&lt;T&gt;</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_09_004.html">
+      <link rel="next" href="javainsel_09_006.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_09_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_09_006.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845" class="navnav">9 Generics&lt;T&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_001.html#dodtpc74e8925-5ee3-4856-ade3-5dc107234e99" class="navnav">9.1 Einführung in Java Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp46f87c4b-2a8a-4d51-a8d7-fa1b71f0f66f" class="navnav">9.1.1 Mensch versus Maschine: Typprüfung des Compilers und der Laufzeitumgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp6a73eafd-e68f-4783-bcdf-d57fddada2e7" class="navnav">9.1.2 Taschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp13e56feb-34cf-4a67-afa8-dbeba9a7520c" class="navnav">9.1.3 Generische Typen deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtpc481ce5d-a92d-4b7d-92dc-78d016eaffa5" class="navnav">9.1.4 Generics nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp511af877-15c3-4be2-954f-b72ce7e1d666" class="navnav">9.1.5 Diamonds are forever</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp130148a4-32ad-49e7-891b-0f49d99d4e1a" class="navnav">9.1.6 Generische Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp710f88eb-3589-44a7-9919-b2780446afc0" class="navnav">9.1.7 Generische Methoden/Konstruktoren und Typ-Inferenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_002.html#dodtpd527c002-42a6-47fb-97df-112816b7afdd" class="navnav">9.2 Umsetzen der Generics, Typlöschung und Raw-Types</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43" class="navnav">9.2.1 Realisierungsmöglichkeiten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp646d8dad-c628-4dbd-8516-9319de123868" class="navnav">9.2.2 Typlöschung (Type Erasure)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be" class="navnav">9.2.3 Probleme aus der Typlöschung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8beafab7-be03-41eb-8396-641368b63dff" class="navnav">9.2.4 Raw-Type</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_003.html#dodtp5f6dbe6c-6abe-4d7b-b034-d7fb043b2986" class="navnav">9.3 Einschränken der Typen über Bounds</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp4f61d68e-f19b-463d-a104-53d896405e34" class="navnav">9.3.1 Einfache Einschränkungen mit extends</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp87728199-d4df-488c-85f9-61ff5760295c" class="navnav">9.3.2 Weitere Obertypen mit &amp;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_004.html#dodtp7ce64032-440d-44d1-9d14-f9985575e53a" class="navnav">9.4 Typparameter in der throws-Klausel *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp24b992d0-6bf5-4c34-b7c0-3587c6ebd623" class="navnav">9.4.1 Deklaration einer Klasse mit Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp1055228d-f59d-41f4-8037-9a513f965ca2" class="navnav">9.4.2 Parametrisierter Typ bei Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_005.html#dodtp76606352-8335-4c92-821c-e663da127f54" class="navh">9.5 Generics und Vererbung, Invarianz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtpa0c69e24-5a10-4200-851e-73978a156ff2" class="navh">9.5.1 Arrays sind invariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc" class="navh">9.5.2 Generics sind kovariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a" class="navh">9.5.3 Wildcards mit ?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368" class="navh">9.5.4 Bounded Wildcards</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp75fd58f3-c99e-463a-a810-296f4871cc78" class="navh">9.5.5 Bounded-Wildcard-Typen und Bounded-Typvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6" class="navh">9.5.6 Das LESS-Prinzip</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7" class="navh">9.5.7 Enum&lt;E extends Enum&lt;E&gt;&gt; *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_006.html#dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba" class="navnav">9.6 Konsequenzen der Typlöschung: Typ-Token, Arrays und Brücken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpaa2655c0-2c7b-441d-9291-303a978c9587" class="navnav">9.6.1 Typ-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9" class="navnav">9.6.2 Super-Type-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb" class="navnav">9.6.3 Generics und Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a" class="navnav">9.6.4 Brückenmethoden</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp76606352-8335-4c92-821c-e663da127f54" name="dodtp76606352-8335-4c92-821c-e663da127f54"></a><h2 class="t2"><span class="cfett">9.5</span><span class="cfett"> Generics und Vererbung, Invarianz</span><a href="#dodtpa0c69e24-5a10-4200-851e-73978a156ff2"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Vererbung und Substitution ist für Java-Entwickler alltäglich, sodass diese Eigenschaft
+                                                   nicht weiter verwunderlich ist. Die <span class="clisting">toString()</span>-Methode zum Beispiel wird ganz natürlich auf allen Objekten aufgerufen, und Entwicklern
+                                                   ist klar, dass der Aufruf dynamisch gebunden ist. Genauso lässt sich bei <span class="clisting">String.toString(Object o)</span> jedes Objekt übergeben, und die statische Methode ruft die Objektmethode <span class="clisting">toString()</span> auf.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa0c69e24-5a10-4200-851e-73978a156ff2" name="dodtpa0c69e24-5a10-4200-851e-73978a156ff2"></a><h3 class="t3"><span class="cfett">9.5.1</span><span class="cfett"> Arrays sind invariant</span><a href="#dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp76606352-8335-4c92-821c-e663da127f54"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Nehmen wir als folgendes Beispiel die Hierarchie der bekannten Wrapper-Klassen. Natürlich
+                                                   steht <span class="clisting">Object</span> oben. Die numerischen Wrapper-Klassen implementieren alle <span class="clisting">Number</span>. Darunter stehen dann etwa <span class="clisting">Integer</span>, <span class="clisting">Double</span> und die anderen numerischen Wrapper. Folgendes bereitet keine Kopfschmerzen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Number number =<span class="cfett"> Integer</span>.valueOf( 10 );<br>number =<span class="cfett"> Double</span>.valueOf( 1.1 );<br></pre></div>
+                                                <p>Einmal zeigt <span class="clisting">number</span> auf ein <span class="clisting">Integer</span>, dann auf ein <span class="clisting">Double</span>-Objekt.
+                                                </p>
+                                                <p>Wie verhält es sich nun mit Arrays? Da ist ein <span class="clisting">Number</span>-Array der Basistyp eines <span class="clisting">Double</span>-Arrays:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Number[] numbers = new Double[ 100 ];<br>numbers[ 0 ] = 1.1;<br></pre></div>
+                                                <p>Dass ein Array vom Typ <span class="clisting">Double[]</span> ein Untertyp von <span class="clisting">Number[]</span> ist, nennt sich <span class="cbegriff">Invarianz</span><a class="indexterm" id="dodtpb3778193-b857-4742-887d-9a3f8e7be697"></a>. Doch lässt sich das auch auf Generics übertragen?
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc" name="dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc"></a><h3 class="t3"><span class="cfett">9.5.2</span><span class="cfett"> Generics sind kovariant</span><a href="#dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa0c69e24-5a10-4200-851e-73978a156ff2"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Es funktioniert, Folgendes zu schreiben:</p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">Set</span>&lt;String&gt; set = new<span class="cfett"> HashSet</span>&lt;String&gt;();<br></pre></div>
+                                                <p>Ein <span class="clisting">HashSet</span> mit <span class="clisting">Strings</span> ist eine Art von <span class="clisting">Set</span> mit <span class="clisting">Strings</span>. Aber ein <span class="clisting">HashSet</span> mit <span class="clisting">Strings</span> ist kein <span class="clisting">HashSet</span> mit <span class="clisting">Objects</span>. Damit wäre Folgendes falsch:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">HashSet&lt;<span class="cfett">Object</span>&gt; set = new HashSet&lt;<span class="cfett">String</span>&gt;();        // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler!<br></pre></div>
+                                                <p>Generics sind nicht invariant, sie sind <span class="cbegriff">kovariant</span><a class="indexterm" id="dodtpf20462ab-1bd5-4a4a-b54a-bd87022c5544"></a>. Diese Eigenschaft ist auf den ersten Blick gegen die Intuition, doch ein Beispiel
+                                                   rückt diesen Eindruck schnell gerade. Bleiben wir bei unserem <span class="clisting">Pocket</span> und den Wrapper-Klassen. Auch wenn <span class="clisting">Number</span> die Oberklasse von <span class="clisting">Integer</span> ist, so gilt dennoch nicht, dass <span class="clisting">Pocket&lt;Number&gt;</span> ein Obertyp von <span class="clisting">Pocket&lt;Integer&gt;</span> ist. Wäre es das, wäre Folgendes möglich und zur Laufzeit ein Problem:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;Number&gt; p;<br>p = new Pocket&lt;Integer&gt;();         // Ist das OK?<br>p.set( 2.2 );<br></pre></div>
+                                                <p>Das Argument <span class="clisting">2.2</span> ist über Autoboxing ein <span class="clisting">Double</span>, und daher scheint es auf <span class="clisting">Number</span> zu passen. Allerdings sollte <span class="clisting">Double</span> aber gar nicht erlaubt sein, da wir mit <span class="clisting">Pocket&lt;Integer&gt;</span> ja eine Tasche für <span class="clisting">Integer</span> aufgebaut haben, und ein <span class="clisting">Double</span> darf nicht in die <span class="clisting">Integer</span>-Tasche. Daher folgt: Die Ableitungsbeziehung zwischen Typen überträgt sich nicht
+                                                   auf generische Klassen. Ein <span class="clisting">Pocket&lt;Number&gt;</span> ist also keine Oberklasse, die alle erdenklichen numerischen Typen in der Tasche
+                                                   erlaubt. Der Compiler meckert bei diesem Versuch sofort:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;Number&gt; p;<br>p = new Pocket&lt;Integer&gt;(); // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Type mismatch: cannot convert from Pocket&lt;Integer&gt; <br>                           // to Pocket&lt;Number&gt;<br></pre></div>
+                                                <p>Auch durch eine alternative Schreibweise lässt sich der Compiler nicht in die Irre
+                                                   führen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;Integer&gt; p = new Pocket&lt;Integer&gt;();<br>Pocket&lt;Number&gt; p2 = p; // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Type mismatch: cannot convert <br>                       // from Pocket&lt;Integer&gt; to Pocket&lt;Number&gt;<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Im Fall von immutable Objekten mit Nur-lese-Zugriff bestünde eigentlich kein Grund
+                                                               für Kovarianz. Nehmen wir an, die folgende Deklaration wäre korrekt:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Pocket&lt;Number&gt; p = new Pocket&lt;Integer&gt;( 1 );<br>Number n = p.get();<br></pre></div>
+                                                               Dann haben wir gezeigt, dass <span class="clisting">p.set(2.2)</span> zum Beispiel nicht in Ordnung ist, da <span class="clisting">Double</span> nicht mit <span class="clisting">Integer</span> kompatibel ist. Aber wenn das Objekt etwa über den Konstruktor initialisiert würde,
+                                                               spräche nichts dagegen, mit einem kleineren Typ, also hier <span class="clisting">Number</span>, daraus zu lesen. Jedoch kann Java nicht erkennen, ob ein Typ immutable ist, und
+                                                               kann daher auch solche Ausnahmen bei den Generics nicht machen. Der Compiler nimmt
+                                                               immer an, Zugriffe wären lesend und schreibend.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a" name="dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a"></a><h3 class="t3"><span class="cfett">9.5.3</span><span class="cfett"> Wildcards mit ?</span><a href="#dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir wollen eine Methode <span class="clisting">isOnePocketEmpty()</span> schreiben, die eine variable Anzahl von beliebigen Tascheninhalten bekommt und testet,
+                                                   ob eine davon leer ist. Ein Aufruf könnte so aussehen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;String&gt;  p1 = new Pocket&lt;String&gt;( "Bad-Bank" );<br>Pocket&lt;Integer&gt; p2 = new Pocket&lt;Integer&gt;( 1500000 );<br>System.out.println(<span class="cfett"> isOnePocketEmpty( p1, p2 )</span> );                     // false<br></pre></div>
+                                                <p>Die erste Idee für den Methodenkopf sieht so aus:</p>
+                                                <div class="listing"><pre class="prettyprint">public static boolean isOnePocketEmpty( Pocket<span class="cfett">&lt;Object&gt;</span>... pockets )<br></pre></div>
+                                                <p>Doch halt! Da <span class="clisting">Pocket&lt;Object&gt;</span> nicht Taschen mit allen Typen umfasst, sondern nur exakt eine Tasche trifft, die
+                                                   ein <span class="clisting">Object</span>-Objekt enthält, ist das keine sinnvolle Parametrisierung für <span class="clisting">isOnePocketEmpty()</span>. Das hatten wir im oberen Abschnitt schon festgestellt. Denn wäre das möglich, würde
+                                                   es die Typsicherheit gefährden. Denn wenn diese Methode tatsächlich Taschen mit allen
+                                                   Inhalten akzeptieren würde, so könnte einer Tasche leicht ein Wert mit falschem Typ
+                                                   untergeschoben werden. Denn wird wie in unserem Beispiel die Methode <span class="clisting">isOnePocketEmpty()</span> mit einem <span class="clisting">Pocket&lt;String&gt;</span> aufgerufen, so würde wegen <span class="clisting">isOnePocketEmpty(Pocket&lt;</span><span class="cfett">Object</span><span class="clisting">&gt;... pockets)</span> dann auch der Aufruf von <span class="clisting">set(12)</span> auf dem <span class="clisting">Pocket</span> gültig sein, und dann stände plötzlich statt des gewünschten Inhalts vom Taschentyp
+                                                   <span class="clisting">String</span> nun ein <span class="clisting">Integer</span> in der Tasche. Das darf nicht gültig sein!
+                                                </p>
+                                                <p>Ist der Typ egal, könnten wir an den Original-Typ (Raw-Type) denken. Doch die Raw-Types
+                                                   haben den Nachteil, dass bei ihnen der Compiler überhaupt nichts prüft, wir aber eine
+                                                   gewisse Prüfung möchten. So soll die Methode <span class="clisting">isOnePocketEmpty()</span> beliebige Taschen entgegennehmen, aber gleichzeitig soll es der Methode auch verboten
+                                                   sein, falsche Dinge in die Taschen zu setzen. Ein <span class="clisting">isOnePocketEmpty(Pocket... pockets)</span> ist also keine gute Idee und führt außerdem zu diversen Warnungen.
+                                                </p>
+                                                <p>Die Lösung besteht im Einsatz des <span class="cbegriff">Wildcard-Typs</span><a class="indexterm" id="dodtpac389445-3ca1-4c6a-8d7b-e9987050d415"></a> <span class="clisting">?</span><a class="indexterm" id="dodtp98d10426-bee4-4a7a-8e57-fc367fcf30a1"></a>. Er repräsentiert dann eine Familie von Typen. Wenn schon <span class="clisting">Pocket&lt;Object&gt;</span> nicht der Basistyp aller Tascheninhalte ist, dann ist es <span class="clisting">Pocket&lt;?&gt;</span>. Es ist wichtig zu verstehen, dass <span class="clisting">?</span> nicht für <span class="clisting">Object</span> steht, sondern für einen unbekannten Typ! Damit lässt sich <span class="clisting">isOnePocketEmpty()</span> realisieren:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.15: </strong>com/tutego/insel/generic/PocketsEmpty.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static boolean isOnePocketEmpty(<span class="cfett"> Pocket&lt;?&gt;</span>... pockets )<br>{<br>  for (<span class="cfett"> Pocket&lt;?&gt;</span> pocket : pockets )<br>    if ( pocket.isEmpty() )<br>      return true;<br><br>  return false;<br>}<br><br>public static void main( String[] args )<br>{<br>  Pocket&lt;String&gt;  p1 = new Pocket&lt;String&gt;( "Bad-Bank" );<br>  Pocket&lt;Integer&gt; p2 = new Pocket&lt;Integer&gt;( 1500000 );<br>  System.out.println( isOnePocketEmpty( p1, p2 ) );                     // false<br>  System.out.println( isOnePocketEmpty( p1, p2, new Pocket&lt;Byte&gt;() ) ); // true<br>}<br></pre></div>
+                                                <p>Dass der Aufruf von <span class="clisting">isOnePocketEmpty()</span>, also bei keiner übergebenen Tasche, zu <span class="clisting">false</span> führt, soll an dieser Stelle als gegeben gelten.
+                                                </p>
+                                                <p>Wir müssen Wildcards von Typvariablen gedanklich streng trennen. Instanziierungen
+                                                   mit Wildcards sind nicht erlaubt, da ein Wildcard ja eben nicht für einen konkreten
+                                                   Typ, sondern für eine ganze Reihe von möglichen Typen steht. Wildcards können auch
+                                                   nicht wie Typvariablen in Methoden genutzt werden, auch wenn der Typ beliebig ist.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.8: </strong>Möglicher und unmöglicher Einsatz von Wildcard
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Korrekt mit Typvariable</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Falsch mit Wildcard (Compilerfehler!)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Pocket&lt;</span><span class="cfett">?</span><span class="clisting">&gt; pocket = new Pocket&lt;</span><span class="cfett">Byte</span><span class="clisting">&gt;();</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Pocket&lt;</span><span class="cfett">?</span><span class="clisting">&gt; pocket = new Pocket&lt;</span><span class="cfett">?</span><span class="clisting">&gt;();</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">static &lt;</span><span class="cfett">T</span><span class="clisting">&gt; T random(</span> <span class="cfett">T</span> <span class="clisting">m,</span> <span class="cfett">T</span> <span class="clisting">n ) { ... }</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">static</span> <span class="cfett">?</span> <span class="clisting">random( ? m, ? n ) { ... }</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpff7fe30e-44cd-43e5-9dd7-db3d0d162f0a" name="dodtpff7fe30e-44cd-43e5-9dd7-db3d0d162f0a"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Auswirkungen auf Lese-/Schreiboperationen</span></h4>
+                                                <p>Ist der Wildcard-Typ bei <span class="clisting">Pocket&lt;?&gt;</span> im Einsatz, wissen wir nichts über den Typ, und dem Compiler gehen alle Informationen
+                                                   verloren. Deklarieren wir etwa
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;?&gt;        p1 = new Pocket&lt;Integer&gt;();<br></pre></div>
+                                                <p>oder</p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;Integer&gt;  p2 = new Pocket&lt;Integer&gt;();<br>Pocket&lt;?&gt;        p3 = p2;<br></pre></div>
+                                                <p>dann ist über die wirklichen Typparameter bei <span class="clisting">p1</span> und <span class="clisting">p3</span> nichts bekannt. Das hat wichtige Auswirkungen auf die Methoden, die wir auf <span class="clisting">Pocket</span> aufrufen können.
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Ein Aufruf von <span class="clisting">p1.get()</span> ist legal, denn alles, was die Methode liefern wird, ist immer ein <span class="clisting">Object</span>, auch wenn es <span class="clisting">null</span> ist. Die Anweisung <span class="clisting">Object v = p1.get();</span> ist dementsprechend korrekt.
+                                                   </li>
+                                                   <li>Ein <span class="clisting">p1.set(value)</span> kann nicht erlaubt sein, da über den Typ von <span class="clisting">value</span> nichts bekannt ist. In <span class="clisting">p1</span> dürfen wir kein <span class="clisting">Double</span> einsetzen, da <span class="clisting">Pocket</span> nur <span class="clisting">Integer</span> speichern soll. Die einzige Ausnahme ist <span class="clisting">null</span>, da <span class="clisting">null</span> jeden Typ hat. <span class="clisting">p1.set(null)</span> ist also eine zulässige Anweisung. Das heißt ebenso, dass mit <span class="clisting">&lt;?&gt;</span> aufgebaute Objekte nicht automatisch immutable sind.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368" name="dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368"></a><h3 class="t3"><span class="cfett">9.5.4</span><span class="cfett"> Bounded Wildcards</span><a href="#dodtp75fd58f3-c99e-463a-a810-296f4871cc78"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpff7fe30e-44cd-43e5-9dd7-db3d0d162f0a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Angabe des konkreten Typparameters wie <span class="clisting">Pocket&lt;Integer&gt;</span> und die Wildcard-Form <span class="clisting">Pocket&lt;?&gt;</span> bilden Extreme. Die Tasche <span class="clisting">Pocket&lt;Integer&gt;</span> nimmt nur Ganzzahlen auf, <span class="clisting">Pocket&lt;?&gt;</span> auf der anderen Seiten alles. Es muss aber auch etwas dazwischen geben, um zum Beispiel
+                                                   auszudrücken, dass die Tasche nur eine Zahl oder eine Zeichenkette enthalten soll.
+                                                </p>
+                                                <p>Daher sind Typ-Einschränkungen mit <span class="clisting">extends</span> und <span class="clisting">super</span> möglich. Damit ergeben sich drei Arten von Wildcards:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.9: </strong>Die drei Wildcard-Typen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Wildcard</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Bezeichnung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Typparameter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">?</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="cbegriff">Wildcard-Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ist beliebig
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">? extends Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="cbegriff">Upper-bound Wildcard-Typ</span><a class="indexterm" id="dodtp84b86fb2-b6f7-4534-886f-dfa9817e71e7"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">muss <span class="clisting">Typ</span> erweitern
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">? super Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="cbegriff">Lower-bound Wildcard-Typ</span><a class="indexterm" id="dodtp1ddc3725-0699-4b92-aa76-62fd43efc3fb"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">muss über <span class="clisting">Typ</span> stehen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Wildcard beschreibt also die Eigenschaft eines Typparameters. Wenn es</p>
+                                                <p><span class="clisting">Pocket&lt;? extends Number&gt; p;</span></p>
+                                                <p>heißt, dann können in der Tasche <span class="clisting">p</span> alle möglichen <span class="clisting">Number</span>-Objekte sein.
+                                                </p>
+                                                <p>Machen wir <span class="clisting">extends</span> und <span class="clisting">super</span> noch an einem anderem Beispiel deutlich, das zeigt, welche Familie von Typen die
+                                                   Syntax beschreibt:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.10: </strong>Einige eingeschlossene Typen bei extends und super
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">? extends CharSequence</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">? super String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CharSequence</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CharSequence</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">StringBuffer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Object</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">StringBuilder</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">..</span>.
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die erste Tabellenzeile (nach dem Tabellenkopf) macht deutlich, dass <span class="clisting">extends</span> und <span class="clisting">super</span> den angegebenen Typ selbst mit einschließen. In <span class="clisting">&lt;? extends CharSequence&gt;</span> ist <span class="clisting">CharSequence</span> genau der Upper-Bound der Wildcard, und in <span class="clisting">&lt;? super String&gt;</span> ist <span class="clisting">String</span> der Lower-Bound der Wildcard. Während die Anzahl der Typen beim Lower-Bound beschränkt
+                                                   ist (die Anzahl der Oberklassen kann sich nicht erweitern), ist die Anzahl der Typen
+                                                   mit Upper-Bound im Prinzip unbekannt, da es immer wieder neue Unterklassen geben kann.
+                                                </p><a id="dodtp6c74f5ea-1a86-491c-9207-8e9a9284dcc4" name="dodtp6c74f5ea-1a86-491c-9207-8e9a9284dcc4"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Einsatzgebiete</span></h4>
+                                                <p>Jeder der drei Wildcard-Typen hat seine Einsatzgebiete. Weitere Anwendungen der <span class="cbegriff">Upper-bound Wildcard</span> und der <span class="cbegriff">Lower-bound Wildcard</span> zeigen die Sortiermethoden der Datenstrukturen und Algorithmen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.11: </strong>Beispiel für alle drei Wildcard-Typen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Beispiel</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Bedeutung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Pocket&lt;?&gt; p;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Taschen mit beliebigem Inhalt
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Pocket&lt;? extends Number&gt; p;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Taschen nur mit Zahlen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Comparator&lt;? super String&gt; comp =</span><br>  <span class="clisting">String.CASE_INSENSITIVE_ORDER;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Entweder <span class="clisting">String</span>-, <span class="clisting">Object</span>- oder <span class="clisting">CharSequence</span>-<span class="clisting">Comparator</span>. Idee: Ein <span class="clisting">Comparator</span>, der allgemeine <span class="clisting">Object</span>-Objekte vergleichen kann, kann (irgendwie) auch <span class="clisting">Strings</span> vergleichen, denn durch die Vererbung ist ein <span class="clisting">String</span> eine Art von <span class="clisting">Object</span>.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpd955f6b6-75be-4619-bd6f-0f9c00eb5839" name="dodtpd955f6b6-75be-4619-bd6f-0f9c00eb5839"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Beispiel mit Upper-bound-Wildcard-Typ</span></h4>
+                                                <p>Die Upper-bound Wildcard ist häufiger zu finden als die Lower-bound-Variante. Daher
+                                                   wollen wir ein Beispiel aufführen, an dem gut der übliche Einsatz für den Upper-bound
+                                                   abzulesen ist. Unser <span class="clisting">Player</span> hatte eine rechte und eine linke Tasche. Die Taschen sollen aber nun nicht alles
+                                                   Mögliche speichern können, sondern nur besondere Spielobjekte vom Typ <span class="clisting">Portable</span> (engl. für <span class="cbegriff">tragbar</span>). <span class="clisting">Portable</span> ist eine Schnittstelle, die ein Gewicht für die tragbaren Objekte vorschreibt. Zwei
+                                                   Typen sollen tragbar sein: <span class="clisting">Pen</span> und <span class="clisting">Cup</span>. Die Implementierung sieht so aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.16: </strong>com/tutego/insel/generic/PortableDemo.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">interface Portable<br>{<br>  double getWeight();<br>  void   setWeight( double weight );<br>}<br><br>abstract class AbstractPortable implements Portable<br>{<br>  double weight;<br><br>  @Override public double getWeight() { return weight; }<br><br>  @Override public void setWeight( double weight ) { this.weight = weight; }<br><br>  @Override public String toString() { return getClass().getName() + <br>                                         "[weight=" + weight + "]"; };<br>}<br><br>class Pen extends AbstractPortable { }<br><br>class Cup extends AbstractPortable { }<br></pre></div>
+                                                <p>Um zu testen, ob der Spieler nicht zu viele Sachen trägt, soll eine Methode <span class="clisting">areLighterThan()</span> testen, ob das Gewicht einer Liste von tragbaren Dingen unter einer gegebenen Grenze
+                                                   bleibt. Der erste Versuch könnte so aussehen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean areLighterThan( List&lt;Portable&gt; collection, double maxWeight )<br></pre></div>
+                                                <p>Moment! Das würde wieder ausschließlich <span class="clisting">Portable</span>-Objekte akzeptieren, denn Kovarianz gilt ja nicht. Selbst wenn es gehen würde, könnte
+                                                   das bedeuten, dass in einer Methode dann vielleicht über <span class="clisting">collection.add()</span> ein <span class="clisting">Pen</span> hinzugefügt werden kann, auch wenn die übergebene Liste mit <span class="clisting">Cup</span> deklariert wurde. Dann stände in der Liste plötzlich etwas Falsches. Außerdem ist
+                                                   <span class="clisting">Portable</span> eine Schnittstelle, sodass die Methode wirklich überhaupt keinen Sinn ergibt. So
+                                                   ist die korrekte Schreibweise nur mit einem Upper-bound-Wildcard-Typ möglich:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean areLighterThan( List<span class="cfett">&lt;? extends Portable&gt;</span> list, double maxWeight )<br></pre></div>
+                                                <p>Somit nimmt die Methode nur Listen mit <span class="clisting">Portable</span>-Objekte an, und das ist auch nötig, denn <span class="clisting">Portable</span>-Objekte haben ein Gewicht, und diese Eigenschaft brauchen wir.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.17: </strong>com/tutego/insel/generic/PortableDemo.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class PortableUtils<br>{<br>  public static boolean areLighterThan(<span class="cfett"> List&lt;? extends Portable&gt;</span> list, double maxWeight )<br>  {<br>    double accumulatedWeight = 0.0;<br><br>    for ( Portable portable : list )<br>      accumulatedWeight += portable.getWeight();<br><br>    return accumulatedWeight &lt; maxWeight;<br>  }<br>}<br>public class PortableDemo<br>{<br>  public static void main( String[] args )<br>  {<br>    Pen pen = new Pen();<br>    pen.setWeight( 10 );<br>    Cup cup = new Cup();<br>    cup.setWeight( 100 );<br>    System.out.println( PortableUtils.areLighterThan( Arrays.asList( pen, cup ), <br>                                                      10 ) ); //false<br>    System.out.println( PortableUtils.areLighterThan( Arrays.asList( pen, cup ), <br>                                                      120 ) );  //true<br>  }<br>}<br></pre></div>
+                                                <p>Wie schon besprochen wurde, kann aus der mit den Upper-bound-Wildcards deklarierten
+                                                   Datenstruktur <span class="clisting">List&lt;? extends Portable&gt;</span> nur gelesen, aber nicht verändert werden.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp75fd58f3-c99e-463a-a810-296f4871cc78" name="dodtp75fd58f3-c99e-463a-a810-296f4871cc78"></a><h3 class="t3"><span class="cfett">9.5.5</span><span class="cfett"> Bounded-Wildcard-Typen und Bounded-Typvariablen</span><a href="#dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd955f6b6-75be-4619-bd6f-0f9c00eb5839"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Zwischen Bounded-Wildcard-Typen und Bounded-Typvariablen gibt es natürlich einen Zusammenhang,
+                                                   und bei der Deklaration sind zwei Varianten wählbar. Warum das so ist, kann unsere
+                                                   Methode <span class="clisting">areLighterThan()</span> demonstrieren. Statt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean areLighterThan( List<span class="cfett">&lt;? extends Portable&gt;</span> list, double maxWeight )<br></pre></div>
+                                                <p>hätten wir auch einen formalen Typparameter lokal für die Methode deklarieren können:</p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">&lt;T extends Portable&gt;</span> boolean areLighterThan(<span class="cfett"> List&lt;T&gt;</span> list, double maxWeight )<br></pre></div>
+                                                <p>Beide Varianten erfüllen den gleichen Zweck. Doch ist die erste Variante der zweiten
+                                                   vorzuziehen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Best Practice
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Immer dann, wenn der formale Typparameter (etwa <span class="clisting">T</span>) nur in der Signatur auftaucht und es in der Methode selbst keinen Rückgriff auf
+                                                               den Typ <span class="clisting">T</span> gibt, wähle die Variante mit der Wildcard.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Mit Typparametern lassen sich gut Abhängigkeiten zwischen den einzelnen Argumenten
+                                                   oder dem Rückgabetyp herstellen. Das zeigt das folgende Beispiel (mit einigen Methoden,
+                                                   die bisher noch nicht vorgestellt wurden), das das leichteste Objekt in einer Sammlung
+                                                   von Taschen zurückgeben soll:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.18: </strong>com/tutego/insel/generic/PortableDemo.java, PortableUtils
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static<span class="cfett"> &lt;T extends Portable&gt; T</span> lightest(<span class="cfett"> Collection&lt;T&gt;</span> collection )<br>{<br> <span class="cfett"> Iterator&lt;T&gt;</span> iterator = collection.iterator();<br> <span class="cfett"> T</span> lightest = iterator.next();<br><br>  while ( iterator.hasNext() )<br>  {<br>   <span class="cfett"> T</span> next = iterator.next();<br><br>    if ( next.getWeight() &lt; lightest.getWeight() )<br>      lightest = next;<br>  }<br><br>  return lightest;<br>}<br></pre></div>
+                                                <p>Der Compiler achtet darauf, dass der Typ der Rückgabe mit dem Typ der Sammlung übereinstimmt.</p><a id="dodtpb641206a-4ade-440b-9b99-ec299301123e" name="dodtpb641206a-4ade-440b-9b99-ec299301123e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Auf Bounded-Wildcard-Typen in Rückgaben verzichten</span></h4>
+                                                <p>Wenn es möglich ist, Bounded-Wildcard-Typen oder Bounded-Typvariablen zu nutzen, sind
+                                                   Bounded-Typvariablen immer vorzuziehen. Wildcard-Typen liefern keine Typinformation,
+                                                   und es ist immer besser, sich vom Compiler über die Typ-Inferenz einen genaueren Typ
+                                                   geben zu lassen.
+                                                </p>
+                                                <p>Nehmen wir eine statische Methode <span class="clisting">leftSublist()</span> an, die von einer Liste eine Unterliste zurückgibt. Die Unterliste geht von der ersten
+                                                   Position bis zur Hälfe.
+                                                </p>
+                                                <p>Versuch 1:</p>
+                                                <div class="listing"><pre class="prettyprint">public static<span class="cfett"> List&lt;?&gt;</span> leftSublist( List&lt;? extends Portable&gt; list )<br>{<br>  return list.subList( 0, list.size() / 2 );<br>}<br></pre></div>
+                                                <p>Der Rückgabetyp <span class="clisting">List&lt;?&gt;</span> ist so ziemlich der schlechteste, den wir wählen können, denn der Aufrufer der Methode
+                                                   kann mit der Rückgabe überhaupt nichts anfangen: Er weiß nichts über den Inhalt der
+                                                   Liste.
+                                                </p>
+                                                <p>Versuch 2:</p>
+                                                <div class="listing"><pre class="prettyprint">public static<span class="cfett"> List&lt;? extends Portable&gt;</span> leftSublist( List&lt;? extends Portable&gt; list )<br></pre></div>
+                                                <p>Das ist schon ein wenig besser, denn hier bekommt der Empfänger wenigstens die Information
+                                                   zurück, dass die Liste irgendwelche tragbaren Dinge enthält.
+                                                </p>
+                                                <p>Noch besser ist natürlich, auf die Typ-Inferenz des Compilers zu setzen und dem Aufrufer
+                                                   genau den Typ wieder zurückzugeben, mit dem er den Parametertyp spickte. Dazu müssen
+                                                   wir aber eine Typvariable einsetzen. Der Grund ist: Deklariert eine Methode Parameter
+                                                   oder eine Rückgabe mit mehreren Wildcard-Typen, so sind die wirklichen Typargumente
+                                                   völlig frei wählbar und ohne Zusammenhang.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.19: </strong>com/tutego/insel/generic/PortableDemo.java, PortableUtils
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static<span class="cfett"> &lt;T extends Portable&gt;</span> List<span class="cfett">&lt;T&gt;</span> leftSublist( List<span class="cfett">&lt;T&gt;</span> list )<br>{<br>  return list.subList( 0, list.size() / 2 );<br>}<br></pre></div>
+                                                <p>Nun ist der Typ der Liste, die reinkommt, gleich dem Typ der Liste, die rauskommt.
+                                                   Mit <span class="clisting">extends</span> ist die Liste zwar nur lesbar, aber das liegt in der Natur der Sache.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Insbesondere in der Klasse <span class="clisting">Collections</span> aus der Java-Standard-API könnten viele Methoden auch anders geschrieben werden.
+                                                               Ein Beispiel: Statt <span class="clisting">&lt;T extends E&gt; boolean addAll<br>(Collection&lt;T&gt; c)</span>  wählten die Autoren <span class="clisting">boolean addAll(Collection&lt;? extends E&gt; c)</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6" name="dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6"></a><h3 class="t3"><span class="cfett">9.5.6</span><span class="cfett"> Das LESS-Prinzip</span><a href="#dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpb641206a-4ade-440b-9b99-ec299301123e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Während die mit <span class="clisting">extends</span> eingeschränkten Familien Leseoperationen zulassen, gilt für <span class="clisting">super</span> das Gegenteil. Hier ist Lesen nicht erlaubt, aber Schreiben. Als Merkhilfe lässt
+                                                   sich das als LESS-Prinzip<a class="indexterm" id="dodtpad89f383-8411-4bc3-88af-abe2dc6a5aec"></a><span class="footnote"><a id="dodtp2bc37950-eab5-466d-9980-298eaef1fc88">[173](Im Englischen ist auch der Ausdruck PECS (producer-extends, consumer-super) im Umlauf.)</a></span> festhalten:
+                                                </p>
+                                                <p>Lesen = Extends, Schreiben = Super (LESS)</p>
+                                                <p>Ein Beispiel ist auch hier hilfreich. Eine statische Methode <span class="clisting">copyLighterThan()</span> soll nur die Elemente aus einer Liste in eine andere kopieren, die leichter als eine
+                                                   bestimmte Obergrenze sind. Der erste Versuch:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static void copyLighterThan( List&lt;? extends Portable&gt; src,<br>                                    List&lt;? extends Portable&gt; dest, double maxWeight )<br>{<br>  for ( Portable portable : src )<br>    if ( portable.getWeight() &lt; maxWeight )<br>      dest.add( portable );           // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler !!<br>}<br></pre></div>
+                                                <p>Auf den ersten Blick sieht es gut aus, aber das Programm lässt sich nicht übersetzen.
+                                                   Das Problem ist die Zeile <span class="clisting">dest.add(portable);</span>. Wir erinnern uns: Mit einer Upper-bound-Wildcard lässt sich nicht schreiben. Das
+                                                   ergibt Sinn, denn die Liste <span class="clisting">src</span> kann ja zum Beispiel eine Liste von <span class="clisting">Cup</span>-Objekten sein und <span class="clisting">dest</span> eine Liste von <span class="clisting">Pen</span>-Objekten. Beide sind <span class="clisting">Portable</span>, aber dennoch inkompatibel, da Cups nicht in Pens kopiert werden können. Die Frage
+                                                   ist also, wie der Typ der Ergebnisliste aussehen soll. Beginnen wir bei der Quellliste.
+                                                   Hier ist <span class="clisting">List&lt;? extends Portable&gt;</span> schon korrekt, denn die Liste kann ja alles enthalten, was tragbar ist. Doch welche
+                                                   Anforderungen gibt es an die Zielliste? Wie muss der Typ sein, sodass sich alles vom
+                                                   Typ <span class="clisting">Portable</span>, wie <span class="clisting">Cup</span> oder <span class="clisting">Pen</span>, oder sogar noch Unterklassen speichern lassen? Die Antwort ist einfach: Jeder Typ,
+                                                   der über <span class="clisting">Portable</span> liegt! Das sind <span class="clisting">Portable</span> selbst und <span class="clisting">Object</span>, also alle Obertypen. Dies ist aber der Lower-bound-Wildcard-Typ, den wir mit <span class="clisting">super</span> schreiben. Damit folgt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.20: </strong>com/tutego/insel/generic/PortableDemo.java, PortableUtils
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static void copyLighterThan(<span class="cfett"> List&lt;? extends Portable&gt;</span> src,<br>                                   <span class="cfett"> List&lt;? super Portable&gt;</span>   dest, double maxWeight )<br>{<br>  for ( Portable portable : src )<br>    if ( portable.getWeight() &lt; maxWeight )<br>      dest.add( portable );<br>}<br></pre></div>
+                                                <p>Ein Beispiel für den Aufruf:</p>
+                                                <p class="plistingunter"><strong>Listing 9.21: </strong>com/tutego/insel/generic/PortableDemo.java, Ausschnitt main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">List&lt;? extends Portable&gt; src = Arrays.asList( pen, cup );<br>List&lt;? super Portable&gt;   dest = new ArrayList&lt;&gt;();<br>PortableUtils.copyLighterThan( src, dest, 20 );<br>System.out.println( dest.size() ); // 1<br>Object result = dest.get( 0 );<br>System.out.println( result );      // com.tutego.insel.generic.Pen[weight=10.0]<br></pre></div>
+                                                <p>Die Liste <span class="clisting">dest</span> ist schreibbar, aber der lesbare Typ ist lediglich <span class="clisting">Object</span> &#8211;  der Compiler weiß nicht, was hier tatsächlich in der Liste steckt, er weiß nur,
+                                                   dass es beliebige Obertypen von <span class="clisting">Portable</span> sein können. Und da bleibt als allgemeinster Typ eben nur <span class="clisting">Object</span>.
+                                                </p><a id="dodtp90460b35-92bf-43b0-bef9-01bb9b40bd98" name="dodtp90460b35-92bf-43b0-bef9-01bb9b40bd98"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wildcard-Capture</span></h4>
+                                                <p>Das LESS-Prinzip hat eine wichtige Konsequenz, die insbesondere bei Listen-Operationen
+                                                   auffällt. Eine mit einer Wildcard parametrisierte Liste kann nicht verändert werden.
+                                                   Doch wie lässt sich zum Beispiel eine Methode schreiben, die eine Liste umdreht? Vom
+                                                   API-Design her könnte eine Methode <span class="clisting">reverse()</span> wie folgt aussehen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static void reverse( List&lt;?&gt; list );<br></pre></div>
+                                                <p>oder so:</p>
+                                                <div class="listing"><pre class="prettyprint">public static &lt;T&gt; void reverse( List&lt;T&gt; list );<br></pre></div>
+                                                <p>Nach unserem Verständnis, dass wir bei völlig freien Typen die Wildcard-Schreibweise
+                                                   bevorzugen wollen, stehen wir vor einem Dilemma.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static &lt;T&gt; void reverse( List<span class="cfett">&lt;?&gt;</span> list )<br>{<br>  for ( int i = 0; i &lt; list.size() / 2; i++ )<br>  {<br>    int j = list.size() &#8211; i &#8211; 1;<br>   <span class="cfett"> ?</span> tmp = list.get( i );                // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br>    list.set( i, list.get( j ) );<br>    list.set( j, tmp );<br>  }<br>}<br></pre></div>
+                                                <p>Es bleibt uns nichts anderes, als doch die Variante mit der Typvariablen zu wählen,
+                                                   sodass wir Zugriff auf den Typ <span class="clisting">T</span> haben.
+                                                </p>
+                                                <p>Da nun vom API-Design <span class="clisting">reverse(List&lt;?&gt; list)</span> bevorzugt wird, aber <span class="clisting">reverse(List&lt;T&gt; list)</span> in der Implementierung nötig ist, stellt sich die Frage, ob beides miteinander vereinbar
+                                                   ist. Die gute Nachricht: Ja, denn <span class="clisting">reverse(List&lt;?&gt; list)</span> kann auf eine interne Umdrehmethode <span class="clisting">revese_(List&lt;T&gt;)</span> weiterleiten. Zwar müssen die Methoden anders benannt werden, aber wegen des sogenannten
+                                                   <span class="cbegriff">Wildcard-Capture</span><a class="indexterm" id="dodtpfdb6f5c4-1290-4e87-bc60-9961b3989bd3"></a> funktioniert die Abbildung von einer Wildcard auf eine Typvariable.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.22: </strong>com/tutego/insel/generic/WildcardCapture, WildcardCapture
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class WildcardCapture<br>{<br> <span class="cfett"> private static &lt;T&gt; void reverse_( List&lt;T&gt; list )</span><br>  {<br>    for ( int i = 0; i &lt; list.size() / 2; i++ )<br>    {<br>      int j = list.size() &#8211; i &#8211; 1;<br>      T tmp = list.get( i );<br>      list.set( i, list.get( j ) );<br>      list.set( j, tmp );<br>    }<br>  }<br><br> <span class="cfett"> public static void reverse( List&lt;?&gt; list )</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> reverse_( list );</span><br> <span class="cfett"> }</span><br>}<br></pre></div>
+                                                <p>Der Compiler »fängt« bei <span class="clisting">reverse(list)</span> den unbekannten Typ der Liste ein und »füllt« die Typvariable bei <span class="clisting">reverse_(list)</span>.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7" name="dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7"></a><h3 class="t3"><span class="cfett">9.5.7</span><span class="cfett"> Enum&lt;E extends Enum&lt;E&gt;&gt; *</span><a href="#dodtp90460b35-92bf-43b0-bef9-01bb9b40bd98"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die generische Deklaration der Klasse <span class="clisting">Enum</span> besitzt eine Besonderheit, die wir uns kurz vornehmen wollen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public abstract class Enum&lt;<span class="cfett">E extends Enum&lt;E&gt;</span>&gt;<br>implements Comparable&lt;E&gt;, Serializable<br></pre></div>
+                                                <p>Ein konkreterer parametrisierter Typ muss also die Typvariable <span class="clisting">E</span> so wählen, dass sie einen Untertyp von <span class="clisting">Enum</span> beschreibt.
+                                                </p>
+                                                <p>Das Ganze lässt sich am besten an einem Beispiel erklären. Die Klasse <span class="clisting">Enum</span> ist eine besondere Klasse, die der Compiler immer dann verwendet, wenn er eine <span class="clisting">enum</span>-Aufzählung umsetzen soll. Angenommen, <span class="clisting">Page</span> deklariert zwei Seitengrößen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum Page<br>{<br>  A4, A3<br>}<br></pre></div>
+                                                <p>Ohne zu genau auf die Methodenrümpfe zu schauen, generiert der Compiler folgenden
+                                                   Programmcode:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public final class Page<span class="cfett"> extends java.lang.Enum&lt;Page&gt;</span><br>{<br>  public static final Page A4 = ...<br>  public static final Page A3 = ...<br>  public static Page[] values() { ... }<br>  public static Page valueOf(String s) { ... }<br>  ...<br>}<br></pre></div>
+                                                <p>Aus einer <span class="clisting">enum</span>-Aufzählung entsteht also eine Klasse, die <span class="clisting">Enum</span> erweitert und als parametrisierter Typ genau diese Klasse nennt: <span class="clisting">Page extends Enum&lt;Page&gt;</span>. Vergleichen wir das mit der generischen Typdeklaration <span class="clisting">Enum&lt;E extends Enum&lt;E&gt;&gt;</span>, so ist der Typparameter <span class="clisting">Page</span> eine Instanziierung der Typvariable <span class="clisting">E</span>. Und <span class="clisting">Page</span> ist eine Unterklasse von <span class="clisting">Enum</span> (<span class="clisting">Page extends Enum</span>), genauso wie die Typvariable <span class="clisting">E</span> das mit dem Typ-Parameter-Bound vorschreibt: <span class="clisting">E extends Enum</span>.
+                                                </p>
+                                                <p>Was wir bisher gesehen haben, zeigt, dass die Deklaration »passt«. Aber warum ist
+                                                   sie so gewählt? Die Typvariable <span class="clisting">E</span> ist so deklariert, dass sie für <span class="clisting">Enum</span>-Unterklassen steht, also für die konkrete Aufzählung selbst, wie es <span class="clisting">Page</span> zeigt. Das ist wichtig für Vergleiche. Dazu schauen wir uns einen Ausschnitt aus
+                                                   der Deklaration der abstrakten Klasse <span class="clisting">Enum</span> noch einmal an, und zwar genau die Teile, die etwas mit dem Typ <span class="clisting">E</span> einfordern; das sind zwei Methoden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.23: </strong>java/lang/Enum.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public abstract class Enum&lt;<span class="cfett">E extends Enum&lt;E&gt;</span>&gt;<br>  implements Comparable&lt;E&gt;, Serializable<br>{<br>  public final int compareTo(<span class="cfett">E</span> o) {<br>  public final Class&lt;<span class="cfett">E</span>&gt; getDeclaringClass() {<br>  ...<br>}<br></pre></div>
+                                                <p>Bleiben wir bei der Vergleichsmethode: <span class="clisting">compareTo()</span> ermöglicht es, dass wir zwei Aufzählungen vergleichen und zum Beispiel <span class="clisting">A4.compareTo(A3)</span> schreiben können. Java erlaubt dabei nur, dass zwei Aufzählungen vom gleichen Typ
+                                                   verglichen werden können: Vergleiche der Art <span class="clisting">A4.compareTo(Thread.State.NEW)</span> führen zu einem Compilerfehler. Damit sind wir der Lösung schon nah. Die Deklaration
+                                                   der <span class="clisting">compareTo()</span>-Methode befindet sich in <span class="clisting">Enum</span> und wird den Unterklassen vererbt &#8211; die Methode wird nicht vom Compiler magisch in
+                                                   die Unterklassen gesetzt, wie etwa <span class="clisting">values()</span> oder <span class="clisting">valueOf()</span>. Damit bei <span class="clisting">compareTo(E o)</span> jetzt nur eine Unterklasse von <span class="clisting">Enum</span>, nämlich die konkrete Aufzählung, erlaubt ist, fordert <span class="clisting">Enum</span> eben <span class="clisting">E extends Enum&lt;E&gt;</span>.
+                                                </p>
+                                                <p>Die abschließende Frage ist, ob auch eine andere Deklaration für <span class="clisting">Enum</span> möglich gewesen wäre, ohne dass es zu einem Nachteil kommen würde. Die Antwort ist:
+                                                   Ja, im Prinzip ist auch <span class="clisting">class Enum&lt;E&gt;</span> möglich. Auf den ersten Blick scheint das aber falsch zu sein. Spielen wir diese
+                                                   Deklaration statt <span class="clisting">Enum&lt;E extends Enum&lt;E&gt;&gt;</span> kurz durch. Dann könnte ein Entwickler schreiben: <span class="clisting">class Page extends Enum&lt;Bunny&gt;</span> &#8211; die geerbte Vergleichsmethode von <span class="clisting">Page</span> hieße dann <span class="clisting">compareTo(Bunny o)</span>, was falsch wäre. Mit der korrekten Deklaration <span class="clisting">Enum&lt;E extends Enum&lt;E&gt;&gt;</span> ist nur ein <span class="clisting">class Page extends Enum&lt;Page&gt;</span> möglich.
+                                                </p>
+                                                <p>Jetzt kommt aber die große Einschränkung: Wir dürfen keine Unterklassen von <span class="clisting">Enum</span> aufbauen, sondern nur der Compiler darf das tun. Ein eigenmächtiger Versuch wird
+                                                   vom Compiler abgestraft. Der unfehlbare Compiler könnte mit einer Deklaration <span class="clisting">class Enum&lt;E&gt;</span> arbeiten, denn er würde für <span class="clisting">E</span> den Aufzählungstyp einsetzen, also Programmcode für <span class="clisting">class Page extends Enum&lt;Page&gt;</span> generieren. So stände in <span class="clisting">compareTo()</span> der richtige Typ, denn <span class="clisting">E</span> wäre mit <span class="clisting">Page</span> instanziiert, was zu dem gewollten <span class="clisting">compareTo(Page o)</span> führt. Und auch die in <span class="clisting">Enum</span> deklarierte Methode <span class="clisting">getDeclaringClass()</span> liefert <span class="clisting">Page</span>. Einschränkungen der möglichen Typparameter helfen Entwicklern, Typfehler zu minimieren,
+                                                   aber der Compiler macht keine Fehler, für ihn ist die Präzisierung nicht nötig. Aber
+                                                   es gibt für die Java-API-Designer keinen Grund, <span class="clisting">Enum</span> schwächer zu deklarieren als nötig. Außerdem gibt es noch einen Unterschied im Bytecode,
+                                                   der sich durch die Typ-Löschung ergibt. Bei <span class="clisting">Enum&lt;E&gt;</span> ist die Umsetzung von <span class="clisting">E getDeclaringClass()</span> im Bytecode nur <span class="clisting">Object getDeclaringClass()</span>, doch mit <span class="clisting">Enum&lt;E extends Enum&lt;E&gt;&gt;</span> ist sie immerhin <span class="clisting">Enum getDeclaringClass()</span>, was besser ist.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_09_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="9 Generics<T&gt;"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_09_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_09_006.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

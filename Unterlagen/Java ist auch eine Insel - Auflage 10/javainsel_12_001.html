@@ -1,0 +1,735 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige
+         Programmierung
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_11_010.html">
+      <link rel="next" href="javainsel_12_002.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_11_010.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_12_002.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566" class="navh">12 Einführung in die nebenläufige Programmierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_001.html#dodtpeed4c495-0b00-4e2b-9676-b266d43670d5" class="navh">12.1 Nebenläufigkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46" class="navh">12.1.1 Threads und Prozesse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6" class="navh">12.1.2 Wie parallele Programme die Geschwindigkeit steigern können</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397" class="navh">12.1.3 Was Java für Nebenläufigkeit alles bietet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_002.html#dodtp56e16a45-b15f-400b-bb97-e0f9a4313fc4" class="navnav">12.2 Threads erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtpd3c6f82f-42b0-4766-aee4-e60d30a66a9e" class="navnav">12.2.1 Threads über die Schnittstelle Runnable implementieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp41e7fcab-d074-4be0-931d-38ca2981a5c9" class="navnav">12.2.2 Thread mit Runnable starten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp383a6f30-6252-4913-a5a7-cce7b47762f0" class="navnav">12.2.3 Die Klasse Thread erweitern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_003.html#dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9" class="navnav">12.3 Thread-Eigenschaften und -Zustände</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913" class="navnav">12.3.1 Der Name eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a" class="navnav">12.3.2 Wer bin ich?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp93979653-f7c8-4c77-86b3-349c410ed14c" class="navnav">12.3.3 Schläfer gesucht</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp8eec9278-9212-4161-bf08-0a62263c3c4c" class="navnav">12.3.4 Mit yield() auf Rechenzeit verzichten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp458bab78-df7d-428f-b1ed-0b4828f1392f" class="navnav">12.3.5 Der Thread als Dämon</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8" class="navnav">12.3.6 Das Ende eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp97d93180-7f6d-4f05-b952-b259c8972812" class="navnav">12.3.7 Einen Thread höflich mit Interrupt beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp365c4a65-1044-4b94-953b-25a3a8b89600" class="navnav">12.3.8 UncaughtExceptionHandler für unbehandelte Ausnahmen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_004.html#dodtp8a9c0910-d1bd-4b8d-aec2-afbe936cea6a" class="navnav">12.4 Der Ausführer (Executor) kommt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp1acff417-7dcb-4a59-b33c-622f17b3cefa" class="navnav">12.4.1 Die Schnittstelle Executor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp0564d482-4840-4457-9701-c96abfda3b79" class="navnav">12.4.2 Die Thread-Pools</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_005.html#dodtpc5a3affc-8970-4884-b250-cfb1c87fde60" class="navnav">12.5 Synchronisation über kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae" class="navnav">12.5.1 Gemeinsam genutzte Daten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6" class="navnav">12.5.2 Probleme beim gemeinsamen Zugriff und kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a" class="navnav">12.5.3 Punkte parallel initialisieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp37d4ce22-82cd-4895-9c81-13c593d76390" class="navnav">12.5.4 Kritische Abschnitte schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34" class="navnav">12.5.5 Kritische Abschnitte mit ReentrantLock schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_006.html#dodtp859b3366-b982-41df-9346-d16fd13d8496" class="navnav">12.6 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><a id="dodtp6d3b0794-a72f-473d-bfe2-f49e058af566" name="dodtp6d3b0794-a72f-473d-bfe2-f49e058af566"></a><h1 class="t1"><span class="cfett">12</span><span class="cfett"> Einführung in die nebenläufige Programmierung</span><a href="#dodtpeed4c495-0b00-4e2b-9676-b266d43670d5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h1>
+                                                <p class="anleser"><em><span class="ckursiv">»Just Be.«<br>&#8211; Calvin Klein (* 1942)</span></em></p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpeed4c495-0b00-4e2b-9676-b266d43670d5" name="dodtpeed4c495-0b00-4e2b-9676-b266d43670d5"></a><h2 class="t2"><span class="cfett">12.1</span><span class="cfett"> Nebenläufigkeit</span><a href="#dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h2>
+                                                <p>Moderne Betriebssysteme geben dem Benutzer die Illusion, dass verschiedene Programme
+                                                   gleichzeitig ausgeführt werden &#8211; die Betriebssysteme nennen sich <a class="indexterm" id="dodtp2ada83dd-985e-4e7c-9f70-882a49876f4f"></a><span class="cbegriff">multitaskingfähig</span>. Was wir dann wahrnehmen, ist eine Quasip<a class="indexterm" id="dodtpadc618b1-adbd-4454-b75b-3f6505d57d90"></a>arallelität, die im Deutschen auch <span class="cbegriff">Nebenläufigkeit</span><span class="footnote"><a id="dodtpbcb09858-c60a-46c0-90cc-b5417a0ef2a8">[183](Mitunter sind die Begriffe parallel und nebenläufig nicht äquivalent definiert. Wir wollen sie in
+diesem Zusammenhang aber synonym benutzen.)</a></span> genannt wird. Diese Nebenläufigkeit der Programme wird durch das Betriebssystem gewährleistet,
+                                                   das auf Einprozessormaschinen die Prozesse alle paar Millisekunden umschaltet. Daher
+                                                   ist das Programm nicht wirklich parallel, sondern das Betriebssystem gaukelt uns dies
+                                                   durch eine verzahnte Bearbeitung der Prozesse vor. Wenn mehrere Prozessoren oder mehrere
+                                                   Prozessor-Kerne am Werke sind, werden die Programmteile tatsächlich parallel abgearbeitet.
+                                                   Aber ob nur ein kleines Männchen oder beliebig viele im Rechner arbeiten, soll uns
+                                                   egal sein.
+                                                </p>
+                                                <p>Der Teil des Betriebssystems, der die Umschaltung übernimmt, heißt <a class="indexterm" id="dodtp66cf7013-1ba9-4f1c-af16-be0ee6d829c4"></a><span class="cbegriff">Scheduler</span>. Die dem Betriebssystem bekannten aktiven Programme bestehen aus <a class="indexterm" id="dodtpe4c6d6e7-3849-45a7-8caf-e346cf49edac"></a>Prozessen. Ein Prozess setzt sich aus dem Programmcode und den Daten zusammen und
+                                                   besitzt einen eigenen Adressraum. Des Weiteren gehören Ressourcen wie geöffnete Dateien
+                                                   oder belegte Schnittstellen dazu. Die virtuelle Speicherverwaltung des Betriebssystems
+                                                   trennt die Adressräume der einzelnen Prozesse. Dadurch ist es nicht möglich, dass
+                                                   ein Prozess den Speicherraum eines anderen Prozesses korrumpiert; er sieht den anderen
+                                                   Speicherbereich nicht. Damit Prozesse untereinander Daten austauschen können, wird
+                                                   ein besonderer Speicherbereich als <span class="cbegriff">Shared Memory</span> markiert. Amok laufende Programme sind zwar möglich, werden jedoch vom Betriebssystem
+                                                   gestoppt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46" name="dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46"></a><h3 class="t3"><span class="cfett">12.1.1</span><span class="cfett"> Threads und Prozesse</span><a href="#dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpeed4c495-0b00-4e2b-9676-b266d43670d5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Bei modernen Betriebssystemen gehört zu jedem Prozess mindestens ein <span class="cbegriff">Thread</span><a class="indexterm" id="dodtpc4e729bc-18e1-43ec-bb4b-0780fc7dbab9"></a> (zu Deutsch <span class="cbegriff">Faden</span><a class="indexterm" id="dodtp533e0534-b013-43db-9aa3-9655d2132d50"></a> oder <span class="cbegriff">Ausführungsstrang</span><a class="indexterm" id="dodtp92f045fb-f7ac-4e3a-9ca4-e10a1d49a93e"></a>), der den Programmcode ausführt. Damit werden also genau genommen die Prozesse nicht
+                                                   mehr parallel ausgeführt, sondern nur die Threads. Innerhalb eines Prozesses kann
+                                                   es mehrere Threads geben, die alle zusammen in demselben Adressraum ablaufen. Die
+                                                   einzelnen Threads eines Prozesses können untereinander auf ihre öffentlichen Daten
+                                                   zugreifen.
+                                                </p><a href="bilder/12_001.png" rel="lightbox" title="Windows zeigt im Task-Manager die Anzahl laufender Threads an."><img class="bild" border="1" src="bilderklein/klein12_001.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 12.1: </strong>Windows zeigt im Task-Manager die Anzahl laufender Threads an.
+                                                </p>
+                                                <p>Die Programmierung von Threads ist in Java einfach möglich, und die quasi parallel
+                                                   ablaufenden Aktivitäten geben dem Benutzer den Eindruck von Gleichzeitigkeit. In Java
+                                                   ist auch <span class="cbegriff">multithreaded</span><a class="indexterm" id="dodtpf0a4e623-af1f-4b22-ad54-7970982a0105"></a> Software möglich, wenn das Betriebssystem des Rechners keine Threads direkt verwendet.
+                                                   In diesem Fall simuliert die virtuelle Maschine die Parallelität, indem sie die Synchronisation
+                                                   und die verzahnte Ausführung regelt. Unterstützt das Betriebssystem Threads direkt,
+                                                   bildet die JVM die Thread-Verwaltung in der Regel auf das Betriebssystem ab. Dann
+                                                   haben wir es mit <span class="cbegriff">nativen Threads</span><a class="indexterm" id="dodtpf255dbda-b4f6-48dd-9537-a0b0a2bd1e14"></a> zu tun. Die 1:1-Abbildung ermöglicht eine einfache Verteilung auf Mehrprozessorsystemen,
+                                                   doch mit dem Nachteil, dass das Betriebssystem in den Threads auch Bibliotheksaufrufe
+                                                   ausführen kann, zum Beispiel, um das Ein- und Ausgabesystem zu verwenden oder für
+                                                   grafische Ausgaben. Damit dies ohne Probleme funktioniert, müssen die Bibliotheken
+                                                   jedoch thread-sicher sein. Damit hatten die Unix-Versionen in der Vergangenheit Probleme:
+                                                   Insbesondere die grafischen Standardbibliotheken <span class="cbegriff">X11</span> und <span class="cbegriff">Motif</span> waren lange nicht thread-sicher. Um schwerwiegenden Problemen mit grafischen Oberflächen
+                                                   aus dem Weg zu gehen, haben die Entwickler daher auf eine native Multithreading-Umgebung
+                                                   zunächst verzichtet.
+                                                </p>
+                                                <p>Ob die Laufzeitumgebung native Threads nutzt oder nicht, steht nicht in der Spezifikation
+                                                   der JVM. Auch die Sprachdefinition lässt bewusst die Art der Implementierung frei.
+                                                   Was die Sprache jedoch garantieren kann, ist die korrekt verzahnte Ausführung. Hier
+                                                   können Probleme auftreten, die Datenbankfreunde von Transaktionen her kennen. Es besteht
+                                                   die Gefahr konkurrierender Zugriffe auf gemeinsam genutzte Ressourcen. Um dies zu
+                                                   vermeiden, kann der Programmierer durch synchronisierte Programmblöcke einen gegenseitigen
+                                                   Ausschluss sicherstellen. Damit steigt aber auch die Gefahr von <a class="indexterm" id="dodtp6d561bf7-074c-40b6-9c04-f794c3861668"></a><span class="cbegriff">Verklemmungen</span> (engl. <a class="indexterm" id="dodtpb7ac500e-c7aa-4084-a3ae-7b5831d3d50c"></a><span class="cbegriff">deadlocks</span>), die der Entwickler selbst vermeiden muss.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6" name="dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6"></a><h3 class="t3"><span class="cfett">12.1.2</span><span class="cfett"> Wie parallele Programme die Geschwindigkeit steigern können</span><a href="#dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Auf den ersten Blick ist es nicht ersichtlich, warum auf einem Einprozessorsystem
+                                                   die nebenläufige Abarbeitung eines Programms geschwindigkeitssteigernd sein kann.
+                                                   Betrachten wir daher ein Programm, das eine Folge von Anweisungen ausführt. Die Programmsequenz
+                                                   dient zum Visualisieren eines Datenbank-Reports. Zunächst wird ein Fenster zur Fortschrittsanzeige
+                                                   dargestellt. Anschließend werden die Daten analysiert und der Fortschrittsbalken kontinuierlich
+                                                   aktualisiert. Schließlich werden die Ergebnisse in eine Datei geschrieben. Die Schritte
+                                                   sind:
+                                                </p>
+                                                <ol class="paufz">
+                                                   <li>Baue ein Fenster auf.</li>
+                                                   <li>Öffne die Datenbank vom Netz-Server, und lies die Datensätze.</li>
+                                                   <li>Analysiere die Daten, und visualisiere den Fortschritt.</li>
+                                                   <li>Öffne die Datei, und schreibe den erstellten Report.</li>
+                                                </ol>
+                                                <p>Was auf den ersten Blick wie ein typisches sequenzielles Programm aussieht, kann durch
+                                                   geschickte Parallelisierung beschleunigt werden.
+                                                </p>
+                                                <p>Damit dies besser zu verstehen ist, ziehen wir noch einmal den Vergleich mit Prozessen.
+                                                   Nehmen wir an, auf einer Einprozessormaschine sind fünf Benutzer angemeldet, die im
+                                                   Editor Quelltext tippen und hin und wieder den Java-Compiler bemühen. Die Benutzer
+                                                   bekämen vermutlich die Belastung des Systems durch die anderen nicht mit, denn Editor-Operationen
+                                                   lasten den Prozessor nicht aus. Wenn Dateien kompiliert und somit vom Hintergrundspeicher
+                                                   in den Hauptspeicher transferiert werden, ist der Prozessor schon besser ausgelastet,
+                                                   doch geschieht dies nicht regelmäßig. Im Idealfall übersetzen alle Benutzer nur dann,
+                                                   wenn die anderen gerade nicht übersetzen &#8211; im schlechtesten Fall möchten natürlich
+                                                   alle Benutzer gleichzeitig übersetzen.
+                                                </p>
+                                                <p>Übertragen wir die Verteilung auf unser Problem, nämlich wie der Datenbank-Report
+                                                   schneller zusammengestellt werden kann. Beginnen wir mit der Überlegung, welche Operationen
+                                                   parallel ausgeführt werden können:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Das Öffnen des Fensters der Ausgabedatei und das Öffnen der Datenbank kann parallel
+                                                      geschehen.
+                                                   </li>
+                                                   <li>Das Lesen neuer Datensätze und das Analysieren alter Daten kann gleichzeitig erfolgen.</li>
+                                                   <li>Alte analysierte Werte können während der neuen Analyse in die Datei geschrieben werden.</li>
+                                                </ul>
+                                                <p>Wenn die Operationen wirklich parallel ausgeführt werden, lässt sich bei Mehrprozessorsystemen
+                                                   ein enormer Leistungszuwachs verzeichnen. Doch interessanterweise ergibt sich dieser
+                                                   auch bei nur einem Prozessor, was in den Aufgaben begründet liegt. Denn bei den gleichzeitig
+                                                   auszuführenden Aufgaben handelt es sich um unterschiedliche Ressourcen. Wenn die grafische
+                                                   Oberfläche das Fenster aufbaut, braucht sie dazu natürlich Rechenzeit. Parallel kann
+                                                   die Datei geöffnet werden, wobei weniger Prozessorleistung gefragt ist, da die vergleichsweise
+                                                   träge Festplatte angesprochen wird. Das Öffnen der Datenbank wird auf den Datenbank-Server
+                                                   im Netzwerk abgewälzt. Die Geschwindigkeit hängt von der Belastung des Servers und
+                                                   des Netzes ab. Wenn anschließend die Daten gelesen werden, muss die Verbindung zum
+                                                   Datenbank-Server natürlich stehen. Daher sollten wir zuerst die Verbindung aufbauen.
+                                                </p>
+                                                <p>Ist die Verbindung hergestellt, lassen sich über das Netzwerk Daten in einen Puffer
+                                                   holen. Der Prozessor wird nicht belastet, vielmehr der Server auf der Gegenseite und
+                                                   das Netzwerk. Während der Prozessor also vor sich hin döst und sich langweilt, können
+                                                   wir ihn besser beschäftigen, indem er alte Daten analysiert. Wir verwenden hierfür
+                                                   zwei Puffer: In den einen lädt ein Thread die Daten, während ein zweiter Thread die
+                                                   Daten im anderen Puffer analysiert. Dann werden die Rollen der beiden Puffer getauscht.
+                                                   Jetzt ist der Prozessor beschäftigt. Er ist aber vermutlich fertig, bevor die neuen
+                                                   Daten über das Netzwerk eingetroffen sind. In der Zwischenzeit können die Report-Daten
+                                                   in den Report geschrieben werden; eine Aufgabe, die wieder die Festplatte belastet
+                                                   und weniger den Prozessor.
+                                                </p>
+                                                <p>Wir sehen an diesem Beispiel, dass durch hohe Parallelisierung eine Leistungssteigerung
+                                                   möglich ist, da die bei langsamen Operationen anfallenden Wartezeiten genutzt werden
+                                                   können. Langsame Arbeitsschritte lasten den Prozessor nicht aus, und die Wartezeit,
+                                                   die für den Prozessor beim Netzwerkzugriff auf eine Datenbank anfällt, kann für andere
+                                                   Aktivitäten genutzt werden. Die Tabelle gibt die Elemente zum Kombinieren noch einmal
+                                                   an:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 12.1: </strong>Parallelisierbare Ressourcen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Ressource</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Belastung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Hauptspeicherzugriffe
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Prozessor
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Dateioperationen
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Festplatte
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Datenbankzugriff
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Server, Netzwerkverbindung
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Das Beispiel macht auch deutlich, dass die Nebenläufigkeit gut geplant werden muss.
+                                                   Nur wenn verzahnte Aktivitäten unterschiedliche Ressourcen verwenden, resultiert daraus
+                                                   auf Einprozessorsystemen ein Geschwindigkeitsvorteil. Daher ist ein paralleler Sortieralgorithmus
+                                                   nicht sinnvoll. Das zweite Problem ist die zusätzliche Synchronisation, die das Programmieren
+                                                   erschwert. Wir müssen auf das Ergebnis einer Operation warten, damit wir mit der Bearbeitung
+                                                   fortfahren können.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397" name="dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397"></a><h3 class="t3"><span class="cfett">12.1.3</span><span class="cfett"> Was Java für Nebenläufigkeit alles bietet</span><a href="#dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Für nebenläufige Programme sieht die Java-Bibliothek eine Reihe von Klassen, Schnittstellen
+                                                   und Aufzählungen vor:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Thread</span>: Jeder laufende Thread ist ein Exemplar dieser Klasse.
+                                                   </li>
+                                                   <li><span class="clisting">Runnable</span>: Beschreibt den Programmcode, den die JVM parallel ausführen soll.
+                                                   </li>
+                                                   <li><span class="clisting">Lock</span>: Dient zum Markieren von kritischen Abschnitten, in denen sich nur ein Thread befinden
+                                                      darf.
+                                                   </li>
+                                                   <li><span class="clisting">Condition</span>: Threads können auf die Benachrichtigung anderer Threads warten.
+                                                   </li>
+                                                </ul><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_12_001.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="12 Einführung in die nebenläufige Programmierung"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_11_010.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_12_002.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

@@ -1,0 +1,1442 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 14 Einführung in grafische Oberflächen">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 14 Einführung in grafische Oberflächen">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 14 Einführung in grafische Oberflächen</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_14_008.html">
+      <link rel="next" href="javainsel_14_010.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_14_008.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_14_010.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f" class="navnav">14 Einführung in grafische Oberflächen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_001.html#dodtpf29ccd69-c1a8-4a25-a1dd-0789e54b2bdc" class="navnav">14.1 Das Abstract Window Toolkit und Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtpb0d0126f-2f46-40ed-9389-01f62e1c0510" class="navnav">14.1.1 SwingSet-Demos</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp8ff75415-81f4-400f-afdc-03336bc64e8a" class="navnav">14.1.2 Abstract Window Toolkit (AWT)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp3077a0fd-3dc0-4c4b-b0f6-daf7c5e668d6" class="navnav">14.1.3 Java Foundation Classes</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtpfdf30500-2b5d-4cfd-b4b4-79df2acda118" class="navnav">14.1.4 Was Swing von AWT unterscheidet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp91d15daa-bac0-4b1b-b6fd-9aba2f24aa5c" class="navnav">14.1.5 GUI-Builder für AWT und Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_002.html#dodtp4c5733e6-c831-48b7-a674-bd48ec0e106e" class="navnav">14.2 Mit NetBeans zur ersten Oberfläche</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp8a4d894c-c775-4b46-8dcc-7bffaf48d957" class="navnav">14.2.1 Projekt anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp1155308c-c723-4a45-8ffd-0aa9d84af9f9" class="navnav">14.2.2 Eine GUI-Klasse hinzufügen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp68e6c9c0-ca0c-406e-a129-b688d60eafce" class="navnav">14.2.3 Programm starten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtpc1c471df-9a9d-407c-bda0-c1781c9494c9" class="navnav">14.2.4 Grafische Oberfläche aufbauen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtpa72fc638-3cb0-4894-acc2-2420372f7103" class="navnav">14.2.5 Swing-Komponenten-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp0c4e90ea-aa0d-4a68-be80-31a660667cee" class="navnav">14.2.6 Funktionalität geben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_003.html#dodtp48864355-f737-4436-a801-f833bb327582" class="navnav">14.3 Fenster zur Welt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtp71b35874-9a33-40fc-abf4-afc4867e3afc" class="navnav">14.3.1 Swing-Fenster mit javax.swing.JFrame darstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtp0535f28c-71d9-44a0-9ab4-95aaf345e9d6" class="navnav">14.3.2 Fenster schließbar machen &#8211; setDefaultCloseOperation()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtpda7faeef-22d6-4bd5-b5fa-6ec44eafd8df" class="navnav">14.3.3 Sichtbarkeit des Fensters</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_004.html#dodtp34ff535c-eb2b-4a02-a4a7-b06dd37c748b" class="navnav">14.4 Beschriftungen (JLabel)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_005.html#dodtpa8fdd63d-84a2-43be-9553-ed6780ded680" class="navnav">14.5 Es tut sich was &#8211; Ereignisse beim AWT</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp9c4614ee-3e71-4567-9776-ff876a08774e" class="navnav">14.5.1 Die Ereignisquellen und Horcher (Listener) von Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp1d6fa71e-074a-4f93-81c8-32a260e133e7" class="navnav">14.5.2 Listener implementieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp26872927-bb2a-4a67-aedb-343bd310412d" class="navnav">14.5.3 Listener bei dem Ereignisauslöser anmelden/abmelden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5" class="navnav">14.5.4 Adapterklassen nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp0ae6beaa-6163-47a5-83f6-8641f9c3b53c" class="navnav">14.5.5 Innere Mitgliedsklassen und innere anonyme Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp886f6ac1-f6b2-46a1-8ef1-f76b8ac6d93d" class="navnav">14.5.6 Aufrufen der Listener im AWT-Event-Thread</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_006.html#dodtpca8d9baa-f1f1-4920-8525-bdd8f66cb4db" class="navnav">14.6 Schaltflächen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_006.html#dodtpc21c15c6-fc6e-4107-aa82-0bac60b49e97" class="navnav">14.6.1 Normale Schaltflächen (JButton)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_006.html#dodtpcc8190f9-581b-4075-9aec-4f3a9d55246f" class="navnav">14.6.2 Der aufmerksame ActionListener</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_007.html#dodtp169ef7d2-a82b-4140-b287-a4d0c1915451" class="navnav">14.7 Alles Auslegungssache: die Layoutmanager</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp0f983e10-db1d-4c26-ba3b-035f48db2c29" class="navnav">14.7.1 Übersicht über Layoutmanager</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp5b8a12e9-d669-4c08-a7ce-e04eed74b646" class="navnav">14.7.2 Zuweisen eines Layoutmanagers</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpf3dea9df-ffb3-4128-8cee-df1f13c2c2e4" class="navnav">14.7.3 Im Fluss mit FlowLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpc7c25a58-9f6b-4b8c-b6be-6cc67905c8e8" class="navnav">14.7.4 BoxLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpb13e5965-21c9-482b-a085-604cf069be45" class="navnav">14.7.5 Mit BorderLayout in alle Himmelsrichtungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp675a978e-0223-4fbe-ae77-a1fe8675422c" class="navnav">14.7.6 Rasteranordnung mit GridLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_008.html#dodtp82bf439f-faf5-4675-8791-b0dcf60f6152" class="navnav">14.8 Textkomponenten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_008.html#dodtp5005ddaa-a3d7-491e-96f3-c825220b076f" class="navnav">14.8.1 Text in einer Eingabezeile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_008.html#dodtp6db97806-1816-4de8-aba8-1ba22e5a7e0b" class="navnav">14.8.2 Die Oberklasse der Text-Komponenten (JTextComponent)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_009.html#dodtpf90d2b06-a426-4ac7-83fe-487008219c1d" class="navh">14.9 Zeichnen von grafischen Primitiven</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp6138deb2-13cb-4f22-8fab-87c81439b5a4" class="navh">14.9.1 Die paint()-Methode für das AWT-Frame</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb" class="navh">14.9.2 Die ereignisorientierte Programmierung ändert Fensterinhalte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp53722da4-d27c-4851-bc83-1be5169ebe3c" class="navh">14.9.3 Zeichnen von Inhalten auf ein JFrame</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtpc0b03be4-7b56-4600-96f8-b801de39fab3" class="navh">14.9.4 Linien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp7861dfee-8262-4c69-b10c-697c6da334cf" class="navh">14.9.5 Rechtecke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6" class="navh">14.9.6 Zeichenfolgen schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp0ba1e42a-c3ee-4137-bafc-662255c03646" class="navh">14.9.7 Die Font-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp4d65888f-7f98-4d43-8596-7aac41826b80" class="navh">14.9.8 Farben mit der Klasse Color</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_010.html#dodtp77920f06-5f37-4d98-91f6-738434469e3a" class="navnav">14.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf90d2b06-a426-4ac7-83fe-487008219c1d" name="dodtpf90d2b06-a426-4ac7-83fe-487008219c1d"></a><h2 class="t2"><span class="cfett">14.9</span><span class="cfett"> Zeichnen von grafischen Primitiven</span><a href="#dodtp6138deb2-13cb-4f22-8fab-87c81439b5a4"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Ist das Fenster geöffnet, lässt sich etwas in dem Fenster zeichnen. Da sich die Wege
+                                                   zwischen AWT und Swing trennen, wollen wir mit dem AWT beginnen und dann alle weiteren
+                                                   Beispiele mit Swing bestreiten.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6138deb2-13cb-4f22-8fab-87c81439b5a4" name="dodtp6138deb2-13cb-4f22-8fab-87c81439b5a4"></a><h3 class="t3"><span class="cfett">14.9.1</span><span class="cfett"> Die paint()-Methode für das AWT-Frame</span><a href="#dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf90d2b06-a426-4ac7-83fe-487008219c1d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Als einleitendes Beispiel soll uns genügen, einen Text zu platzieren. Dafür überschreiben
+                                                   wir die Methode <span class="clisting">paint()</span><a class="indexterm" id="dodtp94f28aaa-6796-4c1f-99e8-135d77d1aee6"></a> der Klasse <span class="clisting">Frame</span> und setzen dort alles hinein, was gezeichnet werden soll, etwa Linien, Texte oder
+                                                   gefüllte Polygone. Der gewünschte Inhalt wird immer dann gezeichnet, wenn das Fenster
+                                                   neu aufgebaut wird oder wir von außen <span class="clisting">repaint()</span> aufrufen, denn genau in diesem Fall wird das Grafiksystem <span class="clisting">paint()</span> aufrufen und das Zeichnen anstoßen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.15: </strong>com/tutego/insel/ui/graphics/Bee.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.graphics;<br><br>import java.awt.*;<br>import java.awt.event.*;<br><br>public class Bee extends Frame<br>{<br>  private static final long serialVersionUID = &#8211;3800165321162121122L;<br><br>  public Bee()<br>  {<br>    setSize( 500, 100 );<br><br>    addWindowListener( new WindowAdapter() {<br>      @Override<br>      public void windowClosing ( WindowEvent e ) { System.exit( 0 ); }<br>    } );<br>  }<br><br> <span class="cfett"> @Override</span><br> <span class="cfett"> public void paint( Graphics g )</span><br>  {<br>    g.drawString( "\"Maja, wo bist du?\" (Mittermeier)", 120, 60 );<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    new Bee().setVisible( true );<br>  }<br>}<br></pre></div><a href="bilder/14_048.png" rel="lightbox" title="Ein Fenster mit gezeichnetem Inhalt"><img class="bild" border="1" src="bilderklein/klein14_048.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.28: </strong>Ein Fenster mit gezeichnetem Inhalt
+                                                </p><a id="dodtp531e6477-8c63-4404-a945-13c0c34f74d0" name="dodtp531e6477-8c63-4404-a945-13c0c34f74d0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Grafikkontext Graphics</span></h4>
+                                                <p>Das Grafiksystem ruft von unserem Programm die <span class="clisting">paint()</span>-Methode auf und übergibt ein Objekt vom Typ <span class="clisting">Graphics</span><a class="indexterm" id="dodtp55ad052d-7fd7-4cf2-8b70-d241bd6a743f"></a> &#8211; beziehungsweise <span class="clisting">Graphics2D</span><a class="indexterm" id="dodtp18d99b44-8ca3-44b0-9f6b-ae5cb9543255"></a>, wie wir später sehen werden. Dieser Grafikkontext bietet verschiedene Methoden zum
+                                                   Setzen von Zeichenzuständen und zum Zeichnen selbst, etwa von Linien, Kreisen, Ovalen,
+                                                   Rechtecken, Zeichenfolgen oder Bildern. Dies funktioniert auch dann, wenn die Zeichenfläche
+                                                   nicht direkt sichtbar ist, wie bei Hintergrundgrafiken.
+                                                </p>
+                                                <p>Das <span class="clisting">Graphics</span>-Objekt führt Buch über mehrere Dinge:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>die Komponente, auf der gezeichnet wird (hier ist das erst einmal das rohe Fenster)</li>
+                                                   <li>Koordinaten des Bildbereichs und des Clipping-Bereichs. Die Zeichenoperationen außerhalb
+                                                      des Clipping-Bereichs werden nicht angezeigt. Daher wird ein Clipping-Bereich auch
+                                                      Beschnitt-Bereich genannt.
+                                                   </li>
+                                                   <li>den aktuellen <a class="indexterm" id="dodtp8317b936-af34-42e5-b2db-a91ba224108b"></a>Zeichensatz (<span class="clisting">java.awt.Font</span>) und die aktuelle Farbe (<span class="clisting">java.awt.Color</span>)
+                                                   </li>
+                                                   <li>die Pixeloperation (Xor<span class="footnote"><a id="dodtp26feca78-b1de-4392-9663-ede82a5b097c">[202](Zur Bewegung des Grafik-Cursors wird gern eine Xor-Operation eingesetzt. Obwohl dies absolut einfach
+erscheint, ist die Realisierungsidee patentiert.)</a></span><a class="indexterm" id="dodtp17feeac8-28a3-454c-8807-6b768d0e7d73"></a> oder Paint)
+                                                   </li>
+                                                   <li>die Translation &#8211; eine Verschiebung vom Nullpunkt</li>
+                                                </ul>
+                                                <p>Wir können nur in der <span class="clisting">paint()</span>-Methode auf das <span class="clisting">Graphics</span>-Objekt zugreifen. Diese wird immer dann aufgerufen, wenn die Komponente neu gezeichnet
+                                                   werden muss. Dies nutzen wir, um einen Text zu schreiben. Dem <span class="clisting">Bee</span>-Beispiel ist zu entnehmen, dass die Methode <span class="clisting">drawString(String text, int x, int y)</span> einen Text in den Zeichenbereich des Grafikkontexts schreibt. Im Folgenden werden
+                                                   wir noch weitere Methoden kennenlernen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Etwas ungewöhnlich ist die Tatsache, dass der Nullpunkt nicht oben links in den sichtbaren
+                                                               Bereich fällt, sondern dass die Titelleiste den Nullpunkt überdeckt. Um an die Höhe
+                                                               der Titelleiste zu kommen und die Zeichenoperationen so zu verschieben, dass sie in
+                                                               den sichtbaren Bereich fallen, wird ein <span class="clisting">java.awt.Insets</span>-Objekt benötigt. Ist <span class="clisting">f</span> ein <span class="clisting">Frame</span>-Objekt, liefert <span class="clisting">f.getInsets().top</span> die Höhe der Titelleiste.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb" name="dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb"></a><h3 class="t3"><span class="cfett">14.9.2</span><span class="cfett"> Die ereignisorientierte Programmierung ändert Fensterinhalte</span><a href="#dodtp53722da4-d27c-4851-bc83-1be5169ebe3c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp531e6477-8c63-4404-a945-13c0c34f74d0"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Einstieg in die Welt der Grafikprogrammierung mag etwas seltsam erscheinen, weil
+                                                   in der prozeduralen, nicht ereignisgesteuerten Welt die Programmierung anders verlief.
+                                                   Es gab einige Funktionen, mit denen sich direkt sichtbar auf dem Bildschirm operieren
+                                                   ließ. Ein Beispiel<span class="footnote"><a id="dodtp02640274-61e9-4bd7-a353-56710947031f">[203](Commodore 128 System Guide, Commodore Business Machines, Inc. 1985, online zugänglich unter
+http://members.tripod.com/~rvbelzen/c128sg/toc.htm.)</a></span> aus der C128-Zeit:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">10 COLOR 0,1                                       :REM SELECT BACKGROUND COLOR<br>20 COLOR 1,3                                       :REM SELECT FOREGROUND COLOR<br>30 COLOR 4,1                                       :REM SELECT BORDER COLOR<br>40 GRAPHIC 1,1                                     :REM SELECT BIT MAP MODE<br>60 CIRCLE 1,160,100,40,40                          :REM DRAW A CIRCLE<br>70 COLOR 1,6                                       :REM CHANGE FOREGROUND COLOR<br>80 BOX 1,20,60,100,140,0,1                         :REM DRAW A BLOCK<br>90 COLOR 1,9                                       :REM CHANGE FOREGROUND COLOR<br>100 BOX 1,220,62,300,140,0,0                       :REM DRAW A BOX<br>110 COLOR 1,9                                      :REM CHANGE FOREGROUND COLOR<br>120 DRAW 1,20,180 TO 300,180                       :REM DRAW A LINE<br>130 DRAW 1,250,0 TO 30,0 TO 40,40 TO 250,0         :REM DRAW A TRIANGLE<br>140 COLOR 1,15                                     :REM CHANGE FOREGROUND COLOR<br>150 DRAW 1,160,160                                 :REM DRAW A POINT<br>160 PAINT 1,150,97                                 :REM PAINT IN CIRCLE<br>170 COLOR 1,5                                      :REM CHANGE FOREGROUND COLOR<br>180 PAINT 1,50,25                                  :REM PAINT IN TRIANGLE<br>190 COLOR 1,7                                      :REM CHANGE FOREGROUND COLOR<br>200 PAINT 1,225,125                                :REM PAINT IN EMPTY BOX<br>210 COLOR 1,11                                     :REM CHANGE FOREGROUND COLOR<br>220 CHAR 1,11,24,"GRAPHIC EXAMPLE"                 :REM DISPLAY TEXT<br>230 FOR I=1 TO 5000:NEXT:GRAPHIC 0,1:COLOR 1,2<br></pre></div>
+                                                <p>Diese Vorgehensweise funktioniert in Java (und auch in vielen modernen Systemen) nicht
+                                                   mehr. Auch mit Objektorientierung hat sie nicht viel zu tun!
+                                                </p>
+                                                <p>In Java führt ein Repaint-Ereignis zum Aufruf der <span class="clisting">paint()</span>-Methode. Dieses Ereignis kann ausgelöst werden, wenn der Bildschirm zum ersten Mal
+                                                   gezeichnet wird, aber auch, wenn Teile des Bildschirms verdeckt werden. Falls das
+                                                   Repaint-Ereignis eintritt, springt das Java-System in die <span class="clisting">paint()</span>-Methode, in der der Bildschirm aufgebaut werden kann. Nur dort finden die Zeichenoperationen
+                                                   statt. Wenn wir nun selbst etwas zeichnen wollen, kann das nur in der <span class="clisting">paint()</span>-Methode geschehen, beziehungsweise in Methoden, die von <span class="clisting">paint()</span> aufgerufen werden. Wenn wir aber selbst etwas zeichnen wollen, wie lässt sich <span class="clisting">paint()</span> dann parametrisieren?
+                                                </p>
+                                                <p>Um mit diesem Problem umzugehen, müssen wir der <span class="clisting">paint()</span>-Methode Informationen mitgeben. Diese Informationen kann <span class="clisting">paint()</span> nur aus den Objektattributen beziehen. Daher implementieren wir eine Unterklasse
+                                                   einer Komponente, die eine <span class="clisting">paint()</span>-Methode besitzt. Anschließend können wir Objektzustände ändern, sodass <span class="clisting">paint()</span> neue Werte bekommt und somit gewünschte Inhalte zeichnen kann.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp53722da4-d27c-4851-bc83-1be5169ebe3c" name="dodtp53722da4-d27c-4851-bc83-1be5169ebe3c"></a><h3 class="t3"><span class="cfett">14.9.3</span><span class="cfett"> Zeichnen von Inhalten auf ein JFrame</span><a href="#dodtpc0b03be4-7b56-4600-96f8-b801de39fab3"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wenn Swing eine Komponente zeichnet, ruft es automatisch die Methode <span class="clisting">paint()</span> auf. Um eine Grafik selbst in ein Fenster zu zeichnen, ließe sich von <span class="clisting">JFrame</span><a class="indexterm" id="dodtp1a858094-a17e-482e-8939-69a243ed5c34"></a> eine Unterklasse bilden und <span class="clisting">paint()</span> überschreiben &#8211; das ist jedoch nicht der übliche Weg.
+                                                </p>
+                                                <p>Stattdessen wählen wir einen anderen Ansatz, der sogar unter AWT eine gute Lösung
+                                                   ist. Wir bilden eine eigene Komponente, eine Unterklasse von <span class="clisting">JPanel</span> (unter AWT <span class="clisting">Panel</span>, was wir aber nicht mehr weiter verfolgen wollen), und setzen diese auf das Fenster.
+                                                   Wird das Fenster neu gezeichnet, gibt das Grafiksystem den Zeichenauftrag an die Kinder
+                                                   weiter, also an unser spezielles <span class="clisting">JPanel</span>, und ruft die überschriebene <span class="clisting">paint()</span>-Methode auf. Allerdings überschreiben eigene Unterklassen von Swing-Komponenten im
+                                                   Regelfall nicht <span class="clisting">paint()</span>, sondern <span class="clisting">paintComponent()</span><a class="indexterm" id="dodtp8dd2dc64-cfa8-4ec3-9bdd-e6a16b840a84"></a>. Das liegt daran, dass Swing in <span class="clisting">paint()</span> zum Beispiel noch Rahmen zeichnet und sich um eine Pufferung des Bildschirminhalts
+                                                   zur Optimierung kümmert. So ruft <span class="clisting">paint()</span> die drei Methoden <span class="clisting">paintComponent()</span>, <span class="clisting">paintBorder()</span> und <span class="clisting">paintChildren()</span> auf, und bei einer Neudarstellung kümmert sich ein <span class="clisting">RepaintManager</span> um eine zügige Darstellung mithilfe der gepufferten Inhalte, was bei normalen Swing-Interaktionskomponenten
+                                                   wie Schaltflächen wichtig ist.
+                                                </p>
+                                                <p>Damit ist die Darstellung von Inhalten in einem <span class="clisting">JFrame</span> einfach. Wir importieren drei Klassen, <span class="clisting">JPanel</span> und <span class="clisting">JFrame</span> aus <span class="clisting">javax.swing</span> sowie <span class="clisting">Graphics</span> aus <span class="clisting">java.awt</span>. Dann bilden wir eine Unterklasse von <span class="clisting">JPanel</span> und überschreiben <span class="clisting">paintComponent()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.16: </strong>com/tutego/insel/ui/graphics/DrawFirstLine.java, Teil 1
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.graphics;<br><br>import java.awt.Graphics;<br>import javax.swing.*;<br><br>class DrawPanel extends JPanel<br>{<br>  @Override<br> <span class="cfett"> protected void paintComponent( Graphics g )</span><br>  {<br>    super.paintComponent( g );<br>    g.drawLine( 10, 10, 100, 50 );<br>  }<br>}<br></pre></div>
+                                                <p>Die Methode <span class="clisting">paintComponent()</span> besitzt in der Oberklasse die Sichtbarkeit <span class="clisting">protected</span>, was wir beibehalten sollten; die Methode wird nicht von uns von anderer Stelle aufgerufen,
+                                                   daher muss eine Unterklasse die Sichtbarkeit nicht zu <span class="clisting">public</span> erweitern. Der Aufruf von <span class="clisting">super.paintComponent()</span> ist immer dann angebracht, wenn die Oberklasse ihre Inhalte zeichnen soll. Bei vollständig
+                                                   eigenem Inhalt ist das nicht notwendig.
+                                                </p>
+                                                <p>Der letzte Schritt ist ein Testprogramm, das ein Exemplar des spezialisierten <span class="clisting">JPanel</span> bildet und auf den <span class="clisting">JFrame</span> setzt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.17: </strong>com/tutego/insel/ui/graphics/DrawFirstLine.java, Teil 2
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class DrawFirstLine<br>{<br>  public static void main( String[] args )<br>  {<br>    JFrame f = new JFrame();<br>    f.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );<br>    f.setSize( 100, 100 );<br>   <span class="cfett"> f.add( new DrawPanel() );</span><br>    f.setVisible( true );<br>  }<br>}<br></pre></div>
+                                                <p>Die Lösung mit dem <span class="clisting">JPanel</span> muss nicht die Höhe der Titelleiste berücksichtigen; die Komponente <span class="clisting">JPanel</span>, die auf das Fenster gesetzt wird, befindet sich korrekt unterhalb der Titelleiste,
+                                                   und die Zeichenfläche liegt nicht verdeckt unter der Titelleiste.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc0b03be4-7b56-4600-96f8-b801de39fab3" name="dodtpc0b03be4-7b56-4600-96f8-b801de39fab3"></a><h3 class="t3"><span class="cfett">14.9.4</span><span class="cfett"> Linien</span><a href="#dodtp7861dfee-8262-4c69-b10c-697c6da334cf"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp53722da4-d27c-4851-bc83-1be5169ebe3c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Bei Linien müssen wir uns von der Vorstellung trennen, die uns die analytische Geometrie
+                                                   nahelegt. Laut Euklid ist dort eine Linie als kürzeste Verbindung zwischen zwei Punkten
+                                                   definiert. Da Linien eindimensional sind, besitzen sie eine Länge aus unendlich vielen
+                                                   Punkten, doch keine wirkliche Breite. Auf dem Bildschirm besteht eine Linie nur aus
+                                                   endlich vielen Punkten, und wenn eine Linie gezeichnet wird, werden Pixel gesetzt,
+                                                   die nahe an der wirklichen Linie sind. Die Punkte müssen passend in ein Raster gesetzt
+                                                   werden, und so kommt es vor, dass die Linie in Stücke zerbrochen wird. Dieses Problem
+                                                   gibt es bei allen grafischen Operationen, da von Fließkommawerten eine Abbildung auf
+                                                   Ganzzahlen, in unserem Fall absolute Koordinaten des Bildschirms, durchgeführt werden
+                                                   muss. Eine bessere Darstellung der Linien und Kurven ist durch Antialiasing<a class="indexterm" id="dodtp9d0601b3-8e30-4d0a-8b1c-a1e145e93ef6"></a> zu erreichen. Dies ist eine Art Weichzeichnung<a class="indexterm" id="dodtpef8d045c-f61a-4bd4-b427-2b1544384eb1"></a> mit nicht nur einer Farbe, sondern mit Abstufungen, sodass die Qualität auf dem Bildschirm
+                                                   wesentlich besser ist. Auch bei Zeichensätzen ist dadurch eine merkliche Verbesserung
+                                                   der Lesbarkeit auf dem Bildschirm zu erzielen.
+                                                </p>
+                                                <p>Die Methode <span class="clisting">drawLine()</span> wurde schon im ersten Beispiel vorgestellt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.awt.<span class="cfett">Graphics</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract void drawLine</span><a class="indexterm" id="dodtp1c1e4afe-7ee5-4f00-bb0b-fc74c6dd918b"></a><span class="clisting">(int x1, int y1, int x2, int y2)</span><br>Zeichnet eine Linie zwischen den Koordinaten (<span class="clisting">x1</span>,<span class="clisting">y1</span>) und (<span class="clisting">x2</span>,<span class="clisting">y2</span>) in der Vordergrundfarbe.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Setze einen Punkt an die Stelle (x,y):
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">g.drawLine( x, y, x, y );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp7861dfee-8262-4c69-b10c-697c6da334cf" name="dodtp7861dfee-8262-4c69-b10c-697c6da334cf"></a><h3 class="t3"><span class="cfett">14.9.5</span><span class="cfett"> Rechtecke</span><a href="#dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc0b03be4-7b56-4600-96f8-b801de39fab3"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Als Nächstes werfen wir einen Blick auf die Methoden, die uns Rechtecke zeichnen lassen.
+                                                   Die Rückgabe ist &#8211; wie auch bei den anderen Zeichenmethoden &#8211; immer <span class="clisting">void</span>. Es ist nicht so, dass die Methoden durch einen Wahrheitswert mitteilen, ob ein tatsächlicher
+                                                   Zeichenbereich gefüllt werden konnte. Liegen die Koordinaten des zu zeichnenden Objekts
+                                                   nicht im Sichtfenster, geschieht einfach gar nichts. Die Zeichenmethode ist nicht
+                                                   in der Lage, dies dem Aufrufer in irgendeiner Form mitzuteilen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.awt.<span class="cfett">Graphics</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void drawRect(int x, int y, int width, int height)</span><br>Zeichnet ein Rechteck in der Vordergrundfarbe. Das Rechteck ist <span class="clisting">width</span> + 1 Pixel breit und <span class="clisting">height</span> + 1 Pixel hoch.
+                                                   </li>
+                                                   <li><span class="clisting">void abstract fillRect(int x, int y, int width, int height)</span><br>Zeichnet ein gefülltes Rechteck in der Vordergrundfarbe. Das Rechteck ist <span class="clisting">width</span> Pixel breit und <span class="clisting">height</span> Pixel hoch.
+                                                   </li>
+                                                   <li><span class="clisting">void abstract drawRoundRect(int x, y, int width, height, int arcWidth, arcHeight)</span><br>Zeichnet ein abgerundetes Rechteck in der Vordergrundfarbe. Das Rechteck ist <span class="clisting">width</span> + 1 Pixel breit und <span class="clisting">height</span> + 1 Pixel hoch. <span class="clisting">arcWidth</span> gibt den horizontalen und <span class="clisting">arcHeight</span> den vertikalen Durchmesser der Kreisbögen der Ränder an.
+                                                   </li>
+                                                   <li><span class="clisting">void abstract fillRoundRect(int x, y, int width, height,int arcWidth, arcHeight)</span><br>Zeichnet wie <span class="clisting">drawRoundRect()</span>, nur gefüllt.
+                                                   </li>
+                                                   <li><span class="clisting">void draw3DRect(int x, int y, int width, int height, boolean raised)</span><br>Zeichnet ein dreidimensional angedeutetes Rechteck in der Vordergrundfarbe. Der Parameter
+                                                      <span class="clisting">raised</span> gibt an, ob das Rechteck optisch erhöht oder vertieft wirken soll. Die Farben für
+                                                      den Effekt werden aus den Vordergrundfarben gewonnen.
+                                                   </li>
+                                                   <li><span class="clisting">void fill3DRect(int x, int y, int width, int height, boolean raised)</span><br>Zeichnet wie <span class="clisting">draw3Drect()</span>, nur gefüllt.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Breiten der Rechtecke bei den Methoden <span class="clisting">drawRect()</span> und <span class="clisting">fillRect()</span> unterscheiden sich. <span class="clisting">drawRect(0, 0, 10, 10)</span> zeichnet ein 11 × 11 Pixel breites Rechteck, und <span class="clisting">fillRect(0, 0, 10, 10)</span> zeichnet ein 10 × 10 Pixel breites Rechteck.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/14_049.png" rel="lightbox" title="Beispiel für drawRoundRect()"><img class="bild" border="1" src="bilderklein/klein14_049.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.29: </strong>Beispiel für drawRoundRect()
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6" name="dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6"></a><h3 class="t3"><span class="cfett">14.9.6</span><span class="cfett"> Zeichenfolgen schreiben</span><a href="#dodtp0ba1e42a-c3ee-4137-bafc-662255c03646"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp7861dfee-8262-4c69-b10c-697c6da334cf"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Methode <span class="clisting">drawString()</span><a class="indexterm" id="dodtp36ca1172-a939-4bd0-ae24-f6437c99cfcf"></a> bringt eine Unicode-Zeichenkette mit sogenannten Glyphen<a class="indexterm" id="dodtp0f8d6a1f-2a7b-4653-abae-a1d8d76efd85"></a>, das sind konkrete grafische Darstellungen eines Zeichens, auf den Bildschirm &#8211; die
+                                                   Darstellung von Zeichen übernimmt in Java der Font-Renderer.
+                                                </p><a href="bilder/14_050.png" rel="lightbox" title="Koordinatenangaben von drawString() und drawRect() im Vergleich"><img class="bild" border="1" src="bilderklein/klein14_050.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.30: </strong>Koordinatenangaben von drawString() und drawRect() im Vergleich
+                                                </p>
+                                                <p>Die Parameter von <span class="clisting">drawString()</span> beschreiben die zu schreibende Zeichenkette sowie die x- und y-Koordinaten. Die Koordinaten
+                                                   bestimmen die Position der Schriftlinie<a class="indexterm" id="dodtp5b7cf06a-936c-4c3e-849d-00a2ed76bc6a"></a> &#8211; auch Grundlinie<a class="indexterm" id="dodtp1f944b35-14f3-44bc-9506-ed2972188945"></a> genannt (engl. baseline)<a class="indexterm" id="dodtp6e0ec0a7-25df-426a-a432-c682f3065772"></a> &#8211;, auf der die Buchstaben stehen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.awt.<span class="cfett">Graphics</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract void drawString(String s, int x, int y)</span><br>Schreibt einen String in der aktuellen Farbe und dem aktuellen Zeichensatz.
+                                                   </li>
+                                                   <li><span class="clisting">abstract void drawString(AttributedCharacterIterator iterator, int x, int y)</span><br>Schreibt einen String, der durch den Attribut-Iterator gegeben ist.
+                                                   </li>
+                                                   <li><span class="clisting">abstract void drawChars(char[] data, int offset, int length, int x, int y)</span></li>
+                                                   <li><span class="clisting">abstract void drawBytes(byte[] data, int offset, int length, int x, int y)</span><br>Schreibt die Zeichenkette und bezieht die Daten aus einem Char- bzw. Byte-Feld.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Klasse <span class="clisting">TextLayout</span> bietet weitergehende Möglichkeiten, etwa Farbhervorhebung, Cursor-Funktionalität
+                                                               oder über <span class="clisting">TextHitInfo</span> Tests, welches Zeichen sich an welcher Koordinate befindet, was bei Mausklicks nützlich
+                                                               ist. Ein <span class="clisting">draw()</span> vom <span class="clisting">TextLayout</span> bringt den Textbaustein auf den Schirm. Die Dokumentation listet etwas Quellcode
+                                                               zur Verdeutlichung auf.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0ba1e42a-c3ee-4137-bafc-662255c03646" name="dodtp0ba1e42a-c3ee-4137-bafc-662255c03646"></a><h3 class="t3"><span class="cfett">14.9.7</span><span class="cfett"> Die Font-Klasse</span><a href="#dodtp4d65888f-7f98-4d43-8596-7aac41826b80"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Methode <span class="clisting">drawString()</span> verwendet immer den aktuellen Zeichensatz. Um diesen zu ändern, benutzen wir auf
+                                                   dem aktuellen <span class="clisting">Graphics</span>-Objekt die Methode <span class="clisting">setFont()</span><a class="indexterm" id="dodtp8e2bf1ea-9eac-4a5d-86c6-a410f43edd74"></a>. Der Übergabeparameter ist ein <span class="clisting">Font</span><a class="indexterm" id="dodtp304f7a30-9f6f-4e07-9f8a-086dc4e83907"></a>-Objekt, das wir von woanders erfragen oder vorher erzeugen müssen.
+                                                </p><a href="bilder/14_051.png" rel="lightbox" title="UML-Diagramm der Klasse Font"><img class="bild" border="1" src="bilderklein/klein14_051.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.31: </strong>UML-Diagramm der Klasse Font
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.awt.<span class="cfett">Font</span><br>implements Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Font(String name, int style, int size)</span><br>Erzeugt ein <span class="clisting">Font</span>-Objekt mit einem gegebenen Namen, einem gegebenen Stil und einer gegebenen Größe.
+                                                   </li>
+                                                </ul>
+                                                <p>Für den Stil deklariert die <span class="clisting">Font</span>-Klasse drei symbolische Konstanten: <span class="clisting">Font.PLAIN</span> sowie <span class="clisting">Font.ITALIC</span> und <span class="clisting">Font.BOLD</span>, sodass keine Ganzzahlen als Argumente zu übertragen sind. Die Stil-Attribute können
+                                                   mit dem binären Oder oder dem arithmetischen Plus verbunden werden; ein fetter und
+                                                   kursiver Zeichensatz erreicht <span class="clisting">Font.BOLD | Font.ITALIC</span> (beziehungsweise <span class="clisting">Font.BOLD + Font.ITALIC</span>). Die Größe ist in Punkt angegeben, wobei ein Punkt 1/72 Zoll (in etwa 0,376 mm)
+                                                   entspricht. Der Name des Zeichensatzes ist entweder physikalisch (zum Beispiel »Verdana«
+                                                   oder »Geneva«) oder logisch mit <span class="clisting">Font</span>-Konstanten <span class="clisting">DIALOG</span>, <span class="clisting">DIALOG_INPUT</span>, <span class="clisting">SANS_SERIF</span>, <span class="clisting">SERIF</span> und <span class="clisting">MONOSPACED</span>, die später auf die physikalischen Font-Namen übertragen werden.<span class="footnote"><a id="dodtpcd0a33ef-878c-44c3-bbea-aaac1e660cdf">[204](Die Webseite http://java.sun.com/javase/7/docs/technotes/guides/intl/fontconfig.html beschreibt
+diese Umsetzung.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein <span class="clisting">Font</span>-Objekt erzeugen:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Font f = new Font( Font.SERIF, Font.PLAIN, 14 );<br></pre></div>
+                                                               Häufig wird dieses Zeichensatz-Objekt sofort in <span class="clisting">setFont()</span> genutzt, so wie:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">setFont( new Font( "Verdana", Font.BOLD, 20 ) );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Dokumentation spricht zwar von »Punkt«, in Java sind aber Punkt und Pixel bisher
+                                                               identisch. Würde das Grafiksystem wirklich in Punkt arbeiten, müsste es die Bildschirmauflösung
+                                                               und den Monitor mit berücksichtigen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Ist im Programm der aktuell verwendete Zeichensatz nötig, können wir <span class="clisting">getFont()</span> von der <span class="clisting">Graphics</span>-Klasse verwenden:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.awt.<span class="cfett">Graphics</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract Font getFont()</span><br>Liefert den aktuellen Zeichensatz.
+                                                   </li>
+                                                   <li><span class="clisting">abstract Font setFont(Font f)</span><br>Setzt den Zeichensatz für das <span class="clisting">Graphics</span>-Objekt.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4d65888f-7f98-4d43-8596-7aac41826b80" name="dodtp4d65888f-7f98-4d43-8596-7aac41826b80"></a><h3 class="t3"><span class="cfett">14.9.8</span><span class="cfett"> Farben mit der Klasse Color</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp0ba1e42a-c3ee-4137-bafc-662255c03646"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp5f49aa5a-2dcc-4582-ba6d-6037443dd471"></a>Der Einsatz von Farben und Transparenzen ist in Java-Programmen dank der Klasse <span class="clisting">java.awt.Color</span><a class="indexterm" id="dodtpfbdbcb9d-499c-4165-b5e3-774fa32d9a49"></a> einfach. Ein <span class="clisting">Color</span>-Objekt repräsentiert üblicherweise einen Wert aus dem sRGB-Farbraum (Standard-RGB),
+                                                   kann aber auch andere Farbräume über den Basistyp <span class="clisting">java.awt.color.ColorSpace</span> darstellen (wir werden das nicht weiter verfolgen).
+                                                </p>
+                                                <p>Die Klasse <span class="clisting">Color</span> stellt Konstanten für Standard-Farben und einige Konstruktoren sowie Anfragemethoden
+                                                   bereit. Außerdem gibt es Methoden, die abgewandelte <span class="clisting">Color</span>-Objekte liefern &#8211; das ist nötig, da <span class="clisting">Color</span>-Objekte wie <span class="clisting">String</span> oder <span class="clisting">File</span> immutable sind.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.awt.<span class="cfett">Color</span><br>implements Paint, Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">Color(float r, float g, float b)</span><br>Erzeugt ein <span class="clisting">Color</span>-Objekt mit den Grundfarben Rot, Grün und Blau. Die Werte müssen im Bereich 0.0 bis
+                                                      1.0 liegen, sonst folgt eine <span class="clisting">IllegalArgumentException</span>.
+                                                   </li>
+                                                   <li><span class="clisting">Color(int r, int g, int b)</span><br>Erzeugt ein <span class="clisting">Color</span>-Objekt mit den Grundfarben Rot, Grün und Blau. Die Werte müssen im Bereich 0 bis
+                                                      255 liegen, sonst folgt eine <span class="clisting">IllegalArgumentException</span>.
+                                                   </li>
+                                                   <li><span class="clisting">Color(int rgb)</span><br>Erzeugt ein <span class="clisting">Color</span>-Objekt aus dem <span class="clisting">rgb</span>-Wert, der die Farben Rot, Grün und Blau kodiert. Der Rotanteil befindet sich unter
+                                                      den Bits 16 bis 23, der Grünanteil in 8 bis 15 und der Blauanteil in 0 bis 7. Da ein
+                                                      Integer immer 32 Bit breit ist, ist jede Farbe durch 1 Byte (8 Bit) repräsentiert.
+                                                      Die Farbinformationen werden nur aus den 24 Bit genommen. Sonstige Werte werden einfach
+                                                      nicht betrachtet und mit einem Alpha-Wert gleich 255 überschrieben.
+                                                   </li>
+                                                   <li><span class="clisting">Color(int r, int g, int b, int a)</span></li>
+                                                   <li><span class="clisting">Color(float r, float g, float b, float a)</span><br>Erzeugt ein <span class="clisting">Color</span>-Objekt mit Alpha-Wert für Transparenz.
+                                                   </li>
+                                                   <li><span class="clisting">static Color decode(String nm) throws NumberFormatException</span><br>Liefert die Farbe von <span class="clisting">nm</span>. Die Zeichenkette ist hexadezimal als 24-Bit-Integer kodiert, etwa <span class="clisting">#00AAFF</span>. Eine Alternative ist <span class="clisting">new Color(Integer.parseInt(colorHexString, 16));</span>.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Menschen unterscheiden Farben an den drei Eigenschaften Farbton, Helligkeit und Sättigung.
+                                                               Die menschliche Farbwahrnehmung kann etwa zweihundert Farbtöne unterscheiden. Diese
+                                                               werden durch die Wellenlänge des Lichts bestimmt. Die Lichtintensität und Empfindlichkeit
+                                                               unserer Rezeptoren lässt uns etwa fünfhundert Helligkeitsstufen unterscheiden. Bei
+                                                               der Sättigung handelt es sich um eine Mischung mit weißem Licht. Hier erkennen wir
+                                                               etwa zwanzig Stufen. Unser visuelles System kann somit ungefähr zwei Millionen (200
+                                                               × 500 × 20) Farbnuancen unterscheiden.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp7f23133b-5b34-49db-b96e-233b2ccb02b0" name="dodtp7f23133b-5b34-49db-b96e-233b2ccb02b0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zufällige Farbblöcke zeichnen</span></h4>
+                                                <p>Um die Möglichkeiten der Farbgestaltung einmal zu beobachten, betrachten wir die Ausgabe
+                                                   eines Programms, das Rechtecke mit wahllosen Farben anzeigt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.18: </strong>com/tutego/insel/ui/graphics/ColorBox.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.graphics;<br><br>import java.awt.*;<br>import java.util.Random;<br>import javax.swing.*;<br><br>public class ColorBox extends JPanel<br>{<br>  private static final long serialVersionUID = &#8211;2294685016438617741L;<br>  private static final Random r = new Random();<br><br>  @Override<br>  protected void paintComponent( Graphics g )<br>  {<br>    super.paintComponent( g );<br><br>    for ( int y = 12; y &lt; getHeight() &#8211; 25; y += 30 )<br>      for ( int x = 12; x &lt; getWidth() &#8211; 25; x += 30 )<br>      {<br>        g.setColor( new Color( r.nextInt(256), r.nextInt(256), r.nextInt(256) ) );<br>        g.fillRect( x, y, 25, 25 );<br>        g.setColor( Color.BLACK );<br>        g.drawRect( x &#8211; 1, y &#8211; 1, 25, 25 );<br>      }<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    JFrame f = new JFrame( "Neoplastizismus" );<br>    f.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );<br>    f.setSize( 300, 300 );<br>    f.add( new ColorBox() );<br>    f.setVisible( true );<br>  }<br>}<br></pre></div><a href="bilder/14_052.png" rel="lightbox" title="Programmierter Neoplastizismus"><img class="bild" border="1" src="bilderklein/klein14_052.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.32: </strong>Programmierter Neoplastizismus
+                                                </p>
+                                                <p>Das Fenster der Applikation hat eine gewisse Größe, die wir mit <span class="clisting">size()</span> in der Höhe und Breite abfragen. Anschließend erzeugen wir Blöcke, die mit einer
+                                                   zufälligen Farbe gefüllt sind. <span class="clisting">fillRect()</span> übernimmt diese Aufgabe. Da die gefüllten Rechtecke immer in der Vordergrundfarbe
+                                                   gezeichnet werden, setzen wir den Zeichenstift durch die Methode <span class="clisting">setColor()</span>, die natürlich eine Objektmethode von <span class="clisting">Graphics</span> ist. Entsprechend gibt es eine korrespondierende Methode <span class="clisting">getColor()</span>, die die aktuelle Vordergrundfarbe als <span class="clisting">Color</span>-Objekt zurückgibt (diese Methode darf nicht mit den beiden Methoden aus der <span class="clisting">Color</span>-Klasse <span class="clisting">getColor(String)</span> beziehungsweise <span class="clisting">getColor(String, Color)</span> verwechselt werden).
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.awt.<span class="cfett">Graphics</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract void setColor(Color c)</span><br>Setzt die aktuelle Farbe, die dann von den Zeichenmethoden berücksichtigt wird.
+                                                   </li>
+                                                   <li><span class="clisting">abstract Color getColor()</span><br>Liefert die aktuelle Farbe.
+                                                   </li>
+                                                </ul><a id="dodtpd6595474-1cd6-4153-bc90-56da6031c03c" name="dodtpd6595474-1cd6-4153-bc90-56da6031c03c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Vordefinierte Farben</span></h4>
+                                                <p>Wenn wir Farben benutzen wollen, sind schon viele Werte vordefiniert, wie <span class="clisting">Color.WHITE</span><a class="indexterm" id="dodtp1f100ef8-00d7-416e-93ee-fadd5a9e359c"></a>. In der Klasse <span class="clisting">jawa.awt.Color</span> sind dazu viele Zeilen der Form
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">/**<br> * The color white.<br> */<br>public  static final Color WHITE = new Color( 255, 255, 255 );<br></pre></div>
+                                                <p>platziert.</p>
+                                                <p>Die folgende Tabelle zeigt die deklarierten Konstanten inklusive Wertebelegung für
+                                                   die Farbtupel:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 14.2: </strong>Farbanteile für die vordefinierten Standardfarben
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Color-Konstante</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Rot</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Grün</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Blau</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">WHITE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BLACK</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">RED</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">GREEN</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BLUE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">YELLOW</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MAGENTA</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CYAN</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">PINK</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">175
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">175
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">ORANGE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">255
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">200
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">LIGHT_GRAY</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">192
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">192
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">192
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DARK_GRAY</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">64
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">64
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">64
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Alle Farbnamen gibt es auch kleingeschrieben. Zwar stammt von Sun die Namenskonvention,
+                                                   dass Konstanten großgeschrieben werden, aber bei den Farbnamen wurde das erst in Java
+                                                   1.4 nachgeholt &#8211; sieben Jahre später.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_14_009.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="14 Einführung in grafische Oberflächen"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_14_008.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_14_010.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

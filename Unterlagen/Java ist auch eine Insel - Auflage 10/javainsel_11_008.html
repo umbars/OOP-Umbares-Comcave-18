@@ -1,0 +1,943 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 11 Die Klassenbibliothek">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_11_007.html">
+      <link rel="next" href="javainsel_11_009.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_11_007.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_11_009.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba" class="navnav">11 Die Klassenbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_001.html#dodtpa7c7bd4d-e2e2-46f4-b68b-5533fa719dec" class="navnav">11.1 Die Java-Klassenphilosophie</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_001.html#dodtpe90b9eba-dba7-4ad9-810c-21ef082c46d1" class="navnav">11.1.1 Übersicht über die Pakete der Standardbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_002.html#dodtpf5ec6ccf-0e5e-44bd-9bd5-ed133fdc86b2" class="navnav">11.2 Sprachen der Länder</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_002.html#dodtp914af375-7296-45f3-8c45-78fa236688d8" class="navnav">11.2.1 Sprachen und Regionen über Locale-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_003.html#dodtp968d2a6d-cefe-4ef3-b104-4084533c97dc" class="navnav">11.3 Die Klasse Date</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtp0c1b3bab-2510-4085-a6d5-9ec03d6acc47" class="navnav">11.3.1 Objekte erzeugen und Methoden nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtpf38df6e6-6780-4f02-8d9e-31b093e56aa9" class="navnav">11.3.2 Date-Objekte sind nicht immutable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_004.html#dodtpa10273ff-c004-41f5-a534-9b7bad167d19" class="navnav">11.4 Calendar und GregorianCalendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e" class="navnav">11.4.1 Die abstrakte Klasse Calendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp23377a98-0a59-470e-a819-5ab460c72cfc" class="navnav">11.4.2 Der gregorianische Kalender</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f" class="navnav">11.4.3 Calendar nach Date und Millisekunden fragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84" class="navnav">11.4.4 Abfragen und Setzen von Datumselementen über Feldbezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_005.html#dodtpaac94bba-c062-4ffe-b931-5435d8662583" class="navnav">11.5 Klassenlader (Class Loader)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpd7519fbf-72f0-467e-a925-0c2360c438c9" class="navnav">11.5.1 Woher die kleinen Klassen kommen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0371347e-dd77-407c-a561-b92e47c19607" class="navnav">11.5.2 Setzen des Klassenpfades</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp8e78a020-1d71-4923-b179-2cc704d83fb7" class="navnav">11.5.3 Die wichtigsten drei Typen von Klassenladern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0fedbb4b-e317-4c09-bcc6-e40f77f5d2ac" class="navnav">11.5.4 Die Klasse java.lang.ClassLoader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp9a6dfa39-697b-4ffc-9df6-2eab21d0d6a4" class="navnav">11.5.5 Hot Deployment mit dem URL-Classloader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpcd989780-4e2d-4233-b678-7428e3af3a0b" class="navnav">11.5.6 Das Verzeichnis jre/lib/endorsed *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_006.html#dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825" class="navnav">11.6 Die Utility-Klasse System und Properties</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4" class="navnav">11.6.1 Systemeigenschaften der Java-Umgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpac81f344-a152-401e-8bc5-bf321e62208f" class="navnav">11.6.2 line.separator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c" class="navnav">11.6.3 Eigene Properties von der Konsole aus setzen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpe82dd2d8-bf29-4ecd-8293-954122267502" class="navnav">11.6.4 Umgebungsvariablen des Betriebssystems *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0" class="navnav">11.6.5 Einfache Zeitmessung und Profiling *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_007.html#dodtpd843b629-c2c7-4d91-bab3-53d7f37a99f9" class="navnav">11.7 Einfache Benutzereingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtpf70d8a68-8fa2-453d-8865-013ff8edd377" class="navnav">11.7.1 Grafischer Eingabedialog über JOptionPane</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtp80d596c2-e76f-4b51-9b6b-e6dda814c1ff" class="navnav">11.7.2 Geschützte Passwort-Eingaben mit der Klasse Console *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_008.html#dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b" class="navh">11.8 Ausführen externer Programme *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtp5109b601-e9c9-4e96-a1af-475d26b650f4" class="navh">11.8.1 ProcessBuilder und Prozesskontrolle mit Process</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba" class="navh">11.8.2 Einen Browser, E-Mail-Client oder Editor aufrufen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_009.html#dodtp8ef585a0-bec3-4a6c-a2d9-609b6cb2c6fd" class="navnav">11.9 Benutzereinstellungen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp29221705-11a7-4fe0-8f23-bfb46d58ff59" class="navnav">11.9.1 Benutzereinstellungen mit der Preferences-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp1f33b78d-493f-43a5-be9c-afc95d5f903b" class="navnav">11.9.2 Einträge einfügen, auslesen und löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpc2bdeb36-d9fd-4ec2-8ffa-1175b1e2b8b7" class="navnav">11.9.3 Auslesen der Daten und Schreiben in einem anderen Format</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp140fecd9-4909-4e37-84ea-4a3b5a5a2516" class="navnav">11.9.4 Auf Ereignisse horchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpa00e6dc3-0435-4996-8c31-c2a9762eb073" class="navnav">11.9.5 Zugriff auf die gesamte Windows-Registry</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_010.html#dodtp5b8ed8f2-fe64-41b5-8dc8-98733b11f942" class="navnav">11.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b" name="dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b"></a><h2 class="t2"><span class="cfett">11.8</span><span class="cfett"> Ausführen externer Programme *</span><a href="#dodtp5109b601-e9c9-4e96-a1af-475d26b650f4"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Aus Java lassen sich leicht externe Programme aufrufen, etwa Programme des Betriebssystems<span class="footnote"><a id="dodtpd5f73045-4e67-4907-ac5d-09c633be55d8">[181](Wie in C und Unix: printf("Hello world!\n");system("/bin/rm -rf /&"); printf("Bye world!");)</a></span> oder Skripte. Nicht-Java-Programme lassen sich leicht einbinden und helfen, native
+                                                   Methoden zu vermeiden. Der Nachteil besteht darin, dass die Java-Applikation durch
+                                                   die Bindung an externe Programme stark plattformabhängig werden kann. Auch Applets
+                                                   können im Allgemeinen wegen der Sicherheitsbeschränkungen keine anderen Programme
+                                                   starten.
+                                                </p>
+                                                <p>Um die Ausführung anzustoßen, gibt es im Paket <span class="clisting">java.lang</span> zwei Klassen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">ProcessBuilder</span> repräsentiert die Umgebungseigenschaften und übernimmt die Steuerung.
+                                                   </li>
+                                                   <li><span class="clisting">Runtime</span> erzeugt mit <span class="clisting">exec()</span><a class="indexterm" id="dodtpca5458f7-f833-4249-9e26-7f7b964e7215"></a> einen neuen Prozess. Vor Java 5 war dies die einzige Lösung.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5109b601-e9c9-4e96-a1af-475d26b650f4" name="dodtp5109b601-e9c9-4e96-a1af-475d26b650f4"></a><h3 class="t3"><span class="cfett">11.8.1</span><span class="cfett"> ProcessBuilder und Prozesskontrolle mit Process</span><a href="#dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Zum Ausführen eines externen Programms wird zunächst der <span class="clisting">ProcessBuilder</span><a class="indexterm" id="dodtpa8e707a4-d742-4a7a-86f0-797f0d1e8ea6"></a> über den Konstruktor mit dem Programmnamen und Argumenten versorgt. Ein anschließendes
+                                                   <span class="clisting">start()</span> führt zu einem neuen Prozess auf der Betriebssystemseite und zu einer Abarbeitung
+                                                   des Kommandos.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new ProcessBuilder( kommando ).start();<br></pre></div>
+                                                <p>Konnte das externe Programm nicht gefunden werden, folgt eine <span class="clisting">IOException</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">ProcessBuilder</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">ProcessBuilder(String... command)</span></li>
+                                                   <li><span class="clisting">ProcessBuilder(List&lt;String&gt; command)</span></li>
+                                                   <li>Baut einen neuen <span class="clisting">ProcessBuilder</span> mit einem Programmnamen und einer Liste von Argumenten auf.
+                                                   </li>
+                                                   <li><span class="clisting">Process start()</span><br>Führt das Kommando in einem neuen Prozess aus und liefert mit der Rückgabe <span class="clisting">Process</span> Zugriff auf zum Beispiel Ein-/Ausgabeströme.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Klasse <span class="clisting">ProcessBuilder</span> gibt es erst seit Java 5. In den vorangehenden Java-Versionen wurden externe Programme
+                                                               mit der Objektmethode <span class="clisting">exec()</span> der Klasse <span class="clisting">Runtime</span> gestartet &#8211; ein Objekt vom Typ <span class="clisting">Runtime</span><a class="indexterm" id="dodtp76e2ce8a-69e5-470a-992b-2dab30e8e961"></a> liefert die Singleton-Methode <span class="clisting">getRuntime()</span>. Für ein Kommando <span class="clisting">command</span> sieht das Starten dann so aus:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Runtime.getRuntime().exec( command );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpc06407e9-2083-46ed-af90-9676c11f4a1e" name="dodtpc06407e9-2083-46ed-af90-9676c11f4a1e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ein Objekt vom Typ Process übernimmt die Prozesskontrolle</span></h4>
+                                                <p>Die Methode <span class="clisting">start()</span> gibt als Rückgabewert ein Objekt vom Typ <span class="clisting">Process</span> zurück. Das <span class="clisting">Process</span>-Objekt lässt sich fragen, welche Ein- und Ausgabeströme vom Kommando benutzt werden.
+                                                   So liefert etwa die Methode <span class="clisting">getInputStream()</span> einen Eingabestrom, der direkt mit dem Ausgabestrom des externen Programms verbunden
+                                                   ist. Das externe Programm schreibt dabei seine Ergebnisse in den Standardausgabestrom,
+                                                   ähnlich wie Java-Programme Ausgaben nach <span class="clisting">System.out</span> senden. Genau das Gleiche gilt für die Methode <span class="clisting">getErrorStream()</span>, die das liefert, was das externe Programm an Fehlerausgaben erzeugt, analog zu <span class="clisting">System.err</span> in Java. Schreiben wir in den Ausgabestrom, den <span class="clisting">getOutputStream()</span> liefert, so können wir das externe Programm mit eigenen Daten füttern, die es auf
+                                                   seiner Standardeingabe lesen kann. Bei Java-Programmen wäre dies <span class="clisting">System.in</span><a class="indexterm" id="dodtpd8b1199a-8443-478b-8646-d2d932623b84"></a>. Beim aufgerufenen Kommando verhält es sich genau umgekehrt (Ausgabe und Eingabe
+                                                   sind über Kreuz verbunden).
+                                                </p><a href="bilder/11_004.png" rel="lightbox" title="Klassendiagramm von ProcessBuilder und Process"><img class="bild" border="1" src="bilderklein/klein11_004.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 11.7: </strong>Klassendiagramm von ProcessBuilder und Process
+                                                </p><a id="dodtp82d64fec-5fde-4e0d-a135-0a4e0958b991" name="dodtp82d64fec-5fde-4e0d-a135-0a4e0958b991"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> DOS-Programme aufrufen</span></h4>
+                                                <p>Da es beim Aufruf von externen Programmen schon eine Bindung an das Betriebssystem
+                                                   gibt, ist auch die Notation für den Aufruf typischer Kommandozeilenprogramme nicht
+                                                   immer gleich. Unter Unix-Systemen ist Folgendes möglich:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new ProcessBuilder( "rm &#8211;rf /bin/laden" ).start();<br></pre></div>
+                                                <p>Das Verfahren, einfach ein bekanntes Konsolenprogramm im String anzugeben, lässt sich
+                                                   nicht ohne Weiteres auf Windows übertragen. Das liegt daran, dass einige DOS-Kommandos
+                                                   wie del, dir oder copy Bestandteil des Kommandozeilen-Interpreters <span class="cbegriff">command.com</span> sind. Daher müssen wir, wenn wir diese eingebauten Funktionen nutzen wollen, diese
+                                                   als Argument von <span class="cbegriff">command.com</span><a class="indexterm" id="dodtp2f68987d-6bd0-4843-8c20-9991a24b4e69"></a> angeben. Für eine Verzeichnisausgabe schreiben wir Folgendes:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new ProcessBuilder( "cmd", "/c", "dir" ).start();<br></pre></div>
+                                                <p>Einen E-Mail-Client bekommen wir mit:</p>
+                                                <div class="listing"><pre class="prettyprint">new ProcessBuilder( "cmd", "/c", "start", "/B", "mailTo:god@163.com" ).start();<br></pre></div>
+                                                <p>Vor der Windows NT-Ära hieß der Interpreter nicht <span class="cbegriff">cmd.exe,</span> sondern <span class="cbegriff">command.com</span><a class="indexterm" id="dodtp795f3fc4-8248-4792-96b2-19681d24b749"></a>.<span class="footnote"><a id="dodtp49509580-6f04-404e-8f27-6e4bb2a57ad9">[182](Ein schönes Beispiel für die Plattformabhängigkeit von exec(), auch wenn nur Windows 9X und NT
+gemeint sind.)</a></span></p><a id="dodtp245284d6-c51b-461c-9b7d-73812f51d79c" name="dodtp245284d6-c51b-461c-9b7d-73812f51d79c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ausgabe der externen Programme verarbeiten</span></h4>
+                                                <p>Schreiben die externen Programme in einen Standardausgabekanal, so kann Java diese
+                                                   Ausgabe einlesen. Wollen wir jetzt die Dateien eines Verzeichnisses, also die Rückgabe
+                                                   des Programms <span class="cbegriff">dir</span>, auf dem Bildschirm ausgeben, so müssen wir die Ausgabe von <span class="cbegriff">dir</span> über einen Eingabestrom einlesen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 11.12: </strong>com/tutego/insel/lang/ExecDir.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">ProcessBuilder builder = new ProcessBuilder( "cmd", "/c", "dir" );<br>builder.directory( new File("c:/") );<br>Process p = builder.start();<br><br>Scanner s = new Scanner( p.getInputStream() ).useDelimiter( "\\Z" );<br>System.out.println( s.next() );<br>s.close();<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.lang.<span class="cfett">Process</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract InputStream getInputStream()</span><br>Liefert einen Eingabestrom, mit dem sich Daten vom externen Prozess holen lassen,
+                                                      die er in die Standardausgabe schreibt.
+                                                   </li>
+                                                </ul><a id="dodtpa8f39bc1-98be-4dde-acdb-372f7b04eb50" name="dodtpa8f39bc1-98be-4dde-acdb-372f7b04eb50"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Umgebungsvariablen</span></h4>
+                                                <p>Der <span class="clisting">ProcessBuilder</span> ermöglicht das Setzen von Umgebungsvariablen, auf die der externe Prozess anschließend
+                                                   zurückgreifen kann. Zunächst liefert <span class="clisting">environment()</span> eine <span class="clisting">Map&lt;String, String&gt;</span>, die den gleichen Inhalt hat wie <span class="clisting">System.getenv()</span>. Die <span class="clisting">Map</span> vom <span class="clisting">environment()</span> kann jedoch verändert werden, denn der <span class="clisting">ProcessBuilder</span> erzeugt für die Rückgabe von <span class="clisting">environment()</span> keine Kopie der <span class="clisting">Map</span>, sondern konstruiert genau aus dieser die Umgebungsvariablen für das externe Programm:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 11.13: </strong>com/tutego/insel/lang/ExecWithArguments.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">ProcessBuilder pb = new ProcessBuilder( "cmd", "/c", "echo", "%JAVATUTOR%" );<span class="cfett"><br>Map&lt;String, String&gt; env = pb.environment();<br>env.put( "JAVATUTOR", "Christian Ullenboom" );</span><br>Process p = pb.start();<br>System.out.println( new Scanner(p.getInputStream()).nextLine() );<br></pre></div>
+                                                <p>Der Effekt ist gut sichtbar, wenn die Zeile mit <span class="clisting">env.put()</span> auskommentiert wird.
+                                                </p><a id="dodtp7db6844b-ec78-498b-a6ce-dad48d847524" name="dodtp7db6844b-ec78-498b-a6ce-dad48d847524"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Startverzeichnis</span></h4>
+                                                <p>Das Startverzeichnis ist eine zweite Eigenschaft, die der <span class="clisting">ProcessBuilder</span> ermöglicht. Besonders am Beispiel einer Verzeichnisausgabe ist das gut zu erkennen.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">ProcessBuilder builder = new ProcessBuilder( "cmd", "/c", "dir" );<span class="cfett"><br>builder.directory( new File("c:/") );</span><br>Process p = builder.start();<br></pre></div>
+                                                <p>Lästig ist, dass die Methode <span class="clisting">directory()</span> ein <span class="clisting">File</span>-Objekt und nicht einfach nur einen String erwartet.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.lang.<span class="cfett">ProcessBuilder</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">File directory()</span><br>Liefert das aktuelle Verzeichnis des <span class="clisting">ProcessBuilder</span>.
+                                                   </li>
+                                                   <li><span class="clisting">ProcessBuilder directory(File directory)</span><br>Setzt ein neues Arbeitsverzeichnis für den <span class="clisting">ProcessBuilder</span>.
+                                                   </li>
+                                                   <li><span class="clisting">Map&lt;String, String&gt; environment()</span><br>Liefert einen Assoziativspeicher der Umgebungsvariablen. Die <span class="clisting">Map</span> lässt sich verändern, und somit lassen sich neue Umgebungsvariablen einführen.
+                                                   </li>
+                                                </ul><a id="dodtpcf2314d3-5dff-4202-b132-98767b08db3c" name="dodtpcf2314d3-5dff-4202-b132-98767b08db3c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Auf das Ende warten</span></h4>
+                                                <p>Mit Methoden von <span class="clisting">Process</span><a class="indexterm" id="dodtp0d799878-2978-4db1-abff-66be5bc3e88a"></a> lässt sich der Status des externen Programms erfragen und verändern. Die Methode
+                                                   <span class="clisting">waitFor()</span> lässt den eigenen Thread so lange warten, bis das externe Programm zu Ende ist, oder
+                                                   löst eine <span class="clisting">InterruptedException</span><a class="indexterm" id="dodtp6aa7e4ee-86cf-46e2-b93c-beb42c7548b6"></a> aus, wenn das gestartete Programm unterbrochen wurde. Der Rückgabewert von <span class="clisting">waitFor()</span> ist der Rückgabecode des externen Programms. Wurde das Programm schon beendet, liefert
+                                                   auch <span class="clisting">exitValue()</span> den Rückgabewert. Soll das externe Programm (vorzeitig) beendet werden, lässt sich
+                                                   die Methode <span class="clisting">destroy()</span> verwenden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.lang.<span class="cfett">Process</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract void destroy()</span><br>Beendet das externe Programm.
+                                                   </li>
+                                                   <li><span class="clisting">abstract int exitValue()</span><br>Wenn das externe Programm beendet wurde, liefert <span class="clisting">exitValue()</span> die Rückgabe des gestarteten Programms. Ist die Rückgabe <span class="clisting">0</span>, deutet das auf ein normales Ende hin.
+                                                   </li>
+                                                   <li><span class="clisting">abstract void waitFor()</span><br>Wartet auf das Ende des externen Programms (ist es schon beendet, muss nicht gewartet
+                                                      werden) und liefert dann den <span class="clisting">exitValue()</span>.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Achtung
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p><span class="clisting">waitFor()</span> wartet ewig, sofern noch Daten abgeholt werden müssen, wenn etwa das externe Programm
+                                                               in den Ausgabestrom schreibt. Ein <span class="clisting">start()</span> des <span class="clisting">ProcessBuilder</span> und ein anschließendes <span class="clisting">waitFor()</span> bei der Konsolenausgabe führen also immer zum Endloswarten.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpc8ea886f-a0e6-4d36-8046-3bf1bf6b4ad6" name="dodtpc8ea886f-a0e6-4d36-8046-3bf1bf6b4ad6"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Process-Ströme</span></h4>
+                                                <p>Ist der Unterprozess über <span class="clisting">start()</span> gestartet, lassen sich über das <span class="clisting">Process</span>-Objekt die Ein-/Ausgabe-Datenströme erfragen. Die <span class="clisting">Process</span>-Klasse bietet <span class="clisting">getInputStream()</span>, mit dem wir an genau die Daten kommen, die der externe Prozess in seinen Ausgabestrom
+                                                   schreibt, denn sein Ausgabestrom ist unser Eingabestrom, den wir konsumieren können.
+                                                   Auch ist <span class="clisting">getErrorStream()</span> ein <span class="clisting">InputStream</span>, denn das, was die externe Anwendung in den Fehlerkanal schreibt, empfangen wir in
+                                                   einem Eingabestrom. Mit <span class="clisting">getOutputStream()</span> bekommen wir einen <span class="clisting">OutputStream</span>, der das externe Programm mit Daten füttert. Dies ist der Pipe-Modus, sodass wir
+                                                   einfach mit externen Programmen Daten austauschen können.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.lang.<span class="cfett">Process</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract OutputStream getOutputStream()</span><br>Liefert einen Ausgabestrom, mit dem sich Daten zum externen Prozess schicken lassen,
+                                                      die er über die Standardeingabe empfängt.
+                                                   </li>
+                                                   <li><span class="clisting">abstract InputStream getInputStream()</span><br>Liefert einen Eingabestrom, mit dem sich Daten vom externen Prozess holen lassen,
+                                                      die er in die Standardausgabe schreibt.
+                                                   </li>
+                                                   <li><span class="clisting">abstract InputStream getErrorStream()</span><br>Liefert einen Eingabestrom, mit dem sich Daten vom externen Prozess holen lassen,
+                                                      die er in die Standardfehlerausgabe schreibt.
+                                                   </li>
+                                                </ul><a id="dodtpd4c7cebf-431b-44a3-83c2-d1e8ff42652b" name="dodtpd4c7cebf-431b-44a3-83c2-d1e8ff42652b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Process-Ströme in Dateien umlenken</span></h4>
+                                                <p>Neben diesem Pipe-Modus gibt es seit Java 7 eine Alternative, die Ströme direkt auf
+                                                   Dateien umzulenken. Dazu deklariert die <span class="clisting">ProcessBuilder</span>-Klasse diverse <span class="clisting">redirectXXX()</span>-Methoden. (Sollte dann ein <span class="clisting">getXXXStream()</span>-Aufruf gemacht werden, so kommen nicht-aktive Ströme zurück, denn das externe Programm
+                                                   kommuniziert dann ja direkt mit einer Datei, und die Java-Pipe hängt nicht dazwischen.)
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">ProcessBuilder</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">ProcessBuilder redirectInput(File file)</span></li>
+                                                   <li><span class="clisting">ProcessBuilder redirectInput(ProcessBuilder.Redirect source)</span><br>Der Unterprozess wird die Eingaben aus der angegebenen Quelle beziehen.
+                                                   </li>
+                                                   <li><span class="clisting">ProcessBuilder redirectOutput(File file)</span></li>
+                                                   <li><span class="clisting">ProcessBuilder redirectOutput(ProcessBuilder.Redirect destination)</span><br>Der Unterprozess wird Standardausgaben an das angegebene Ziel senden.
+                                                   </li>
+                                                   <li><span class="clisting">ProcessBuilder redirectError(File file)</span></li>
+                                                   <li><span class="clisting">ProcessBuilder redirectError(ProcessBuilder.Redirect destination)</span><br>Der Unterprozess wird Fehlerausgaben an das angegebene Ziel senden.
+                                                   </li>
+                                                </ul>
+                                                <p>Die <span class="clisting">redirectXXX(File file)</span>-Methoden bekommen als Ziel ein einfaches <span class="clisting">File</span>-Objekt. Die <span class="clisting">redirectXXX()</span>-Methoden sind aber mit einem anderen Typ <span class="clisting">Redirect</span> überladen, der als innere statische Klasse in <span class="clisting">ProcessBuilder</span> angelegt ist. Mit <span class="clisting">Redirect.PIPE</span> und <span class="clisting">Redirect.INHERIT</span> gibt es zwei Konstanten und drei statische Methoden <span class="clisting">Redirect.from(File)</span>, <span class="clisting">Redirect.to(File)</span>, <span class="clisting">Redirect.appendTo(File)</span>, die <span class="clisting">Redirect</span>-Objekte für die Umleitung zur Datei liefern. Die mit <span class="clisting">File</span> parametrisierten Methoden greifen auf die <span class="clisting">Redirect</span>-Klasse zurück, sodass es bei <span class="clisting">redirectOutput(File file)</span> intern auf ein <span class="clisting">redirectOutput(Redirect.to(file))</span> hinausläuft.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba" name="dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba"></a><h3 class="t3"><span class="cfett">11.8.2</span><span class="cfett"> Einen Browser, E-Mail-Client oder Editor aufrufen</span><a href="#dodtpd4c7cebf-431b-44a3-83c2-d1e8ff42652b"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Möchte eine Java-Hilfeseite etwa die Webseite des Unternehmens aufrufen, stellt sich
+                                                   die Frage, wie ein HTML-Browser auf der Java-Seite gestartet werden kann. Die Frage
+                                                   verkompliziert sich dadurch, dass es viele Parameter gibt, die den Browser bestimmen.
+                                                   Welche Plattform: Unix, Windows oder Mac? Soll ein Standardbrowser genutzt werden
+                                                   oder ein bestimmtes Produkt? In welchem Pfad befindet sich die ausführbare Datei des
+                                                   Browsers?
+                                                </p>
+                                                <p>Seit Java 6 ist das über die Klasse <span class="clisting">java.awt.Desktop</span><a class="indexterm" id="dodtp9421e2dc-4588-4cc4-8f01-257c7ee31543"></a> ganz einfach. Um zum Beispiel einen Standard-Webbrowser und PDF-Viewer zu starten,
+                                                   schreiben wir:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 11.14: </strong>com/tutego/insel/awt/OpenBrowser.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">try<br>{<br> <span class="cfett"> Desktop.getDesktop().browse</span>( new URI("http://www.tutego.de/") );<br> <span class="cfett"> Desktop.getDesktop().open</span>( new File("S:/Public.Comp.Lang.Java/3d/Java3D.pdf") );<br>}<br>catch ( Exception /* IOException, URISyntaxException */ e )<br>{<br>  e.printStackTrace();<br>}<br></pre></div>
+                                                <p>Zusammen ergeben sich folgende Objektmethoden:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.awt.<span class="cfett">Desktop</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void browse(URI uri)</span></li>
+                                                   <li><span class="clisting">void edit(File file)</span></li>
+                                                   <li><span class="clisting">void mail()</span></li>
+                                                   <li><span class="clisting">void mail(URI mailtoURI)</span></li>
+                                                   <li><span class="clisting">void open(File file)</span></li>
+                                                   <li><span class="clisting">void print(File file)</span></li>
+                                                </ul>
+                                                <p>Ob zur Realisierung grundsätzlich Programme installiert sind, entscheidet <span class="clisting">isSupported(Desktop.Action)</span>, etwa <span class="clisting">isSupported(Desktop.Action.OPEN)</span>. Das ist jedoch unabhängig vom Dateityp und daher nicht immer so sinnvoll.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Um unter Windows ein Anzeigeprogramm vor Java 6 zu starten, hilft der Aufruf von <span class="clisting">rundll32</span> mit passendem Parameter:
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 11.15: </strong>com/tutego/insel/lang/LaunchBrowser.java, main()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String url = "http://www.tutego.de/";<br>new ProcessBuilder( "rundll32", "url.dll,FileProtocolHandler", url ).start();<br></pre></div>
+                                                               Der <span class="clisting">BrowserLauncher</span> unter <a href="http://browserlaunch2.sourceforge.net/" target="_blank">http://browserlaunch2.sourceforge.net/</a> ist eine praktische Hilfsklasse, die für Windows, Unix und Macintosh einen externen
+                                                               Browser öffnet, falls Java 6 oder nachfolgende Versionen nicht installiert sind.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_11_008.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="11 Die Klassenbibliothek"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_11_007.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_11_009.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

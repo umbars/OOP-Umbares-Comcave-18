@@ -1,0 +1,1052 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 9 Generics<T&gt;">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 9 Generics<T&gt;">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 9 Generics&lt;T&gt;</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_09_005.html">
+      <link rel="next" href="javainsel_10_001.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_09_005.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_10_001.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845" class="navnav">9 Generics&lt;T&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_001.html#dodtpc74e8925-5ee3-4856-ade3-5dc107234e99" class="navnav">9.1 Einführung in Java Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp46f87c4b-2a8a-4d51-a8d7-fa1b71f0f66f" class="navnav">9.1.1 Mensch versus Maschine: Typprüfung des Compilers und der Laufzeitumgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp6a73eafd-e68f-4783-bcdf-d57fddada2e7" class="navnav">9.1.2 Taschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp13e56feb-34cf-4a67-afa8-dbeba9a7520c" class="navnav">9.1.3 Generische Typen deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtpc481ce5d-a92d-4b7d-92dc-78d016eaffa5" class="navnav">9.1.4 Generics nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp511af877-15c3-4be2-954f-b72ce7e1d666" class="navnav">9.1.5 Diamonds are forever</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp130148a4-32ad-49e7-891b-0f49d99d4e1a" class="navnav">9.1.6 Generische Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp710f88eb-3589-44a7-9919-b2780446afc0" class="navnav">9.1.7 Generische Methoden/Konstruktoren und Typ-Inferenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_002.html#dodtpd527c002-42a6-47fb-97df-112816b7afdd" class="navnav">9.2 Umsetzen der Generics, Typlöschung und Raw-Types</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43" class="navnav">9.2.1 Realisierungsmöglichkeiten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp646d8dad-c628-4dbd-8516-9319de123868" class="navnav">9.2.2 Typlöschung (Type Erasure)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be" class="navnav">9.2.3 Probleme aus der Typlöschung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8beafab7-be03-41eb-8396-641368b63dff" class="navnav">9.2.4 Raw-Type</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_003.html#dodtp5f6dbe6c-6abe-4d7b-b034-d7fb043b2986" class="navnav">9.3 Einschränken der Typen über Bounds</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp4f61d68e-f19b-463d-a104-53d896405e34" class="navnav">9.3.1 Einfache Einschränkungen mit extends</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp87728199-d4df-488c-85f9-61ff5760295c" class="navnav">9.3.2 Weitere Obertypen mit &amp;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_004.html#dodtp7ce64032-440d-44d1-9d14-f9985575e53a" class="navnav">9.4 Typparameter in der throws-Klausel *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp24b992d0-6bf5-4c34-b7c0-3587c6ebd623" class="navnav">9.4.1 Deklaration einer Klasse mit Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp1055228d-f59d-41f4-8037-9a513f965ca2" class="navnav">9.4.2 Parametrisierter Typ bei Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_005.html#dodtp76606352-8335-4c92-821c-e663da127f54" class="navnav">9.5 Generics und Vererbung, Invarianz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtpa0c69e24-5a10-4200-851e-73978a156ff2" class="navnav">9.5.1 Arrays sind invariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc" class="navnav">9.5.2 Generics sind kovariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a" class="navnav">9.5.3 Wildcards mit ?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368" class="navnav">9.5.4 Bounded Wildcards</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp75fd58f3-c99e-463a-a810-296f4871cc78" class="navnav">9.5.5 Bounded-Wildcard-Typen und Bounded-Typvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6" class="navnav">9.5.6 Das LESS-Prinzip</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7" class="navnav">9.5.7 Enum&lt;E extends Enum&lt;E&gt;&gt; *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_006.html#dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba" class="navh">9.6 Konsequenzen der Typlöschung: Typ-Token, Arrays und Brücken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpaa2655c0-2c7b-441d-9291-303a978c9587" class="navh">9.6.1 Typ-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9" class="navh">9.6.2 Super-Type-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb" class="navh">9.6.3 Generics und Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a" class="navh">9.6.4 Brückenmethoden</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba" name="dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba"></a><h2 class="t2"><span class="cfett">9.6</span><span class="cfett"> Konsequenzen der Typlöschung: Typ-Token, Arrays und Brücken *</span><a href="#dodtpaa2655c0-2c7b-441d-9291-303a978c9587"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Die Typlöschung ist im Allgemeinen kein so großes Problem, doch in speziellen Situationen
+                                                   ist es lästig, dass der Typ nicht zur Laufzeit vorliegt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpaa2655c0-2c7b-441d-9291-303a978c9587" name="dodtpaa2655c0-2c7b-441d-9291-303a978c9587"></a><h3 class="t3"><span class="cfett">9.6.1</span><span class="cfett"> Typ-Token</span><a href="#dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir haben zum Beispiel gesehen, dass, wenn eine Tasche mit der Typvariablen <span class="clisting">T</span> deklariert wurde, dieses <span class="clisting">T</span> nicht wirklich wie ein Makro durch den Typparameter ersetzt wird, sondern dass in
+                                                   der Regel nur einfach <span class="clisting">Object</span> eingesetzt wird.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class Pocket&lt;T&gt;<br>{<br> T newPocketContent() { return new T(); } // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler <br>}<br></pre></div>
+                                                <p>Aus <span class="clisting">new T()</span> macht die Typlöschung also <span class="clisting">new Object()</span>, und das ist nichts wert. Doch wie kann dennoch ein Typ erzeugt werden und der Typ
+                                                   <span class="clisting">T</span> zur Laufzeit vorliegen?
+                                                </p>
+                                                <p>Hier lässt es sich ein Trick nutzen, nämlich ein <span class="clisting">Class</span>-Objekt für den Typ einsetzen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.12: </strong>Transfer der Typparameter durch Class-Objekte
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Typparameter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Class-Objekt repräsentiert Typparameter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Class.String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Class.Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Dieses <span class="clisting">Class</span>-Objekt, das nun den Typ repräsentiert, heißt <span class="cbegriff">Typ-Token</span><a class="indexterm" id="dodtpf3b8c84a-c172-4912-81b6-b2e0d77ff8d2"></a> (engl. <span class="cbegriff">type token</span>). Es kommt natürlich entgegen, dass <span class="clisting">Class</span> selbst als generischer Typ deklariert ist und zwei interessante Methoden ebenfalls
+                                                   generifiziert wurden:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Class&lt;String&gt; clazz1 = String.class;<br>String newInstance = clazz1.<span class="cfett">newInstance()</span>;<br>Class&lt; ? extends String&gt; clazz2 = newInstance.<span class="cfett">getClass()</span>;<br>System.out.println( clazz1.equals( clazz2 ) );  // true<br></pre></div>
+                                                <p>Zunächst ist da die Methode <span class="clisting">newInstance()</span>. Sie erzeugt ein neues Exemplar mit Typ, den das <span class="clisting">Class</span>-Objekt repräsentiert.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">Class</span>&lt;T&gt;<br>implements Serializable, GenericDeclaration, Type, AnnotatedElement<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">public T newInstance()<br>  throws InstantiationException, IllegalAccessException</span></li>
+                                                </ul>
+                                                <p>Mit einem gegebenen Objekt lässt sich mit <span class="clisting">getClass()</span> das zugehörige <span class="clisting">Class</span>-Objekt zur Klasse erfragen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.lang.<span class="cfett">Object</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">public final native Class&lt;?&gt; getClass()</span><br>Liefert <span class="clisting">Class</span>-Objekt.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Rückgabe <span class="clisting">Class&lt;?&gt;</span> bei <span class="clisting">getClass()</span> ist unschön, insbesondere die allgemeine Wildcard. Sie verhindert, dass sich Folgendes
+                                                               schreiben lässt:
+                                                               <span class="clisting">Class&lt;String&gt; clazz = "ARTE".getClass();</span>       <span class="clisting">//</span> <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> <span class="clisting">Type</span>    <span class="clisting">mismatch</span>  <span class="clisting">Compilerfehler</span>
+                                                               Stattdessen muss es so heißen:
+                                                               <span class="clisting">Class&lt;? extends String&gt; clazz = "ARTE".getClass();</span>
+                                                               Da <span class="clisting">Object</span> nicht generisch deklariert ist, ist es kein Wunder, dass <span class="clisting">getClass()</span> keine genaueren Angaben machen kann.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpac2d13c5-a725-4a04-8dfc-daf403c09e90" name="dodtpac2d13c5-a725-4a04-8dfc-daf403c09e90"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Lösungen mit dem Typ-Token</span></h4>
+                                                <p>Um das Typ-Token einzusetzen, muss das <span class="clisting">Class</span>-Object mit als Argument in einem Konstruktor oder einer Methode übergeben werden.
+                                                   So lässt sich etwa eine <span class="clisting">newInstance()</span>-Methode nachbauen, die die geprüften Exceptions fängt und im Fehlerfall als <span class="clisting">RuntimeException</span> meldet. Gut zu sehen ist, wie sich der Typ des <span class="clisting">Class</span>-Objekts auf die Rückgabe überträgt.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static<span class="cfett"> &lt;T&gt; T</span> newInstance(<span class="cfett"> Class&lt;T&gt; type</span> )<br>{<br>  try<br>  {<br>    return type.newInstance();<br>  }<br>  catch ( /*InstantiationException, IllegalAccessException*/ Exception e )<br>  {<br>    throw new RuntimeException( e );<br>  }<br>}<br></pre></div>
+                                                <p>PS: Seit Java 7 ist <span class="clisting">ReflectiveOperationException</span> die Basisklasse für Reflection-Fehler.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9" name="dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9"></a><h3 class="t3"><span class="cfett">9.6.2</span><span class="cfett"> Super-Type-Token</span><a href="#dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpac2d13c5-a725-4a04-8dfc-daf403c09e90"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Mit einem <span class="clisting">Class</span>-Objekt lässt sich gut ein Typ repräsentieren, allerdings gibt es ein Problem. Das
+                                                   <span class="clisting">Class</span>-Objekt kann selbst keine generischen Typen darstellen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.13: </strong>Ein Class-Objekt kann keinen generischen Typ beschreiben.
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Typparameter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Class-Objekt repräsentiert Typparameter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Class.String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Class.Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Pocket&lt;String&gt;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Class.Pocket&lt;String&gt;</span>         Geht nicht!
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der wirkliche Typ lässt sich nur mit viel Getrickse bestimmen und festhalten. Hier
+                                                   kommt die Reflection-API zum Einsatz, sodass nur kurz die Klasse, ein Beispiel und
+                                                   Verweise auf weitere Literatur vorgestellt werden sollen. Hier die Klasse:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.24: </strong>com/tutego/insel/generic/TypeRef, TypeRef
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public abstract class TypeRef&lt;T&gt;<br>{<br>  public final Type type;<br><br>  protected TypeRef()<br>  {<br>    ParameterizedType superclass = (ParameterizedType) getClass().getGenericSuperclass();<br>    type = superclass.getActualTypeArguments()[0];<br>  }<br>}<br></pre></div>
+                                                <p>Und ein Beispiel, das eine anonyme Unterklasse erzeugt und so den Typ zugänglich macht:</p>
+                                                <p class="plistingunter"><strong>Listing 9.25: </strong>com/tutego/insel/generic/TypeRefDemo, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">TypeRef&lt;Pocket&lt;String&gt;&gt; ref1 = new TypeRef&lt;Pocket&lt;String&gt;&gt;(){};<br>System.out.println( ref1.type ); // com.tutego.insel.generic.Pocket&lt;java.lang.String&gt;<br>TypeRef&lt;Pocket&lt;Byte&gt;&gt; ref2 = new TypeRef&lt;Pocket&lt;Byte&gt;&gt;(){};<br>System.out.println( ref2.type ); // com.tutego.insel.generic.Pocket&lt;java.lang.Byte&gt;<br></pre></div>
+                                                <p>Damit konnten wir den Typparameter über <span class="clisting">java.lang.reflect.Type</span> festhalten, und <span class="clisting">ref1</span> unterscheidet sich eindeutig von <span class="clisting">ref2</span>. Der Typ liegt jedoch nicht als <span class="clisting">Class</span>-Objekt vor, und Operationen wie <span class="clisting">newInstance()</span> sind auf <span class="clisting">Type</span> nicht möglich &#8211; die Schnittstelle deklariert überhaupt keine Methoden, sondern repräsentiert
+                                                   nur Typen.
+                                                </p>
+                                                <p>Auf den Webseiten <a href="http://gafter.blogspot.com/2006/12/super-type-tokens.html" target="_blank">http://gafter.blogspot.com/2006/12/super-type-tokens.html</a> und <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=206350" target="_blank">http://www.artima.com/weblogs/viewpost.jsp?thread=206350</a> sind weitere Informationen und Einsatzgebiete zu finden. Super-Typ-Token kommen in
+                                                   der Java-Welt nicht besonders oft vor.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb" name="dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb"></a><h3 class="t3"><span class="cfett">9.6.3</span><span class="cfett"> Generics und Arrays</span><a href="#dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Typlöschung ist der Grund dafür, dass Arrays nicht so umgesetzt werden können,
+                                                   wie es sich der Entwickler denkt.<span class="footnote"><a id="dodtp699d0d31-fe73-4baf-b1d2-3ee9fd54c541">[174](Bei Sun (http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=4888066) ist dafür ein Bug gelistet.
+Suns Antwort auf die Bitte, ihn zu beheben, lautet lapidar: »Some day, perhaps, but not now.«)</a></span> Folgendes ergibt einen Compilerfehler:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class TwoBox<span class="cfett">&lt;T&gt;</span><br>{<br>  T[] array =<span class="cfett"> new T[ 2 ];</span>   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Cannot create a generic array of T<br>  T[] getArray() { return array; }<br>}<br></pre></div>
+                                                <p>Der Grund für diesen Fehler ist dann gut zu erkennen, wenn wir überlegen, zu welchem
+                                                   Programmcode die Typlöschung führen würde:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class TwoBox<br>{<br>  Object[] array =<span class="cfett"> new Object[ 2 ]</span>;           // (1)<br>  Object[] getArray() { return array; }<br>}<br></pre></div>
+                                                <p>Der Aufrufer würde nun die <span class="clisting">TwoBox</span> parametrisiert verwenden wollen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">TwoBox&lt;String&gt; twoStrings = new TwoBox&lt;String&gt;();<br>String[] stringArray = twoStrings.getArray();<br></pre></div>
+                                                <p>Denken wir an dieser Stelle wieder an die Typlöschung und an das, was der Compiler
+                                                   generiert:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">TwoBox twoStrings = new TwoBox();<br>String[] stringArray<span class="cfett"> = </span>(String[])<span class="cfett"> twoStrings.getArray()</span>; // (2)<br></pre></div>
+                                                <p>Jetzt ist es auffällig: Während (1) ein <span class="clisting">Object</span>-Array der Länge 2 aufbaut und auch <span class="clisting">getArray()</span> dies als <span class="clisting">Object</span>-Array nach außen gibt, castet (2) dieses <span class="clisting">Object</span>-Array auf ein String-Array. Das geht aber nicht, denn diese beiden Typen sind nicht
+                                                   typkompatibel. Zwar kann natürlich ein <span class="clisting">Object</span>-Array Strings referenzieren, aber das Feld selbst als Objekt ist eben ein <span class="clisting">Object[]</span> und kein <span class="clisting">String[]</span>.
+                                                </p><a id="dodtp3aae2176-4657-42ed-9b13-6c595e269d85" name="dodtp3aae2176-4657-42ed-9b13-6c595e269d85"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Reflection hilft</span></h4>
+                                                <p>Die Java-API bietet über Reflection wieder eine Möglichkeit, Arrays eines Typs zu
+                                                   erzeugen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">T[] array = (T[]) Array.newInstance( clazz, 2 );<br></pre></div>
+                                                <p>Allerdings muss der <span class="clisting">Class</span>-Typ <span class="clisting">clazz</span> bekannt sein und als zusätzlicher Parameter übergeben werden. Die Syntax <span class="clisting">T.class</span> gibt einen Compilerfehler, denn über die Typlöschung wäre das ja sowieso immer <span class="clisting">Object.class</span>, was den gleichen Fehler wie vorher ergibt und kein Fortschritt wäre.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a" name="dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a"></a><h3 class="t3"><span class="cfett">9.6.4</span><span class="cfett"> Brückenmethoden</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp3aae2176-4657-42ed-9b13-6c595e269d85"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Aus der Tatsache, dass mit Generics übersetzte Klassen auf einer JVM ablauffähig sein
+                                                   müssen, die kein generisches Typsystem besitzt, folgen diverse Hacks, die der Compiler
+                                                   zur Erhaltung der heiligen Kompatibilität vornimmt. Er fügt neue Methoden ein, sogenannte
+                                                   <span class="cbegriff">Brückenmethoden</span><a class="indexterm" id="dodtpea6c0e40-5db5-4f95-a71f-3d5fff5ebd73"></a>, damit der Bytecode nach der Typlöschung auch von älteren Programmen genutzt werden
+                                                   kann.
+                                                </p><a id="dodtp977e1c55-b931-4ff6-bb7a-891bae5439e4" name="dodtp977e1c55-b931-4ff6-bb7a-891bae5439e4"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Brückenmethode wegen Typvariablen in Parametern</span></h4>
+                                                <p>Starten wir mit der Schnittstelle <span class="clisting">Comparable</span>, die generisch deklariert wurde.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public interface Comparable&lt;<span class="cfett">T</span>&gt; { public int compareTo(<span class="cfett"> T</span> o ); }<br></pre></div>
+                                                <p>Die bekannte Klasse <span class="clisting">Integer</span> implementiert zum Beispiel diese Schnittstelle und kann somit sagen, wie die Ordnung
+                                                   zu einem anderen <span class="clisting">Integer</span>-Objekt ist:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.26: </strong>java/lang/Integer.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public final class Integer extends Number<span class="cfett"> implements Comparable&lt;Integer&gt;</span><br>{<br>  private final int value;<br><br>  public Integer( int value ) { this.value = value;  }<br><br>  public int compareTo( Integer anotherInteger )<br>  {<br>    int thisVal = this.value;<br>    int anotherVal = anotherInteger.value;<br>    return ( thisVal &lt; anotherVal ? &#8211;1 : (thisVal == anotherVal ? 0 : 1) );<br>  }<br>  ...<br>}<br></pre></div>
+                                                <p><span class="clisting">Integer</span> implementiert die Methode <span class="clisting">compareTo()</span> mit dem Parametertyp <span class="clisting">Integer</span>. Der Compiler wird also eine Methode mit der Signatur <span class="clisting">compareTo(Integer)</span> erstellen. Doch damit beginnt ein Problem! Wir haben eine unbekannte Anzahl an Zeilen
+                                                   Quellcode, die sich auf eine Methode <span class="clisting">compareTo(Object)</span> beziehen, denn vor Java 5 war die Signatur ja anders.
+                                                </p>
+                                                <p>Damit es nicht zu Inkompatibilitäten kommt, setzt der Compiler einfach noch die Methode
+                                                   <span class="clisting">compareTo(Object)</span> bei <span class="clisting">Integer</span> dazu. Die Implementierung sieht so aus, dass sie einfach delegiert:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public int compareTo(<span class="cfett"> Object anotherInteger</span> )<br>{<br>  return compareTo( (Integer) anotherInteger );<br>}<br></pre></div><a id="dodtpd7d4122e-b0d1-4ad1-9b69-656ce809edfa" name="dodtpd7d4122e-b0d1-4ad1-9b69-656ce809edfa"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Brückenmethode wegen kovarianten Rückgabetypen</span></h4>
+                                                <p>Wenn eine Methode überschrieben wird, so muss die Unterklasse die gleiche Signatur
+                                                   (also den gleichen Methodennamen und die gleiche Parameterliste) besitzen. Nehmen
+                                                   wir eine Klasse <span class="clisting">CloneableFont</span>, die <span class="clisting">Font</span> erweitert und die <span class="clisting">clone()</span>-Methode aus <span class="clisting">Object</span> überschreibt. Eine Klasse, die sich auch unter Java 1.4 übersetzen lässt, würde so
+                                                   aussehen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.27: </strong>com/tutego/insel/nongeneric/CloneableFont.java, CloneableFont
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class CloneableFont extends Font implements Cloneable<br>{<br>  public CloneableFont( String name, int style, int size )<br>  {<br>    super( name, style, size );<br>  }<br><br>  @Override public<span class="cfett"> Object clone()</span><br>  {<br>    return new Font( getAttributes() );<br>  }<br>}<br></pre></div>
+                                                <p>Im Bytecode der Klasse <span class="clisting">CloneableFont</span> sind somit ein Konstruktor und eine Methode vermerkt.
+                                                </p>
+                                                <p>Dazu kurz ein Blick auf die Ausgabe des Dienstprogramms <span class="cbegriff">javap</span>, das die Signaturen anzeigt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> javap com.tutego.insel.nongeneric.CloneableFont</span><br>Compiled from "CloneableFont.java"<br>public class com.tutego.insel.nongeneric.CloneableFont extends java.awt.Font{<br>    public com.tutego.insel.nongeneric.CloneableFont(java.lang.String, int, int);<br>    public<span class="cfett"> java.lang.Object clone()</span>;<br>}<br></pre></div>
+                                                <p>Nehmen wir nun an, eine zweite Klasse ist Nutzer von <span class="clisting">CloneableFont</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.28: </strong>com/tutego/insel/nongeneric/CloneableFontDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">CloneableFont font = new CloneableFont( "Arial", Font.BOLD, 12 );<br>Object font2 =<span class="cfett"> font.clone()</span>;<br></pre></div>
+                                                <p>Beim Aufruf <span class="clisting">font.clone()</span> prüft der Compiler, ob die Methode <span class="clisting">clone()</span> in <span class="clisting">CloneableFont</span> aufrufbar ist, und trägt dann die exakte Signatur mit Rückgabe &#8211; das ist der entscheidende
+                                                   Punkt &#8211; im Bytecode ein. Die Anweisung <span class="clisting">font.clone()</span> sieht im Bytecode von CloneableFontDemo.class etwa so aus (disassembliert mit <span class="cbegriff">javap</span>):
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">invokevirtual #23;<br></pre></div>
+                                                <p>Die <span class="clisting">#23</span> ist ein Verweis auf die <span class="clisting">clone()</span>-Methode von <span class="clisting">CloneableFont</span>, und <span class="clisting">invokevirtual</span> ist der Bytecodebefehl zum Aufruf der Methode. Hinter der 23 steckt eine JVM-Methodenkennung,
+                                                   die von <span class="cbegriff">javap</span> so ausgegeben wird:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">com/tutego/insel/nongeneric/CloneableFont.clone:()Ljava/lang/Object;<br></pre></div>
+                                                <p>Im Bytecode steht exakt ein Verweis auf die Methode <span class="clisting">clone()</span> mir dem Rückgabetyp <span class="clisting">Object</span>.
+                                                </p>
+                                                <p>Seit Java 5 ist eine kleine Änderung beim Überschreiben hinzugekommen. Wenn eine Unterklasse
+                                                   eine Methode überschreibt, kann sie den Rückgabetyp auf einen Untertyp präzisieren
+                                                   &#8211; das nennt sich <span class="cbegriff">kovariantes Überschreiben</span><a class="indexterm" id="dodtp3dcaa0c4-8120-4cad-8975-5e46b2c31817"></a>. Also kann <span class="clisting">clone()</span> statt <span class="clisting">Object</span> jetzt <span class="clisting">Font</span> zurückgeben.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.14: </strong>Beispiel kovarianter Rückgabetypen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Gleicher Rückgabetyp wie die <br>überschriebene Methode</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Konvarianter Rückgabetyp, seit Java 5</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <p class="plistingunter"><strong>Listing 9.29: </strong>com/tutego/insel/nongeneric/CloneableFont.java, clone()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">@Override public<span class="cfett"> Object</span> clone()<br>{<br> return new Font( getAttributes() );<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <p class="plistingunter"><strong>Listing 9.30: </strong>com/tutego/insel/generic/CloneableFont.java, clone()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">@Override public<span class="cfett"> Font</span> clone()<br>{<br> return new Font( getAttributes() );<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Da der Rückgabetyp der überschriebenen Methode nun nicht mehr <span class="clisting">Object</span>, sondern <span class="clisting">Font</span> ist, ändert sich auch der Bytecode von <span class="clisting">CloneableFont</span>. Die Datei CloneableFont.class ist ohne konvariante Rückgabe 593 Byte groß und mit konvarianter Rückgabe 739 Byte.
+                                                   (Warum dieser satte Unterschied? Dazu später mehr.)
+                                                </p>
+                                                <p>Stellen wir uns nun Folgendes vor: Die erste Version von <span class="clisting">CloneableFont</span> wurde lange vor Java 5 implementiert und konnte so noch kein kovariantes Überschreiben
+                                                   nutzen. Die Klasse <span class="clisting">CloneableFont</span> ist unglaublich populär, und die Methode <span class="clisting">clone()</span> &#8211; die <span class="clisting">Object</span> liefert &#8211; wird von vielen Stellen aufgerufen. Im Bytecode der nutzenden Klassen gibt
+                                                   es also immer einen Bezug auf die Methode mit der JVM-Signatur:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">com/tutego/insel/nongeneric/CloneableFont.clone:()Ljava/lang/Object;<br></pre></div>
+                                                <p>Bei einem Refactoring geht der Autor der Klasse <span class="clisting">CloneableFont</span> über seine Klasse und sieht, dass er bei <span class="clisting">clone()</span> die kovariante Rückgabe nutzen kann. Er korrigiert die Methode und setzt statt <span class="clisting">Object</span> den Typ <span class="clisting">Font</span> ein. Er kompiliert die Klasse und setzt sie wieder in die Öffentlichkeit.
+                                                </p>
+                                                <p>Nun stellt sich die Frage, was mit den Nutzern ist, also Klassen wie  <span class="clisting">CloneableFontDemo</span>, die nicht neu übersetzt werden. Denn sie suchen eine Methode mit dieser JVM-Signatur:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">com/tutego/insel/nongeneric/CloneableFont.clone:()Ljava/lang/Object;<br></pre></div>
+                                                <p>Da <span class="clisting">clone()</span> in <span class="clisting">CloneableFont</span> in der aktuell Version nun <span class="clisting">Font</span> zurückgibt, müsste die JVM einen Fehler auslösen, denn der Bytecode ist ja anders,
+                                                   und die gefragte Methode mit der Rückgabe <span class="clisting">Object</span> ist nicht mehr da. Das wäre ein riesiges Problem, denn so würden durch die Änderung
+                                                   des Autors alle nutzenden Klassen illegal, und die Projekte mit diesen Klassen ließen
+                                                   sich alle nicht mehr übersetzen.
+                                                </p>
+                                                <p>Doch es gibt kein Anlass zur Panik. Es kommt nicht zu einem Compilerfehler, da der
+                                                   Compiler eine Hilfsmethode einfügt, die in der JVM-Signatur mit der Java 1.4-Variante
+                                                   von <span class="clisting">clone()</span>, also mit der Rückgabe <span class="clisting">Object</span>, übereinstimmt. Der Disassember <span class="cbegriff">javap</span> zeigt das gut:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> javap com.tutego.insel.generic.CloneableFont</span><br>Compiled from "CloneableFont.java"<br>public class com.tutego.insel.generic.CloneableFont extends java.awt.Font{<br>    public com.tutego.insel.generic.CloneableFont(java.lang.String, int, int);<br>    public<span class="cfett"> java.awt.Font clone()</span>;<br>    public<span class="cfett"> java.lang.Object clone()</span> throws java.lang.CloneNotSupportedException;<br>}<br></pre></div>
+                                                <p>Die <span class="clisting">clone()</span>-Methode gibt es also zweimal! Interessant ist die Besonderheit, dass Dinge im Bytecode
+                                                   erlaubt sind, die im Java-Programmcode nicht möglich sind. In Java gehört der Rückgabetyp
+                                                   nicht zur Signatur, und der Java-Compiler erlaubt nicht zwei Methoden mit der gleichen
+                                                   Signatur. Im Bytecode allerdings gehört der Rückgabetyp schon dazu, und daher sind
+                                                   die Methoden dort erlaubt, da sie klar unterscheidbar sind.
+                                                </p>
+                                                <p>Übersetzt ein Java 5-Compiler die Klasse <span class="clisting">CloneableFont</span> mit dem kovarianten Rückgabetyp bei <span class="clisting">clone()</span>, so setzt er automatisch die Brückenmethode ein. Das erklärt auch, warum der Bytecode
+                                                   der Klassen mit konvarianten Rückgabetypen größer ist. So finden auch die alten Klassen,
+                                                   die auf die ursprüngliche <span class="clisting">clone()</span>-Methode mit der Rückgabe <span class="clisting">Object</span> compiliert sind, diese Methode, und es gibt keinen Laufzeitfehler.
+                                                </p>
+                                                <p>Als Letztes muss noch geklärt werden, was der Compiler eigentlich genau für eine Brückenmethode
+                                                   generiert. Das ist einfach, denn in die Brückenmethode setzt der Compiler eine Weiterleitung.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">@Override public Font clone()<br>{<br>  return new Font( getAttributes() );<br>}<br>@Override public Object clone()<br>{<br> <span class="cfett"> return (Font) clone()</span>;<br>}<br></pre></div>
+                                                <p>Bleibt festzuhalten, dass auf Ebene der JVM kovariante Rückgabetypen nicht möglich
+                                                   sind und im Bytecode immer die Methode inklusive Rückgabetyp referenziert wird.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In Java sind alle Methoden einer Klasse, die sich auch im Bytecode befinden, über
+                                                               Reflection zugänglich. Lästig wäre es nun, wenn Tools Methoden sehen, die vom Compiler
+                                                               eingeführt werden, weil dieser herumtricksen und Beschränkungen umschiffen muss. Die
+                                                               Brückenmethoden werden daher mit einem speziellen Flag markiert und als <span class="cbegriff">synthetische Methoden</span><a class="indexterm" id="dodtp3cdb65d4-c8ff-4c3f-b4d6-db3b4f2fcf34"></a> (engl. <span class="cbegriff">synthetic method</span>) gekennzeichnet. Das Flag lässt sich über Reflection mit <span class="clisting">isSynthetic()</span> an den <span class="clisting">Field</span>-Objekten erfragen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp75e62627-8f39-4d7e-a39e-f0e10267c59f" name="dodtp75e62627-8f39-4d7e-a39e-f0e10267c59f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Brückenmethode wegen einer Typvariable in der Rückgabe</span></h4>
+                                                <p>Werfen wir einen Blick auf ein ähnliches Szenario, bei dem der Rückgabetyp durch eine
+                                                   Typvariable einer generisch deklarierten Klasse bestimmt wird, und sehen wir uns an,
+                                                   welche Konsequenzen sich im Bytecode daraus ergeben.
+                                                </p>
+                                                <p>Die Schnittstelle <span class="clisting">Iterator</span> dient im Wesentlichen dazu, Datensammlungen nach ihren Daten zu fragen. Die beiden
+                                                   Spalten zeigen die Deklaration der <span class="clisting">Iterator</span>-Schnittstelle unter Java 1.4 und Java 5.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.15: </strong>Veränderung der Implementierung der Schnittstelle Iterator
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Java 1.4</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Java 5</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">public interface Iterator<br>{<br>  boolean hasNext();<br> <span class="cfett"> Object</span> next();<br>  void remove();<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">public interface Iterator<span class="cfett">&lt;E&gt;</span><br>{<br>  boolean hasNext();<br> <span class="cfett"> E</span> next();<br>  void remove();<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>So soll <span class="clisting">hasNext()</span> immer <span class="clisting">true</span> ergeben, wenn der Iterator weitere Daten liefern kann, und <span class="clisting">next()</span> liefert schlussendlich das Datum selbst. In der Variante unter Java 5 ist der Rückgabetyp
+                                                   von <span class="clisting">next()</span> durch die Typvariable bestimmt.
+                                                </p>
+                                                <p>Warum Brückenmethoden benötigt werden, zeigt wieder ein Beispiel, in dem Entwickler
+                                                   mit Java 1.4 begannen und später ihr Programm mit Generics verfeinern. Trotz der Änderung
+                                                   muss eine alte, mit Java 1.4 compilierte Version noch funktionieren.
+                                                </p>
+                                                <p>Üblicherweise liefern Iteratoren alle Elemente einer Datenstruktur. Doch anstatt durch
+                                                   eine Datenstruktur zu laufen, soll unser Iterator, ein <span class="clisting">EndlessRandomIterator</span>, unendlich viele Zufallszahlen liefen. Wir interessieren uns besonders für die Implementierung
+                                                   der Schnittstelle <span class="clisting">Iterator</span>. Ohne Generics unter Java 1.4 sieht das so aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 9.31: </strong>com/tutego/insel/nongeneric/EndlessRandomIterator.java, EndlessRandomIterator
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class EndlessRandomIterator implements Iterator<br>{<br>  public boolean hasNext() { return true; }<br>  public Object next() { return Double.valueOf( Math.random() ); }<br>  public void remove() { throw new UnsupportedOperationException(); }<br>}<br></pre></div>
+                                                <p>Ein Programm, das den <span class="clisting">EndlessRandomIterator</span> nutzt, empfängt bei <span class="clisting">next()</span> nun ein <span class="clisting">Double</span>. Aber durch den Ausschluss der Konvarianz in Java 1.4 kann durch die Deklaration
+                                                   von <span class="clisting">Object next()</span> in <span class="clisting">Iterator</span> in unserer Klasse <span class="clisting">EndlessRandomIterator</span> auch nur <span class="clisting">Object next()</span> stehen. Ein Nutzer von <span class="clisting">next()</span> wird also auf jeden Fall die Methode <span class="clisting">next()</span> mit dem Rückgabetyp <span class="clisting">Object</span> erwarten und so im Bytecode vermerken &#8211; die Begründung hatten wir schon bei der Konvarianz
+                                                   im vorangehenden Unterkapitel aufgeführt.
+                                                </p>
+                                                <p>Wird unter Java 5 der <span class="clisting">EndlessRandomIterator</span> überarbeitet, ändern sich drei Dinge. Erstens wird <span class="clisting">implements Iterator</span> zu <span class="clisting">implements Iterator&lt;Double&gt;</span>. Dann wird <span class="clisting">Object next()</span> zu <span class="clisting">Double next()</span>, und drittens kann es im Rumpf von <span class="clisting">next()</span> durch das Autoboxing etwas kürzer werden, nämlich <span class="clisting">return Math.random()</span>. Der wichtige Punkt ist aber, dass sich der Rückgabetyp von <span class="clisting">next()</span> ändert, also von <span class="clisting">Object</span> auf <span class="clisting">Double</span> geht. An der Stelle muss aber der Compiler mit einer Brückenmethode eingreifen, sodass
+                                                   im Bytecode wieder zwei <span class="clisting">next()</span>-Methoden stehen: Einmal <span class="clisting">Object next()</span> und dann <span class="clisting">Double next()</span>. Denn ohne <span class="clisting">Double next()</span> würde der alte Programmcode, der <span class="clisting">Object next()</span> erwartet, plötzlich nicht mehr laufen, und das wäre ein Bruch zu der Abwärtskompatibilität.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_09_006.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="9 Generics<T&gt;"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_09_005.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_10_001.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

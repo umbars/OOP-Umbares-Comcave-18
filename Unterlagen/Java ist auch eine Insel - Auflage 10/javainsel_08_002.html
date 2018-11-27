@@ -1,0 +1,1568 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 8 Besondere Klassen der Java SE">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_08_001.html">
+      <link rel="next" href="javainsel_08_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_08_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_08_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2" class="navnav">8 Besondere Klassen der Java SE</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_001.html#dodtp0f5ac799-f7ce-41d5-9073-b15f98adae5b" class="navnav">8.1 Vergleichen von Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtpf93d4e76-3122-4f02-8495-d7d2908d68bf" class="navnav">8.1.1 Natürlich geordnet oder nicht?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp4a934131-0b47-4f1f-884e-5c9faf8325c7" class="navnav">8.1.2 Die Schnittstelle Comparable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp8edbe604-59a5-420d-a839-74f619e7e1b6" class="navnav">8.1.3 Die Schnittstelle Comparator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp1cf0c0c2-ce45-4c7b-b453-9d3791143c3d" class="navnav">8.1.4 Rückgabewerte kodieren die Ordnung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp544be6d7-a3fd-4d98-b0f8-ea6119e96e0f" class="navnav">8.1.5 Aneinanderreihung von Comparatoren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_002.html#dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c" class="navh">8.2 Wrapper-Klassen und Autoboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97" class="navh">8.2.1 Wrapper-Objekte erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4" class="navh">8.2.2 Konvertierungen in eine String-Repräsentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7" class="navh">8.2.3 Die Basisklasse Number für numerische Wrapper-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74" class="navh">8.2.4 Vergleiche durchführen mit compare(), compareTo(), equals()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpba747def-0829-46eb-a791-595b56eff415" class="navh">8.2.5 Die Klasse Integer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb" class="navh">8.2.6 Die Klassen Double und Float für Fließkommazahlen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0" class="navh">8.2.7 Die Long-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a" class="navh">8.2.8 Die Boolean-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51" class="navh">8.2.9 Autoboxing: Boxing und Unboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_003.html#dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d" class="navnav">8.3 Object ist die Mutter aller Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp1c2db719-9c1c-4e95-9208-64643ed9babc" class="navnav">8.3.1 Klassenobjekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpbf055f27-490c-4148-a955-819b36d0cd51" class="navnav">8.3.2 Objektidentifikation mit toString()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e" class="navnav">8.3.3 Objektgleichheit mit equals() und Identität</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp63daf072-81ed-4188-9a1b-64521d364767" class="navnav">8.3.4 Klonen eines Objekts mit clone() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp248f0914-64c9-4589-85de-8cb74c323ed8" class="navnav">8.3.5 Hashcodes über hashCode() liefern *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1" class="navnav">8.3.6 System.identityHashCode() und das Problem der nicht-eindeutigen Objektverweise
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpad2681f1-8a07-4617-988a-9a64198ded40" class="navnav">8.3.7 Aufräumen mit finalize() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpdfced107-4bf2-420c-95bb-0f2b04af7792" class="navnav">8.3.8 Synchronisation *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_004.html#dodtpfc49aba3-08d5-430d-bb10-96486332dcb0" class="navnav">8.4 Die Utility-Klasse java.util.Objects</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_005.html#dodtp37a70409-bf30-4fe0-b785-84b4d19a0209" class="navnav">8.5 Die Spezial-Oberklasse Enum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01" class="navnav">8.5.1 Methoden auf Enum-Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtp9f96ff67-0127-4772-963e-6994eda2a76c" class="navnav">8.5.2 enum mit eigenen Konstruktoren und Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_006.html#dodtp1294c04b-60f3-407d-9a84-6333cbf47b24" class="navnav">8.6 Erweitertes for und Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtpd906cbea-163a-42aa-b050-12634ec73599" class="navnav">8.6.1 Die Schnittstelle Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtp306180fa-db47-4be9-911b-c74f5ab3bf58" class="navnav">8.6.2 Einen eigenen Iterable implementieren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_007.html#dodtp7fb05f7b-70ee-4dda-941d-b8aedaf9c55d" class="navnav">8.7 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c" name="dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c"></a><h2 class="t2"><span class="cfett">8.2</span><span class="cfett"> Wrapper-Klassen und Autoboxing</span><a href="#dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Die Klassenbibliothek bietet für jeden primitiven Datentyp wie <span class="clisting">int</span>, <span class="clisting">double</span>, <span class="clisting">char</span> spezielle Klassen an. Diese sogenannten Wrapper-Klassen<a class="indexterm" id="dodtpaf42d62a-81d1-4be3-baa5-ed82d39fa0c9"></a> (auch <span class="cbegriff">Ummantelungsklassen</span>, <span class="cbegriff">Mantelklassen</span><a class="indexterm" id="dodtpcdf1d648-71cf-4e9b-bb2b-040754ce9502"></a> oder <span class="cbegriff">Envelope Classes</span> genannt) erfüllen drei wichtige Aufgaben:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Wrapper-Klassen bieten statische Hilfsmethoden zur Konvertierung eines primitiven
+                                                      Datentyps in einen String (Formatierung) und vom String zurück in einen primitiven
+                                                      Datentyp (Parsen).
+                                                   </li>
+                                                   <li>Die Datenstrukturen wie Listen und Mengen, die in Java Verwendung finden, können nur
+                                                      Referenzen aufnehmen. So stellt sich das Problem, wie primitive Datentypen diesen
+                                                      Containern hinzugefügt werden können. Wrapper-Objekte kapseln einen einfachen primitiven
+                                                      Wert in einem Objekt, sodass eine Referenz existiert, die etwa in einer vorgefertigten
+                                                      Datenstruktur gespeichert werden kann.
+                                                   </li>
+                                                   <li>Der Wrapper-Typ ist wichtig bei Generics. Wenn etwa ein spezieller <span class="clisting">Comparator</span> zwei Fließkommazahlen vergleichen soll, ist eine <span class="clisting">Comparator</span>-Implementierung mit <span class="clisting">Comparator&lt;double&gt;</span> nicht korrekt, es muss <span class="clisting">Comparator&lt;Double&gt;</span> heißen. Primitive Datentypen gibt es auch bei Generics nicht, es kommen immer die
+                                                      Wrapper-Typen zum Einsatz.
+                                                   </li>
+                                                </ul>
+                                                <p>Es existieren Wrapper-Klassen zu allen primitiven Datentypen.</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 8.1: </strong>Wrapper-Klassen und primitive Datentypen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Wrapper-Klasse</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Primitiver Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Byte</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">byte</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Short</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">short</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Long</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">long</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">double</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Float</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">float</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Boolean</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">boolean</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">char</span> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Für <span class="clisting">void</span>, das kein Datentyp ist, existiert die Klasse <span class="clisting">Void</span>. Sie deklariert nur die Konstante <span class="clisting">TYPE</span> vom Typ <span class="clisting">Class&lt;Void&gt;</span> und ist für Reflection (das Auslesen von Eigenschaften einer Klasse) interessanter.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>In diesem Abschnitt wollen wir uns zunächst um das Erzeugen von Wrapper-Objekten kümmern,
+                                                   dann um Methoden, die in allen Wrapper-Klassen vorkommen, und schließlich die individuellen
+                                                   Methoden der einzelnen Wrapper-Klassen vorstellen. Der Klasse <span class="clisting">Character</span> haben wir uns schon zu Beginn von Kapitel 4, »Der Umgang mit Zeichenketten«, gewidmet,
+                                                   als es um Zeichen und Zeichenketten ging.
+                                                </p><a href="bilder/08_002.png" rel="lightbox" title="Vererbungsbeziehung der Wrapper-Klassen (Boolean ist ebenfalls Serializable)"><img class="bild" border="1" src="bilderklein/klein08_002.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.2: </strong>Vererbungsbeziehung der Wrapper-Klassen (Boolean ist ebenfalls Serializable)
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97" name="dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97"></a><h3 class="t3"><span class="cfett">8.2.1</span><span class="cfett"> Wrapper-Objekte erzeugen</span><a href="#dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wrapper-Objekte lassen sich auf drei Arten aufbauen:</p>
+                                                <ul class="gp">
+                                                   <li>über statische <span class="clisting">valueOf()</span><a class="indexterm" id="dodtp0cd17401-78f2-4469-8375-12ecfa669825"></a>-Methoden, denen ein primitiver Ausdruck oder ein String übergeben wird
+                                                   </li>
+                                                   <li>über Boxing: Aus einem primitiven Wert erzeugt der Compiler automatisch <span class="clisting">valueOf()</span>-Methodenaufrufe, die das Wrapper-Objekt liefern.
+                                                   </li>
+                                                   <li>über Konstruktoren der Wrapper-Klassen</li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Erzeuge einige Wrapper-Objekte:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Integer  int1 = <span class="cfett">Integer.valueOf(</span> "<span class="cfett">30" )</span>;  // valueOf()<br>Long     lng1 = <span class="cfett">Long.valueOf( 0xC0B0L )</span>;  // valueOf()<br>Integer  int2 = <span class="cfett">new Integer( 29 )</span>;        // Konstruktor<br>Long     lng2 = <span class="cfett">new Long( 0xC0B0L )</span>;      // Konstruktor<br>Double   dobl = <span class="cfett">new Double( 12.3 )</span>;       // Konstruktor<br>Boolean  bool = true;                     // Boxing<br>Integer  int3 = 42;                       // Boxing<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Nun gibt es also drei Möglichkeiten, an Wrapper-Objekte zu kommen. Ganz selbstverständlich
+                                                   stellt sich die Frage, ob es eine bevorzugte Variante gibt. Boxing ist vom Schreibaufwand
+                                                   her gesehen die kürzeste und im Allgemeinen die beste, weil kompakteste Variante.
+                                                   (Boxing ist allerdings nicht ganz unproblematisch, wie der Abschnitt »Mehr Probleme
+                                                   als Lösungen durch Autoboxing? *« zeigt.) Da Boxing auf die <span class="clisting">valueOf()</span>-Methoden zugreift, sind die beiden Varianten semantisch identisch und unterscheiden
+                                                   sich nur im Programmcode, aber nicht im Bytecode. Uns bleibt daher die Lösung »Konstruktor
+                                                   versus <span class="clisting">valueOf()</span>«. Eine statische Methode zum Erzeugen von Objekten einzusetzen ist clever, da anders
+                                                   als ein Konstruktor eine statische Methode Objekte nicht immer neu erzeugen muss,
+                                                   sondern auch auf vorkonstruierte Objekte zurückgreifen kann. Und das ist genau das,
+                                                   was <span class="clisting">valueOf()</span> bei den drei Klassen <span class="clisting">Byte</span>, <span class="clisting">Short</span>, <span class="clisting">Integer</span> und <span class="clisting">Long</span> macht: Stammen die Ganzzahlen aus dem Wertebereich &#8211;128 bis +127, so greift <span class="clisting">valueOf()</span> auf vorbereitete Objekte aus einem Cache zurück. Das Ganze klappt natürlich nur,
+                                                   weil Aufrufer von <span class="clisting">valueOf()</span> ein unveränderliches (engl. immutable) Objekt bekommen &#8211; ein Wrapper-Objekt kann nach dem Aufbau nicht verändert werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In der Wrapper-Klasse <span class="clisting">Integer</span> gibt es drei statische überladene Methoden <span class="clisting">getInteger(String)</span>, <span class="clisting">getInteger(String, int)</span>, <span class="clisting">getInteger(String, Integer)</span>, die von Spracheinsteigern wegen der gleichen Rückgabe und Parameter schnell mit
+                                                               der <span class="clisting">valueOf(String)</span>-Methode verwechselt werden können. Allerdings lesen die <span class="clisting">getInteger(String)</span><a class="indexterm" id="dodtp5b452a1b-6337-411c-8d9e-9b25df979697"></a>-Methoden eine Umgebungsvariable aus und haben somit eine völlig andere Aufgabe als
+                                                               <span class="clisting">valueOf(String)</span>. In der Wrapper-Klasse <span class="clisting">Boolean</span> gibt es mit <span class="clisting">getBoolean(String)</span><a class="indexterm" id="dodtpbdf647ce-444b-46fc-904f-b00c803f0cb0"></a> Vergleichbares. Die anderen Wrapper-Klassen haben keine Methoden zum Auslesen einer
+                                                               Umgebungsvariable.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpcc36f2f5-f472-40bc-9585-ead3c4ed47e7" name="dodtpcc36f2f5-f472-40bc-9585-ead3c4ed47e7"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wrapper-Objekte sind immutable</span></h4>
+                                                <p>Ist ein Wrapper-Objekt erst einmal erzeugt, lässt sich der im Wrapper-Objekt gespeicherte
+                                                   Wert nachträglich nicht mehr verändern. Um dies auch wirklich sicherzustellen, sind
+                                                   die konkreten Wrapper-Klassen allesamt final. Die Wrapper-Klassen sind nur als Ummantelung
+                                                   und nicht als vollständiger Datentyp gedacht. Da sich der Wert nicht mehr ändern lässt
+                                                   (er ist ja immutable), heißen Objekte mit dieser Eigenschaft auch <span class="cbegriff">Werte-Objekte</span><a class="indexterm" id="dodtp8c834e9e-e663-47af-8fc9-443cd239f5eb"></a>. Wollen wir den Inhalt eines <span class="clisting">Integer</span>-Objekts <span class="clisting">io</span> zum Beispiel um eins erhöhen, so müssen wir ein neues Objekt aufbauen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int i = 12;<br>Integer io = Integer.valueOf( i );<span class="cfett"><br>io = Integer.valueOf( io.intValue() + 1 );</span><br>i = io.intValue();<br></pre></div>
+                                                <p>Die Variable <span class="clisting">io</span> referenziert nun ein zweites <span class="clisting">Integer</span>-Objekt, und der Wert vom ersten <span class="clisting">io</span>-Objekt mit <span class="clisting">12</span> bleibt unangetastet.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4" name="dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4"></a><h3 class="t3"><span class="cfett">8.2.2</span><span class="cfett"> Konvertierungen in eine String-Repräsentation</span><a href="#dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpcc36f2f5-f472-40bc-9585-ead3c4ed47e7"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Alle Wrapper-Klassen bieten statische <span class="clisting">toString(value)</span>-Methoden zur Konvertierung des primitiven Elements in einen String an:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.6: </strong>com/tutego/insel/wrapper/WrapperToString.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">String s1 =<span class="cfett"> Integer.toString</span>( 1234567891 ),<br>       s2 =<span class="cfett"> Long.toString</span>( 123456789123L ),<br>       s3 =<span class="cfett"> Float.toString</span>( 12.345678912f ),<br>       s4 =<span class="cfett"> Double.toString</span>( 12.345678912 ),<br>       s5 =<span class="cfett"> Boolean.toString</span>( true );<br>System.out.println( s1 );  // 1234567891<br>System.out.println( s2 );  // 123456789123<br>System.out.println( s3 );  // 12.345679<br>System.out.println( s4 );  // 12.345678912<br>System.out.println( s5 );  // true<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein Java-Idiom<span class="footnote"><a id="dodtpfe92686d-55b8-4f07-858f-f07cc59e5288">[159](Es ist wiederum ein JavaScript-Idiom, mit dem Ausdruck s – 0 aus einem String eine Zahl zu machen,
+wenn denn die Variable s eine String-Repräsentation einer Zahl ist.)</a></span> zur Konvertierung ist auch folgende Anweisung:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String s = "" + number;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der String erscheint immer in der englisch geschriebenen Variante. So steht bei den
+                                                   Dezimalzahlen ein Punkt statt des uns vertrauten Kommas.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Bei der Darstellung von Zahlen ist eine landestypische (länderspezifische) Formatierung
+                                                               sinnvoll. Das kann <span class="clisting">printf()</span> leisten:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.printf( "%f", 1000000. );     // 1000000,000000<br>System.out.printf( "%f", 1234.567 );     // 1234,567000<br>System.out.printf( "%,.3f", 1234.567 );  // 1.234,567<br></pre></div>
+                                                               Der Formatspezifizierer für Fließkommazahlen ist <span class="clisting">%f</span>. Die zusätzliche Angabe mit <span class="clisting">,.3f</span> im letzten Fall führt zum Tausenderpunkt und zu drei Nachkommastellen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpd61d5c8d-834d-48cd-bd09-389066f81009" name="dodtpd61d5c8d-834d-48cd-bd09-389066f81009"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> toString() als Objekt- und Klassenmethode</span></h4>
+                                                <p>Liegt ein Wrapper-Objekt vor, so liefert die Objektmethode <span class="clisting">toString()</span> die String-Repräsentation des Wertes, den das Wrapper-Objekt speichert. Dass es gleichlautende
+                                                   statische Methoden <span class="clisting">toString()</span> und eine Objektmethode <span class="clisting">toString()</span> gibt, sollte uns nicht verwirren; während die Klassenmethode den Arbeitswert zur
+                                                   Konvertierung aus dem Argument zieht, nutzt die Objektmethode den gespeicherten Wert
+                                                   im Wrapper-Objekt.
+                                                </p>
+                                                <p>Anweisungen, die ausschließlich zum Konvertieren über das Wrapper-Objekt gehen, wie
+                                                   <span class="clisting">new Integer(v).toString()</span>, lassen sich problemlos umschreiben in <span class="clisting">Integer</span>.<span class="clisting">toString(v)</span>. Zudem bietet sich auch die überladene statische Methode <span class="clisting">String.valueOf(v)</span> an, die           &#8211; eben weil sie überladen ist &#8211; für alle möglichen Datentypen deklariert
+                                                   ist (doch nutzt <span class="clisting">valueOf(v)</span> intern auch nur <span class="clisting">WrapperKlasse.toString(v)</span>).
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7" name="dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7"></a><h3 class="t3"><span class="cfett">8.2.3</span><span class="cfett"> Die Basisklasse Number für numerische Wrapper-Objekte</span><a href="#dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd61d5c8d-834d-48cd-bd09-389066f81009"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Alle numerischen Wrapper-Klassen können den gespeicherten Wert in einem beliebigen
+                                                   anderen numerischen Typ liefern. Die Methodennamen setzen sich &#8211; wie zum Beispiel
+                                                   <span class="clisting">doubleValue()</span> und <span class="clisting">intValue()</span> &#8211; aus dem Namen des gewünschten Typs und <span class="clisting">Value</span> zusammen. Technisch gesehen überschreiben die Wrapper-Klassen <span class="clisting">Byte</span><a class="indexterm" id="dodtp2af885b5-b43e-40d1-9ef9-0ce91ddd633a"></a>, <span class="clisting">Short</span><a class="indexterm" id="dodtpe845a0bc-15ab-4d0d-a052-2b81a9f17b11"></a>, <span class="clisting">Integer</span><a class="indexterm" id="dodtp13f109dc-b99f-42fd-9fb1-12b47d61a435"></a>, <span class="clisting">Long</span><a class="indexterm" id="dodtpad12ec30-54eb-454b-938f-06c02e00132c"></a>, <span class="clisting">Float</span><a class="indexterm" id="dodtp825dfdc0-4ed6-4a99-b0f2-ccbebe494204"></a> und <span class="clisting">Double</span><a class="indexterm" id="dodtp9a9d05e8-3c79-44d3-b254-1795c1993367"></a> aus einer Klasse <span class="clisting">Number</span><a class="indexterm" id="dodtpc388efb0-4f0e-446d-bcb7-4299eeeb0fea"></a><span class="footnote"><a id="dodtpc19964ce-c6e4-4da6-b666-abc014aacb18">[160](Zusätzlich erweitern BigDecimal und BigInteger die Klasse Number und haben damit ebenfalls die xxx-
+Value()-Methoden. In Java 5 kamen AtomicInteger und AtomicLong hinzu, die aber nicht immutable
+sind wie die anderen Klassen.)</a></span> die <span class="clisting">xxxValue()</span>-Methoden<span class="footnote"><a id="dodtp032d2b74-7467-4cec-a5b9-8cc09e72c3aa">[161](Nur die Methoden byteValue() und shortValue() sind nicht abstrakt und müssen nicht überschrieben
+werden. Diese Methoden rufen intValue() auf und konvertieren den Wert über eine Typanpassung
+auf byte und short.)</a></span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.lang.<span class="cfett">Number</span><br>implements Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">byte byteValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">byte</span>.
+                                                   </li>
+                                                   <li><span class="clisting">abstract double doubleValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">double</span>.
+                                                   </li>
+                                                   <li><span class="clisting">abstract float floatValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">float</span>.
+                                                   </li>
+                                                   <li><span class="clisting">abstract int intValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">int</span>.
+                                                   </li>
+                                                   <li><span class="clisting">abstract long longValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">long</span>.
+                                                   </li>
+                                                   <li><span class="clisting">short shortValue()</span><br>Liefert den Wert der Zahl als <span class="clisting">short</span>.
+                                                   </li>
+                                                </ul><a href="bilder/08_003.png" rel="lightbox" title="UML-Diagramm für Number"><img class="bild" border="1" src="bilderklein/klein08_003.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.3: </strong>UML-Diagramm für Number
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wenn die Operandentypen beim Bedingungsoperator unterschiedlich sind, gibt es ganz
+                                                               automatisch eine Anpassung:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">boolean b = true;<br>System.out.println(  b ? 1 : 0.1 );  // 1.0<br>System.out.println( !b ? 1 : 0.1 );  // 0.1<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der Ergebnistyp ist <span class="clisting">double</span>, sodass die Ganzzahl 1 als 1.0, also als Fließkommazahl, ausgegeben wird. Die gleiche
+                                                               Anpassung nimmt der Compiler bei Wrapper-Typen vor, die er unboxt und konvertiert:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Integer i = 1;<br>Double  d = 0.1;<br>System.out.println(  b ? i : d );   // 1.0<br>System.out.println( !b ? i : d );   // 0.1<br></pre></div>
+                                                               Während diese Ausgabe eigentlich klar ist, kann es zu einem Missverständnis kommen,
+                                                               wenn das Ergebnis nicht einfach ausgegeben, sondern als Verweis auf das resultierende
+                                                               Wrapper-Objekt zwischengespeichert wird. Da der Typ im Beispiel entweder <span class="clisting">Integer</span> oder <span class="clisting">Double</span> ist, kann der Ergebnistyp nur der Obertyp <span class="clisting">Number</span> sein:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Number n1 = b ? i : d;<br>System.out.println( n1 );           // 1.0<br>System.out.println( n1 == i );      // false<br></pre></div>
+                                                               Die Programmlogik und Ausgabe ist natürlich genauso wie vorher, doch Entwickler könnten
+                                                               annehmen, dass der Compiler keine Konvertierung durchführt, sondern entweder das originale
+                                                               <span class="clisting">Integer</span>- oder das <span class="clisting">Double</span>-Objekt referenziert; das macht er aber nicht. Die Variable <span class="clisting">n1</span> referenziert hier ein <span class="clisting">Integer</span>-ungeboxtes-<span class="clisting">double</span>-konvertiertes-<span class="clisting">Double</span>-geboxtes Objekt, und so sind die Referenzen von <span class="clisting">i</span> und <span class="clisting">n2</span> überhaupt nicht identisch. Wenn der Compiler hier wirklich die Originalobjekte zurückliefern
+                                                               soll, muss entweder das <span class="clisting">Integer</span>- oder das <span class="clisting">Double</span>-Objekt explizit auf <span class="clisting">Number</span> gebracht werden, sodass damit das Unboxing ausgeschaltet wird und der Bedingungsoperator
+                                                               nur noch von beliebigen nicht zu interpretierenden Referenzen ausgeht:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Number n2 = b ? (Number) i : d;     // oder Number n2 = b ? i : (Number) d;<br>System.out.println( n2 );           // 1<br>System.out.println( n2 == i );      // true<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74" name="dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74"></a><h3 class="t3"><span class="cfett">8.2.4</span><span class="cfett"> Vergleiche durchführen mit compare(), compareTo(), equals()</span><a href="#dodtpba747def-0829-46eb-a791-595b56eff415"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Haben wir zwei Ganzzahlen 1 und 2 vor uns, so ist es trivial zu sagen, dass 1 kleiner
+                                                   als 2 ist. Bei Fließkommazahlen ist das ein wenig komplizierter, da es hier »Sonderzahlen«
+                                                   wie Unendlich oder eine negative beziehungsweise positive 0 gibt. Da insbesondere
+                                                   Vergleichsalgorithmen die Beantwortung der Frage, ob zwei Werte <span class="clisting">a</span> und <span class="clisting">b</span> kleiner, größer oder gleich sind, erwarten, gibt es zwei Typen von Methoden in den
+                                                   Wrapper-Klassen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Sie implementieren eine Objektmethode <span class="clisting">compareTo()</span>. Die Methode ist nicht zufällig in der Klasse, denn Wrapper-Klassen implementieren
+                                                      die Schnittstelle <span class="clisting">Comparable</span><a class="indexterm" id="dodtp1ad9a30c-c810-4e30-8e5e-afcbdfefbbfb"></a> (wir haben die Schnittstelle schon am Anfang des Kapitels kurz vorgestellt).
+                                                   </li>
+                                                   <li>Wrapper-Klassen besitzen statische <span class="clisting">compare(x,y)</span><a class="indexterm" id="dodtp9f8a58e5-dac7-4e47-9247-41dca0593128"></a>-Methoden.
+                                                   </li>
+                                                </ul>
+                                                <p>Die Rückgabe der Methoden ist ein <span class="clisting">int</span>, und es kodiert, ob ein Wert größer, kleiner oder gleich ist.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Teste verschiedene Werte:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( <span class="cfett">Integer.compare(1, 2)</span> );         // &#8211;1<br>System.out.println( <span class="cfett">Integer.compare(1, 1)</span> );         //  0<br>System.out.println( <span class="cfett">Integer.compare(2, 1)</span> );         //  1<br><br>System.out.println( <span class="cfett">Double.compare(2.0, 2.1)</span> );      // &#8211;1<br>System.out.println( <span class="cfett">Double.compare(Double.NaN, 0)</span> ); //  1<br><br>System.out.println( <span class="cfett">Boolean.compare(true, false</span>) );  //  1<br>System.out.println( <span class="cfett">Boolean.compare(false, true</span>) );  // &#8211;1<br></pre></div>
+                                                               Ein <span class="clisting">true</span> ist »größer« als ein <span class="clisting">false</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Tabelle 8.2 fasst die Methoden der Wrapper-Klassen zusammen.</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 8.2: </strong>Methoden der Wrapper-Klassen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Klasse</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Methode aus Comparable</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Statische Methode compare()</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Byte</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Byte anotherByte)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(int x, int y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Short</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Short anotherShort)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(short x, short y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Float</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Float anotherFloat)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(float f1, float f2)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Double anotherDouble)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(double d1, double d2)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Integer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Integer anotherInteger)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(int x, int y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Long</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Long anotherLong)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(long x, long y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Character anotherChar)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(char x, char y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Boolean</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compareTo(Boolean b)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int compare(boolean x, boolean y)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Implementierung einer statischen Methode <span class="clisting">WrapperKlasse.compare()</span> ist äquivalent zu <span class="clisting">WrapperKlasse.valueOf(x).compareTo(WrapperKlasse.valueOf(y))</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Nur die genannten Wrapper-Klassen besitzen eine statische <span class="clisting">compare()</span>-Methode. Es ist kein allgemeingültiges Muster, dass, wenn eine Klasse <span class="clisting">Number</span> erweitert und <span class="clisting">Comparable</span> implementiert, sie dann auch eine statische <span class="clisting">compare()</span>-Methode hat. So erweitern zum Beispiel die Klassen <span class="clisting">BigInteger</span> und <span class="clisting">BigDecimal</span> die Oberklasse <span class="clisting">Number</span> und implementieren <span class="clisting">Comparable</span>, aber eine statische <span class="clisting">compare()</span>-Methode bieten sie trotzdem nicht.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp4aff0ceb-aacf-4772-85ab-29a7ad930a49" name="dodtp4aff0ceb-aacf-4772-85ab-29a7ad930a49"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Gleichheitstest über equals()</span></h4>
+                                                <p>Alle Wrapper-Klassen überschreiben aus der Basisklasse <span class="clisting">Object</span> die Methode <span class="clisting">equals()</span>. So lässt sich testen, ob zwei Wrapper-Objekte den gleichen Wert haben, auch wenn
+                                                   die Wrapper-Objekte nicht identisch sind.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Ergebnisse einiger Gleichheitstests:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Boolean.TRUE.equals( Boolean.TRUE )                                  true<br>Integer.valueOf( 1 ).equals( Integer.valueOf( 1 ) )                  true<br>Integer.valueOf( 1 ).equals( Integer.valueOf( 2 ) )                  false<br>Integer.valueOf( 1 ).equals( Long.valueOf( 1 ) )                     false<br>Integer.valueOf( 1 ).equals( 1L )                                    false<br></pre></div>
+                                                               Es ist wichtig zu wissen, dass der Parametertyp von <span class="clisting">equals()</span> immer <span class="clisting">Object</span> ist, aber die Typen gleich sein müssen, da andernfalls schon automatisch der Vergleich
+                                                               falsch ergibt. Das zeigen das vorletzte und das letzte Beispiel. Die <span class="clisting">equals()</span>-Methode aus Zeile 3 und 4 lehnt jeden Vergleich mit einem Nicht-<span class="clisting">Integer</span> ab, und ein <span class="clisting">Long</span> ist eben kein <span class="clisting">Integer</span>. In der letzten Zeile kommt Boxing zum Einsatz, daher sieht der Programmcode kürzer
+                                                               aus, aber entspricht dem aus der vorletzten Zeile.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Objektmethode <span class="clisting">equals()</span> der Wrapper-Klassen ist auch eine kurze Alternative zu <span class="clisting">wrapperObject.compareTo(anotherWrapperObjekt) == 0</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Ausblick
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Dass die Wrapper-Klassen <span class="clisting">equals()</span> implementieren, ist gut, denn so können Wrapper-Objekte problemlos in Datenstrukturen
+                                                               wie einer <span class="clisting">ArrayList</span> untergebracht und wieder gefunden werden. Und dass Wrapper-Objekte auch <span class="clisting">Comparable</span> sind, ist ebenfalls prima für Datenstrukturen wie <span class="clisting">TreeSet</span>, die &#8211; ohne extern gegebene <span class="clisting">Comparator</span>-Klassen für Vergleiche &#8211; eine natürliche Ordnung der Elemente erwarten.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpba747def-0829-46eb-a791-595b56eff415" name="dodtpba747def-0829-46eb-a791-595b56eff415"></a><h3 class="t3"><span class="cfett">8.2.5</span><span class="cfett"> Die Klasse Integer</span><a href="#dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp4aff0ceb-aacf-4772-85ab-29a7ad930a49"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">Integer</span> kapselt den Wert einer Ganzzahl vom Typ <span class="clisting">int</span> in einem Objekt und bietet Konstanten statische Methoden zur Konvertierung in einen
+                                                   String und zurück sowie weitere Hilfsmethoden mathematischer Natur an.
+                                                </p>
+                                                <p>Um aus dem String eine Zahl zu machen, nutzen wir <span class="clisting">Integer.parseInt(String)</span><a class="indexterm" id="dodtp8453b540-4d8a-4b40-b67c-26743bfb2f7c"></a>.
+                                                </p><a href="bilder/08_004.png" rel="lightbox" title="Klassendiagramm von Integer"><img class="bild" border="1" src="bilderklein/klein08_004.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.4: </strong>Klassendiagramm von Integer
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Konvertiere die Ganzzahl 38.317, die als String vorliegt, in eine Ganzzahl:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String number = "38317";<br>int integer = 0;<br>try<br>{<br>  integer = <span class="cfett">Integer.parseInt( number )</span>;<br>}<br>catch ( NumberFormatException e )<br>{<br>  System.err.println( "Fehler beim Konvertieren von " + number );<br>}<br>System.out.println( integer );<br></pre></div>
+                                                               Die <span class="clisting">NumberFormatException</span> ist eine nicht-geprüfte Exception &#8211; Genaueres dazu liefert das Kapitel 6, »Exceptions«
+                                                               &#8211;, muss also nicht zwingend in einem <span class="clisting">try</span>-Block stehen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die statische Methode <span class="clisting">Integer.parseInt(String)</span> konvertiert einen String in <span class="clisting">int</span>, und die Umkehrmethode <span class="clisting">Integer.toString(int)</span> liefert einen <span class="clisting">String</span>. Weitere Varianten mit unterschiedlicher Basis wurden schon in Abschnitt 4.5, »Konvertieren
+                                                   zwischen Primitiven und Strings«, vorgestellt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">Integer</span><br>extends Number<br>implements Comparable&lt;Integer&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static int parseInt(String s)</span><br>Erzeugt aus der Zeichenkette die entsprechende Zahl. Die Basis ist 10.
+                                                   </li>
+                                                   <li><span class="clisting">static int parseInt(String s, int radix)</span><br>Erzeugt die Zahl mit der gegebenen Basis.
+                                                   </li>
+                                                   <li><span class="clisting">static String toString(int i)</span><br>Konvertiert die Ganzzahl in einen String und liefert sie zurück.
+                                                   </li>
+                                                </ul>
+                                                <p><span class="clisting">parseInt()</span> erlaubt keine länderspezifischen Tausendertrennzeichen, etwa in Deutschland den Punkt
+                                                   oder im angelsächsischen Raum das Komma.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb" name="dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb"></a><h3 class="t3"><span class="cfett">8.2.6</span><span class="cfett"> Die Klassen Double und Float für Fließkommazahlen</span><a href="#dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpba747def-0829-46eb-a791-595b56eff415"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klassen <span class="clisting">Double</span> und <span class="clisting">Float</span> haben wie die anderen Wrapper-Klassen eine Doppelfunktionalität. Sie kapseln zum
+                                                   einen eine Fließkommazahl als Objekt und bieten zum anderen statische Utility-Methoden.
+                                                   Wir kommen in Kapitel 18, »Bits und Bytes und Mathematisches«, noch genauer auf die
+                                                   mathebezogenen Objekt- und Klassenmethoden zurück.
+                                                </p><a href="bilder/08_005.png" rel="lightbox" title="UML-Diagramm der Fließkommaklassen"><img class="bild" border="1" src="bilderklein/klein08_005.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.5: </strong>UML-Diagramm der Fließkommaklassen
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0" name="dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0"></a><h3 class="t3"><span class="cfett">8.2.7</span><span class="cfett"> Die Long-Klasse</span><a href="#dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><span class="clisting">Integer</span> und <span class="clisting">Long</span> sind im Prinzip API-gleich, nur ist der kleinere Datentyp <span class="clisting">int</span> durch <span class="clisting">long</span> ersetzt.
+                                                </p><a href="bilder/08_006.png" rel="lightbox" title="Klassendiagramm von Long"><img class="bild" border="1" src="bilderklein/klein08_006.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.6: </strong>Klassendiagramm von Long
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a" name="dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a"></a><h3 class="t3"><span class="cfett">8.2.8</span><span class="cfett"> Die Boolean-Klasse</span><a href="#dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">Boolean</span><a class="indexterm" id="dodtpf19d751a-b225-4c6c-bc6a-3eed4fc2c2b6"></a> kapselt den Datentyp <span class="clisting">boolean</span>. Sie deklariert als Konstanten zwei <span class="clisting">Boolean</span>-Objekte: <span class="clisting">TRUE</span><a class="indexterm" id="dodtp88657905-c561-481d-84b2-aa6f7e759913"></a> und <span class="clisting">FALSE</span><a class="indexterm" id="dodtp85854828-ad0b-46cf-b12b-99eaef30d871"></a>.
+                                                </p><a href="bilder/08_007.png" rel="lightbox" title="Klassendiagramm von Boolean"><img class="bild" border="1" src="bilderklein/klein08_007.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.7: </strong>Klassendiagramm von Boolean
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">Boolean</span><br>implements Serializable, Comparable&lt;Boolean&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static final Boolean FALSE</span></li>
+                                                   <li><span class="clisting">static final Boolean TRUE</span><br>Konstanten für Wahrheitswerte.
+                                                   </li>
+                                                   <li><span class="clisting">Boolean(boolean value)</span><br>Erzeugt ein neues <span class="clisting">Boolean</span>-Objekt. Dieser Konstruktor sollte nicht verwendet werden, stattdessen sollten <span class="clisting">Boolean.TRUE</span> oder <span class="clisting">Boolean.FALSE</span> eingesetzt werden. <span class="clisting">Boolean</span>-Objekte sind immutable, und ein <span class="clisting">new Boolean(value)</span> ist unnötig.
+                                                   </li>
+                                                   <li><span class="clisting">Boolean(String s)</span><br>Parst den String und liefert ein neues <span class="clisting">Boolean</span>-Objekt zurück.
+                                                   </li>
+                                                   <li><span class="clisting">static Boolean valueOf(String s)</span><br>Parst den String und gibt die Wrapper-Typen <span class="clisting">Boolean.TRUE</span> oder <span class="clisting">Boolean.FALSE</span> zurück. Die statische Methode hat gegenüber dem Konstruktor <span class="clisting">Boolean(boolean)</span> den Vorteil, dass sie immer das gleiche immutable Wahr- oder Falsch-Objekt (<span class="clisting">Boolean.TRUE</span> oder <span class="clisting">Boolean.FALSE</span>) zurückgibt, anstatt neue Objekte zu erzeugen. Daher ist es selten nötig, den Konstruktor
+                                                      aufzurufen und immer neue <span class="clisting">Boolean</span>-Objekte aufzubauen.
+                                                   </li>
+                                                   <li><span class="clisting">public static boolean parseBoolean(String s)</span><br>Parst den String und liefert entweder <span class="clisting">true</span> oder <span class="clisting">false</span>.
+                                                   </li>
+                                                </ul>
+                                                <p>Der Konstruktor <span class="clisting">Boolean(String name)</span> beziehungsweise die beiden statischen Methoden <span class="clisting">valueOf(String name)</span> und <span class="clisting">parseBoolean(String name)</span> nehmen Strings entgegen und führen im JDK den Test <span class="clisting">name != null &amp;&amp; name.equalsIgnoreCase("true")</span> durch. Das heißt zum einen, dass die Groß-/Kleinschreibung unwichtig ist, und zum
+                                                   anderen, dass Dinge wie »  false  « (mit Leerzeichen), »falsch« oder »Ostereier« automatisch
+                                                   <span class="clisting">false</span> ergeben, wobei »TRUE« oder »True« dann <span class="clisting">true</span> liefert.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Würde jeder Entwickler ausschließlich die Konstanten <span class="clisting">Boolean.TRUE</span> und <span class="clisting">Boolean.FALSE</span> nutzen, so wären bei lediglich zwei Objekten Vergleiche mit <span class="clisting">==</span> beziehungsweise <span class="clisting">!=</span> in Ordnung. Da es aber einen Konstruktor für <span class="clisting">Boolean</span>-Objekte gibt &#8211; und es ist durchaus diskussionswürdig, warum es überhaupt Konstruktoren
+                                                               für Wrapper-Klassen gibt &#8211;, ist die sicherste Variante ein <span class="clisting">boolean1.equals(boolean2)</span>. Wir können eben nicht wissen, ob eine Bibliotheksmethode wie <span class="clisting">Boolean isNice()</span> auf die zwei Konstanten zurückgreift oder immer wieder neue <span class="clisting">Boolean</span>-Objekte aufbaut.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51" name="dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51"></a><h3 class="t3"><span class="cfett">8.2.9</span><span class="cfett"> Autoboxing: Boxing und Unboxing</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Neu seit Java 5 ist das <span class="cbegriff">Autoboxing</span><a class="indexterm" id="dodtp95a23e59-6ea2-4f9b-b232-4161dfd18414"></a>. Dies bedeutet, dass primitive Datentypen und Wrapper-Objekte bei Bedarf ineinander
+                                                   umgewandelt werden. Ein Beispiel:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int     i = 4711;<br>Integer j = i;               // steht für  j = Integer.valueOf(i)    (1)<br>int     k = j;               // steht für  k = j.intValue()          (2)<br></pre></div>
+                                                <p>Die Anweisung in <span class="clisting">(1)</span> nennt sich <span class="cbegriff">Boxing</span><a class="indexterm" id="dodtp056986be-ee35-4946-8c5c-8a4aecd26227"></a> und erstellt automatisch ein Wrapper-Objekt, sofern erforderlich. Schreibweise <span class="clisting">(2)</span> ist das <span class="cbegriff">Unboxing</span><a class="indexterm" id="dodtpb09fa451-5ac2-4167-b3f9-2170db7d004a"></a> und steht für das Beziehen des Elements aus dem Wrapper-Objekt. Das bedeutet: Überall
+                                                   dort, wo der Compiler ein primitives Element erwartet, aber ein Wrapper-Objekt vorhanden
+                                                   ist, entnimmt er den Wert mit einer passenden <span class="clisting">xxxValue()</span>-Methode aus dem Wrapper.
+                                                </p><a href="bilder/08_008.png" rel="lightbox" title="Autoboxing von int/Integer"><img class="bild" border="1" src="bilderklein/klein08_008.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.8: </strong>Autoboxing von int/Integer
+                                                </p><a id="dodtpebf5fbdf-e8ba-4525-bff4-c6e34bbb9e60" name="dodtpebf5fbdf-e8ba-4525-bff4-c6e34bbb9e60"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Operatoren ++, -- *</span></h4>
+                                                <p>Der Compiler konvertiert nach festen Regeln, und auch die Operatoren <span class="clisting">++</span>, <span class="clisting">--</span> sind erlaubt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Integer i = 12;<br>i = i + 1;                   // (1)<br>i++;                         // (2)<br>System.out.println( i );     // 14<br></pre></div>
+                                                <p>Wichtig ist, dass weder <span class="clisting">(1)</span> noch <span class="clisting">(2)</span> das Original-<span class="clisting">Integer</span>-Objekt mit der <span class="clisting">12</span> ändern (alle Wrapper-Objekte sind immutable), sondern <span class="clisting">i</span> nur andere <span class="clisting">Integer</span>-Objekte für <span class="clisting">13</span> und <span class="clisting">14</span> referenziert.
+                                                </p><a id="dodtp7bd4a196-c365-4ddf-9303-7c3e55c92564" name="dodtp7bd4a196-c365-4ddf-9303-7c3e55c92564"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Boxing für dynamische Datenstrukturen (Ausblick)</span></h4>
+                                                <p>Am angenehmsten ist die Schreibweise dann, wenn etwa in Datenstrukturen primitive
+                                                   Elemente abgelegt werden sollen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">List list = new ArrayList();<br>list.add( Math.sin(Math.PI / 4) );<br></pre></div>
+                                                <p>Allerdings warnt der Compiler hier; er wünscht sich eine typisierte Liste, also:</p>
+                                                <div class="listing"><pre class="prettyprint">List<span class="cfett">&lt;Double&gt;</span> list = new ArrayList<span class="cfett">&lt;Double&gt;</span>();<br></pre></div>
+                                                <p>Leider ist es so, dass der Typ der Liste tatsächlich mit dem Wrapper-Typ <span class="clisting">Double</span> festgelegt werden muss und nicht mit dem Primitivtyp <span class="clisting">double</span>. Aber vielleicht ändert sich das ja noch irgendwann.
+                                                </p><a id="dodtp07e3a4af-e3f2-4f3d-b108-b96cd3a2b3d6" name="dodtp07e3a4af-e3f2-4f3d-b108-b96cd3a2b3d6"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Keine Konvertierung der null-Referenz zu 0</span></h4>
+                                                <p>Beim Unboxing führt der Compiler beziehungsweise die Laufzeitumgebung keine Konvertierung
+                                                   von <span class="clisting">null</span> auf 0 durch. Mit anderen Worten: Bei der folgenden versuchten Zuweisung gibt es keinen
+                                                   Compilerfehler, aber zur Laufzeit eine <span class="clisting">NullPointerException</span>:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int n = (Integer) null;          // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> java.lang.NullPointerException zur Laufzeit<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In <span class="clisting">switch</span>-Blöcken sind <span class="clisting">int</span>, Aufzählungen und Strings als Typen erlaubt. Bei Ganzzahlen führt der Compiler automatisch
+                                                               Konvertierungen und Unboxing auf <span class="clisting">int</span> durch. Beim Unboxing gibt es aber die Gefahr einer <span class="clisting">NullPointerException</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Integer integer = null;<br>switch ( integer )  // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> NullPointerException zur Laufzeit<br>{ }<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp7f05ebc0-fd78-4e2e-8ab2-f7f8856d7e8b" name="dodtp7f05ebc0-fd78-4e2e-8ab2-f7f8856d7e8b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Autoboxing bei Feldern?</span></h4>
+                                                <p>Da primitive Datentypen und Wrapper-Objekte durch Autoboxing automatisch konvertiert
+                                                   werden, fällt im Alltag der Unterschied nicht so auf. Bei Feldern ist der Unterschied
+                                                   jedoch augenfällig, und hier kann Java keine automatische Konvertierung durchführen.
+                                                   Denn auch, wenn zum Beispiel <span class="clisting">char</span> und <span class="clisting">Character</span> automatisch ineinander umgewandelt werden, so sind Arrays nicht konvertierbar. Eine
+                                                   Feldinitialisierung der Art
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Character[] chars = { 'S', 'h', 'a' };<br></pre></div>
+                                                <p>enthält zwar rechts dreimal Boxing von <span class="clisting">char</span> in <span class="clisting">Character</span>, und eine automatische Umwandlung auf der Ebene der Elemente ist gültig, sodass
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">char first = chars[ 0 ];<br></pre></div>
+                                                <p>natürlich gilt, aber die Feld-Objekte lassen sich nicht ineinander überführen. Folgendes
+                                                   ist nicht korrekt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">char[] sha = chars;   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler!<br></pre></div>
+                                                <p>Die Typen <span class="clisting">char[]</span> und <span class="clisting">Character[]</span> sind also zwei völlig unterschiedliche Typen, und eine Überführung ist nicht möglich
+                                                   (von den Problemen mit <span class="clisting">null</span>-Referenzen einmal ganz abgesehen). So muss in der Praxis zwischen den unterschiedlichen
+                                                   Typen konvertiert werden, und bedauerlicherweise bietet die Java-Standardbibliothek
+                                                   hierfür keine Methoden. Die Lücke füllt etwa die Open-Source-Bibliothek Apache Commons Lang<a class="indexterm" id="dodtpa9be7774-4e08-4ffc-9579-1dd7a293d8c0"></a> (<a href="http://commons.apache.org/lang/" target="_blank">http://commons.apache.org/lang/</a>) mit der Klasse <span class="clisting">ArrayUtils</span>, die mit <span class="clisting">toObject()</span> und <span class="clisting">toPrimitive()</span> die Konvertierungen durchführt.
+                                                </p><a id="dodtp052833fe-5c52-42ea-969e-d103169505b0" name="dodtp052833fe-5c52-42ea-969e-d103169505b0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Mehr Probleme als Lösungen durch Autoboxing? *</span></h4>
+                                                <p>Mit dem Autoboxing ist eine Reihe von Unregelmäßigkeiten verbunden, die der Programmierer
+                                                   beachten muss, um Fehler zu vermeiden. Eine Unregelmäßigkeit hängt mit dem Unboxing
+                                                   zusammen, das der Compiler immer dann vornimmt, wenn ein Ausdruck einen primitiven
+                                                   Wert erwartet. Wenn kein primitives Element erwartet wird, wird auch kein Unboxing
+                                                   vorgenommen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.7: </strong>com/tutego/insel/wrapper/Autoboxing.java, main() Teil 1
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Integer i1 = new Integer( 1 );<br>Integer i2 = new Integer( 1 );<br><br>System.out.println( i1 &gt;= i2 );   // true<br>System.out.println( i1 &lt;= i2 );   // true<br>System.out.println( i1 == i2 );   // false<br></pre></div>
+                                                <p>Der Vergleich mit <span class="clisting">==</span> ist weiterhin ein Referenzvergleich, und es findet kein Unboxing auf primitive Werte
+                                                   statt, sodass es auf einen Vergleich von primitiven Werten hinausliefe. Daher muss
+                                                   bei zwei unterschiedlichen <span class="clisting">Integer</span>-Objekten dieser Vergleich immer falsch sein. Das ist natürlich problematisch, da
+                                                   die alte mathematische Regel »aus i &lt;= j und i &gt;= j folgt automatisch i == j« nicht
+                                                   mehr gilt. Wenn es die unterschiedlichen <span class="clisting">Integer</span>-Objekte für gleiche Werte nicht gäbe, bestünde dieses Problem nicht.
+                                                </p>
+                                                <p>Es ist interessant zu wissen, was nun genau passiert, wenn das Boxing eine Zahl in
+                                                   ein Wrapper-Objekt umwandelt. In dem Moment wird nicht der Konstruktor aufgerufen,
+                                                   sondern die statische <span class="clisting">valueOf()</span>-Methode:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.8: </strong>com/tutego/insel/wrapper/Autoboxing.java, main() Teil 2
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Integer n1 = new Integer( 10 );<br>Integer n2 = Integer.valueOf( 10 );<br>Integer n3 = 10;<br>Integer n4 = 10;<br>System.out.println( n1 == n2 );   // false<br>System.out.println( n2 == n3 );   // true<br>System.out.println( n1 == n3 );   // false<br>System.out.println( n3 == n4 );   // true<br></pre></div>
+                                                <p>Die Widersprüche hören aber damit nicht auf. Das JDK versucht das Problem mit dem
+                                                   <span class="clisting">==</span> damit zu lösen, dass über Boxing gebildete <span class="clisting">Integer</span>-Objekte einem Pool entstammen. Da jedoch nicht beliebig viele Wrapper-Objekte aus
+                                                   einem Pool kommen können, gilt die Gleichheit der über Boxing gebildeten Objekte nur
+                                                   in einem ausgewählten Wertebereich zwischen &#8211;128 und +127, also dem Wertebereich eines
+                                                   Bytes:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.9: </strong>com/tutego/insel/wrapper/Autoboxing.java, main() Teil 3
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Integer j1 = 2;<br>Integer j2 = 2;<br>System.out.println( j1 == j2 );   // true<br>Integer k1 = 127;<br>Integer k2 = 127;<br>System.out.println( k1 == k2 );   // true<br>Integer l1 = 128;<br>Integer l2 = 128;<br>System.out.println( l1 == l2 );   // false<br>Integer m1 = 1000;<br>Integer m2 = 1000;<br>System.out.println( m1 == m2 );   // false<br></pre></div>
+                                                <p>Wir betonten bereits, dass auch bei Wrapper-Objekten der Vergleich mit <span class="clisting">==</span> immer ein Referenz-Vergleich ist. Da 2 und 127 im Wertebereich zwischen &#8211;128 und
+                                                   +127 liegen, entstammen die entsprechenden <span class="clisting">Integer</span>-Objekte dem Pool. Das gilt für 128 und 1.000 nicht; sie sind immer neue Objekte.
+                                                   Damit ergibt auch der <span class="clisting">==</span>-Vergleich <span class="clisting">false</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Abschlussfrage
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Welche Ausgabe kommt auf den Bildschirm? Ändert sich etwas, wenn <span class="clisting">i</span> und <span class="clisting">j</span> auf 222 stehen?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Integer i = 1, j = 1;<br>boolean b = (i &lt;= j &amp;&amp; j &lt;= i &amp;&amp; i != j);<br>System.out.println( b );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_08_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="8 Besondere Klassen der Java SE"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_08_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_08_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

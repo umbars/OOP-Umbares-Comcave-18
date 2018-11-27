@@ -1,0 +1,1455 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 11 Die Klassenbibliothek">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_11_003.html">
+      <link rel="next" href="javainsel_11_005.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_11_003.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_11_005.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba" class="navnav">11 Die Klassenbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_001.html#dodtpa7c7bd4d-e2e2-46f4-b68b-5533fa719dec" class="navnav">11.1 Die Java-Klassenphilosophie</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_001.html#dodtpe90b9eba-dba7-4ad9-810c-21ef082c46d1" class="navnav">11.1.1 Übersicht über die Pakete der Standardbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_002.html#dodtpf5ec6ccf-0e5e-44bd-9bd5-ed133fdc86b2" class="navnav">11.2 Sprachen der Länder</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_002.html#dodtp914af375-7296-45f3-8c45-78fa236688d8" class="navnav">11.2.1 Sprachen und Regionen über Locale-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_003.html#dodtp968d2a6d-cefe-4ef3-b104-4084533c97dc" class="navnav">11.3 Die Klasse Date</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtp0c1b3bab-2510-4085-a6d5-9ec03d6acc47" class="navnav">11.3.1 Objekte erzeugen und Methoden nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtpf38df6e6-6780-4f02-8d9e-31b093e56aa9" class="navnav">11.3.2 Date-Objekte sind nicht immutable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_004.html#dodtpa10273ff-c004-41f5-a534-9b7bad167d19" class="navh">11.4 Calendar und GregorianCalendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e" class="navh">11.4.1 Die abstrakte Klasse Calendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp23377a98-0a59-470e-a819-5ab460c72cfc" class="navh">11.4.2 Der gregorianische Kalender</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f" class="navh">11.4.3 Calendar nach Date und Millisekunden fragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84" class="navh">11.4.4 Abfragen und Setzen von Datumselementen über Feldbezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_005.html#dodtpaac94bba-c062-4ffe-b931-5435d8662583" class="navnav">11.5 Klassenlader (Class Loader)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpd7519fbf-72f0-467e-a925-0c2360c438c9" class="navnav">11.5.1 Woher die kleinen Klassen kommen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0371347e-dd77-407c-a561-b92e47c19607" class="navnav">11.5.2 Setzen des Klassenpfades</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp8e78a020-1d71-4923-b179-2cc704d83fb7" class="navnav">11.5.3 Die wichtigsten drei Typen von Klassenladern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0fedbb4b-e317-4c09-bcc6-e40f77f5d2ac" class="navnav">11.5.4 Die Klasse java.lang.ClassLoader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp9a6dfa39-697b-4ffc-9df6-2eab21d0d6a4" class="navnav">11.5.5 Hot Deployment mit dem URL-Classloader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpcd989780-4e2d-4233-b678-7428e3af3a0b" class="navnav">11.5.6 Das Verzeichnis jre/lib/endorsed *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_006.html#dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825" class="navnav">11.6 Die Utility-Klasse System und Properties</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4" class="navnav">11.6.1 Systemeigenschaften der Java-Umgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpac81f344-a152-401e-8bc5-bf321e62208f" class="navnav">11.6.2 line.separator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c" class="navnav">11.6.3 Eigene Properties von der Konsole aus setzen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpe82dd2d8-bf29-4ecd-8293-954122267502" class="navnav">11.6.4 Umgebungsvariablen des Betriebssystems *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0" class="navnav">11.6.5 Einfache Zeitmessung und Profiling *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_007.html#dodtpd843b629-c2c7-4d91-bab3-53d7f37a99f9" class="navnav">11.7 Einfache Benutzereingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtpf70d8a68-8fa2-453d-8865-013ff8edd377" class="navnav">11.7.1 Grafischer Eingabedialog über JOptionPane</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtp80d596c2-e76f-4b51-9b6b-e6dda814c1ff" class="navnav">11.7.2 Geschützte Passwort-Eingaben mit der Klasse Console *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_008.html#dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b" class="navnav">11.8 Ausführen externer Programme *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtp5109b601-e9c9-4e96-a1af-475d26b650f4" class="navnav">11.8.1 ProcessBuilder und Prozesskontrolle mit Process</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba" class="navnav">11.8.2 Einen Browser, E-Mail-Client oder Editor aufrufen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_009.html#dodtp8ef585a0-bec3-4a6c-a2d9-609b6cb2c6fd" class="navnav">11.9 Benutzereinstellungen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp29221705-11a7-4fe0-8f23-bfb46d58ff59" class="navnav">11.9.1 Benutzereinstellungen mit der Preferences-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp1f33b78d-493f-43a5-be9c-afc95d5f903b" class="navnav">11.9.2 Einträge einfügen, auslesen und löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpc2bdeb36-d9fd-4ec2-8ffa-1175b1e2b8b7" class="navnav">11.9.3 Auslesen der Daten und Schreiben in einem anderen Format</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp140fecd9-4909-4e37-84ea-4a3b5a5a2516" class="navnav">11.9.4 Auf Ereignisse horchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpa00e6dc3-0435-4996-8c31-c2a9762eb073" class="navnav">11.9.5 Zugriff auf die gesamte Windows-Registry</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_010.html#dodtp5b8ed8f2-fe64-41b5-8dc8-98733b11f942" class="navnav">11.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa10273ff-c004-41f5-a534-9b7bad167d19" name="dodtpa10273ff-c004-41f5-a534-9b7bad167d19"></a><h2 class="t2"><span class="cfett">11.4</span><span class="cfett"> Calendar und GregorianCalendar</span><a href="#dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Ein Kalender unterteilt die Zeit in Einheiten wie Jahr, Monat, Tag. Der bekannteste
+                                                   Kalender ist der <span class="cbegriff">gregorianische Kalender</span><a class="indexterm" id="dodtp0d3d374e-8c07-4872-a60a-6e1d08670f32"></a>, den Papst Gregor XIII. im Jahre 1582 einführte. Vor seiner Einführung war der <span class="cbegriff">julianische Kalender</span> populär, der auf Julius Cäsar zurückging &#8211; daher auch der Name. Er stammt aus dem
+                                                   Jahr 45 vor unserer Zeitrechnung. Der gregorianische und der julianische Kalender
+                                                   sind Sonnenkalender, die den Lauf der Erde um die Sonne als Basis für die Zeiteinteilung
+                                                   nutzen; der Mond spielt keine Rolle. Daneben gibt es Mondkalender wie den islamischen
+                                                   Kalender und die Lunisolarkalender, die Sonne und Mond miteinander verbinden. Zu diesem
+                                                   Typus gehören der chinesische, der griechische und der jüdische Kalender.
+                                                </p>
+                                                <p>Mit Exemplaren vom Typ <span class="clisting">Calendar</span><a class="indexterm" id="dodtpda585eeb-f195-4fd7-bbc1-c7f620afa8d4"></a> ist es möglich, Datum und Uhrzeit in den einzelnen Komponenten wie Jahr, Monat, Tag,
+                                                   Stunde, Minute, Sekunde zu setzen und zu erfragen. Da es unterschiedliche Kalendertypen
+                                                   gibt, ist <span class="clisting">Calendar</span> eine abstrakte Basisklasse, und Unterklassen bestimmen, wie konkret eine Abfrage
+                                                   oder Veränderung für ein bestimmtes Kalendersystem aussehen muss. Bisher bringt die
+                                                   Java-Bibliothek mit der Unterklasse <span class="clisting">GregorianCalendar</span><a class="indexterm" id="dodtpaef6c43f-5bcd-471c-b402-505f5ca2628d"></a> nur eine öffentliche konkrete Implementierung mit, deren Exemplare Daten und Zeitpunkte
+                                                   gemäß dem gregorianischen Kalender verkörpern. In Java 6 ist eine weitere interne
+                                                   Klasse für einen japanischen Kalender hinzugekommen. IBM hat mit <span class="cbegriff">International Components for Unicode for Java</span> (ICU4J) unter <a href="http://icu.sourceforge.net/" target="_blank">http://icu.sourceforge.net/</a> weitere Klassen wie <span class="clisting">ChineseCalendar</span>, <span class="clisting">BuddhistCalendar</span>, <span class="clisting">JapaneseCalendar</span>, <span class="clisting">HebrewCalendar</span> und <span class="clisting">IslamicCalendar</span> freigegeben. Hier findet sich auch einiges zum Thema Ostertage.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e" name="dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e"></a><h3 class="t3"><span class="cfett">11.4.1</span><span class="cfett"> Die abstrakte Klasse Calendar</span><a href="#dodtp23377a98-0a59-470e-a819-5ab460c72cfc"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa10273ff-c004-41f5-a534-9b7bad167d19"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">Calendar</span> besitzt zum einen Anfrage- und Modifikationsmethoden für konkrete Exemplare und zum
+                                                   anderen statische Fabrikmethoden. Eine einfache statische Methode ist <span class="clisting">getInstance()</span>, um ein benutzbares Objekt zu bekommen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.util.<span class="cfett">Calendar</span><br>implements Serializable, Cloneable, Comparable&lt;Calendar&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static Calendar getInstance()</span><br>Liefert einen Standard-<span class="clisting">Calendar</span> mit der Standard-Zeitzone und Standard-Lokalisierung zurück.
+                                                   </li>
+                                                </ul>
+                                                <p>Neben der parameterlosen Variante von <span class="clisting">getInstance()</span> gibt es drei weitere Varianten, denen ein <span class="clisting">TimeZone</span>-Objekt und <span class="clisting">Locale</span>-Objekt mit übergeben werden kann. Damit kann dann der Kalender auf eine spezielle
+                                                   Zeitzone und einen Landstrich zugeschnitten werden.
+                                                </p><a href="bilder/11_002.png" rel="lightbox" title="UML-Diagramm der Klasse Calendar"><img class="bild" border="1" src="bilderklein/klein11_002.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 11.2: </strong>UML-Diagramm der Klasse Calendar
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p><span class="clisting">Calendar</span> (bzw. <span class="clisting">GregorianCalendar</span>) hat keine menschenfreundliche <span class="clisting">toString()</span>-Methode. Der String enthält alle Zustände des Objekts:
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">java.util.GregorianCalendar[time=1187732409256,areFieldsSet=true,<br>areAllFieldsSet=true,lenient=true,zone=sun.util.calendar.ZoneInfo[id="Europe/Berlin",offset=3600000,dstSavings=3600000,useDaylight=true,transitions=143,<br>lastRule=java.util.SimpleTimeZone[id=Europe/Berlin,offset=3600000,<br>dstSavings=3600000,useDaylight=true,startYear=0,startMode=2,startMonth=2,<br>startDay=-1,startDayOfWeek=1,startTime=3600000,startTimeMode=2,endMode=2,<br>endMonth=9,endDay=-1,endDayOfWeek=1,endTime=3600000,endTimeMode=2]],<br>firstDayOfWeek=2,minimalDaysInFirstWeek=4,ERA=1,YEAR=2007,MONTH=7,<br>WEEK_OF_YEAR=34,WEEK_OF_MONTH=4,DAY_OF_MONTH=21,DAY_OF_YEAR=233,DAY_OF_WEEK=3,<br>DAY_OF_WEEK_IN_MONTH=3,AM_PM=1,HOUR=11,HOUR_OF_DAY=23,MINUTE=40,SECOND=9,<br>MILLISECOND=256,ZONE_OFFSET=3600000,DST_OFFSET=3600000]<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp23377a98-0a59-470e-a819-5ab460c72cfc" name="dodtp23377a98-0a59-470e-a819-5ab460c72cfc"></a><h3 class="t3"><span class="cfett">11.4.2</span><span class="cfett"> Der gregorianische Kalender</span><a href="#dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klasse <span class="clisting">GregorianCalendar</span><a class="indexterm" id="dodtp6e6004ca-c989-41ce-8a03-3c485d34a3d0"></a> erweitert die abstrakte Klasse <span class="clisting">Calendar</span>. Sieben Konstruktoren stehen zur Verfügung; vier davon sehen wir uns an:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.util.<span class="cfett">GregorianCalendar</span><br>extends Calendar<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">GregorianCalendar()</span><br>Erzeugt ein standardmäßiges <span class="clisting">GregorianCalendar</span>-Objekt mit der aktuellen Zeit in der voreingestellten Zeitzone und Lokalisierung.
+                                                   </li>
+                                                   <li><span class="clisting">GregorianCalendar(int year, int month, int date)</span><br>Erzeugt ein <span class="clisting">GregorianCalendar</span>-Objekt in der voreingestellten Zeitzone und Lokalisierung. Jahr, Monat (der zwischen
+                                                      0 und 11 und nicht zwischen 1 und 12 liegt) und Tag legen das Datum fest.
+                                                   </li>
+                                                   <li><span class="clisting">GregorianCalendar(int year, int month, int date, int hour, int minute)</span><br>Erzeugt ein <span class="clisting">GregorianCalendar</span>-Objekt in der voreingestellten Zeitzone und Lokalisierung. Das Datum legen Jahr,
+                                                      Monat (0 &lt;= <span class="clisting">month</span> &lt;= 11 ), Tag, Stunde und Minute fest.
+                                                   </li>
+                                                   <li><span class="clisting">GregorianCalendar(int year, int month, int date, int hour, int minute, int second)</span><br>Erzeugt ein <span class="clisting">GregorianCalendar</span>-Objekt in der voreingestellten Zeitzone und Lokalisierung. Das Datum legen Jahr,
+                                                      Monat (0 &lt;= <span class="clisting">month</span> &lt;= 11), Tag, Stunde, Minute und Sekunde fest.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Monate beginnen bei 0, sodass <span class="clisting">new GregorianCalendar(1973, 3, 12)</span> nicht den 12. März, sondern den 12. April ergibt! Damit Anfrageprobleme vermieden
+                                                               werden, sollten die <span class="clisting">Calendar</span>-Konstanten <span class="clisting">JANUARY</span><a class="indexterm" id="dodtpb3f504c7-d331-4eb6-9203-4c7c0f714ce1"></a> (0), <span class="clisting">FEBRUARY</span><a class="indexterm" id="dodtp16845efd-e364-4a2b-b097-f0c7514dd3e0"></a>, <span class="clisting">MARCH</span><a class="indexterm" id="dodtp38d1e3d9-2cd2-42e4-bafb-a18f8d4a0924"></a>, <span class="clisting">APRIL</span><a class="indexterm" id="dodtpc2294e14-d9d4-444b-8301-eafa85420956"></a>, <span class="clisting">MAY</span><a class="indexterm" id="dodtpc96eaf50-9b9e-4dc6-a72d-d1641977d841"></a>, <span class="clisting">JUNE</span><a class="indexterm" id="dodtp695d5249-be60-46dd-a364-3ed04e758ffd"></a>, <span class="clisting">JULY</span><a class="indexterm" id="dodtp75f95b0d-1a3b-4bed-9da1-c6830f5c18f3"></a>, <span class="clisting">AUGUST</span><a class="indexterm" id="dodtpd38e0df2-f193-4486-ba62-f6696bb1190f"></a>, <span class="clisting">SEPTEMBER</span><a class="indexterm" id="dodtpf214743d-eb16-4035-ac30-507fc2f3e3c8"></a>, <span class="clisting">OCTOBER</span><a class="indexterm" id="dodtp68df5f12-7f02-41f8-9dcd-8e8f15f4e468"></a>, <span class="clisting">NOVEMBER</span><a class="indexterm" id="dodtp435efdb9-2aa5-45af-91f6-b1bc68d45901"></a>, <span class="clisting">DECEMBER</span><a class="indexterm" id="dodtp5c6fd464-3072-4bba-ac4e-b7163ba53603"></a> (11) verwendet werden. Die spezielle Variable <span class="clisting">UNDECIMBER</span><a class="indexterm" id="dodtpae21d698-4375-4b1d-806c-f4b3bcf8453a"></a> (12) steht für den dreizehnten Monat, der etwa bei einem Mondkalender anzutreffen
+                                                               ist. Die Konstanten sind keine typsicheren Enums, bieten aber den Vorteil, als <span class="clisting">int</span> einfach mit ihnen zählen zu können.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/11_103.png" rel="lightbox" title="UML-Diagramm für GregorianCalendar"><img class="bild" border="1" src="bilderklein/klein11_103.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 11.3: </strong>UML-Diagramm für GregorianCalendar
+                                                </p>
+                                                <p>Neben den hier aufgeführten Konstruktoren gibt es noch weitere, die es erlauben, die
+                                                   Zeitzone und Lokalisierung zu ändern. Standardmäßig eingestellt sind die lokale Zeitzone
+                                                   und die aktuelle Lokalisierung. Ist eines der Argumente im falschen Bereich, löst
+                                                   der Konstruktor eine <span class="clisting">IllegalArgumentException</span> aus.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zum Aufbau von <span class="clisting">Calendar</span>-Objekten gibt es nun zwei Möglichkeiten:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Calendar c = Calendar.getInstance()<a class="indexterm" id="dodtpa7f8c004-207b-420f-8995-235a7671dfef"></a>;<br></pre></div>
+                                                               und
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Calendar c = new GregorianCalendar();<br></pre></div>
+                                                               Die erste Variante ist besonders in internationalisierter Software zu bevorzugen,
+                                                               da es einige Länder gibt, die nicht nach dem gregorianischen Kalender arbeiten.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Calendar c = Calendar.getInstance( new Locale("ja", "JP", "JP") );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f" name="dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f"></a><h3 class="t3"><span class="cfett">11.4.3</span><span class="cfett"> Calendar nach Date und Millisekunden fragen</span><a href="#dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp23377a98-0a59-470e-a819-5ab460c72cfc"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Da <span class="clisting">java.util.Date</span>-Objekte zwar auf den ersten Blick Konstruktoren anbieten, die Jahr, Monat, Tag entgegennehmen,
+                                                   diese Konstruktoren aber veraltet sind, sollten wir den Blick auf <span class="clisting">GregorianCalendar</span> lenken, wie wir das im vorangehenden Abschnitt gemacht haben.
+                                                </p>
+                                                <p>Um von einem <span class="clisting">Calendar</span> die Anzahl der vergangenen Millisekunden seit dem 1.1.1970 abzufragen, dient <span class="clisting">getTimeInMillis()</span><a class="indexterm" id="dodtp2fb31dc6-f979-4748-bc49-66b568e2e7d6"></a> (eine ähnliche Methode hat auch <span class="clisting">Date</span>, nur heißt sie dort <span class="clisting">getTime()</span>).
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Bestimme die Anzahl der Tage, die seit einem bestimmten Tag, Monat und Jahr vergangen
+                                                               sind:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">int date  = 1;<br>int month = Calendar.JANUARY;<br>int year  = 1900;<br>long ms = new GregorianCalendar( year, month, date ).getTimeInMillis();<br>long days = TimeUnit.MILLISECONDS.toDays( System.currentTimeMillis() &#8211; ms );<br>System.out.println( days );                     // 40303<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p><span class="clisting">Calendar</span> und <span class="clisting">Date</span> haben beide eine <span class="clisting">getTime()</span>-Methode. Nur liefert die <span class="clisting">Calendar</span>-Methode <span class="clisting">getTime()</span> ein <span class="clisting">java.util.Date</span>-Objekt und die <span class="clisting">Date</span>-Methode <span class="clisting">getTime()</span> ein <span class="clisting">long</span>. Gutes API-Design sieht anders aus. Damit Entwickler aber keine unschönen <span class="clisting">cal.getTime().getTime()</span>-Ausdrücke schreiben müssen, um vom <span class="clisting">Calendar</span> die Anzahl der Millisekunden zu beziehen, ist <span class="clisting">getTimeInMillis()</span> im Angebot.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.util.<span class="cfett">Calendar</span><br>implements Serializable, Cloneable, Comparable&lt;Calendar&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">final long getTimeInMillis()</span><br>Liefert die seit der Epoche (January 1, 1970 00:00:00.000 GMT, Gregorian) vergangene
+                                                      Zeit in Millisekunden.
+                                                   </li>
+                                                   <li><span class="clisting">final Date getTime()</span><br>Liefert ein <span class="clisting">Date</span>-Objekt zu diesem <span class="clisting">Calendar</span>.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84" name="dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84"></a><h3 class="t3"><span class="cfett">11.4.4</span><span class="cfett"> Abfragen und Setzen von Datumselementen über Feldbezeichner</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Das Abfragen und Setzen von Datumselementen des gregorianischen Kalenders erfolgt
+                                                   mit den überladenen Methoden <span class="clisting">get()</span> und <span class="clisting">set()</span>. Beide erwarten als erstes Argument einen Feldbezeichner &#8211; eine Konstante aus der
+                                                   Klasse <span class="clisting">Calendar</span> &#8211;, der angibt, auf welches Datum-/Zeitfeld zugegriffen werden soll. Die <span class="clisting">get()</span>-Methode liefert den Inhalt des angegebenen Felds, und <span class="clisting">set()</span> schreibt den als zweites Argument übergebenen Wert in das Feld.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Führe Anweisungen aus, wenn es 19 Uhr ist:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">if ( Calendar.getInstance().get( Calendar.HOUR_OF_DAY ) == 19 )<br> ...<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die folgende Tabelle gibt eine Übersicht der Feldbezeichner und ihrer Wertebereiche
+                                                   im Fall des konkreten <span class="clisting">GregorianCalendar</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.util.<span class="cfett">Calendar</span><br>implements Serializable, Cloneable, Comparable&lt;Calendar&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 11.2: </strong>Konstanten aus der Klasse Calendar
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Feldbezeichner<br>Calendar.*</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Minimalwert</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Maximalwert</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Erklärung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">ERA</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp6dcb07a9-96c7-4bed-a779-c64fc1df273c"></a>0 (BC)
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1 (AD)
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Datum vor oder nach Christus
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">YEAR</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp90652af2-ca98-442e-9e47-8c3fc0758c95"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">theoretisch unbeschränkt
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Jahr
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp8f2c7f21-c953-4908-9d2e-4a6acb78daf7"></a><span class="clisting">MONTH</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp33ffd28b-396d-42f3-b8ec-71a3038f2045"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">11
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpfa1b2cfb-db15-4d9c-ba1f-a30c9b185fa5"></a>Monat (nicht von 1 bis 12!)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DAY_OF_MONTH</span><br><a class="indexterm" id="dodtpc51fa812-d1f7-466a-8357-bf2b24ad5aa2"></a>alternativ <span class="clisting">DATE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpee0f7728-daca-4aca-be53-40932a61ae34"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">31
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Tag
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpaf94b82e-a2f9-48e0-b799-999f54136eb8"></a><span class="clisting">WEEK_OF_YEAR</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp36ad1a1c-4425-4f77-a5ea-d69ecb8e041e"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">54
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Woche
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp1aad46de-ee78-4fd4-93fa-fa73659216bb"></a><span class="clisting">WEEK_OF_MONTH</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp724172e2-e830-43a7-ac43-db87d54877c0"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">6
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpac213054-09c6-41cd-baf9-01406d4bc0b9"></a>Woche des Monats
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DAY_OF_YEAR</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp7f25ec38-31da-45ad-bc2e-210593765658"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">366
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp621ca3fc-26de-431e-be7c-dd1604aa2f1f"></a>Tag des Jahres
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DAY_OF_WEEK</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp79a5ba14-17cc-4e0c-9cb7-7f29c48452b4"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">7
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Tag der Woche<br>(1 = Sonntag, 7 = Samstag)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DAY_OF_WEEK_IN_MONTH</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp21c63340-227e-470c-8d84-6fa8dfd8b300"></a>1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">6
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Tag der Woche im Monat
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">HOUR</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpb6b91833-32d9-4aa1-8a21-1efcad64f785"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">11
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Stunde von 12
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">HOUR_OF_DAY</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpa72e0907-9bcb-44b4-ab27-705e28df55cd"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">23
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Stunde von 24
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MINUTE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp81fb2619-d2c6-49be-aa5e-f20be474aac6"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">59
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp28f3be8e-0513-44eb-82e7-e5d562add16a"></a>Minute
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">SECOND</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp3ea59f9e-26d8-4c70-9fb4-5fbe7a7b139c"></a>0 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">59
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp3a7dc40a-558e-4b69-aece-852f0af30ba8"></a>Sekunden
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MILLISECOND</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpe61910ff-9a5d-43be-bb1e-72741a094c75"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">999
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp08cddb5f-60c5-4f10-8511-12e76b5d282f"></a>Millisekunden
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">AM_PM</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp61be4efe-1d9e-4cd0-a8e3-f3988a6b6874"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">vor 12, nach 12
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">ZONE_OFFSET</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpe261eb09-6720-4c97-8de7-0978b23074d4"></a>13*60*60*1000
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">+14*60*60*1000
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp5ba6ffc6-08a5-4f31-8d0a-dde3e4f53b8c"></a>Zeitzonenabweichung in Millisekunden
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DST_OFFSET</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp18d1775f-6129-4aaf-93af-1a7e96d81e1e"></a>0
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">2*60*60*1000
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpdc6b8f69-432f-4066-980a-83398aa18423"></a>Sommerzeitabweichung in Millisekunden
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Nun können wir mit den Varianten von <span class="clisting">set()</span> die Felder setzen und mit <span class="clisting">get()</span> wieder hereinholen. Beachtenswert sind der Anfang der Monate mit 0 und der Anfang
+                                                   der Wochentage mit 1 (<span class="clisting">SUNDAY</span>), 2 (<span class="clisting">MONDAY</span>), ..., 7 (<span class="clisting">SATURDAY</span>) &#8211; Konstanten der Klasse <span class="clisting">Calendar</span> stehen in Klammern. Die Woche beginnt in der Java-Welt also bei 1 und Sonntag, statt
+                                                   &#8211; wie vielleicht anzunehmen &#8211; bei 0 und Montag.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ist ein <span class="clisting">Date</span>-Objekt gegeben, so speichert es Datum und Zeit. Soll der Zeitanteil gelöscht werden,
+                                                               so bietet Java dafür keine eigene Methode. Die Lösung ist, Stunden, Minuten, Sekunden
+                                                               und Millisekunden von Hand auf 0 zu setzen. Löschen wir vom Hier und Jetzt die Zeit:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Date date = new Date();<br>Calendar cal = Calendar.getInstance();<br>cal.setTime( date );<br>cal.set( Calendar.HOUR_OF_DAY, 0 );<br>cal.set( Calendar.MINUTE, 0 );<br>cal.set( Calendar.SECOND, 0 );<br>cal.set( Calendar.MILLISECOND, 0 );<br>date = cal.getTime();<br></pre></div>
+                                                               Eine Alternative wäre, den Konstruktor <span class="clisting">GregorianCalendar(int year, int month, int dayOfMonth)</span> mit den Werten vom Datum zu nutzen.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.util.<span class="cfett">Calendar</span><br>implements Serializable, Cloneable, Comparable&lt;Calendar&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">int get(int field)</span><br>Liefert den Wert für <span class="clisting">field</span>.
+                                                   </li>
+                                                   <li><span class="clisting">void set(int field, int value)</span><br>Setzt das Feld <span class="clisting">field</span> mit dem Wert <span class="clisting">value</span>.
+                                                   </li>
+                                                   <li><span class="clisting">final void set(int year, int month, int date)</span><br>Setzt die Werte für Jahr, Monat und Tag.
+                                                   </li>
+                                                   <li><span class="clisting">final void set(int year, int month, int date, int hourOfDay, int minute)</span><br>Setzt die Werte für Jahr, Monat, Tag, Stunde und Minute.
+                                                   </li>
+                                                   <li><span class="clisting">final void set(int year, int month, int date, int hourOfDay, int minute, int second)</span><br>Setzt die Werte für Jahr, Monat, Tag, Stunde, Minute und Sekunde.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wo die <span class="clisting">Date</span>-Klasse etwa spezielle (veraltete) Methoden wie <span class="clisting">getYear(), getDay(), getHours()</span> anbietet, so müssen Nutzer der <span class="clisting">Calendar</span>-Klasse immer die <span class="clisting">get(field)</span>-Methode nutzen. Es gibt keinen Getter für den Zugriff auf ein bestimmtes Feld.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp00fab054-5644-4b4a-84c0-5ac9253f8eb8" name="dodtp00fab054-5644-4b4a-84c0-5ac9253f8eb8"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Werte relativ setzen</span></h4>
+                                                <p>Neben der Möglichkeit, die Werte entweder über den Konstruktor oder über <span class="clisting">set()</span> absolut zu setzen, sind auch relative Veränderungen möglich. Dazu wird die <span class="clisting">add()</span>-Methode eingesetzt, die wie <span class="clisting">set()</span> als erstes Argument einen Feldbezeichner bekommt und als zweites die Verschiebung.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Was ist der erste und letzte Tag einer Kalenderwoche?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Calendar cal = Calendar.getInstance();<br>cal.set( Calendar.WEEK_OF_YEAR, 15 );<br>cal.set( Calendar.DAY_OF_WEEK, Calendar.MONDAY );<br>System.out.printf( "%tD ", cal );                // 04/09/07<br>cal.add( Calendar.DAY_OF_WEEK, 6 );<br>System.out.printf( "%tD", cal );                 // 04/15/07<br></pre></div>
+                                                               Die Methode <span class="clisting">add()</span> setzt das Datum um sechs Tage hoch.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Da es keine <span class="clisting">sub()</span>-Methode gibt, können die Werte bei <span class="clisting">add()</span> auch negativ sein.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wo waren wir heute vor einem Jahr?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Calendar cal = Calendar.getInstance();<br>System.out.printf( "%tF%n", cal );              // 2006-06-09<span class="cfett"><br>cal.add( Calendar.YEAR, &#8211;1 );</span><br>System.out.printf( "%tF%n", cal );              // 2005-06-09<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Eine weitere Methode <span class="clisting">roll()</span> ändert keine folgenden Felder, was <span class="clisting">add()</span> macht, wenn etwa zum Dreißigsten eines Monats zehn Tage addiert werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class java.util.<span class="cfett">Calendar</span><br>implements Serializable, Cloneable, Comparable&lt;Calendar&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">abstract void add(int field, int amount)</span><br>Addiert (bzw. subtrahiert, wenn <span class="clisting">amount</span> negativ ist) den angegeben Wert auf dem (bzw. vom) Feld.
+                                                   </li>
+                                                   <li><span class="clisting">abstract void roll(int field, boolean up)</span><br>Setzt eine Einheit auf dem gegebenen Feld hoch oder runter, ohne die nachfolgenden
+                                                      Felder zu beeinflussen. Ist der aktuelle Feldwert das Maximum (bzw. Minimum) und wird
+                                                      um eine Einheit addiert (bzw. subtrahiert), ist der nächste Feldwert das Minimum (bzw.
+                                                      Maximum).
+                                                   </li>
+                                                   <li><span class="clisting">void roll(int field, int amount)</span><br>Ist <span class="clisting">amount</span> positiv, führt diese Methode die Operation <span class="clisting">roll(field, true)</span> genau <span class="clisting">amount</span>-mal aus, ist <span class="clisting">amount</span> negativ, dann wird <span class="clisting">amount</span>-mal <span class="clisting">roll(field, false)</span> aufgerufen.
+                                                   </li>
+                                                </ul>
+                                                <p>In <span class="clisting">GregorianCalendar</span> ist die Implementierung in Wirklichkeit etwas anders. Da ist <span class="clisting">roll(int, int)</span> implementiert, und <span class="clisting">roll(int, boolean)</span> ist ein Aufruf von <span class="clisting">roll(field, up ? +1 : &#8211;1)</span>.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_11_004.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="11 Die Klassenbibliothek"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_11_003.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_11_005.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

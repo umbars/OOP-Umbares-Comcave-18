@@ -1,0 +1,965 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 15 Einführung in Dateien und Datenströme">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 15 Einführung in Dateien und Datenströme">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 15 Einführung in Dateien und Datenströme</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_15_005.html">
+      <link rel="next" href="javainsel_15_007.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_15_005.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_15_007.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9" class="navnav">15 Einführung in Dateien und Datenströme</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_001.html#dodtp0c3e7aa7-57c1-467c-b9cd-5a1192bfff29" class="navnav">15.1 Datei und Verzeichnis</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtpc427dabe-af84-4a0c-bf14-ee4877c3a66e" class="navnav">15.1.1 Dateien und Verzeichnisse mit der Klasse File</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtpc369f11c-0f1c-4342-badd-842492934f00" class="navnav">15.1.2 Verzeichnis oder Datei? Existiert es?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp6bcb0843-1c23-4706-b6bc-d294200a2b16" class="navnav">15.1.3 Verzeichnis- und Dateieigenschaften/-attribute</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp56223bfa-3e8d-4bb3-8821-5b92a84f8eb6" class="navnav">15.1.4 Umbenennen und Verzeichnisse anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp81d32289-96f6-48f9-bf56-d76f6a0040e9" class="navnav">15.1.5 Verzeichnisse auflisten und Dateien filtern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_001.html#dodtp04c08dc5-0b27-4282-856b-23a617e3c87a" class="navnav">15.1.6 Dateien und Verzeichnisse löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_002.html#dodtp4c696222-68aa-4ff1-bc33-61d235d2a749" class="navnav">15.2 Dateien mit wahlfreiem Zugriff</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtpf3427acd-7268-4a9a-b72b-9a9e701eade1" class="navnav">15.2.1 Ein RandomAccessFile zum Lesen und Schreiben öffnen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp6892c9e7-3748-4acf-a950-5cf850834922" class="navnav">15.2.2 Aus dem RandomAccessFile lesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp57a61a41-491b-4fb2-a647-4e98e76cd928" class="navnav">15.2.3 Schreiben mit RandomAccessFile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtpb7a76b35-9333-4d4c-b8ee-db4dba2cd8aa" class="navnav">15.2.4 Die Länge des RandomAccessFile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_002.html#dodtp0127e3d1-5300-4313-a6d4-d524d0d51e82" class="navnav">15.2.5 Hin und her in der Datei</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_003.html#dodtp3e2f424c-1cb2-4e3b-8b78-a7b0f8fdc4d1" class="navnav">15.3 Dateisysteme unter NIO.2</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_003.html#dodtp0d490b7d-9edc-439b-9ace-e5516e7d33d5" class="navnav">15.3.1 FileSystem und Path</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_003.html#dodtp8ddec814-bdfa-4e08-9339-cd8c2b1d241d" class="navnav">15.3.2 Die Utility-Klasse Files</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_004.html#dodtpac233475-9da3-4cec-9eab-d68a36830773" class="navnav">15.4 Stream-Klassen und Reader/Writer am Beispiel von Dateien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp09d4e761-c431-4b26-ad6d-06f0f6ad7848" class="navnav">15.4.1 Mit dem FileWriter Texte in Dateien schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtpdcab948e-46c1-48d8-88e5-1739e507c4c6" class="navnav">15.4.2 Zeichen mit der Klasse FileReader lesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp86d65943-95bc-468a-9b1b-7e6c791bfb74" class="navnav">15.4.3 Kopieren mit FileOutputStream und FileInputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_004.html#dodtp8cbafd52-bd65-4813-847c-1579a876d42b" class="navnav">15.4.4 Datenströme über Files mit NIO.2 beziehen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_005.html#dodtpcc7fc739-5818-4c0f-927a-acb10955337c" class="navnav">15.5 Basisklassen für die Ein-/Ausgabe</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpc09b9f8e-c572-4c6e-ad69-1fb5e199f3f0" class="navnav">15.5.1 Die abstrakten Basisklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpa866f584-65ce-43e7-98e8-a06657a5c345" class="navnav">15.5.2 Übersicht über Ein-/Ausgabeklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp87713ea1-19cf-424f-a00c-6cf61fe640f4" class="navnav">15.5.3 Die abstrakte Basisklasse OutputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp4f854473-da5c-4601-a7d0-6f6d6aca8fae" class="navnav">15.5.4 Die Schnittstellen Closeable, AutoCloseable und Flushable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp126a4d65-ae0c-49e2-a6cd-2c6d8310fae5" class="navnav">15.5.5 Die abstrakte Basisklasse InputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp7ea6fb9c-4772-474a-bf5a-263de51866f3" class="navnav">15.5.6 Ressourcen aus dem Klassenpfad und aus Jar?Archiven laden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtpd8984e1a-ef54-49c6-8eea-f45eabe308bf" class="navnav">15.5.7 Die abstrakte Basisklasse Writer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_005.html#dodtp042132dd-20d2-4f14-b3f9-4a4d756b4750" class="navnav">15.5.8 Die abstrakte Basisklasse Reader</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_006.html#dodtp2ebcbe05-dba8-4a9d-bfe2-156d51722f3d" class="navh">15.6 Datenströme filtern und verketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5" class="navh">15.6.1 Streams als Filter verketten (verschachteln)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp6b402b94-498d-4acc-8780-28e804c8a72d" class="navh">15.6.2 Gepufferte Ausgaben mit BufferedWriter und BufferedOutputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_006.html#dodtp11cf7db5-7bca-4362-80c0-fa5fb3087800" class="navh">15.6.3 Gepufferte Eingaben mit BufferedReader/BufferedInputStream</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_15_007.html#dodtp1031bdda-e2df-4b43-ad43-b792113405bf" class="navnav">15.7 Vermittler zwischen Byte-Streams und Unicode-Strömen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_007.html#dodtp97ad15d2-7810-45d8-bcbe-601c0f0d9cc8" class="navnav">15.7.1 Datenkonvertierung durch den OutputStreamWriter</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_15_007.html#dodtp901ade28-ed9d-4eff-a49d-407c48c624f1" class="navnav">15.7.2 Automatische Konvertierungen mit dem InputStreamReader</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2ebcbe05-dba8-4a9d-bfe2-156d51722f3d" name="dodtp2ebcbe05-dba8-4a9d-bfe2-156d51722f3d"></a><h2 class="t2"><span class="cfett">15.6</span><span class="cfett"> Datenströme filtern und verketten</span><a href="#dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>So wie im alltäglichen Leben Filter beim Kaffee oder bei Fotoapparaten eine große
+                                                   Rolle spielen, so sind sie auch bei Datenströmen zu finden. Immer dann, wenn Daten
+                                                   von einer Quelle gelesen oder in eine Senke geschrieben werden, können Filter die
+                                                   Daten auf dem Weg verändern. Die Java-Bibliothek sieht eine ganze Reihe von Filtern
+                                                   vor, die sich zwischen die Kommunikation schalten können.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 15.8: </strong>Filter zwischen Ein- und Ausgabe
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Eingabe</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Ausgabe</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Anwendung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BufferedInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BufferedOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Daten puffern
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BufferedReader</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">BufferedWriter</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CheckedInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CheckedOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Checksumme berechnen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DataInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DataOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Primitive Datentypen aus dem Strom holen und in den Strom schreiben
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DigestInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DigestOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Digest (Checksumme) mitberechnen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">InflaterInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">DeflaterOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Kompression von Daten
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">LineNumberInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Mitzählen von Zeilen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">LineNumberReader</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">PushbackInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Daten in den Lesestrom zurücklegen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">PushbackReader</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CipherInputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">CipherOutputStream</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Daten verschlüsseln und entschlüsseln
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der <span class="clisting">CipherOutputStream</span> stammt als Einziger aus dem Paket <span class="clisting">javax.crypto</span>; manche Typen sind aus <span class="clisting">java.util.zip</span>, und alle anderen stammen aus <span class="clisting">java.io</span>.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5" name="dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5"></a><h3 class="t3"><span class="cfett">15.6.1</span><span class="cfett"> Streams als Filter verketten (verschachteln)</span><a href="#dodtp6b402b94-498d-4acc-8780-28e804c8a72d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp2ebcbe05-dba8-4a9d-bfe2-156d51722f3d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Funktionalität der bisher vorgestellten Ein-/Ausgabe-Klassen reicht für den Alltag
+                                                   zwar aus, doch sind Ergänzungen gefordert, die die Fähigkeiten der Klassen erweitern;
+                                                   so zum Beispiel beim Puffern. Da die Programmlogik zur Pufferung mit Daten unabhängig
+                                                   von der Quelle ist, aus der die Daten stammen, findet sich die Pufferung in einer
+                                                   gesonderten Klasse. Java implementiert hier ein bekanntes Muster, das sich <span class="cbegriff">Dekorator</span> nennt. Zwei Zeilen sollen dieses Prinzip verdeutlichen, um gepufferte Daten in eine
+                                                   Datei zu schreiben:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Writer<span class="cfett"> fw</span> = new FileWriter( filename );<br>Writer bw = new BufferedWriter(<span class="cfett"> fw</span> );<br></pre></div>
+                                                <p>Der Konstruktor von <span class="clisting">BufferedWriter</span> nimmt einen beliebigen anderen <span class="clisting">Writer</span> auf, denn der Pufferung ist es egal, ob die Daten in eine Datei oder ins Netzwerk
+                                                   geschrieben werden. Das Prinzip ist also immer, dass der Filter einen anderen Strom
+                                                   annimmt, an den er die Daten weitergibt oder von dem er sie holt.
+                                                </p>
+                                                <p>Schauen wir uns die Klassen im Paket <span class="clisting">java.io</span> genau an, die andere Ströme im Konstruktor entgegennehmen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">BufferedWriter</span>, <span class="clisting">PrintWriter</span>, <span class="clisting">FilterWriter</span> nehmen <span class="clisting">Writer</span>.
+                                                   </li>
+                                                   <li><span class="clisting">BufferedReader</span>, <span class="clisting">FilterReader</span>, <span class="clisting">LineNumberReader</span>, <span class="clisting">PushbackReader, StreamTokenizer</span> nehmen <span class="clisting">Reader</span>.
+                                                   </li>
+                                                   <li><span class="clisting">BufferedOutputStream</span>, <span class="clisting">DataOutputStream</span>, <span class="clisting">FilterOutputStream</span>, <span class="clisting">ObjectOutputStream</span>, <span class="clisting">OutputStreamWriter</span>, <span class="clisting">PrintStream</span>, <span class="clisting">PrintWriter</span> nehmen <span class="clisting">OutputStream</span>.
+                                                   </li>
+                                                   <li><span class="clisting">BufferedInputStream</span>, <span class="clisting">DataInputStream</span>, <span class="clisting">FilterInputStream</span>, <span class="clisting">InputStreamReader</span>, <span class="clisting">ObjectInputStream</span>, <span class="clisting">PushbackInputStream</span> nehmen <span class="clisting">InputStream</span>.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6b402b94-498d-4acc-8780-28e804c8a72d" name="dodtp6b402b94-498d-4acc-8780-28e804c8a72d"></a><h3 class="t3"><span class="cfett">15.6.2</span><span class="cfett"> Gepufferte Ausgaben mit BufferedWriter und BufferedOutputStream</span><a href="#dodtp11cf7db5-7bca-4362-80c0-fa5fb3087800"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp4b04c36e-44b2-4dc7-af54-d190dd3455f5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klassen <span class="clisting">BufferedWriter</span><a class="indexterm" id="dodtp57eb3dff-33e6-4296-b64d-0224d9dfb448"></a> und <span class="clisting">BufferedOutputStream</span><a class="indexterm" id="dodtp514749da-1d49-4ad1-bc37-46f2b0a18d2d"></a> haben die Aufgabe, die mittels <span class="clisting">write()</span> in den Ausgabestrom geleiteten Ausgaben zu puffern. Dies ist immer dann nützlich,
+                                                   wenn viele Schreiboperationen gemacht werden, denn das Puffern macht insbesondere
+                                                   Dateioperationen wesentlich schneller, da so mehrere Schreiboperationen zu einer zusammengefasst
+                                                   werden. Um die Funktionalität eines Puffers zu erhalten, besitzen die Klassen einen
+                                                   internen Puffer, in dem die Ausgaben von <span class="clisting">write()</span> zwischengespeichert werden. Standardmäßig fasst der Puffer 8.192 Symbole. Er kann
+                                                   aber über einen parametrisierten Konstruktor auf einen anderen Wert gesetzt werden.
+                                                   Erst wenn der Puffer voll ist oder die Methoden <span class="clisting">flush()</span> oder <span class="clisting">close()</span> aufgerufen werden, werden die gepufferten Ausgaben geschrieben. Durch die Verringerung
+                                                   der Anzahl tatsächlicher <span class="clisting">write()</span>-Aufrufe an das externe Gerät erhöht sich die Geschwindigkeit der Anwendung im Allgemeinen
+                                                   deutlich.
+                                                </p><a href="bilder/07_007.png" rel="lightbox" title="BufferedWriter ist ein Writer und dekoriert einen anderen Writer"><img class="bild" border="1" src="bilderklein/klein07_007.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 15.7: </strong>BufferedWriter ist ein Writer und dekoriert einen anderen Writer
+                                                </p>
+                                                <p>Um einen <span class="clisting">BufferedWriter</span>/<span class="clisting">BufferedOutputStream</span> anzulegen, gibt es zwei Konstruktoren, denen ein bereits existierender <span class="clisting">Writer</span>/<span class="clisting">OutputStream</span> übergeben wird. An diesen <span class="clisting">Writer</span>/<span class="clisting">OutputStream</span> wird dann der Filter seinerseits die Ausgaben weiterleiten, insbesondere nach einem
+                                                   Aufruf von <span class="clisting">flush()</span>, <span class="clisting">close()</span> oder einem internen Überlauf.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">BufferedWriter</span>     class java.io.<span class="cfett">BufferedOutputStream</span><br>extends Writer                   extends FilterOutputStream<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">BufferedWriter(Writer out)</span></li>
+                                                   <li><span class="clisting">BufferedOutputStream(OutputStream out)</span><br>Erzeugt einen puffernden Ausgabestrom mit der Puffergröße von 8.192 Symbolen.
+                                                   </li>
+                                                   <li><span class="clisting">BufferedWriter(Writer out, int sz)</span></li>
+                                                   <li><span class="clisting">BufferedOutputStream(OutputStream out, int size)</span><br>Erzeugt einen puffernden Ausgabestrom mit einer Puffergröße. Ist sie nicht echt größer
+                                                      0, gibt es eine <span class="clisting">IllegalArgumentException</span>.
+                                                   </li>
+                                                </ul>
+                                                <p>Alle <span class="clisting">write()</span>- und <span class="clisting">append()</span>-Methoden sind so implementiert, dass die Daten erst im Puffer landen. Wenn der Puffer
+                                                   voll ist &#8211; oder <span class="clisting">flush()</span> aufgerufen wird &#8211;, werden sie an den im Konstruktor übergebenen <span class="clisting">Writer</span> durchgespült.
+                                                </p><a id="dodtp164cdebb-a97c-40aa-af54-0eeb1b6b7c18" name="dodtp164cdebb-a97c-40aa-af54-0eeb1b6b7c18"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Beispiel zum BufferedWriter mit FileWriter und PrintWriter</span></h4>
+                                                <p>Ein <span class="clisting">FileWriter</span> sichert Daten in einer Datei. Ein <span class="clisting">BufferedWriter</span> soll aber vorher die Daten erst einmal sammeln, sodass sie erst beim Flush an den
+                                                   <span class="clisting">FileWriter</span> gehen. Der Anwendungsentwickler soll in unserem Beispiel aber nicht direkt den <span class="clisting">BufferedWriter</span> nutzen, sondern ihn als allgemeinen <span class="clisting">Writer</span> im Konstruktor von <span class="clisting">PrintWriter</span> übergeben. Ein <span class="clisting">PrintWriter</span> besitzt die komfortablen Methoden <span class="clisting">print()</span>, <span class="clisting">println()</span> und <span class="clisting">printf()</span>, sodass wir nicht mehr nur auf <span class="clisting">write()</span>-Methoden vom <span class="clisting">Writer</span> angewiesen sind:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 15.8: </strong>com/tutego/insel/io/writer/ChainedWriter.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">PrintWriter pw = null;<br>try<br>{<br> <span class="cfett"> Writer fw = new FileWriter( "charArrayWriterDemoPuffer.txt" );</span><br> <span class="cfett"> Writer bw = new BufferedWriter( fw );</span><br> <span class="cfett"> pw = new PrintWriter( bw );<br><br> </span> for ( int i = 1; i &lt; 10000; i++ )<br>    pw.println( "Zeile " + i );<br>}<br>catch ( IOException e ) {<br>  System.err.println( "Error creating file!" );<br>}<br>finally {<br>  if ( pw != null )<br>    pw.close();<br>}<br></pre></div>
+                                                <p>Zusätzlich bietet die Klasse <span class="clisting">BufferedWriter</span> die Methode <span class="clisting">newLine()</span><a class="indexterm" id="dodtp1c3ec1c4-a068-4321-8f0c-a39dd6f4b25a"></a>, die in der Ausgabe eine neue Zeile beginnt. Das Zeichen für den Zeilenwechsel wird
+                                                   aus der Systemeigenschaft <span class="clisting">line.separator</span> genommen. Da sie intern mit der <span class="clisting">write()</span>-Methode arbeitet, kann sie eine <span class="clisting">IOException</span> auslösen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp11cf7db5-7bca-4362-80c0-fa5fb3087800" name="dodtp11cf7db5-7bca-4362-80c0-fa5fb3087800"></a><h3 class="t3"><span class="cfett">15.6.3</span><span class="cfett"> Gepufferte Eingaben mit BufferedReader/BufferedInputStream</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp164cdebb-a97c-40aa-af54-0eeb1b6b7c18"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Klassen <span class="clisting">BufferedReader</span><a class="indexterm" id="dodtp6d6ba7a1-1eb0-4f17-aa52-38cea886622d"></a> und <span class="clisting">BufferedInputStream</span><a class="indexterm" id="dodtp6b367b9e-5a97-4e60-acd0-b602da1c4a00"></a> puffern Eingaben. Die Daten werden also zuerst in einen Zwischenspeicher geladen,
+                                                   was insbesondere bei Dateien zu weniger Zugriffen auf den Datenträger führt und so
+                                                   die Geschwindigkeit der Anwendung erhöht.
+                                                </p>
+                                                <p>Die Klassen <span class="clisting">BufferedReader</span> und <span class="clisting">BufferedInputStream</span> besitzen je zwei Konstruktoren. Bei einem lässt sich die Größe des internen Puffers
+                                                   angeben. Die Puffergröße beträgt wie beim <span class="clisting">BufferedWriter</span>/<span class="clisting">BufferedOutputStream</span> standardmäßig 8.192 Einträge.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">BufferedReader</span>     class java.io.<span class="cfett">BufferedInputStream</span><br>extends Reader                   extends FilterInputStream<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">BufferedReader(Reader in)</span></li>
+                                                   <li><span class="clisting">BufferedInputStream(InputStream in)</span><br>Erzeugt einen puffernden Zeichenstrom mit der Puffergröße von 8.192.
+                                                   </li>
+                                                   <li><span class="clisting">BufferedReader( Reader in, int sz )</span></li>
+                                                   <li><span class="clisting">BufferedInputStream(InputStream in, int size)</span><br>Erzeugt einen puffernden Zeichenstrom mit der gewünschten Puffergröße.
+                                                   </li>
+                                                </ul><a id="dodtpf0d5fcff-e43e-4c0b-a85e-295bba82b550" name="dodtpf0d5fcff-e43e-4c0b-a85e-295bba82b550"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Programm zur Anzeige von Dateien</span></h4>
+                                                <p>Das folgende Programm implementiert ein einfaches »cat«-Kommando<span class="footnote"><a id="dodtp02504b92-ef60-4619-98ac-0266108a7b5a">[209](Der kurze Name »cat« stammt von »catenate«, einem Synonym für »concatenate«.)</a></span> von Unix, um Dateiinhalte über die Standardausgabe auszugeben. Die Dateinamen werden
+                                                   auf der Kommandozeile übergeben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 15.9: </strong>com/tutego/insel/io/stream/cat.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.io.stream;<br><br>import java.io.*;<br><br>class cat<br>{<br>  public static void main( String[] args )<br>  {<br>    for ( String filename : args ) {<br>      try {<br>        InputStream in = new BufferedInputStream( new FileInputStream(filename) );<br><br>        try {<br>          for ( int c; (c = in.read()) != &#8211;1 /* EOF */; )<br>            System.out.write( c );<br>        }<br>        finally {<br>          in.close();<br>        }<br>      }<br>      catch ( IOException e ) {<br>        System.err.println( "cat: Fehler beim Verarbeiten von " + filename );<br>        System.exit( 1 );<br>      }<br>    } // end for<br>  }<br>}<br></pre></div>
+                                                <p>Die Dateiangaben nimmt das Programm über die Kommandozeile entgegen; etwa so:</p>
+                                                <div class="listing"><pre class="prettyprint">$ java com.tutego.insel.io.stream.cat adam.txt eva.txt<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Insbesondere bei externen Hintergrundspeichern ergibt eine Pufferung Sinn. So sollten
+                                                               zum Beispiel die dateiorientierten Klassen immer gepuffert werden, insbesondere, wenn
+                                                               einzelne Bytes/Zeichen gelesen oder geschrieben werden.
+                                                               Ohne Pufferung In der Regel schneller mit Pufferung
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">new FileReader(f) new BufferedReader(new FileReader(f))<br>new FileWriter(f) new BufferedWriter(new FileWriter(f))<br>new FileInputStream(f) new BufferedInputStream(new FileInputStream(f))<br>new FileOutputStream(f) new BufferedOutputStream(new FileOutputStream(f))<br></pre></div>
+                                                               
+                                                               
+                                                               
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp2dcdbb4b-7866-4494-aea1-1a63a989a867" name="dodtp2dcdbb4b-7866-4494-aea1-1a63a989a867"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zeilen lesen mit BufferedReader und readLine()</span></h4>
+                                                <p>Die Klasse <span class="clisting">BufferedReader</span> stellt die Methode <span class="clisting">readLine()</span> zur Verfügung, die eine komplette Textzeile liest und als String an den Aufrufer
+                                                   zurückgibt; <span class="clisting">BufferedOutputStream</span> als byte-orientierte Klasse bietet die Methode nicht an.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.io.<span class="cfett">BufferedReader</span><br>extends Reader<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">String readLine</span><a class="indexterm" id="dodtp9f93c0fd-0482-47e7-8543-f5f38d9479ee"></a><span class="clisting">()</span><br>Liest eine Zeile bis zum Zeilenende und gibt den String ohne die Endzeichen zurück.
+                                                      Die Rückgabe ist <span class="clisting">null</span>, wenn der Stream am Ende ist.
+                                                   </li>
+                                                </ul>
+                                                <p>Da ein <span class="clisting">BufferedReader</span> Markierungen und Sprünge erlaubt, werden die entsprechenden Methoden von <span class="clisting">Reader</span> überschrieben.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_15_006.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="15 Einführung in Dateien und Datenströme"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_15_005.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_15_007.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

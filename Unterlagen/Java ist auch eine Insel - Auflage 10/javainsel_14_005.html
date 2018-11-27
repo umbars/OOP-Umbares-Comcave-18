@@ -1,0 +1,944 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 14 Einführung in grafische Oberflächen">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 14 Einführung in grafische Oberflächen">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 14 Einführung in grafische Oberflächen</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_14_004.html">
+      <link rel="next" href="javainsel_14_006.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_14_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_14_006.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f" class="navnav">14 Einführung in grafische Oberflächen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_001.html#dodtpf29ccd69-c1a8-4a25-a1dd-0789e54b2bdc" class="navnav">14.1 Das Abstract Window Toolkit und Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtpb0d0126f-2f46-40ed-9389-01f62e1c0510" class="navnav">14.1.1 SwingSet-Demos</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp8ff75415-81f4-400f-afdc-03336bc64e8a" class="navnav">14.1.2 Abstract Window Toolkit (AWT)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp3077a0fd-3dc0-4c4b-b0f6-daf7c5e668d6" class="navnav">14.1.3 Java Foundation Classes</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtpfdf30500-2b5d-4cfd-b4b4-79df2acda118" class="navnav">14.1.4 Was Swing von AWT unterscheidet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_001.html#dodtp91d15daa-bac0-4b1b-b6fd-9aba2f24aa5c" class="navnav">14.1.5 GUI-Builder für AWT und Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_002.html#dodtp4c5733e6-c831-48b7-a674-bd48ec0e106e" class="navnav">14.2 Mit NetBeans zur ersten Oberfläche</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp8a4d894c-c775-4b46-8dcc-7bffaf48d957" class="navnav">14.2.1 Projekt anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp1155308c-c723-4a45-8ffd-0aa9d84af9f9" class="navnav">14.2.2 Eine GUI-Klasse hinzufügen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp68e6c9c0-ca0c-406e-a129-b688d60eafce" class="navnav">14.2.3 Programm starten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtpc1c471df-9a9d-407c-bda0-c1781c9494c9" class="navnav">14.2.4 Grafische Oberfläche aufbauen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtpa72fc638-3cb0-4894-acc2-2420372f7103" class="navnav">14.2.5 Swing-Komponenten-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_002.html#dodtp0c4e90ea-aa0d-4a68-be80-31a660667cee" class="navnav">14.2.6 Funktionalität geben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_003.html#dodtp48864355-f737-4436-a801-f833bb327582" class="navnav">14.3 Fenster zur Welt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtp71b35874-9a33-40fc-abf4-afc4867e3afc" class="navnav">14.3.1 Swing-Fenster mit javax.swing.JFrame darstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtp0535f28c-71d9-44a0-9ab4-95aaf345e9d6" class="navnav">14.3.2 Fenster schließbar machen &#8211; setDefaultCloseOperation()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_003.html#dodtpda7faeef-22d6-4bd5-b5fa-6ec44eafd8df" class="navnav">14.3.3 Sichtbarkeit des Fensters</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_004.html#dodtp34ff535c-eb2b-4a02-a4a7-b06dd37c748b" class="navnav">14.4 Beschriftungen (JLabel)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_005.html#dodtpa8fdd63d-84a2-43be-9553-ed6780ded680" class="navh">14.5 Es tut sich was &#8211; Ereignisse beim AWT</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp9c4614ee-3e71-4567-9776-ff876a08774e" class="navh">14.5.1 Die Ereignisquellen und Horcher (Listener) von Swing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp1d6fa71e-074a-4f93-81c8-32a260e133e7" class="navh">14.5.2 Listener implementieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp26872927-bb2a-4a67-aedb-343bd310412d" class="navh">14.5.3 Listener bei dem Ereignisauslöser anmelden/abmelden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5" class="navh">14.5.4 Adapterklassen nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp0ae6beaa-6163-47a5-83f6-8641f9c3b53c" class="navh">14.5.5 Innere Mitgliedsklassen und innere anonyme Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_005.html#dodtp886f6ac1-f6b2-46a1-8ef1-f76b8ac6d93d" class="navh">14.5.6 Aufrufen der Listener im AWT-Event-Thread</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_006.html#dodtpca8d9baa-f1f1-4920-8525-bdd8f66cb4db" class="navnav">14.6 Schaltflächen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_006.html#dodtpc21c15c6-fc6e-4107-aa82-0bac60b49e97" class="navnav">14.6.1 Normale Schaltflächen (JButton)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_006.html#dodtpcc8190f9-581b-4075-9aec-4f3a9d55246f" class="navnav">14.6.2 Der aufmerksame ActionListener</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_007.html#dodtp169ef7d2-a82b-4140-b287-a4d0c1915451" class="navnav">14.7 Alles Auslegungssache: die Layoutmanager</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp0f983e10-db1d-4c26-ba3b-035f48db2c29" class="navnav">14.7.1 Übersicht über Layoutmanager</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp5b8a12e9-d669-4c08-a7ce-e04eed74b646" class="navnav">14.7.2 Zuweisen eines Layoutmanagers</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpf3dea9df-ffb3-4128-8cee-df1f13c2c2e4" class="navnav">14.7.3 Im Fluss mit FlowLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpc7c25a58-9f6b-4b8c-b6be-6cc67905c8e8" class="navnav">14.7.4 BoxLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtpb13e5965-21c9-482b-a085-604cf069be45" class="navnav">14.7.5 Mit BorderLayout in alle Himmelsrichtungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_007.html#dodtp675a978e-0223-4fbe-ae77-a1fe8675422c" class="navnav">14.7.6 Rasteranordnung mit GridLayout</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_008.html#dodtp82bf439f-faf5-4675-8791-b0dcf60f6152" class="navnav">14.8 Textkomponenten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_008.html#dodtp5005ddaa-a3d7-491e-96f3-c825220b076f" class="navnav">14.8.1 Text in einer Eingabezeile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_008.html#dodtp6db97806-1816-4de8-aba8-1ba22e5a7e0b" class="navnav">14.8.2 Die Oberklasse der Text-Komponenten (JTextComponent)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_009.html#dodtpf90d2b06-a426-4ac7-83fe-487008219c1d" class="navnav">14.9 Zeichnen von grafischen Primitiven</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp6138deb2-13cb-4f22-8fab-87c81439b5a4" class="navnav">14.9.1 Die paint()-Methode für das AWT-Frame</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp51072071-fb9d-41b7-85cf-1a9753cd7acb" class="navnav">14.9.2 Die ereignisorientierte Programmierung ändert Fensterinhalte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp53722da4-d27c-4851-bc83-1be5169ebe3c" class="navnav">14.9.3 Zeichnen von Inhalten auf ein JFrame</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtpc0b03be4-7b56-4600-96f8-b801de39fab3" class="navnav">14.9.4 Linien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp7861dfee-8262-4c69-b10c-697c6da334cf" class="navnav">14.9.5 Rechtecke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtpca3d4482-7cb6-4ee6-a6ca-ec44ac05c0a6" class="navnav">14.9.6 Zeichenfolgen schreiben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp0ba1e42a-c3ee-4137-bafc-662255c03646" class="navnav">14.9.7 Die Font-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_14_009.html#dodtp4d65888f-7f98-4d43-8596-7aac41826b80" class="navnav">14.9.8 Farben mit der Klasse Color</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_14_010.html#dodtp77920f06-5f37-4d98-91f6-738434469e3a" class="navnav">14.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa8fdd63d-84a2-43be-9553-ed6780ded680" name="dodtpa8fdd63d-84a2-43be-9553-ed6780ded680"></a><h2 class="t2"><span class="cfett">14.5</span><span class="cfett"> Es tut sich was &#8211; Ereignisse beim AWT</span><a href="#dodtp9c4614ee-3e71-4567-9776-ff876a08774e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Beim Arbeiten mit grafischen Oberflächen interagiert der Benutzer mit Komponenten.
+                                                   Er bewegt die Maus im Fenster, klickt eine Schaltfläche an oder verschiebt einen Rollbalken.
+                                                   Das grafische System beobachtet die Aktionen des Benutzers und informiert die Applikation
+                                                   über die anfallenden Ereignisse. Dann kann das laufende Programm entsprechend reagieren.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9c4614ee-3e71-4567-9776-ff876a08774e" name="dodtp9c4614ee-3e71-4567-9776-ff876a08774e"></a><h3 class="t3"><span class="cfett">14.5.1</span><span class="cfett"> Die Ereignisquellen und Horcher (Listener) von Swing</span><a href="#dodtp1d6fa71e-074a-4f93-81c8-32a260e133e7"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa8fdd63d-84a2-43be-9553-ed6780ded680"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Im Ereignismodell von Java gibt es eine Reihe von <span class="cbegriff">Ereignisauslösern</span><a class="indexterm" id="dodtp41600ad4-2d81-47f1-99cc-ba26e6d74baf"></a> (<span class="cbegriff">Ereignisquellen</span><a class="indexterm" id="dodtpa5160048-e96b-4344-b0fd-7b8d0b003483"></a>, engl. <span class="cbegriff">event sources</span><a class="indexterm" id="dodtpaca3ed8a-d7f1-4832-8499-fef29f71b09b"></a>), wie zum Beispiel Schaltflächen oder Schieberegler. Die Ereignisse können vom Benutzer
+                                                   der grafischen Oberfläche kommen, etwa wenn er eine Schaltfläche anklickt, aber auch
+                                                   auf eigene Auslöser zurückzuführen sein, zum Beispiel wenn im Hintergrund eine Tabelle
+                                                   geladen wird.
+                                                </p>
+                                                <p>Neben den Ereignisauslösern gibt es eine Reihe von Interessenten (<span class="cbegriff">Listener</span><a class="indexterm" id="dodtp25efc176-ffd5-466c-9716-15de2c9748dd"></a> oder <span class="cbegriff">Horcher</span> genannt), die gern informiert werden wollen, wenn ein Ereignis aufgetreten ist. Da
+                                                   der Interessent in der Regel nicht an allen ausgelösten Oberflächen-Ereignissen interessiert
+                                                   ist, sagt er einfach, welche Ereignisse er empfangen möchte. Dies funktioniert so,
+                                                   dass er sich bei einer Ereignisquelle anmeldet, und diese informiert ihn, wenn sie
+                                                   ein Ereignis aussendet. Auf diese Weise leidet die Systemeffizienz nicht, da nur diejenigen
+                                                   informiert werden, die auch Verwendung für das Ereignis haben. Für jedes Ereignis
+                                                   gibt es einen eigenen Listener, an den das Ereignis weitergeleitet wird &#8211; darum der
+                                                   Name für das Modell: <span class="cbegriff">Delegation Model.</span><span class="footnote"><a id="dodtp47c787d9-3737-43a2-8181-65b3d01fbc84">[197](Die Entwickler hatten vorher den Namen »Command Model« vergeben, doch drückte dies die
+Arbeitsweise nicht richtig aus.)</a></span><a class="indexterm" id="dodtp32173d33-86ca-456f-835b-03d4a1ba438c"></a> Die folgende Tabelle gibt eine Übersicht über einige Listener und zeigt, was für
+                                                   Ereignisse sie melden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 14.1: </strong>Einge Listener und die von ihnen gemeldeten Ereignisse
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Listener</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Ereignisse</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">ActionListener</span><a class="indexterm" id="dodtp9fb15e96-43f7-4e65-9704-c3182c81f62c"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Der Benutzer aktiviert eine Schaltfläche bzw. ein Menü oder drückt <span class="ctastatur"><img align="top" src="keys/tastatur_KMKiKQ==.gif" alt="¢" title="¢"></span> auf einem Textfeld.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">WindowListener</span><a class="indexterm" id="dodtp39e3afd4-32aa-4914-8cab-5d06aa4e3ecf"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Der Benutzer schließt ein Fenster oder möchte es verkleinern.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MouseListene</span><a class="indexterm" id="dodtp495e92ee-eae3-4053-964d-b033dbb08779"></a><span class="clisting">r</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Der Benutzer drückt auf eine Maustaste.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">MouseMotionListener</span><a class="indexterm" id="dodtp28e5196d-c264-4f2c-9ce6-7e923b677efd"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Der Benutzer bewegt die Maus.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Dem Listener übergibt das Swing-Grafiksystem jeweils ein Ereignis-Objekt, etwa dem
+                                                   <span class="clisting">ActionListener</span> ein <span class="clisting">ActionEvent</span>-Objekt, dem <span class="clisting">WindowListener</span> ein <span class="clisting">WindowEvent</span>-Objekt usw. Die Einzigen, die etwas aus der Reihe tanzen, sind <span class="clisting">MouseListener</span> und <span class="clisting">MouseMotionListener</span>, denn beide melden <span class="clisting">MouseEvent</span>-Objekte.
+                                                </p><a id="dodtp2b4cb9c1-954d-47b1-99e1-786f631ab290" name="dodtp2b4cb9c1-954d-47b1-99e1-786f631ab290"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Schritte zum richtigen Horchen</span></h4>
+                                                <p>Damit die Quelle Ereignisse sendet und der Client darauf reagiert, sind zwei Schritte
+                                                   durchzuführen:
+                                                </p>
+                                                <ol class="paufz">
+                                                   <li>Implementieren des Listeners</li>
+                                                   <li>Anmelden des Listeners</li>
+                                                </ol>
+                                                <p>Um dieses Konzept kennenzulernen, wollen wir einen Fenster-Horcher programmieren,
+                                                   der registriert, ob ein Fenster geschlossen werden soll. Wenn ja, bietet er einen
+                                                   Dialog; bestätigt der Benutzer den Dialog, wird die Applikation beendet.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp1d6fa71e-074a-4f93-81c8-32a260e133e7" name="dodtp1d6fa71e-074a-4f93-81c8-32a260e133e7"></a><h3 class="t3"><span class="cfett">14.5.2</span><span class="cfett"> Listener implementieren</span><a href="#dodtp26872927-bb2a-4a67-aedb-343bd310412d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp2b4cb9c1-954d-47b1-99e1-786f631ab290"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Listener selbst ist eine Schnittstelle, die von den Interessenten implementiert
+                                                   wird. Da die Ereignis-Schnittstelle Callback-Methoden vorschreibt, muss der Interessent
+                                                   diese Operation implementieren. Wird im nächsten Schritt ein Horcher mit dem Ereignisauslöser
+                                                   verbunden, kann die Ereignisquelle davon ausgehen, dass der Horcher die entsprechende
+                                                   Methode besitzt. Diese ruft die Ereignisquelle bei einem Ereignis später auf.
+                                                </p><a id="dodtp4e231ebe-0d44-4392-b782-ad32b294141b" name="dodtp4e231ebe-0d44-4392-b782-ad32b294141b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Schnittstelle WindowListener</span></h4>
+                                                <p>Alle Meldungen rund um Fenster werden über einen <span class="clisting">WindowListener</span> abgewickelt. Implementierungen können so etwa erfahren, ob das Fenster vergrößert
+                                                   oder verkleinert wurde. Die Schnittstelle deklariert folgende Operationen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">interface java.awt.event.<span class="cfett">WindowListener</span><br>extends EventListener<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void windowOpened(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster geöffnet wurde.
+                                                   </li>
+                                                   <li><span class="clisting">void windowClosing(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster geschlossen wird.
+                                                   </li>
+                                                   <li><span class="clisting">void windowClosed(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster mit <span class="clisting">dispose()</span> geschlossen wurde.
+                                                   </li>
+                                                   <li><span class="clisting">void windowIconified(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster zum Icon verkleinert wird.
+                                                   </li>
+                                                   <li><span class="clisting">void windowDeiconified(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster wieder hochgeholt wird.
+                                                   </li>
+                                                   <li><span class="clisting">void windowActivated(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster aktiviert wird.
+                                                   </li>
+                                                   <li><span class="clisting">void windowDeactivated(WindowEvent e)</span><br>Wird aufgerufen, wenn das Fenster deaktiviert wird.
+                                                   </li>
+                                                </ul>
+                                                <p>Der nächste Schritt ist es, die Schnittstelle zu implementieren und in <span class="clisting">windowClosing()</span> Programmcode einzubetten, der den Benutzer fragt, ob die Anwendung wirklich geschlossen
+                                                   werden soll.
+                                                </p><a href="bilder/14_038.png" rel="lightbox" title="UML-Diagramm von WindowListener"><img class="bild" border="1" src="bilderklein/klein14_038.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.19: </strong>UML-Diagramm von WindowListener
+                                                </p><a id="dodtpc52f3838-9460-4fa7-992d-94efd665e0cb" name="dodtpc52f3838-9460-4fa7-992d-94efd665e0cb"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wer implementiert die Schnittstelle WindowListener?</span></h4>
+                                                <p>Bei der Implementierung der Schnittstelle <span class="clisting">WindowListener</span> gibt es unterschiedliche Varianten:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Eine Klasse, die zum Beispiel <span class="clisting">JFrame</span> erweitert, implementiert gleichzeitig <span class="clisting">WindowListener</span>.
+                                                   </li>
+                                                   <li>Eine externe Klasse implementiert die Listener-Schnittstelle.</li>
+                                                   <li>Eine innere anonyme Klasse implementiert den Listener.</li>
+                                                </ul>
+                                                <p>Die Lösungen haben Vor- und Nachteile. Wenn die eigene Klasse den Listener implementiert,
+                                                   ist das Programm schön kurz und der Listener hat einfachen Zugriff auf alle Zustände
+                                                   oder Variablen. Den Listener von einer anderen Klasse implementieren zu lassen hat
+                                                   dagegen den Vorteil, dass die Implementierung wiederverwendbar ist. Das ist bei einem
+                                                   allgemeinen Horcher für Fenterschließereignisse sicherlich angebracht.
+                                                </p><a id="dodtpff6cdc44-f212-4661-ad5f-089aacd24be4" name="dodtpff6cdc44-f212-4661-ad5f-089aacd24be4"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Fenster-Schließ-Horcher</span></h4>
+                                                <p>Die Implementierung fragt mit <span class="clisting">JOptionPane.showConfirmDialog()</span>, ob das Fenster wirklich geschlossen werden soll. Die nicht genutzten Callback-Methoden
+                                                   implementieren wir leer.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.3: </strong>com/tutego/insel/ui/event/DialogWindowClosingListener.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.event;<br><br>import java.awt.event.*;<br>import javax.swing.JOptionPane;<br><br>public class DialogWindowClosingListener<span class="cfett"> implements WindowListener</span><br>{<br> <span class="cfett"> @Override public void windowClosing( WindowEvent event )</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> int option = JOptionPane.showConfirmDialog( null, "Applikation beenden?" );</span><br>   <span class="cfett"> if ( option == JOptionPane.OK_OPTION )</span><br>     <span class="cfett"> System.exit( 0 );</span><br> <span class="cfett"> }<br><br> </span> @Override public void<span class="cfett"> windowClosed</span>( WindowEvent event ) { /*Empty*/ }<br>  @Override public void<span class="cfett"> windowDeiconified</span>( WindowEvent event ) { /*Empty*/ }<br>  @Override public void<span class="cfett"> windowIconified</span>( WindowEvent event ) { /*Empty*/ }<br>  @Override public void<span class="cfett"> windowActivated</span>( WindowEvent event ) { /*Empty*/ }<br>  @Override public void<span class="cfett"> windowDeactivated</span>( WindowEvent event ) { /*Empty*/ }<br>  @Override public void<span class="cfett"> windowOpened</span>( WindowEvent event ) { /*Empty*/ }<br>}<br></pre></div>
+                                                <p>An diesem Beispiel ist abzulesen, dass jeder, der ein <span class="clisting">WindowListener</span> sein möchte, die vorgeschriebenen Methoden implementieren muss. Damit zeigt er Interesse
+                                                   an dem <span class="clisting">WindowEvent</span><a class="indexterm" id="dodtp618b38db-c082-45d9-a821-0fe4fcc724dd"></a>. Bis auf <span class="clisting">windowClosing()</span> haben wir die anderen Operationen nicht implementiert, da sie uns nicht interessieren.
+                                                   Die Implementierung ist so, dass die Anwendung beendet wird, wenn der Anwender auf
+                                                   das × klickt und den Dialog mit OK bestätigt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp26872927-bb2a-4a67-aedb-343bd310412d" name="dodtp26872927-bb2a-4a67-aedb-343bd310412d"></a><h3 class="t3"><span class="cfett">14.5.3</span><span class="cfett"> Listener bei dem Ereignisauslöser anmelden/abmelden</span><a href="#dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpff6cdc44-f212-4661-ad5f-089aacd24be4"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Hat der Listener die Schnittstelle implementiert, wird er mit dem Ereignisauslöser
+                                                   verbunden. Dafür gibt es eine Reihe von Hinzufügen- und Entfernen-Methoden, die einer
+                                                   Namenskonvention folgen.
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">add</span>Ereignis<span class="clisting">Listener(</span> Ereignis<span class="clisting">Listener )</span></li>
+                                                   <li><span class="clisting">remove</span>Ereignis<span class="clisting">Listener(</span> Ereignis<span class="clisting">Listener )</span></li>
+                                                </ul>
+                                                <p>Üblicherweise lassen sich beliebig viele Listener an einen Ereignisauslöser hängen.</p><a id="dodtp78d5fac2-6964-48be-885b-1e3f1348cbea" name="dodtp78d5fac2-6964-48be-885b-1e3f1348cbea"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> addXXXListener() nur dann möglich, wenn es auch Ereignisse gibt</span></h4>
+                                                <p>Nicht jede Komponente kann jedes Ereignis auslösen. Daher gibt es nur <span class="clisting">addXXXListener()</span> für Ereignisse, die die Komponenten tatsächlich auslösen, und unterschiedliche Komponenten
+                                                   bieten unterschiedliche Hinzufügemethoden. Die <span class="clisting">JFrame</span>-Klasse bietet zum Beispiel <span class="clisting">addWindowListener()</span> für Fensterereignisse, aber kein <span class="clisting">addActionListener()</span> &#8211; das wiederum hat bietet <span class="clisting">JButton</span>, damit er die Aktivierung der Schaltfläche melden kann. Eine Schaltfläche löst eben
+                                                   keine Fenster-Ereignisse aus, und daher gibt es die Methode <span class="clisting">addWindowListener()</span> bei Schaltflächen nicht. So lassen sich über die angebotenen <span class="clisting">addXXXListener()</span>-Methoden gut die Ereignisse ablesen, die eine Komponente auslösen kann, denn das
+                                                   <span class="clisting">XXX</span> wird dann nach der Namenskonvention der Ereignis-Typ sein.
+                                                </p><a id="dodtp005fe891-e57e-4b31-8d23-868aff384371" name="dodtp005fe891-e57e-4b31-8d23-868aff384371"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Fensterschließer registrieren</span></h4>
+                                                <p>Den Listener für Fenster-Ereignisse, unseren <span class="clisting">DialogWindowClosingListener</span>, binden wir mit der Methode <span class="clisting">addWindowListener()</span><a class="indexterm" id="dodtpced80f1f-6f9a-4838-8b93-2eb8905c83a7"></a> an ein Fenster. Wird genau dieses Fenster geschlossen, bekommen wir das mit und können
+                                                   reagieren.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.4: </strong>com/tutego/insel/ui/event/CloseWithDialogFrame.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.event;<br><br>import javax.swing.*;<br><br>public class CloseWithDialogFrame<br>{<br>  public static void main( String[] args )<br>  {<br>    JFrame f = new JFrame();<br>    f.setDefaultCloseOperation( JFrame.DO_NOTHING_ON_CLOSE );<br>    f.add( new JLabel( "Zyklone bringen Regen" ) );<br>    f.pack();<br>   <span class="cfett"> f.addWindowListener( new DialogWindowClosingListener() );</span><br>   <span class="cfett"> </span>f.setVisible( true );<br>  }<br>}<br></pre></div>
+                                                <p>Wir tragen mit <span class="clisting">addWindowListener()</span> den Listener ein. Immer wenn ein Window-Event ausgelöst wird, kümmert sich die jeweilige
+                                                   Methode um dessen Abarbeitung.
+                                                </p>
+                                                <p>Normalerweise schließt Swing ein <span class="clisting">JFrame</span> automatisch, wenn das × gedrückt wird &#8211; anders als beim AWT-Frame. Die Anweisung
+                                                   <span class="clisting">setDefaultCloseOperation(JFrame.DO_NOTHING_ ON_CLOSE)</span> verändert dieses Standardverhalten, damit nichts passiert und wir selbst zu 100 %
+                                                   die Kontrolle behalten. Denn ist die Zeile nicht im Programm, so merkt Swing, dass
+                                                   das × gedrückt wurde, und versteckt das Fenster, egal was der Benutzer im Dialog angibt.
+                                                </p><a id="dodtpbd161619-0e3a-4edc-b911-b0bafdba0031" name="dodtpbd161619-0e3a-4edc-b911-b0bafdba0031"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> setDefaultCloseOperation() und der WindowListener *</span></h4>
+                                                <p>Die ersten Swing-Programme, die wir geschrieben haben, nutzen <span class="clisting">setDefaultCloseOperation</span><a class="indexterm" id="dodtp8f812640-2ab4-4587-a729-548ed9e72c6b"></a><span class="clisting">(JFrame.EXIT_ON_CLOSE)</span>, damit Swing automatisch die Anwendung beendet, wenn der Anwender auf × klickt. Diese
+                                                   Belegung ist für kleine Testprogramme in Ordnung, in ausgewachsenen GUI-Anwendungen
+                                                   sollte sich die Applikation jedoch nicht einfach schließen, sondern mit einem Dialog
+                                                   über das Ende informieren. Die Voreinstellung für die default-Close-Operation von
+                                                   <span class="clisting">JFrame</span> ist <span class="clisting">HIDE_ON_CLOSE</span>, was das Fenster automatisch verdeckt (das Fenster kann später wieder aktiviert werden),
+                                                   nachdem die <span class="clisting">WindowListener</span> aufgerufen wurden. Eine weitere Konstante ist <span class="clisting">DISPOSE_ON_CLOSE</span>, was ebenfalls die Listener abarbeitet, aber das Fenster automatisch schließt und
+                                                   alle Ressourcen freigibt. Übernehmen wir selbst die komplette Kontrolle, ist die Belegung
+                                                   mit <span class="clisting">JFrame.DO_NOTHING_ ON_CLOSE</span> angebracht.
+                                                </p><a id="dodtp72194248-4866-4e05-85cb-1efdb068b5b4" name="dodtp72194248-4866-4e05-85cb-1efdb068b5b4"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Unterschied zwischen windowClosing() und windowClosed() *</span></h4>
+                                                <p>Die Schnittstelle <span class="clisting">WindowListener</span> schreibt zwei Methoden vor, deren Namen sich ziemlich ähnlich anhören: <span class="clisting">windowClosing()</span><a class="indexterm" id="dodtp649e1a80-6f43-4164-a357-e0755615fa9c"></a> und <span class="clisting">windowClosed()</span><a class="indexterm" id="dodtpa6f60d52-7b90-47fb-a24a-9b7fb90bedeb"></a>. Betrachten wir den Unterschied zwischen beiden und sehen wir uns an, wie ein Programm
+                                                   beide Methoden nutzen oder meiden kann.
+                                                </p>
+                                                <p>In den einfachen Programmen setzen wir in die <span class="clisting">windowClosing()</span>-Methode einen Aufruf von <span class="clisting">System.exit()</span>, um die Applikation zu beenden, da <span class="clisting">windowClosing()</span> immer bei Beendigung der Applikation mit dem × am Fenster aufgerufen wird. Was allerdings
+                                                   leicht vergessen wird, ist die Tatsache, dass nicht nur der Benutzer über das × das
+                                                   Fenster schließen kann, sondern auch die Applikation über die spezielle Methode <span class="clisting">dispose()</span>. Sie gibt alle Ressourcen frei und schließt das Fenster. Die Applikation ist dann
+                                                   allerdings noch nicht beendet. Damit wir das Schließen mit dem × und durch <span class="clisting">dispose()</span> unterscheiden können, kümmert sich <span class="clisting">windowClosing()</span> um das × und <span class="clisting">windowClosed()</span> um das <span class="clisting">dispose()</span>. Wenn wir lediglich mit dem × das Fenster schließen und die Applikation beendet werden
+                                                   soll, muss nicht noch extra <span class="clisting">dispose()</span> schön brav die Ressourcen freigeben. Daher reicht oft ein <span class="clisting">System.exit()</span>. Soll das Fenster jedoch mit × und <span class="clisting">dispose()</span> einfach nur geschlossen werden oder ist eine gemeinsame Behandlung gewünscht, so
+                                                   ist es sinnvoll, in <span class="clisting">windowClosing()</span> mit <span class="clisting">dispose()</span> indirekt <span class="clisting">windowClosed()</span> aufzurufen, etwa so:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public void windowClosing( WindowEvent e )<br>{<br>  event.getWindow().dispose();<br>}<br>public void windowClosed( WindowEvent e )<br>{<br>  // Das Fenster ist geschlossen, und jetzt können wir hier<br>  // weitermachen, etwa mit System.exit(), wenn alles<br>  // vorbei sein soll.<br>}<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5" name="dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5"></a><h3 class="t3"><span class="cfett">14.5.4</span><span class="cfett"> Adapterklassen nutzen</span><a href="#dodtp0ae6beaa-6163-47a5-83f6-8641f9c3b53c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp72194248-4866-4e05-85cb-1efdb068b5b4"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Hat eine Schnittstelle wie <span class="clisting">WindowListener</span> viele Methoden, so hat eine Implementierung alle Methoden zu realisieren, auch wenn
+                                                   die Mehrzahl einen leeren Rumpf hat. Das ist lästig. Hier helfen <span class="cbegriff">Adapterklassen</span><a class="indexterm" id="dodtp197b39ce-094a-41ec-8f13-b1a1b8ba35f4"></a> &#8211; Klassen, die die Schnittstellen mit leeren Rümpfen implementieren. Hat beispielsweise
+                                                   die Schnittstelle <span class="clisting">WindowListener</span> sieben Methoden, so steht in der Adapterklasse folgende Implementierung:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.5: </strong>java.awt.event.WindowAdapter
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public abstract class WindowAdapter<br>  implements WindowListener, WindowStateListener, WindowFocusListener<br>{<br>    public void windowOpened( WindowEvent e ) { }<br>    public void windowClosing( WindowEvent e ) { }<br>    public void windowClosed( WindowEvent e ) { }<br>    public void windowIconified( WindowEvent e ) { }<br>    public void windowDeiconified( WindowEvent e ) { }<br>    public void windowActivated( WindowEvent e ) { }<br>    public void windowDeactivated( WindowEvent e ) { }<br>    public void windowStateChanged( WindowEvent e ) { }<br>    public void windowGainedFocus( WindowEvent e ) { }<br>    public void windowLostFocus( WindowEvent e ) { }<br>}<br></pre></div>
+                                                <p>Zusätzlich entdecken wir einige Methoden, die nicht direkt von unserem <span class="clisting">WindowListener</span> stammen, sondern von zwei weiteren Schnittstellen, die jetzt keine Rolle spielen.
+                                                </p><a href="bilder/14_039.png" rel="lightbox" title="UML-Diagramm von WindowAdapter"><img class="bild" border="1" src="bilderklein/klein14_039.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 14.20: </strong>UML-Diagramm von WindowAdapter
+                                                </p>
+                                                <p>Wenn wir jetzt einen Ereignisbehandler implementieren müssen, erweitern wir einfach
+                                                   die Adapterklasse und überschreiben nur die relevanten Methoden. Der Listener zum
+                                                   Schließen des Fensters mit einer Adapterklasse sieht dann wie folgt aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.6: </strong>com/tutego/insel/ui/event/DialogWindowClosingListener2.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.event;<br><br>import java.awt.event.*;<br>import javax.swing.JOptionPane;<br><br>public class DialogWindowClosingListener2<span class="cfett"> extends WindowAdapter</span><br>{<br>  @Override public void windowClosing( WindowEvent event )<br>  {<br>    int option = JOptionPane.showConfirmDialog( null, "Applikation beenden?" );<br>    if ( option == JOptionPane.OK_OPTION )<br>      System.exit( 0 );<br>  }<br>}<br></pre></div>
+                                                <p>Beim Client ändert sich nichts viel, es ist immer noch die <span class="clisting">addWindowListener()</span>-Methode:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.7: </strong>com/tutego/insel/ui/event/CloseWithDialogFrame.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">JFrame f = new JFrame();<br>f.setDefaultCloseOperation( JFrame.DO_NOTHING_ON_CLOSE );<br>f.add( new JLabel( "Zyklone bringen Regen" ) );<br>f.pack();<span class="cfett"><br>f.addWindowListener( new DialogWindowClosingListener2() );</span><br>f.setVisible( true );<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0ae6beaa-6163-47a5-83f6-8641f9c3b53c" name="dodtp0ae6beaa-6163-47a5-83f6-8641f9c3b53c"></a><h3 class="t3"><span class="cfett">14.5.5</span><span class="cfett"> Innere Mitgliedsklassen und innere anonyme Klassen</span><a href="#dodtp886f6ac1-f6b2-46a1-8ef1-f76b8ac6d93d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa5472a6f-295c-4ed6-9883-f24dfcae85a5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir haben für das Fensterschließ-Beispiel eine externe Klasse benutzt, weil die Klasse
+                                                   für unterschiedliche Swing-Programme nützlich ist. Ist der Listener sehr individuell
+                                                   und mit der Komponente verbunden, so sind innere anonyme Klassen nützlich. Dazu zwei
+                                                   Beispiele.
+                                                </p><a id="dodtpd5e4df86-6c1d-470a-aee0-c1036d220f9b" name="dodtpd5e4df86-6c1d-470a-aee0-c1036d220f9b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Auf Klicks reagieren</span></h4>
+                                                <p>Das <span class="clisting">JLabel</span> kann Maus-Ereignisse empfangen, was wir nutzen wollen, um bei einem Doppelklick die
+                                                   Applikation zu beenden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.8: </strong>com/tutego/insel/ui/event/ClickOnJLabelToClose, java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">JFrame frame = new JFrame();<br>frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );<br><br>JLabel label = new JLabel( "Lebe immer First-Class, sonst tun es deine Erben!" );<br>label.setForeground( Color.BLUE );<br><br>frame.add( label );<br><span class="cfett"><br>label.addMouseListener( new MouseAdapter() {</span><br> <span class="cfett"> @Override public void mouseClicked( MouseEvent e ) {</span><br>   <span class="cfett"> if ( e.getClickCount() &gt; 1 )</span><br>     <span class="cfett"> System.exit( 0 );</span><br> <span class="cfett"> }<br>} );<br></span><br>frame.pack();<br>frame.setVisible( true );<br></pre></div>
+                                                <p>Die Lösung hat den Vorteil, dass nicht extra eine eigene Klasse mit einem häufig überflüssigen
+                                                   Namen angelegt wird. Die Unterklasse von <span class="clisting">MouseAdapter</span> ist nur hier sinnvoll und wird nur in diesem Kontext benötigt.
+                                                </p><a id="dodtp724ee49f-073d-42b2-a53a-50496b1972f0" name="dodtp724ee49f-073d-42b2-a53a-50496b1972f0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Mini-Multiplikationsrechner</span></h4>
+                                                <p>Innere Klassen sind elegant, denn sie können leicht auf Zustände der äußeren Klasse
+                                                   zugreifen. Das folgende Programm realisiert einen Hexadezimalwandler.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 14.9: </strong>com/tutego/insel/ui/event/Hexconverter.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ui.event;<br><br>import java.awt.FlowLayout;<br>import java.awt.event.*;<br>import javax.swing.*;<br><br>public class Hexconverter<br>{<br>  public static void main( String[] args )<br>  {<br>    JFrame frame = new JFrame();<br>    frame.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );<br>    frame.setLayout( new FlowLayout() );<br><br>    final JTextField decTextField = new JTextField();<br>    decTextField.setColumns( 5 );<br>    frame.add( decTextField );<br>    frame.add( new JLabel(" ist hexadezimal " ) );<br>    final JTextField hexTextField = new JTextField();<br>    hexTextField.setColumns( 5 );<br>    frame.add( hexTextField );<br>    JButton okButton = new JButton( "Konvertiere" );<br>    frame.add( okButton );<br><br>   <span class="cfett"> okButton.addActionListener( new ActionListener() {</span><br>     <span class="cfett"> @Override public void actionPerformed( ActionEvent e ) {</span><br>       <span class="cfett"> int</span>   <span class="cfett"> dec = Integer.parseInt( decTextField.getText() );</span><br>       <span class="cfett"> String hex = Integer.toHexString( dec );</span><br>       <span class="cfett"> hexTextField.setText( hex );</span><br>     <span class="cfett"> }</span><br>   <span class="cfett"> } );<br><br>   </span> frame.pack();<br>    frame.setVisible( true );<br>  }<br>}<br></pre></div>
+                                                <p>Das Programm nutzt einige Dinge, die neu sind, aber gut verständlich: Damit mehrere
+                                                   Komponenten nebeneinander gesetzt werden, konfigurieren wir das Fenster mit einem
+                                                   <span class="clisting">FlowLayout</span>. Dann platzieren wir ein Textfeld, eine Beschriftung, ein Textfeld und eine Schaltfläche
+                                                   nebeneinander. An die Schaltfläche kommt ein Listener, damit wir mitbekommen, ob sie
+                                                   bestätigt wurde. Wenn sie bestätigt wurde, erfolgt die Konvertierung (Fehler werden
+                                                   nicht abgefangen). Die anonyme Klasse kann dabei sehr gut auf die beiden Textfelder
+                                                   zurückgreifen. Wäre der Listener eine externe Klasse, so müssten ihr &#8211; etwa im Konstruktor
+                                                   &#8211; die beiden Textfelder mitgegeben werden.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp886f6ac1-f6b2-46a1-8ef1-f76b8ac6d93d" name="dodtp886f6ac1-f6b2-46a1-8ef1-f76b8ac6d93d"></a><h3 class="t3"><span class="cfett">14.5.6</span><span class="cfett"> Aufrufen der Listener im AWT-Event-Thread</span><a href="#dodtp724ee49f-073d-42b2-a53a-50496b1972f0"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Nachdem der Listener implementiert und angemeldet wurde, ist das System im Fall eines
+                                                   aufkommenden Ereignisses bereit, es zu verteilen. Aktiviert zum Beispiel der Benutzer
+                                                   eine Schaltfläche, so führt der <span class="cbegriff">AWT-Event-Thread</span><a class="indexterm" id="dodtp51458af9-97a9-4da7-8adf-51a80099ac2e"></a> &#8211; auch <span class="cbegriff">Event-Dispatching-Thread</span><a class="indexterm" id="dodtp00208faa-1f4b-40a8-9825-523440facba4"></a> genannt &#8211; den Programmcode im Listener selbstständig aus. Sehr wichtig ist Folgendes:
+                                                   Der Programmcode im Listener sollte nicht zu lange laufen, da sich sonst Ereignisse
+                                                   in der Queue sammeln, die der AWT-Thread nicht mehr verarbeiten kann. Diese Eigenschaft
+                                                   fällt dann schnell auf, wenn sich Aufforderungen zum Neuzeigen (Repaint-Ereignisse)
+                                                   aufstauen, da auf diese Weise leicht ein »stehendes System« entsteht.
+                                                </p>
+                                                <p>Die Reihenfolge, in der die Listener abgearbeitet werden, ist im Prinzip undefiniert.
+                                                   Zwar reiht das JDK sie in eine Liste ein, sodass es dadurch eine Reihenfolge gibt,
+                                                   doch sollte diesem Implementierungsdetail keine Beachtung geschenkt werden.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_14_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="14 Einführung in grafische Oberflächen"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_14_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_14_006.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

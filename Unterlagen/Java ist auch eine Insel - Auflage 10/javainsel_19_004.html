@@ -1,0 +1,655 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 19 Die Werkzeuge des JDK">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 19 Die Werkzeuge des JDK">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 19 Die Werkzeuge des JDK</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_19_003.html">
+      <link rel="next" href="javainsel_20_anhang_001.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_19_003.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_20_anhang_001.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599" class="navnav">19 Die Werkzeuge des JDK</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_001.html#dodtp1e8a6d29-cf60-447c-97df-b1110b14de71" class="navnav">19.1 Java-Quellen übersetzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtpc7de6809-b374-46c0-97fd-568067a1388c" class="navnav">19.1.1 Java-Compiler vom JDK</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtp6ef21760-a62e-4151-a224-ad3a00786b8c" class="navnav">19.1.2 Native Compiler</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtp82517158-b575-4d6f-994b-61d8029d1af7" class="navnav">19.1.3 Java-Programme in ein natives ausführbares Programm einpacken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_002.html#dodtpc3766252-c5fc-4ff7-9e02-af2088923721" class="navnav">19.2 Die Java-Laufzeitumgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_003.html#dodtp1a9d4f91-c145-476c-a2a7-810769ef62ec" class="navnav">19.3 Dokumentationskommentare mit JavaDoc</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtp6602ae49-5bca-48e1-ad44-fc235a602ea3" class="navnav">19.3.1 Einen Dokumentationskommentar setzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpbf399d2e-fe9d-4f3a-a9a4-d8a888a314fa" class="navnav">19.3.2 Mit dem Werkzeug javadoc eine Dokumentation erstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpa982f893-694a-4398-9722-a7b97a9bdb08" class="navnav">19.3.3 HTML-Tags in Dokumentationskommentaren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpe49d64cd-ec8e-49bb-8d3b-ec8345f75f34" class="navnav">19.3.4 Generierte Dateien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpc6208a95-ea2a-4930-b445-9f9bff42fedc" class="navnav">19.3.5 Dokumentationskommentare im Überblick *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtp13a44db8-0b63-48bb-bd54-ec61e8636f3a" class="navnav">19.3.6 JavaDoc und Doclets *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpc077a3e1-f06a-4380-99ca-d208b9d9b5a6" class="navnav">19.3.7 Veraltete (deprecated) Typen und Eigenschaften</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_004.html#dodtpd4c1ed80-fb19-481b-8746-87562e566087" class="navh">19.4 Das Archivformat Jar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtp677e8bc8-bc0c-46c6-80f8-a2ec09db688d" class="navh">19.4.1 Das Dienstprogramm jar benutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6" class="navh">19.4.2 Das Manifest</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtp8b5b644e-032b-4555-87ec-014b0f51f8af" class="navh">19.4.3 Applikationen in Jar-Archiven starten</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd4c1ed80-fb19-481b-8746-87562e566087" name="dodtpd4c1ed80-fb19-481b-8746-87562e566087"></a><h2 class="t2"><span class="cfett">19.4</span><span class="cfett"> Das Archivformat Jar</span><a href="#dodtp677e8bc8-bc0c-46c6-80f8-a2ec09db688d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><a class="indexterm" id="dodtp679eb1d4-b98e-410c-a275-630d3e1b3fb1"></a>Die Jar-Dateien (von Java-Archiv) bilden ein Archivformat, das Zip ähnelt. Wie für ein Archivformat üblich, packt
+                                                   auch Jar mehrere Dateien zusammen. »Gepackt« heißt aber nicht zwingend, dass die Dateien
+                                                   komprimiert sein müssen, sie können einfach nur in einem Jar gebündelt sein. Ein Auspackprogramm
+                                                   wie WinZip kann Jar-Dateien entpacken. Hier bleibt zu überlegen, ob ein Programm wie
+                                                   WinZip mit der Dateiendung .jar verbunden werden soll oder ob das Standardverhalten bei installiertem JRE beibehalten
+                                                   wird: Unter Windows ist mit der Dateiendung .jar das JRE verbunden, das die Hauptklasse des Archivs startet.
+                                                </p><a id="dodtp86675e84-a839-4617-adb8-8d0141e0f7ff" name="dodtp86675e84-a839-4617-adb8-8d0141e0f7ff"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Signieren und Versionskennungen</span></h4>
+                                                <p>Microsoft vertraut bei seinen ActiveX-Controls vollständig auf Zertifikate und glaubt
+                                                   an eine Zurückverfolgung der Übeltäter in dem Fall, dass das Control Unsinn anstellt.
+                                                   Leider ist in dieser Gedankenkette ein Fehler enthalten, weil jeder sich Zertifikate
+                                                   ausstellen lassen kann, auch unter dem Namen Mickey Mouse.<span class="footnote"><a id="dodtpa1e43908-cad2-4b56-b760-671609da550e">[230](Obwohl dieser schon vergeben ist; doch vielleicht ist Darkwing Duck ja noch frei.)</a></span></p>
+                                                <p>Überlegt angewendet, ist das Konzept jedoch gut zu verwenden, und Jar-Archive nutzen
+                                                   das gleiche Konzept. Sie lassen sich durch eine Signatur schützen, und die Laufzeitumgebung
+                                                   räumt Java-Programmen Extrarechte ein, die ein normales Programm sonst nicht hätte.
+                                                   Dies ist bei Programmen aus dem Intranet interessant.
+                                                </p>
+                                                <p>Des Weiteren können Hersteller Informationen über Version und Kennung hinzufügen wie
+                                                   auch eine Versionskontrolle, damit nur solche Klassen eines Archivs verwendet werden,
+                                                   die den Verbleib in der gleichen Version gewährleisten. Ferner kam ein Archivformat
+                                                   hinzu, das Pakete zur Core-Plattform API hinzunehmen kann. Ein Beispiel ist etwa die
+                                                   3D- und Java-Mail-API. Eigene Pakete sehen also so aus, als gehörten sie zum Standard.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp677e8bc8-bc0c-46c6-80f8-a2ec09db688d" name="dodtp677e8bc8-bc0c-46c6-80f8-a2ec09db688d"></a><h3 class="t3"><span class="cfett">19.4.1</span><span class="cfett"> Das Dienstprogramm jar benutzen</span><a href="#dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp86675e84-a839-4617-adb8-8d0141e0f7ff"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>jar<a class="indexterm" id="dodtp1c56548a-851b-4080-9eba-ae614e33a000"></a> ist ein Kommandozeilenprogramm und verfügt über verschiedene Optionen, um Archive
+                                                   zu erzeugen, sie auszupacken und anzusehen. Die wichtigsten Formen für das Kommandozeilenprogramm
+                                                   sind:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Anlegen: jar c[Optionen] Jar-Datei Eingabedateien</li>
+                                                   <li>Aktualisieren: jar u[Optionen] Jar-Datei Eingabedateien</li>
+                                                   <li>Auspacken: jar x[Optionen] Jar-Datei</li>
+                                                   <li>Inhalt anzeigen: jar t[Optionen] Jar-Datei</li>
+                                                   <li>Indexdatei INDEX.LIST erzeugen: jar i Jar-Datei</li>
+                                                </ul>
+                                                <p>Je nach Aktion sind weitere Optionen möglich.</p>
+                                                <p>Daneben gibt es eine API im Paket <span class="clisting">java.util.jar</span><a class="indexterm" id="dodtpa2edf55b-fd17-4da3-8428-34995548e18f"></a>, mit der alles programmiert werden kann, was auch das Dienstprogramm leistet.
+                                                </p><a id="dodtp442398d0-9f77-4f6a-b430-cd5dbc1c64cf" name="dodtp442398d0-9f77-4f6a-b430-cd5dbc1c64cf"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Jar-Dateien anlegen</span></h4>
+                                                <p>Die notwendige Option für das Anlegen eines neuen Archivs ist c (für engl. create). Da wir häufig die Ausgabe (das neue Archiv) in einer Datei haben wollen, geben wir
+                                                   zusätzlich f (für engl. file) an. Somit können wir schon unser erstes Archiv erstellen. Nehmen wir dazu an, es
+                                                   gibt ein Verzeichnis images für Bilder und die Klasse Slider.class. Dann packt folgende Zeile die Klasse und alle Bilder in das Archiv slider.jar:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar cvf slider.jar Slider.class images</span><br></pre></div>
+                                                <p>Während des Komprimierens geht jar alle angegebenen Verzeichnisse und Unterverzeichnisse durch und gibt, da zusätzlich
+                                                   zu cf der Schalter v gesetzt ist, auf dem Bildschirm die Dateien mit einem Kompressionsfaktor an:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">adding: Slider.class (in=2790) (out=1506) (deflated 46 %)<br>adding: images/ (in=0) (out=0) (stored 0 %)<br>adding: images/darkwing.gif (in=1065) (out=801) (deflated 24 %)<br>adding: images/volti.gif (in=173) (out=154) (deflated 10 %)<br>adding: images/superschurke.gif (in=1076)(out=926)(deflated 13 %)<br>adding: images/aqua.gif (in=884) (out=568) (deflated 35 %)<br></pre></div>
+                                                <p>Statt der Dateinamen können wir auch * oder andere Wildcards angeben. Diese Expansionsfähigkeit
+                                                   ist ohnehin Aufgabe der Shell.
+                                                </p>
+                                                <p>Möchten wir die Dateien nicht komprimiert haben, sollten wir den Schalter 0 angeben.</p>
+                                                <p>jar behält bei den zusammengefassten Dateien standardmäßig die Verzeichnisstruktur bei.
+                                                   In der oberen Ausgabe ist abzulesen, dass jar für images ein eigenes Verzeichnis im Archiv erstellt und die Bilder dort hineinsetzt. Der Schalter
+                                                   C (genau wie -C beim Kompressionsprogramm GZip) bildet diese hierarchische Struktur flach ohne Verzeichnisstruktur
+                                                   ab. Wenn wir mehrere Verzeichnisse zusammenpacken, lässt sich für jedes Verzeichnis
+                                                   bestimmen, ob die Struktur erhalten bleiben soll oder nicht. Nehmen wir zu unserem
+                                                   sliders-Archiv noch ein weiteres Verzeichnis mit Sound-Dateien hinzu, und beobachten wir
+                                                   die Ausgabe bei:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar cfv0 slider.jar Slider.class images -C sounds</span><br></pre></div>
+                                                <p>Zweierlei ist neu: Zum einen komprimiert jar nicht mehr (der Schalter 0 ist gesetzt), und die Option C erreicht, dass jar in das sound-Verzeichnis geht und dort alle Sound-Dateien in das Basisverzeichnis setzt.</p>
+                                                <p>Einer angelegten Archiv-Datei lassen sich später mit u (für engl. update) noch Dateien hinzufügen. Nehmen wir an, es kommt eine Bilddatei hinzu, so schreiben
+                                                   wir:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar vuf slider.jar images/buchsbaum.gif</span><br></pre></div><a id="dodtp3e165695-8f8e-446c-9a53-24a7509db74e" name="dodtp3e165695-8f8e-446c-9a53-24a7509db74e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Jar-Dateien betrachten</span></h4>
+                                                <p>Die zusammengepackten Dateien zeigt die Option tf an:</p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar tf slider.jar</span><br>META-INF/MANIFEST.MF<br>Slider.class<br>images/volti.gif<br></pre></div>
+                                                <p>Zusätzlich zu unseren Dateien sehen wir eine von jar eigenständig hinzugefügte Manifest-Datei, die wir in Abschnitt 19.4.2, »Das Manifest«,
+                                                   besprechen wollen.
+                                                </p>
+                                                <p>Fehlt die Endung, oder ist der Dateiname falsch angegeben, folgt eine etwas ungewöhnliche
+                                                   Fehlermeldung: <span class="clisting">java.io.FileNotFoundException</span> &#8211; das heißt: ein Dateiname und dann ein Stack-Trace. Dies wirkt etwas unprofessionell.
+                                                </p>
+                                                <p>Zum Anzeigen der Archive kommt der Schalter t (für engl. table of contents) zum Einsatz. Wir geben im Beispiel f an, weil wir den Dateinamen auf der Kommandozeile eintragen und nicht von der Standardeingabe
+                                                   etwa über eine Pipe lesen. Zusätzlich gibt uns der Schalter v (für engl. verbose) noch den Zeitpunkt der letzten Änderung und die Dateigröße aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint"> 291 Fri Dec 17 14:51:08 GMT 1999 META-INF/MANIFEST.MF<br>2790 Thu Dec 16 14:54:06 GMT 1999 Slider.class<br> 173 Mon Oct 14 00:38:00 GMT 1996 images/volti.gif<br></pre></div><a id="dodtp6b3c6a24-b3e0-4aeb-a9ac-cb85ea7fa25c" name="dodtp6b3c6a24-b3e0-4aeb-a9ac-cb85ea7fa25c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Dateien aus dem Archiv extrahieren</span></h4>
+                                                <p>Der wichtigste Schalter beim Entpacken ist x (für engl. extract). Zusätzlich gilt für den Schalter f (file) das Gleiche wie beim Anzeigen: Ohne den Schalter erwartet jar die Archiv-Datei in der Standardeingabe. Als Parameter ist zusätzlich das Archiv
+                                                   erforderlich. Sind optional Dateien oder Verzeichnisse angegeben, packt jar nur diese aus. Nötige Verzeichnisse für die Dateien erzeugt jar automatisch. Hier ist Vorsicht geboten, denn jar überschreibt alle Dateien, die schon mit dem gleichen Namen auf dem Datenträger existieren.
+                                                   Das Archiv bleibt nach dem Auspacken erhalten. Wir wollen jetzt nur die Grafiken aus
+                                                   unserem Archiv slider.jar auspacken. Dazu schreiben wir:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar vxf slider.jar images\*</span><br>extracted: images\volti.gif<br></pre></div>
+                                                <p>Die Option v haben wir eingesetzt, damit wir sehen, was jar genau packt. Sonst erfolgt keine Ausgabe auf der Konsole.</p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6" name="dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6"></a><h3 class="t3"><span class="cfett">19.4.2</span><span class="cfett"> Das Manifest</span><a href="#dodtp8b5b644e-032b-4555-87ec-014b0f51f8af"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6b3c6a24-b3e0-4aeb-a9ac-cb85ea7fa25c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ohne dass die Ausgabe es zeigt, fügt jar beim Erzeugen eines Archivs automatisch eine Manifest-Datei namens META-INF/MANIFEST.MF<a class="indexterm" id="dodtp790ade61-8159-4e20-af51-eb004eda28ee"></a><a class="indexterm" id="dodtp48ae92aa-00fc-454e-be58-93e3693f0464"></a> ein. Ein Manifest enthält für ein Archiv wichtige Zusatzinformationen, wie die Signatur,
+                                                   die für jede Datei aufgeführt ist. Sehen wir uns einmal die Manifest-Datei an, die
+                                                   sich für
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar cfv slider.jar Slider.class images/volti.gif</span><br></pre></div>
+                                                <p>ergibt. Die Einträge im Manifest erinnern an eine Property-Datei, denn auch hier gibt
+                                                   es immer Schlüssel und Werte, die durch einen Doppelpunkt getrennt sind:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Manifest-Version: 1.0<br>Name: Slider.class<br>Digest-Algorithms: SHA MD5<br>SHA-Digest: /RD8BF1mwd3bYXcaYYkqLjCkYdw=<br>MD5-Digest: WcnCNJbo08PH/ATqMHqZDw==<br>Name: images/volti.gif<br>Digest-Algorithms: SHA MD5<br>SHA-Digest: 9zeehlViDy0fpfvOKkPECiMYvH0=<br>MD5-Digest: qv913KlZFi5tdPr2BjatIg==<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8b5b644e-032b-4555-87ec-014b0f51f8af" name="dodtp8b5b644e-032b-4555-87ec-014b0f51f8af"></a><h3 class="t3"><span class="cfett">19.4.3</span><span class="cfett"> Applikationen in Jar-Archiven starten</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Dass die Dateien zusammen in einem Archiv gebündelt sind, hat den Vorteil, dass Entwickler
+                                                   ihren Kunden nicht mehr ein ganzes Bündel von Klassen- und Ressourcen-Dateien ausliefern
+                                                   müssen, sondern nur eine einzige Datei. Ein anderer Vorteil ist, dass ein Betriebssystem
+                                                   wie Windows oder Mac OS X standardmäßig mit der Endung .jar das JRE<a class="indexterm" id="dodtp823a55a9-48e6-48a7-8194-f437e4cd7c25"></a> (Java Runtime Environment<a class="indexterm" id="dodtpb1e1e427-fec4-4e45-9c19-2fd7d411fb8a"></a>) verbunden hat, sodass ein Doppelklick auf einer Jar-Datei das Programm gleich startet.
+                                                </p><a id="dodtpf1a81a1b-3206-45d9-ac57-aaa219df8e73" name="dodtpf1a81a1b-3206-45d9-ac57-aaa219df8e73"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Main-Class im Manifest</span></h4>
+                                                <p>Damit die Laufzeitumgebung weiß, welches <span class="clisting">main()</span> welcher Klasse sie aufrufen soll, ist eine kleine Notiz mit dem Schlüssel <span class="clisting">Main-Class</span><a class="indexterm" id="dodtp78c5ee8e-d6d4-42d7-91fc-082eff7579c9"></a> in der Manifest-Datei nötig:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Main-Class: voll.qualifizierter.Klassenname.der.Klasse.mit.main<br></pre></div>
+                                                <p>Dies ist sehr angenehm für den Benutzer eines Archivs, denn nun ist der Hersteller
+                                                   für den Eintrag des Einstiegspunkts im Manifest verantwortlich.
+                                                </p><a id="dodtp54daae71-177e-4d5d-99d5-09f733812866" name="dodtp54daae71-177e-4d5d-99d5-09f733812866"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Manifest-Dateien mit Main-Class-Einträgen erstellen</span></h4>
+                                                <p>Wir können das m-Flag (für engl. merge) beim Dienstprogramm jar nutzen, um Einträge zum Manifest hinzuzufügen und auf diese Weise dem Jar-Archiv
+                                                   die Klasse mit der statischen <span class="clisting">main()</span>-Methode mitzuteilen. Vor der Erzeugung eines Archivs erstellen wir eine Textdatei,
+                                                   die wir hier MainfestMain.txt nennen wollen, mit dem Eintrag <span class="clisting">Main-Class</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 19.3: </strong>MainfestMain.txt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Main-Class: Main<br></pre></div>
+                                                <p>Unser Slider-Programm soll die Hauptklasse <span class="clisting">Main.class</span> besitzen.
+                                                </p>
+                                                <p>Nun lässt sich die Datei MainfestMain.txt mit der Manifest-Datei zusammenbinden und anschließend benutzen:</p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> jar cmf MainfestMain.txt slider.jar Main.class</span><br>$<span class="cfett"> java -jar slider.jar</span><br>$<span class="cfett"> java -jar slider.jar Main</span><br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Seit Java 6 ermöglicht der Schalter -e (für <span class="cbegriff">endpoint</span>) direkt die Angabe der ausführbaren Klasse in der Manifest-Datei des Java-Archivs:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">$ <span class="cfett">jar cfe application.jar com.tutego.Main com/tutego/Main.class</span><br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp6c3935dc-1802-4a5d-a9a9-4f8de498bd99" name="dodtp6c3935dc-1802-4a5d-a9a9-4f8de498bd99"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Von der Kommandozeile oder mit Doppelklick starten</span></h4>
+                                                <p>Starten wir den Interpreter java von der Kommandozeile, gibt die Option -jar das Archiv an, und der Interpreter sucht nach dem Startprogramm, das durch die Manifest-Datei
+                                                   gegeben ist.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> java -jar JarDatei.jar</span><br></pre></div>
+                                                <p>Ausführbare Java-Archive starten wir unter Windows mit einem Doppelklick, da die Dateiendung
+                                                   .jar dazu führt, dass javaw -jar<a class="indexterm" id="dodtp215d9234-0c0c-4dd2-92ae-6cc151696b96"></a> mit dem Dateinamen ausgeführt wird. Auch Solaris ab 2.6 erkennt Jar-Dateien in der
+                                                   Konsole oder dem Desktop als ausführbare Programme und startet sie selbstständig mit
+                                                   java -jar.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>java (oder javaw) ignoriert die Angaben über -cp beziehungsweise Einträge in der Umgebungsvariable <span class="clisting">CLASSPATH</span><a class="indexterm" id="dodtp8596341d-e5d4-4707-a419-9495e7eb8f36"></a>, wenn ein Java-Programm mit -jar gestartet wird.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Das <span class="cbegriff">Fat Jar Eclipse Plug-In</span> (http://fjep.sourceforge.net/) entpackt etwaige referenzierte Java-Archive und bündelt sie zu einem neuen großen
+                                                   Jar, das java -jar starten kann.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_19_004.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="19 Die Werkzeuge des JDK"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_19_003.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_20_anhang_001.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

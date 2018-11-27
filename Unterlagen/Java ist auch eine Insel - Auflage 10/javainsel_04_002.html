@@ -1,0 +1,1075 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 4 Der Umgang mit Zeichenketten">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 4 Der Umgang mit Zeichenketten">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 4 Der Umgang mit Zeichenketten</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_04_001.html">
+      <link rel="next" href="javainsel_04_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_04_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_04_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf" class="navnav">4 Der Umgang mit Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_001.html#dodtp3a51a1ce-0978-467c-ad16-4319746a6ccc" class="navnav">4.1 Von ASCII über ISO-8859-1 zu Unicode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp8e3b21e8-9b34-42ae-a6cb-ad9566c9831e" class="navnav">4.1.1 ASCII</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpa59ddfc0-e76b-43a8-a743-a24edff8878e" class="navnav">4.1.2 ISO/IEC 8859-1</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp6a3a3085-1e0d-4be0-aa45-e3b815978e94" class="navnav">4.1.3 Unicode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp11eb937b-c70a-480f-8c2d-eb1bb380f6eb" class="navnav">4.1.4 Unicode-Zeichenkodierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtp4bdce7ec-3c88-4fdf-ac19-835a220a3b01" class="navnav">4.1.5 Escape-Sequenzen/Fluchtsymbole</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpb52c4df2-888c-4da6-ad78-58aeea44752e" class="navnav">4.1.6 Schreibweise für Unicode-Zeichen und Unicode-Escapes</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_001.html#dodtpcfd87265-08d6-4165-bb38-ab0e7d417854" class="navnav">4.1.7 Unicode 4.0 und Java *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_002.html#dodtp6bd433f4-397b-45a7-b83d-2ea9fad079d5" class="navh">4.2 Die Character-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp9e9ad525-a4db-4c10-96ac-4aef98480de5" class="navh">4.2.1 Ist das so?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6" class="navh">4.2.2 Zeichen in Großbuchstaben/Kleinbuchstaben konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_002.html#dodtp0b270e00-e3a1-4095-aa33-a58a636b5466" class="navh">4.2.3 Ziffern einer Basis *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_003.html#dodtp723df1c9-19b9-42c1-b2af-b2741046ba8e" class="navnav">4.3 Zeichenfolgen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_004.html#dodtp7f11b4f3-2973-47a1-9c29-5043481df6f4" class="navnav">4.4 Die Klasse String und ihre Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpa9c5593a-0700-4fcc-9e70-da09cc747955" class="navnav">4.4.1 String-Literale als String-Objekte für konstante Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp429c8351-9824-436d-9e06-d476d6a63751" class="navnav">4.4.2 Konkatenation mit +</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp484ac879-c6cd-4606-b3cd-408e6a858da7" class="navnav">4.4.3 String-Länge und Test auf Leerstring</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp79be3a85-e352-4084-b230-beeca740084e" class="navnav">4.4.4 Zugriff auf ein bestimmtes Zeichen mit charAt( )</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp1752f70b-a361-4457-b048-e22492906896" class="navnav">4.4.5 Nach enthaltenen Zeichen und Zeichenfolgen suchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp04c666a0-87e6-43b5-b550-9584095dcebc" class="navnav">4.4.6 Das Hangman-Spiel</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp22cdb802-709c-4397-91c9-aff769409895" class="navnav">4.4.7 Gut, dass wir verglichen haben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp19ca6c7a-b71c-4a0f-8eca-aba970744bfd" class="navnav">4.4.8 Phonetische Vergleiche *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp4e4e59a7-35fb-43d1-b04d-28f9c94df327" class="navnav">4.4.9 String-Teile extrahieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpc832c4d5-3109-4fb2-b781-9e6e3c6a7118" class="navnav">4.4.10 Strings anhängen, Groß-/Kleinschreibung und Leerraum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtp519a961b-a9e3-488c-be97-69cfd3802c45" class="navnav">4.4.11 Suchen und ersetzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_004.html#dodtpd8f01562-7259-4afe-8811-bb6765eb61e6" class="navnav">4.4.12 String-Objekte mit Konstruktoren neu anlegen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_005.html#dodtpa464e970-fb6f-47bd-bf9c-d6cb1f0b5349" class="navnav">4.5 Konvertieren zwischen Primitiven und Strings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp5b81d2bf-a8f5-4be2-a0dd-bda1cdba97fa" class="navnav">4.5.1 Unterschiedliche Typen in String-Repräsentationen konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp5ae45208-c979-4bc7-965d-2b4cd851adfc" class="navnav">4.5.2 Stringinhalt in einen primitiven Wert konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_005.html#dodtp0d763dea-a664-4e0c-8068-6eb2e89ab8bc" class="navnav">4.5.3 String-Repräsentation im Format Binär, Hex, Oktal *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_006.html#dodtpe9f237e4-4d46-46f4-b620-a81d056423de" class="navnav">4.6 Veränderbare Zeichenketten mit StringBuilder und StringBuffer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp728cdc6b-090d-4897-a985-a0f7f2ebbca0" class="navnav">4.6.1 Anlegen von StringBuilder/StringBuffer-Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp4cbab571-d73d-4d7d-99e9-4940df24117b" class="navnav">4.6.2 StringBuilder/StringBuffer in andere Zeichenkettenformate konvertieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpcdeb7fe1-a269-4b28-8438-d0cb6a406408" class="navnav">4.6.3 Zeichen(folgen) erfragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtp19fb2cca-a94c-4f97-819a-84fe45c628f0" class="navnav">4.6.4 Daten anhängen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpe9ab9b5b-d1ca-4a09-baa2-1d47f163c64e" class="navnav">4.6.5 Zeichen(folgen) setzen, löschen und umdrehen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpf9593020-cd4c-4869-b8e1-7858b4a9f1a0" class="navnav">4.6.6 Länge und Kapazität eines StringBuilder/StringBuffer-Objekts *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpeffdf00c-3f8c-4207-8a41-1cef0dea8ffb" class="navnav">4.6.7 Vergleichen von String mit StringBuilder und StringBuffer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_006.html#dodtpb8b924e4-3caf-45e9-8ec2-534f0e8f3d9e" class="navnav">4.6.8 hashCode() bei StringBuilder/StringBuffer *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_007.html#dodtpc529afc1-a964-4b60-8a24-ddfe58852298" class="navnav">4.7 CharSequence als Basistyp *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_008.html#dodtpfc2734b1-8b35-4dd5-966b-bb008cae0761" class="navnav">4.8 Reguläre Ausdrücke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpb7c12b47-3234-4d45-967e-0e365a0e12e6" class="navnav">4.8.1 Pattern.matches() bzw. String#matches()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpfb7f091e-c01c-4a19-a470-7366b52f345a" class="navnav">4.8.2 Die Klassen Pattern und Matcher</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp9e3adb06-b611-43a6-9a50-6fadd4a21478" class="navnav">4.8.3 Finden und nicht matchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp87f2ce0c-c231-4b87-8bd6-b89d0edbb6d4" class="navnav">4.8.4 Gierige und nicht gierige Operatoren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp373481e4-0487-4d29-a834-c22709d68dc9" class="navnav">4.8.5 Mit MatchResult alle Ergebnisse einsammeln *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtpeeae7c60-a038-4447-831b-44fb85df67f8" class="navnav">4.8.6 Suchen und Ersetzen mit Mustern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_008.html#dodtp65efbd99-e97a-4cc1-acd7-c479c110a5c7" class="navnav">4.8.7 Hangman Version 2</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_009.html#dodtp33e02ca1-cb53-403e-92a2-dfe128dcccb2" class="navnav">4.9 Zerlegen von Zeichenketten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtpefe7c494-123b-4037-b77c-064e7bd8785c" class="navnav">4.9.1 Splitten von Zeichenketten mit split()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp28631111-29c9-4866-9379-819c91beba51" class="navnav">4.9.2 Die Klasse Scanner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp6aa52a64-dff4-40bf-bf96-d091c8368e75" class="navnav">4.9.3 Die Klasse StringTokenizer *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_009.html#dodtp57db9f11-ff30-4a7c-9ef6-8e49bff9d954" class="navnav">4.9.4 BreakIterator als Zeichen-, Wort-, Zeilen- und Satztrenner *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_010.html#dodtpbfd38844-3813-4110-896a-4d493bd19e59" class="navnav">4.10 Zeichenkodierungen, XML/HTML-Entitys, Base64 *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp4779f062-da92-42f4-a915-858f81651fae" class="navnav">4.10.1 Unicode und 8-Bit-Abbildungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp684e7e63-8c2f-4d14-b029-d0fb3acd15ed" class="navnav">4.10.2 Das Paket java.nio.charset und der Typ Charset</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp84e7ce20-060f-4df8-8206-6ec17052cd0a" class="navnav">4.10.3 Konvertieren mit OutputStreamWriter/InputStreamReader-Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtpab9d0a59-fa60-44ce-ad48-dea80359dd3a" class="navnav">4.10.4 XML/HTML-Entitys ausmaskieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_010.html#dodtp636eea3d-2d27-408c-a621-99a7c86ba0c0" class="navnav">4.10.5 Base64-Kodierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_011.html#dodtp502391df-4eac-4eb6-a246-312c07a323f4" class="navnav">4.11 Ausgaben formatieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpc2c16909-1067-42cb-b079-f9644c983574" class="navnav">4.11.1 Formatieren und Ausgeben mit format()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp8cc5820b-ccb2-4047-aa17-679849894d31" class="navnav">4.11.2 Die Formatter-Klasse *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp71722b5f-7b48-48aa-ba84-3cb99a62564c" class="navnav">4.11.3 Formatieren mit Masken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpa51af71d-2ad9-47b5-a12a-0cbf16156752" class="navnav">4.11.4 Format-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtp6223d54a-d5d8-4ea7-a487-03f519d21c6b" class="navnav">4.11.5 Zahlen, Prozente und Währungen mit NumberFormat und DecimalFormat formatieren
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_011.html#dodtpd959a81d-7820-428f-aa66-28f7760d29c1" class="navnav">4.11.6 MessageFormat und Pluralbildung mit ChoiceFormat</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_012.html#dodtpe218ed3c-67d0-4ed9-99fa-58ca5fdbc2b4" class="navnav">4.12 Sprachabhängiges Vergleichen und Normalisierung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtp96f9c2db-2b20-4717-a00c-b204c0a81542" class="navnav">4.12.1 Die Klasse Collator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtpe74de82c-4244-4a9b-9bcf-5d2a671bbb87" class="navnav">4.12.2 Effiziente interne Speicherung für die Sortierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_04_012.html#dodtp88fb2dee-a4ae-4383-9f29-d0811e8b66f0" class="navnav">4.12.3 Normalisierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_04_013.html#dodtp27438f7a-cc65-47be-bbee-16eef435c867" class="navnav">4.13 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6bd433f4-397b-45a7-b83d-2ea9fad079d5" name="dodtp6bd433f4-397b-45a7-b83d-2ea9fad079d5"></a><h2 class="t2"><span class="cfett">4.2</span><span class="cfett"> Die Character-Klasse</span><a href="#dodtp9e9ad525-a4db-4c10-96ac-4aef98480de5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Die im Kernpaket <span class="clisting">java.lang</span> angesiedelte Klasse <span class="clisting">Character</span><a class="indexterm" id="dodtp70e7943b-1fb7-4bc2-8e26-3269801ed42c"></a> bietet eine große Anzahl statischer Methoden, die im Umgang mit einzelnen Zeichen
+                                                   interessant sind. Dazu gehören Methoden zum Testen, etwa ob ein Zeichen eine Ziffer,
+                                                   ein Buchstabe oder ein Sonderzeichen ist.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9e9ad525-a4db-4c10-96ac-4aef98480de5" name="dodtp9e9ad525-a4db-4c10-96ac-4aef98480de5"></a><h3 class="t3"><span class="cfett">4.2.1</span><span class="cfett"> Ist das so?</span><a href="#dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6bd433f4-397b-45a7-b83d-2ea9fad079d5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Allen Testmethoden ist gemeinsam, dass sie mit der Vorsilbe <span class="clisting">is</span> beginnen und ein <span class="clisting">boolean</span> liefern. Dazu gesellen sich Methoden zum Konvertieren, etwa in Groß-/Kleinschreibung.
+                                                </p>
+                                                <p>Ein paar Beispiele:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 4.4: </strong>Ergebnis einiger isXXX()-Methoden
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Ausdruck</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Ergebnis</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isDigit( '0' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">true</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isDigit( '-' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">false</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isLetter( 'ß' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">true</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isLetter( '0' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">false</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isWhitespace( ' ' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">true</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Character.isWhitespace( '-' )</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">false</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Alle diese Methoden »wissen« über die Eigenschaften der einzelnen Unicode-Zeichen
+                                                   Bescheid. Und 0 bleibt ja immer eine Null, egal ob das Programm in Deutschland oder
+                                                   in der Mongolei ausgeführt wird, denn der Codepoint jedes Unicode-Zeichens ist immer
+                                                   der gleiche.
+                                                </p><a id="dodtpfa32c5a3-cd1e-41a1-945d-f36520a4dcb0" name="dodtpfa32c5a3-cd1e-41a1-945d-f36520a4dcb0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Testen, ob eine Zeichenkette nur aus Ziffern besteht</span></h4>
+                                                <p>Im folgenden Beispiel wollen wir die Methode deklarieren, die einen String abläuft
+                                                   und testet, ob der String nur aus Ziffern besteht. Obwohl so eine Funktionalität in
+                                                   der Praxis nützlich ist, bietet Java SE dafür keine simple Methode.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 4.1: </strong>IsNumeric.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class IsNumeric<br>{<br>  /**<br>   * Returns {@code true} if the String contains only Unicode digits.<br>   * An empty string or {@code null} leads to {@code false}.<br>   *<br>   * @param  string Input String.<br>   * @return {@code true} if string is numeric, {@code false} otherwise.<br>   */<br>  public static boolean isNumeric( String string )<br>  {<br>    if ( string == null || string.length() == 0 )<br>      return false;<br><br>    for ( int i = 0; i &lt; string.length(); i++ )<br>      if ( !<span class="cfett"> Character.isDigit( string.charAt( i )</span> ) )<br>        return false;<br><br>    return true;<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    System.out.println( isNumeric( "1234" ) );  // true<br>    System.out.println( isNumeric( "12.4" ) );  // false<br>    System.out.println( isNumeric( "-123" ) );  // false<br>  }<br>}<br></pre></div>
+                                                <p>Es ist so definiert, dass <span class="clisting">null</span> und ein leerer String nicht als numerisch angesehen werden, allerdings lässt sich
+                                                   auch definieren, dass <span class="clisting">null</span> zu einer Ausnahme führen soll und der leere String durchaus numerisch ist. Konventionen
+                                                   wie diese liegen beim Autor der Bibliothek, und unterschiedliche Utility-Bibliotheken
+                                                   mit solchen Hilfsfunktionen haben dort unterschiedliche Vorstellungen.
+                                                </p>
+                                                <p>Das Beispiel nutzt zwei <span class="clisting">String</span>-Methoden: <span class="clisting">length()</span> liefert die Länge eines Strings, und <span class="clisting">charAt()</span> liefert das Zeichen an der gewünschten Stelle. Eine Schleife iteriert über den String
+                                                   und testet jedes Zeichen mit <span class="clisting">isDigit()</span>; ist ein Zeichen keine Ziffer, verlässt <span class="clisting">return false</span> automatisch die Schleife. Läuft die Schleife erfolgreich durch, kann ein <span class="clisting">return true</span> vermelden, dass jedes Zeichen eine Ziffer war.
+                                                </p><a id="dodtpa338e7a3-8a8a-4fe2-a6c0-fd5f359e31af" name="dodtpa338e7a3-8a8a-4fe2-a6c0-fd5f359e31af"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die wichtigsten isXXX()-Methoden im Überblick</span></h4>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.lang.<span class="cfett">Character</span><br>implements Serializable, Comparable&lt;Character&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static boolean isDigit(char ch)</span><br>Handelt es sich um eine Ziffer zwischen 0 und 9?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isLetter(char ch)</span><br>Handelt es sich um einen Buchstaben?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isLetterOrDigit(char ch)</span><br>Handelt es sich um ein alphanumerisches Zeichen?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isLowerCase(char ch)</span></li>
+                                                   <li><span class="clisting">boolean isUpperCase(char ch)</span><br>Ist es ein Klein- oder ein Großbuchstabe?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isWhiteSpace(char ch)</span><br>Ist es ein Leerzeichen, Zeilenvorschub, Return oder Tabulator, also ein sogenannter
+                                                      <span class="cbegriff">Weißraum</span><span class="footnote"><a id="dodtpa7918607-f7aa-44ff-8473-afdef1de7473">[114]()</a></span><a class="indexterm" id="dodtp64e54082-b18e-49e5-8ec6-d7ca8438426c"></a> (engl. <span class="cbegriff">white space</span>), auch <span class="cbegriff">Leerraum</span> genannt?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isJavaIdentifierStart(char ch)</span><br>Ist es ein Java-Buchstabe, mit dem Bezeichner beginnen dürfen?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isJavaIdentifierPart(char ch)</span><br>Ist es ein Java-Buchstabe oder eine Ziffer, der beziehungsweise die in der Mitte eines
+                                                      Bezeichners vorkommen darf?
+                                                   </li>
+                                                   <li><span class="clisting">static boolean isTitleCase(char ch)</span><br>Sind es spezielle Zwei-Buchstaben-Paare mit gemischter Groß- und Kleinschreibung?
+                                                      Dies kommt etwa im Spanischen vor, wo »lj« für einen einzigen Buchstaben steht. In
+                                                      Überschriften erscheint dieses Paar als »Lj« und wird von dieser Methode als Sonderfall
+                                                      erkannt. Unter <a href="http://www.unicode.org/reports/tr21/tr21-5.html" target="_blank">http://www.unicode.org/reports/tr21/tr21-5.html</a> schreibt der Unicode-Standard die Konvertierung vor.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6" name="dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6"></a><h3 class="t3"><span class="cfett">4.2.2</span><span class="cfett"> Zeichen in Großbuchstaben/Kleinbuchstaben konvertieren</span><a href="#dodtp0b270e00-e3a1-4095-aa33-a58a636b5466"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa338e7a3-8a8a-4fe2-a6c0-fd5f359e31af"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Zum Konvertieren eines Zeichens in Groß-/Kleinbuchstaben deklariert die <span class="clisting">Character</span> Klasse die Methoden <span class="clisting">toUpperCase()</span> und <span class="clisting">toLowerCase()</span>. Die testenden <span class="clisting">isXXX()</span>-Methoden finden oft Anwendung beim Ablaufen einer Zeichenkette.
+                                                </p>
+                                                <p>Unser nächstes Beispiel fragt den Benutzer nach einem String. Gültige Buchstaben sollen
+                                                   in Großbuchstaben konvertiert werden, und jeder Weißraum soll durch einen Unterstrich
+                                                   ersetzt werden. Zum Ablaufen der Eingabe nutzen wir wieder die schon bekannten <span class="clisting">String</span>-Methoden <span class="clisting">length()</span> und <span class="clisting">charAt()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 4.2: </strong>UppercaseWriter.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class UppercaseWriter<br>{<br>  public static void main( String[] args )<br>  {<br>    String input = new java.util.Scanner( System.in ).nextLine();<br><br>    for ( int i = 0; i &lt; input.length(); i++ )<br>    {<br>      char c = input.charAt( i );<br>      if ( Character.isWhitespace( c ) )<br>        System.out.print( '_' );<br>      else if ( Character.isLetter( c ) )<br>        System.out.print(<span class="cfett"> Character.toUpperCase( c )</span> );<br>    }<br>  }<br>}<br></pre></div>
+                                                <p>Wenn die Eingabe etwa »honiara brotherhood guesthouse1« ist, ist die Ausgabe »HONIARA_BROTHERHOOD_GUESTHOUSE«.
+                                                   Die »1« verschwindet, weil sie weder ein Leerzeichen noch ein Buchstabe ist.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.lang.<span class="cfett">Character</span><br>implements Serializable, Comparable&lt;Character&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static char toUpperCase(char ch)</span></li>
+                                                   <li><span class="clisting">static char toLowerCase(char ch)</span><br>Die statischen Methoden <span class="clisting">toUpperCase()</span> und <span class="clisting">toLowerCase()</span> liefern den passenden Groß- beziehungsweise Kleinbuchstaben zurück.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Methoden <span class="clisting">toUpperCase()</span><a class="indexterm" id="dodtp7674c727-4816-441f-95a2-82280740ce5d"></a> und <span class="clisting">toLowerCase()</span><a class="indexterm" id="dodtpeba643e6-6cb1-48c3-ad13-bf4386337620"></a> gibt es zweimal: einmal als statische Methoden bei <span class="clisting">Character</span> &#8211; dann nehmen sie genau ein <span class="clisting">char</span> als Argument &#8211; und einmal als Objektmethoden auf <span class="clisting">String</span>-Exemplaren. <br>Vorsicht ist bei <span class="clisting">Character.toUpperCase('ß')</span> geboten, denn das Ergebnis ist »ß«, anders als bei der String-Methode <span class="clisting">toUpperCase("ß")</span>, die das Ergebnis »SS« liefert; einen String, der um eins verlängert ist.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0b270e00-e3a1-4095-aa33-a58a636b5466" name="dodtp0b270e00-e3a1-4095-aa33-a58a636b5466"></a><h3 class="t3"><span class="cfett">4.2.3</span><span class="cfett"> Ziffern einer Basis *</span><a href="#dodtp5fb4173c-76bf-45f1-b5e1-f5a72b2b3ae6"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die <span class="clisting">Character</span>-Klasse besitzt ebenso eine Umwandlungsmethode für Ziffern bezüglich einer beliebigen
+                                                   Basis:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">final class java.lang.<span class="cfett">Character</span><br>implements Serializable, Comparable&lt;Character&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static int digit(char ch, int radix)</span><br>Liefert den numerischen Wert, den das Zeichen <span class="clisting">ch</span> unter der Basis <span class="clisting">radix</span> besitzt. Beispielsweise ist <span class="clisting">Character.digit('f', 16)</span> gleich 15. Erlaubt ist jedes Zahlensystem mit einer Basis zwischen <span class="clisting">Character.MIN_RADIX</span><a class="indexterm" id="dodtpc13cecdf-c09e-427b-ae0f-001c3e819631"></a> (2) und <span class="clisting">Character.MAX_RADIX</span> (36)<a class="indexterm" id="dodtpe2592b2c-b2b9-4e11-94a4-dc22cd06a474"></a>. Ist keine Umwandlung möglich, beträgt der Rückgabewert &#8211;1.
+                                                   </li>
+                                                   <li><span class="clisting">static char forDigit(int digit, int radix)</span><br>Konvertiert einen numerischen Wert in ein Zeichen. Beispielsweise ist <span class="clisting">Character.forDigit(6, 8)</span> gleich »6« und <span class="clisting">Character.forDigit(12, 16)</span> ist »c«.
+                                                   </li>
+                                                </ul>
+                                                <p>Es ist bedauerlich, dass der Radix immer mit angegeben werden muss, obwohl er in der
+                                                   Regel immer 10 ist. Eine überladene statische Methode wäre hier angebracht.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Steht in einem Zeichen <span class="clisting">c</span> zum Beispiel '3' und soll aus diesem die Ganzzahl 3 werden, so besteht die traditionelle
+                                                               Art darin, eine '0' abzuziehen. Die ASCII-Null '0' hat den <span class="clisting">char</span>-Wert 48, '1' dann 49, bis '9' schließlich 57 erreicht. So ist logischerweise '3'
+                                                               &#8211; '0' = 51 &#8211; 48 = 3.) Die <span class="clisting">digit()</span>-Methode ist dazu eine Alternative. Wir nutzen sie in einem kleinen Beispiel, um eine
+                                                               Zeichenkette mit Ziffern schließlich in eine Ganzzahl zu konvertieren.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">char[] chars = { '3', '4', '0' };<br>int result = 0;<br>for ( char c : chars )<br>{<br>  result = result * 10 + <span class="cfett">Character.digit( c, 10 )</span>;<br>  System.out.println( result );<br>}<br></pre></div>
+                                                               Die Ausgabe ist 3, 34 und 340.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <br>
+                                                <a href="bilder/04_004.png" rel="lightbox" title="UML-Diagramm der umfangreichen Klasse Character"><img class="bild" border="1" src="bilderklein/klein04_004.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 4.3: </strong>UML-Diagramm der umfangreichen Klasse Character
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_04_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="4 Der Umgang mit Zeichenketten"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_04_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_04_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

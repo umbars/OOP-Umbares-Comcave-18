@@ -1,0 +1,865 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 8 Besondere Klassen der Java SE">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 8 Besondere Klassen der Java SE</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_08_004.html">
+      <link rel="next" href="javainsel_08_006.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_08_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_08_006.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2" class="navnav">8 Besondere Klassen der Java SE</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_001.html#dodtp0f5ac799-f7ce-41d5-9073-b15f98adae5b" class="navnav">8.1 Vergleichen von Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtpf93d4e76-3122-4f02-8495-d7d2908d68bf" class="navnav">8.1.1 Natürlich geordnet oder nicht?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp4a934131-0b47-4f1f-884e-5c9faf8325c7" class="navnav">8.1.2 Die Schnittstelle Comparable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp8edbe604-59a5-420d-a839-74f619e7e1b6" class="navnav">8.1.3 Die Schnittstelle Comparator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp1cf0c0c2-ce45-4c7b-b453-9d3791143c3d" class="navnav">8.1.4 Rückgabewerte kodieren die Ordnung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_001.html#dodtp544be6d7-a3fd-4d98-b0f8-ea6119e96e0f" class="navnav">8.1.5 Aneinanderreihung von Comparatoren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_002.html#dodtpc422f76e-7503-4851-bd1a-5b2f4cf0b03c" class="navnav">8.2 Wrapper-Klassen und Autoboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpef61d2ac-a0a6-433d-b975-d64ab72bed97" class="navnav">8.2.1 Wrapper-Objekte erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa8d4fdd0-3144-42e5-8154-04735d6415f4" class="navnav">8.2.2 Konvertierungen in eine String-Repräsentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd5eb1dee-64b2-4b3e-a011-ae8203c2e8d7" class="navnav">8.2.3 Die Basisklasse Number für numerische Wrapper-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpd8e6fc84-e276-4add-aa0b-a9ed054e3d74" class="navnav">8.2.4 Vergleiche durchführen mit compare(), compareTo(), equals()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpba747def-0829-46eb-a791-595b56eff415" class="navnav">8.2.5 Die Klasse Integer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp10f89f0d-fc83-44cb-9aeb-806d7d337bbb" class="navnav">8.2.6 Die Klassen Double und Float für Fließkommazahlen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpa296ba34-ccba-40d2-acd8-ac0b2e0b16d0" class="navnav">8.2.7 Die Long-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtp1b8d1783-6798-4a2c-96ab-d2d58e8e084a" class="navnav">8.2.8 Die Boolean-Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_002.html#dodtpfe5e9d41-e420-4ce7-8be0-6af55d7c4a51" class="navnav">8.2.9 Autoboxing: Boxing und Unboxing</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_003.html#dodtpe2738381-3e34-44c9-9fea-fadba7f7b82d" class="navnav">8.3 Object ist die Mutter aller Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp1c2db719-9c1c-4e95-9208-64643ed9babc" class="navnav">8.3.1 Klassenobjekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpbf055f27-490c-4148-a955-819b36d0cd51" class="navnav">8.3.2 Objektidentifikation mit toString()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp848b6b5d-0c2d-464d-ac8e-4c765d194c9e" class="navnav">8.3.3 Objektgleichheit mit equals() und Identität</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp63daf072-81ed-4188-9a1b-64521d364767" class="navnav">8.3.4 Klonen eines Objekts mit clone() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp248f0914-64c9-4589-85de-8cb74c323ed8" class="navnav">8.3.5 Hashcodes über hashCode() liefern *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtp4da3dc90-a99b-48ec-b682-bcbbe0b2dcf1" class="navnav">8.3.6 System.identityHashCode() und das Problem der nicht-eindeutigen Objektverweise
+                                                               *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpad2681f1-8a07-4617-988a-9a64198ded40" class="navnav">8.3.7 Aufräumen mit finalize() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_003.html#dodtpdfced107-4bf2-420c-95bb-0f2b04af7792" class="navnav">8.3.8 Synchronisation *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_004.html#dodtpfc49aba3-08d5-430d-bb10-96486332dcb0" class="navnav">8.4 Die Utility-Klasse java.util.Objects</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_005.html#dodtp37a70409-bf30-4fe0-b785-84b4d19a0209" class="navh">8.5 Die Spezial-Oberklasse Enum</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01" class="navh">8.5.1 Methoden auf Enum-Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_005.html#dodtp9f96ff67-0127-4772-963e-6994eda2a76c" class="navh">8.5.2 enum mit eigenen Konstruktoren und Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_006.html#dodtp1294c04b-60f3-407d-9a84-6333cbf47b24" class="navnav">8.6 Erweitertes for und Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtpd906cbea-163a-42aa-b050-12634ec73599" class="navnav">8.6.1 Die Schnittstelle Iterable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_08_006.html#dodtp306180fa-db47-4be9-911b-c74f5ab3bf58" class="navnav">8.6.2 Einen eigenen Iterable implementieren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_08_007.html#dodtp7fb05f7b-70ee-4dda-941d-b8aedaf9c55d" class="navnav">8.7 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp37a70409-bf30-4fe0-b785-84b4d19a0209" name="dodtp37a70409-bf30-4fe0-b785-84b4d19a0209"></a><h2 class="t2"><span class="cfett">8.5</span><span class="cfett"> Die Spezial-Oberklasse Enum</span><a href="#dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Jedes Aufzählungsobjekt erbt von der Spezialklasse <span class="clisting">Enum</span><a class="indexterm" id="dodtpaff34b5c-0b8a-4088-ad2c-b5943cf1c226"></a>. Nehmen wir erneut die Wochentage:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.25: </strong>com/tutego/insel/enumeration/Weekday.java, Weekday
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum Weekday<br>{<br>  MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY, SUNDAY<br>}<br></pre></div>
+                                                <p>Der Compiler übersetzt dies in eine Klasse, die etwa so aussieht:</p>
+                                                <div class="listing"><pre class="prettyprint">class Weekday extends Enum<br>{<br>  public static final Weekday MONDAY  = new Weekday( "MONDAY",   0 );<br>  public static final Weekday TUESDAY = new Weekday( "TUESDAY ", 1 );<br>  // weitere Konstanten ...<br><br>  private Weekday( String s, int i )<br>  {<br>    super( s, i );<br>  }<br><br>  // weitere Methoden ...<br>}<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01" name="dodtped791c3f-bef7-497c-b9e8-c8ca1c169e01"></a><h3 class="t3"><span class="cfett">8.5.1</span><span class="cfett"> Methoden auf Enum-Objekten</span><a href="#dodtp9f96ff67-0127-4772-963e-6994eda2a76c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp37a70409-bf30-4fe0-b785-84b4d19a0209"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Jedes <span class="clisting">Enum</span>-Objekt besitzt automatisch einige Standardmethoden, die von der Oberklasse <span class="clisting">java.lang.Enum</span> kommen. Das sind zum einen überschriebene Methoden aus <span class="clisting">java.lang.Object</span>, einige neue Objektmethoden und einige statische Methoden.
+                                                </p><a href="bilder/08_012.png" rel="lightbox" title="Typbeziehung von Enum"><img class="bild" border="1" src="bilderklein/klein08_012.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 8.12: </strong>Typbeziehung von Enum
+                                                </p><a id="dodtp17cb1601-771c-4588-9e4c-1b2e875df826" name="dodtp17cb1601-771c-4588-9e4c-1b2e875df826"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> String-Repräsentation</span></h4>
+                                                <p>Jedes <span class="clisting">Enum</span>-Objekt liefert über die Methode <span class="clisting">name()</span><a class="indexterm" id="dodtpda2a4cc1-9ff6-4a5b-80a8-c61aca218eea"></a> den Namen der Konstante. Dazu gesellt sich die bekannte <span class="clisting">toString()</span>-Methode, die standardmäßig <span class="clisting">name()</span> aufruft, aber überschrieben werden kann. Die Methode <span class="clisting">name()</span> lässt sich nicht überschreiben.
+                                                </p>
+                                                <p>Eine vom Compiler generierte <span class="clisting">Enum</span>-Klasse bietet eine statische <span class="clisting">valueOf(String)</span><a class="indexterm" id="dodtpc1492793-c3d0-482d-a972-58fd0d63605c"></a>-Methode, die das <span class="clisting">Enum</span>-Objekt liefert, das zur <span class="clisting">name()</span>-Repräsentation passt. Wird bei <span class="clisting">valueOf()</span> ein String übergeben, zu dem es kein <span class="clisting">Enum</span> gibt, folgt eine <span class="clisting">IllegalArgumentException</span>. Dazu kommt eine weitere statische Methode, die jedoch selbst schon in der Klasse
+                                                   <span class="clisting">Enum</span> deklariert wird (die Basisklasse der vom Compiler erzeugten <span class="clisting">Enum</span>-Klassen): <span class="clisting">Enum.valueOf(Class&lt;T&gt; enumType, String s)</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Konvertierung in den String und vom String in das entsprechende <span class="clisting">Enum</span>-Objekt:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( Weekday.MONDAY.<span class="cfett">toString()</span> );                      // MONDAY<br>System.out.println( Weekday.MONDAY.<span class="cfett">name()</span> );                          // MONDAY<br>System.out.println( Weekday.<span class="cfett">valueOf( "MONDAY" )</span>.name() );             // MONDAY<br>System.out.println( <span class="cfett">Enum.valueOf( Weekday.class, "MONDAY" )</span>.name() ); // MONDAY<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der Unterschied zu den <span class="clisting">valueOf()</span>-Methoden ist wichtig: Während es <span class="clisting">Enum.valueOf(Class, String)</span> nur einmal gibt, existieren statische <span class="clisting">valueOf(String)</span>-Methoden einmal in jeder vom Compiler generierten Aufzählungsklasse. Da die Methode
+                                                   also compilergeneriert ist, taucht sie in der folgenden Aufzählung nicht auf.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+abstract class<span class="cfett"> </span><span class="clisting">java.lang.</span><span class="cfett">Enum</span>&lt;E extends Enum&lt;E&gt;&gt;<br>implements Comparable&lt;E&gt;, Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">final String name()</span><br>Liefert den Namen der Konstanten. Da die Methode &#8211; wie viele andere der Klasse &#8211; final
+                                                      ist, lässt sich der Name nicht ändern.
+                                                   </li>
+                                                   <li><span class="clisting">String toString()</span><br>Liefert den Namen der Konstanten. Die Methode ruft standardisiert <span class="clisting">name()</span> auf, weil sie aber nicht final ist, kann sie überschrieben werden.
+                                                   </li>
+                                                   <li><span class="clisting">static &lt;T extends Enum&lt;T&gt;&gt; T valueOf(Class&lt;T&gt; enumType, String s)</span><br>Ermöglicht das Suchen von <span class="clisting">Enum</span>-Objekten zu einem Konstantennamen und einer <span class="clisting">Enum</span>-Klasse. Sie liefert das <span class="clisting">Enum</span>-Objekt für die gegebene Zeichenfolge oder löst eine <span class="clisting">IllegalArgumentException</span> aus, wenn dem String kein <span class="clisting">Enum</span>-Objekt zuzuordnen ist.
+                                                   </li>
+                                                </ul><a id="dodtpd22e29e0-e7af-4ffe-a98c-fd02b0d15f65" name="dodtpd22e29e0-e7af-4ffe-a98c-fd02b0d15f65"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Alle Konstanten der Klasse aufzählen</span></h4>
+                                                <p>Eine praktische statische Methode ist <span class="clisting">values()</span>. Sie liefert ein Feld von <span class="clisting">Enum</span>-Objekten. Nützlich ist das für das erweiterte <span class="clisting">for</span>, das alle Konstanten aufzählen soll. Eine Alternative mit dem gleichen Ergebnis ist
+                                                   die <span class="clisting">Class</span>-Methode <span class="clisting">getEnumConstants()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.26: </strong>com/tutego/insel/enumeration/WeekdayDemo.java, Ausschnitt main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">for ( Weekday day : Weekday.values() )  // oder Weekday.class.getEnumConstants()<br>  System.out.println( "Name=" + day.name() );<br></pre></div>
+                                                <p>Liefert Zeilen mit <span class="clisting">Name=MONDAY</span>, ...
+                                                </p><a id="dodtp69dc349b-0b4e-4db0-9b8f-9f6978fd857f" name="dodtp69dc349b-0b4e-4db0-9b8f-9f6978fd857f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ordinalzahl</span></h4>
+                                                <p>Von der Oberklasse <span class="clisting">Enum</span> erbt jede Aufzählung einen geschützten parametrisierten Konstruktor, der den Namen
+                                                   der Konstanten sowie einen assoziierten Zähler erwartet. So wird aus jedem Element
+                                                   der Aufzählung ein Objekt vom Basistyp <span class="clisting">Enum</span>, das einen Namen und eine ID, die sogenannte <span class="cbegriff">Ordinalzahl</span><a class="indexterm" id="dodtp4e331567-e91c-438d-8fd8-2f15bc853b3e"></a><span class="cbegriff">,</span> speichert. Natürlich kann es auch nach seinem Namen und Zähler gefragt werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Eine Methode, die die Ordinalzahl eines Elements der Aufzählung liefert oder &#8211;1, wenn
+                                                               die Konstante nicht existiert:
+                                                               
+                                                               <p class="plistingunter"><strong>Listing 8.27: </strong>com/tutego/insel/enumeration/WeekdayDemo.java, getOrdinal()
+                                                               </p>
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">static int getOrdinal( String name )<br>{<br>  try {<br>    return <span class="cfett">Weekday.valueOf( name ).ordinal()</span>;<br>  }<br>  catch ( IllegalArgumentException e ) {<br>    return &#8211;1;<br>  }<br>}<br></pre></div>
+                                                               Damit liefert unser <span class="clisting">getOrdinal("MONDAY") == 0</span> und <span class="clisting">getOrdinal("WOCHENTAG") ==</span> &#8211;<span class="clisting">1</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Ordinalzahl gibt die Position in der Deklaration an und ist auch Ordnungskriterium
+                                                   der <span class="clisting">compareTo()</span>-Methode. Die Ordinalzahl lässt sich nicht ändern und repräsentiert immer die Reihenfolge
+                                                   der deklarieren Konstanten.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Kommt Montag wirklich vor Freitag?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( Weekday.MONDAY.<span class="cfett">compareTo</span>( Weekday.FRIDAY ) ); // &#8211;4<br>System.out.println( Weekday.MONDAY.<span class="cfett">compareTo</span>( Weekday.MONDAY ) ); //  0<br>System.out.println( Weekday.FRIDAY.<span class="cfett">compareTo</span>( Weekday.MONDAY) );  //  4<br></pre></div>
+                                                               Negative Rückgaben bei <span class="clisting">compareTo()</span> geben immer an, dass das erste Objekt »kleiner« als das zweite aus dem Argument ist.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">abstract class<span class="cfett"> </span><span class="clisting">java.lang.</span><span class="cfett">Enum</span>&lt;E extends Enum&lt;E&gt;&gt;<br>implements Comparable&lt;E&gt;, Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">final int ordinal()</span><br>Liefert die zur Konstante gehörige ID. Im Allgemeinen ist diese Ordinalzahl<a class="indexterm" id="dodtpa7b174b9-8df0-48ec-a31c-efbf227796a8"></a> nicht wichtig, aber besondere Datenstrukturen wie <span class="clisting">EnumSet</span> oder <span class="clisting">EnumMap</span> nutzen diese eindeutige ID. Die Reihenfolge der Zahlen ist durch die Reihenfolge
+                                                      der Angabe gegeben.
+                                                   </li>
+                                                   <li><span class="clisting">public final boolean equals(Object other)</span><br>Die Oberklasse <span class="clisting">Enum</span> überschreibt <span class="clisting">equals()</span> mit der Logik wie in <span class="clisting">Object</span> &#8211; also den Vergleich der Referenzen &#8211;, um sie als <span class="clisting">final</span> zu markieren.
+                                                   </li>
+                                                   <li><span class="clisting">protected final Object clone() throws CloneNotSupportedException</span><br>Die Methode <span class="clisting">clone()</span> ist <span class="clisting">final protected</span> und kann also weder überschrieben noch von außen aufgerufen werden. So kann es keine
+                                                      Kopien der <span class="clisting">Enum</span>-Objekte geben, die die Identität gefährden könnten. Grundsätzlich ist es aber erlaubt,
+                                                      wenn eigene Implementierungen von <span class="clisting">clone()</span> die <span class="clisting">this</span>-Referenz liefern.
+                                                   </li>
+                                                   <li><span class="clisting">final int compareTo(E o)</span><br>Da die <span class="clisting">Enum</span>-Klasse die Schnittstelle <span class="clisting">Comparable</span> implementiert, gibt es auch die Methode <span class="clisting">compareTo()</span>. Sie vergleicht anhand der Ordinalzahlen. Vergleiche sind nur innerhalb eines <span class="clisting">Enum</span>-Typs erlaubt.
+                                                   </li>
+                                                   <li><span class="clisting">final Class&lt;E&gt; getDeclaringClass()</span><br>Liefert das <span class="clisting">Class</span>-Objekt zu einem konkreten <span class="clisting">Enum</span>.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Methode <span class="clisting">getDeclaringClass()</span> liefert auf der Aufzählungsklasse selbst <span class="clisting">null</span> und nur auf den Elementen der Aufzählung einen sinnvollen Wert:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( Weekday.class.getDeclaringClass() );  // null<br>System.out.println( Weekday.MONDAY.getDeclaringClass() );<br>// class com.tutego.weekday.Weekday<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9f96ff67-0127-4772-963e-6994eda2a76c" name="dodtp9f96ff67-0127-4772-963e-6994eda2a76c"></a><h3 class="t3"><span class="cfett">8.5.2</span><span class="cfett"> enum mit eigenen Konstruktoren und Methoden *</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp69dc349b-0b4e-4db0-9b8f-9f6978fd857f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Da ein <span class="clisting">enum</span>-Typ eine besondere Form der Klassendeklaration ist, kann er ebenso Attribute und
+                                                   Methoden deklarieren. Geben wir einer Aufzählung <span class="clisting">Country</span> eine Methode, die den ISO-3166-2-Landescode des jeweiligen Aufzählungselements liefert:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.28: </strong>com/tutego/insel/enumeration/Country.java, Country
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum Country<br>{<br>  GERMANY, UK, CHINA;<br><br> <span class="cfett"> public String getISO3Country()</span><br>  {<br>    if ( this == GERMANY )<br>      return Locale.GERMANY.getISO3Country();<br>    else if ( this == UK )<br>      return Locale.UK.getISO3Country();<br>    return Locale.CHINA.getISO3Country();<br>  }<br>}<br></pre></div>
+                                                <p>Die Methode <span class="clisting">getISO3Country()</span> kann nun auf den <span class="clisting">Enum</span>-Objekten aufgerufen werden:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println( Country.CHINA.getISO3Country() ); // CHN<br></pre></div>
+                                                <p>Da <span class="clisting">switch</span> auf <span class="clisting">enum</span> erlaubt ist, können wir Folgendes schreiben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.29: </strong>com/tutego/insel/enumeration/CountryEnumDemo.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Country c = Country.GERMANY;<br><br>switch ( c )<br>{<br>  case GERMANY:<br>    System.out.println( "Aha. Ein Krauti" );         // Aha. Ein Krauti<br>    System.out.println(<span class="cfett"> c.getISO3Country()</span> );        // DEU<br>    break;<br>  default:      System.out.println( "Anderes Land" );<br>}<br></pre></div><a id="dodtpa9490a97-27d1-4b38-b3c9-3df3c64862bc" name="dodtpa9490a97-27d1-4b38-b3c9-3df3c64862bc"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> enum für Singleton nutzen</span></h4>
+                                                <p>Ein Singleton ist ein Objekt, das es in der Applikation nur einmal gibt.<span class="footnote"><a id="dodtp3b2efba0-a372-4fe9-8a9f-913914d13c03">[163](Pro Klassenlader, um das etwas genauer auszudrücken.)</a></span> Javas <span class="clisting">enum</span> ist dafür perfekt geeignet, denn die Aufzählungsobjekte gibt es in der Tat nur einmal,
+                                                   und die Bibliothek implementiert einige Tricks, um das Objekt auch möglichst nur einmal
+                                                   zu erzeugen, etwa dann wenn die Aufzählung serialisiert über die Leitung geht.
+                                                </p>
+                                                <p>Ein Beispiel dazu. Ein <span class="clisting">enum MainFrame</span> soll genau eine Konstante <span class="clisting">INSTANCE</span> deklarieren. Da <span class="clisting">enum</span>-Typen Attribute deklarieren können, soll unser <span class="clisting">MainFrame</span> eine Objektvariable <span class="clisting">JFrame</span> bekommen. Das bedeutet dann, dass mit dem Exemplar <span class="clisting">INSTANCE</span> ein Swing-Fenster assoziiert ist. Das es nur ein Aufzählungselement in der <span class="clisting">enum</span> gibt, kann auch nur ein <span class="clisting">JFrame</span>-Exemplar gebildet werden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.30: </strong>com/tutego/insel/enumeration/MainFrame.java, MainFrame
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum MainFrame<br>{<br> <span class="cfett"> INSTANCE;<br><br> </span> private JFrame f = new JFrame();<br><br>  public JFrame getFrame()<br>  {<br>    return f;<br>  }<br>}<br></pre></div>
+                                                <p>Damit ist <span class="clisting">INSTANCE</span> ein Exemplar vom Typ <span class="clisting">MainFrame</span> und hat ein privates Attribut und eine öffentliche Zugriffsmethode. Da es nur eine
+                                                   Konstante gibt, gibt es auch nur ein Fenster. Eine Anwendung sieht etwa so aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.31: </strong>com/tutego/insel/enumeration/MainFrameDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">MainFrame.INSTANCE.getFrame().setTitle( "Singleton" );<br>MainFrame.INSTANCE.getFrame().setBounds( 100, 100, 300, 400 );<br>MainFrame.INSTANCE.getFrame().setVisible( true );<br></pre></div>
+                                                <p>Aus jedem Teil der Anwendung ist <span class="clisting">MainFrame.INSTANCE</span> zugänglich und repräsentiert dieses eine Exemplar. Auch kann dieses Exemplar übergeben
+                                                   werden, weil es ein Objekt ist, wie jedes andere auch.
+                                                </p><a id="dodtp9badb3fb-10c2-4b3d-8fce-543e1b94d74b" name="dodtp9badb3fb-10c2-4b3d-8fce-543e1b94d74b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> enum mit Konstruktoren</span></h4>
+                                                <p>Neben dieser Variante wollen wir eine zweite Implementierung nutzen und nun Konstruktoren
+                                                   hinzuziehen, um das gleiche Problem auf andere Weise zu lösen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.32: </strong>com/tutego/insel/enumeration/Country.java, Country
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum Country<br>{<br> <span class="cfett"> GERMANY( Locale.GERMANY ),</span><br> <span class="cfett"> UK( Locale.UK ),</span><br> <span class="cfett"> CHINA( Locale.CHINA );<br><br> </span> private Locale country;<br><br> <span class="cfett"> private Country( Locale country )</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> this.country = country;</span><br> <span class="cfett"> }<br><br> </span> public String getISO3Country()<br>  {<br>    return country.getISO3Country();<br>  }<br>}<br></pre></div>
+                                                <p>Bei der Deklaration der Konstanten wird in runden Klammern ein Argument für den Konstruktor
+                                                   übergeben. Der Konstruktor speichert das zugehörige <span class="clisting">Locale</span>-Objekt in der internen Variablen <span class="clisting">country</span>, auf die dann <span class="clisting">getISO3Country()</span> Bezug nimmt.
+                                                </p><a id="dodtp1f474459-4762-4376-8c16-f89b35f6738b" name="dodtp1f474459-4762-4376-8c16-f89b35f6738b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> enum mit überschriebenen Methoden</span></h4>
+                                                <p>In dem <span class="clisting">Enum</span>-Typ lassen sich nicht nur Methoden hinzufügen, sondern auch Methoden überschreiben.
+                                                   Beginnen wir mit einer lokalisierten und überladenen Methode <span class="clisting">toString()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.33: </strong>com/tutego/insel/enumeration/WeekdayInternational.java, WeekdayInternational
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum WeekdayInternational<br>{<br>  SUNDAY, MONDAY, TUESDAY, WEDNESDAY, THURSDAY, FRIDAY, SATURDAY;<br><br> <span class="cfett"> @Override</span><br> <span class="cfett"> public String toString()</span><br>  {<br>    return new SimpleDateFormat().getDateFormatSymbols()<br>                                   .getWeekdays()[ ordinal() + 1 ];<br>  }<br><br> <span class="cfett"> public String toString( Locale l )</span><br>  {<br>    return new SimpleDateFormat( "", l ).getDateFormatSymbols()<br>                                          .getWeekdays()[ ordinal() + 1 ];<br>  }<br>}<br></pre></div>
+                                                <p>Die erste Methode ist aus unserer Oberklasse <span class="clisting">Object</span> überschrieben, die zweite als überladene Methode hinzugefügt. Ein Beispiel macht
+                                                   den Aufruf und die Funktionsweise klar:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.34: </strong>com/tutego/insel/enumeration/WeekdayInternationalDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println( WeekdayInternational.SATURDAY );                         // Samstag<br>System.out.println( WeekdayInternational.SATURDAY.toString() );              // Samstag<br>System.out.println( WeekdayInternational.SATURDAY.toString(Locale.FRANCE) ); // samedi<br>System.out.println( WeekdayInternational.SATURDAY.toString(Locale.ITALY) );  // sabato<br></pre></div>
+                                                <p>An dieser Stelle hören die Möglichkeiten der <span class="clisting">enum</span>-Syntax aber noch nicht auf. Ähnlich wie die Syntax von inneren anonymen Klassen,
+                                                   die es erlauben, Methoden zu überschreiben, bieten Aufzählungstypen eine vergleichbare
+                                                   Syntax, um gezielt Methoden für eine spezielle Konstante zu überschreiben.
+                                                </p>
+                                                <p>Nehmen wir an, in einem Spiel gibt es eine eigene Währung, den Ponro-Dollar. Nun soll
+                                                   dieser aber mit einer Referenzwährung, dem Euro, in Beziehung gesetzt werden; der
+                                                   Wechselkurs ist einfach 1:2:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.35: </strong>com/tutego/insel/enumeration/GameCurrency.java, GameCurrency
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum GameCurrency<br>{<br>  EURO()<span class="cfett"> {</span><br>   <span class="cfett"> @Override double convertTo( GameCurrency targetCurrency, double value )</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> return targetCurrency == EURO ? value : value / 2;</span><br>   <span class="cfett"> }</span><br> <span class="cfett"> }</span>,<br>  PONRODOLLAR()<span class="cfett"> {</span><br>   <span class="cfett"> @Override double convertTo( GameCurrency targetCurrency, double value )</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> return targetCurrency == PONRODOLLAR ? value : value * 2;</span><br>   <span class="cfett"> }</span><br> <span class="cfett"> }</span>;<br><br> <span class="cfett"> abstract double convertTo( GameCurrency targetCurrency, double value );</span><br>}<br></pre></div>
+                                                <p>Der interessante Teil ist die Deklaration der abstrakten <span class="clisting">convertTo()</span>-Methode und die Implementierung lokal bei den einzelnen Konstanten. (Natürlich müssen
+                                                   wir nicht jede Methode im <span class="clisting">enum</span> abstrakt machen, sondern sie kann auch konkret sein. Dann muss nicht jedes <span class="clisting">enum</span>-Element die abstrakte Methode implementieren.)
+                                                </p>
+                                                <p>Mit einem statischen Import für die Aufzählung lässt sich die Nutzung und Funktionalität
+                                                   schnell zeigen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.36: </strong>com/tutego/insel/enumeration/GameCurrencyDemo.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println(<span class="cfett"> EURO.convertTo( EURO, 12 )</span> );               // 12.0<br>System.out.println(<span class="cfett"> EURO.convertTo( PONRODOLLAR, 12 )</span> );        //  6.0<br>System.out.println(<span class="cfett"> PONRODOLLAR.convertTo( EURO, 12 )</span> );        // 24.0<br>System.out.println(<span class="cfett"> PONRODOLLAR.convertTo( PONRODOLLAR, 12 )</span> ); // 12.0<br></pre></div><a id="dodtp29a46022-5193-449c-83fc-7f65e5b38500" name="dodtp29a46022-5193-449c-83fc-7f65e5b38500"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> enum kann Schnittstellen implementieren</span></h4>
+                                                <p>Die API-Dokumentation von <span class="clisting">Enum</span> zeigt an, dass die abstrakte Klasse zwei Schnittstellen implementiert: <span class="clisting">Comparable</span> und <span class="clisting">Serializable</span>. Jede in <span class="clisting">enum</span> deklarierte Konstante ist Unterklasse von <span class="clisting">Enums</span>, also immer vergleichbar und standardmäßig serialisierbar. Neben diesen Standardschnittstellen
+                                                   kann ein <span class="clisting">enum</span> andere Schnittstellen implementieren. Das ist sehr nützlich, denn so schreibt es
+                                                   für alle Aufzählungselemente ein bestimmtes Verhalten vor &#8211; jedes Aufzählungselement
+                                                   bietet dann diese Operationen. Die Operationen der Schnittstelle können auf zwei Arten
+                                                   realisiert werden: Das <span class="clisting">enum</span> selbst implementiert die Operationen der Schnittstelle im Rumpf, oder die einzelnen
+                                                   Aufzählungselemente realisieren die Implementierungen jeweils unterschiedlich. Oftmals
+                                                   dürfte es so sein, dass die Elemente unterschiedliche Implementierungen bereitstellen.
+                                                </p>
+                                                <p>Unser nächstes kleines Beispiel für eine <span class="clisting">enum DefaultIcons</span> implementiert die Schnittstelle <span class="clisting">Icon</span> für grafische Symbole. Da die Symbole alle die gleichen Ausmaße haben, ist die <span class="clisting">Icon</span>-Operation <span class="clisting">getIconWidth()</span> und <span class="clisting">getIconHeight()</span> immer gleich und wird nur einmal implementiert; die tatsächlichen <span class="clisting">paintIcon()</span>-Implementierungen (die hier nur angedeutet werden) unterscheiden sich.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 8.37: </strong>com/tutego/insel/enumeration/DefaultIcons.java, DefaultIcons
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public enum DefaultIcons<span class="cfett"> implements Icon</span><br>{<br>  WARNING {<br>   <span class="cfett"> @Override public void paintIcon( Component c, Graphics g, int x, int y )</span><br>    {<br>      // g.drawXXX()<br>    } },<br>  ERROR {<br>   <span class="cfett"> @Override public void paintIcon( Component c, Graphics g, int x, int y )</span><br>    {<br>      // g.drawXXX()<br>    } };<br><br> <span class="cfett"> @Override public int getIconWidth()</span> { return 16; }<br><br> <span class="cfett"> @Override public int getIconHeight()</span> { return 16; }<br>}<br></pre></div>
+                                                <p>Der Zugriff <span class="clisting">DefaultIcons.ERROR</span> gibt ein Objekt, das unter anderem vom Typ <span class="clisting">Icon</span> ist und an allen Stellen übergeben werden kann, an denen ein <span class="clisting">Icon</span> gewünscht ist.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_08_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="8 Besondere Klassen der Java SE"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_08_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_08_006.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

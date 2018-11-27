@@ -1,0 +1,996 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 9 Generics<T&gt;">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 9 Generics<T&gt;">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 9 Generics&lt;T&gt;</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_09_001.html">
+      <link rel="next" href="javainsel_09_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_09_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_09_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845" class="navnav">9 Generics&lt;T&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_001.html#dodtpc74e8925-5ee3-4856-ade3-5dc107234e99" class="navnav">9.1 Einführung in Java Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp46f87c4b-2a8a-4d51-a8d7-fa1b71f0f66f" class="navnav">9.1.1 Mensch versus Maschine: Typprüfung des Compilers und der Laufzeitumgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp6a73eafd-e68f-4783-bcdf-d57fddada2e7" class="navnav">9.1.2 Taschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp13e56feb-34cf-4a67-afa8-dbeba9a7520c" class="navnav">9.1.3 Generische Typen deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtpc481ce5d-a92d-4b7d-92dc-78d016eaffa5" class="navnav">9.1.4 Generics nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp511af877-15c3-4be2-954f-b72ce7e1d666" class="navnav">9.1.5 Diamonds are forever</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp130148a4-32ad-49e7-891b-0f49d99d4e1a" class="navnav">9.1.6 Generische Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_001.html#dodtp710f88eb-3589-44a7-9919-b2780446afc0" class="navnav">9.1.7 Generische Methoden/Konstruktoren und Typ-Inferenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_002.html#dodtpd527c002-42a6-47fb-97df-112816b7afdd" class="navh">9.2 Umsetzen der Generics, Typlöschung und Raw-Types</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43" class="navh">9.2.1 Realisierungsmöglichkeiten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp646d8dad-c628-4dbd-8516-9319de123868" class="navh">9.2.2 Typlöschung (Type Erasure)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be" class="navh">9.2.3 Probleme aus der Typlöschung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_002.html#dodtp8beafab7-be03-41eb-8396-641368b63dff" class="navh">9.2.4 Raw-Type</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_003.html#dodtp5f6dbe6c-6abe-4d7b-b034-d7fb043b2986" class="navnav">9.3 Einschränken der Typen über Bounds</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp4f61d68e-f19b-463d-a104-53d896405e34" class="navnav">9.3.1 Einfache Einschränkungen mit extends</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_003.html#dodtp87728199-d4df-488c-85f9-61ff5760295c" class="navnav">9.3.2 Weitere Obertypen mit &amp;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_004.html#dodtp7ce64032-440d-44d1-9d14-f9985575e53a" class="navnav">9.4 Typparameter in der throws-Klausel *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp24b992d0-6bf5-4c34-b7c0-3587c6ebd623" class="navnav">9.4.1 Deklaration einer Klasse mit Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_004.html#dodtp1055228d-f59d-41f4-8037-9a513f965ca2" class="navnav">9.4.2 Parametrisierter Typ bei Typvariable &lt;E extends Exception&gt;</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_005.html#dodtp76606352-8335-4c92-821c-e663da127f54" class="navnav">9.5 Generics und Vererbung, Invarianz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtpa0c69e24-5a10-4200-851e-73978a156ff2" class="navnav">9.5.1 Arrays sind invariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp2a73dfaa-7692-4f36-9d04-6730c99dbabc" class="navnav">9.5.2 Generics sind kovariant</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3d148a00-5e2e-421f-8bae-99afc9bf304a" class="navnav">9.5.3 Wildcards mit ?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp5b13bc2b-2462-4527-a9b5-b92fdf03a368" class="navnav">9.5.4 Bounded Wildcards</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp75fd58f3-c99e-463a-a810-296f4871cc78" class="navnav">9.5.5 Bounded-Wildcard-Typen und Bounded-Typvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp3cdfc536-d735-4341-8a5b-dcc0337259c6" class="navnav">9.5.6 Das LESS-Prinzip</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_005.html#dodtp4376acc6-0879-456a-a8b7-1ab5028ac6f7" class="navnav">9.5.7 Enum&lt;E extends Enum&lt;E&gt;&gt; *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_09_006.html#dodtp6afcdb20-baf6-4aad-8f12-f6a22f28f5ba" class="navnav">9.6 Konsequenzen der Typlöschung: Typ-Token, Arrays und Brücken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpaa2655c0-2c7b-441d-9291-303a978c9587" class="navnav">9.6.1 Typ-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtpd9bd7d67-99c3-4603-bc32-f30b8add83a9" class="navnav">9.6.2 Super-Type-Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp97d6e6c6-6e89-46f9-a943-6a37b548d7cb" class="navnav">9.6.3 Generics und Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_09_006.html#dodtp8a8c02b3-e89d-4513-ab47-860c0c0d529a" class="navnav">9.6.4 Brückenmethoden</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd527c002-42a6-47fb-97df-112816b7afdd" name="dodtpd527c002-42a6-47fb-97df-112816b7afdd"></a><h2 class="t2"><span class="cfett">9.2</span><span class="cfett"> Umsetzen der Generics, Typlöschung und Raw-Types</span><a href="#dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Zum Verständnis der Generics und um zu erfahren, was zur Laufzeit an Informationen
+                                                   vorhanden ist, lohnt es sich, sich anzuschauen, wie der Compiler Generics in Bytecode
+                                                   übersetzt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43" name="dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43"></a><h3 class="t3"><span class="cfett">9.2.1</span><span class="cfett"> Realisierungsmöglichkeiten</span><a href="#dodtp646d8dad-c628-4dbd-8516-9319de123868"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd527c002-42a6-47fb-97df-112816b7afdd"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Im Allgemeinen gibt es zwei Möglichkeiten, um generische Typen zu realisieren:</p>
+                                                <ul class="gp">
+                                                   <li>Heterogene Variante: Für jeden Typ (etwa <span class="clisting">String</span>, <span class="clisting">Integer</span>, <span class="clisting">Point</span>) wird individueller Code erzeugt, also drei Klassendateien. Die Variante nennt sich
+                                                      auch <span class="cbegriff">Code-Spezialisierung</span>.
+                                                   </li>
+                                                   <li>Homogene Übersetzung: Aus der parametrisierten Klasse wird eine Klasse erzeugt, die anstelle des Typparameters
+                                                      nur <span class="clisting">Object</span> einsetzt. Für den konkreten Typparameter werden Typanpassungen in die Anweisungen
+                                                      eingebaut.
+                                                   </li>
+                                                   <li>Java nutzt die homogene Übersetzung, und der Compiler erzeugt nur eine Klassendatei.
+                                                      Es gibt keine multiplen Kopien der Klasse &#8211; weder im Bytecode noch im Speicher.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp646d8dad-c628-4dbd-8516-9319de123868" name="dodtp646d8dad-c628-4dbd-8516-9319de123868"></a><h3 class="t3"><span class="cfett">9.2.2</span><span class="cfett"> Typlöschung (Type Erasure)</span><a href="#dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp8fdcd206-d64e-41c7-8a94-98e07df86e43"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Übersetzt der Java-Compiler die generischen Anwendungen, so löscht er dabei alle Typinformationen,
+                                                   da die Java-Laufzeitumgebung keine Generics im Typsystem hat. Das nennt sich <span class="cbegriff">Typlöschung</span><a class="indexterm" id="dodtp9e4bad66-a22e-4f9a-aa7c-1ebbc0c62246"></a> (engl. <span class="cbegriff">type erasure</span><a class="indexterm" id="dodtp60031d28-a5ee-4a17-9b7c-57b775fbd89b"></a>). Wir können uns das so vorstellen, dass alles wegfällt, was in spitzen Klammen steht,
+                                                   und dass jede Typvariable zu <span class="clisting">Object</span> wird.<span class="footnote"><a id="dodtp397247a3-2d4f-47e7-b86f-ec14d954cdbb">[170](Sind Bounds im Spiel – eine Typeinschränkung, die später noch vorgestellt wird –, wird ein präziserer
+Typ statt Object genutzt.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.5: </strong>Generische Klasse im Quellcode und wie sie nach der Typlöschung aussieht
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Mit Generics</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Nach der Typlöschung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">public class Pocket<span class="cfett">&lt;T&gt;</span><br>{<br>  private<span class="cfett"> T</span> value;<br>  public void set(<span class="cfett"> T</span> value ) {<br>    this.value = value; }<br><br>  public<span class="cfett"> T</span> get() { return value; }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">public class Pocket<br>{<br>  private<span class="cfett"> Object</span> value;<br>  public void set(<span class="cfett"> Object</span> value ) {<br>    this.value = value; }<br><br>  public<span class="cfett"> Object</span> get() { return value; }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>So entspricht der Programmcode nach der Typlöschung genau dem, was wir selbst auch
+                                                   ohne Generics am Anfang programmiert haben. Auch bei der Nutzung wird gelöscht:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.6: </strong>Nutzung generischer Klassen und wie es nach der Typlöschung aussieht
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Mit Generics</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Nach der Typlöschung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">Pocket<span class="cfett">&lt;Integer&gt;</span> p  = new Pocket<span class="cfett">&lt;Integer&gt;</span>( 1 );<br>p.set( 1 );<br>Integer i = p.get();<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">Pocket p = new Pocket( 1 );<br>p.set( 1 );<br>Integer i =<span class="cfett"> (Integer)</span> p.get();<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Beim Herausholen über <span class="clisting">get()</span> fügt der Compiler genau die explizite Typanpassung ein, die wir in unserem ersten
+                                                   Beispiel noch von Hand eingesetzt haben.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Aber...
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wenn der Compiler Bytecode erzeugt, der auch für ältere JVMs keine Probleme bereitet,
+                                                               so stellt sich die Frage, wo denn die Informationen abgespeichert sind, dass ein Typ
+                                                               generisch deklariert wurde oder nicht. Irgendwo muss das stehen, denn der Compiler
+                                                               weiß das ja. Die Antwort ist, dass der Compiler diese Typinformationen, die nicht
+                                                               Teil des Typsystems der JVM sind, als Signatur-Attribute in den Konstantenpool des
+                                                               Bytecodes legt. Das Attribut ist ein UTF-8 Text, der von älteren Compilern als Kommentar
+                                                               überlesen wird. Mit dem Diassembler <span class="cbegriff">javap</span> und dem Schalter <span class="clisting">&#8211;verbose</span> lassen sich diese Informationen anzeigen. Interessierte bekommen weitere Informationen
+                                                               unter: <a href="http://java.sun.com/docs/books/jvms/second_edition/jvms-clarify.html" target="_blank">http://java.sun.com/docs/books/jvms/second_edition/jvms-clarify.html</a>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpc5904060-5a3b-4418-8e49-e1de56ff4270" name="dodtpc5904060-5a3b-4418-8e49-e1de56ff4270"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Das große Ziel: Interoperabilität</span></h4>
+                                                <p>Interoperabilität stand bei der Einführung der Generics ganz oben auf der Wunschliste.
+                                                   Zwei wichtige Anforderungen sind:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Die neuen mit Generics deklarierten Klassen &#8211; wie <span class="clisting">List&lt;E&gt;</span> &#8211; müssen auf jeden Fall noch von altem Programmcode, der zum Beispiel mit einem Java
+                                                      1.4-Compiler erzeugt wurde, nutzbar sein. Das funktioniert so, dass generisch deklarierte
+                                                      Klassen im Bytecode für einen »alten« Compiler bzw. Laufzeitumgebung so aussehen, als gäbe es keine Generics.
+                                                      Wir sprechen von <span class="cbegriff">Typlöschung</span>. Hätte Sun sich nicht dieses Kompatibilitätsziel auf die Fahnen geschrieben, hätte
+                                                      die Umsetzung auch anders ausfallen können. Denn die Konsequenz der Typlöschung ist,
+                                                      dass es keine Informationen über den Typparameter zur Laufzeit gibt. Das führt zu
+                                                      Überraschungen und Einschränkungen (insbesondere bei Arrays), die wir uns gleich anschauen
+                                                      werden. Was wir hier vor uns haben, ist der Wunsch nach <span class="cbegriff">Bytecode-Kompatibilität</span>.
+                                                   </li>
+                                                   <li>Auf der anderen Seite gibt es neben der Bytecode-Kompatibiliät auch noch die <span class="cbegriff">Quellcode-Kompatibilität</span>. Alter Programmcode, der zum Beispiel Listen als <span class="clisting">List list;</span> statt zum Beispiel als <span class="clisting">List&lt;String&gt; list;</span> nutzt, soll immer noch übersetzbar sein, auch wenn er die überarbeiteten Datenstrukturen
+                                                      nicht generisch nutzt. Warnungen sind akzeptabel, aber keine Compilerfehler. Es gibt
+                                                      Millionen Zeilen alten Quellcodes, die Listen ohne Generics nutzen, ohne dass sofort
+                                                      ein Team alle Programmstellen anfasst und Typparameter einführt.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Java Generics und C++-Templates
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Java Generics gehen bei den Typbeschreibungen weit über das hinaus, was C++-Templates
+                                                               bieten. In C++ kann ein beliebiger Typparameter eingesetzt werden &#8211; was zu unglaublichen
+                                                               Fehlermeldungen führt. Der C++-Compiler führt somit eher eine einfache Ersetzung durch.
+                                                               Doch durch die heterogene Umsetzung generiert der C++-Compiler für jeden genutzten
+                                                               Template-Typ unterschiedlichen (und wunderbar optimierten) Maschinencode. Im Fall
+                                                               von Java würde die heterogene Variante zu sehr vielen sehr ähnlichen Klassen führen,
+                                                               die sich nur in ein paar Typanpassungen unterschieden. Und da in Java sowieso nur
+                                                               Referenzen als Typvariablen möglich sind und keine primitiven Typen, ist auch eine
+                                                               besondere Optimierung an dieser Stelle nicht möglich. Durch die Code-Spezialisierung
+                                                               sind aber andere Dinge in C++ machbar, die in Java unmöglich sind, zum Beispiel Template-Metaprogramming.
+                                                               Der Compiler wird in diesem Fall als eine Art Interpreter für rekursive Template-Aufrufe
+                                                               genutzt, um später optimalen Programmcode zu generieren. Das ist funktionale Programmierung
+                                                               mit einem Compiler ...
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be" name="dodtp718b9a38-ab08-4ce1-96da-67aabd39e8be"></a><h3 class="t3"><span class="cfett">9.2.3</span><span class="cfett"> Probleme aus der Typlöschung</span><a href="#dodtp8beafab7-be03-41eb-8396-641368b63dff"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc5904060-5a3b-4418-8e49-e1de56ff4270"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Typlöschung ist für die Laufzeitumgebung praktisch, weil sie überhaupt nicht an die
+                                                   Generics angepasst werden muss. So sehen zum Beispiel die seit Java 5 generisch deklarierten
+                                                   Datenstrukturen nach dem Übersetzungsvorgang genauso aus wie unter Java 1.4 und sind
+                                                   damit voll kompatibel. Sonst aber stellt die Typlöschung ein riesiges Problem dar,
+                                                   weil die Typinformationen zur Laufzeit nicht vorhanden sind.<span class="footnote"><a id="dodtp54e2fd1a-dd35-4cbf-9683-f494f5597fcf">[171](Dass diese Typinformationen nicht vorliegen, wird auch damit begründet, dass die Laufzeit leiden
+könnte. Microsoft war das hingegen egal, dort besteht Generizität in der Common Language Runtime
+(CLR), also auch in der Laufzeitumgebung. Microsoft ist damit einen klaren Schritt voraus. Doch gab
+es Generics (Parametric Polymorphism ist der offizielle Name) auch wie in Java nicht von Anfang an;
+es zog erst in Version 2 in die Sprache und CLR ein. Die alten Datenstrukturen wurden einfach als
+veraltet markiert, und die Entwickler waren gezwungen, auf die neuen generischen Varianten umzusteigen.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Reified Generics
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Für Java 7 stand auf der Aufgabenliste, die generischen Parameter auch zur Laufzeit
+                                                               zugänglich zu machen. Das wurde jedoch verschoben und kommt vielleicht irgendwann,
+                                                               in Java 8, Java 9, Java 2020, ... Das Stichwort dazu ist <span class="cbegriff">Reified Generics</span>, also generische Informationen, die auch zur Laufzeit komplett zugänglich sind.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpdf5dde33-cbb7-422b-a16d-870f0041910c" name="dodtpdf5dde33-cbb7-422b-a16d-870f0041910c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kein new T</span></h4>
+                                                <p>Da durch die Typlöschung bei Deklarationen wie <span class="clisting">Pocket&lt;T&gt;</span> die Parametervariable durch <span class="clisting">Object</span> ersetzt wird, lässt sich zum Beispiel in der Tasche nicht Folgendes schreiben, um ein neues Exemplar eines Tascheninhalts zu erzeugen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 9.7: </strong>Warum »new T()« nicht funktionieren kann: nur ein »new Object()« würde gebildet
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Gedacht: Mit Generics (Compilerfehler!)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Konsequenz aus Typlöschung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">class Pocket&lt;T&gt;<br>{<br> T newPocketContent() {<br>   return new T(); }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">class Pocket&lt;T&gt;<br>{<br> Object newPocketContent() {<br>   return new Object(); }<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Als Aufrufer von <span class="clisting">newPocketContent()</span> erwarten wir aber nicht immer ein lächerliches <span class="clisting">Object</span>, sondern ein Objekt vom Typ <span class="clisting">T</span>.
+                                                </p><a id="dodtpd1556ff1-0ce8-49a8-a5e3-31b56c0f4367" name="dodtpd1556ff1-0ce8-49a8-a5e3-31b56c0f4367"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kein instanceof</span></h4>
+                                                <p>Der <span class="clisting">instanceof</span>-Operator ist bei parametrisierten Typen ungültig, auch wenn das praktisch wäre, um
+                                                   zum Beispiel aufgrund der tatsächlichen Typen eine Fallunterscheidung vornehmen zu
+                                                   können:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">void printType( Pocket&lt;?&gt; p )<br>{<br>  if (<span class="cfett"> p instanceof Pocket&lt;Number&gt;</span> )       // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> illegal generic type for instanceof<br>    System.out.println( "Pocket mit Number" );<br>  else if (<span class="cfett"> p instanceof Pocket&lt;String&gt;</span> )  // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> illegal generic type for instanceof<br>    System.out.println( "Pocket mit String" );<br>}<br></pre></div>
+                                                <p>Der Compiler meldet zu Recht einen Fehler &#8211; nicht nur eine Warnung &#8211;, weil es die
+                                                   Typen <span class="clisting">Pocket&lt;String&gt;</span> und <span class="clisting">Pocket&lt;Number&gt;</span> zur Laufzeit gar nicht gibt: Es sind nur typgelöschte <span class="clisting">Pocket</span>-Objekte. Nach der Typlöschung würde unsinniger Code entstehen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">void printType( Pocket p )<br>{<br>  if (<span class="cfett"> p instanceof Pocket</span> )<br>    ...<br>  else if (<span class="cfett"> p instanceof Pocket</span> )<br>    ...<br>}<br></pre></div><a id="dodtpaf736a7d-7c70-4f10-bc70-3bc854c94e6f" name="dodtpaf736a7d-7c70-4f10-bc70-3bc854c94e6f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Keine Typanpassungen auf parametrisierten Typ</span></h4>
+                                                <p>Typanpassungen wie</p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;String&gt; p = (Pocket&lt;String&gt;) new Pocket&lt;Integer&gt;(); // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br></pre></div>
+                                                <p>sind illegal. Wir haben ja extra Generics, damit der Compiler die Typen testet. Und
+                                                   durch die Typlöschung verschwindet der Typparameter, sodass der Compiler Folgendes
+                                                   erzeugen würde:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket p = (Pocket) new Pocket();<br></pre></div><a id="dodtp8e8a10c1-093a-45dc-bd7d-e712e00d6af5" name="dodtp8e8a10c1-093a-45dc-bd7d-e712e00d6af5"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kein .class für generische Typen und keine Class-Objekte mit Typparameter zur Laufzeit</span></h4>
+                                                <p>Ein hinter einen Typ gesetztes <span class="clisting">.class</span> liefert das <span class="clisting">Class</span>-Objekt zum jeweiligen Typ.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Class&lt;Object&gt; objectClass = Object.class;<br>Class&lt;String&gt; stringClass = String.class;<br></pre></div>
+                                                <p><span class="clisting">Class</span> selbst ist als generischer Typ deklariert.
+                                                </p>
+                                                <p>Bei generischen Typen ist das <span class="clisting">.class</span> nicht erlaubt. Zwar ist noch (mit Warnung) Folgendes gültig:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Class&lt;Pocket&gt; pocketClass = Pocket.class;<br></pre></div>
+                                                <p>aber dies nicht mehr:</p>
+                                                <div class="listing"><pre class="prettyprint">Class&lt;Pocket&lt;String&gt;&gt; pocketClass = Pocket&lt;String&gt;.class;   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br></pre></div>
+                                                <p>Der Grund ist die Typlöschung: Alle <span class="clisting">Class</span>-Objekte für einen Typ sind gleich und haben zur Laufzeit keine Information über den
+                                                   Typparameter:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;String&gt;  p1 = new Pocket&lt;String&gt;();<br>Pocket&lt;Integer&gt; p2 = new Pocket&lt;Integer&gt;();<br>System.out.println( p1.getClass() == p2.getClass() );                // true<br></pre></div>
+                                                <p>Alle Exemplare von generischen Typen werden zur Laufzeit vom gleichen <span class="clisting">Class</span>-Objekt repräsentiert. Hinter <span class="clisting">Pocket&lt;String&gt;</span> und <span class="clisting">Pocket&lt;Integer&gt;</span> steckt also immer nur <span class="clisting">Pocket</span>. Kurz gesagt: Alles in spitzen Klammern verschwindet zur Laufzeit.
+                                                </p><a id="dodtp7bdab4ce-c1fc-414e-ad85-b3f24e3f0d68" name="dodtp7bdab4ce-c1fc-414e-ad85-b3f24e3f0d68"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Keine generischen Ausnahmen</span></h4>
+                                                <p>Grundsätzlich ist eine Konstruktion wie <span class="clisting">class MyClass&lt;T&gt; extends SuperClass</span> erlaubt. Aber der Compiler enthält eine spezielle Regel, die verhindert, dass eine
+                                                   generische Klasse <span class="clisting">Throwable</span> (<span class="clisting">Exception</span> und <span class="clisting">Error</span> sind Unterklassen von <span class="clisting">Throwable</span>) erweitern kann. Wäre zum Beispiel
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class MyException&lt;T&gt; extends Exception { }   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br></pre></div>
+                                                <p>erlaubt, könnte im Quellcode vielleicht ein</p>
+                                                <div class="listing"><pre class="prettyprint">try { }<br>catch (<span class="cfett"> MyException&lt;Typ1&gt; e</span> ) { }<br>catch (<span class="cfett"> MyException&lt;Typ2&gt; e</span> ) { }<br></pre></div>
+                                                <p>stehen, doch durch die Typlöschung würde das auf zwei identische <span class="clisting">catch</span>-Blöcke hinauslaufen, was nicht erlaubt ist.
+                                                </p><a id="dodtp6f587632-9256-4be8-b122-4517a15fa0b1" name="dodtp6f587632-9256-4be8-b122-4517a15fa0b1"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Keine statischen Eigenschaften</span></h4>
+                                                <p>Statische Eigenschaften hängen nicht an einzelnen Objekten, sondern an Klassen. <span class="clisting">Pocket</span> kann zum Beispiel einmal als parametrisierter Typ <span class="clisting">Pocket&lt;String&gt;</span> und einmal als <span class="clisting">Pocket&lt;Integer&gt;</span> auftauchen, also als zwei Instanzen. Aber kann <span class="clisting">Pocket</span> auch eine statische Methode deklarieren, die auf den formalen Typparameter der Klasse
+                                                   zurückgreift? Nein, das geht nicht. Würden wir in <span class="clisting">Pocket</span> etwa die folgende statische Methode einsetzen
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static boolean isEmpty( T value ) { return value == null; }   // N<br></pre></div>
+                                                <p>so gäbe es bei <span class="clisting">T</span> die Fehlermeldung »Cannot make a static reference to the non-static type T«.
+                                                </p>
+                                                <p>Statische Variablen und die Parameter/Rückgaben von statischen Methoden sind nicht
+                                                   an ein Exemplar gebunden. Eine Typvariable jedoch, so wie wir sie bisher verwendet
+                                                   haben, ist immer mit dem Exemplar verbunden. Das <span class="clisting">T</span> für den <span class="clisting">value</span> ist ja erst immer dann festgelegt, wenn wir zum Beispiel <span class="clisting">Pocket&lt;String&gt;</span> oder <span class="clisting">Pocket&lt;Integer&gt;</span> mit einem Exemplar verbinden. Bei <span class="clisting">Pocket.isEmpty("");</span> zum Beispiel kann der Compiler nicht wissen, was für ein Typ gemeint ist, da für
+                                                   statische Methodenaufrufe ja keine Exemplare nötig sind, also nie ein parametrisierter
+                                                   Typ festgelegt werde. Das Nutzen von Code wie <span class="clisting">Pocket&lt;String&gt;.isEmpty("")</span> führt zu einem Compilerfehler, denn die Syntax ist nicht erlaubt.
+                                                </p>
+                                                <p>Statische generische Methoden sind natürlich möglich, wie wir schon gesehen haben;
+                                                   sie haben dann eine eigene Typvariable.
+                                                </p><a id="dodtp1a526c1f-867e-4e07-9767-b1690b7e2432" name="dodtp1a526c1f-867e-4e07-9767-b1690b7e2432"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kein Überladen mit Typvariablen</span></h4>
+                                                <p>Kommt nach der Typlöschung einfach nur <span class="clisting">Object</span> heraus, kann natürlich keine Methode einmal mit einer Typvariablen und einmal mit
+                                                   <span class="clisting">Object</span> parametrisiert sein. Folgendes ist nicht erlaubt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Pocket&lt;T&gt;<br>{<br>  public T value;<br>  public void set( T value ) { this.value = value; }<br>  public void set( Object value ) { this.value = value; }   // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler!<br>}<br></pre></div>
+                                                <p>Der Compiler liefert: »Method set(T) has the same erasure set(Object) as another method
+                                                   in type Pocket&lt;T&gt;«.
+                                                </p>
+                                                <p>Ist der Typ spezieller, also etwa <span class="clisting">String</span>, sieht das wieder anders aus. Dann taucht die Frage auf, welche Methode bei <span class="clisting">Pocket&lt;String&gt;</span> aufgerufen wird. Die Leser dürfen das gerne prüfen.
+                                                </p><a id="dodtpc4f8f2d4-6c81-4ec6-bb9a-b032742ab12f" name="dodtpc4f8f2d4-6c81-4ec6-bb9a-b032742ab12f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Es lassen sich keine Arrays generischer Klassen bilden</span></h4>
+                                                <p>Die Nutzung von Generics bei Arrays schränkt der Compiler ebenfalls ein. Während</p>
+                                                <div class="listing"><pre class="prettyprint">Pocket[] pockets = new Pocket[1];<br></pre></div>
+                                                <p>gültig ist und mit einer Warnung versehen wird, führt bei</p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;String&gt;[] pockets;                         // (1)<br>pockets = new Pocket&lt;String&gt;[1];                  // (2) <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Compilerfehler<br></pre></div>
+                                                <p>nicht die erste, aber die zweite Zeile zum Compilerfehler »Cannot create a generic
+                                                   array of Pocket&lt;String&gt;«.
+                                                </p>
+                                                <p>Typsicher kann das nicht genutzt werden, aber drei schnelle Lösungen sind denkbar:</p>
+                                                <ul class="gp">
+                                                   <li>auf Generics ganz zu verzichten und ein <span class="clisting">@SuppressWarnings("unchecked")</span> an die Feldvariable zu setzen
+                                                   </li>
+                                                   <li>den Typ durch ein Wildcard ersetzen, sodass es etwa zu einem <span class="clisting">Pocket&lt;</span><span class="cfett">?</span><span class="clisting">&gt;[] pockets = new Pocket&lt;</span><span class="cfett">?</span><span class="clisting">&gt;[1];</span> kommt. Wildcards sind Platzhalter, die später noch detaillierter vorgestellt werden.
+                                                   </li>
+                                                   <li>gleich auf Datenstrukturen der Collection-API umsteigen, bei denen ein <span class="clisting">Collection&lt;String&gt; pockets = new ArrayList&lt;String&gt;();</span> keine Probleme bereitet
+                                                   </li>
+                                                </ul>
+                                                <p>Als Zusammenfassung lässt sich festhalten, dass Array-Variablen von generischen Typen
+                                                   zwar deklariert (1), dass aber keine Array-Objekte gebaut werden können (2). Mit einem
+                                                   Trick funktioniert es:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class PocketFullOfMoney extends Pocket&lt;BigInteger&gt; {}<br>Pocket&lt;BigInteger&gt;[] pockets = new PocketFullOfMoney[1];<br></pre></div>
+                                                <p>Hübsch ist das nicht, denn es muss extra eine temporäre Klasse angelegt werden.</p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8beafab7-be03-41eb-8396-641368b63dff" name="dodtp8beafab7-be03-41eb-8396-641368b63dff"></a><h3 class="t3"><span class="cfett">9.2.4</span><span class="cfett"> Raw-Type</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc4f8f2d4-6c81-4ec6-bb9a-b032742ab12f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Generische Klassen müssen nicht unbedingt parametrisiert werden, doch es ist einleuchtend,
+                                                   dass wir dem Compiler so viel Typinformation wie möglich geben sollten. Auf die Typparameter
+                                                   zu verzichten ist nur für die Rückwärtskompatibilität wichtig, da sonst viele parametrisierte
+                                                   neue Klassen nicht mehr mit altem Programmcode verwendet werden könnten. Wenn zum
+                                                   Beispiel <span class="clisting">Pocket</span> unter Java 1.4 deklariert und mit den Sprachmitteln von Java 5 zu einem generischen
+                                                   Typ verfeinert wurde, kann es immer noch alten Programmcode geben, der wie folgt aussieht:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket p = new Pocket();       // Gefährlich, wie wir gleich sehen werden<br>p.set( "Drei Pleitegeier, die Taschen voller Sand" );<br>String content = (String) p.get();<br></pre></div>
+                                                <p>Ein generischer Typ, der nicht als parametrisierter Typ, also ohne Typargument, genutzt
+                                                   wird, heißt <span class="cbegriff">Raw-Type</span><a class="indexterm" id="dodtpcc7d62b4-440f-4017-acff-7383f6cbd546"></a>. In unserem Beispiel ist <span class="clisting">Pocket</span> der Raw-Type von <span class="clisting">Pocket&lt;T&gt;</span>. Bei einem Raw-Type kann der Compiler die Typkonformität nicht mehr prüfen, denn
+                                                   es ist der Typ nach der Typlöschung; <span class="clisting">get()</span> liefert <span class="clisting">Object</span>, und <span class="clisting">set(Object)</span> kann alles annehmen.
+                                                </p>
+                                                <p>Ein unter Java 1.4 geschriebenes Programm nutzt also nur Raw-Types. Trifft ein Java
+                                                   5-Compiler auf Programmcode, der einen generischen Typ nicht als parametrisierten
+                                                   Typ nutzt, fängt er an zu meckern, denn er wünscht, dass der Typ generisch verwendet
+                                                   wird.
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/09_001.png" rel="lightbox" title="Eclipse warnt Raw-Types standardmäßig an"><img class="bild" border="1" src="bilderklein/klein09_001.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 9.1: </strong>Eclipse warnt Raw-Types standardmäßig an
+                                                </p>
+                                                <p>Auch bei <span class="clisting">set()</span> gibt der Compiler eine Warnung aus, denn er sieht eine Gefahr für die Typsicherheit.
+                                                   Die Methode <span class="clisting">set()</span> ist so entworfen, dass sie ein Argument von dem Typ akzeptiert, mit dem sie parametrisiert
+                                                   wurde. Fehlt durch die Verwendung des Raw-Types der konkrete Typ, bleibt <span class="clisting">Object</span>, und der Compiler gibt bei den sonst mit einem Typ präzisierten Methoden eine Warnung
+                                                   aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">p.set( "Type safety: The method set(Object) belongs to the " +<br>       "raw type Pocket. References to generic type " +<br>       "Pocket&lt;T&gt; should be parameterized" );<br></pre></div>
+                                                <p>Der Hinweis besagt, dass die Tasche hätte typisiert werden müssen. Wenn wir nicht
+                                                   darauf achten, kann das schnell zu Problemen führen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket&lt;String&gt; p1 = new Pocket&lt;String&gt;();<br>Pocket p2 = p1;                     // Compiler-Warnung<br>p2.set( new java.util.Date() );     // Compiler-Warnung<br>String string = p1.get();           // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> ClassCastException<br>System.out.println( string );<br></pre></div>
+                                                <p>Der Compiler gibt keinen Fehler, aber Warnungen aus. Die dritte Zeile ist hochgradig
+                                                   problematisch, denn über die nicht parametrisierte Tasche können wir beliebige Objekte
+                                                   eintüten. Da aber das Objekt hinter <span class="clisting">p2</span> und dem typgelöschten <span class="clisting">p1</span> identisch ist, haben wir ein Typproblem, das zur Laufzeit zu einer <span class="clisting">ClassCastException</span> führt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Exception in thread "main" java.lang.ClassCastException: java.util.Date cannot be cast to java.lang.String<br></pre></div>
+                                                <p>Es kann also nur die Empfehlung ausgesprochen werden, Raw-Types in neuen Programmen
+                                                   zu vermeiden, da ihre Verwendung zu Ausnahmen führen kann, die erst zur Laufzeit auffallen.
+                                                </p><a id="dodtp80656204-5fba-4ea0-98bf-e96b4f308b24" name="dodtp80656204-5fba-4ea0-98bf-e96b4f308b24"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Typanpassungen</span></h4>
+                                                <p>Ein Raw-Type lässt sich automatisch in eine speziellere Form bringen, wobei es natürlich
+                                                   Warnungen vom Compiler gibt.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Pocket p = new Pocket();                     // (1) Warnung<br>p.set( "Roh macht nicht froh" );             // (2) Warnung<br>Pocket&lt;String&gt; stringPocket = p;             // (3) Warnung<br>String result = stringPocket.get();          // (4)<br></pre></div>
+                                                <p>Bei der Variablen <span class="clisting">p</span>, die wir über den Raw-Type nutzen (2), prüft der Compiler gar keine Typen in <span class="clisting">set()</span>, denn er hat sie ja nie kennengelernt. Zeile (3) verkauft dem Compiler den Raw-Type
+                                                   als parametrisierten Typ. Eine explizite Typanpassung ist nicht nötig, denn Casts
+                                                   sind nur zwischen »echten« Typen gültig, wie <span class="clisting">Object</span> auf <span class="clisting">Pocket</span>, nicht aber von <span class="clisting">Pocket</span> auf <span class="clisting">Pocket&lt;String&gt;</span>, da <span class="clisting">Pocket&lt;String&gt;</span> ja der gleiche <span class="clisting">Class</span>-Typ ist (siehe »Kein .class für generische Typen und keine Class-Objekte mit Typparameter
+                                                   zur Laufzeit«). Eine Anweisung wie (4), die einen Nicht-<span class="clisting">String</span>-Typ in die Tasche setzt, bringt keinen Fehler zur Übersetzungszeit, und so kann auch
+                                                   über diese Hintertür ein falscher Typ in die Tasche kommen.
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/09_002.png" rel="lightbox" title="Warnung von Eclipse bei Raw-Types"><img class="bild" border="1" src="bilderklein/klein09_002.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 9.2: </strong>Warnung von Eclipse bei Raw-Types
+                                                </p><a id="dodtp16d24b1f-d978-4a9d-84cf-f30e3e98d568" name="dodtp16d24b1f-d978-4a9d-84cf-f30e3e98d568"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Annotation SuppressWarnings</span></h4>
+                                                <p>In seltenen Fällen muss in den Typ konvertiert werden. Als Beispiel soll <span class="clisting">cast()</span> dienen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public &lt;T&gt; T cast( Object obj )<br>{<br>  return (T) obj; // Compilerwarnung: Type safety: Unchecked cast from Object to T<br>}<br></pre></div>
+                                                <p>Lässt sich der Cast nicht vermeiden, um dem Compiler den Typ zu geben und ihn somit
+                                                   glücklich zu machen, setzen wir eine <span class="clisting">@SuppressWarnings</span>-Annotation:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">@SuppressWarnings("unchecked")<br>public &lt;T&gt; T cast( Object obj )<br>{<br>  return (T) obj;<br>}<br></pre></div>
+                                                <p>Die Generics bieten uns Möglichkeiten, den Quellcode sicherer zu machen. Wir sollten
+                                                   diese Sicherheit nicht durch Raw-Types kaputtmachen.
+                                                </p>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>Unter den Preferences von Eclipse können drei Typen von Hinweisen für die Nutzung von Raw-Types angegeben
+                                                   werden: Der Compiler gibt einen harten Compilerfehler aus, eine Warnung, oder er ignoriert
+                                                   sie. Dass er Warnungen ausgibt, ist voreingestellt, und diese Vorgabe ist ganz gut.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_09_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="9 Generics<T&gt;"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_09_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_09_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

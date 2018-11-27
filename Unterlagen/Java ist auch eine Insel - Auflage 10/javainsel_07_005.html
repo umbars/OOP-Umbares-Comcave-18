@@ -1,0 +1,607 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 7 Äußere.innere Klassen">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 7 Äußere.innere Klassen">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 7 Äußere.innere Klassen</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_07_004.html">
+      <link rel="next" href="javainsel_07_006.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_07_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_07_006.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f" class="navnav">7 Äußere.innere Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_001.html#dodtp866b9372-2f6d-4969-886d-1962e62b24bb" class="navnav">7.1 Geschachtelte (innere) Klassen, Schnittstellen, Aufzählungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_002.html#dodtp639804af-600d-41cb-b17c-f9534b8b1485" class="navnav">7.2 Statische innere Klassen und Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_003.html#dodtp57658547-2c54-47bd-851c-11e27903b66a" class="navnav">7.3 Mitglieds- oder Elementklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp4de22868-99e5-43a0-a81b-dff3724c7434" class="navnav">7.3.1 Exemplare innerer Klassen erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b" class="navnav">7.3.2 Die this-Referenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd" class="navnav">7.3.3 Vom Compiler generierte Klassendateien *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3" class="navnav">7.3.4 Erlaubte Modifizierer bei äußeren und inneren Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtpff95b5d6-f327-4043-9ee1-266da4f487ce" class="navnav">7.3.5 Innere Klassen greifen auf private Eigenschaften zu</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_004.html#dodtp69de0db5-e882-4f07-9b9f-4d23b45d9c81" class="navnav">7.4 Lokale Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_005.html#dodtp2071d6ab-a11c-4a16-a69d-31d6ee3b88dd" class="navh">7.5 Anonyme innere Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtpf1922a77-820a-4ad4-89d8-81ad4861308e" class="navh">7.5.1 Umsetzung innerer anonymer Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a" class="navh">7.5.2 Nutzung innerer Klassen für Threads *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtp8f045548-e334-4a06-890e-ce1c8185a4c3" class="navh">7.5.3 Konstruktoren innerer anonymer Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_006.html#dodtp3a69df22-2529-438f-9368-f49c2cfe21ff" class="navnav">7.6 Zugriff auf lokale Variablen aus lokalen inneren und anonymen Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_007.html#dodtp48f61ace-0681-4aec-bbfc-e98abc21037f" class="navnav">7.7 this in Unterklassen *</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2071d6ab-a11c-4a16-a69d-31d6ee3b88dd" name="dodtp2071d6ab-a11c-4a16-a69d-31d6ee3b88dd"></a><h2 class="t2"><span class="cfett">7.5</span><span class="cfett"> Anonyme innere Klassen</span><a href="#dodtpf1922a77-820a-4ad4-89d8-81ad4861308e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><a class="indexterm" id="dodtp289247d0-b33f-4f0f-aa8d-70a91528cb45"></a>Anonyme Klassen gehen noch einen Schritt weiter als lokale Klassen. Sie haben keinen
+                                                   Namen und erzeugen immer automatisch ein Objekt; Klassendeklaration und Objekterzeugung
+                                                   sind zu einem Sprachkonstrukt verbunden. Die allgemeine Notation ist folgende:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new KlasseOderSchnittstelle() { /* Eigenschaften der inneren Klasse */ }<br></pre></div>
+                                                <p>In dem Block geschweifter Klammern lassen sich nun Methoden und Attribute deklarieren
+                                                   oder Methoden überschreiben. Hinter <span class="clisting">new</span> steht der Name einer Klasse oder Schnittstelle:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">new Klassenname(Optionale Argumente) { ... }</span>. Steht hinter <span class="clisting">new</span> ein Klassentyp, dann ist die anonyme Klasse eine Unterklasse von <span class="clisting">Klassenname</span>. Es lassen sich mögliche Argumente für den Konstruktor der Basisklasse angeben (das
+                                                      ist zum Beispiel dann nötig, wenn die Oberklasse keinen Standardkonstruktor deklariert).
+                                                   </li>
+                                                   <li><span class="clisting">new Schnittstellenname() { ... }</span>. Steht hinter <span class="clisting">new</span> der Name einer Schnittstelle, dann erbt die anonyme Klasse von <span class="clisting">Object</span> und implementiert die Schnittstelle <span class="clisting">Schnittstellenname</span>. Implementiert sie nicht die Operationen der Schnittstelle, ist das ein Fehler; wir
+                                                      hätten nichts davon, denn dann hätten wir eine abstrakte innere Klasse, von der sich
+                                                      kein Objekt erzeugen lässt.
+                                                   </li>
+                                                </ul>
+                                                <p>Für anonyme innere Klassen gilt die Einschränkung, dass keine zusätzlichen <span class="clisting">extends</span>- oder <span class="clisting">implements</span>-Angaben möglich sind. Ebenso sind keine eigenen Konstruktoren möglich und nur Objektmethoden
+                                                   und finale statische Variablen erlaubt.
+                                                </p>
+                                                <p>Wir wollen eine innere Klasse schreiben, die Unterklasse von <span class="clisting">java.awt.Point</span> ist. Sie soll die <span class="clisting">toString()</span>-Methode überschreiben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.7: </strong>com/tutego/insel/inner/InnerToStringPoint.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Point p = new Point( 10, 12 ) {<br> <span class="cfett"> @Override public String toString() {</span><br>   <span class="cfett"> return "(" + x + "," + y + ")";</span><br> <span class="cfett"> }</span><br>};<br><br>System.out.println( p );    // (10,12)<br></pre></div>
+                                                <p>Da sofort eine Unterklasse von <span class="clisting">Point</span> aufgebaut wird, fehlt der Name der inneren Klasse. Das einzige Exemplar dieser anonymen
+                                                   Klasse lässt sich über die Variable <span class="clisting">p</span> weiterverwenden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Eine innere Klasse kann Methoden der Oberklasse überschreiben, Operationen aus Schnittstellen
+                                                               implementieren und sogar neue Eigenschaften anbieten:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">String s = new Object() {<br>  String quote( String s ) {<br>    return String.format( "'%s'", s );<br>  }<br>}.quote( "Juvy" );<br>System.out.println( s );  // 'Juvy'<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der neu deklarierte anonyme Typ hat eine Methode <span class="clisting">quote()</span>, die direkt aufgerufen werden kann. Ohne diesen direkten Aufruf ist die <span class="clisting">quote()</span>-Methode aber unsichtbar, denn der Typ ist ja anonym, und so sind nur die Methoden
+                                                               der Oberklasse (bei uns <span class="clisting">Object</span>) beziehungsweise der Schnittstelle bekannt. (Wir lassen die Tatsache außen vor, dass
+                                                               eine Anwendung mit Reflection auf die Methoden zugreifen kann.)
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpf1922a77-820a-4ad4-89d8-81ad4861308e" name="dodtpf1922a77-820a-4ad4-89d8-81ad4861308e"></a><h3 class="t3"><span class="cfett">7.5.1</span><span class="cfett"> Umsetzung innerer anonymer Klassen *</span><a href="#dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp2071d6ab-a11c-4a16-a69d-31d6ee3b88dd"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Auch für innere anonyme Klassen erzeugt der Compiler eine normale Klassendatei. Wir
+                                                   haben gesehen, dass der Java-Compiler bei einer »normalen« inneren Klasse die Notation
+                                                   <span class="clisting">ÄußereKlasse$</span><a class="indexterm" id="dodtp44c4c4ae-1d43-4766-a278-d1301a5d17f2"></a><span class="clisting">InnereKlasse</span> wählt. Das klappt bei anonymen inneren Klassen natürlich nicht mehr, da uns der Name
+                                                   der inneren Klasse fehlt. Der Compiler wählt daher folgende Notation für Klassennamen:
+                                                   <span class="clisting">InnerToStringDate$1</span>. Falls es mehr als eine innere Klasse gibt, folgen <span class="clisting">$2</span>, <span class="clisting">$3</span> und so weiter.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a" name="dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a"></a><h3 class="t3"><span class="cfett">7.5.2</span><span class="cfett"> Nutzung innerer Klassen für Threads *</span><a href="#dodtp8f045548-e334-4a06-890e-ce1c8185a4c3"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf1922a77-820a-4ad4-89d8-81ad4861308e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Sehen wir uns ein weiteres Beispiel für die Implementierung von Schnittstellen an:
+                                                   Um nebenläufige Programme zu implementieren, gibt es die Klasse <span class="clisting">Thread</span><a class="indexterm" id="dodtp0a317e89-2190-4057-a142-429f97e42f01"></a> und die Schnittstelle <span class="clisting">Runnable</span><a class="indexterm" id="dodtpbceceba8-534b-458c-bb1a-e1eae3a6be91"></a> (für das Beispiel greifen wir vor; Threads werden in Kapitel 12, »Einführung in 
+                                                   die nebenläufige Programmierung«, genau beschrieben).
+                                                </p>
+                                                <p>Die Schnittstelle <span class="clisting">Runnable</span> schreibt eine Operation <span class="clisting">run()</span> vor, in die der parallel abzuarbeitende Programmcode gesetzt wird. Das geht gut mit
+                                                   einer inneren anonymen Klasse, die <span class="clisting">Runnable</span> implementiert:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new Runnable() {     // Anonyme Klasse extends Object implements Runnable<br>  public void run() {<br>    ...<br>  }<br>}<br></pre></div>
+                                                <p>Das so erzeugte Exemplar kommt in den Konstruktor der Klasse <span class="clisting">Thread</span>. Der Thread wird mit <span class="clisting">start()</span> angekurbelt. Damit folgt zusammengesetzt und mit Implementierung von <span class="clisting">run()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.8: </strong>com/tutego/insel/inner/FirstThread, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">new Thread(<span class="cfett"> new Runnable() {</span><br>  @Override<span class="cfett"> public void run() {</span><br>    for ( int i = 0; i &lt; 10; i++ )<br>      System.out.printf( "%d ", i );<br> <span class="cfett"> }<br>}</span> ).start();<br><br>for ( int i = 0; i &lt; 10; i++ )<br>  System.out.printf( "%d ", i );<br></pre></div>
+                                                <p>In der Ausgabe wird zum Beispiel Folgendes erscheinen (hier komprimiert):</p>
+                                                <div class="listing"><pre class="prettyprint">0 0 1 2 3 4 5 6 7 8 9 1 2 3 4 5 6 7 8 9<br></pre></div>
+                                                <p>Der neue Thread beginnt mit der 0 und wird dann unterbrochen. Der <span class="clisting">main</span>-Thread kann in einem Zug 0 bis 9 ausgeben. Danach folgt wieder der erste Thread und
+                                                   kann den Rest ausgeben. Ausführliche Informationen zu Threads vermittelt Kapitel 12.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8f045548-e334-4a06-890e-ce1c8185a4c3" name="dodtp8f045548-e334-4a06-890e-ce1c8185a4c3"></a><h3 class="t3"><span class="cfett">7.5.3</span><span class="cfett"> Konstruktoren innerer anonymer Klassen *</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Compiler setzt anonyme Klassen in normale Klassendateien um. Jede Klasse kann
+                                                   einen eigenen Konstruktor deklarieren, und auch für anonyme Klassen sollte das möglich
+                                                   sein, um Initialisierungscode dort hineinzusetzen. Da aber anonyme Klassen keinen
+                                                   Namen haben, muss für Konstruktoren ein anderer Weg gefunden werden. Hier helfen <span class="cbegriff">Exemplarinitialisierungsblöcke</span><a class="indexterm" id="dodtp81b435be-6d4c-4780-8d85-a3616a9e1315"></a>, also Blöcke in geschweiften Klammern direkt innerhalb einer Klasse, die wir schon
+                                                   in Kapitel 5, »Eigene Klassen schreiben«, vorgestellt haben. Exemplarinitialisierer
+                                                   gibt es ja eigentlich gar nicht im Bytecode, sondern der Compiler setzt den Programmcode
+                                                   automatisch in jeden Konstruktor. Obwohl anonyme Klassen keinen direkten Konstruktor
+                                                   haben können, gelangt doch über den Exemplarinitialisierer Programmcode in den Konstruktor
+                                                   der Bytecode-Datei.
+                                                </p>
+                                                <p>Dazu ein Beispiel: Die anonyme Klasse ist eine Unterklasse von <span class="clisting">Point</span> und initialisiert im Konstruktor einen Punkt mit den Koordinaten &#8211;1, &#8211;1. Aus diesem
+                                                   speziellen Punkt-Objekt lesen wir dann die Koordinaten wieder aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.9: </strong>com/tutego/insel/inner/AnonymousAndInside.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">java.awt.Point p = new java.awt.Point() { { x = &#8211;1; y = &#8211;1; } };<br><br>System.out.println( p.getLocation() );  // java.awt.Point[x=-1,y=-1]<br><br>System.out.println( new java.awt.Point( &#8211;1, 0 )<br>{<br>  {<br>    y = &#8211;1;<br>  }<br>}.getLocation() );                      // java.awt.Point[x=-1,y=-1]<br></pre></div><a id="dodtp7e609e81-532f-4a4f-803f-a04e5e664955" name="dodtp7e609e81-532f-4a4f-803f-a04e5e664955"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Gar nicht super() *</span></h4>
+                                                <p>Innerhalb eines »anonymen Konstruktors« kann kein <span class="clisting">super()</span> verwendet werden, um den Konstruktor der Oberklasse aufzurufen. Dies liegt daran,
+                                                   dass automatisch ein <span class="clisting">super()</span> in den Initialisierungsblock eingesetzt wird. Die Parameter für die gewünschte Variante
+                                                   des (überladenen) Oberklassen-Konstruktors werden am Anfang der Deklaration der anonymen
+                                                   Klasse angegeben. Dies zeigt das zweite Beispiel:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println( new Point(-1, 0) { { y = &#8211;1; } }.getLocation() );<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wir initialisieren ein Objekt <span class="clisting">BigDecimal</span>, das beliebig große Ganzzahlen aufnehmen kann. Im Konstruktor der anonymen Unterklasse
+                                                               geben wir anschließend den Wert mit der geerbten <span class="clisting">toString()</span>-Methode aus:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">new java.math.BigDecimal( "12345678901234567890" ) {<br>  { System.out.println( toString() ); }<br>};<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_07_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="7 Äußere.innere Klassen"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_07_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_07_006.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

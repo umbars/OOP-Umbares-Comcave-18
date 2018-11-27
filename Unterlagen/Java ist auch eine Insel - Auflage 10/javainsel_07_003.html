@@ -1,0 +1,785 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 7 Äußere.innere Klassen">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 7 Äußere.innere Klassen">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 7 Äußere.innere Klassen</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_07_002.html">
+      <link rel="next" href="javainsel_07_004.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_07_002.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_07_004.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f" class="navnav">7 Äußere.innere Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_001.html#dodtp866b9372-2f6d-4969-886d-1962e62b24bb" class="navnav">7.1 Geschachtelte (innere) Klassen, Schnittstellen, Aufzählungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_002.html#dodtp639804af-600d-41cb-b17c-f9534b8b1485" class="navnav">7.2 Statische innere Klassen und Schnittstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_003.html#dodtp57658547-2c54-47bd-851c-11e27903b66a" class="navh">7.3 Mitglieds- oder Elementklassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp4de22868-99e5-43a0-a81b-dff3724c7434" class="navh">7.3.1 Exemplare innerer Klassen erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b" class="navh">7.3.2 Die this-Referenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd" class="navh">7.3.3 Vom Compiler generierte Klassendateien *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3" class="navh">7.3.4 Erlaubte Modifizierer bei äußeren und inneren Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_003.html#dodtpff95b5d6-f327-4043-9ee1-266da4f487ce" class="navh">7.3.5 Innere Klassen greifen auf private Eigenschaften zu</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_004.html#dodtp69de0db5-e882-4f07-9b9f-4d23b45d9c81" class="navnav">7.4 Lokale Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_005.html#dodtp2071d6ab-a11c-4a16-a69d-31d6ee3b88dd" class="navnav">7.5 Anonyme innere Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtpf1922a77-820a-4ad4-89d8-81ad4861308e" class="navnav">7.5.1 Umsetzung innerer anonymer Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtp9e02eb29-7c29-416b-bf6a-f22c19e1397a" class="navnav">7.5.2 Nutzung innerer Klassen für Threads *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_07_005.html#dodtp8f045548-e334-4a06-890e-ce1c8185a4c3" class="navnav">7.5.3 Konstruktoren innerer anonymer Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_006.html#dodtp3a69df22-2529-438f-9368-f49c2cfe21ff" class="navnav">7.6 Zugriff auf lokale Variablen aus lokalen inneren und anonymen Klassen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_07_007.html#dodtp48f61ace-0681-4aec-bbfc-e98abc21037f" class="navnav">7.7 this in Unterklassen *</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp57658547-2c54-47bd-851c-11e27903b66a" name="dodtp57658547-2c54-47bd-851c-11e27903b66a"></a><h2 class="t2"><span class="cfett">7.3</span><span class="cfett"> Mitglieds- oder Elementklassen</span><a href="#dodtp4de22868-99e5-43a0-a81b-dff3724c7434"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Eine <span class="cbegriff">Mitgliedsklasse</span><a class="indexterm" id="dodtp67347ab1-1c9a-481c-ae76-ab7d02c1ba9d"></a> (engl. <span class="cbegriff">member class</span><a class="indexterm" id="dodtpc4c77dab-604c-4aa1-8669-9076df8ed448"></a>), auch <span class="cbegriff">Elementklasse</span><a class="indexterm" id="dodtp5795cca4-5773-4da4-9f1a-01de90e212f5"></a> genannt, ist ebenfalls vergleichbar mit einem Attribut, nur ist sie nicht statisch
+                                                   (statische innere Klassen lassen sich aber auch als <span class="cbegriff">statische Mitgliedsklassen</span> bezeichnen). Deklarieren wir eine innere Mitgliedsklasse <span class="clisting">Room</span> in <span class="clisting">House</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.2: </strong>com/tutego/insel/inner/House.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class House<br>{<br>  private String owner = "Ich";<br><br> <span class="cfett"> class Room</span><br> <span class="cfett"> {</span><br>    void ok()<br>    {<br>      System.out.println( owner );<br>    }<br>    // static void error() { }<br> <span class="cfett"> }</span><br>}<br></pre></div>
+                                                <p>Ein Exemplar der Klasse <span class="clisting">Room</span> hat Zugriff auf alle Eigenschaften von <span class="clisting">House</span>, auch auf die privaten. Eine wichtige Eigenschaft ist, dass innere Mitgliedsklassen
+                                                   selbst keine statischen Eigenschaften deklarieren dürfen. Der Versuch führt in unserem
+                                                   Fall zu einem Compilerfehler:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">The method error cannot be declared static; static methods can only be declared in a static or top level type<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4de22868-99e5-43a0-a81b-dff3724c7434" name="dodtp4de22868-99e5-43a0-a81b-dff3724c7434"></a><h3 class="t3"><span class="cfett">7.3.1</span><span class="cfett"> Exemplare innerer Klassen erzeugen</span><a href="#dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp57658547-2c54-47bd-851c-11e27903b66a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Um ein Exemplar von <span class="clisting">Room</span> zu erzeugen, muss ein Exemplar der äußeren Klasse existieren. Das ist eine wichtige
+                                                   Unterscheidung gegenüber den statischen inneren Klassen aus Abschnitt 7.2. Statische
+                                                   innere Klassen existieren auch ohne Objekt der äußeren Klasse.
+                                                </p>
+                                                <p>In einem Konstruktor oder in einer Objektmethode der äußeren Klassen kann einfach
+                                                   mit dem <span class="clisting">new</span>-Operator ein Exemplar der inneren Klasse erzeugt werden. Kommen wir von außerhalb
+                                                   &#8211; oder von einem statischen Block der äußeren Klasse &#8211; und wollen wir Exemplare der
+                                                   inneren Klasse erzeugen, so müssen wir bei Elementklassen sicherstellen, dass es ein
+                                                   Exemplar der äußeren Klasse gibt. Java schreibt eine spezielle Form für die Erzeugung
+                                                   mit <span class="clisting">new</span> vor, die folgendes allgemeine Format besitzt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">referenz.new InnereKlasse(...)<br></pre></div>
+                                                <p>Dabei ist <span class="clisting">referenz</span> eine Referenz vom Typ der äußeren Klasse. Um in der statischen <span class="clisting">main()</span>-Methode vom Haus ein <span class="clisting">Room</span>-Objekt aufzubauen, schreiben wir:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.3: </strong>com/tutego/insel/inner/House.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">House h = new House();<br>Room  r =<span class="cfett"> h.new Room()</span>;<br></pre></div>
+                                                <p>Oder auch in einer Zeile:</p>
+                                                <div class="listing"><pre class="prettyprint">Room  r =<span class="cfett"> new House().new Room()</span>;<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b" name="dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b"></a><h3 class="t3"><span class="cfett">7.3.2</span><span class="cfett"> Die this-Referenz</span><a href="#dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp4de22868-99e5-43a0-a81b-dff3724c7434"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp02188d62-64ca-401d-b73b-f74154debed4"></a>Möchte eine innere Klasse <span class="clisting">In</span> auf die <span class="clisting">this</span>-Referenz der sie umgebenden Klasse <span class="clisting">Out</span> zugreifen, schreiben wir <span class="clisting">Out.this</span>. Wenn Variablen der inneren Klasse die Variablen der äußeren Klasse überdecken, so
+                                                   schreiben wir <span class="clisting">Out.this.Eigenschaft</span>, um an die Eigenschaften der äußeren Klasse <span class="clisting">Out</span> zu gelangen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.4: </strong>com/tutego/insel/inner/FurnishedHouse.java,FurnishedHouse
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class FurnishedHouse<br>{<br>  String s = "House";<br><br>  class Room<br>  {<br>    String s = "Room";<br><br>    class Chair<br>    {<br>      String s = "Chair";<br><br>      void output()<br>      {<br>        System.out.println( s );                      // Chair<br>        System.out.println(<span class="cfett"> this.s</span> );                 // Chair<br>        System.out.println(<span class="cfett"> Chair.this.s</span> );           // Chair<br>        System.out.println(<span class="cfett"> Room.this.s</span> );            // Room<br>        System.out.println(<span class="cfett"> FurnishedHouse.this.s</span> );  // House<br>      }<br>    }<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    new FurnishedHouse().new Room().new Chair().output();<br>  }<br>}<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Elementklassen können beliebig geschachtelt sein, und da der Name eindeutig ist, gelangen
+                                                               wir mit <span class="clisting">Klassenname.this</span> immer an die jeweilige Eigenschaft.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Betrachten wir das obige Beispiel, dann lassen sich Objekte für die inneren Klassen
+                                                   <span class="clisting">Room</span> und <span class="clisting">Chair</span> wie folgt erstellen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">FurnishedHouse h            = new FurnishedHouse();  // Exemplar von FurnishedHouse<br>FurnishedHouse.Room r       = h.new Room();          // Exemplar von Room in h<br>FurnishedHouse.Room.Chair c = r.new Chair();         // Exemplar von Chair in r<br>c.out();                                             // Methode von Chair<br></pre></div>
+                                                <p>Die Qualifizierung mit dem Punkt bei <span class="clisting">FurnishedHouse.Room.Chair</span> bedeutet nicht automatisch, dass <span class="clisting">FurnishedHouse</span> ein Paket mit dem Unterpaket <span class="clisting">Room</span> ist, in dem die Klasse <span class="clisting">Chair</span> existiert. Die Doppelbelegung des Punkts verbessert die Lesbarkeit nicht gerade,
+                                                   und es droht Verwechslungsgefahr zwischen inneren Klassen und Paketen. Deshalb sollte
+                                                   die Namenskonvention beachtet werden: Klassennamen beginnen mit Großbuchstaben, Paketnamen
+                                                   mit Kleinbuchstaben.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd" name="dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd"></a><h3 class="t3"><span class="cfett">7.3.3</span><span class="cfett"> Vom Compiler generierte Klassendateien *</span><a href="#dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp746f8034-cbf4-4f52-ac3f-64a3c9d5f61b"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Für das Beispiel <span class="clisting">House</span> und <span class="clisting">Room</span> erzeugt der Compiler die Dateien House.class und House$Room.class. Damit die innere Klasse an die Attribute der äußeren gelangt, generiert der Compiler
+                                                   automatisch in jedem Exemplar der inneren Klasse eine Referenz auf das zugehörige
+                                                   Objekt der äußeren Klasse. Damit kann die innere Klasse auch auf nicht-statische Attribute
+                                                   der äußeren Klasse zugreifen. Für die innere Klasse ergibt sich folgendes Bild in
+                                                   House$Room.class:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class HouseBorder$Room<br>{<br>  final<span class="cfett"> House this$0</span>;<br><br> <span class="cfett"> House$Room( House house )</span><br>  {<br>    this$0 = house;<br>  }<br>  // ...<br>}<br></pre></div>
+                                                <p>Die Variable <span class="clisting">this$0</span><a class="indexterm" id="dodtpf8a6b444-c6d2-4fd6-baaa-2d20bda13489"></a> referenziert das Exemplar <span class="clisting">House.this</span>, also die zugehörige äußere Klasse. Die Konstruktoren der inneren Klasse erhalten
+                                                   einen zusätzlichen Parameter vom Typ <span class="clisting">House</span>, um die <span class="clisting">this$0</span>-Variable zu initialisieren. Da wir die Konstruktoren sowieso nicht zu Gesicht bekommen,
+                                                   kann uns das egal sein.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3" name="dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3"></a><h3 class="t3"><span class="cfett">7.3.4</span><span class="cfett"> Erlaubte Modifizierer bei äußeren und inneren Klassen</span><a href="#dodtpff95b5d6-f327-4043-9ee1-266da4f487ce"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6227a29f-151d-43ce-9a0b-40e2549f3ddd"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ist in einer Datei nur eine Klasse deklariert, kann diese nicht privat sein. Private
+                                                   innere Klassen sind aber legal. Statische Hauptklassen gibt es zum Beispiel auch nicht,
+                                                   aber innere statische Klassen sind legitim. Die folgende Tabelle fasst die erlaubten
+                                                   Modifizier noch einmal kompakt zusammen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 7.2: </strong>Erlaubte Modifizierer
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Modifizierer erlaubt auf</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">äußeren Klassen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">inneren Klassen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">äußeren Schnittstellen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">inneren Schnittstellen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">public</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">protected</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">private</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">static</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">final</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nein
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">abstract</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">ja
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpff95b5d6-f327-4043-9ee1-266da4f487ce" name="dodtpff95b5d6-f327-4043-9ee1-266da4f487ce"></a><h3 class="t3"><span class="cfett">7.3.5</span><span class="cfett"> Innere Klassen greifen auf private Eigenschaften zu</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpbf4c45d4-4e74-47be-b8c2-120e4c8d5bb3"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Es ist ein Sonderfall, dass äußere Klassen auf private Eigenschaften der inneren Klasse
+                                                   zugreifen können. Das folgende Beispiel soll das illustrieren:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 7.5: </strong>com/tutego/insel/inner/NotSoPrivate.java, NotSoPrivate
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class NotSoPrivate<br>{<br>  private static class Family {<span class="cfett"> private</span> String dad, mom; }<br><br>  public static void main( String[] args )<br>  {<br>    class Node {<span class="cfett"> private</span> Node next; }<br><br>    Node n = new Node();<br>    n.next = new Node();<br><br>    Family ullenboom = new Family();<br>    ullenboom.dad = "Heinz";<br>    ullenboom.mom = "Eva";<br>  }<br>}<br></pre></div>
+                                                <p>Eine Klasse <span class="clisting">Outsider</span>, die in der gleichen Compilationseinheit (also Datei) definiert wird, kann schon
+                                                   nicht mehr auf <span class="clisting">NotSoPrivate.Family</span> zugreifen und natürlich auch keine Klasse einer anderen Compilationseinheit.
+                                                </p><a id="dodtp3338d510-e561-4e5e-943e-f1463505fa1f" name="dodtp3338d510-e561-4e5e-943e-f1463505fa1f"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zugriffsrechte *</span></h4>
+                                                <p>Eine innere Klasse kann auf alle Attribute der äußeren Klasse zugreifen. Da eine innere
+                                                   Klasse als ganz normale Klasse übersetzt wird, stellt sich allerdings die Frage, wie
+                                                   sie das genau macht. Auf öffentliche Variablen kann jede andere Klasse ohne Tricks
+                                                   zugreifen, so auch die innere. Und da eine innere Klasse als normale Klassendatei
+                                                   im gleichen Paket sitzt, kann sie ebenfalls ohne Verrenkungen auf paketsichtbare und
+                                                   <span class="clisting">protected</span>-Eigenschaften der äußeren Klasse zugreifen. Eine innere Klasse kann jedoch auch auf
+                                                   private Eigenschaften zurückgreifen, eine Designentscheidung, die sehr umstritten
+                                                   ist und lange kontrovers diskutiert wurde. Doch wie ist das zu schaffen, ohne gleich
+                                                   die Zugriffsrechte des Attributs zu ändern? Der Trick ist, dass der Compiler eine
+                                                   synthetische statische Methode in der äußeren Klasse einführt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class House<br>{<br>  private String owner;<br><br> <span class="cfett"> static String access$0( House house )</span><br>  {<br>    return house.owner;<br>  }<br>}<br></pre></div>
+                                                <p>Die statische Methode <span class="clisting">access$0()</span> ist der Helfershelfer, der für ein gegebenes <span class="clisting">House</span> das private Attribut nach außen gibt. Da die innere Klasse einen Verweis auf die
+                                                   äußere Klasse pflegt, gibt sie diesen beim gewünschten Zugriff mit, und die <span class="clisting">access$0()</span>-Methode erledigt den Rest.
+                                                </p>
+                                                <p>Für jedes von der inneren Klasse genutzte private Attribut erzeugt der Compiler eine
+                                                   solche Methode. Wenn wir eine weitere private Variable <span class="clisting">int size</span> hinzunehmen, würde der Compiler ein <span class="clisting">int access$1(House)</span> generieren.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Problematisch ist das bei Klassen, die in ein Paket hineingeschmuggelt werden. Nehmen
+                                                               wir an, <span class="clisting">House</span> liegt im Paket <span class="clisting">p1.p2</span>. Dann kann ein Angreifer seine Klassen auch in ein Paket legen, das <span class="clisting">p1.p2</span> heißt. Da die <span class="clisting">access$XXX()</span>-Methoden paketsichtbar sind, können hineingeschmuggelte Klassen die packetsichtbaren
+                                                               <span class="clisting">access$XXX()</span>-Methoden aufrufen. Es reicht ein Exemplar der äußeren Klasse, um über einen <span class="clisting">access$XXX()</span>-Aufruf auf die privaten Variablen zuzugreifen, die eine innere Klasse nutzt. Glücklicherweise
+                                                               lässt sich gegen eingeschleuste Klassen in Java-Archiven leicht etwas unternehmen
+                                                               &#8211; sie müssen nur abgeschlossen werden, was bei Java <span class="cbegriff">sealing</span><a class="indexterm" id="dodtpcec7c02e-c250-4e72-8474-2f5c7bff41e7"></a> heißt.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_07_003.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="7 Äußere.innere Klassen"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_07_002.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_07_004.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

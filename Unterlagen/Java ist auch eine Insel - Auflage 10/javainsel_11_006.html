@@ -1,0 +1,1295 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 11 Die Klassenbibliothek">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 11 Die Klassenbibliothek</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_11_005.html">
+      <link rel="next" href="javainsel_11_007.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_11_005.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_11_007.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba" class="navnav">11 Die Klassenbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_001.html#dodtpa7c7bd4d-e2e2-46f4-b68b-5533fa719dec" class="navnav">11.1 Die Java-Klassenphilosophie</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_001.html#dodtpe90b9eba-dba7-4ad9-810c-21ef082c46d1" class="navnav">11.1.1 Übersicht über die Pakete der Standardbibliothek</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_002.html#dodtpf5ec6ccf-0e5e-44bd-9bd5-ed133fdc86b2" class="navnav">11.2 Sprachen der Länder</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_002.html#dodtp914af375-7296-45f3-8c45-78fa236688d8" class="navnav">11.2.1 Sprachen und Regionen über Locale-Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_003.html#dodtp968d2a6d-cefe-4ef3-b104-4084533c97dc" class="navnav">11.3 Die Klasse Date</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtp0c1b3bab-2510-4085-a6d5-9ec03d6acc47" class="navnav">11.3.1 Objekte erzeugen und Methoden nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_003.html#dodtpf38df6e6-6780-4f02-8d9e-31b093e56aa9" class="navnav">11.3.2 Date-Objekte sind nicht immutable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_004.html#dodtpa10273ff-c004-41f5-a534-9b7bad167d19" class="navnav">11.4 Calendar und GregorianCalendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp125aa019-fed0-41bc-9df7-8d56d6d9f00e" class="navnav">11.4.1 Die abstrakte Klasse Calendar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp23377a98-0a59-470e-a819-5ab460c72cfc" class="navnav">11.4.2 Der gregorianische Kalender</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtpe287136a-c0ea-416a-9ac2-4e7af93e189f" class="navnav">11.4.3 Calendar nach Date und Millisekunden fragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_004.html#dodtp1d759e61-6099-434b-ad3c-32caa9ac0a84" class="navnav">11.4.4 Abfragen und Setzen von Datumselementen über Feldbezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_005.html#dodtpaac94bba-c062-4ffe-b931-5435d8662583" class="navnav">11.5 Klassenlader (Class Loader)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpd7519fbf-72f0-467e-a925-0c2360c438c9" class="navnav">11.5.1 Woher die kleinen Klassen kommen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0371347e-dd77-407c-a561-b92e47c19607" class="navnav">11.5.2 Setzen des Klassenpfades</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp8e78a020-1d71-4923-b179-2cc704d83fb7" class="navnav">11.5.3 Die wichtigsten drei Typen von Klassenladern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp0fedbb4b-e317-4c09-bcc6-e40f77f5d2ac" class="navnav">11.5.4 Die Klasse java.lang.ClassLoader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtp9a6dfa39-697b-4ffc-9df6-2eab21d0d6a4" class="navnav">11.5.5 Hot Deployment mit dem URL-Classloader *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_005.html#dodtpcd989780-4e2d-4233-b678-7428e3af3a0b" class="navnav">11.5.6 Das Verzeichnis jre/lib/endorsed *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_006.html#dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825" class="navh">11.6 Die Utility-Klasse System und Properties</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4" class="navh">11.6.1 Systemeigenschaften der Java-Umgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpac81f344-a152-401e-8bc5-bf321e62208f" class="navh">11.6.2 line.separator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c" class="navh">11.6.3 Eigene Properties von der Konsole aus setzen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpe82dd2d8-bf29-4ecd-8293-954122267502" class="navh">11.6.4 Umgebungsvariablen des Betriebssystems *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_006.html#dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0" class="navh">11.6.5 Einfache Zeitmessung und Profiling *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_007.html#dodtpd843b629-c2c7-4d91-bab3-53d7f37a99f9" class="navnav">11.7 Einfache Benutzereingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtpf70d8a68-8fa2-453d-8865-013ff8edd377" class="navnav">11.7.1 Grafischer Eingabedialog über JOptionPane</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_007.html#dodtp80d596c2-e76f-4b51-9b6b-e6dda814c1ff" class="navnav">11.7.2 Geschützte Passwort-Eingaben mit der Klasse Console *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_008.html#dodtpd29fe557-8d1f-4a1a-a23e-ce87eda2454b" class="navnav">11.8 Ausführen externer Programme *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtp5109b601-e9c9-4e96-a1af-475d26b650f4" class="navnav">11.8.1 ProcessBuilder und Prozesskontrolle mit Process</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_008.html#dodtpe70eade2-b4f8-477e-9f46-1e4f09d87aba" class="navnav">11.8.2 Einen Browser, E-Mail-Client oder Editor aufrufen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_009.html#dodtp8ef585a0-bec3-4a6c-a2d9-609b6cb2c6fd" class="navnav">11.9 Benutzereinstellungen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp29221705-11a7-4fe0-8f23-bfb46d58ff59" class="navnav">11.9.1 Benutzereinstellungen mit der Preferences-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp1f33b78d-493f-43a5-be9c-afc95d5f903b" class="navnav">11.9.2 Einträge einfügen, auslesen und löschen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpc2bdeb36-d9fd-4ec2-8ffa-1175b1e2b8b7" class="navnav">11.9.3 Auslesen der Daten und Schreiben in einem anderen Format</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtp140fecd9-4909-4e37-84ea-4a3b5a5a2516" class="navnav">11.9.4 Auf Ereignisse horchen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_11_009.html#dodtpa00e6dc3-0435-4996-8c31-c2a9762eb073" class="navnav">11.9.5 Zugriff auf die gesamte Windows-Registry</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_11_010.html#dodtp5b8ed8f2-fe64-41b5-8dc8-98733b11f942" class="navnav">11.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825" name="dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825"></a><h2 class="t2"><span class="cfett">11.6</span><span class="cfett"> Die Utility-Klasse System und Properties</span><a href="#dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>In der Klasse <span class="clisting">java.lang.System</span> finden sich Methoden zum Erfragen und Ändern von Systemvariablen, zum Umlenken der
+                                                   Standard-Datenströme, zum Ermitteln der aktuellen Zeit, zum Beenden der Applikation
+                                                   und noch für das ein oder andere. Alle Methoden sind ausschließlich statisch, und
+                                                   ein Exemplar von <span class="clisting">System</span> lässt sich nicht anlegen. In der Klasse <span class="clisting">java.lang.Runtime</span> &#8211; die Schnittstelle <span class="clisting">RunTime</span> aus dem CORBA-Paket hat hiermit nichts zu tun &#8211; finden sich zusätzlich Hilfsmethoden,
+                                                   wie etwa das Starten von externen Programmen oder Methoden zum Erfragen des Speicherbedarfs.
+                                                   Anders als <span class="clisting">System</span> ist hier nur eine Methode statisch, nämlich die Singleton-Methode <span class="clisting">getRuntime()</span>, die das Exemplar von <span class="clisting">Runtime</span> liefert.
+                                                </p><a href="bilder/11_105png" rel="lightbox" title="Eigenschaften der Klassen System und Runtime"><img class="bild" border="1" src="bilderklein/klein11_105.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 11.5: </strong>Eigenschaften der Klassen System und Runtime
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Bemerkung
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Insgesamt machen die Klassen <span class="clisting">System</span> und <span class="clisting">Runtime</span> keinen besonders aufgeräumten Eindruck; sie wirken irgendwie so, als sei hier alles
+                                                               zu finden, was an anderer Stelle nicht mehr hineingepasst hat. Auch wären Methoden
+                                                               einer Klasse genauso gut in der anderen Klasse aufgehoben. 
+                                                               Dass die statische Methode <span class="clisting">System.arraycopy()</span> zum Kopieren von Feldern nicht in <span class="clisting">java.util.Arrays</span> stationiert ist, lässt sich nur historisch erklären. Und <span class="clisting">System.exit()</span> leitet an <span class="clisting">Runtime.getRuntime().exit()</span> weiter. Einige Methoden sind veraltet beziehungsweise anders verteilt: Das <span class="clisting">exec()</span> von <span class="clisting">Runtime</span> zum Starten von externen Prozessen übernimmt eine neue Klasse <span class="clisting">ProcessBuilder</span>, und die Frage nach dem Speicherzustand oder der Anzahl der Prozessoren beantworten
+                                                               MBeans, wie etwa <span class="clisting">ManagementFactory.getOperatingSystemMXBean().getAvailableProcessors()</span>. Aber API-Design ist wie Sex: Eine unüberlegte Aktion, und es lebt mit uns für immer.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4" name="dodtp482fe9d5-44e9-4b00-9643-0e05a14f08f4"></a><h3 class="t3"><span class="cfett">11.6.1</span><span class="cfett"> Systemeigenschaften der Java-Umgebung</span><a href="#dodtpac81f344-a152-401e-8bc5-bf321e62208f"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd18f839a-1a1f-454b-82f1-7a255ccf7825"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Java-Umgebung verwaltet Systemeigenschaften wie Pfadtrenner oder die Version der
+                                                   virtuellen Maschine in einem <span class="clisting">java.util.Properties</span><a class="indexterm" id="dodtpea85fd30-c3d6-4882-8053-8e9af7a0eceb"></a>-Objekt. Die statische Methode <span class="clisting">System.getProperties()</span><a class="indexterm" id="dodtpf6bad92d-4ec4-4447-bb96-302cb9f648be"></a> erfragt diese Systemeigenschaften und liefert das gefüllte <span class="clisting">Properties</span>-Objekt zurück. Zum Erfragen einzelner Eigenschaften ist das <span class="clisting">Properties</span>-Objekt aber nicht unbedingt nötig: <span class="clisting">System.getProperty()</span> erfragt direkt eine Eigenschaft.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Gib den Namen des Betriebssystems aus:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( System.getProperty("os.name") );<br></pre></div>
+                                                               Gib alle Systemeigenschaften auf dem Bildschirm aus:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.getProperties().list( System.out );<br></pre></div>
+                                                               Die Ausgabe beginnt mit:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">-- listing properties --<br>java.runtime.name=Java(TM) SE Runtime Environment<br>sun.boot.library.path=C:\Program Files\Java\jdk1.7.0\jre\bin<br>java.vm.version=21.0-b17<br>java.vm.vendor=Oracle Corporation<br>java.vendor.url=http://java.oracle.com/<br>path.separator=;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Eine Liste der wichtigen Standard-Systemeigenschaften:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 11.4: </strong>Standardsystemeigenschaften
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Schlüssel</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Bedeutung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">java.version</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Version der Java-Laufzeitumgebung
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">java.class.path</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Klassenpfad
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">java.library.path</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Pfad für native Bibliotheken
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">java.io.tmpdir</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Pfad für temporäre Dateien
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">os.name</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Name des Betriebssystems
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">file.separator</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Trenner der Pfadsegmente, etwa / (Unix) oder \ (Windows)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">path.separator</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Trenner bei Pfadangaben, etwa : (Unix) oder ; (Windows)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">line.separator</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zeilenumbruchzeichen(-folge)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">user.name</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Name des angemeldeten Benutzers
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">user.home</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Home-Verzeichnis des Benutzers
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">user.dir</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Aktuelles Verzeichnis des Benutzers
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp1e0bf2b5-62b7-4373-962a-3f2247f23bec" name="dodtp1e0bf2b5-62b7-4373-962a-3f2247f23bec"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> API-Dokumentation</span></h4>
+                                                <p>Ein paar weitere Schlüssel zählt die API-Dokumentation bei <span class="clisting">System.getProperties()</span> auf. Einige der Variablen sind auch anders zugänglich, etwa über die Klasse <span class="clisting">File</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">System</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static String getProperty(String key)</span><br>Gibt die Belegung einer Systemeigenschaft zurück. Ist der Schlüssel <span class="clisting">null</span> oder leer, gibt es eine <span class="clisting">NullPointerException</span> beziehungsweise eine <span class="clisting">IllegalArgumentException</span>.
+                                                   </li>
+                                                   <li><span class="clisting">static String getProperty(String key, String def)</span><br>Gibt die Belegung einer Systemeigenschaft zurück. Ist sie nicht vorhanden, liefert
+                                                      die Methode die Zeichenkette <span class="clisting">def</span>, den Default-Wert. Für die Ausnahmen gilt das Gleiche wie bei <span class="clisting">getProperty(String)</span>.
+                                                   </li>
+                                                   <li><span class="clisting">static String setProperty(String key, String value)</span><br>Belegt eine Systemeigenschaft neu. Die Rückgabe ist die alte Belegung &#8211; oder <span class="clisting">null</span>, falls es keine alte Belegung gab.
+                                                   </li>
+                                                   <li><span class="clisting">static String clearProperty(String key)</span><br>Löscht eine Systemeigenschaft aus der Liste. Die Rückgabe ist die alte Belegung &#8211;
+                                                      oder <span class="clisting">null</span>, falls es keine alte Belegung gab.
+                                                   </li>
+                                                   <li><span class="clisting">static Properties getProperties()</span><br>Liefert ein mit den aktuellen Systembelegungen gefülltes <span class="clisting">Properties</span>-Objekt.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpac81f344-a152-401e-8bc5-bf321e62208f" name="dodtpac81f344-a152-401e-8bc5-bf321e62208f"></a><h3 class="t3"><span class="cfett">11.6.2</span><span class="cfett"> line.separator</span><a href="#dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp1e0bf2b5-62b7-4373-962a-3f2247f23bec"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Um nach dem Ende einer Zeile an den Anfang der nächsten zu gelangen, wird ein <span class="cbegriff">Zeilenumbruch</span><a class="indexterm" id="dodtpc12470f8-7fc6-4071-b3c7-fa3445b12d79"></a> (engl. <span class="cbegriff">new line</span><a class="indexterm" id="dodtp8cabb608-5d76-4391-bb4b-01e2ae75d7d4"></a>) eingefügt. Das Zeichen für den Zeilenumbruch muss kein einzelnes sein, es können
+                                                   auch mehrere Zeichen nötig sein. Zum Leidwesen der Programmierer unterscheidet sich
+                                                   die Anzahl der Zeichen für den Zeilenumbruch auf den bekannten Architekturen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Unix: Line Feed (Zeilenvorschub)</li>
+                                                   <li>Windows: beide Zeichen (Carriage Return und Line Feed)</li>
+                                                   <li>Macintosh: Carriage Return (Wagenrücklauf)</li>
+                                                </ul>
+                                                <p>Der Steuercode für Carriage Return (kurz CR) ist 13 (0x0D), der für Line Feed (kurz
+                                                   LF) 10 (0x0A). Java vergibt obendrein eigene Escape-Sequenzen für diese Zeichen: <span class="clisting">\r</span> für Carriage Return und <span class="clisting">\n</span> für Line Feed (die Sequenz <span class="clisting">\f</span> für einen Form Feed &#8211; Seitenvorschub &#8211; spielt bei den Zeilenumbrüchen keine Rolle).
+                                                </p>
+                                                <p>Bei der Ausgabe mit einem <span class="clisting">println()</span> oder der Nutzung des Formatspezifizierers <span class="clisting">%n</span> in <span class="clisting">format()</span> beziehungsweise <span class="clisting">printf()</span> haben wir bei Zeilenumbrüchen keinerlei Probleme. So ist es oft gar nicht nötig,
+                                                   das Zeilenumbruchzeichen vom System über die Property <span class="clisting">line.separator</span><a class="indexterm" id="dodtp562b2746-d407-4016-912e-f11c68b7c231"></a> zu erfragen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c" name="dodtp49f70158-8b4e-478a-ab46-6f4d49b5ec5c"></a><h3 class="t3"><span class="cfett">11.6.3</span><span class="cfett"> Eigene Properties von der Konsole aus setzen *</span><a href="#dodtpe82dd2d8-bf29-4ecd-8293-954122267502"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpac81f344-a152-401e-8bc5-bf321e62208f"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eigenschaften lassen sich auch beim Programmstart von der Konsole aus setzen. Dies
+                                                   ist praktisch für eine Konfiguration, die beispielsweise das Verhalten des Programms
+                                                   steuert. In der Kommandozeile werden mit -D<a class="indexterm" id="dodtpac69ec85-4c1f-4ad5-834f-5db01cc65c4c"></a> der Name der Eigenschaft und nach einem Gleichheitszeichen (ohne Leerzeichen) ihr
+                                                   Wert angegeben. Das sieht dann etwa so aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> java</span> -DLOG<span class="cfett"> </span>&#8211;DUSER=Chris -DSIZE=100<span class="cfett"> com.tutego.insel.lang.SetProperty</span><br></pre></div>
+                                                <p>Die Property LOG ist einfach nur »da«, aber ohne zugewiesenen Wert. Die nächsten beiden Properties,
+                                                   USER und SIZE, sind mit Werten verbunden, die erst einmal vom Typ String sind und vom Programm
+                                                   weiterverarbeitet werden müssen.
+                                                </p>
+                                                <p>Die Informationen tauchen nicht bei der Argumentliste in der statischen <span class="clisting">main()</span>-Methode auf, da sie vor dem Namen der Klasse stehen und bereits von der Java-Laufzeitumgebung
+                                                   verarbeitet werden.
+                                                </p>
+                                                <p>Um die Eigenschaften auszulesen, nutzen wir das bekannte <span class="clisting">System.getProperty()</span>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 11.8: </strong>com/tutego/insel/lang/SetProperty.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.lang;<br><br>class SetProperty<br>{<br>  static public void main( String[] args )<br>  {<br>    String logProperty      =<span class="cfett"> System.getProperty( "LOG" )</span>;<br>    String usernameProperty =<span class="cfett"> System.getProperty( "USER" )</span>;<br>    String sizeProperty     =<span class="cfett"> System.getProperty( "SIZE" )</span>;<br><br>    System.out.println( logProperty != null );                      // true<br><br>    System.out.println( usernameProperty );                         // Chris<br><br>    if ( sizeProperty != null )<br>      System.out.println( Integer.parseInt( sizeProperty ) );       // 100<br><br>    System.out.println( System.getProperty( "DEBUG", "false" ) );   // false<br>  }<br>}<br></pre></div>
+                                                <p>Wir bekommen über <span class="clisting">getProperty()</span> einen String zurück, der den Wert anzeigt. Falls es überhaupt keine Eigenschaft dieses
+                                                   Namens gibt, erhalten wir stattdessen <span class="clisting">null</span>. So wissen wir auch, ob dieser Wert überhaupt gesetzt wurde. Ein einfacher Test wie
+                                                   bei <span class="clisting">logProperty != null</span> sagt also, ob <span class="clisting">logProperty</span> vorhanden ist oder nicht. Statt -DLOG führt auch -DLOG= zum gleichen Ergebnis, denn der assoziierte Wert ist der Leerstring. Da alle Properties
+                                                   erst einmal vom Typ <span class="clisting">String</span> sind, lässt sich <span class="clisting">usernameProperty</span> einfach ausgeben, und wir bekommen entweder <span class="clisting">null</span> oder den hinter <span class="clisting">=</span> angegebenen String. Sind die Typen keine Strings, müssen sie weiterverarbeitet werden,
+                                                   also etwa mit <span class="clisting">Integer.parseInt()</span>, <span class="clisting">Double.parseDouble()</span> usw. Nützlich ist die Methode <span class="clisting">System.getProperty()</span>, der zwei Argumente übergeben werden, denn das zweite steht für einen Default-Wert.
+                                                   So kann immer ein Standardwert angenommen werden.
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/11_003.png" rel="lightbox" title="Entwicklungsumgebungen erlauben es, die Kommandozeilenargumente in einem Fenster zu setzen. Unter Eclipse gehen wir dazu unter   , dann zu ."><img class="bild" border="1" src="bilderklein/klein11_003.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 11.6: </strong>Entwicklungsumgebungen erlauben es, die Kommandozeilenargumente in einem Fenster zu
+                                                   setzen. Unter Eclipse gehen wir dazu unter Run • Run Configurations, dann zu Arguments.
+                                                </p><a id="dodtpe8596180-bc42-4d49-b402-3b8e381f4825" name="dodtpe8596180-bc42-4d49-b402-3b8e381f4825"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Boolean.getBoolean()</span></h4>
+                                                <p>Im Fall von Properties, die mit Wahrheitswerten belegt werden, kann Folgendes geschrieben
+                                                   werden:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean b = Boolean.parseBoolean( System.getProperty(property) );   // (*)<br></pre></div>
+                                                <p>Für die Wahrheitswerte gibt es eine andere Variante. Die statische Methode <span class="clisting">Boolean.getBoolean(name)</span> sucht aus den System-Properties eine Eigenschaft mit dem angegebenen Namen heraus.
+                                                   Analog zur Zeile (*) ist also:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean b = Boolean.getBoolean( property );<br></pre></div>
+                                                <p>Es ist schon erstaunlich, diese statische Methode in der Wrapper-Klasse <span class="clisting">Boolean</span> anzutreffen, weil Property-Zugriffe nichts mit den Wrapper-Objekten zu tun haben
+                                                   und die Klasse hier eigentlich über ihre Zuständigkeit hinausgeht.
+                                                </p>
+                                                <p>Gegenüber einer eigenen, direkten <span class="clisting">System</span>-Anfrage hat <span class="clisting">getBoolean()</span> auch den Nachteil, dass wir bei der Rückgabe <span class="clisting">false</span> nicht unterscheiden können, ob es die Eigenschaft schlichtweg nicht gibt oder ob
+                                                   die Eigenschaft mit dem Wert <span class="clisting">false</span> belegt ist. Auch falsch gesetzte Werte wie -DP=fa1se ergeben immer <span class="clisting">false</span>.<span class="footnote"><a id="dodtpffe73185-b74f-4795-9e29-72f94463406c">[179](Das liegt an der Implementierung: Boolean.valueOf("false") liefert genauso false wie
+Boolean.valueOf("fa1se"), Boolean.valueOf("") oder Boolean.valueOf(null).)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">Boolean</span><br>implements Serializable, Comparable&lt;Boolean&gt;<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static boolean getBoolean(String name)</span><br>Liest eine Systemeigenschaft mit dem Namen <span class="clisting">name</span> aus und liefert <span class="clisting">true</span>, wenn der Wert der Property gleich dem String <span class="clisting">"true"</span> ist. Die Rückgabe ist <span class="clisting">false</span>, wenn entweder der Wert der Systemeigenschaft <span class="clisting">"false"</span> ist oder er nicht existiert oder <span class="clisting">null</span> ist.
+                                                   </li>
+                                                </ul><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe82dd2d8-bf29-4ecd-8293-954122267502" name="dodtpe82dd2d8-bf29-4ecd-8293-954122267502"></a><h3 class="t3"><span class="cfett">11.6.4</span><span class="cfett"> Umgebungsvariablen des Betriebssystems *</span><a href="#dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpe8596180-bc42-4d49-b402-3b8e381f4825"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Fast jedes Betriebssystem nutzt das Konzept der <span class="cbegriff">Umgebungsvariablen</span><a class="indexterm" id="dodtp1f2853fa-a2e4-4ced-9600-0462f4cbed2a"></a> (engl. <span class="cbegriff">environment variables</span>); bekannt ist etwa <span class="clisting">PATH</span> für den Suchpfad für Applikationen unter Windows und unter Unix. Java macht es möglich,
+                                                   auf diese System-Umgebungsvariablen zuzugreifen. Dazu dienen zwei statische Methoden:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">System</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static Map&lt;String, String&gt; getEnv()</span><br>Liest eine Menge von <span class="clisting">&lt;String, String&gt;</span>-Paaren mit allen Systemeigenschaften.
+                                                   </li>
+                                                   <li><span class="clisting">static String getEnv(String name)</span><br>Liest eine Systemeigenschaft mit dem Namen <span class="clisting">name</span>. Gibt es sie nicht, ist die Rückgabe <span class="clisting">null</span>.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Was ist der Suchpfad? Den liefert <span class="clisting">System.getenv("path");</span>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 11.5: </strong>Auswahl einiger unter Windows verfügbarer Umgebungsvariablen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Name der Variablen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Beschreibung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Beispiel</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">COMPUTERNAME</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Name des Computers
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">MOE
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">HOMEDRIVE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Laufwerksbuchstabe des Benutzerverzeichnisses
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">HOMEPATH</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Pfad des Benutzerverzeichnisses
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">\Dokumente und Einstellungen\<br>Christian Ullenboom
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">OS</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Name des Betriebssystems
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Windows_NT
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">PATH</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Suchpfad
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C:\WINDOWS\system32;<br>C:\WINDOWS
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">PATHEXT</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Dateiendungen, die für ausführbare Programme stehen
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">.COM;.EXE;.BAT;.CMD;.WSH
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">SYSTEMDRIVE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Laufwerksbuchstabe des Betriebssystems
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">TEMP</span> und auch <span class="clisting">TMP</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Temporäres Verzeichnis
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C:\DOKUME~1\CHRIST~1\<br>LOKALE~1\Temp
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">USERDOMAIN</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Domäne des Benutzers
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">MOE
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">USERNAME</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Name des Nutzers
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Christian Ullenboom
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">USERPROFILE</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Profilverzeichnis
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C:\Dokumente und Einstellungen\<br>Christian Ullenboom
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">WINDIR</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Verzeichnis des Betriebssystems
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">C:\WINDOWS
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Einige der Variablen sind auch über die System-Properties (<span class="clisting">System.getProperties()</span>, <span class="clisting">System.getProperty()</span>) erreichbar.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Gib die Umgebungsvariablen des Systems aus. Um die Ausgabe etwas übersichtlicher zu
+                                                               gestalten, ist bei der Aufzählung jedes Komma durch ein Zeilenvorschubzeichen ersetzt
+                                                               worden:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Map&lt;String, String&gt; map = System.getenv();<br>System.out.println( map.toString().replace(',', '\n') );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0" name="dodtpfd97ce14-8fd6-4015-b23a-c8bdd26528e0"></a><h3 class="t3"><span class="cfett">11.6.5</span><span class="cfett"> Einfache Zeitmessung und Profiling *</span><a href="#dodtpe82dd2d8-bf29-4ecd-8293-954122267502"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Neben den komfortablen Klassen zum Verwalten von Datumswerten gibt es mit zwei statischen
+                                                   Methoden einfache Möglichkeiten, Zeiten für Programmabschnitte zu messen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+final class java.lang.<span class="cfett">System</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">static long currentTimeMillis()</span><a class="indexterm" id="dodtpc7afb853-d6f4-40a5-be47-e7177bea297f"></a><br>Gibt die seit dem 1.1.1970 vergangenen Millisekunden zurück.
+                                                   </li>
+                                                   <li><span class="clisting">static long nanoTime()</span><a class="indexterm" id="dodtpb43b2dae-77f8-4aea-9db5-fc1f1c83348b"></a><br>Liefert die Zeit vom genauesten System-Zeitgeber. Sie hat keinen Bezugspunkt zu irgendeinem
+                                                      Datum; seit dem 1.1.1970 sind so viele Nanosekunden vergangen, dass sie gar nicht
+                                                      in den <span class="clisting">long</span> passen würden.
+                                                   </li>
+                                                </ul>
+                                                <p>Die Differenz zweier Zeitwerte kann zur groben Abschätzung von Ausführungszeiten für
+                                                   Programme dienen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 11.9: </strong>com/tutego/insel/lang/Profiling.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.lang;<br><br>import static java.util.concurrent.TimeUnit.NANOSECONDS;<br><br>class Profiling<br>{<br>  private static long[] measure()<br>  {<br>    final int MAX = 4000;<br><br>    final String string = "Aber Angie, Angie, ist es nicht an der Zeit, Goodbye <br>                           zu sagen? " +<br>                          "Ohne Liebe in unseren Seelen und ohne Geld in unseren <br>                           Mänteln. " +<br>                          "Du kannst nicht sagen, dass wir zufrieden sind.";<br><br>    final int    number     = 123;<br>    final double nullnummer = 0.0;<br><br>    // StringBuffer(size) und append() zur Konkatenation<br><br>   <span class="cfett"> long time1 = System.nanoTime();<br><br>   </span> final StringBuilder sb1 = new StringBuilder( MAX * (string.length() + 6) );<br>    for ( int i = MAX; i-- &gt; 0; )<br>      sb1.append( string ).append( number ).append( nullnummer );<br>    sb1.toString();<br><br>   <span class="cfett"> time1 = NANOSECONDS.toMillis( System.nanoTime()</span> &#8211;<span class="cfett"> time1 );<br><br>   </span> // StringBuffer und append() zur Konkatenation<br><br>   <span class="cfett"> long time2 = System.nanoTime();<br><br>   </span> final StringBuilder sb2 = new StringBuilder();<br>    for ( int i = MAX; i-- &gt; 0; )<br>      sb2.append( string ).append( number ).append( nullnummer );<br>    sb2.toString();<br><br>   <span class="cfett"> time2 = NANOSECONDS.toMillis( System.nanoTime()</span> &#8211;<span class="cfett"> time2 );<br><br>   </span> // + zur Konkatenation<br><br>   <span class="cfett"> long time3 = System.nanoTime();<br><br>   </span> String t = "";<br>    for ( int i = MAX; i-- &gt; 0; )<br>      t += string + number + nullnummer;<br><br>   <span class="cfett"> time3 = NANOSECONDS.toMillis( System.nanoTime()</span> &#8211;<span class="cfett"> time3 );<br><br>   </span> return new long[] { time1, time2, time3 };<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    measure(); System.gc(); measure(); System.gc();<br>    long[] durations = measure();<br><br>    System.out.printf( "sb(size), append(): %d ms%n", durations[0] );<br>    // sb(size), append(): 2 ms<br>    System.out.printf( "sb(), append()    : %d ms%n", durations[1] );<br>    // sb(), append()    : 21 ms<br>    System.out.printf( "t+=               : %d ms%n", durations[2] );<br>    // t+=               : 10661 ms<br>  }<br>}<br></pre></div>
+                                                <p>Das Testprogramm hängt Zeichenfolgen mit</p>
+                                                <ul class="gp">
+                                                   <li>einem <span class="clisting">StringBuilder</span>, der nicht in der Endgröße initialisiert ist,
+                                                   </li>
+                                                   <li>einem <span class="clisting">StringBuilder</span>, der eine vorinitialisierte Endgröße nutzt, und
+                                                   </li>
+                                                   <li>dem Plus-Operator von Strings zusammen.</li>
+                                                </ul>
+                                                <p>Vor der Messung gibt es zwei Testläufe und ein <span class="clisting">System.gc()</span>, was den Garbage-Collector (GC) anweist, Speicher freizugeben. (Das würde in gewöhnlichen
+                                                   Programmen nicht stehen, da der GC schon selbst ganz gut weiß, wann Speicher freizugeben
+                                                   ist. Nur kostet das Freigeben auch Ausführungszeit, und es würde die Messzeiten beeinflussen,
+                                                   was wir hier nicht wollen.)
+                                                </p>
+                                                <p>Auf meinem Rechner (Intels Core 2 Quad Q6600 (Quadcore), 2,4 GHz, JDK 6) liefert das
+                                                   Programm die Ausgabe:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">sb(size), append(): 1 ms<br>sb(), append()    : 3 ms<br>t+=               : 39705 ms<br></pre></div>
+                                                <p>Das Ergebnis: Bei großen Anhänge-Operationen ist es ein wenig besser, einen passend
+                                                   in der Größe initialisierten <span class="clisting">StringBuilder</span> zu benutzen. Über das <span class="clisting">+</span> entstehen viele temporäre Objekte, was wirklich teuer kommt. Aber auch, wenn der
+                                                   <span class="clisting">StringBuilder</span> nicht die passende Größe enthält, sind die Differenzen nahezu unbedeutend.
+                                                </p>
+                                                <p>Wo im Programm überhaupt Taktzyklen verbraten werden, zeigt ein <span class="cbegriff">Profiler</span><a class="indexterm" id="dodtp3b95c1d2-822a-4fe3-af9f-38871c5a567b"></a>. An diesen Stellen kann dann mit der Optimierung begonnen werden. Eclipse sieht mit
+                                                   dem TPTP (<a href="http://www.eclipse.org/tptp/" target="_blank">http://www.eclipse.org/tptp/</a>) eine solche Messumgebung vor, und auch <a href="http://code.google.com/a/eclipselabs.org/p/jvmmonitor/" target="_blank">http://code.google.com/a/eclipselabs.org/p/jvmmonitor/</a> ist ein kleines Plugin für Eclipse. NetBeans integriert einen Profiler, Informationen
+                                                   liefert http://profiler.netbeans.org/.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_11_006.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="11 Die Klassenbibliothek"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_11_005.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_11_007.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

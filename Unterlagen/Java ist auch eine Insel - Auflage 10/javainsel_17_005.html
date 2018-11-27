@@ -1,0 +1,568 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 17 Einführung ins Datenbankmanagement mit JDBC">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 17 Einführung ins Datenbankmanagement mit JDBC">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 17 Einführung ins Datenbankmanagement
+         mit JDBC
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_17_004.html">
+      <link rel="next" href="javainsel_18_001.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_17_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_18_001.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2" class="navnav">17 Einführung ins Datenbankmanagement mit JDBC</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_001.html#dodtp411faa84-2af3-46f8-87fe-b8d3fece9e51" class="navnav">17.1 Relationale Datenbanken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_001.html#dodtp7af29844-550d-4d93-b3c1-a7b58aaf785c" class="navnav">17.1.1 Das relationale Modell</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_002.html#dodtp7c9ff830-e388-4e94-902e-09fd68216a87" class="navnav">17.2 Einführung in SQL</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtp825ad1c2-6a63-4c87-8021-0f55ea8dedbe" class="navnav">17.2.1 Ein Rundgang durch SQL-Abfragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtpf9279a21-f629-4a32-a2ff-0ca655b8382e" class="navnav">17.2.2 Datenabfrage mit der Data Query Language (DQL)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_002.html#dodtpdfcff027-f01c-4620-95f5-8c959411726c" class="navnav">17.2.3 Tabellen mit der Data Definition Language (DDL) anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_003.html#dodtpd54beed3-666b-4e1e-9627-ad33ec2c852b" class="navnav">17.3 Datenbanken und Tools</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_003.html#dodtp815c990d-f1e4-4539-b4fa-eb4c845558fc" class="navnav">17.3.1 HSQLDB</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_003.html#dodtp5cf58396-4b00-4d27-8920-2b86fa86e0d3" class="navnav">17.3.2 Eclipse-Plugins zum Durchschauen von Datenbanken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_004.html#dodtp31bd687b-1009-4c3f-830b-f48be4cc3dcf" class="navnav">17.4 JDBC und Datenbanktreiber</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_17_005.html#dodtp44e54ad6-b4eb-4f1e-89a4-10d270000462" class="navh">17.5 Eine Beispielabfrage</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128" class="navh">17.5.1 Schritte zur Datenbankabfrage</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d" class="navh">17.5.2 Ein Client für die HSQLDB-Datenbank</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_17_005.html#dodtp46687731-f234-4387-ba1d-c224c277f0f8" class="navh">17.5.3 Datenbankbrowser und eine Beispielabfrage unter NetBeans</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp44e54ad6-b4eb-4f1e-89a4-10d270000462" name="dodtp44e54ad6-b4eb-4f1e-89a4-10d270000462"></a><h2 class="t2"><span class="cfett">17.5</span><span class="cfett"> Eine Beispielabfrage</span><a href="#dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128" name="dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128"></a><h3 class="t3"><span class="cfett">17.5.1</span><span class="cfett"> Schritte zur Datenbankabfrage</span><a href="#dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp44e54ad6-b4eb-4f1e-89a4-10d270000462"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir wollen kurz die Schritte skizzieren, die für einen Zugriff auf eine relationale
+                                                   Datenbank mit JDBC erforderlich sind:
+                                                </p>
+                                                <ol class="paufz">
+                                                   <li>Einbinden der JDBC-Datenbanktreiber in den Klassenpfad</li>
+                                                   <li>unter Umständen Anmelden der Treiberklassen</li>
+                                                   <li>Verbindung zur Datenbank aufbauen</li>
+                                                   <li>eine SQL-Anweisung erzeugen</li>
+                                                   <li>SQL-Anweisung ausführen</li>
+                                                   <li>das Ergebnis der Anweisung holen, bei Ergebnismengen über diese iterieren</li>
+                                                   <li>die Datenbankverbindung schließen</li>
+                                                </ol>
+                                                <p>Wir beschränken uns im Folgenden auf die Verbindung zum freien Datenbanksystem HSQLDB.</p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d" name="dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d"></a><h3 class="t3"><span class="cfett">17.5.2</span><span class="cfett"> Ein Client für die HSQLDB-Datenbank</span><a href="#dodtp46687731-f234-4387-ba1d-c224c277f0f8"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp22e97d97-8b0b-4170-a1b3-1be3eecc3128"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein Beispiel soll zu Beginn die Programmkonzepte für JDBC veranschaulichen, bevor
+                                                   wir im Folgenden das Java-Programm weiter sezieren. Das Programm in der Klasse <span class="clisting">FirstSqlAccess</span> nutzt die Datenbank TutegoDB, die sich im Suchpfad befinden muss; wir können ebenso
+                                                   absolute Pfade bei HSQLDB angeben, etwa C:/TutegoDB. Bei der Parametrisierung »jdbc:hsqldb:file:...« von HSQLDB liest die Datenbank beim ersten Start die Daten aus der Datei ein,
+                                                   verwaltet sie im Speicher und schreibt sie am Ende des Programms wieder in eine Datei
+                                                   zurück.
+                                                </p>
+                                                <p>Da wir die Datenbank schon früher mit Demo-Daten gefüllt haben, lässt sich jetzt eine
+                                                   SQL-SELECT-Abfrage absetzen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 17.1: </strong>com/tutego/insel/jdbc/FirstSqlAccess.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.jdbc;<br><br>import java.sql.*;<br><br>public class FirstSqlAccess<br>{<br>  public static void main( String[] args )<br>  {<br>    try<br>    {<br>      Class.forName( "org.hsqldb.jdbcDriver" );<br>    }<br>    catch ( ClassNotFoundException e )<br>    {<br>      System.err.println( "Keine Treiber-Klasse!" );<br>      return;<br>    }<br><br>    Connection con = null;<br><br>    try<br>    {<br>      con = DriverManager.getConnection(<br>              "jdbc:hsqldb:file:TutegoDB;shutdown=true", "sa", "" );<br>      Statement stmt = con.createStatement();<br><br>//      stmt.executeUpdate( "INSERT INTO CUSTOMER " +<br>//         "VALUES(50,'Christian','Ullenboom','Immengarten 6','Hannover')" );<br><br>      ResultSet rs = stmt.executeQuery( "SELECT * FROM Customer" );<br><br>      while ( rs.next() )<br>        System.out.printf( "%s, %s %s%n", rs.getString(1),<br>                           rs.getString(2), rs.getString(3) );<br><br>      rs.close();<br><br>      stmt.close();<br>    }<br>    catch ( SQLException e )<br>    {<br>      e.printStackTrace();<br>    }<br>    finally<br>    {<br>      if ( con != null )<br>        try { con.close(); } catch ( SQLException e ) { e.printStackTrace(); }<br>    }<br>  }<br>}<br></pre></div>
+                                                <p>Dem Beispiel ist in diesem Status schon die aufwändige Fehlerbehandlung anzusehen.
+                                                   Das Schließen vom <span class="clisting">ResultSet</span> und <span class="clisting">Statement</span> ist vereinfacht, aber okay, weil das <span class="clisting">finally</span> auf jeden Fall die <span class="clisting">Connection</span> schließt. Ab Java 7 kann auch <span class="clisting">try</span>-mit-Ressourcen die Verbindung automatisch schließen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Es ist möglich, auch ohne ODBC-Eintrag Zugriff auf eine Access-Datenbank aufzubauen
+                                                               &#8211; nützlich ist das zum Beispiel dann, wenn der Name der Datenbank erst später bekannt
+                                                               wird.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">con = DriverManager.getConnection( "jdbc:odbc:Driver="+<br>           "{Microsoft Access Driver (*.mdb)};DBQ=c:/daten/test.mdb",<br>           "name", "pass" );<br></pre></div>
+                                                               Ein ähnlicher String kann auch für den Zugriff auf eine dBase<a class="indexterm" id="dodtp038106a1-7c3d-450a-abb9-71ab7cf83e5d"></a>-Datenbank genutzt werden, für die ein ODBC-Treiber angemeldet ist:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">jdbc:odbc:Driver={Microsoft dBase Driver (*.dbf)};DBQ=c:\database.dbf<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp46687731-f234-4387-ba1d-c224c277f0f8" name="dodtp46687731-f234-4387-ba1d-c224c277f0f8"></a><h3 class="t3"><span class="cfett">17.5.3</span><span class="cfett"> Datenbankbrowser und eine Beispielabfrage unter NetBeans</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6b645a0e-1719-41c6-8151-4ef22e588e7d"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wer mit NetBeans arbeitet, der kann einfach mit der ab Java 6 mitgelieferten Datenbank
+                                                   JavaDB arbeiten, denn NetBeans bringt eine Beispieldatenbank für Java DB mit. Im Folgenden
+                                                   soll
+                                                </p>
+                                                <ol class="paufz">
+                                                   <li>die Beispieldatenbank gestartet,</li>
+                                                   <li>die Datenbank mit der Browser untersucht und</li>
+                                                   <li>ein Java-Programm geschrieben werden, das diese Datenbank anspricht.</li>
+                                                </ol><a id="dodtpc831fbe1-876b-4ee8-8128-7918299d0093" name="dodtpc831fbe1-876b-4ee8-8128-7918299d0093"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Beispieldatenbank starten</span></h4>
+                                                <p>Ist NetBeans gestartet, wählen wir im Menü Window • Services. Links kommt in der Darstellung ein Punkt Databases hinzu, wobei unser Interesse der Beispieldatenbank dient, zu der wir mit Connect über das Kontextmenü eine Verbindung aufbauen wollen.</p><a href="bilder/17_008.png" rel="lightbox" title="Demo-Datenbank starten"><img class="bild" border="1" src="bilderklein/klein17_008.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.8: </strong>Demo-Datenbank starten
+                                                </p>
+                                                <p>In der Ausgabe ist zu erkennen, dass die Datenbank nun gestartet und bereit für Verbindungen
+                                                   ist.
+                                                </p><a href="bilder/17_009.png" rel="lightbox" title="Ausgabe nach dem Start der Datenbank"><img class="bild" border="1" src="bilderklein/klein17_009.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.9: </strong>Ausgabe nach dem Start der Datenbank
+                                                </p><a id="dodtp41a838d4-dbd2-4439-9896-13b380cb3765" name="dodtp41a838d4-dbd2-4439-9896-13b380cb3765"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> SQL-Anweisungen absetzen</span></h4>
+                                                <p>Links ist anschließend der Baum mit vielen Informationen gefüllt, und alle Tabelleninformationen
+                                                   sind zugänglich. Mit der rechten Maustaste und dem Kontextmenü lassen sich anschließend
+                                                   SQL-Anweisungen über Execute Command... an die Datenbank absetzen.
+                                                </p><a href="bilder/17_010.png" rel="lightbox" title="SQL-Abfragen starten"><img class="bild" border="1" src="bilderklein/klein17_010.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.10: </strong>SQL-Abfragen starten
+                                                </p>
+                                                <p>Es öffnet sich ein SQL-Editor, der Tastaturvervollständigung beherrscht und sogar
+                                                   in die Datenbank schaut, um Tabellen und Spaltennamen korrekt zu vervollständigen.
+                                                </p><a href="bilder/17_011.png" rel="lightbox" title="Ergebnis einer SQL-Abfrage"><img class="bild" border="1" src="bilderklein/klein17_011.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.11: </strong>Ergebnis einer SQL-Abfrage
+                                                </p><a id="dodtp31d8fcec-fd8d-4078-8887-814e4a851e35" name="dodtp31d8fcec-fd8d-4078-8887-814e4a851e35"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> JDBC-Beispiel</span></h4>
+                                                <p>Das JDBC-Beispiel von eben können wir leicht auf die NetBeans-Datenbank übertragen.
+                                                   Drei Dinge müssen wir anpassen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Der Treiber muss im Klassenpfad stehen.</li>
+                                                   <li>Die Treiberklasse ist <span class="clisting">org.apache.derby.jdbc.ClientDriver</span>. Das explizite Laden kann aber entfallen, da Java einen JDBC 4-Treiber selbstständig
+                                                      findet, wenn er im Klassenpfad steht.
+                                                   </li>
+                                                   <li>Die Datenbank-URL ist jdbc:derby://localhost:1527/sample.</li>
+                                                </ul>
+                                                <p>Die letzten beiden Dinge sind schnell im Quellcode angepasst. Um den Treiber in den
+                                                   Klassenpfad zu setzen, wählen wir links im Projekt bei Libraries das Kontextmenü und dann Add Jar/Folder...
+                                                </p><a href="bilder/17_012.png" rel="lightbox" title="Java-Archive hinzufügen"><img class="bild" border="1" src="bilderklein/klein17_012.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.12: </strong>Java-Archive hinzufügen
+                                                </p>
+                                                <p>Aus dem JDK-Installationsverzeichnis unter db/lib wählen wir derbyclient.jar.</p><a href="bilder/17_013.png" rel="lightbox" title="»derbyclient.jar« auswählen"><img class="bild" border="1" src="bilderklein/klein17_013.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 17.13: </strong>»derbyclient.jar« auswählen
+                                                </p>
+                                                <p>Öffnen fügt das Jar-Archiv hinzu.</p>
+                                                <p>Wir wollen das SELECT noch etwas anpassen, und dann folgt:</p>
+                                                <p class="plistingunter"><strong>Listing 17.2: </strong>com/tutego/insel/jdbc/FirstSqlAccess.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.jdbc;<br><br>import java.sql.*;<br><br>public class SecondSqlAccess<br>{<br>  public static void main( String[] args )<br>  {<br>    Connection con = null;<br><br>    try<br>    {<br>      con = DriverManager.getConnection( "<span class="cfett">jdbc:derby://localhost:1527/sample</span>",<br>                                         "app", "app" );<br>      Statement stmt = con.createStatement();<br><br>      ResultSet rs = stmt.executeQuery(<br>                       "<span class="cfett">SELECT NAME, ADDRESSLINE1, PHONE FROM Customer</span>" );<br><br>      while ( rs.next() )<br>        System.out.printf( "%s, %s %s%n", rs.getString(1),<br>                           rs.getString(2), rs.getString(3) );<br><br>      rs.close();<br><br>      stmt.close();<br>    }<br>    catch ( SQLException e )<br>    {<br>      e.printStackTrace();<br>    }<br>    finally<br>    {<br>      if ( con != null )<br>        try { con.close(); } catch ( SQLException e ) { e.printStackTrace(); }<br>    }<br>  }<br>}<br></pre></div><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_17_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="17 Einführung ins Datenbankmanagement mit JDBC"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_17_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_18_001.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

@@ -1,0 +1,1119 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 12 Einführung in die nebenläufige Programmierung">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 12 Einführung in die nebenläufige
+         Programmierung
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_12_004.html">
+      <link rel="next" href="javainsel_12_006.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_12_004.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_12_006.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566" class="navnav">12 Einführung in die nebenläufige Programmierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_001.html#dodtpeed4c495-0b00-4e2b-9676-b266d43670d5" class="navnav">12.1 Nebenläufigkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp0ff6c1f7-2c52-4696-8bf1-df82de8bbb46" class="navnav">12.1.1 Threads und Prozesse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtpbfe17bb9-35f9-4191-97ab-de8dc7d89be6" class="navnav">12.1.2 Wie parallele Programme die Geschwindigkeit steigern können</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_001.html#dodtp9170d1b3-d4cf-4fe3-bfc2-de539ee9d397" class="navnav">12.1.3 Was Java für Nebenläufigkeit alles bietet</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_002.html#dodtp56e16a45-b15f-400b-bb97-e0f9a4313fc4" class="navnav">12.2 Threads erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtpd3c6f82f-42b0-4766-aee4-e60d30a66a9e" class="navnav">12.2.1 Threads über die Schnittstelle Runnable implementieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp41e7fcab-d074-4be0-931d-38ca2981a5c9" class="navnav">12.2.2 Thread mit Runnable starten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_002.html#dodtp383a6f30-6252-4913-a5a7-cce7b47762f0" class="navnav">12.2.3 Die Klasse Thread erweitern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_003.html#dodtp5d21c254-72b1-4825-a6dd-9a67d55099c9" class="navnav">12.3 Thread-Eigenschaften und -Zustände</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp1dbbb4ca-f945-4e55-b4e8-3bcf2a024913" class="navnav">12.3.1 Der Name eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtpf663c168-bdb6-44fe-a8f6-262f65dc477a" class="navnav">12.3.2 Wer bin ich?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp93979653-f7c8-4c77-86b3-349c410ed14c" class="navnav">12.3.3 Schläfer gesucht</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp8eec9278-9212-4161-bf08-0a62263c3c4c" class="navnav">12.3.4 Mit yield() auf Rechenzeit verzichten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp458bab78-df7d-428f-b1ed-0b4828f1392f" class="navnav">12.3.5 Der Thread als Dämon</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp6f35b8c1-e339-4c0f-b9b9-ebf47f7f7fc8" class="navnav">12.3.6 Das Ende eines Threads</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp97d93180-7f6d-4f05-b952-b259c8972812" class="navnav">12.3.7 Einen Thread höflich mit Interrupt beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_003.html#dodtp365c4a65-1044-4b94-953b-25a3a8b89600" class="navnav">12.3.8 UncaughtExceptionHandler für unbehandelte Ausnahmen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_004.html#dodtp8a9c0910-d1bd-4b8d-aec2-afbe936cea6a" class="navnav">12.4 Der Ausführer (Executor) kommt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp1acff417-7dcb-4a59-b33c-622f17b3cefa" class="navnav">12.4.1 Die Schnittstelle Executor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_004.html#dodtp0564d482-4840-4457-9701-c96abfda3b79" class="navnav">12.4.2 Die Thread-Pools</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_005.html#dodtpc5a3affc-8970-4884-b250-cfb1c87fde60" class="navh">12.5 Synchronisation über kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae" class="navh">12.5.1 Gemeinsam genutzte Daten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6" class="navh">12.5.2 Probleme beim gemeinsamen Zugriff und kritische Abschnitte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a" class="navh">12.5.3 Punkte parallel initialisieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp37d4ce22-82cd-4895-9c81-13c593d76390" class="navh">12.5.4 Kritische Abschnitte schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_12_005.html#dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34" class="navh">12.5.5 Kritische Abschnitte mit ReentrantLock schützen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_12_006.html#dodtp859b3366-b982-41df-9346-d16fd13d8496" class="navnav">12.6 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc5a3affc-8970-4884-b250-cfb1c87fde60" name="dodtpc5a3affc-8970-4884-b250-cfb1c87fde60"></a><h2 class="t2"><span class="cfett">12.5</span><span class="cfett"> Synchronisation über kritische Abschnitte</span><a href="#dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Wenn Threads in Java ein eigenständiges Leben führen, ist dieser Lebensstil nicht
+                                                   immer unproblematisch für andere Threads, insbesondere beim Zugriff auf gemeinsam
+                                                   genutzte Ressourcen. In den folgenden Abschnitten erfahren wir mehr über gemeinsam
+                                                   genutzte Daten und Schutzmaßnahmen beim konkurrierenden Zugriff durch mehrere Threads.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae" name="dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae"></a><h3 class="t3"><span class="cfett">12.5.1</span><span class="cfett"> Gemeinsam genutzte Daten</span><a href="#dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc5a3affc-8970-4884-b250-cfb1c87fde60"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Ein Thread besitzt zum einen seine eigenen Variablen, etwa die Objektvariablen, kann
+                                                   aber auch statische Variablen nutzen, wie das folgende Beispiel zeigt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">class T extends Thread<br>{<br> <span class="cfett"> static</span> int result;<br><br>  public void run() { ... }<br>}<br></pre></div>
+                                                <p>In diesem Fall können verschiedene Exemplare der Klasse <span class="clisting">T</span>, die jeweils einen Thread bilden, Daten austauschen, indem sie die Informationen
+                                                   in <span class="clisting">result</span> ablegen oder daraus entnehmen. Threads können aber auch an einer zentralen Stelle
+                                                   eine Datenstruktur erfragen und dort Informationen entnehmen oder Zugriff auf gemeinsame
+                                                   Objekte über eine Referenz bekommen. Es gibt also viele Möglichkeiten, wie Threads
+                                                   &#8211; und damit potenziell parallel ablaufende Aktivitäten &#8211; Daten austauschen können.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6" name="dodtpb39c62b0-205d-4e32-9c5d-2657dcf74dd6"></a><h3 class="t3"><span class="cfett">12.5.2</span><span class="cfett"> Probleme beim gemeinsamen Zugriff und kritische Abschnitte</span><a href="#dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp8017ffff-fc2e-4433-83fc-5f89e0e4b6ae"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Da Threads ihre eigenen Daten verwalten &#8211; sie haben alle eigene lokale Variablen und
+                                                   einen Stack &#8211;, kommen sie sich gegenseitig nicht in die Quere. Auch wenn mehrere Threads
+                                                   gemeinsame Daten nur lesen, ist das unbedenklich; Schreiboperationen sind jedoch kritisch.
+                                                   Wenn sich zehn Nutzer einen Drucker teilen, der die Ausdrucke nicht als unteilbare
+                                                   Einheit bündelt, lässt sich leicht ausmalen, wie das Ergebnis aussieht. Seiten, Zeilen
+                                                   oder gar einzelne Zeichen aus verschiedenen Druckaufträgen werden bunt gemischt ausgedruckt.
+                                                </p>
+                                                <p>Die Probleme haben ihren Ursprung in der Art und Weise, wie die Threads umgeschaltet
+                                                   werden. Der Scheduler<a class="indexterm" id="dodtp0a1bbc73-3fbb-4688-bef1-0c13f7d21cbf"></a> unterbricht zu einem uns unbekannten Zeitpunkt die Abarbeitung eines Threads und
+                                                   lässt den nächsten arbeiten. Wenn nun der erste Thread gerade Programmzeilen abarbeitet,
+                                                   die zusammengehören, und der zweite Thread beginnt, parallel auf diesen Daten zu arbeiten,
+                                                   so ist der Ärger vorprogrammiert. Wir müssen also Folgendes ausdrücken können: »Wenn
+                                                   ich den Job mache, dann möchte ich der Einzige sein, der die Ressource &#8211; etwa einen
+                                                   Drucker &#8211; nutzt.« Erst nachdem der Drucker den Auftrag eines Benutzers fertiggestellt
+                                                   hat, darf er den nächsten in Angriff nehmen.
+                                                </p><a id="dodtp598ff760-4527-4626-a59a-c3787546519e" name="dodtp598ff760-4527-4626-a59a-c3787546519e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Kritische Abschnitte</span></h4>
+                                                <p>Zusammenhängende Programmblöcke, denen während der Ausführung von einem Thread kein
+                                                   anderer Thread »reinwurschteln« sollte und die daher besonders geschützt werden müssen,
+                                                   nennen sich <span class="cbegriff">kritische Abschnitte</span><a class="indexterm" id="dodtp96fa6842-a4a3-4606-b8ac-b845815eaaed"></a>. Wenn lediglich ein Thread den Programmteil abarbeitet, dann nennen wir dies <span class="cbegriff">gegenseitigen Ausschluss</span><a class="indexterm" id="dodtpfda4fa91-d6dd-4eb2-a7fd-f70f1cecc33e"></a> oder <span class="cbegriff">atomar</span><a class="indexterm" id="dodtp30038bc4-353e-4a0f-b18a-de95dff64b6c"></a>. Wir könnten das etwas lockerer sehen, wenn wir wüssten, dass innerhalb der Programmblöcke
+                                                   nur von den Daten gelesen wird. Sobald aber nur ein Thread Änderungen vornehmen möchte,
+                                                   ist ein Schutz nötig. Denn arbeitet ein Programm bei nebenläufigen Threads falsch,
+                                                   ist es nicht <span class="cbegriff">thread-sicher</span><a class="indexterm" id="dodtpd9366d12-f266-4013-ab3b-bc2bd79bdb74"></a> (engl. <span class="cbegriff">thread-safe</span><a class="indexterm" id="dodtp214759e5-2b80-413a-95f5-70be916494cb"></a>).
+                                                </p>
+                                                <p>Wir werden uns nun Beispiele für kritische Abschnitte anschauen und dann sehen, wie
+                                                   wir diese in Java realisieren können.
+                                                </p><a id="dodtp133a633f-e698-42c8-aadf-3827507d19a1" name="dodtp133a633f-e698-42c8-aadf-3827507d19a1"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Nicht kritische Abschnitte</span></h4>
+                                                <p>Wenn mehrere Threads auf das gleiche Programmstück zugreifen, muss das nicht zwangsläufig
+                                                   zu einem Problem führen, und Thread-Sicherheit ist immer gegeben. Immutable Objekte
+                                                   &#8211; nehmen wir an, ein Konstruktor belegt einmalig die Zustände &#8211; sind automatisch thread-sicher,
+                                                   da es keine Schreibzugriffe gibt und bei Lesezugriffen nichts schiefgehen kann. Immutable-Klassen
+                                                   wie <span class="clisting">String</span> oder Wrapper-Klassen kommen daher ohne Synchronisierung aus.
+                                                </p>
+                                                <p>Das Gleiche gilt für Methoden, die keine Objekteigenschaften verändern. Da jeder Thread
+                                                   seine thread-eigenen Variablen besitzt &#8211; jeder Thread hat einen eigenen Stack &#8211;, können
+                                                   lokale Variablen, auch Parametervariablen, beliebig gelesen und geschrieben werden.
+                                                   Wenn zum Beispiel zwei Threads die folgende statische Utility-Methode aufrufen, ist
+                                                   das kein Problem:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static String reverse( String s )<br>{<br>  return new StringBuilder( s ).reverse().toString();<br>}<br></pre></div>
+                                                <p>Jeder Thread wird eine eigene Variablenbelegung für <span class="clisting">s</span> haben und ein temporäres Objekt vom Typ <span class="clisting">StringBuilder</span> referenzieren.
+                                                </p><a id="dodtp914e3605-45c1-4641-b8fd-dad522d910fb" name="dodtp914e3605-45c1-4641-b8fd-dad522d910fb"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Thread-sichere und nicht thread-sichere Klassen der Java Bibliothek</span></h4>
+                                                <p>Es gibt in Java viele Klassen, die nicht thread-sicher sind &#8211; das ist sogar der Standard.
+                                                   So sind etwa alle <span class="clisting">Format</span>-Klassen, wie <span class="clisting">MessageFormat</span>, <span class="clisting">NumberFormat</span>, <span class="clisting">DecimalFormat</span>, <span class="clisting">ChoiceFormat</span>, <span class="clisting">DateFormat</span> und <span class="clisting">SimpleDateFormat</span> nicht für den nebenläufigen Zugriff gemacht. In der Regel steht das in der JavaDoc,
+                                                   etwa bei <span class="clisting">DateFormat</span>:
+                                                </p>»Synchronization. Date formats are not synchronized. It is recommended to create separate
+                                                format instances for each thread. If multiple threads access a format concurrently,
+                                                it must be synchronized externally.«
+                                                <p>Wer also Objekte nebenläufig verwendet, der sollte immer in der Java API-Dokumentation
+                                                   nachschlagen, ob es dort einen Hinweis gibt, ob die Objekte überhaupt thread-sicher
+                                                   sind.
+                                                </p>
+                                                <p>In einigen wenigen Fällen haben Entwickler die Wahl zwischen thread-sicheren und nicht
+                                                   thread-sicheren Klassen im JDK:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 12.2: </strong>Thread-sichere und nicht thread-sichere Klassen
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Nicht thread-sicher</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Thread-sicher</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">StringBuilder</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">StringBuffer</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">ArrayList</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Vector</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">HashMap</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">Hashtable</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Obwohl es die Auswahl bei den Datenstrukturen im Prinzip gibt, werden <span class="clisting">Vector</span> und <span class="clisting">Hashtable</span> dennoch nicht verwendet.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a" name="dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a"></a><h3 class="t3"><span class="cfett">12.5.3</span><span class="cfett"> Punkte parallel initialisieren</span><a href="#dodtp37d4ce22-82cd-4895-9c81-13c593d76390"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp914e3605-45c1-4641-b8fd-dad522d910fb"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Nehmen wir an, ein Thread T1 möchte ein <span class="clisting">Point</span>-Objekt <span class="clisting">p</span> mit den Werten (1,1) belegen und ein zweiter Thread T2 möchte eine Belegung mit den
+                                                   Werten (2,2) durchführen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 12.3: </strong>Zwei Threads belegen beide den Punkt p
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Thread T1</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Thread T2</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">p.x = 1;<br>p.y = 1;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">p.x = 2;<br>p.y = 2;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Beide Threads können natürlich bei einem 2-Kern-Prozessor parallel arbeiten, aber
+                                                   da sie auf gemeinsame Variablen zugreifen, ist der Zugriff auf <span class="clisting">x</span> bzw. <span class="clisting">y</span> von <span class="clisting">p</span> trotzdem sequenziell. Um es nicht allzu kompliziert zu machen, vereinfachen wir unser
+                                                   Ausführungsmodell so, dass wir zwar zwei Threads laufen haben, aber nur jeweils einer
+                                                   ausgeführt wird. Dann ist es möglich, dass T1 mit der Arbeit beginnt und <span class="clisting">x = 1</span> setzt. Da der Thread-Scheduler einen Thread jederzeit unterbrechen kann, kann nun
+                                                   T2 an die Reihe kommen, der <span class="clisting">x = 2</span> und <span class="clisting">y = 2</span> setzt. Wird dann T1 wieder Rechenzeit zugeteilt, darf T1 an der Stelle weitermachen,
+                                                   wo er aufgehört hat, und <span class="clisting">y = 1</span> folgt. In einer Tabelle ist das Ergebnis noch besser zu sehen:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 12.4: </strong>Mögliche sequentielle Abarbeitung der Punktbelegung
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Thread T1</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Thread T2</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">x/y</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">p.x = 1;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1/0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">p.x = 2;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">2/0
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">p.y = 2;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">2/2
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">p.y = 1;</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"> 
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">2/1
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Wir erkennen das nicht beabsichtigte Ergebnis (2,1), es könnte aber auch (1,2) sein,
+                                                   wenn wir das gleiche Szenario beginnend mit T2 durchführen. Je nach zuerst abgearbeitetem
+                                                   Thread wäre jedoch nur (1,1) oder (2,2) korrekt. Die Threads sollen ihre Arbeit aber
+                                                   atomar erledigen, denn die Zuweisung bildet einen kritischen Abschnitt, der geschützt
+                                                   werden muss. Standardmäßig sind die zwei Zuweisungen nicht-atomare Operationen und
+                                                   können unterbrochen werden. Um dies an einem Beispiel zu zeigen, sollen zwei Threads
+                                                   ein <span class="clisting">Point</span>-Objekt verändern. Die Threads belegen <span class="clisting">x</span> und <span class="clisting">y</span> immer gleich, und immer dann, wenn sich die Koordinaten unterscheiden, soll es eine
+                                                   Meldung geben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 12.11: </strong>com/tutego/insel/thread/concurrent/ParallelPointInit.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">final Point p = new Point();<br><br>Runnable r = new Runnable()<br>{<br>  @Override public void run()<br>  {<br>    int x = (int)(Math.random() * 1000), y = x;<br><br>    while ( true )<br>    {<br>      p.x = x; p.y = y;            // *<br><br>      int xc = p.x, yc = p.y;      // *<br><br>      if ( xc != yc )<br>        System.out.println( "Aha: x=" + xc + ", y=" + yc );<br>    }<br>  }<br>};<br><br>new Thread( r ).start();<br>new Thread( r ).start();<br></pre></div>
+                                                <p>Die interessanten Zeilen sind mit * markiert. <span class="clisting">p.x = x; p.y = y;</span> belegt die Koordinaten neu, und <span class="clisting">int xc = p.x, yc = p.y;</span> liest die Koordinaten erneut aus. Würden Belegung und Auslesen in einem Rutsch passieren,
+                                                   dürfte überhaupt keine unterschiedliche Belegung von <span class="clisting">x</span> und <span class="clisting">y</span> zu finden sein. Doch das Beispiel zeigt es anders:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Aha: x=58, y=116<br>Aha: x=116, y=58<br>Aha: x=58, y=116<br>Aha: x=58, y=116<br>...<br></pre></div>
+                                                <p>Was wir mit den parallelen Punkten vor uns haben, sind Effekte, die von den Ausführungszeiten
+                                                   der einzelnen Operationen abhängen. In Abhängigkeit von dem Ort der Unterbrechung
+                                                   wird ein fehlerhaftes Verhalten produziert. Dieses Szenario nennt sich im Englischen
+                                                   <span class="cbegriff">race condition</span><a class="indexterm" id="dodtp92642230-1edf-4bb0-82e8-725f55a7cea1"></a> beziehungsweise <span class="cbegriff">race hazard</span><a class="indexterm" id="dodtp0a50e0fe-3381-486d-b837-1f79cd19185c"></a> (zu Deutsch auch <span class="cbegriff">Wettlaufsituation</span><a class="indexterm" id="dodtpf06b841c-cf88-4258-88bf-18b91eb43df7"></a>).
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp37d4ce22-82cd-4895-9c81-13c593d76390" name="dodtp37d4ce22-82cd-4895-9c81-13c593d76390"></a><h3 class="t3"><span class="cfett">12.5.4</span><span class="cfett"> Kritische Abschnitte schützen</span><a href="#dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpc488b585-d9d1-49c3-a8bc-eb35954c0e8a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Beginnen wir mit einem anschaulichen Alltagsbeispiel. Gehen wir aufs Klo, schließen
+                                                   wir die Tür hinter uns. Möchte jemand anderes auf die Toilette, muss er warten. Vielleicht
+                                                   kommen noch mehrere dazu, die müssen dann auch warten, und eine Warteschlage bildet
+                                                   sich. Dass die Toilette besetzt ist, signalisiert die abgeschlossene Tür. Jeder Wartende
+                                                   muss so lange vor dem Klo ausharren, bis das Schloss geöffnet wird, selbst wenn der
+                                                   auf der Toilette Sitzende nach einer langen Nacht einnicken sollte.
+                                                </p>
+                                                <p>Wie übertragen wir das auf Java? Wenn die Laufzeitumgebung nur einen Thread in einen
+                                                   Block lassen soll, ist ein <span class="cbegriff">Monitor</span><a class="indexterm" id="dodtp2a4a83ca-f6a9-45c5-84c2-b2ce63556d16"></a><span class="footnote"><a id="dodtpd5d94153-eaa0-4e50-936d-8f4bcd4c4882">[186](Der Begriff geht auf C. A. R. Hoare zurück, der in seinem Aufsatz »Communicating Sequential Processes
+« von 1978 erstmals dieses Konzept veröffentlichte.)</a></span> nötig. Ein Monitor wird mithilfe eines <span class="cbegriff">Locks</span><a class="indexterm" id="dodtp8fb82f63-d199-478f-8625-27204b5555a7"></a> (zu Deutsch <span class="cbegriff">Schloss</span>) realisiert, das ein Thread öffnet oder schließt. Tritt ein Thread in den kritischen
+                                                   Abschnitt ein, muss Programmcode wie eine Tür abgeschlossen werden (engl. <span class="cbegriff">lock</span>). Erst wenn der Abschnitt durchlaufen wurde, darf die Tür wieder aufgeschlossen werden
+                                                   (engl. <span class="cbegriff">unlock</span>), und ein anderer Thread kann den Abschnitt betreten.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein anderes Wort für Lock ist <span class="cbegriff">Mutex</span><a class="indexterm" id="dodtped1dae8e-fd3f-4207-a122-76c2f4504bde"></a> (engl. <span class="cbegriff">mutual exclusion</span>, also »gegenseitiger Ausschluss«<a class="indexterm" id="dodtpfe63c5ef-3dac-443b-8e8d-6ee045fa1ccf"></a>). Der Begriff <span class="cbegriff">Monitor</span> wird oft mit <span class="cbegriff">Lock</span> (<span class="cbegriff">Mutex</span>) gleichgesetzt, doch kann ein Monitor mit Warten/Benachrichtigen mehr als ein klassischer
+                                                               Lock. In der Definition der Sprache Java (JLS Kapitel 17) tauchen die Begriffe <span class="cbegriff">Mutex</span> und <span class="cbegriff">Lock</span> allerdings nicht auf; die Autoren sprechen nur von den Monitor-Aktionen <span class="cbegriff">lock</span> und <span class="cbegriff">unlock</span>. Die Java Virtual Machine definiert dafür die Opcodes <span class="clisting">monitorenter</span><a class="indexterm" id="dodtpe3acd0ff-53db-47ac-974e-f22933079e37"></a> und <span class="clisting">monitorexit</span><a class="indexterm" id="dodtp9e46d1f5-2f2f-4655-a01d-0556cb2c6842"></a>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpf63ace23-84e6-403a-b29c-c778f7aff7be" name="dodtpf63ace23-84e6-403a-b29c-c778f7aff7be"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Java-Konstrukte zum Schutz der kritischen Abschnitte</span></h4>
+                                                <p>Wenn wir auf unser Punkte-Problem zurückkommen, so stellen wir fest, dass zwei Zeilen
+                                                   auf eine Variable zugreifen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">p.x = x; p.y = y;<br>int xc = p.x, yc = p.y;<br></pre></div>
+                                                <p>Diese beiden Zeilen bilden also einen kritischen Abschnitt, den jeweils nur ein Thread
+                                                   betreten darf. Wenn also einer der Threads mit <span class="clisting">p.x = x</span> beginnt, muss er so lange den exklusiven Zugriff bekommen, bis er mit <span class="clisting">yc = p.y</span> endet.
+                                                </p>
+                                                <p>Aber wie wird nun ein kritischer Abschnitt bekannt gegeben? Zum Markieren und Abschließen
+                                                   dieser Bereiche gibt es zwei Konzepte:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 12.5: </strong>Lock-Konzepte
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Konstrukt</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Eingebautes Schlüsselwort</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Java-Standardbibliothek</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Schlüsselwort/Typen
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">synchronized</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">java.util.concurrent.locks.Lock</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">Nutzungsschema
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">synchronized<br>{<br>  Tue1<br>  Tue2<br>}<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">lock.lock();<br>{<br>  Tue1<br>  Tue2<br>}<br>lock.unlock();<span class="footnote"><a id="dodtp3e81cfe2-9124-4279-b884-59d912eca44c">[187](Vereinfachte Darstellung, später mehr.)</a></span><br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Beim <span class="clisting">synchronized</span> entsteht Bytecode, der der JVM sagt, dass ein kritischer Block beginnt und endet.
+                                                   So überwacht die JVM, ob ein zweiter Thread warten muss, wenn er in einen synchronisierten
+                                                   Block eintritt, der schon von einem Thread ausgeführt wird. Bei <span class="clisting">Lock</span> ist das Ein- und Austreten explizit vom Entwickler programmiert, und vergisst er
+                                                   das, ist das ein Problem. Und während bei der <span class="clisting">Lock</span>-Implementierung das Objekt, an dem synchronisiert wird, offen hervortritt, ist das
+                                                   bei <span class="clisting">synchronized</span> nicht so offensichtlich. Hier gilt es zu wissen, dass jedes Objekt in Java implizit
+                                                   mit einem Monitor verbunden ist. Da moderne Programme aber mittlerweile mit <span class="clisting">Lock</span>-Objekten arbeiten, tritt die <span class="clisting">synchronized</span>-Möglichkeit, die schon Java 1.0 zur Synchronisation bot, etwas in den Hintergrund.
+                                                </p>
+                                                <p>Fassen wir zusammen: Nicht thread-sichere Abschnitte müssen geschützt werden. Sie
+                                                   können entweder mit <span class="clisting">synchronized</span> geschützt werden, bei dem der Eintritt und Austritt implizit geregelt ist, oder durch
+                                                   <span class="clisting">Lock</span>-Objekte. Befindet sich dann ein Thread in einem geschützten Block und möchte ein
+                                                   zweiter Thread in den Abschnitt, muss er so lange warten, bis der erste Thread den
+                                                   Block wieder freigibt. So ist die Abarbeitung über mehrere Threads einfach synchronisiert,
+                                                   und das Konzept eines Monitors gewährleistet seriellen Zugriff auf kritische Ressourcen.
+                                                   Die kritischen Bereiche sind nicht per se mit einem Monitor verbunden, sondern werden
+                                                   eingerahmt, und dieser Rahmen ist mit einem Monitor (Lock) verbunden.
+                                                </p>
+                                                <p>Mit dem Abschließen und Aufschließen werden wir uns noch intensiver in den folgenden
+                                                   Abschnitten beschäftigen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34" name="dodtp72073e0c-afa1-4084-99ce-4df0a15a0a34"></a><h3 class="t3"><span class="cfett">12.5.5</span><span class="cfett"> Kritische Abschnitte mit ReentrantLock schützen</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpf63ace23-84e6-403a-b29c-c778f7aff7be"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Seit Java 5 gibt es die Schnittstelle <span class="clisting">Lock</span>, mit der sich ein kritischer Block markieren lässt. Ein Abschnitt beginnt mit <span class="clisting">lock()</span><a class="indexterm" id="dodtp41dbcfbd-567f-4b7b-b0df-4275314461cd"></a> und endet mit <span class="clisting">unlock()</span><a class="indexterm" id="dodtp5b2aa9d9-3fc4-4895-8449-e7234a578995"></a>:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 12.12: </strong>com/tutego/insel/thread/concurrent/ParallelPointInitSync.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint"><span class="cfett">final Lock lock = new ReentrantLock();</span><br>final Point p = new Point();<br><br>Runnable r = new Runnable()<br>{<br>  @Override public void run()<br>  {<br>    int x = (int)(Math.random() * 1000), y = x;<br><br>    while ( true )<br>    {<br>     <span class="cfett"> lock.lock();<br><br>     </span> p.x = x; p.y = y;            // *<br>      int xc = p.x, yc = p.y;      // *<br><br>     <span class="cfett"> lock.unlock();<br><br>     </span> if ( xc != yc )<br>        System.out.println( "Aha: x=" + xc + ", y=" + yc );<br>    }<br>  }<br>};<br><br>new Thread( r ).start();<br>new Thread( r ).start();<br></pre></div>
+                                                <p>Mit dieser Implementierung wird keine Ausgabe auf dem Bildschirm folgen.</p><a id="dodtpf875702b-4dbe-41da-9405-5dc50245dc04" name="dodtpf875702b-4dbe-41da-9405-5dc50245dc04"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Schnittstelle java.util.concurrent.locks.Lock</span></h4>
+                                                <p><span class="clisting">Lock</span> ist eine Schnittstelle, von der <span class="clisting">ReentrantLock</span><a class="indexterm" id="dodtpda898cb6-cf95-42d6-8232-3a57a617ca98"></a> die wichtigste Implementierung ist. Mit ihr lässt sich der Block betreten und verlassen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">interface java.util.concurrent.locks.<span class="cfett">Lock</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void lock()</span><br>Wartet so lange, bis der ausführende Thread den kritischen Abschnitt betreten kann,
+                                                      und markiert ihn dann als betreten. Hat schon ein anderer Thread an diesem <span class="clisting">Lock</span>-Objekt ein <span class="clisting">lock()</span> aufgerufen, so muss der aktuelle Thread warten, bis der Lock wieder frei ist. Hat
+                                                      der aktuelle Thread schon den Lock, kann er bei der Implementierung <span class="clisting">ReentrantLock</span> wiederum <span class="clisting">lock()</span> aufrufen und sperrt sich nicht selbst.
+                                                   </li>
+                                                   <li><span class="clisting">boolean tryLock()</span><br>Wenn der kritische Abschnitt sofort betreten werden kann, ist die Funktionalität wie
+                                                      bei <span class="clisting">lock()</span>, und die Rückgabe ist <span class="clisting">true</span>. Ist der Lock gesetzt, so wartet die Methode nicht wie <span class="clisting">lock()</span>, sondern kehrt mit einem <span class="clisting">false</span> zurück.
+                                                   </li>
+                                                   <li><span class="clisting">boolean tryLock(long time, TimeUnit unit) throws InterruptedException</span><br>Versucht in der angegebenen Zeitspanne den Lock zu bekommen. Das Warten kann mit <span class="clisting">interrupt()</span> auf dem Thread unterbrochen werden, was <span class="clisting">tryLock()</span> mit einer Exception beendet.
+                                                   </li>
+                                                   <li><span class="clisting">void unlock()</span><br>Verlässt den kritischen Block.
+                                                   </li>
+                                                   <li><span class="clisting">void lockInterruptibly() throws InterruptedException</span><br>Wartet wie <span class="clisting">lock()</span>, um den kritischen Abschnitt betreten zu dürfen, kann aber mit einem <span class="clisting">interrupt()</span> von außen abgebrochen werden (der <span class="clisting">lock()</span>-Methode ist ein Interrupt egal). Implementierende Klassen müssen diese Vorgabe nicht
+                                                      zwingend umsetzen, sondern können die Methode auch mit einem einfachen <span class="clisting">lock()</span> realisieren. <span class="clisting">ReentrantLock</span> implementiert <span class="clisting">lockInterruptibly()</span> erwartungsgemäß.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wenn wir sofort in den kritischen Abschnitt gehen können, tun wir das; sonst tun wir
+                                                               etwas anderes:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Lock lock = ...;<br>if ( <span class="cfett">lock.tryLock()</span> )<br>{<br>  try {<br>    ...<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">  }<br>  finally { lock.unlock(); }<br>}<br>else<br>  ...<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Die Implementierung <span class="clisting">ReentrantLock</span> kann noch ein bisschen mehr als <span class="clisting">lock()</span> und <span class="clisting">unlock()</span>:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class java.util.concurrent.locks.<span class="cfett">ReentrantLock</span><br>implements Lock, Serializable<br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">ReentrantLock()</span><br>Erzeugt ein neues Lock-Objekt, das nicht dem am längsten Wartenden den ersten Zugriff
+                                                      gibt.
+                                                   </li>
+                                                   <li><span class="clisting">ReentrantLock(boolean fair)</span><br>Erzeugt ein neues Lock-Objekt mit fairem Zugriff, gibt also dem am längsten Wartenden
+                                                      den ersten Zugriff.
+                                                   </li>
+                                                   <li><span class="clisting">boolean isLocked()</span><br>Fragt an, ob der Lock gerade genutzt wird und im Moment kein Betreten möglich ist.
+                                                   </li>
+                                                   <li><span class="clisting">final int getQueueLength()</span><br>Ermittelt, wie viele auf das Betreten des Blocks warten.
+                                                   </li>
+                                                   <li><span class="clisting">int getHoldCount()</span><br>Gibt die Anzahl der erfolgreichen <span class="clisting">lock()</span>-Aufrufe ohne passendes <span class="clisting">unlock()</span> zurück. Sollte nach Beenden des Vorgangs 0 sein.
+                                                   </li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Das Warten auf den Lock kann unterbrochen werden:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Lock l = new ReentrantLock();<br>try<br>{<br>  <span class="cfett">l.lockInterruptibly();</span><br>  try<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>
+                                                               <div class="listing"><pre class="prettyprint">  {<br>   ...<br>  }<br>  finally { l.unlock(); }<br>}<br>catch ( InterruptedException e ) { ... }<br></pre></div>
+                                                               Wenn wir den Lock nicht bekommen haben, dürfen wir ihn auch nicht freigeben!
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/12_008.png" rel="lightbox" title="Die Klasse ReentrantLock implementiert die Schnittstelle Lock"><img class="bild" border="1" src="bilderklein/klein12_008.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 12.7: </strong>Die Klasse ReentrantLock implementiert die Schnittstelle Lock
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_12_005.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="12 Einführung in die nebenläufige Programmierung"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_12_004.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_12_006.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

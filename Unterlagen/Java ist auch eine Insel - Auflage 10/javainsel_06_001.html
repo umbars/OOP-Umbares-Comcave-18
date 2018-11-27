@@ -1,0 +1,1046 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 6 Exceptions">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 6 Exceptions">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 6 Exceptions</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_05_014.html">
+      <link rel="next" href="javainsel_06_002.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_05_014.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_06_002.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee" class="navh">6 Exceptions</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_001.html#dodtp4411c833-e6ac-4d56-9616-c6a231371f19" class="navh">6.1 Problembereiche einzäunen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp198545c9-807e-4f19-90b0-c6bf7b9be8ad" class="navh">6.1.1 Exceptions in Java mit try und catch</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp49f7c3b0-2da3-4647-8b49-0a4f5a896f7e" class="navh">6.1.2 Eine NumberFormatException auffangen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp7ce75378-d7d0-4f7b-ab7a-ed87da7f1f81" class="navh">6.1.3 Ablauf einer Ausnahmesituation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtpd815a231-ebe3-4065-9424-8adb38105a07" class="navh">6.1.4 Eigenschaften vom Exception-Objekt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp312040ac-f67f-4569-9f51-9bdc48f75849" class="navh">6.1.5 Wiederholung abgebrochener Bereiche *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp5f8936b0-5967-4c4e-84c8-8c77867f1e6a" class="navh">6.1.6 Mehrere Ausnahmen auffangen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp4dc6c4dc-085f-4ebb-ac61-1af419ac8372" class="navh">6.1.7 throws im Methodenkopf angeben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_001.html#dodtp2385e326-ed1c-4708-8020-9e652168cd6b" class="navh">6.1.8 Abschlussbehandlung mit finally</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_002.html#dodtpefa56be7-cf4d-4b7f-9734-0e0da0377bc0" class="navnav">6.2 RuntimeException muss nicht aufgefangen werden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_002.html#dodtp37cddf6f-2fde-4245-8aa5-2396508f6d54" class="navnav">6.2.1 Beispiele für RuntimeException-Klassen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_002.html#dodtp0141b925-c87a-43ea-a433-bbb46ea8b0ec" class="navnav">6.2.2 Kann man abfangen, muss man aber nicht</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_003.html#dodtpbbc53d23-c9a4-4067-8be3-3fa23c1858e7" class="navnav">6.3 Die Klassenhierarchie der Fehler</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_003.html#dodtp3e77bf71-8472-4651-945e-290d9aa82c8a" class="navnav">6.3.1 Die Exception-Hierarchie</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_003.html#dodtpf1e19f4a-19da-4673-ab46-31e0a72e80b6" class="navnav">6.3.2 Oberausnahmen auffangen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_003.html#dodtped8c91c2-e333-4c6b-963a-e4d7c4850e3d" class="navnav">6.3.3 Schon gefangen?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_003.html#dodtpc728363b-498b-44de-91b0-d5a430d9f11f" class="navnav">6.3.4 Alles geht als Exception durch</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_003.html#dodtp22845aae-e692-436f-b90b-4fd00764f9e2" class="navnav">6.3.5 Zusammenfassen gleicher catch-Blöcke mit dem multi-catch</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_004.html#dodtpe376e449-58c1-434c-9ba9-f9568775b0d7" class="navnav">6.4 Harte Fehler: Error *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_005.html#dodtp2fc4acca-4018-44dd-8cc3-1060d74d7d96" class="navnav">6.5 Auslösen eigener Exceptions</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp2b14fdc0-6108-42f8-b71f-717f976efe96" class="navnav">6.5.1 Mit throw Ausnahmen auslösen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp4c7eb3f4-03e3-4174-a2e5-8a9073c84be2" class="navnav">6.5.2 Vorhandene Runtime-Fehlertypen kennen und nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp2ab177b4-2e79-4f0b-ba08-d30ff3d8722a" class="navnav">6.5.3 Parameter testen und gute Fehlermeldungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp9823cf17-e040-4845-a2f7-54a9c55e80fd" class="navnav">6.5.4 Neue Exception-Klassen deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtpd15a9001-4448-4e4d-959f-63909e5e423b" class="navnav">6.5.5 Eigene Ausnahmen als Unterklassen von Exception oder RuntimeException?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp7f8866bf-197c-4bf9-b99f-f019efac9388" class="navnav">6.5.6 Ausnahmen abfangen und weiterleiten *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtpd6987b9a-1b41-479e-b591-4bdccfe33ae3" class="navnav">6.5.7 Aufrufstack von Ausnahmen verändern *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp8347cb3e-85e7-4619-86c4-88b851c7efdb" class="navnav">6.5.8 Präzises rethrow *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_005.html#dodtp75e3b5ad-4fa8-409a-aa1d-a17c376b0d4d" class="navnav">6.5.9 Geschachtelte Ausnahmen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_006.html#dodtpc289e2ba-146b-4793-ad40-f3522453e63a" class="navnav">6.6 Automatisches Ressourcen-Management (try mit Ressourcen)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_006.html#dodtp570ad69d-1fe4-4773-8ffa-07757f8b8f26" class="navnav">6.6.1 try mit Ressourcen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_006.html#dodtp59aecc37-a7a0-4b14-857c-f239a7e25f32" class="navnav">6.6.2 Ausnahmen vom close() bleiben bestehen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_006.html#dodtpe42700a2-a19f-4abe-a976-dc684cdf048e" class="navnav">6.6.3 Die Schnittstelle AutoCloseable</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_006.html#dodtp658321dd-5fce-4d08-95c4-146142485e2f" class="navnav">6.6.4 Mehrere Ressourcen nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_006.html#dodtpf98b69f0-6eba-4fcf-90b3-bf1a6df5b290" class="navnav">6.6.5 Unterdrückte Ausnahmen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_007.html#dodtp10a3f0d9-1af0-4738-9788-d53985139476" class="navnav">6.7 Besonderheiten bei der Ausnahmebehandlung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_007.html#dodtp41f4d30d-eb58-4e1f-a79e-9ffc7f0f8c19" class="navnav">6.7.1 Rückgabewerte bei ausgelösten Ausnahmen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_007.html#dodtp9024e1b4-12d6-46f7-bcaa-cd68f62190f6" class="navnav">6.7.2 Ausnahmen und Rückgaben verschwinden: Das Duo »return« und »finally«</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_007.html#dodtp10a537ba-875b-4a3c-913d-223c7ebd5ede" class="navnav">6.7.3 throws bei überschriebenen Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_007.html#dodtp139a1bf8-0379-42f4-ba66-f3085b0e24b0" class="navnav">6.7.4 Nicht erreichbare catch-Klauseln</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_008.html#dodtpad947a58-330c-419c-ae91-a5ad55def869" class="navnav">6.8 Den Stack-Trace erfragen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_008.html#dodtp3802aa63-1769-4e03-8dc5-2dcdee6b2a40" class="navnav">6.8.1 StackTraceElement</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_008.html#dodtp2c4b63ff-fbc2-4d89-a19a-33b93a9843c0" class="navnav">6.8.2 printStackTrace()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_008.html#dodtp880dbfa0-915d-4c4b-85b8-db9387e3e1cd" class="navnav">6.8.3 StackTraceElement vom Thread erfragen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_009.html#dodtp8eb98b40-908a-433a-9e93-aed1f5b2c6d4" class="navnav">6.9 Assertions *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_009.html#dodtp03b66b56-08a9-4f10-a45d-5bdfa440120f" class="navnav">6.9.1 Assertions in eigenen Programmen nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_06_009.html#dodtpdb357b97-8a4a-4ce4-bbf2-21a7c82d8b72" class="navnav">6.9.2 Assertions aktivieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_06_010.html#dodtpd3b2ce89-98b7-4832-9111-79be6ad3ff59" class="navnav">6.10 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><a id="dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee" name="dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee"></a><h1 class="t1"><span class="cfett">6</span><span class="cfett"> Exceptions</span><a href="#dodtp4411c833-e6ac-4d56-9616-c6a231371f19"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h1>
+                                                <p class="anleser"><em><span class="ckursiv">»?Wir sind in Sicherheit! Er kann uns nicht erreichen!?<br>?Sicher??<br>?Ganz sicher! Bären haben Angst vor Treibsand!?«<br>&#8211; Hägar, Dik Browne (1917&#8211;1989)</span></em></p>
+                                                <p>Fehler beim Programmieren sind unvermeidlich. Schwierigkeiten bereiten nur die unkalkulierbaren
+                                                   Situationen &#8211; hier ist der Umgang mit Fehlern ganz besonders heikel. Java bietet die
+                                                   elegante Methode der Exceptions, um mit Fehlern flexibel umzugehen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4411c833-e6ac-4d56-9616-c6a231371f19" name="dodtp4411c833-e6ac-4d56-9616-c6a231371f19"></a><h2 class="t2"><span class="cfett">6.1</span><span class="cfett"> Problembereiche einzäunen</span><a href="#dodtp198545c9-807e-4f19-90b0-c6bf7b9be8ad"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h2>
+                                                <p>Werden in C Routinen aufgerufen, dann haben diese keine andere Möglichkeit, als über
+                                                   den Rückgabewert einen Fehlschlag anzuzeigen. Der Fehlercode<a class="indexterm" id="dodtpa4cdd826-0a29-4ab5-8bad-7fb878fc82af"></a> ist häufig &#8211;<span class="clisting">1</span>, aber auch <span class="clisting">NULL</span><a class="indexterm" id="dodtpb134144b-e363-4a45-90ad-7321a101975c"></a> oder <span class="clisting">0</span>. Allerdings kann die Null auch Korrektheit anzeigen. Irgendwie ist das willkürlich.
+                                                   Die Abfrage dieser Werte ist unschön und wird von uns gern unterlassen, zumal wir
+                                                   oft davon ausgehen, dass ein Fehler in dieser Situation gar nicht auftreten kann &#8211;
+                                                   diese Annahme kann aber eine Dummheit sein. Zudem wird der Programmfluss durch Abfragen
+                                                   der Rückgabeergebnisse unangenehm unterbrochen, zumal der Rückgabewert, wenn er nicht
+                                                   gerade einen Fehler anzeigt, weiterverwendet wird. Der Rückgabewert ist also im weitesten
+                                                   Sinne überladen, da er zwei Zustände anzeigt. Häufig entstehen mit den Fehlerabfragen
+                                                   kaskadierte <span class="clisting">if</span>-Abfragen, die den Quellcode schwer lesbar machen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Java-Bibliothek geht bei den Methoden <span class="clisting">delete()</span>, <span class="clisting">mkdir()</span>, <span class="clisting">mkdirs()</span> und <span class="clisting">renameTo()</span> der Klasse <span class="clisting">File</span> nicht mit gutem Beispiel voran. Anstatt über eine Ausnahme anzuzeigen, dass die Operation
+                                                               nicht geglückt ist, liefern die genannten Methoden <span class="clisting">false</span>. Das ist unglücklich, denn viele Entwickler verzichten auf den Test, und so entstehen
+                                                               Fehler, die später schwer zu finden sind.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp198545c9-807e-4f19-90b0-c6bf7b9be8ad" name="dodtp198545c9-807e-4f19-90b0-c6bf7b9be8ad"></a><h3 class="t3"><span class="cfett">6.1.1</span><span class="cfett"> Exceptions in Java mit try und catch</span><a href="#dodtp49f7c3b0-2da3-4647-8b49-0a4f5a896f7e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp4411c833-e6ac-4d56-9616-c6a231371f19"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Bei der Verwendung von Exceptions wird der Programmfluss nicht durch Abfrage des Rückgabestatus
+                                                   unterbrochen. Ein besonders ausgezeichnetes Programmstück überwacht mögliche Fehler
+                                                   und ruft gegebenenfalls speziellen Programmcode zur Behandlung auf.
+                                                </p>
+                                                <p>Den überwachten Programmbereich (Block) leitet das Schlüsselwort <span class="clisting">try</span><a class="indexterm" id="dodtp3684b99c-2715-45f3-adbc-235f16b8f6ad"></a> ein. Dem <span class="clisting">try</span>-Block folgt in der Regel<span class="footnote"><a id="dodtp2622c5c2-78b9-419a-8393-70f339fb1f95">[147](In manchen Fällen auch ein finally-Block, sodass es dann ein try-finally wird.)</a></span> ein <span class="clisting">catch</span><a class="indexterm" id="dodtpf599db23-9000-4f90-9f0a-1fd9c7f6586d"></a>-Block, in dem Programmcode steht, der den Fehler behandelt. Kurz skizziert, sieht
+                                                   das so aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">try<br>{<br>  // Programmcode, der eine Ausnahme ausführen kann<br>}<br>catch ( ... )<br>{<br>  // Programmcode zum Behandeln der Ausnahme<br>}<br>// Es geht ganz normal weiter, denn die Ausnahme wurde behandelt<br></pre></div>
+                                                <p>Hinter <span class="clisting">catch</span> folgt also der Programmblock, der beim Auftreten eines Fehlers ausgeführt wird, um
+                                                   den Fehler abzufangen (daher der Ausdruck <span class="clisting">catch</span>). Es ist nach der Fehlerbehandlung nicht mehr so einfach möglich, an der Stelle fortzufahren,
+                                                   an der der Fehler auftrat. Andere Programmiersprachen erlauben das durchaus.
+                                                </p><a href="bilder/06_001.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein06_001.png" alt="Abbildung"></a><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp49f7c3b0-2da3-4647-8b49-0a4f5a896f7e" name="dodtp49f7c3b0-2da3-4647-8b49-0a4f5a896f7e"></a><h3 class="t3"><span class="cfett">6.1.2</span><span class="cfett"> Eine NumberFormatException auffangen</span><a href="#dodtp7ce75378-d7d0-4f7b-ab7a-ed87da7f1f81"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp198545c9-807e-4f19-90b0-c6bf7b9be8ad"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Über die Methode <span class="clisting">Integer.parseInt()</span> haben wir an verschiedenen Stellen schon gesprochen. Sie konvertiert eine Zahl, die
+                                                   als Zeichenkette gegeben ist, in eine Dezimalzahl:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int vatRate = Integer.parseInt( "19" );<br></pre></div>
+                                                <p>In dem Beispiel ist eine Konvertierung möglich, und die Methode führt die Umwandlung
+                                                   ohne Fehler aus. Anders sieht das aus, wenn der String keine Zahl repräsentiert:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.1: </strong>MissNumberFormatException.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">/* 01 */public class MissNumberFormatException<br>/* 02 */{<br>/* 03 */   public static int getVatRate()<br>/* 04 */   {<br>/* 05 */     return Integer.parseInt(<span class="cfett"> "19 %"</span> );<br>/* 06 */   }<br>/* 07 */   public static void main( String[] args )<br>/* 08 */   {<br>/* 09 */     System.out.println( getVatRate() );<br>/* 10 */   }<br>/* 11 */}<br></pre></div>
+                                                <p>Die Ausführung des Programms bricht mit einem Fehler ab, und die virtuelle Maschine
+                                                   gibt uns automatisch eine Meldung aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Exception in thread "main" java.lang.<span class="cfett">NumberFormatException</span>: For input string: "19 %"<br>  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)<br>  at java.lang.Integer.parseInt(Integer.java:456)<br>  at java.lang.Integer.<span class="cfett">parseInt</span>(Integer.java:497)<br>  at MissNumberFormatException.<span class="cfett">getVatRate(MissNumberFormatException.java:5)</span><br>  at MissNumberFormatException.<span class="cfett">main(MIssNumberFormatException.java:9)</span><br></pre></div>
+                                                <p>In der ersten Zeile können wir ablesen, dass eine <span class="clisting">java.lang.NumberFormatException</span><a class="indexterm" id="dodtpa3d65259-a5c1-46f0-9281-0dc72f795ea7"></a> ausgelöst wurde. In der letzten Zeile steht, welche Stelle in unserem Programm zu
+                                                   dem Fehler führte (Fehlerausgaben wie diese haben wir schon in »Auf null geht nix,
+                                                   nur die NullPointerException« in Abschnitt 3.7.1 beobachtet).
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/06_002.png" rel="lightbox" title="Tritt eine Exception auf, so erscheint sie im Ausgabefenster rot. Praktischerweise sind die Fehlermeldungen wie Hyperlinks: Ein Klick, und Eclipse zeigt die Zeile, die die Excep-tion auslöst."><img class="bild" border="1" src="bilderklein/klein06_002.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.1: </strong>Tritt eine Exception auf, so erscheint sie im Ausgabefenster rot. Praktischerweise
+                                                   sind die Fehlermeldungen wie Hyperlinks: Ein Klick, und Eclipse zeigt die Zeile, die
+                                                   die Excep-tion auslöst.
+                                                </p>
+                                                <img class="bild" border="1" src="common/netbeans.png" alt="Abbildung"><br>
+                                                <a href="bilder/06_003.png" rel="lightbox" title="Auch bei NetBeans führt ein Klick auf die Fehlerstelle und in den Quellcode."><img class="bild" border="1" src="bilderklein/klein06_003.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.2: </strong>Auch bei NetBeans führt ein Klick auf die Fehlerstelle und in den Quellcode.
+                                                </p><a id="dodtp7bd1ccdf-7455-481f-8acd-8d5e7e2ddcfa" name="dodtp7bd1ccdf-7455-481f-8acd-8d5e7e2ddcfa"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Dokumentierte Fehler</span></h4>
+                                                <p>Der Fehler kommt nicht wirklich überraschend, und Entwickler müssen sich darauf vorbereiten,
+                                                   dass, wenn sie etwas Falsches an Methoden übergeben, diese schimpfen. Im besten Fall
+                                                   erklärt die API-Dokumentation, welche Eingaben eine Methode zulässt und welche nicht.
+                                                   Zur »Schnittstelle« einer Methode gehört auch das Verhalten im Fehlerfall. Die API-Dokumentation
+                                                   sollte genau beschreiben, welche Ausnahme &#8211; oder Reaktion wie spezielle Rückgabewerte
+                                                   &#8211; zu erwarten ist, wenn die Methode ungültige Werte erhält. Die Java-Dokumentation
+                                                   bei <span class="clisting">Integer.parseInt()</span> macht das:
+                                                </p><a href="bilder/06_004.png" rel="lightbox" title="JavaDoc dokumentiert die Ausnahme."><img class="bild" border="1" src="bilderklein/klein06_004.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.3: </strong>JavaDoc dokumentiert die Ausnahme.
+                                                </p><a id="dodtp615a33d3-206a-4b0a-89ac-57d60e06887e" name="dodtp615a33d3-206a-4b0a-89ac-57d60e06887e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Stack-Trace</span></h4>
+                                                <p>Die virtuelle Maschine merkt sich auf einem Stapel, welche Methode welche andere Methode
+                                                   aufgerufen hat. Dies nennt sich Stack-Trace<a class="indexterm" id="dodtp48f9f90c-df18-4b88-903b-cb95015e9003"></a>. Wenn also die statische <span class="clisting">main()</span>-Methode die Methode <span class="clisting">getVatRate()</span> aufruft und diese wiederum <span class="clisting">parseInt()</span>, so sieht der Stapel zum Zeitpunkt von <span class="clisting">parseInt()</span> so aus:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">parseInt<br>getVatRate<br>main<br></pre></div>
+                                                <p>Ein Stack-Trace ist im Fehlerfall nützlich, da wir etwa bei unserem <span class="clisting">parseInt("19 %")</span> ablesen können, dass <span class="clisting">parseInt()</span> den Fehler ausgelöst hat und nicht irgendeine andere Methode.
+                                                </p><a id="dodtp166f52a1-6284-4bda-a60a-5ce658be26c9" name="dodtp166f52a1-6284-4bda-a60a-5ce658be26c9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Eine NumberFormatException auffangen</span></h4>
+                                                <p>Dass ein Programm einfach so abbricht und die JVM endet, ist üblicherweise keine Lösung.
+                                                   Fehler sollten aufgefangen und gemeldet werden. Um Fehler aufzufangen, ist es erst
+                                                   einmal wichtig zu wissen, was genau für eine Ausnahme ausgelöst wird. In unserem Fall
+                                                   ist das einfach abzulesen, denn die Ausnahme ist ja schon aufgetaucht und klar einem
+                                                   Grund zuzuordnen. Die Java-Dokumentation nennt diesen Fehler auch, und weil ohne den
+                                                   aufgefangenen Fehler das Programm abbricht, soll nun die <span class="clisting">NumberFormatException</span> aufgefangen werden. Dabei kommt die <span class="clisting">try-catch</span>-Konstruktion zum Einsatz:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.2: </strong>CatchTheNumberFormatException.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">String stringToConvert = "19 %";<br><br>try<br>{<br>  Integer.parseInt( stringToConvert );<br>}<span class="cfett"><br>catch ( NumberFormatException e )</span><br>{<br>  System.err.printf( "'%s' kann man nicht in eine Zahl konvertieren!%n",<br>                     stringToConvert );<br>}<br>System.out.println( "Weiter geht's" );<br></pre></div>
+                                                <p>Die gesamte Ausgabe ist:</p>
+                                                <div class="listing"><pre class="prettyprint">'19 %' kann man nicht in eine Zahl konvertieren!<br>Weiter geht's<br></pre></div>
+                                                <p>Die Anweisung <span class="clisting">catch(NumberFormatException e)</span> fängt also alles auf, was vom Ausnahmetyp <span class="clisting">NumberFormatException</span> ist. <span class="clisting">Integer.parseInt("19 %")</span> führt, da der String keine Zahl ist, zu einer <span class="clisting">NumberFormatException</span>, die wir behandeln. Danach ist der Fehler wie weggeblasen, und mit der Konsolenausgabe
+                                                   geht es ganz normal weiter.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp7ce75378-d7d0-4f7b-ab7a-ed87da7f1f81" name="dodtp7ce75378-d7d0-4f7b-ab7a-ed87da7f1f81"></a><h3 class="t3"><span class="cfett">6.1.3</span><span class="cfett"> Ablauf einer Ausnahmesituation</span><a href="#dodtpd815a231-ebe3-4065-9424-8adb38105a07"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp166f52a1-6284-4bda-a60a-5ce658be26c9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Das Laufzeitsystem erzeugt ein Ausnahme-Objekt, wenn ein Fehler über eine Exception
+                                                   angezeigt werden soll. Dann wird die Abarbeitung der Programmzeilen sofort unterbrochen,
+                                                   und das Laufzeitsystem steuert selbstständig die erste <span class="clisting">catch</span>-Klausel an (oder springt weiter zum Aufrufer, wie wir später sehen werden). Wenn
+                                                   die erste <span class="clisting">catch</span>-Anweisung nicht zur Art des aufgetretenen Fehlers passt, werden der Reihe nach alle
+                                                   übrigen <span class="clisting">catch</span>-Klauseln untersucht, und die erste übereinstimmende Klausel wird angesprungen (oder
+                                                   ausgewählt). Erst wird etwas versucht (daher heißt es im Englischen try), und wenn im Fehlerfall ein <span class="clisting">Exception</span>-Objekt im Programmstück ausgelöst (engl. throw) wird, lässt es sich an einer Stelle auffangen (engl. catch). Da immer die erste passende <span class="clisting">catch</span>-Klausel ausgewählt wird, darf im Beispiel die letzte <span class="clisting">catch</span>-Klausel keinesfalls zuerst stehen, da diese auf jeden Fehler passt. Alle anderen
+                                                   Anweisungen in den <span class="clisting">catch</span>-Blöcken würden dann nicht ausgeführt; der Compiler erkennt dieses Problem und gibt
+                                                   einen Fehler aus.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpd815a231-ebe3-4065-9424-8adb38105a07" name="dodtpd815a231-ebe3-4065-9424-8adb38105a07"></a><h3 class="t3"><span class="cfett">6.1.4</span><span class="cfett"> Eigenschaften vom Exception-Objekt</span><a href="#dodtp312040ac-f67f-4569-9f51-9bdc48f75849"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp7ce75378-d7d0-4f7b-ab7a-ed87da7f1f81"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Das Exception-Objekt, das uns in der <span class="clisting">catch</span>-Anweisung übergeben wird, ist reich an Informationen. So lässt sich erfragen, um
+                                                   welche Ausnahme es sich eigentlich handelt und wie die Fehlernachricht heißt. Auch
+                                                   der Stack-Trace lässt sich erfragen und ausgeben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.3: </strong>NumberFormatExceptionElements.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">try<br>{<br>  Integer.parseInt( "19 %" );<br>}<br>catch ( NumberFormatException e )<br>{<br>  String name =<span class="cfett"> e.getClass().getName()</span>;<br>  String msg  =<span class="cfett"> e.getMessage()</span>;<br>  String s    =<span class="cfett"> e.toString()</span>;<br><br>  System.out.println( name );// java.lang.NumberFormatException<br>  System.out.println( msg ); // For input string: "19 %"<br>  System.out.println( s ); // java.lang.NumberFormatException: For input string: "19 %"<br><br>  e.printStackTrace();<br>}<br></pre></div>
+                                                <p>Im letzten Fall, mit <span class="clisting">e.printStackTrace</span><a class="indexterm" id="dodtp50d8c723-6f2c-4441-837e-6997030bb093"></a><span class="clisting">()</span>, bekommen wir das Gleiche auf dem Fehlerkanal <span class="clisting">System.err</span><a class="indexterm" id="dodtpb7142761-ba9e-4d39-b48c-0036f2b7d8cd"></a> ausgegeben, was uns die virtuelle Maschine ausgibt, wenn wir die Ausnahme nicht abfangen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">java.lang.NumberFormatException: For input string: "19 %"<br>  at java.lang.NumberFormatException.forInputString(NumberFormatException.java:48)<br>  at java.lang.Integer.parseInt(Integer.java:456)<br>  at java.lang.Integer.parseInt(Integer.java:497)<br>  at NumberFormatExceptionElements.main(NumberFormatExceptionElements.java:7)<br></pre></div>
+                                                <p>Die Ausgabe besteht aus dem Klassennamen der Exception, der Meldung und dem Stack-Trace.
+                                                   <span class="clisting">printStackTrace()</span> ist parametrisiert und kann auch in einen Ausgabekanal geschickt werden.
+                                                </p><a id="dodtp30da5ae6-8424-4ed6-b687-6d72b298a9a9" name="dodtp30da5ae6-8424-4ed6-b687-6d72b298a9a9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Bitte nicht schlucken: leere catch-Blöcke</span></h4>
+                                                <p>Java schreibt vor, dass Ausnahmen in einem <span class="clisting">catch</span> behandelt (oder nach oben geleitet) werden, aber nicht, was in <span class="clisting">catch</span>-Blöcken zu geschehen hat. Er kann eine sinnvolle Behandlung beinhalten oder auch
+                                                   einfach leer sein. Ein leerer <span class="clisting">catch</span>-Block ist in der Regel wenig sinnvoll, weil dann die Fehler klammheimlich unterdrückt
+                                                   werden. (Das wäre genauso wie ignorierte Statusrückgabewerte<a class="indexterm" id="dodtp46c85583-c197-4ad0-8667-4b43eaa45003"></a> von C-Funktionen.) Das Mindeste ist eine minimale Fehlerausgabe via <span class="clisting">System.err.println(e)</span> oder das informativere <span class="clisting">e.printStackTrace ()</span> für eine <span class="clisting">Exception e</span> oder das Loggen dieser Fehler. Noch besser ist das aktive Reagieren, denn die Ausgabe
+                                                   selbst behandelt diesen Fehler nicht! Im <span class="clisting">catch</span>-Block ist es durchaus legitim, wiederum andere Ausnahmen auszulösen und somit den
+                                                   Fehler umzuformen und nach oben weiterzureichen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Wenn wie bei einem <span class="clisting">Thread.sleep()</span> die <span class="clisting">InterruptedException</span> wirklich egal ist, kann natürlich auch der Block leer sein, doch gibt es dafür nicht
+                                                               so viele sinnvolle Beispiele.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp312040ac-f67f-4569-9f51-9bdc48f75849" name="dodtp312040ac-f67f-4569-9f51-9bdc48f75849"></a><h3 class="t3"><span class="cfett">6.1.5</span><span class="cfett"> Wiederholung abgebrochener Bereiche *</span><a href="#dodtp5f8936b0-5967-4c4e-84c8-8c77867f1e6a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp30da5ae6-8424-4ed6-b687-6d72b298a9a9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Es gibt in Java bei Ausnahmen bisher keine von der Sprache unterstützte Möglichkeit,
+                                                   an den Punkt zurückzukehren, der den Fehler ausgelöst hat. Das ist aber oft erwünscht,
+                                                   etwa dann, wenn eine fehlerhafte Eingabe zu wiederholen ist.
+                                                </p>
+                                                <p>Wir werden mit <span class="clisting">JOptionPane</span><a class="indexterm" id="dodtpcfed5200-2a4b-4896-9e60-e9fb550d8983"></a><span class="clisting">.showInputDialog()</span> nach einem String fragen und versuchen, diesen in eine Zahl zu konvertieren. Dabei
+                                                   kann natürlich etwas schiefgehen. Wenn ein Benutzer eine Zeichenkette eingibt, die
+                                                   keine Zahl repräsentiert, löst <span class="clisting">parseInt()</span><a class="indexterm" id="dodtp00bb6b03-247b-403a-9635-55fbd0c4033e"></a> eine <span class="clisting">NumberFormatException</span><a class="indexterm" id="dodtpe039ddd6-dd4a-452a-bc29-1a11d8f29055"></a> aus. Wir wollen in diesem Fall die Eingabe wiederholen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.4: </strong>ContinueInput.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int number = 0;<span class="cfett"><br>while ( true )</span><br>{<br>  try<br>  {<br>    String s = javax.swing.JOptionPane.showInputDialog(<br>                 "Bitte Zahl eingeben" );<br>    number = Integer.parseInt( s );<br>   <span class="cfett"> break</span>;<br>  }<br>  catch ( NumberFormatException ó_ò )<br>  {<br>    System.err.println( "Das war keine Zahl!" );<br>  }<br>}<br>System.out.println( "Danke für die Zahl " + number );<br>System.exit( 0 );                                     // Beendet die Anwendung<br></pre></div>
+                                                <p>Die gewählte Lösung ist einfach: Wir programmieren den gesamten Teil in einer Endlosschleife.
+                                                   Geht die problematische Stelle ohne Fehler durch, so beenden wir die Schleife mit
+                                                   <span class="clisting">break</span>. Kommt es zu einer Ausnahme, dann wird <span class="clisting">break</span> nicht ausgeführt, und nach der <span class="clisting">Exception</span> gelangen wir wieder in die Endlosschleife.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5f8936b0-5967-4c4e-84c8-8c77867f1e6a" name="dodtp5f8936b0-5967-4c4e-84c8-8c77867f1e6a"></a><h3 class="t3"><span class="cfett">6.1.6</span><span class="cfett"> Mehrere Ausnahmen auffangen</span><a href="#dodtp4dc6c4dc-085f-4ebb-ac61-1af419ac8372"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp312040ac-f67f-4569-9f51-9bdc48f75849"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir wollen mithilfe der Klasse <span class="clisting">Scanner</span><a class="indexterm" id="dodtpd6749b8d-d6aa-4a16-8e3e-87a8186d2018"></a> eine Webseite zeilenweise auslesen und alle dort enthaltenen E-Mail-Adressen sammeln.
+                                                   Dazu greifen wir zu zwei Klassen, die uns beim Einlesen der Zeilen helfen: <span class="clisting">URL</span><a class="indexterm" id="dodtp5832b7e7-f6a7-4edf-9209-5a9b886eff45"></a> und <span class="clisting">Scanner</span> (siehe dazu Abschnitt 4.9.2, »Die Klasse Scanner«). Zunächst repräsentiert die Klasse
+                                                   <span class="clisting">URL</span> eine URL, also eine Internetadresse. Das <span class="clisting">URL</span>-Objekt fragen wir mit <span class="clisting">openStream()</span> nach einem Datenstrom, und diesen Datenstrom setzen wir in den Konstruktor der <span class="clisting">Scanner</span>-Klasse. Mit dem <span class="clisting">Scanner</span> können wir dann zeilenweise durch die Seite laufen und alles einsammeln, was wie
+                                                   eine E-Mail-Adresse aussieht.
+                                                </p>
+                                                <p>Anders als bei <span class="clisting">Integer.parseInt()</span> kündigt die API-Dokumentation vom Konstruktor der Klasse <span class="clisting">URL</span> an, dass eine Ausnahme ausgelöst wird, und zwar genau dann, wenn die URL falsch formuliert
+                                                   wird (etwa als <span class="clisting">"telefon://0123-123123"</span>). Vergleichbares gilt bei der <span class="clisting">URL</span>-Methode <span class="clisting">openStream()</span>. Die Methode löst eine <span class="clisting">IOException</span><a class="indexterm" id="dodtp03f89320-3bec-430f-a42c-da71adb66117"></a> aus, wenn es keinen Zugriff auf die Webseite gibt.
+                                                </p><a href="bilder/06_005.png" rel="lightbox" title="API-Dokumentation zeigt die Ausnahmen. "><img class="bild" border="1" src="bilderklein/klein06_005.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.4: </strong>API-Dokumentation zeigt die Ausnahmen. 
+                                                </p>
+                                                <p>Beide Ausnahmen sind sogenannte <span class="cbegriff">geprüfte Ausnahmen</span><a class="indexterm" id="dodtp469ee766-78d3-47d9-966a-997f7308c33a"></a>, da sie explizit vom Entwickler behandelt werden müssen. Damit zwingen uns der Konstruktor
+                                                   <span class="clisting">new URL()</span> und die Methode <span class="clisting">openStream()</span> eine Behandlung auf, ohne die wir sie nicht nutzen könnten.
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/06_007.png" rel="lightbox" title="Eine nicht behandelte Ausnahme wird als Fehler angezeigt."><img class="bild" border="1" src="bilderklein/klein06_007.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.5: </strong>Eine nicht behandelte Ausnahme wird als Fehler angezeigt.
+                                                </p>
+                                                <img class="bild" border="1" src="common/netbeans.png" alt="Abbildung"><br>
+                                                <a href="bilder/06_008.png" rel="lightbox" title="NetBeans zeigt Fehler an, und mit  +  können sie direkt behoben werden."><img class="bild" border="1" src="bilderklein/klein06_008.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.6: </strong>NetBeans zeigt Fehler an, und mit <span class="ctastatur"><img align="top" src="keys/KEFsdCk=.gif" alt="Alt" title="Alt"></span> + <span class="ctastatur"><img align="top" src="keys/tastatur_KMKiKQ==.gif" alt="¢" title="¢"></span> können sie direkt behoben werden.
+                                                </p>
+                                                <p>Wir müssen uns diesen potenziellen Fehlern also stellen und daher die Problemzonen
+                                                   in einen <span class="clisting">try</span>- und <span class="clisting">catch</span>-Block schreiben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.5: </strong>FindAllEmailAddresses.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.io.IOException;<br>import java.net.MalformedURLException;<br>import java.net.URL;<br>import java.util.Scanner;<br>import java.util.regex.Matcher;<br>import java.util.regex.Pattern;<br><br>public class FindAllEmailAddresses<br>{<br>  public static void main( String[] args )<br>  {<br>    printAllEMailAddresses( "http://www.galileocomputing.de/hilfe/Impressum" );<br>  }<br><br>  static void printAllEMailAddresses( String urlString )<br>  {<br>   <span class="cfett"> try</span><br>   <span class="cfett"> {</span><span class="clisting"><br>      </span>URL     url     =<span class="cfett"> new URL( urlString )</span>;<br>      Scanner scanner = new Scanner(<span class="cfett"> url.openStream()</span> );<br>      Pattern pattern = Pattern.compile( "[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}" );<br><br>      while ( scanner.hasNextLine() )<br>      {<br>        String line = scanner.nextLine();<br>        for ( Matcher m = pattern.matcher( line ); m.find(); )<br>          System.out.println( line.substring( m.start(), m.end() ) );<br>      }<br>   <span class="cfett"> }</span><br>   <span class="cfett"> catch ( MalformedURLException e )</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> System.err.println( "URL ist falsch aufgebaut!" );</span><br>   <span class="cfett"> }</span><br>   <span class="cfett"> catch ( IOException e )</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> System.err.println( "URL konnte nicht geöffnet werden!" );</span><br>   <span class="cfett"> }</span><br>  }<br>}<br></pre></div>
+                                                <p>Tritt beim Erzeugen des URL-Objekts oder bei der Verbindung ein Fehler auf, fängt
+                                                   der <span class="clisting">try</span>-Block diesen ab, und der <span class="clisting">catch</span>-Teil bearbeitet ihn. Einem <span class="clisting">try</span>-Block können mehrere <span class="clisting">catch</span>-Klauseln zugeordnet sein, um verschiedene Fehlertypen aufzufangen.
+                                                </p>
+                                                <img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>
+                                                <a href="bilder/06_009.png" rel="lightbox" title="Einen try-catch-Block kann Eclipse mit  +  selbst anlegen. Auch bietet Eclipse an, den Fehler an den Aufrufer weiterzuleiten (siehe weiter unten)."><img class="bild" border="1" src="bilderklein/klein06_009.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 6.7: </strong>Einen try-catch-Block kann Eclipse mit <span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/KDEp.gif" alt="1" title="1"></span> selbst anlegen. Auch bietet Eclipse an, den Fehler an den Aufrufer weiterzuleiten
+                                                   (siehe weiter unten).
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4dc6c4dc-085f-4ebb-ac61-1af419ac8372" name="dodtp4dc6c4dc-085f-4ebb-ac61-1af419ac8372"></a><h3 class="t3"><span class="cfett">6.1.7</span><span class="cfett"> throws im Methodenkopf angeben</span><a href="#dodtp2385e326-ed1c-4708-8020-9e652168cd6b"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp5f8936b0-5967-4c4e-84c8-8c77867f1e6a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Neben der rahmenbasierten Ausnahmebehandlung &#8211; dem »Einzäunen« von problematischen
+                                                   Blöcken durch einen <span class="clisting">try</span>- und <span class="clisting">catch</span>-Block &#8211; gibt es eine weitere Möglichkeit, auf Exceptions zu reagieren: das Weiterleiten
+                                                   an den Aufrufer. Im Kopf der betreffenden Methode wird dazu eine <span class="clisting">throws</span><a class="indexterm" id="dodtp60e3744d-70bd-421d-a4c7-5b484341e424"></a>-Klausel eingeführt. Dadurch zeigt die Methode an, dass sie eine bestimmte Exception
+                                                   nicht selbst behandelt, sondern diese an die aufrufende Methode weitergibt. Wird nun
+                                                   von der aufgerufenen Methode eine Exception ausgelöst, so wird diese Methode abgebrochen,
+                                                   und der Aufrufer muss sich um den Fehler kümmern.
+                                                </p>
+                                                <p>Wir können unsere Methode <span class="clisting">printAllEMailAddresses()</span> so umschreiben, dass sie die Ausnahmen nicht mehr selbst abfängt, sondern nach oben
+                                                   weiterleitet:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.6: </strong>FindAllEmailAddresses2.java, printAllEMailAddresses()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">static void printAllEMailAddresses( String urlString )<br> <span class="cfett"> throws MalformedURLException, IOException</span><br>{<br>  Scanner scanner = new Scanner( new URL( urlString ).openStream() );<br>  Pattern pattern = Pattern.compile( "[\\w|-]+@\\w[\\w|-]*\\.[a-z]{2,3}" );<br><br>  while ( scanner.hasNextLine() )<br>  {<br>    String line = scanner.nextLine();<br>    for ( Matcher m = pattern.matcher( line ); m.find(); )<br>      System.out.println( line.substring( m.start(), m.end() ) );<br>  }<br>  scanner.close();<br>}<br></pre></div>
+                                                <p>Nun ist <span class="clisting">main()</span> am Zug und muss sich mit <span class="clisting">MalformedURLException</span> und <span class="clisting">IOException</span> herumärgern:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.7: </strong>FindAllEmailAddresses2.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public static void main( String[] args )<br>{<br>  try<br>  {<br>    printAllEMailAddresses( "http://www.galileocomputing.de/hilfe/Impressum" );<br>  }<br>  catch ( MalformedURLException e )<br>  {<br>    System.err.println( "URL ist falsch aufgebaut!" );<br>  }<br>  catch ( IOException e )<br>  {<br>    System.err.println( "URL konnte nicht geöffnet werden!" );<br>  }<br>}<br></pre></div>
+                                                <p>Dadurch steigt der Fehler entlang der Kette von Methodenaufrufen wie eine Blase (engl.
+                                                   <span class="cbegriff">bubble</span>) nach oben und kann irgendwann von einem Block abgefangen werden, der sich darum
+                                                   kümmert.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zwar ist die <span class="clisting">MalformedURLException</span> eine <span class="clisting">IOException</span>, sodass wir hier nur <span class="clisting">IOException</span> hätten angeben müssen, doch grundsätzlich lassen sich beliebig viele Ausnahmen, getrennt
+                                                               durch Kommata, aufzählen. Zu den Vererbungsbeziehungen und den Konsequenzen folgt
+                                                               später mehr.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2385e326-ed1c-4708-8020-9e652168cd6b" name="dodtp2385e326-ed1c-4708-8020-9e652168cd6b"></a><h3 class="t3"><span class="cfett">6.1.8</span><span class="cfett"> Abschlussbehandlung mit finally</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp4dc6c4dc-085f-4ebb-ac61-1af419ac8372"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Im Folgenden wollen wir eine optimale Exception-Behandlung programmieren. Es geht
+                                                   im Beispiel darum, die Ausmaße eines GIF-Bildes auszulesen. Das Grafikformat GIF ist
+                                                   sehr einfach und gut dokumentiert, etwa unter <a href="http://www.fileformat.info/format/gif/egff.htm" target="_blank">http://www.fileformat.info/format/gif/egff.htm</a>. Dort lässt sich erfahren, wie sich die Ausmaße ganz einfach im Kopf einer GIF?Datei ablesen lassen, denn nach den ersten Bytes 'G', 'I', 'F', '8', '7' (oder '9'), 'a' folgen in 2 Bytes an Position 6 und 7 die Breite und an Position 8 und 9 die Höhe des Bildes.
+                                                </p><a id="dodtpdc11dd9a-36a4-429e-89ba-ab882f8ba2b1" name="dodtpdc11dd9a-36a4-429e-89ba-ab882f8ba2b1"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die ignorante Version</span></h4>
+                                                <p>In der ersten Variante schreiben wir den Algorithmus einfach herunter und kümmern
+                                                   uns nicht um die Fehlerbehandlung; mögliche Ausnahmen leitet die statische <span class="clisting">main()</span>-Methode an die JVM weiter:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.8: </strong>ReadGifSizeIgnoringExceptions.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.io.*;<br><br>public class ReadGifSizeIgnoringExceptions<br>{<br>  public static void main( String[] args )<br>                       throws FileNotFoundException, IOException<br>  {<br>    RandomAccessFile f = new RandomAccessFile( "duke.gif", "r" );<br>    f.seek( 6 );<br><br>    System.out.printf( "%s x %s Pixel%n", f.read() + f.read() * 256,<br>                                          f.read() + f.read() * 256 );<br>  }<br>}<br></pre></div>
+                                                <p>In der Klasse haben wir eine Kleinigkeit noch nicht beachtet: das Schließen des Datenstroms.
+                                                   Das Programm endet mit dem Auslesen der Bytes, aber das Schließen mit <span class="clisting">close()</span> fehlt. Nehmen wir eine Zeile nach der Konsolenausgabe hinzu:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">...<br>System.out.printf( "%s x %s Pixel%n", f.read() + f.read() * 256,<br>                                      f.read() + f.read() * 256 );<span class="cfett"><br>f.close()</span>;<br></pre></div>
+                                                <p>Das <span class="clisting">close()</span> wiederum kann auch eine <span class="clisting">IOException</span> auslösen, die jedoch schon über <span class="clisting">throws</span> in der <span class="clisting">main</span>-Signatur angekündigt wurde.
+                                                </p><a id="dodtp2ab4a46f-3da9-4983-89af-1c83db17c02c" name="dodtp2ab4a46f-3da9-4983-89af-1c83db17c02c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der gut gemeinte Versuch</span></h4>
+                                                <p>Dass ein Programm die JVM beendet, sobald eine Datei nicht da ist, ist ein bisschen
+                                                   hart. Daher wollen wir ein <span class="clisting">try</span>-<span class="clisting">catch</span> formulieren und den Fehler ordentlich abfangen und dokumentieren:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.9: </strong>ReadGifSizeCatchingExceptions.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.io.*;<br><br>public class ReadGifSizeCatchingExceptions<br>{<br>  public static void main( String[] args )<br>  {<br>    try<br>    {<br>      RandomAccessFile f = new RandomAccessFile( "duke.gif", "r" );<br>      f.seek( 6 );<br><br>      System.out.printf( "%s x %s Pixel%n", f.read() + f.read() * 256,<br>                         f.read() + f.read() * 256 );<br>      f.close();<br>    }<br>    catch ( FileNotFoundException e )<br>    {<br>      System.err.println( "Datei ist nicht vorhanden!" );<br>    }<br>    catch ( IOException e )<br>    {<br>      System.err.println( "Allgemeiner Ein-/Ausgabefehler!" );<br>    }<br>  }<br>}<br></pre></div>
+                                                <p>Ist damit alles in Ordnung?</p><a id="dodtpa7587d11-a5c4-4414-b29d-f9590d0624a0" name="dodtpa7587d11-a5c4-4414-b29d-f9590d0624a0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ab jetzt wird scharf geschlossen</span></h4>
+                                                <p>Nehmen wir an, das Öffnen führt zu keiner Ausnahme, doch beim Zugriff auf ein Byte
+                                                   kommt es unerwartet zu einem Fehler. Das <span class="clisting">read()</span> wird abgebrochen, und die JVM leitet uns in den Exception-Block, der eine Meldung
+                                                   ausgibt. Das Problem: Dann schließt das Programm den Datenstrom nicht. Wir könnten
+                                                   verleitet werden, in den <span class="clisting">catch</span>-Zweig auch ein <span class="clisting">close()</span> zu schreiben, doch ist das eine Quellcodeduplizierung, die wir vermeiden müssen.
+                                                   Hier kommt ein <span class="clisting">finally</span><a class="indexterm" id="dodtpf2ad71ff-5d3e-4181-868f-0ff2018bbf11"></a>-Block zum Zuge. <span class="clisting">finally</span>-Blöcke stehen immer hinter <span class="clisting">catch</span>-Blöcken, und ihre wichtigste Eigenschaft ist die, dass der Programmcode im <span class="clisting">finally</span>-Block immer ausgeführt wird, egal, ob es einen Fehler gab oder ob es keinen Fehler
+                                                   gab und die Routine glatt durchlief. Das ist genau, was wir hier bei der Ressourcenfreigabe
+                                                   brauchen. Da <span class="clisting">finally</span> immer ausgeführt wird, wird die Datei geschlossen (und der interne File-Handle freigegeben),
+                                                   wenn alles gut ging &#8211; und ebenso im Fehlerfall:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.10: </strong>ReadGifSize.java, main()
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">RandomAccessFile f = null;<br><br>try<br>{<br>  f = new RandomAccessFile( "duke.gif", "r" );<br>  f.seek( 6 );<br><br>  System.out.printf( "%s x %s Pixel%n", f.read() + f.read() * 256,<br>                     f.read() + f.read() * 256 );<br>}<br>catch ( FileNotFoundException e )<br>{<br>  System.err.println( "Datei ist nicht vorhanden!" );<br>}<br>catch ( IOException e )<br>{<br>  System.err.println( "Allgemeiner Ein-/Ausgabefehler!" );<br>}<span class="cfett"><br>finally<br>{</span><br> <span class="cfett"> if ( f != null )</span><br>   <span class="cfett"> try { f.close(); } catch ( IOException e ) { }<br>}</span><br></pre></div>
+                                                <p>Da <span class="clisting">close()</span> eine <span class="clisting">IOException</span> auslösen kann, muss der Aufruf selbst mit einem <span class="clisting">try</span>-<span class="clisting">catch</span> ummantelt werden. Das führt zu etwas abschreckenden Konstruktionen, die <span class="cbegriff">TCFTC</span><a class="indexterm" id="dodtpb3ab2003-6210-4812-99c9-989ff70dab9d"></a> (<span class="clisting">try</span>-<span class="clisting">catch</span>-<span class="clisting">finally</span>-<span class="clisting">try</span>-<span class="clisting">catch</span>) genannt werden. Ein zweiter Schönheitsfehler ist der, dass die Variable <span class="clisting">f</span> nun außerhalb des <span class="clisting">try</span>-Blocks deklariert werden muss. Das gibt ihr als lokale Variable einen größeren Radius
+                                                   &#8211; größer, als er eigentlich sein sollte. Mit einem extra Block lässt sich das lösen,
+                                                   sieht aber nicht so hübsch aus. Das spezielle Sprachkonstrukt <span class="cbegriff">try-mit-Ressourcen</span> löst das elegant; Informationen dazu folgen in Abschnitt 6.6.1.
+                                                </p><a id="dodtpfa7e7ca9-1fc3-469d-a364-cbaf441b2df1" name="dodtpfa7e7ca9-1fc3-469d-a364-cbaf441b2df1"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zusammenfassung</span></h4>
+                                                <p>Nach einem <span class="clisting">catch</span> (oder mehreren) kann optional ein <span class="clisting">finally</span>-Block folgen. Die Laufzeitumgebung führt die Anweisungen im <span class="clisting">finally</span>-Block immer aus, egal, ob ein Fehler auftrat oder die Anweisungen im <span class="clisting">try</span>-Block optimal durchliefen. Das heißt, der Block wird auf jeden Fall ausgeführt &#8211;
+                                                   lassen wir <span class="clisting">System.exit()</span> oder Systemfehler einmal außen vor &#8211;, auch wenn im <span class="clisting">try</span>-Block ein <span class="clisting">return</span>, <span class="clisting">break</span> oder <span class="clisting">continue</span> steht oder eine Anweisung eine neue Ausnahme auslöst. Der Programmcode im <span class="clisting">finally</span>-Block bekommt auch gar nicht mit, ob vorher eine Ausnahme auftrat oder alles glattlief.
+                                                   Wenn das von Interesse ist, müsste eine Anweisung am Ende des <span class="clisting">try</span>-Blocks ein Flag belegen, was ein Ausdruck im <span class="clisting">finally</span>-Block dann testen kann.
+                                                </p>
+                                                <p>Sinnvoll sind Anweisungen im <span class="clisting">finally</span>-Block immer dann, wenn Operationen stets ausgeführt werden sollen. Eine typische
+                                                   Anwendung ist die Freigabe von Ressourcen wie das Schließen von Dateien.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Es gibt bei Objekten einen Finalizer, doch der hat mit <span class="clisting">finally</span> nichts zu tun. Der Finalizer ist eine besondere Methode, die immer dann aufgerufen
+                                                               wird, wenn der Garbage-Collector ein Objekt wegräumt.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpbb3b003d-0266-4228-bb6e-a4c5b21f1e3e" name="dodtpbb3b003d-0266-4228-bb6e-a4c5b21f1e3e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ein try ohne catch, aber ein try-finally</span></h4>
+                                                <p>Ein <span class="clisting">try</span>-Block fängt immer Ausnahmen ab, doch nicht zwingend muss ein angehängter <span class="clisting">catch</span>-Block diese behandeln; <span class="clisting">throws</span> kann die Ausnahmen einfach nach oben weiterleiten. Nur eine Konstruktion der Art
+                                                   <span class="clisting">try {}</span> ohne <span class="clisting">catch</span> ist ungültig, jedoch ist ein <span class="clisting">try</span>-Block ohne <span class="clisting">catch</span> aber mit <span class="clisting">finally</span> absolut legitim. Diese Konstruktion ist in Java gar nicht so selten, denn sie ist
+                                                   wichtig, wenn eben kein Fehler behandelt werden soll, aber unabhängig von möglichen
+                                                   Ausnahmen immer Programmcode abgearbeitet werden soll &#8211; ein typisches Beispiel ist
+                                                   die Ressourcen-Freigabe.
+                                                </p>
+                                                <p>Kommen wir zu unserem Programm zurück, das die Größe eines GIF-Bildes ermittelt. Wenn
+                                                   beim IO-Fehler eben nichts zu retten ist, geben wir den Fehler an den Aufrufer weiter,
+                                                   ohne es jedoch zu versäumen, die in der Methode angeforderten Ressourcen wieder freizugeben.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 6.11: </strong>ReadGifSizeWithTryFinally.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.io.*;<br><br>public class ReadGifSizeWithTryFinally<br>{<br>  public static void printGifSize( String filename )<br>                       throws FileNotFoundException, IOException<br>  {<br>    RandomAccessFile f = new RandomAccessFile( filename, "r" );<br><br>   <span class="cfett"> try</span><br>   <span class="cfett"> {</span><br>      f.seek( 6 );<br><br>      System.out.printf( "%s x %s Pixel%n", f.read() + f.read() * 256,<br>                                            f.read() + f.read() * 256 );<br>   <span class="cfett"> }</span><br>   <span class="cfett"> finally</span><br>   <span class="cfett"> {</span><br>     <span class="cfett"> f.close();</span><br>   <span class="cfett"> }</span><br>  }<br><br>  public static void main( String[] args )<br>                      throws FileNotFoundException, IOException<br>  {<br>    printGifSize( "duke.gif" );<br>  }<br>}<br></pre></div>
+                                                <p>Anstatt im <span class="clisting">finally</span>-Block die <span class="clisting">IOException</span> vom <span class="clisting">close()</span> selbst zu fangen, leiten wir sie in dieser Implementierung auch mit nach oben, wenn
+                                                   es zu einem Fehler beim Schließen kommt. Im vorangehenden Beispiel ReadGifSize.java hatten wir geschrieben:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( f != null )<br>  try { f.close(); } catch ( IOException e ) { }<br></pre></div>
+                                                <p>Eine <span class="clisting">IOException</span> bei <span class="clisting">close()</span> würde leise versacken, denn der Behandler ist leer. Bei ReadGifSizeWithTryFinally.java wird ein möglicher Schließfehler nach oben geleitet, bei ReadGifSize.java jedoch nicht, denn dort ist der der Programmfluss ganz anders.
+                                                </p>
+                                                <p>Aus noch einem Grund ist die Semantik anders, und daher ist von diesem Stil abzusehen,
+                                                   wenn im <span class="clisting">finally</span>-Block wie bei ReadGifSizeWithTryFinally.java Ausnahmen ausgelöst werden können.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Wichtig: Java-Verhalten bei multiplen Ausnahmen
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Kommt es im <span class="clisting">try</span>-Block zur Ausnahme und löst auch gleichzeitig der <span class="clisting">finally</span>-Block eine Ausnahme aus, so wird die Ausnahme im <span class="clisting">try</span>-Block ignoriert &#8211; wir sprechen von einer <span class="cbegriff">unterdrückten Ausnahme</span> (engl. <span class="cbegriff">suppressed exception</span>)<a class="indexterm" id="dodtp1b1f2083-8aa1-4fe6-a5f8-7657df57f5dc"></a>. In den Zeilen
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">try<br>{<br>  throw new Error();<br>}<br>finally<br>{<br>  System.out.println( "Geht das?" + 1/0 );<br>}<br></pre></div>
+                                                               kommt die im Kontext uninteressante <span class="clisting">ArithmeticException</span> durch die Division durch null zum Aufrufer, aber sie unterdrückt den viel wichtigeren
+                                                               harten <span class="clisting">Error</span>.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Gibt es in unserem Beispiel im <span class="clisting">try</span>-Block eine Ausnahme und ebenso im <span class="clisting">finally</span>-Block beim Schließen, dann überdeckt die Schließ-Ausnahme jede andere Ausnahme. Nun
+                                                   ist die Ausnahme im <span class="clisting">try</span>-Block aber in der Regel wichtiger und sollte nicht verschwinden. Um das Problem zu
+                                                   lösen, gibt es ein anderes Sprachmittel, das Abschnitt 6.6 vorstellt.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_06_001.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="6 Exceptions"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_05_014.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_06_002.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

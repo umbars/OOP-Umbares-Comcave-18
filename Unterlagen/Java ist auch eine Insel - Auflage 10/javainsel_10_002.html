@@ -1,0 +1,721 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 10 Architektur, Design und angewandte Objektorientierung">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 10 Architektur, Design und angewandte Objektorientierung">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 10 Architektur, Design und angewandte
+         Objektorientierung
+      </title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_10_001.html">
+      <link rel="next" href="javainsel_10_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_10_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_10_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02" class="navnav">10 Architektur, Design und angewandte Objektorientierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_10_001.html#dodtp1e6a1a99-d97a-40dc-bdf5-d532485624a2" class="navnav">10.1 Architektur, Design und Implementierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_10_002.html#dodtpa1401ab7-6470-4217-bc05-d2973590bbe8" class="navh">10.2 Design-Pattern (Entwurfsmuster)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_002.html#dodtp6fb20061-1313-4625-933c-89db61b93a0a" class="navh">10.2.1 Motivation für Design-Pattern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_002.html#dodtpc9ce33d4-addc-4854-b5f0-4d8fe649423e" class="navh">10.2.2 Das Beobachter-Pattern (Observer/Observable)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_002.html#dodtpe24ef2f8-9202-4e69-85d4-0ebdbf70d0ca" class="navh">10.2.3 Ereignisse über Listener</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_10_003.html#dodtpf9755ee2-1779-406b-b8e4-d8c364a2bd33" class="navnav">10.3 JavaBean</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_003.html#dodtp531e6b3a-5ed1-4d91-b4b2-b4874c8e42b6" class="navnav">10.3.1 Properties (Eigenschaften)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_003.html#dodtp625afd97-78fb-410b-a2c7-b2a313109eda" class="navnav">10.3.2 Einfache Eigenschaften</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_003.html#dodtp76cb4ec3-a80a-4e3b-af55-b6bd066ba7d8" class="navnav">10.3.3 Indizierte Eigenschaften</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_003.html#dodtpce3bb668-cab3-46d9-ab81-5febb722a0a8" class="navnav">10.3.4 Gebundene Eigenschaften und PropertyChangeListener</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_10_003.html#dodtp79aa4dc7-8e57-4182-a1b5-2e315b2acd83" class="navnav">10.3.5 Veto-Eigenschaften &#8211; dagegen!</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_10_004.html#dodtp9f582ab9-2d15-407f-a334-d6be02bf614e" class="navnav">10.4 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa1401ab7-6470-4217-bc05-d2973590bbe8" name="dodtpa1401ab7-6470-4217-bc05-d2973590bbe8"></a><h2 class="t2"><span class="cfett">10.2</span><span class="cfett"> Design-Pattern (Entwurfsmuster)</span><a href="#dodtp6fb20061-1313-4625-933c-89db61b93a0a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Aus dem objektorientierten Design haben wir gelernt, dass Klassen nicht fest miteinander
+                                                   verzahnt, sondern lose gekoppelt sein sollen. Das bedeutet, Klassen sollten nicht
+                                                   zu viel über andere Klassen wissen, und die Interaktion soll über wohldefinierte Schnittstellen
+                                                   erfolgen, sodass die Klassen später noch verändert werden können. Die lose Kopplung
+                                                   hat viele Vorteile, da so die Wiederverwendung erhöht und das Programm änderungsfreundlicher
+                                                   wird. Wir wollen dies an einem Beispiel prüfen.
+                                                </p>
+                                                <p>In einer Datenstruktur sollen Kundendaten gespeichert werden. Zu dieser Datenquelle
+                                                   gibt es eine grafische Oberfläche, die diese Daten anzeigt und verwaltet, etwa eine
+                                                   Eingabemaske. Wenn Daten eingegeben, gelöscht und verändert werden, sollen sie in
+                                                   die Datenstruktur übernommen werden. Den anderen Weg von der Datenstruktur in die
+                                                   Visualisierung werden wir gleich beleuchten. Bereits jetzt haben wir eine Verbindung
+                                                   zwischen Eingabemaske und Datenstruktur, und wir müssen aufpassen, dass wir uns im
+                                                   Design nicht verzetteln, denn vermutlich läuft die Programmierung darauf hinaus, dass
+                                                   beide fest miteinander verbunden sind. Wahrscheinlich wird die grafische Oberfläche
+                                                   irgendwie über die Datenstruktur Bescheid wissen, und bei jeder Änderung in der Eingabemaske
+                                                   werden direkt Methoden der konkreten Datenstruktur aufgerufen. Das wollen wir vermeiden.
+                                                   Genauso haben wir nicht bedacht, was passiert, wenn nun infolge weiterer Programmversionen
+                                                   eine grafische Repräsentation der Daten etwa in Form eines Balkendiagramms gezeichnet
+                                                   wird. Und was geschieht, wenn der Inhalt der Datenstruktur über eine andere Programmstelle
+                                                   geändert wird und dann einen Neuaufbau der Bildschirmdarstellung erzwingt? Hier verfangen
+                                                   wir uns in einem Knäuel von Methodenaufrufen, und änderungsfreundlich ist dies dann
+                                                   auch nicht mehr. Was ist, wenn wir nun unsere selbst gestrickte Datenstruktur durch
+                                                   eine SQL-Datenbank ersetzen wollen?
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6fb20061-1313-4625-933c-89db61b93a0a" name="dodtp6fb20061-1313-4625-933c-89db61b93a0a"></a><h3 class="t3"><span class="cfett">10.2.1</span><span class="cfett"> Motivation für Design-Pattern</span><a href="#dodtpc9ce33d4-addc-4854-b5f0-4d8fe649423e"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa1401ab7-6470-4217-bc05-d2973590bbe8"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir sind nicht die Ersten, die sich über grundlegende Design-Kriterien Gedanken machen.
+                                                   Vor dem objektorientierten Programmieren (OOP) gab es das strukturierte Programmieren,
+                                                   und die Entwickler waren froh, mit Werkzeugen schneller und einfacher Software bauen
+                                                   zu können. Auch die Assembler-Programmierer waren erfreut, strukturiertes Programmieren
+                                                   zur Effizienzsteigerung einsetzen zu können &#8211; sie haben ja auch Unterprogramme nur
+                                                   deswegen eingesetzt, weil sich mit ihnen wieder ein paar Bytes sparen ließen. Doch
+                                                   nach Assembler und dem strukturierten Programmieren sind wir nun bei der Objektorientierung
+                                                   angelangt, und dahinter zeichnet sich bisher kein revolutionäres Programmierparadigma
+                                                   ab. Die Softwarekrise hat zu neuen Konzepten geführt, doch merkt fast jedes Entwicklungsteam,
+                                                   dass OO nicht alles ist, sondern nur ein verwunderter Ausspruch nach drei Jahren Entwicklungsarbeit
+                                                   an einem schönen Finanzprogramm: »Oh, oh, alles Mist.« So schön OO auch ist, wenn
+                                                   sich 10.000 Klassen im Klassendiagramm tummeln, ist das genauso unübersichtlich wie
+                                                   ein FORTRAN-Programm mit 10.000 Zeilen. Da in der Vergangenheit oft gutes Design für
+                                                   ein paar Millisekunden Laufzeit geopfert wurde, ist es nicht verwunderlich, dass Programme
+                                                   nicht mehr lesbar sind. Doch wie am Beispiel des Satzprogramms TeX (etwa 1985) zu
+                                                   sehen ist: Code lebt länger als Hardware, und die nächste Generation von Mehrkernprozessoren
+                                                   wird sich bald in unseren Desktop-PCs nach Arbeit sehnen.
+                                                </p>
+                                                <p>Es fehlt demnach eine Ebene über den einzelnen Klassen und Objekten, denn die Objekte
+                                                   selbst sind nicht das Problem, vielmehr ist es die Kopplung. Hier helfen Regeln weiter,
+                                                   die unter dem Stichwort <span class="cbegriff">Entwurfsmuster</span><a class="indexterm" id="dodtpf2512b32-8738-4228-8952-09c5afe9a62f"></a> (engl. <span class="cbegriff">design patterns</span><a class="indexterm" id="dodtp43aebfae-a252-4e10-bf19-8571784ff7ca"></a>) bekannt geworden sind. Dies sind Tipps von Softwaredesignern, denen aufgefallen
+                                                   war, dass viele Probleme auf ähnliche Weise gelöst werden können. Sie haben daher
+                                                   Regelwerke mit Lösungsmustern aufgestellt, die eine optimale Wiederverwendung von
+                                                   Bausteinen und Änderungsfreundlichkeit aufweisen. Design-Patterns ziehen sich durch
+                                                   die ganze Java-Klassenbibliothek, und die bekanntesten sind das Beobachter-(Observer-)Pattern,
+                                                   Singleton, Fabrik<a class="indexterm" id="dodtp01d732b5-094a-44d6-8fb7-3d83b8329709"></a> (Factory<a class="indexterm" id="dodtpe2450d2d-71b9-4f6d-be6f-6a4f39d373a0"></a>) und Composite; die Fabrik und das Singleton haben wir bereits kennengelernt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc9ce33d4-addc-4854-b5f0-4d8fe649423e" name="dodtpc9ce33d4-addc-4854-b5f0-4d8fe649423e"></a><h3 class="t3"><span class="cfett">10.2.2</span><span class="cfett"> Das Beobachter-Pattern (Observer/Observable)</span><a href="#dodtpe24ef2f8-9202-4e69-85d4-0ebdbf70d0ca"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp6fb20061-1313-4625-933c-89db61b93a0a"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Wir wollen uns nun mit dem Observer-Pattern beschäftigen, das seine Ursprünge in Smalltalk-80
+                                                   hat. Dort ist es etwas erweitert unter dem Namen MVC (Model-View-Controller<a class="indexterm" id="dodtp593fce1e-bd5b-45c7-b5a6-ff456a45f47a"></a>) bekannt, ein Kürzel, mit dem auch wir uns noch näher beschäftigen müssen, da dies
+                                                   ein ganz wesentliches Konzept bei der Programmierung grafischer Bedieneroberflächen
+                                                   mit Swing ist.
+                                                </p>
+                                                <p>Stellen wir uns eine Party mit einer netten Gesellschaft vor. Hier finden sich zurückhaltende,
+                                                   passive Gäste und aktive Erzähler. Die Zuhörer sind interessiert an den Gesprächen
+                                                   der Unterhalter. Da die Erzähler nun von den Zuhörern beobachtet werden, bekommen
+                                                   sie den Namen <span class="cbegriff">Beobachtete</span>, auf Englisch auch <span class="cbegriff">observables</span> (Beobachtbare) genannt. Die Erzähler interessieren sich jedoch nicht dafür, wer ihnen
+                                                   zuhört. Für sie sind alle Zuhörer gleich. Sie schweigen aber, wenn ihnen überhaupt
+                                                   niemand zuhört. Die Zuhörer reagieren auf Witze der Unterhalter und werden dadurch
+                                                   zu <span class="cbegriff">Beobachtern</span> (engl. <span class="cbegriff">observers</span>).
+                                                </p><a id="dodtpddc32c6d-f949-4854-9051-5fde7bad88ce" name="dodtpddc32c6d-f949-4854-9051-5fde7bad88ce"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Klasse Observable und die Schnittstelle Observer</span></h4>
+                                                <p>Unser Beispiel mit den Erzählern und Zuhörern können wir auf Datenstrukturen übertragen.
+                                                   Die Datenstruktur lässt sich beobachten und wird zum Beobachteten. Sie wird in Java
+                                                   als Exemplar der Bibliotheksklasse <span class="clisting">Observable</span><a class="indexterm" id="dodtp965247b3-95db-4f64-8e56-038b26b9b7b5"></a> repräsentiert. Der Beobachter wird durch die Schnittstelle <span class="clisting">Observer</span><a class="indexterm" id="dodtp94a73350-1aaa-4ddd-87a2-50bec2027b20"></a> abgedeckt und ist der, der informiert werden will, wenn sich die Datenstruktur ändert.
+                                                   Jedes Exemplar der <span class="clisting">Observable</span>-Klasse informiert nun alle seine Horcher, sobald sich sein Zustand ändert. Denken
+                                                   wir wieder an unser ursprüngliches Beispiel mit der Visualisierung. Wenn wir nun zwei
+                                                   Ansichten der Datenstruktur haben, etwa die Eingabemaske und ein Balkendiagramm, dann
+                                                   ist es der Datenstruktur egal, wer an den Änderungen interessiert ist. Ein anderes
+                                                   Beispiel: Die Datenstruktur enthält einen Wert, der durch einen Schieberegler und
+                                                   ein Textfeld angezeigt wird. Beide Bedienelemente wollen informiert werden, wenn sich
+                                                   dieser Wert ändert. Es gibt viele Beispiele für diese Konstellation, sodass die Java-Entwickler
+                                                   die Klasse <span class="clisting">Observable</span> und die Schnittstelle <span class="clisting">Observer</span> mit in die Standardbibliothek aufgenommen haben. Noch besser wäre die Entscheidung
+                                                   gewesen, die Funktionalität in die oberste Klasse <span class="clisting">Object</span> aufzunehmen, so wie es Smalltalk macht.
+                                                </p><a id="dodtpe058303f-99ad-4459-8119-0acbb4c06a49" name="dodtpe058303f-99ad-4459-8119-0acbb4c06a49"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Klasse Observable</span></h4>
+                                                <p>Eine Klasse, deren Exemplare sich beobachten lassen, muss jede Änderung des Objektzustands
+                                                   nach außen hin mitteilen. Dazu bietet die Klasse <span class="clisting">Observable</span> die Methoden <span class="clisting">setChanged()</span><a class="indexterm" id="dodtpc61d0ab1-6e1c-4f2b-9613-a89b2b483dc8"></a> und <span class="clisting">notifyObservers()</span><a class="indexterm" id="dodtpa4065cb5-84cf-4154-af31-1125ba7c9de3"></a> an. Mit <span class="clisting">setChanged()</span><a class="indexterm" id="dodtp684c30ea-a2e8-4eca-b374-6aa80d15d71e"></a> wird die Änderung angekündigt, und mit <span class="clisting">notifyObservers()</span> wird sie tatsächlich übermittelt. Gibt es keine Änderung, so wird <span class="clisting">notifyObservers()</span> auch niemanden benachrichtigen.
+                                                </p>
+                                                <p>Wir wollen nun das Party-Szenario in Java implementieren. Dazu schreiben wir eine
+                                                   Klasse <span class="clisting">JokeTeller</span>, deren Objekte einen Witz erzählen können. Sie machen mit <span class="clisting">setChanged()</span> auf eine Änderung ihres Zustands aufmerksam und versorgen dann mit <span class="clisting">notifyObservers()</span> die Zuhörer mit dem Witz in Form einer Zeichenkette:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.1: </strong>com/tutego/insel/pattern/observer/JokeTeller.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.ds.observer;<br><br>import java.util.*;<br><br>class JokeTeller extends Observable<br>{<br>  private static final List&lt;String&gt; jokes = Arrays.asList(<br>    "Sorry, aber du siehst so aus, wie ich mich fühle.",<br>    "Eine Null kann ein bestehendes Problem verzehnfachen.",<br>    "Wer zuletzt lacht, hat es nicht eher begriffen.",<br>    "Wer zuletzt lacht, stirbt wenigstens fröhlich.",<br>    "Unsere Luft hat einen Vorteil: Man sieht, was man einatmet."<br>  );<br><br>  public void tellJoke()<br>  {<br>   <span class="cfett"> setChanged();</span><span class="clisting"><br>    </span><span class="cfett">Collections.shuffle( jokes );</span><span class="clisting"><br>    </span><span class="cfett">notifyObservers( jokes.get(0) );</span><span class="clisting"><br>  </span>}<br>}<br></pre></div>
+                                                <p><span class="clisting">setChanged()</span> setzt intern ein Flag, das von <span class="clisting">notifyObservers()</span> abgefragt wird. Nach dem Aufruf von <span class="clisting">notifyObservers()</span> wird dieses Flag wieder gelöscht. Dies kann auch manuell mit <span class="clisting">clearChanged()</span> geschehen. <span class="clisting">notifyObservers()</span> sendet nur dann eine Benachrichtigung an die Zuhörer, wenn auch das Flag gesetzt
+                                                   ist. So kommen folgende Programmzeilen häufig zusammen vor, da sie das Flag setzen
+                                                   und alle Zuhörer informieren:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">setChanged();               // Eine Änderung ist aufgetreten<br>notifyObservers( Object );  // Informiere Observer über Änderung<br></pre></div>
+                                                <p>Die <span class="clisting">notifyObservers()</span>-Methode existiert auch ohne extra Parameter. Sie entspricht einem <span class="clisting">notifyObservers(null)</span>. Mit der Methode <span class="clisting">hasChanged()</span> können wir herausfinden, ob das Flag der Änderung gesetzt ist.
+                                                </p><a href="bilder/10_001.png" rel="lightbox" title="Klassendiagramm für Observable und Observer"><img class="bild" border="1" src="bilderklein/klein10_001.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 10.1: </strong>Klassendiagramm für Observable und Observer
+                                                </p>
+                                                <p>Interessierte Beobachter müssen sich am <span class="clisting">Observable</span>-Objekt mit der Methode <span class="clisting">addObserver(Observer)</span> anmelden. Dabei sind aber keine beliebigen Objekte als Beobachter erlaubt, sondern
+                                                   nur solche, die die Schnittstelle <span class="clisting">Observer</span> implementieren. Sie können sich mit <span class="clisting">deleteObserver(Observer)</span> wieder abmelden. Die Anzahl der angemeldeten Observer teilt uns <span class="clisting">countObservers()</span> mit. Leider ist die Namensgebung etwas unglücklich, da Klassen mit der Endung »able«
+                                                   eigentlich immer Schnittstellen sein sollten. Genau das ist hier aber nicht der Fall.
+                                                   Der Name <span class="clisting">Observer</span> bezeichnet überraschenderweise eine Schnittstelle, und hinter dem Namen <span class="clisting">Observable</span> verbirgt sich eine echte Klasse.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               <div class="listing"><pre class="prettyprint">
+class java.util.<span class="cfett">Observable</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void addObserver(Observer o)</span><br>Fügt einen <span class="clisting">Observer</span> hinzu. Das Argument darf nicht <span class="clisting">null</span> sein.
+                                                   </li>
+                                                   <li><span class="clisting">int countObservers()</span><br>Liefert die Anzahl angemeldeter <span class="clisting">Observer</span>.
+                                                   </li>
+                                                   <li><span class="clisting">void deleteObserver(Observer o)</span><br>Entfernt den <span class="clisting">Observer o</span> wieder.
+                                                   </li>
+                                                   <li><span class="clisting">void deleteObservers()</span><br>Löscht alle angemeldeten Observer.
+                                                   </li>
+                                                   <li><span class="clisting">void setChanged()</span><br>Markiert das Objekt als sendebereit, sodass bei <span class="clisting">notifyObservers()</span> Meldungen gegeben werden.
+                                                   </li>
+                                                   <li><span class="clisting">void clearChanged()</span><br>Setzt den Zustand zurück, sodass bei <span class="clisting">notifyObservers()</span> keine Meldungen gegeben werden.
+                                                   </li>
+                                                   <li><span class="clisting">boolean hasChanged()</span><br>Liefert <span class="clisting">true</span>, wenn das Objekt im Meldemodus ist.
+                                                   </li>
+                                                   <li><span class="clisting">void notifyObservers(Object arg)</span><br>Liefert <span class="clisting">hasChanged()</span> wahr, dann informiert das <span class="clisting">Observable</span> alle <span class="clisting">Observer</span> und übergibt <span class="clisting">arg</span> der <span class="clisting">update()</span>-Methode.
+                                                   </li>
+                                                   <li><span class="clisting">void notifyObservers()</span><br>Entspricht <span class="clisting">notifyObservers(null)</span>.
+                                                   </li>
+                                                </ul><a id="dodtp88512345-3d6a-4200-a148-cae7e8b73e05" name="dodtp88512345-3d6a-4200-a148-cae7e8b73e05"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Die Schnittstelle Observer</span></h4>
+                                                <p>Das aktive Objekt, der Sender der Nachrichten, ist ein Exemplar der Klasse <span class="clisting">Observable</span>, das Benachrichtigungen an angemeldete Objekte schickt. Das aktive Objekt informiert
+                                                   alle zuhörenden Objekte, die die Schnittstelle <span class="clisting">Observer</span> implementieren müssen.
+                                                </p>
+                                                <p>Jetzt können wir für die Party auch die Zuhörer implementieren:</p>
+                                                <p class="plistingunter"><strong>Listing 10.2: </strong>com/tutego/insel/pattern/observer/JokeListener.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.observer;<br><br>import java.util.*;<br><br>class JokeListener<span class="cfett"> implements Observer</span><br>{<br>  final private String name;<br><br>  JokeListener( String name )<br>  {<br>    this.name = name;<br>  }<br><br>  @Override<span class="cfett"> public void update( Observable o, Object arg )</span><br>  {<br>    System.out.println( name + " lacht über: \"" + arg + "\"" );<br>  }<br>}<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">interface java.util.<span class="cfett">Observer</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">void update(Observable o, Object arg)</span><br>Wird bei Benachrichtigungen vom <span class="clisting">Observable o</span> aufgerufen. Als zweites Argument trifft die über <span class="clisting">notifyObservers(Object)</span> verschickte Nachricht ein. Bei der parameterlosen Variante <span class="clisting">notifyObservers()</span> ist der aktuelle Parameter <span class="clisting">null</span>.<a class="indexterm" id="dodtpe9883221-35ec-417b-b57b-98ddcb37ed7f"></a></li>
+                                                </ul><a id="dodtp0f1d834b-84fe-463b-983d-9c5e6c9d9346" name="dodtp0f1d834b-84fe-463b-983d-9c5e6c9d9346"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Party-Beispiel mit Observer/Observable</span></h4>
+                                                <p>Da auf einer echten Party die Zuhörer und Erzähler nicht fehlen dürfen, baut die dritte
+                                                   Klasse <span class="clisting">Party</span> nun echte Stimmung auf:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.3: </strong>com/tutego/insel/pattern/observer/Party.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.observer;<br><br>import java.util.*;<br><br>public class Party<br>{<br>  public static void main( String[] args )<br>  {<br>    Observer achim    = new JokeListener( "Achim" );<br>    Observer michael  = new JokeListener( "Michael" );<br>    JokeTeller chris  = new JokeTeller();<br><br>    chris.addObserver( achim );<br><br>    chris.tellJoke();<br>    chris.tellJoke();<br><br>    chris.addObserver( michael );<br><br>    chris.tellJoke();<br><br>    chris.deleteObserver( achim );<br><br>    chris.tellJoke();<br>  }<br>}<br></pre></div>
+                                                <p>Wir melden zwei Zuhörer nacheinander an und einen wieder ab. Dann geht das Lachen
+                                                   los.
+                                                </p><a id="dodtp66bdbe78-3b14-4312-9682-f67e4964bf8b" name="dodtp66bdbe78-3b14-4312-9682-f67e4964bf8b"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Schwierigkeiten von Observer/Observable</span></h4>
+                                                <p>Die Typen <span class="clisting">Observer</span>/<span class="clisting">Observable</span> bieten eine grundlegende Möglichkeit, das Beobachter-Muster in Java zu realisieren.
+                                                   Allerdings gibt es ein paar Dinge, die Entwickler sich noch zusätzlich wünschen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Die Typen <span class="clisting">Observer</span>/<span class="clisting">Observable</span> sind nicht generisch deklariert, was dazu führt, dass bei <span class="clisting">update()</span> immer nur alles als <span class="clisting">Object</span> übergeben werden kann. In <span class="clisting">update()</span> muss der Typ des Objekts oft auf den wirklichen Typ »hochgecastet« werden, um etwa
+                                                      Daten aus dem Ereignisobjekt zu entnehmen.
+                                                   </li>
+                                                   <li>Oder <span class="clisting">Observer</span> deklariert nur genau eine <span class="clisting">update()</span>-Methode. Wenn der Ereignisauslöser unterschiedliche Ereignisse melden möchte, gibt
+                                                      es nur eine Lösung: unterschiedliche Ergebnis-Objekte. Das wiederum führt zu Fallunterscheidungen
+                                                      in der <span class="clisting">update()</span>-Methode, und die Codequalität verschlechtert sich. Besser wären mehrere <span class="clisting">update()</span>-Methoden, die im Optimalfall auch nicht einfach nur <span class="clisting">update()</span> hießen, sondern semantisch starke Namen tragen würden. Das Interessante ist, dass
+                                                      bei verschiedenen Methoden auch gar kein Event-Objekt mehr nötig wäre, sodass dieses
+                                                      Modell ohne Zustand auskäme, solange keine Ereignisdaten zu übermitteln sind.
+                                                   </li>
+                                                </ul>
+                                                <p>Um das erste Problem zu lösen, können wir eine generische Deklaration der Schnittstelle/Klasse
+                                                   angeben:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.4: </strong>com/tutego/insel/pattern/observer/generic/Observer.java, Observer
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">interface Observer&lt;T&gt;<br>{<br>  public void update( Observable&lt;T&gt; o, T arg );<br>}<br></pre></div>
+                                                <p class="plistingunter"><strong>Listing 10.5: </strong>com/tutego/insel/pattern/observer/generic/Observable.java, Observable
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Observable&lt;T&gt;<br>{<br>  private final List&lt;Observer&lt;T&gt;&gt; observers = new ArrayList&lt;Observer&lt;T&gt;&gt;();<br><br>  public void addObserver( Observer&lt;T&gt; observer )<br>  {<br>    if ( ! observers.contains( observer ) )<br>      observers.add( observer );<br>  }<br><br>  public void deleteObserver( Observer&lt;?&gt; observer )<br>  {<br>    observers.remove( observer );<br>  }<br><br>  public void notifyObservers( T arg )<br>  {<br>    for ( Observer&lt;T&gt; observer : observers )<br>      observer.update( this, arg );<br>  }<br>}<br></pre></div>
+                                                <p>Um es einfach zu halten, sind nur die zentralen Methoden in <span class="clisting">Observable</span> realisiert, und die Frage der Nebenläufigkeit wurde beiseitegeschoben.
+                                                </p>
+                                                <p>Kommen wir zu unserem Party-Beispiel zurück: Dann ist das Ereignis vom Typ <span class="clisting">String</span>, sodass der <span class="clisting">JokeListener</span> daraufhin <span class="clisting">Observer&lt;String&gt;</span> implementiert und <span class="clisting">update(Observable&lt;String&gt; o, String arg)</span> realisiert und der <span class="clisting">JokeTeller</span> die Klasse <span class="clisting">Observable&lt;String&gt;</span> erweitert.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe24ef2f8-9202-4e69-85d4-0ebdbf70d0ca" name="dodtpe24ef2f8-9202-4e69-85d4-0ebdbf70d0ca"></a><h3 class="t3"><span class="cfett">10.2.3</span><span class="cfett"> Ereignisse über Listener</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp66bdbe78-3b14-4312-9682-f67e4964bf8b"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine zweite Variante zur Implementierung des Beobachter-Musters sind <span class="cbegriff">Listener</span><a class="indexterm" id="dodtpbad871b7-0d68-4f94-a96e-b1debcdc2895"></a>. Sie lösen die beiden genannten Probleme von eben. Es gibt Ereignisauslöser, die
+                                                   spezielle Ereignis-Objekte aussenden, und Interessenten, die sich bei den Auslösern
+                                                   an- und abmelden. Die beteiligten Klassen und Schnittstellen folgen einer bestimmten
+                                                   Namenskonvention; <span class="clisting">XXX</span> steht im Folgenden stellvertretend für einen Ereignisnamen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Eine Klasse für die Ereignisobjekte heißt <span class="clisting">XXXEvent</span>. Die Ereignisobjekte können Informationen wie Auslöser, Zeitstempel und weitere Daten
+                                                      speichern.
+                                                   </li>
+                                                   <li>Die Interessenten implementieren als Listener eine Java-Schnittstelle, die <span class="clisting">XXXListener</span> heißt. Die Operation der Schnittstelle kann beliebig lauten, doch wird ihr üblicherweise
+                                                      das <span class="clisting">XXXEvent</span> übergeben. Anders als beim <span class="clisting">Observer</span>/<span class="clisting">Observable</span> kann diese Schnittstelle auch mehrere Operationen vorschreiben.
+                                                   </li>
+                                                   <li>Der Ereignisauslöser bietet Methoden <span class="clisting">addXXXListener(XXXListener)</span> und <span class="clisting">removeXXXListener(XXXListener)</span> an, um Interessenten an- und abzumelden. Immer dann, wenn ein Ereignis stattfindet,
+                                                      erzeugt der Auslöser das Ereignisobjekt <span class="clisting">XXXEvent</span> und informiert jeden Listener, der in der Liste eingetragen ist, über einen Aufruf
+                                                      der Methode aus dem Listener.
+                                                   </li>
+                                                </ul>
+                                                <p>Ein Beispiel soll die beteiligten Typen verdeutlichen:</p><a id="dodtpd8232f3f-242c-4b2e-b074-c93030da2df3" name="dodtpd8232f3f-242c-4b2e-b074-c93030da2df3"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Radios spielen Werbung</span></h4>
+                                                <p>Ein Radio soll für Werbungen <span class="clisting">AdEvent</span>-Objekte aussenden. Die Ereignis-Objekte sollen den Werbespruch (Slogan) speichern:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.6: </strong>com/tutego/insel/pattern/listener/AdEvent.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.listener;<br><br>import java.util.EventObject;<br><br>public class<span class="cfett"> AdEvent extends EventObject</span><br>{<br>  private String slogan;<br><br>  public AdEvent( Object source, String slogan )<br>  {<br>    super( source );<br>    this.slogan = slogan;<br>  }<br><br>  public String getSlogan()<br>  {<br>    return slogan;<br>  }<br>}<br></pre></div>
+                                                <p>Die Klasse <span class="clisting">AdEvent</span> erweitert die Java-Basisklasse <span class="clisting">EventObject</span><a class="indexterm" id="dodtp894de7ed-5d9f-47d0-9b90-2cc4a24b31c2"></a>, eine Klasse, die alle Ereignis-Klassen erweitern. Der parametrisierte Konstruktor
+                                                   von <span class="clisting">AdEvent</span> nimmt im ersten Parameter den Ereignisauslöser an und gibt ihn mit <span class="clisting">super(source)</span> an den Konstruktor der Oberklasse weiter, der ihn speichert und mit <span class="clisting">getSource()</span> wieder verfügbar macht. Der zweite Parameter vom <span class="clisting">AdEvent</span>-Konstruktor ist unsere Werbung.
+                                                </p>
+                                                <p>Der <span class="clisting">AdListener</span> ist die Schnittstelle, die Interessenten implementieren:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.7: </strong>com/tutego/insel/pattern/listener/AdListener.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.listener;<br><br>import java.util.EventListener;<br><br>interface<span class="cfett"> AdListener extends EventListener</span><br>{<br>  void<span class="cfett"> advertisement( AdEvent e )</span>;<br>}<br></pre></div>
+                                                <p>Unser <span class="clisting">AdListener</span> implementiert die Schnittstelle <span class="clisting">EventListener</span><a class="indexterm" id="dodtp16204e70-90b1-40c3-a18f-29ccd6f7e9dc"></a> (eine Markierungsschnittstelle), die alle Java-Listener implementieren sollen. Wir
+                                                   schreiben für konkrete Listener nur eine Operation <span class="clisting">advertisement()</span> vor.
+                                                </p><a href="bilder/10_002.png" rel="lightbox" title="Klassendiagramm von AdListener, das EdEvent referenziert"><img class="bild" border="1" src="bilderklein/klein10_002.png" alt="Abbildung"></a><p class="pbildunter"><strong>Abbildung 10.2: </strong>Klassendiagramm von AdListener, das EdEvent referenziert
+                                                </p>
+                                                <p>Das Radio soll nun Interessenten an- und abmelden können. Es sendet über einen Timer
+                                                   Werbenachrichten. Das Spannende an der Implementierung ist die Tatsache, dass die
+                                                   Listener nicht in einer eigenen Datenstruktur verwaltet werden, sondern dass eine
+                                                   spezielle Listener-Klasse aus dem Swing-Paket verwendet wird:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 10.8: </strong>com/tutego/insel/pattern/listener/Radio.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.listener;<br><br>import java.util.*;<br>import javax.swing.event.EventListenerList;<br><br>public class Radio<br>{<br>  private<span class="cfett"> EventListenerList listeners = new EventListenerList()</span>;<br><br>  private List&lt;String&gt; ads = Arrays.asList( "Jetzt explodiert auch der Haarknoten",<br>                                            "Red Fish verleiht Flossen",<br>                                            "Bom Chia Wowo",<br>                                            "Wunder Whip. Iss milder." );<br><br>  public Radio()<br>  {<br>    new Timer().schedule( new TimerTask()<br>    {<br>      @Override public void run()<br>      {<br>          Collections.shuffle( ads );<br>         <span class="cfett"> notifyAdvertisement( new AdEvent( this, ads.get(0) ) );</span><br>      }<br>    }, 0, 500 );<br>  }<br><br>  public void<span class="cfett"> addAdListener( AdListener listener )</span><br>  {<br>   <span class="cfett"> listeners.add( AdListener.class, listener );</span><br>  }<br><br>  public<span class="cfett"> void removeAdListener( AdListener listener )</span><br>  {<br>   <span class="cfett"> listeners.remove( AdListener.class, listener );</span><br>  }<br><br>  protected synchronized void<span class="cfett"> notifyAdvertisement( AdEvent event )</span><br>  {<br>    for (<span class="cfett"> AdListener l : listeners.getListeners( AdListener.class )</span> )<br>     <span class="cfett"> l.advertisement( event )</span>;<br>  }<br>}<br></pre></div>
+                                                <p>Die Demo-Anwendung nutzt das Radio-Objekt und implementiert einen konkreten Listener:</p>
+                                                <div class="listing"><pre class="prettyprint">package com.tutego.insel.pattern.listener;<br><br>public class RadioDemo<br>{<br>  public static void main( String args[] )<br>  {<br>    Radio r = new Radio();<br><br>    class ComplainingAdListener<span class="cfett"> implements AdListener</span> {<br>      @Override public void<span class="cfett"> advertisement( AdEvent e )</span> {<br>        System.out.println( "Oh nein, schon wieder Werbung: " +<span class="cfett"> e.getSlogan()</span> );<br>      }<br>    }<br><br>    r.<span class="cfett">addAdListener( new ComplainingAdListener() )</span>;<br>  }<br>}<br></pre></div>
+                                                <p>Die Java API-Dokumentation enthält einige generische Typen:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">class javax.swing.event.<span class="cfett">EventListenerList</span><br></pre></div>
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <ul class="gp">
+                                                   <li><span class="clisting">EventListenerList()</span><br>Erzeugt eine Klasse zum Speichern von Listenern.
+                                                   </li>
+                                                   <li><span class="clisting">&lt;T extends EventListener&gt; void add(Class&lt;T&gt; t, T l)</span><br>Fügt einen Listener <span class="clisting">l</span> vom Typ <span class="clisting">T</span> hinzu.
+                                                   </li>
+                                                   <li><span class="clisting">Object[] getListenerList()</span><br>Liefert ein Feld aller Listener.
+                                                   </li>
+                                                   <li><span class="clisting">&lt;T extends EventListener&gt; T[] getListeners(Class&lt;T&gt; t)</span><br>Liefert ein Feld aller Listener vom Typ <span class="clisting">t</span>.
+                                                   </li>
+                                                   <li><span class="clisting">int getListenerCount()</span><br>Nennt die Anzahl aller Listener.
+                                                   </li>
+                                                   <li><span class="clisting">int getListenerCount(Class&lt;?&gt; t)</span><br>Nennt die Anzahl der Listener vom Typ <span class="clisting">t</span>.
+                                                   </li>
+                                                   <li><span class="clisting">&lt;T extends EventListener&gt; void remove(Class&lt;T&gt; t, T l)</span><br>Entfernt den Listener <span class="clisting">l</span> aus der Liste.
+                                                   </li>
+                                                </ul><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_10_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="10 Architektur, Design und angewandte Objektorientierung"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_10_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_10_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

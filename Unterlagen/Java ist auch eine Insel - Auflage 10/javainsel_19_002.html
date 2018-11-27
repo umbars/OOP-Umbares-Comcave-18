@@ -1,0 +1,777 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 19 Die Werkzeuge des JDK">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 19 Die Werkzeuge des JDK">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 19 Die Werkzeuge des JDK</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_19_001.html">
+      <link rel="next" href="javainsel_19_003.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_19_001.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_19_003.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599" class="navnav">19 Die Werkzeuge des JDK</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_001.html#dodtp1e8a6d29-cf60-447c-97df-b1110b14de71" class="navnav">19.1 Java-Quellen übersetzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtpc7de6809-b374-46c0-97fd-568067a1388c" class="navnav">19.1.1 Java-Compiler vom JDK</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtp6ef21760-a62e-4151-a224-ad3a00786b8c" class="navnav">19.1.2 Native Compiler</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_001.html#dodtp82517158-b575-4d6f-994b-61d8029d1af7" class="navnav">19.1.3 Java-Programme in ein natives ausführbares Programm einpacken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_002.html#dodtpc3766252-c5fc-4ff7-9e02-af2088923721" class="navh">19.2 Die Java-Laufzeitumgebung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_003.html#dodtp1a9d4f91-c145-476c-a2a7-810769ef62ec" class="navnav">19.3 Dokumentationskommentare mit JavaDoc</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtp6602ae49-5bca-48e1-ad44-fc235a602ea3" class="navnav">19.3.1 Einen Dokumentationskommentar setzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpbf399d2e-fe9d-4f3a-a9a4-d8a888a314fa" class="navnav">19.3.2 Mit dem Werkzeug javadoc eine Dokumentation erstellen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpa982f893-694a-4398-9722-a7b97a9bdb08" class="navnav">19.3.3 HTML-Tags in Dokumentationskommentaren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpe49d64cd-ec8e-49bb-8d3b-ec8345f75f34" class="navnav">19.3.4 Generierte Dateien</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpc6208a95-ea2a-4930-b445-9f9bff42fedc" class="navnav">19.3.5 Dokumentationskommentare im Überblick *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtp13a44db8-0b63-48bb-bd54-ec61e8636f3a" class="navnav">19.3.6 JavaDoc und Doclets *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_003.html#dodtpc077a3e1-f06a-4380-99ca-d208b9d9b5a6" class="navnav">19.3.7 Veraltete (deprecated) Typen und Eigenschaften</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_19_004.html#dodtpd4c1ed80-fb19-481b-8746-87562e566087" class="navnav">19.4 Das Archivformat Jar</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtp677e8bc8-bc0c-46c6-80f8-a2ec09db688d" class="navnav">19.4.1 Das Dienstprogramm jar benutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtpf588fa3b-2575-49b6-bb34-e7c9a1d3b5d6" class="navnav">19.4.2 Das Manifest</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_19_004.html#dodtp8b5b644e-032b-4555-87ec-014b0f51f8af" class="navnav">19.4.3 Applikationen in Jar-Archiven starten</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpc3766252-c5fc-4ff7-9e02-af2088923721" name="dodtpc3766252-c5fc-4ff7-9e02-af2088923721"></a><h2 class="t2"><span class="cfett">19.2</span><span class="cfett"> Die Java-Laufzeitumgebung</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>Der Java-Interpreter java<a class="indexterm" id="dodtp34a407aa-d689-473c-afda-18a8cd5bffe8"></a> führt den Java-Bytecode in der Laufzeitumgebung aus. Dazu sucht der Interpreter in
+                                                   der als Parameter übergebenen Klassendatei nach der speziellen statischen <span class="clisting">main()</span>-Methode. Der allgemeine Aufruf ist:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> java [ Optionen ] Klassenname [ Argumente ]</span><br></pre></div>
+                                                <p>Ist die Klasse in einem Paket deklariert, muss der Name der Klasse voll qualifiziert
+                                                   sein. Liegt die Klasse <span class="clisting">Main</span> etwa im Paket <span class="clisting">com.tutego</span>, also im Unterverzeichnis com/tutego, muss der Klassenname <span class="clisting">com.tutego.Main</span> lauten. Die benötigten Klassen muss die Laufzeitumgebung finden können. Die JVM wertet
+                                                   wie der Compiler die Umgebungsvariable <span class="clisting">CLASSPATH</span><a class="indexterm" id="dodtpe44e173b-6fa4-49eb-96cf-c4cb804ca4e7"></a> aus und erlaubt die Angabe des Klassenpfades durch die Option -classpath<a class="indexterm" id="dodtpff7c2ded-d911-434f-9873-1274d4a33036"></a>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 19.2: </strong>Optionen des Interpreters java
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Option</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Bedeutung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-client
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Wählt die <span class="cbegriff">Java HotSpot Client VM</span>, Standard.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-server
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Wählt die <span class="cbegriff">Java HotSpot Server VM</span>.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-cp<a class="indexterm" id="dodtp4c94bacc-883c-4114-bae3-2859b8d274f8"></a> classpath
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Eine Liste von Pfaden, innerhalb derer der Compiler die Klassendateien finden kann.
+                                                            Diese Option überschreibt die unter Umständen gesetzte Umgebungsvariable <span class="clisting">CLASSPATH</span> und ergänzt sie nicht. Das Semikolon (Windows) beziehungsweise der Doppelpunkt (Unix)
+                                                            trennen mehrere Verzeichnisse.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-D <br>Property=Wert
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Setzt den Wert einer Property, etwa <span class="clisting">-Dversion=1.2</span>, die später <span class="clisting">System.getProperty()</span> erfragen kann.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-help oder -?
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Listet alle vorhandenen Optionen auf.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-ea<a class="indexterm" id="dodtpc777dc7c-c96f-49e1-b3f9-f8bc9fe8db3a"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Ermöglicht Assertions, die standardmäßig ausgeschaltet sind.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-jar
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Startet eine Klasse aus dem Jar-Archiv, falls sie in der Manifest-Datei genannt ist.
+                                                            Die Hauptklasse lässt sich aber immer noch angeben.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-verbose
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp6171a6dc-b921-4e58-bed1-8f630e9d9e33"></a>Informationen über die Laufzeitumgebung:
+                                                            <span class="clisting">-verbose:class</span> gibt Informationen über geladene Klassen.
+                                                            <span class="clisting">-verbose:gc</span> informiert über GC-Aufrufe.
+                                                            <span class="clisting">-verbose:jni</span> informiert über native Aufrufe.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-version
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zeigt die aktuelle Version an.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-X
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zeigt nicht standardisierte Optionen an.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xdebug
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Startet mit Debugger.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xincgc
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Schaltet den inkrementellen GC ein.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xms<a class="indexterm" id="dodtp8ddee4b8-5370-408b-8f78-fe92e47f6adc"></a>n
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Anfangsgröße des Speicherbereichs für die Allokation von Objekten <br>(n MiB), voreingestellt sind 2 MiB.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xmx<a class="indexterm" id="dodtp60cf5382-97d1-45ab-85ca-be0c913de072"></a>n
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Maximal verfügbarer Speicherbereich für die Allokation von Objekten. Voreingestellt
+                                                            sind 64 MiB. n beschreibt als einfache Zahl die Bytes oder Kilobytes mit einem angefügten k oder Megabytes (angefügtes m). Beispiel: <span class="clisting">-Xms128m</span>.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xnoclassgc
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpcd3160d1-0038-4922-8718-d53eed581293"></a>Schaltet den GC für geladene, aber nicht mehr benötigte Klassen aus.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xprof
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp76aab932-dd6d-4c4d-a1c1-f20037853866"></a>Der Interpreter schreibt Profiling-Informationen<a class="indexterm" id="dodtpa875ab41-9920-49ee-a9de-8029be6c9ec1"></a> in der Datei java.prof<a class="indexterm" id="dodtpc9ce3e71-aee5-43c1-bae9-99fd19104d62"></a>.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xrs<a class="indexterm" id="dodtped6c4f39-5a63-457f-9b42-8421679655f3"></a>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Reduziert intern die Verwendung von Unix-Signalen durch die Laufzeitumgebung. Das
+                                                            ergibt gegebenenfalls eine schlechtere Performance, aber eine bessere Kompatibilität
+                                                            mit diversen Unix-/Solaris-Versionen.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">-Xss<a class="indexterm" id="dodtp5593c74d-d13e-47ad-bc07-336d1d2e6d38"></a>n
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Setzt die Größe des Stacks.
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp0d89c288-078f-450a-bbbb-f72d73695904" name="dodtp0d89c288-078f-450a-bbbb-f72d73695904"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zusatzoptionen</span></h4>
+                                                <p>Mit der Option -X lassen sich weitere Schalter setzen und dann der Laufzeitumgebung Zusatzanweisungen
+                                                   geben, etwas über den maximal zu verwendenden Speicher. Ein interessanter Schalter
+                                                   ab Java 7 ist &#8211;XshowSettings, der die Zustände der Standardeigenschaften ausgibt. Das ist sehr nützlich, um etwa
+                                                   abzulesen, welche Pfade gesetzt sind. Angewendet auf das Quadrat-Programm aus dem
+                                                   Kapitel 1 ergibt sich dann:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> java -XshowSettings Quadrat</span><br>VM settings:<br>    Max. Heap Size (Estimated): 247.50M<br>    Ergonomics Machine Class: client<br>    Using VM: Java HotSpot(TM) Client VM<br><br>Property settings:<br>    awt.toolkit = sun.awt.windows.WToolkit<br>    file.encoding = Cp1252<br>    file.encoding.pkg = sun.io<br>    file.separator = \<br>    java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment<br>    java.awt.printerjob = sun.awt.windows.WPrinterJob<br>    java.class.path = .<br>        C:\Program Files\Java\jre7\lib\ext\QTJava.zip<br>    java.class.version = 51.0<br>    java.endorsed.dirs = C:\Program Files\Java\jre7\lib\endorsed<br>    java.ext.dirs = C:\Program Files\Java\jre7\lib\ext<br>        C:\windows\Sun\Java\lib\ext<br>    java.home = C:\Program Files\Java\jre7<br>    java.io.tmpdir = C:\Users\CHRIST~1\AppData\Local\Temp\<br>    java.library.path = C:\windows\SYSTEM32<br>        .<br>        C:\windows\Sun\Java\bin<br>        C:\windows\system32<br>        C:\windows<br>        C:\windows\SYSTEM32<br>        C:\windows<br>        C:\windows\SYSTEM32\WBEM<br>        C:\windows\SYSTEM32\WINDOWSPOWERSHELL\V1.0\<br>        C:\Program Files\QuickTime\QTSystem\<br>    java.runtime.name = Java(TM) SE Runtime Environment<br>    java.runtime.version = 1.7.0-ea-b143<br>    java.specification.name = Java Platform API Specification<br>    java.specification.vendor = Oracle Corporation<br>    java.specification.version = 1.7<br>    java.vendor = Oracle Corporation<br>    java.vendor.url = http://java.oracle.com/<br>    java.vendor.url.bug = http://bugreport.sun.com/bugreport/<br>    java.version = 1.7.0-ea<br>    java.vm.info = mixed mode, sharing<br>    java.vm.name = Java HotSpot(TM) Client VM<br>    java.vm.specification.name = Java Virtual Machine Specification<br>    java.vm.specification.vendor = Oracle Corporation<br>    java.vm.specification.version = 1.7<br>    java.vm.vendor = Oracle Corporation<br>    java.vm.version = 21.0-b13<br>    line.separator = \r \n<br>    os.arch = x86<br>    os.name = Windows 7<br>    os.version = 6.1<br>    path.separator = ;<br>    sun.arch.data.model = 32<br>    sun.boot.class.path = C:\Program Files\Java\jre7\lib\resources.jar<br>        C:\Program Files\Java\jre7\lib\rt.jar<br>        C:\Program Files\Java\jre7\lib\sunrsasign.jar<br>        C:\Program Files\Java\jre7\lib\jsse.jar<br>        C:\Program Files\Java\jre7\lib\jce.jar<br>        C:\Program Files\Java\jre7\lib\charsets.jar<br>        C:\Program Files\Java\jre7\classes<br>    sun.boot.library.path = C:\Program Files\Java\jre7\bin<br>    sun.cpu.endian = little<br>    sun.cpu.isalist = pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86<br>    sun.desktop = windows<br>    sun.io.unicode.encoding = UnicodeLittle<br>    sun.java.command = Quadrat<br>    sun.java.launcher = SUN_STANDARD<br>    sun.jnu.encoding = Cp1252<br>    sun.management.compiler = HotSpot Client Compiler<br>    sun.os.patch.level = Service Pack 1<br>    user.country = DE<br>    user.dir = C:\Users\Christian\Documents\My Dropbox\Insel\programme\1_01_Intro<br>    user.home = C:\Users\Christian<br>    user.language = de<br>    user.name = Christian<br>    user.script =<br>    user.timezone =<br>    user.variant =<br><br>Locale settings:<br>    default locale = Deutsch<br>    default display locale = Deutsch (Deutschland)<br>    default format locale = Deutsch (Deutschland)<br>    available locales = ar, ar_AE, ar_BH, ar_DZ, ar_EG, ar_IQ, ar_JO, ar_KW,<br>        ar_LB, ar_LY, ar_MA, ar_OM, ar_QA, ar_SA, ar_SD, ar_SY,<br>        ar_TN, ar_YE, be, be_BY, bg, bg_BG, ca, ca_ES,<br>        cs, cs_CZ, da, da_DK, de, de_AT, de_CH, de_DE,<br>        de_LU, el, el_CY, el_GR, en, en_AU, en_CA, en_GB,<br>        en_IE, en_IN, en_MT, en_NZ, en_PH, en_SG, en_US, en_ZA,<br>        es, es_AR, es_BO, es_CL, es_CO, es_CR, es_DO, es_EC,<br>        es_ES, es_GT, es_HN, es_MX, es_NI, es_PA, es_PE, es_PR,<br>        es_PY, es_SV, es_US, es_UY, es_VE, et, et_EE, fi,<br>        fi_FI, fr, fr_BE, fr_CA, fr_CH, fr_FR, fr_LU, ga,<br>        ga_IE, hi_IN, hr, hr_HR, hu, hu_HU, in, in_ID,<br>        is, is_IS, it, it_CH, it_IT, iw, iw_IL, ja,<br>        ja_JP, ja_JP_JP_#u-ca-japanese, ko, ko_KR, lt, lt_LT, lv, lv_LV,<br>        mk, mk_MK, ms, ms_MY, mt, mt_MT, nl, nl_BE,<br>        nl_NL, no, no_NO, no_NO_NY, pl, pl_PL, pt, pt_BR,<br>        pt_PT, ro, ro_RO, ru, ru_RU, sk, sk_SK, sl,<br>        sl_SI, sq, sq_AL, sr, sr_BA, sr_BA_#Latn, sr_CS, sr_ME,<br>        sr_ME_#Latn, sr_RS, sr_RS_#Latn, sr__#Latn, sv, sv_SE, th, th_TH,<br>        th_TH_TH_#u-nu-thai, tr, tr_TR, uk, uk_UA, vi, vi_VN, zh,<br>        zh_CN, zh_HK, zh_SG, zh_TW<br>Quadrat(1) = 1<br>Quadrat(2) = 4<br>Quadrat(3) = 9<br>Quadrat(4) = 16<br></pre></div><a id="dodtpe72e833b-f66c-4934-8ebe-e853ab453c04" name="dodtpe72e833b-f66c-4934-8ebe-e853ab453c04"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Class-Path-Wildcard</span></h4>
+                                                <p>Die Option -cp<a class="indexterm" id="dodtp4cb145fc-04d6-4995-9853-71e0d63a94fc"></a> erweitert den Klassenpfad durch Java-Archive (.jar-Dateien) und einzelne Klassen-Dateien (.class-Dateien). Seit Java 6 ermöglicht eine Class-Path-Wildcard über * eine noch einfachere Angabe von Java-Archiven. So fügt folgende Angabe alle Java-Archive
+                                                   im Verzeichnis lib dem Klassenpfad hinzu:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">$<span class="cfett"> java -cp lib/* Main</span><br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Je länger es die JVM von Oracle gibt, desto länger wurde die Liste der Optionen. <a href="http://blogs.sun.com/watt/resource/jvm-options-list.html" target="_blank">http://blogs.sun.com/watt/resource/jvm-options-list.html</a> listet diese je nach Version kurz auf.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp01605136-43e5-4b51-a6df-1aa4f84d0bd0" name="dodtp01605136-43e5-4b51-a6df-1aa4f84d0bd0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Unterschied zwischen java.exe und javaw.exe</span></h4>
+                                                <p>Unter einer Windows-Installation gibt es im Java-JDK für den Interpreter zwei ausführbare
+                                                   Dateien: java.exe und javaw.exe<a class="indexterm" id="dodtp87ac33ad-8b5f-44fa-bfa6-13d42c32a609"></a> &#8211; java.exe stellt die Regel dar. Der Unterschied besteht darin, dass eine über die grafische
+                                                   Oberfläche gestartete Applikation mit java.exe im Unterschied zu javaw.exe ein Konsolenfenster anzeigt. Ohne Konsolenfenster sind mit javaw dann auch Ausgaben über <span class="clisting">System.out</span>/<span class="clisting">err</span> nicht sichtbar.
+                                                </p>
+                                                <p>In der Regel nutzt ein Programm mit grafischer Oberfläche während der Entwicklung
+                                                   java und im Produktivbetrieb dann javaw.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_19_002.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="19 Die Werkzeuge des JDK"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_19_001.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_19_003.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

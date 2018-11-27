@@ -1,0 +1,1797 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 2 Imperative Sprachkonzepte">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 2 Imperative Sprachkonzepte</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_02_002.html">
+      <link rel="next" href="javainsel_02_004.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_02_002.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_02_004.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c" class="navnav">2 Imperative Sprachkonzepte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_001.html#dodtpb2fd0fcf-b156-46cc-b527-3b1c995ceda2" class="navnav">2.1 Elemente der Programmiersprache Java</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpb7c4555b-4fb9-44b2-972b-f26089f3680e" class="navnav">2.1.1 Token</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe51ad8f5-6b24-413b-95d4-47313dfd17ad" class="navnav">2.1.2 Textkodierung durch Unicode-Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp198e6635-37fa-413a-899a-3cd7a20feb60" class="navnav">2.1.3 Bezeichner</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp38fd5986-30c6-46a2-aa5c-debb5994292e" class="navnav">2.1.4 Literale</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp39a5f45c-7c3e-45c9-ac4f-aa3990938f43" class="navnav">2.1.5 Reservierte Schlüsselwörter</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtpe374a6da-7f2f-48ae-a8d6-27a2834709f6" class="navnav">2.1.6 Zusammenfassung der lexikalischen Analyse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_001.html#dodtp285d7310-67e3-4d7d-873d-040210c8559c" class="navnav">2.1.7 Kommentare</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_002.html#dodtp79c77b33-232b-4fd9-8020-aed1f814967f" class="navnav">2.2 Von der Klasse zur Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa6db7c65-20a9-4ac3-9632-b2bf5962bc03" class="navnav">2.2.1 Was sind Anweisungen?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpe51e5d37-92ec-4813-bc73-202534c31133" class="navnav">2.2.2 Klassendeklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp61716dd0-9a88-431c-9304-3c5bb9d5046d" class="navnav">2.2.3 Die Reise beginnt am main()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpc07f84a9-2c32-4114-b631-dac342c70c2b" class="navnav">2.2.4 Der erste Methodenaufruf: println()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp5d0320d4-db2a-4699-b8a5-685779fdd208" class="navnav">2.2.5 Atomare Anweisungen und Anweisungssequenzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpa64f286a-2280-4789-b0f7-5a48ad1ca82d" class="navnav">2.2.6 Mehr zu print(), println() und printf() für Bildschirmausgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8e70b07f-ab66-44c5-9432-6e16594a838a" class="navnav">2.2.7 Die API-Dokumentation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp91287998-6315-4861-a6d9-b44ff6313082" class="navnav">2.2.8 Ausdrücke</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtpb7641a1d-804e-4ec4-8190-5f21deeb4d80" class="navnav">2.2.9 Ausdrucksanweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp9a52eda5-f73d-49fd-b61a-2c0847ff8137" class="navnav">2.2.10 Erste Idee der Objektorientierung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp8fe538b5-0223-4bec-a2a0-b0b916fce8fd" class="navnav">2.2.11 Modifizierer</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_002.html#dodtp1469ef70-530f-427b-9a63-6e3109597584" class="navnav">2.2.12 Gruppieren von Anweisungen mit Blöcken</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_003.html#dodtpba664243-0cd9-4f96-b1d7-63063559438b" class="navh">2.3 Datentypen, Typisierung, Variablen und Zuweisungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793" class="navh">2.3.1 Primitive Datentypen im Überblick</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24" class="navh">2.3.2 Variablendeklarationen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp0ad9d773-6267-4f17-9485-542bc1a9464d" class="navh">2.3.3 Konsoleneingaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286" class="navh">2.3.4 Fließkommazahlen mit den Datentypen float und double</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148" class="navh">2.3.5 Ganzzahlige Datentypen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp650f6f62-69e1-48c9-852f-0267f7008bd5" class="navh">2.3.6 Wahrheitswerte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp67999bec-e430-40b1-87e6-0f85eca68221" class="navh">2.3.7 Unterstriche in Zahlen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c" class="navh">2.3.8 Alphanumerische Zeichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75" class="navh">2.3.9 Gute Namen, schlechte Namen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_003.html#dodtp85f17238-94fc-4a32-a473-149941bbef52" class="navh">2.3.10 Initialisierung von lokalen Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_004.html#dodtp10975d22-c270-4b0c-b104-fefd7c9d42a0" class="navnav">2.4 Ausdrücke, Operanden und Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp8f56fc89-b2d1-4d01-afe8-8a7de6707a72" class="navnav">2.4.1 Zuweisungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp57f3964b-49b1-476c-8776-c0f527294767" class="navnav">2.4.2 Arithmetische Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp0dcc0cab-c0de-4d74-9aff-d7a0088ff8fb" class="navnav">2.4.3 Unäres Minus und Plus</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp15b34aef-38a3-4549-930e-6053c19c8c61" class="navnav">2.4.4 Zuweisung mit Operation</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp55ed8bd0-c4f0-4a2d-95b8-421ed8290210" class="navnav">2.4.5 Präfix- oder Postfix-Inkrement und -Dekrement</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb215cb39-b959-4629-8054-0476644a4101" class="navnav">2.4.6 Die relationalen Operatoren und die Gleichheitsoperatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp844cb2de-7840-4ea8-b8e3-1bc7e4c1bd52" class="navnav">2.4.7 Logische Operatoren: Nicht, Und, Oder, Xor</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp44c70ec5-17d6-4493-bac6-218399d01cf8" class="navnav">2.4.8 Kurzschluss-Operatoren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpb218d93c-4f16-4a70-ac88-2cae6c5ba95e" class="navnav">2.4.9 Der Rang der Operatoren in der Auswertungsreihenfolge</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp6da52db5-da51-45ac-b690-bda1a07e51c6" class="navnav">2.4.10 Die Typanpassung (das Casting)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtpe890a7d4-e787-432c-861b-6eb511b4efbd" class="navnav">2.4.11 Überladenes Plus für Strings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_004.html#dodtp9c158ef1-11a0-4e8b-9b03-f0ae48cdacdf" class="navnav">2.4.12 Operator vermisst *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_005.html#dodtp9a8125a4-75a7-444d-bcdf-875237c3c605" class="navnav">2.5 Bedingte Anweisungen oder Fallunterscheidungen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpe6d58494-dfd5-496a-b3f1-d511fda06f27" class="navnav">2.5.1 Die if-Anweisung</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp5eb4de62-f7fe-4496-85c3-a1527fe0add0" class="navnav">2.5.2 Die Alternative mit einer if-else-Anweisung wählen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtpdc9312f1-8169-4dd3-932b-26e9ef01812e" class="navnav">2.5.3 Der Bedingungsoperator</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_005.html#dodtp8104e320-3a51-46e8-8680-6b90a01d8aa9" class="navnav">2.5.4 Die switch-Anweisung bietet die Alternative</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_006.html#dodtp223e4b55-5535-44b1-95de-1f0a4291fe40" class="navnav">2.6 Schleifen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp96cdf367-73c7-4c3e-abdc-9310bfb291fe" class="navnav">2.6.1 Die while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd6a08bb2-ab96-4889-881a-9727f83f3c2f" class="navnav">2.6.2 Die do-while-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp73f4b249-3332-434d-b850-dcad361f47aa" class="navnav">2.6.3 Die for-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtpd46bc956-131b-4d54-8228-199da1e4fe2e" class="navnav">2.6.4 Schleifenbedingungen und Vergleiche mit ==</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp36aea11f-ff17-49bc-b8ec-05229cdbac7a" class="navnav">2.6.5 Ausbruch planen mit break und Wiedereinstieg mit continue</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_006.html#dodtp8d6da46b-1759-4867-b239-b80531c1b4b0" class="navnav">2.6.6 break und continue mit Marken *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_007.html#dodtp0e6fae8f-4221-41a2-9467-2728f1eff1c7" class="navnav">2.7 Methoden einer Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp9749288b-d431-4ef2-a6c4-9e5f10d808f5" class="navnav">2.7.1 Bestandteil einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp276c899e-ddba-4bdb-a7e5-8cc151e0d588" class="navnav">2.7.2 Signatur-Beschreibung in der Java-API</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp30b37ea4-20c6-4a17-8c62-abf43b9ba963" class="navnav">2.7.3 Aufruf einer Methode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5bb656c8-555c-450d-aa12-40225755b81d" class="navnav">2.7.4 Methoden ohne Parameter deklarieren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp1343592a-eb8c-46bf-8387-3161fb4c4ae5" class="navnav">2.7.5 Statische Methoden (Klassenmethoden)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpfd200f22-4484-4549-b67f-c7ad97e8010a" class="navnav">2.7.6 Parameter, Argument und Wertübergabe</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp93faef7d-ac94-4338-8474-51fd9d9953f5" class="navnav">2.7.7 Methoden vorzeitig mit return beenden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpc71341eb-ac1c-4bcb-ab3e-d1c520ad66b9" class="navnav">2.7.8 Nicht erreichbarer Quellcode bei Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtpe2b68940-abbf-4160-9007-6f198b58f2a4" class="navnav">2.7.9 Methoden mit Rückgaben</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp709659a8-a37a-42b9-bc68-939aae7e848b" class="navnav">2.7.10 Methoden überladen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7ec06014-b9bb-46ba-8e60-7c16421b7ee8" class="navnav">2.7.11 Sichtbarkeit und Gültigkeitsbereich</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp7233a4b1-d5da-4d9b-a622-9c12fc6fa223" class="navnav">2.7.12 Vorgegebener Wert für nicht aufgeführte Argumente *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp81f49256-ccc6-4e96-9a2c-166ba4d2d711" class="navnav">2.7.13 Finale lokale Variablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp38783188-f284-4b11-a176-1a5965b8fc04" class="navnav">2.7.14 Rekursive Methoden *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_02_007.html#dodtp5cf47d83-746c-4cdd-bb56-f959a7802130" class="navnav">2.7.15 Die Türme von Hanoi *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_02_008.html#dodtp8c954866-e441-4214-8ffb-5b55cdf81c77" class="navnav">2.8 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpba664243-0cd9-4f96-b1d7-63063559438b" name="dodtpba664243-0cd9-4f96-b1d7-63063559438b"></a><h2 class="t2"><span class="cfett">2.3</span><span class="cfett"> Datentypen, Typisierung, Variablen und Zuweisungen</span><a href="#dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p><a class="indexterm" id="dodtp103e8fce-aa2e-4b85-8306-4ccd431f2c84"></a>Java nutzt, wie es für imperative Programmiersprachen typisch ist, Variablen zum Ablegen
+                                                   von Daten. Eine Variable ist ein reservierter Speicherbereich und belegt &#8211; abhängig
+                                                   vom Inhalt &#8211; eine feste Anzahl von Bytes. Alle Variablen (und auch Ausdrücke) haben
+                                                   einen <span class="cbegriff">Typ</span>, der zur Übersetzungszeit bekannt ist. Der Typ wird auch <span class="cbegriff">Datentyp</span> genannt, da eine Variable einen Datenwert, auch <span class="cbegriff">Datum</span> genannt, enthält. Beispiele für einfache Datentypen sind: Ganzzahlen<a class="indexterm" id="dodtp47c96314-5bf4-4bb5-b7a9-ed98ea2d95e7"></a>, Fließkommazahlen<a class="indexterm" id="dodtp17fda3d0-a5a0-4971-ab99-ca1af0b09d0d"></a>, Wahrheitswerte<a class="indexterm" id="dodtpfbbe2968-db6c-46af-aff1-bebc2fece6ef"></a> und Zeichen<a class="indexterm" id="dodtp9d7c4e49-8c31-49c7-8f02-12666a6c8f6e"></a>. Der Typ bestimmt auch die zulässigen Operationen, denn Wahrheitswerte lassen sich
+                                                   nicht addieren, Ganzzahlen schon. Dagegen lassen sich Fließkommazahlen addieren, aber
+                                                   nicht Xor-verknüpfen. Da jede Variable einen vom Programmierer vorgegebenen festen
+                                                   Datentyp hat, der zur Übersetzungszeit bekannt ist und sich später nicht mehr ändern
+                                                   lässt, und Java stark darauf achtet, welche Operationen erlaubt sind, und auch von
+                                                   jedem Ausdruck spätestens zur Laufzeit den Typ kennt, ist Java eine <span class="cbegriff">statisch typisierte</span><a class="indexterm" id="dodtpf1b77745-f1fe-4f14-8bcf-a12c07d053b4"></a> und <span class="cbegriff">streng (stark) typisierte</span><a class="indexterm" id="dodtpd26a34f4-27a1-4405-9981-0159d826576d"></a><a class="indexterm" id="dodtp1240fa38-5438-4880-a5f3-ee406886f20e"></a> Programmiersprache.<span class="footnote"><a id="dodtpfbcc0ed4-a088-4dbb-8792-8b3ef86c3c1c">[58](Während in der Literatur bei den Begriffen statisch getypt und dynamisch getypt mehr oder weniger
+Einigkeit herrscht, haben verschiedene Autoren unterschiedliche Vorstellungen von den Begriffen
+streng (stark) typisiert und schwach typisiert.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In Java muss der Datentyp einer Variablen zur Übersetzungszeit bekannt sein. Das nennt
+                                                               sich dann <span class="cbegriff">statisch typisiert</span>. Das Gegenteil ist eine <span class="cbegriff">dynamische Typisierung</span>, wie sie etwa JavaScript verwendet. Hier kann sich der Typ einer Variablen zur Laufzeit
+                                                               ändern, je nachdem, was die Variable enthält.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpdfff0403-0521-40cb-9eb9-71f03c470469" name="dodtpdfff0403-0521-40cb-9eb9-71f03c470469"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Primitiv- oder Verweis-Typ</span></h4>
+                                                <p>Die Datentypen in Java zerfallen in zwei Kategorien:</p>
+                                                <ul class="gp">
+                                                   <li><span class="cbegriff">Primitive Typen</span><a class="indexterm" id="dodtp62ce9c8e-7324-4fda-8966-c8abc54b1bcb"></a>: Die primitiven (einfachen) Typen sind die eingebauten Datentypen für Zahlen, Unicode-Zeichen
+                                                      und Wahrheitswerte.
+                                                   </li>
+                                                   <li><span class="cbegriff">Referenztypen</span><a class="indexterm" id="dodtpaf410f5f-7738-42fd-8199-240f0418d1ab"></a>: Mit diesem Datentyp lassen sich Objektverweise etwa auf Zeichenketten, Dialoge oder
+                                                      Datenstrukturen verwalten.
+                                                   </li>
+                                                </ul>
+                                                <p>Warum sich damals Sun für diese Teilung entschieden hat, lässt sich mit zwei Gründen
+                                                   erklären:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li>Zu der Zeit, als Java eingeführt wurde, kannten viele Programmierer die Syntax und
+                                                      Semantik von C(++) und ähnlichen imperativen Programmiersprachen. Zur neuen Sprache
+                                                      Java zu wechseln, fiel dadurch leichter, und es half, sich sofort auf der Insel zurechtzufinden.
+                                                      Es gibt aber auch Programmiersprachen wie Smalltalk, die keine primitiven Datentypen
+                                                      besitzen.
+                                                   </li>
+                                                   <li>Der andere Grund ist die Tatsache, dass häufig vorkommende elementare Rechenoperationen
+                                                      schnell durchgeführt werden müssen und bei einem einfachen Typ leicht Optimierungen
+                                                      durchzuführen sind.
+                                                   </li>
+                                                </ul>
+                                                <p>Wir werden uns im Folgenden erst mit primitiven Datentypen beschäftigen. Referenzen
+                                                   werden nur dann eingesetzt, wenn Objekte ins Spiel kommen. Die nehmen wir uns in Kapitel
+                                                   3, »Klassen und Objekte«, vor.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793" name="dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793"></a><h3 class="t3"><span class="cfett">2.3.1</span><span class="cfett"> Primitive Datentypen im Überblick</span><a href="#dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpdfff0403-0521-40cb-9eb9-71f03c470469"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>In Java gibt es zwei Arten eingebauter Datentypen:</p>
+                                                <ul class="gp">
+                                                   <li><span class="cbegriff">arithmetische Typen</span><a class="indexterm" id="dodtp07c78cb5-9a5e-49da-a737-6ec1ed24c469"></a> (ganze Zahlen &#8211; auch integrale Typen<a class="indexterm" id="dodtp0cd5b191-3051-4357-9042-95a630395d8a"></a> genannt &#8211;, Fließkommazahlen, Unicode-Zeichen)
+                                                   </li>
+                                                   <li><span class="cbegriff">Wahrheitswerte</span> für die Zustände wahr und falsch
+                                                   </li>
+                                                </ul>
+                                                <p>Die folgende Tabelle vermittelt dazu einen Überblick. Anschließend betrachten wir
+                                                   jeden Datentyp präziser.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.5: </strong>Java-Datentypen und ihre Wertebereiche
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Belegung (Wertebereich)</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpfbf0ee38-aab4-4d0d-9a31-d9c5ceca0deb"></a><span class="clisting">boolean</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpa9eebae4-0676-4411-8655-2ec77008fb2a"></a><span class="clisting">true</span> oder <a class="indexterm" id="dodtpfa9a433e-da39-4bee-a1bc-bebb7a6cbadf"></a><span class="clisting">false</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpa13054ca-7fd2-43c4-8e6b-1530bc374b61"></a><span class="clisting">char</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">16-Bit-Unicode-Zeichen (0x0000 ... 0xFFFF)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp3e015102-189d-443f-9412-6dcccbaa9d8b"></a><span class="clisting">byte</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">&#8211;2^7 bis 2^7 &#8211; 1 (&#8211;128 ... 127)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp117243fc-9127-4f52-8821-70ebfc0bf997"></a><span class="clisting">short</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">&#8211;2^15 bis 2^15 &#8211; 1 (&#8211;32.768 ... 32.767)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpcbc3f811-6384-4aa5-93e3-957b6ea062fd"></a><span class="clisting">int</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">&#8211;2^31 bis 2^31 &#8211; 1 (&#8211;2.147.483.648 ... 2.147.483.647)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp38bd02ff-4a8f-4842-b4f1-1768edb3024e"></a><span class="clisting">long</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">&#8211;2^63 bis 2^63 &#8211; 1 (&#8211;9.223.372.036.854.775.808 ... 9.223.372.036.854.775.807)
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpf314c6e7-7efb-4ae3-b5ed-07c527395f6a"></a><span class="clisting">float</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1,40239846E-45f ... 3,40282347E+38f
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtpec78e2cb-c4dc-430f-99dc-5bdc83267a2f"></a><span class="clisting">double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">4,94065645841246544E-324 ... 1,79769131486231570E+308
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Bei den Ganzzahlen fällt auf, dass es eine positive Zahl »weniger« gibt als negative.</p>
+                                                <p>Für <span class="clisting">float</span> und <span class="clisting">double</span> ist das Vorzeichen nicht angegeben, da die kleinsten und größten darstellbaren Zahlen
+                                                   sowohl positiv wie auch negativ sein können. Mit anderen Worten: Die Wertebereiche
+                                                   unterscheiden sich nicht &#8211; anders als etwa bei <span class="clisting">int</span> &#8211; in Abhängigkeit vom Vorzeichen. Wer eine »klassische« Darstellung wünscht, der
+                                                   kann sich das so vorstellen: Der Wertebereich (vom <span class="clisting">double</span>) ist 4,94065645841246544E-324 bis 1,79769131486231570E+308 bzw. mit dem Vorzeichen
+                                                   von etwa &#8211;1.8E308 (über &#8211;4,9E-324 und +4,9E-324) bis +1.8E308.<span class="footnote"><a id="dodtp320761e0-b7f0-4808-9fdc-c7b9490ef233">[59](Es gibt bei Fließkommazahlen noch »Sonderzahlen«, wie plus oder minus Unendlich, aber dazu später
+mehr.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Detailwissen
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Genau genommen sieht die Sprachgrammatik von Java keine negativen Zahlenliterale vor.
+                                                               Bei einer Zahl wie &#8211;1.2 oder &#8211;1 ist das Minus der unäre Operator und gehört nicht
+                                                               zur Zahl. Im Bytecode selbst sind die negativen Zahlen natürlich wieder abgebildet.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/02_005.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein02_005.png" alt="Abbildung"></a><p>Die folgende Tabelle zeigt eine etwas andere Darstellung:</p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.6: </strong>Java-Datentypen und ihre Größen und Formate
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Größe</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Format</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext" colspan="3">Ganzzahlen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">byte</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">8 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zweierkomplement
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">short</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">16 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zweierkomplement
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">32 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zweierkomplement
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">long</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">64 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">Zweierkomplement
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext" colspan="3">Fließkommazahlen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">float</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">32 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">IEEE 754
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">64 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">IEEE 754
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext" colspan="3">Weitere Datentypen
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">boolean</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">1 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">true</span>, <span class="clisting">false</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">char</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">16 Bit
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">16-Bit-Unicode
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Strings werden bevorzugt behandelt, sind aber lediglich Verweise auf Objekte und kein
+                                                               primitiver Datentyp.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Zwei wesentliche Punkte zeichnen die primitiven Datentypen aus:</p>
+                                                <ul class="gp">
+                                                   <li>Alle Datentypen haben eine festgesetzte Länge, die sich unter keinen Umständen ändert.
+                                                      Der Nachteil, dass sich bei einigen Hochsprachen die Länge eines Datentyps ändern
+                                                      kann, besteht in Java nicht. In den Sprachen C(++) bleibt dies immer unsicher, und
+                                                      die Umstellung auf 64-Bit-Maschinen bringt viele Probleme mit sich. Der Datentyp <span class="clisting">char</span> ist 16 Bit lang.
+                                                   </li>
+                                                   <li>Die numerischen Datentypen <span class="clisting">byte</span>, <span class="clisting">short</span>, <span class="clisting">int</span> und <span class="clisting">long</span> sind vorzeichenbehaftet, Fließkommazahlen sowieso. Dies ist leider nicht immer praktisch,
+                                                      aber wir müssen stets daran denken. Probleme gibt es, wenn wir einem Byte zum Beispiel
+                                                      den Wert 240 zuweisen wollen, denn 240 liegt außerhalb des Wertebereichs, der von
+                                                      &#8211;128 bis 127 reicht. Ein <span class="clisting">char</span> ist im Prinzip ein vorzeichenloser Ganzzahltyp.
+                                                   </li>
+                                                </ul>
+                                                <p>Wenn wir also die numerischen Datentypen (lassen wir hier <span class="clisting">char</span> außen vor) nach ihrer Größe sortieren wollten, könnten wir zwei Linien für Ganzzahlen
+                                                   und Fließkommazahlen aufbauen:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">byte &lt; short &lt; int &lt; long<br>float &lt; double<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Die Klassen <span class="clisting">Byte</span>, <span class="clisting">Integer</span>, <span class="clisting">Long</span>, <span class="clisting">Short</span>, <span class="clisting">Character</span>, <span class="clisting">Double</span> und <span class="clisting">Float</span> deklarieren die Konstanten <span class="clisting">MAX_VALUE</span> und <span class="clisting">MIN_VALUE</span>, die den größten und kleinsten zulässigen Wert des jeweiligen Wertebereichs bzw.
+                                                               die Grenzen der Wertebereiche der jeweiligen Datentypen angeben.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( Byte.MIN_VALUE );       // &#8211;128<br>System.out.println( Byte.MAX_VALUE );       // 127<br>System.out.println( Character.MIN_VALUE );  // '\u0000'<br>System.out.println( Character.MAX_VALUE );  // '\uFFFF'<br>System.out.println( Double.MIN_VALUE );     // 4.9E-324<br>System.out.println( Double.MAX_VALUE );     // 1.7976931348623157E308<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24" name="dodtpbef24e4c-e91b-4f32-9b4a-d52a8e30fb24"></a><h3 class="t3"><span class="cfett">2.3.2</span><span class="cfett"> Variablendeklarationen</span><a href="#dodtp0ad9d773-6267-4f17-9485-542bc1a9464d"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp070cd74f-8bb2-43fc-bbe4-fd5a9499b793"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp9e69b1c3-355f-49c4-9b40-77b486fb5acb"></a>Mit Variablen lassen sich Daten speichern, die vom Programm gelesen und geschrieben
+                                                   werden können. Um Variablen zu nutzen, müssen sie deklariert (definiert<span class="footnote"><a id="dodtpf9641d9d-254e-40b5-828f-69b4be201af0">[60](In C(++) bedeuten Definition und Deklaration etwas Verschiedenes. In Java kennen wir diesen Unterschied
+nicht und betrachten daher beide Begriffe als gleichwertig. Die Spezifikation spricht nur von
+Deklarationen.)</a></span>) werden. Die Schreibweise einer Variablendeklaration ist immer die gleiche: Hinter
+                                                   dem Typnamen folgt der Name der Variablen. Sie ist eine Anweisung und wird daher mit
+                                                   einem Semikolon abgeschlossen. In Java kennt der Compiler von jeder Variablen und
+                                                   jedem Ausdruck genau den Typ.
+                                                </p>
+                                                <p>Deklarieren wir ein paar (lokale) Variablen in der <span class="clisting">main()</span>-Methode:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.5: </strong>FirstVariable.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class FirstVariable<br>{<br>  public static void main( String[] args )<br>  {<br>   <span class="cfett"> String</span> <span class="cfett"> name;</span>                // Name<br>   <span class="cfett"> int</span>    <span class="cfett"> age;</span>                 // Alter<br>   <span class="cfett"> double</span> <span class="cfett"> income;</span>              // Einkommen<br>   <span class="cfett"> char</span>   <span class="cfett"> gender;</span>              // Geschlecht ('f' oder 'm')<br>   <span class="cfett"> boolean isPresident;</span>         // Ist Präsident (true oder false)<br>   <span class="cfett"> boolean isVegetarian;</span>        // Ist die Person Vegetarier?<br>  }<br>}<br></pre></div>
+                                                <p>Der Typname ist entweder ein einfacher Typ (wie <span class="clisting">int</span>) oder ein Referenztyp. Viel schwieriger ist eine Deklaration nicht &#8211; kryptische Angaben
+                                                   wie in C gibt es in Java nicht.<span class="footnote"><a id="dodtp385bcfa1-e57d-4302-95e6-7fdab19823f0">[61](Das ist natürlich eine Anspielung auf C, in dem Deklarationen wie char (*(*a[2])())[2] möglich
+sind. Gut, dass es mit cdecl ein Programm zum »Vorlesen« solcher Definitionen gibt.)</a></span> Ein Variablenname (der dann Bezeichner ist) kann alle Buchstaben und Ziffern des
+                                                   Unicode-Zeichensatzes beinhalten, mit der Ausnahme, dass am Anfang des Bezeichners
+                                                   keine Ziffer stehen darf. Auch darf der Bezeichnername mit keinem reservierten Schlüsselwort
+                                                   identisch sein.
+                                                </p><a id="dodtp20597bbb-84b0-4ce5-b0af-d96b28ff1a05" name="dodtp20597bbb-84b0-4ce5-b0af-d96b28ff1a05"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Mehrere Variablen kompakt deklarieren</span></h4>
+                                                <p>Im oberen Beispiel sind zwei Variaben vom gleichen Typ: <span class="clisting">isPresident</span> und <span class="clisting">isVegetarian</span>.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean isPresident;<br>boolean isVegetarian;<br></pre></div>
+                                                <p>Immer dann, wenn der Variablentyp der gleiche ist, lässt sich die Deklaration verkürzen:
+                                                   Variablen werden mit Komma getrennt.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean isPresident<span class="cfett">,</span> isVegetarian;<br></pre></div><a id="dodtp818313a5-74d9-404d-bb1d-00753e73275e" name="dodtp818313a5-74d9-404d-bb1d-00753e73275e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Variablendeklaration mit Wertinitialisierung</span></h4>
+                                                <p>Gleich bei der Deklaration lassen sich Variablen mit einem Anfangswert initialisieren.
+                                                   Hinter einem Gleichheitszeichen steht der Wert, der oft ein Literal ist. Ein Beispielprogramm:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.6: </strong>Obama.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Obama<br>{<br>  public static void main( String[] args )<br>  {<span class="cfett"><br>    String  name   = "Barack Hussein Obama II";<br>    int     age    = 48;<br>    double  income = 400000;<br>    char    gender = 'm';<br>    boolean isPresident = true;</span><br>  }<br>}<br></pre></div>
+                                                <p>Wir haben gesehen, dass bei der Deklaration mehrerer Variablen gleichen Typs ein Komma
+                                                   die Bezeichner trennt. Das überträgt sich auch auf die Initialisierung. Ein Beispiel:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">boolean sendSms = true,<br>        bungaBungaParty = true;<br>String person1 = "Silvio", person2 = "Ruby the Heart Stealer";<br>double x<span class="cfett">,</span> y, bodyHeight = 183;<br></pre></div>
+                                                <p>Die Zeilen deklarieren mehrere Variablen auf einen Schlag. <span class="clisting">x</span> und <span class="clisting">y</span> am Schluss bleiben uninitialisiert.
+                                                </p><a id="dodtp9e35288d-5b63-4b28-8730-bd7e382a87cc" name="dodtp9e35288d-5b63-4b28-8730-bd7e382a87cc"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zinsen berechnen als Beispiel zur Variablendeklaration, -initialisierung &amp; -ausgabe</span></h4>
+                                                <p>Zusammen mit der Konsoleneingabe können wir schon einen einfachen Zinsrechner programmieren.
+                                                   Er soll uns ausgeben, wie hoch die Zinsen für ein gegebenes Kapital bei einem gegebenen
+                                                   Zinssatz (engl. interest rate) nach einer gewissen Zeit sind.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.7: </strong>InterestRates.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class InterestRates<br>{<br>  public static void main( String[] args )<br>  {<br>    double capital      = 20000 /* Euro */;<br>    double interestRate = 3.6 /* Prozent */;<br>    double years        = 2;<br><br>    double interestRates = capital * interestRate * years / 100;<br>    System.out.printf( "Zinsen: " + interestRates );   // 1440.0<br>  }<br>}<br></pre></div>
+                                                <p>Das obige Beispiel macht ebenfalls deutlich, dass Strings mit dem Plus aneinandergehängt
+                                                   werden können; ist ein Teil kein String, so wird er in einen String konvertiert.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp0ad9d773-6267-4f17-9485-542bc1a9464d" name="dodtp0ad9d773-6267-4f17-9485-542bc1a9464d"></a><h3 class="t3"><span class="cfett">2.3.3</span><span class="cfett"> Konsoleneingaben</span><a href="#dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp9e35288d-5b63-4b28-8730-bd7e382a87cc"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Bisher haben wir zwei Methoden kennengelernt: <span class="clisting">println()</span> und <span class="clisting">random()</span>. Die Methode <span class="clisting">println()</span> »hängt« am <span class="clisting">System.out</span> bzw. <span class="clisting">System.err</span>-Objekt und <span class="clisting">random()</span> »hängt« am <span class="clisting">Math</span>-Objekt.
+                                                </p>
+                                                <p>Der Gegenpol zu <span class="clisting">println()</span> ist eine Konsoleneingabe. Hier gibt es unterschiedliche Varianten. Die einfachste
+                                                   ist mit der Klasse <span class="clisting">java.util.Scanner</span>. In Kapitel 4, »Der Umgang mit Zeichenketten«, wird die Klasse noch viel genauer
+                                                   untersucht. Es reicht aber an dieser Stelle zu wissen, wie Strings, Ganzzahlen und
+                                                   Fließkommazahlen eingelesen werden.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 2.7: </strong>Einlesen einer Zeichenkette, Ganz- und Fließkommazahl von der Konsole
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf">
+                                                            
+                                                            <span class="cfett">Eingabe lesen vom Typ</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Anweisung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">String s = new java.util.Scanner(System.in).nextLine();</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">int i = new java.util.Scanner(System.in).nextInt();</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">double</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><span class="clisting">double d = new java.util.Scanner(System.in).nextDouble();</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Verbinden wir die drei Möglichkeiten zu einem Beispiel. Zunächst soll der Name eingelesen
+                                                   werden, dann das Alter und anschließend eine Fließkommazahl.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.8: </strong>SmallConversation.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class SmallConversation<br>{<br>  public static void main( String[] args )<br>  {<br>    System.out.println( "Moin! Wie heißt denn du?" );<br>    String name =<span class="cfett"> new java.util.Scanner( System.in ).nextLine()</span>;<br>    System.out.printf( "Hallo %s. Wie alt bist du?%n", name );<br>    int age =<span class="cfett"> new java.util.Scanner( System.in ).nextInt()</span>;<br>    System.out.printf( "Aha, %s Jahre, das ist ja die Hälfte von %s.%n",<br>                       age, age * 2 );<br>    System.out.println( "Sag mal, was ist deine Lieblingsfließkommazahl?" );<br>    double value =<span class="cfett"> new java.util.Scanner( System.in ).nextDouble()</span>;<br>    System.out.printf( "%s? Aha, meine ist %s.%n",<br>                       value, Math.random() * 100000 );<br>  }<br>}<br></pre></div>
+                                                <p>Eine Konversation sieht somit etwa so aus:</p>
+                                                <div class="listing"><pre class="prettyprint">Moin! Wie heißt denn du?<span class="cfett"><br>Christian</span><br>Hallo Christian. Wie alt bist du?<span class="cfett"><br>37</span><br>Aha, 37 Jahre, das ist ja die Hälfte von 74.<br>Sag mal, was ist deine Lieblingsfließkommazahl?<span class="cfett"><br>9,7</span><br>9.7? Aha, meine ist 60769.81705995359.<br></pre></div>
+                                                <p>Die Eingabe der Fließkommazahl muss mit Komma erfolgen, wenn die JVM auf einem deutschsprachigen
+                                                   Betriebssystem läuft. Die Ausgabe über <span class="clisting">printf()</span> kann ebenfalls lokalisierte Fließkommazahlen schreiben, dann muss jedoch statt dem
+                                                   Platzhalter <span class="clisting">%s</span> die Kennung <span class="clisting">%f</span> oder <span class="clisting">%g</span> verwendet werden. Das wollen wir in einem zweiten Beispiel nutzen.
+                                                </p><a id="dodtpa98ecef4-d413-40c3-b7e8-d3cdb528db3c" name="dodtpa98ecef4-d413-40c3-b7e8-d3cdb528db3c"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Zinsberechnung mit der Benutzereingabe</span></h4>
+                                                <p>Die Zinsberechnung, die vorher feste Werte im Programm hatte, soll eine Benutzereingabe
+                                                   bekommen. Des Weiteren erwarteten wir die Dauer in Monaten statt Jahren.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 2.9: </strong>MyInterestRates.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class MyInterestRates<br>{<br>  public static void main( String[] args )<br>  {<br>    System.out.println( "Kapital?" );<br>    double capital = new java.util.Scanner( System.in ).nextDouble();<br><br>    System.out.println( "Zinssatz?" );<br>    double interestRate = new java.util.Scanner( System.in ).nextDouble();<br><br>    System.out.println( "Anlagedauer in Monaten?" );<br>    int month = new java.util.Scanner( System.in ).nextInt();<br><br>    double interestRates = capital * interestRate * month / (12*100);<br>    System.out.printf( "Zinsen: %g%n", interestRates );<br>  }<br>}<br></pre></div>
+                                                <p>Die vorher fest verdrahteten Werte sind nun alle dynamisch, und wir kommen mit den
+                                                   Eingaben zum gleichen Ergebnis wir vorher:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">Kapital?<span class="cfett"><br>20000</span><br>Zinssatz?<span class="cfett"><br>3,6</span><br>Anlagedauer in Monaten?<span class="cfett"><br>24</span><br>Zinsen: 1440,00<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286" name="dodtpe5f9b617-1ad2-4f73-b84e-b883a84cb286"></a><h3 class="t3"><span class="cfett">2.3.4</span><span class="cfett"> Fließkommazahlen mit den Datentypen float und double</span><a href="#dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpa98ecef4-d413-40c3-b7e8-d3cdb528db3c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Für Fließkommazahlen<a class="indexterm" id="dodtpbf56d444-2bcc-41da-9e66-49a249daf615"></a> (auch <span class="cbegriff">Gleitkommazahlen</span> genannt) einfacher und erhöhter Genauigkeit bietet Java die Datentypen <span class="clisting">float</span> und <span class="clisting">double</span>. Die Datentypen sind im IEEE 754-Standard<a class="indexterm" id="dodtp20aa6305-c79a-4fc4-8342-3e3ee684e2b1"></a><a class="indexterm" id="dodtp68155260-c698-4922-9eaa-5fb6e83fb0e8"></a> beschrieben und haben eine Länge von 4 Byte für <span class="clisting">float</span> und 8 Byte für <span class="clisting">double</span>. Fließkommaliterale können einen Vorkommateil und einen Nachkommateil besitzen, die
+                                                   durch einen Dezimalpunkt (kein Komma) getrennt sind. Ein Fließkommaliteral muss keine
+                                                   Vor- oder Nachkommastellen besitzen, sodass auch Folgendes gültig ist:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">double d = 10.0 + 20. + .11;<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der Datentyp <span class="clisting">float</span> ist mit 4 Byte, also 32 Bit, ein schlechter Scherz. Der Datentyp <span class="clisting">double</span> geht mit 64 Bit ja gerade noch, wobei in Hardware eigentlich 80 Bit üblich sind.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp849a762d-6f3a-4582-8c36-34f6d88907b6" name="dodtp849a762d-6f3a-4582-8c36-34f6d88907b6"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Datentyp float *</span></h4>
+                                                <p>Standardmäßig sind die Fließkomma-Literale vom Typ <span class="clisting">double</span>. Ein nachgestelltes »f« (oder »F«) zeigt an, dass es sich um ein <span class="clisting">float</span> handelt.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Gültige Zuweisungen für Fließkommazahlen vom Typ <span class="clisting">double</span> und <span class="clisting">float</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">double pi = 3.1415, delta = .001;<br>float  ratio  = 4.33F;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Auch für den Datentyp <span class="clisting">double</span> lässt sich ein »d« (oder »D«) nachstellen, was allerdings nicht nötig ist, wenn Literale
+                                                   für Kommazahlen im Quellcode stehen; Zahlen wie <span class="clisting">3.1415</span> sind automatisch vom Typ <span class="clisting">double</span>. Während jedoch bei <span class="clisting">1 + 2 + 4.0</span> erst <span class="clisting">1</span> und <span class="clisting">2</span> als <span class="clisting">int</span> addiert werden, dann in <span class="clisting">double</span> und anschließend auf <span class="clisting">4.0</span> addiert werden, würde <span class="clisting">1D + 2 + 4.0</span> gleich mit der Fließkommazahl <span class="clisting">1</span> beginnen. So ist auch <span class="clisting">1D</span> gleich <span class="clisting">1.</span> bzw. <span class="clisting">1.0</span>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Frage
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Was ist das Ergebnis der Ausgabe?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( 20000000000F == 20000000000F+1 );<br>System.out.println( 20000000000D == 20000000000D+1 );<br></pre></div>
+                                                               Tipp: Was sind die Wertebereiche von <span class="clisting">float</span> und <span class="clisting">double</span>?
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp01ac90d4-6757-419d-9571-416521587277" name="dodtp01ac90d4-6757-419d-9571-416521587277"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Noch genauere Auflösung bei Fließkommazahlen *</span></h4>
+                                                <p>Einen höher auflösenden beziehungsweise präziseren Datentyp für Fließkommazahlen als
+                                                   <span class="clisting">double</span> gibt es nicht. Die Standardbibliothek bietet für diese Aufgabe in <span class="clisting">java.math</span> die Klasse <span class="clisting">BigDecimal</span> an, die in Kapitel 18, »Bits und Bytes und Mathematisches«, näher beschrieben ist.
+                                                   Das ist sinnvoll für Daten, die eine sehr gute Genauigkeit aufweisen sollen, wie zum
+                                                   Beispiel Währungen.<span class="footnote"><a id="dodtp3d230a78-d823-4178-b6ca-b93d7644d9a8">[62](Einige Programmiersprachen besitzen für Währungen eingebaute Datentypen, wie LotusScript mit
+Currency, das mit 8 Byte einen sehr großen und genauen Wertebereich abdeckt. Erstaunlicherweise
+gab es einmal in C# den Datentyp currency für ganzzahlige Währungen.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Sprachvergleich
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In C# gibt es den Datentyp <span class="clisting">decimal</span>, der mit 128 Bit (also 16 Byte) auch genügend Präzision bietet, um eine Zahl wie
+                                                               0,000000000000000000000000001 auszudrücken.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148" name="dodtp6e7cc84f-7ee5-4c6c-a119-74476709a148"></a><h3 class="t3"><span class="cfett">2.3.5</span><span class="cfett"> Ganzzahlige Datentypen</span><a href="#dodtp650f6f62-69e1-48c9-852f-0267f7008bd5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp01ac90d4-6757-419d-9571-416521587277"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtpa54486f8-4167-4e76-b412-f485c94ef6c0"></a>Java stellt fünf ganzzahlige Datentypen zur Verfügung: <span class="clisting">byte</span><a class="indexterm" id="dodtpbd93feb0-f4f1-4913-a2ad-9ffa052e52d9"></a>, <span class="clisting">short</span><a class="indexterm" id="dodtpc7a767fb-3cc7-48c1-ac74-eeb7512e2dc0"></a>, <span class="clisting">char</span>, <span class="clisting">int</span><a class="indexterm" id="dodtpa78a6ea7-6a13-4f5d-a863-e75ba1e06821"></a> und <span class="clisting">long</span><a class="indexterm" id="dodtp142c958e-ab17-47bb-a0a3-006fd739e103"></a>. Die feste Länge von jeweils 1, 2, 2, 4 und 8 Byte ist eine wesentliche Eigenschaft
+                                                   von Java. Ganzzahlige Typen sind in Java immer vorzeichenbehaftet (mit der Ausnahme
+                                                   von <span class="clisting">char</span>); einen Modifizierer <span class="clisting">unsigned</span> wie in C(++) gibt es nicht.<span class="footnote"><a id="dodtp66148650-c4bb-4046-8223-22993a09b78c">[63](In Java bilden long und short einen eigenen Datentyp. Sie dienen nicht wie in C(++) als Modifizierer.
+Eine Deklaration wie long int i ist also genauso falsch wie long long time_ago.)</a></span> Negative Zahlen werden durch Voranstellen eines Minuszeichens gebildet. Ein Pluszeichen
+                                                   für positive Zeichen ist möglich. <span class="clisting">int</span> und <span class="clisting">long</span> sind die bevorzugten Typen. <span class="clisting">byte</span> kommt selten vor und <span class="clisting">short</span> nur in wirklich sehr seltenen Fällen, etwa bei Feldern mit Bilddaten.
+                                                </p><a id="dodtpe01bf5c0-6040-45d0-8f4b-e6bd2dc766a0" name="dodtpe01bf5c0-6040-45d0-8f4b-e6bd2dc766a0"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Ganzzahlen sind standardmäßig vom Typ int</span></h4>
+                                                <p>Betrachten wir folgende Zeile, so ist auf den ersten Blick kein Fehler zu erkennen:</p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println( 123456789012345 );      // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"><br></pre></div>
+                                                <p>Dennoch übersetzt der Compiler die Zeile nicht, da er ein Ganzzahlliteral ohne explizite
+                                                   Größenangabe als 32 Bit langes <span class="clisting">int</span> annimmt. Die obige Zeile führt daher zu einem Compilerfehler, da unsere Zahl nicht
+                                                   im Wertebereich von &#8211;2.147.483.648 ... +2.147.483.647 liegt, sondern weit außerhalb:
+                                                   2147483647 &lt; 123456789012345. Java reserviert also nicht so viele Bits wie benötigt und wählt nicht automatisch den passenden Wertebereich.
+                                                </p><a id="dodtp7278c59c-ff81-404d-aa92-13975e5b885e" name="dodtp7278c59c-ff81-404d-aa92-13975e5b885e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wer wird mehrfacher Milliardär? Der Datentyp long</span></h4>
+                                                <p>Der Compiler betrachtet jede Ganzzahl automatisch als <span class="clisting">int</span>. Sollte der Wertebereich von etwa plus/minus zwei Milliarden nicht reichen, greifen
+                                                   Entwickler zum nächsthöheren Datentyp. Dass eine Zahl <span class="clisting">long</span> ist, muss ausdrücklich angegeben werden. Dazu wird an das Ende von Ganzzahlliteralen
+                                                   vom Typ <span class="clisting">long</span> ein »l« oder »L« gesetzt. Um die Zahl <span class="clisting">123456789012345</span> gültig ausgeben zu lassen, ist Folgendes zu schreiben:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">System.out.println( 123456789012345<span class="cfett">L</span> );<br></pre></div>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Tipp
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Das kleine »l« hat sehr viel Ähnlichkeit mit der Ziffer Eins. Daher sollte bei Längenangaben
+                                                               immer ein großes »L« eingefügt werden.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <br>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Frage
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Was gibt die folgende Anweisung aus?
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">System.out.println( 123456789 + 5432l );<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpca2d12f3-bbe8-464b-a0eb-605409287aa8" name="dodtpca2d12f3-bbe8-464b-a0eb-605409287aa8"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Datentyp byte</span></h4>
+                                                <p>Ein <span class="clisting">byte</span> ist ein Datentyp mit einem Wertebereich von &#8211;128 bis +127. Eine Initialisierung wie
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">byte b = 200;      // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"><br></pre></div>
+                                                <p>ist also nicht erlaubt, da 200 &gt; 127 ist. Somit fallen alle Zahlen von 128 bis 255
+                                                   (hexadezimal 80<sub>16</sub> &#8211; FF<sub>16</sub>) raus. In der Datenverarbeitung ist das Java-<span class="clisting">byte</span>, weil es ein Vorzeichen trägt, nur mittelprächtig brauchbar, da insbesondere in der
+                                                   Dateiverarbeitung Wertebereiche von 0 bis 255 gewünscht sind.
+                                                </p>
+                                                <p>Java erlaubt zwar keine vorzeichenlosen Ganzzahlen, aber mit zwei Schreibweisen lassen
+                                                   sich doch Zahlen wie 200 in einem <span class="clisting">byte</span> speichern.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">byte b =<span class="cfett"> (byte)</span> 200;<br></pre></div>
+                                                <p>Der Java-Compiler nimmt dazu einfach die Bitbelegung von 200 und interpretiert das
+                                                   oberste dann gesetzte Bit als Vorzeichenbit. Bei der Ausgabe fällt das auf:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">byte b = (byte) 200;<br>System.out.println( b );      // &#8211;56<br></pre></div><a id="dodtpd4730fa6-120d-4ae0-bbf6-8ed1e9db4c52" name="dodtpd4730fa6-120d-4ae0-bbf6-8ed1e9db4c52"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Der Datentyp short *</span></h4>
+                                                <p>Der Datentyp <span class="clisting">short</span> ist selten anzutreffen. Mit seinen 2 Byte kann er einen Wertebereich von &#8211;32.768
+                                                   bis +32.767 darstellen. Das Vorzeichen »kostet« wie bei den anderen Ganzzahlen 1 Bit,
+                                                   sodass nicht 16 Bit, sondern nur 15 Bit für Zahlen zu Verfügung stehen. Allerdings
+                                                   gilt wie beim <span class="clisting">byte</span>, dass auch ein <span class="clisting">short</span> ohne Vorzeichen auf zwei Arten initialisiert werden kann:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">short s =<span class="cfett"> (short)</span> 33000;<br>System.out.println( s );      // &#8211;32536<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp650f6f62-69e1-48c9-852f-0267f7008bd5" name="dodtp650f6f62-69e1-48c9-852f-0267f7008bd5"></a><h3 class="t3"><span class="cfett">2.3.6</span><span class="cfett"> Wahrheitswerte</span><a href="#dodtp67999bec-e430-40b1-87e6-0f85eca68221"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpd4730fa6-120d-4ae0-bbf6-8ed1e9db4c52"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Datentyp <span class="clisting">boolean</span> beschreibt einen Wahrheitswert, der entweder <span class="clisting">true</span> oder <span class="clisting">false</span> ist. Die Zeichenketten <span class="clisting">true</span> und <span class="clisting">false</span> sind reservierte Wörter und bilden neben konstanten Strings und primitiven Datentypen
+                                                   Literale. Kein anderer Wert ist für Wahrheitswerte möglich, insbesondere werden numerische
+                                                   Werte nicht als Wahrheitswerte interpretiert.
+                                                </p>
+                                                <p>Der boolesche Typ wird beispielsweise bei Bedingungen, Verzweigungen oder Schleifen
+                                                   benötigt. In der Regel ergibt sich ein Wahrheitswert aus Vergleichen.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp67999bec-e430-40b1-87e6-0f85eca68221" name="dodtp67999bec-e430-40b1-87e6-0f85eca68221"></a><h3 class="t3"><span class="cfett">2.3.7</span><span class="cfett"> Unterstriche in Zahlen *</span><a href="#dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp650f6f62-69e1-48c9-852f-0267f7008bd5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Um eine Anzahl von Millisekunden in Tage zu konvertieren, muss einfach eine Division
+                                                   vorgenommen werden. Um Millisekunden in Sekunden umzurechnen, brauchen wir eine Division
+                                                   durch 1000, von Sekunden auf Minuten eine Division durch 60, von Minuten auf Stunden
+                                                   eine Division durch 60, und die Stunden auf Tage bringt die letzte Division durch
+                                                   24. Schreiben wir das auf:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">long millis = 10 * 24*60*60*1000L;<br>long days  = millis /<span class="cfett"> 86400000L</span>;<br>System.out.println( days );    // 10<br></pre></div>
+                                                <p>Eine Sache fällt bei der Zahl 86400000 auf: Besonders gut lesbar ist sie nicht. Die
+                                                   eine Lösung ist, es erst gar nicht zu so einer Zahl kommen zu lassen und sie wie in
+                                                   der ersten Zeile durch eine Reihe von Multiplikationen aufzubauen &#8211; mehr Laufzeit
+                                                   kostet das nicht, da dieser konstante Ausdruck zur Übersetzungszeit feststeht.
+                                                </p>
+                                                <p>Die zweite Variante ist eine neue Schreibweise, die Java 7 einführt: Unterstriche in Zahlen<a class="indexterm" id="dodtpe21484e8-f201-4179-9970-6f7b43a89f2e"></a>. Anstatt ein numerisches Literal als 86400000 zu schreiben, ist in Java 7 auch Folgendes
+                                                   erlaubt:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">long millis = 10 * 86_400_000L;<br>long days  = millis / 86_400_000L;<br>System.out.println( days );    // 10<br></pre></div>
+                                                <p>Die Unterstriche machen die 1000er-Blöcke gut sichtbar. Hilfreich ist die Schreibweise
+                                                   auch bei Literalen in Binär- und Hexdarstellung, da die Unterstriche hier ebenfalls
+                                                   Blöcke absetzen können.<span class="footnote"><a id="dodtpdccabc19-defe-4b36-a7e1-47c29443f445">[64](Bei Umrechnungen zwischen Stunden, Minuten und so weiter hilft auch die Klasse TimeUnit mit
+einigen statischen toXXX()-Methoden.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Unterstriche verdeutlichen Blöcke bei Binär- und Hexadezimalzahlen.
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">int  i = 0b01101001_01001101_11100101_01011110;<br>long l = 0x7fff_ffff_ffff_ffffL;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Der Unterstrich darf in jedem Literal stehen, zwei aufeinanderfolgende Unterstriche
+                                                   sind aber nicht erlaubt.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c" name="dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c"></a><h3 class="t3"><span class="cfett">2.3.8</span><span class="cfett"> Alphanumerische Zeichen</span><a href="#dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp67999bec-e430-40b1-87e6-0f85eca68221"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p><a class="indexterm" id="dodtp79cf45b9-12fa-4325-92c7-6c7d839ba3f3"></a>Der alphanumerische Datentyp <span class="clisting">char</span><a class="indexterm" id="dodtpb8e9127c-e3c2-47df-8b7f-24216712ff5f"></a> (von engl. <span class="cbegriff">character</span>, Zeichen) ist 2 Byte groß und nimmt ein Unicode-Zeichen auf. Ein <span class="clisting">char</span> ist nicht vorzeichenbehaftet. Die Literale für Zeichen werden in einfache Hochkommata
+                                                   gesetzt. Spracheinsteiger verwechseln häufig die einfachen Hochkommata<a class="indexterm" id="dodtp99a016ad-1827-431a-b940-c8458b925178"></a> mit den Anführungszeichen<a class="indexterm" id="dodtp5dd2d2f0-c1f2-490b-b11c-40f25630b814"></a> der Zeichenketten (Strings). Die einfache Merkregel lautet: ein Zeichen &#8211; ein Hochkomma,
+                                                   mehrere Zeichen &#8211; zwei Hochkommata (Gänsefüßchen).
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Korrekte Hochkommata für Zeichen und Zeichenketten:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">char   c = <span class="cfett">'</span>a<span class="cfett">'</span>;<br>String s = <span class="cfett">"</span>Heut' schon gebeckert?<span class="cfett">"</span>;<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Da der Compiler ein <span class="clisting">char</span> automatisch in ein <span class="clisting">int</span> konvertieren kann, ist auch <span class="clisting">int c = 'a';</span> gültig.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75" name="dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75"></a><h3 class="t3"><span class="cfett">2.3.9</span><span class="cfett"> Gute Namen, schlechte Namen</span><a href="#dodtp85f17238-94fc-4a32-a473-149941bbef52"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtpde33a384-665a-4864-b1ba-3e1489ca3b1c"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Für die optimale Lesbarkeit und Verständlichkeit eines Programmcodes sollten Entwickler
+                                                   beim Schreiben einige Punkte berücksichtigen:
+                                                </p>
+                                                <ul class="gp">
+                                                   <li><span class="cfett">Ein konsistentes Namensschema ist wichtig.</span> Heißt ein Zähler <span class="clisting">no</span>, <span class="clisting">nr</span>, <span class="clisting">cnr</span> oder <span class="clisting">counter</span>? Auch sollten wir korrekt schreiben und auf Rechtschreibfehler achten, denn leicht
+                                                      wird aus <span class="clisting">necessaryConnection</span> dann <span class="clisting">nesesarryConnection</span>. Variablen ähnlicher Schreibweise, etwa <span class="clisting">counter</span> und <span class="clisting">counters</span>, sind zu vermeiden.
+                                                   </li>
+                                                   <li><span class="cfett">Abstrakte Bezeichner sind ebenfalls zu vermeiden.</span> Die Deklaration <span class="clisting">int TEN = 10;</span> ist absurd. Eine unsinnige Idee ist auch die folgende: <span class="clisting">boolean FALSE = true, TRUE = false;</span>. Im Programmcode würde dann mit <span class="clisting">FALSE</span> und <span class="clisting">TRUE</span> gearbeitet. Einer der obersten Plätze bei einem Wettbewerb für die verpfuschtesten
+                                                      Java-Programme wäre uns gewiss.
+                                                   </li>
+                                                   <li><span class="cfett">Unicode-Sequenzen können zwar in Bezeichnern aufgenommen werden, doch sollten sie
+                                                      vermieden werden.</span> In <span class="clisting">double übelkübel, \u00FCbelk\u00FCbel;</span> sind beide Bezeichnernamen gleich, und der Compiler meldet einen Fehler.
+                                                   </li>
+                                                   <li><span class="cfett">0 und O und 1 und l sind leicht zu verwechseln.</span> Die Kombination »rn« ist schwer zu lesen und je nach Zeichensatz leicht mit »m« zu
+                                                      verwechseln.<span class="footnote"><a id="dodtp5dd13135-a12a-47a0-9962-d96aba571391">[65](Eine Software wie Mathematica warnt vor Variablen mit fast identischem Namen.)</a></span> Gültig &#8211; aber böse &#8211; ist auch: <span class="clisting">int ínt, ìnt, înt; boolean bôõleañ;</span></li>
+                                                </ul>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Bemerkung
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In China gibt es 90 Millionen Familien mit dem Nachnamen Li. Das wäre so, als ob wir
+                                                               jede Variable <span class="clisting">temp1</span>, <span class="clisting">temp2</span> ... nennen würden.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>Ist ein Bezeichnername unglücklich gewählt (<span class="clisting">pneumonoultramicroscopicsilicovolcano coniosis</span> ist schon etwas lang), so lässt er sich problemlos konsistent umbenennen. Dazu wählen
+                                                   wir im Menü Refactor • Rename &#8211; oder auch kurz <span class="ctastatur"><img align="top" src="keys/KEFsdCk=.gif" alt="Alt" title="Alt"></span> + <span class="ctastatur"><img align="top" src="keys/tastatur_KMKqKQ==.gif" alt="ª" title="ª"></span> + <span class="ctastatur"><img align="top" src="keys/KFIp.gif" alt="R" title="R"></span>; der Cursor muss auf dem Bezeichner stehen. Eine optionale Vorschau (engl. <span class="cbegriff">preview</span>) zeigt an, welche Änderungen die Umbenennung nach sich ziehen wird. Neben Rename gibt es auch noch eine andere Möglichkeit. Dazu lässt sich auf der Variablen mit
+                                                   <span class="ctastatur"><img align="top" src="keys/KFN0cmcp.gif" alt="Strg" title="Strg"></span> + <span class="ctastatur"><img align="top" src="keys/KDEp.gif" alt="1" title="1"></span> ein Popup-Fenster mit Local Rename öffnen. Der Bezeichner wird selektiert und lässt sich ändern. Gleichzeitig ändern
+                                                   sich alle Bezüge auf die Variable mit.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp85f17238-94fc-4a32-a473-149941bbef52" name="dodtp85f17238-94fc-4a32-a473-149941bbef52"></a><h3 class="t3"><span class="cfett">2.3.10</span><span class="cfett"> Initialisierung von lokalen Variablen</span><a href="#dodtpa4369f77-9e5e-4407-a5c1-3e394c9b0d75"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die Laufzeitumgebung &#8211; beziehungsweise der Compiler &#8211; initialisiert lokale Variablen
+                                                   nicht automatisch mit einem Nullwert bzw. Wahrheitsvarianten nicht mit <span class="clisting">false</span>. Vor dem Lesen müssen lokale Variablen von Hand initialisiert werden, anderfalls
+                                                   gibt der Compiler eine Fehlermeldung aus.<span class="footnote"><a id="dodtp09216f1d-8f1b-4bb4-af64-12ec10ff1110">[66](Anders ist das bei Objektvariablen (und statischen Variablen sowie Feldern). Sie sind standardmäßig
+mit null (Referenzen), 0 (bei Zahlen) oder false belegt.)</a></span></p>
+                                                <p>Im folgenden Beispiel seien die beiden lokalen Variablen <span class="clisting">age</span> und <span class="clisting">adult</span> nicht automatisch initialisiert, und so kommt es bei der versuchten Ausgabe von <span class="clisting">age</span> zu einem Compilerfehler. Der Grund ist, dass ein Lesezugriff nötig ist, aber vorher
+                                                   noch kein Schreibzugriff stattfand.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">int     <span class="cfett">age</span>;<br>boolean <span class="cfett">adult</span>;<br>System.out.println( <span class="cfett">age</span> );    // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Local variable age may not have been initialized.<br>age = 18;<br>if ( <span class="cfett">age</span> &gt;= 18 )              // Fallunterscheidung: wenn-dann<br>  <span class="cfett">adult</span> = true;<br>System.out.println( <span class="cfett">adult</span> );  // <img src="common/totenkopf.gif" alt="Fehler" title="Fehler" align="bottom" border="0"> Local variable adult may not  have been initialized.<br></pre></div>
+                                                <p>Weil Zuweisungen in bedingten Anweisungen vielleicht nicht ausgeführt werden, meldet
+                                                   der Compiler auch bei <span class="clisting">System.out.println(adult)</span> einen Fehler, da er analysiert, dass es einen Programmfluss ohne die Zuweisung gibt.
+                                                   Da <span class="clisting">adult</span> nur nach der <span class="clisting">if</span>-Abfrage auf den Wert <span class="clisting">true</span> gesetzt wird, wäre nur unter der Bedingung, dass <span class="clisting">age</span> größer gleich <span class="clisting">18</span> ist, ein Schreibzugriff auf <span class="clisting">adult</span> erfolgt und ein folgender Lesezugriff möglich. Doch da der Compiler annimmt, dass
+                                                   es andere Fälle geben kann, wäre ein Zugriff auf eine nicht initialisierte Variable
+                                                   ein Fehler.
+                                                </p>
+                                                <p><img class="bild" border="1" src="common/eclipseicon.png" alt="Abbildung"><br>Eclipse zeigt einen Hinweis und einen Verbesserungsvorschlag an, wenn eine lokale
+                                                   Variable nicht initialisiert ist.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_02_003.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="2 Imperative Sprachkonzepte"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_02_002.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_02_004.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>

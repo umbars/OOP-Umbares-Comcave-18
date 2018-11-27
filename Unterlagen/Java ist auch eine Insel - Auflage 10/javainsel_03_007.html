@@ -1,0 +1,1208 @@
+<html>
+   <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+      <meta name="title" content="Galileo Computing :: Java ist auch eine Insel - 3 Klassen und Objekte">
+      <meta name="author" content="Christian Ullenboom">
+      <meta name="publisher" content="Galileo Press 2011">
+      <meta name="copyright" content="Galileo Press 2011">
+      <meta name="Desription" content="Java ist auch eine Insel - Das umfassende Handbuch - 3 Klassen und Objekte">
+      <meta name="robots" content="INDEX,FOLLOW">
+      <meta http-equiv="content-language" content="de">
+      <title>Galileo Computing :: Java ist auch eine Insel - 3 Klassen und Objekte</title>
+      <link rel="stylesheet" type="text/css" href="common/galileo_open.css">
+      <link rel="stylesheet" type="text/css" href="common/prettify.css">
+      <link rel="stylesheet" type="text/css" media="screen" href="common/css/lightbox.css">
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/prototype.js"></script>
+      &nbsp; &nbsp; &nbsp;                  <script src="common/js/scriptaculous.js?load=effects,builder"></script>
+      &nbsp; &nbsp; &nbsp;                  <script type="text/javascript" src="common/js/lightbox.js"></script><link rel="prev" href="javainsel_03_006.html">
+      <link rel="next" href="javainsel_03_008.html"><script type="text/javascript" src="common/prettify.js"></script><script type="text/javascript" src="common/openwin.js"></script></head>
+   <body vlink="#000099" link="#000099" alink="#000099" onload="prettyPrint()">
+      <table width="100%" border="0" cellpadding="0" cellspacing="0" bgcolor="#000066">
+         <tr>
+            <td height="74" valign="bottom" colspan="2"><a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX"><img src="common/galileocomputing_openbook.gif" width="200" height="56" border="0" alt="Galileo Computing < openbook &gt;" title="Galileo Computing < openbook &gt;"></a></td>
+            <td width="80" height="74"><a href="http://www.galileocomputing.de/?GPP=opjiX"><img src="common/galileocomputing.gif" border="0" alt="Galileo Computing - Professionelle Bücher. Auch für Einsteiger." title="Galileo Computing - Professionelle Bücher. Auch für Einsteiger."></a></td>
+         </tr>
+      </table>
+      <div align="right"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Professionelle Bücher. Auch für Einsteiger.</a></div><br><table class="tbl" border="0" cellpadding="0" cellspacing="0" width="100%">
+         <tbody>
+            <tr>
+               <td width="190" valign="top">
+                  <table class="tbl1" border="0" cellpadding="3" cellspacing="0" width="190" align="left">
+                     <tbody>
+                        <tr>
+                           <td class="tbl2"><a class="nav" href="index.html">Inhaltsverzeichnis</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_00_vorwort_001.html#dodtp26179a0a-2d10-4e6f-87d0-b41b72952492">Vorwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_01_001.html#dodtp9199d91b-05ec-498c-9a91-e25571662c9c">1 Java ist auch eine Sprache</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_02_001.html#dodtp332f236b-44e2-4fc6-a101-14774985570c">2 Imperative Sprachkonzepte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navh" href="#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74">3 Klassen und Objekte</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_04_001.html#dodtpf9e801db-5792-4027-b227-959ce38b22cf">4 Der Umgang mit Zeichenketten</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_05_001.html#dodtp44e7828f-b21f-41d3-9c25-d36ace6e35b4">5 Eigene Klassen schreiben</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_06_001.html#dodtp97490f9b-54f8-4fd3-a4d6-482f5243e8ee">6 Exceptions</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_07_001.html#dodtp0b960ace-1146-4436-b4f6-3f9325e8fd1f">7 Äußere.innere Klassen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_08_001.html#dodtp04c98cfe-ca41-4780-b6ea-2a8d185203f2">8 Besondere Klassen der Java SE</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_09_001.html#dodtp1e5aa8bf-acb7-4f0f-b3cf-176e06f73845">9 Generics&lt;T&gt;</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_10_001.html#dodtp5e61708d-6239-4b67-8fad-79f319912c02">10 Architektur, Design und angewandte Objektorientierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_11_001.html#dodtp3a5cae1a-1c3a-4fd8-80b2-ee4a156fb6ba">11 Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_12_001.html#dodtp6d3b0794-a72f-473d-bfe2-f49e058af566">12 Einführung in die nebenläufige Programmierung</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_13_001.html#dodtpf016dc31-a49b-4fb1-a42e-c0f07375828b">13 Einführung in Datenstrukturen und Algorithmen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_14_001.html#dodtp2cc62faa-e028-49c8-b4cf-b31d9f25a51f">14 Einführung in grafische Oberflächen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_15_001.html#dodtp20db08f7-f476-462f-ac5e-ba6f524971f9">15 Einführung in Dateien und Datenströme</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_16_001.html#dodtp411227dd-8e3b-4ef7-9be3-33b57be542fe">16 Einführung in die &lt;XML&gt;-Verarbeitung mit Java</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_17_001.html#dodtpfd7c76cc-c682-4544-99ee-43299a6d0bb2">17 Einführung ins Datenbankmanagement mit JDBC</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_18_001.html#dodtp5c93e9a9-40eb-470e-b348-7638bfcb74ed">18 Bits und Bytes und Mathematisches</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_19_001.html#dodtpe604730e-c71a-4a44-9983-dabbc5604599">19 Die Werkzeuge des JDK</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="javainsel_20_anhang_001.html#dodtp1553bec6-e097-4056-b5a3-ff6556e7b7ce">A Die Klassenbibliothek</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="stichwort.html">Stichwort</a></td>
+                        </tr>
+                        <tr>
+                           <td><br><a class="navnav"><strong>Download:</strong></a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10.zip" class="navnav">- openbook, ca. 24,5 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_aufgaben.zip" class="navnav">- Aufgaben, ca. 1,1 MB</a>
+                               <br><a href="http://download2.galileo-press.de/openbook/galileocomputing_javainsel10_programme.zip" class="navnav">- Programme, ca. 12,8 MB</a>
+                           </td>
+                        </tr>
+                        <tr>
+                           <td><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav">Buch bestellen</a></td>
+                        </tr>
+                        <tr>
+                           <td><a class="navnav" href="#kommentar">Ihre Meinung?</a><br><br></td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </td>
+               <td width="10"><img src="common/spacer10.gif" width="10" height="10" alt="Spacer"></td>
+               <td width="85%" valign="top">
+                  <div align="center">
+                     <table width="98%" border="0" cellpadding="0" cellspacing="0" bgcolor="#FFFFFF">
+                        <tbody>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%">
+                                             <div align="left"><a href="javainsel_03_006.html" class="navnav"> &lt;&lt; zurück</a></div>
+                                          </td>
+                                          <td width="49%">
+                                             <div align="center"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="navnav">Galileo
+                                                   Computing</a> / <a href="http://www.galileocomputing.de/katalog/openbook/?GPP=opjiX" class="navnav">
+                                                   &lt;openbook&gt;</a> / <a href="index.html" class="navnav">Java ist auch eine Insel</a></div>
+                                          </td>
+                                          <td width="25%">
+                                             <div align="right"><a href="javainsel_03_008.html" class="navnav">vor &gt;&gt; </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" valign="top">
+                                 <table width="100%" border="0" cellpadding="10" cellspacing="0" class="box">
+                                    <tbody>
+                                       <tr>
+                                          <td colspan="2"><a href="http://www.galileocomputing.de/?GPP=opjiX" class="buchtitel">Java ist auch eine Insel</a><span class="autor"> von Christian Ullenboom</span><br><span class="untertitel">Das umfassende Handbuch</span></td>
+                                       </tr>
+                                       <tr>
+                                          <td valign="top" width="211">
+                                             <dl>
+                                                <dt><a href="http://www.galileocomputing.de/2672?GPP=opjiX" class="navnav"><img src="common/9783836218023.jpg" border="0" alt="Buch: Java ist auch eine Insel" title="Buch: Java ist auch eine Insel"></a></dt>
+                                                <dd><br><a href="http://www.galileocomputing.de/2672?GPP=opjiX"><span class="autor"><strong>Java ist auch eine Insel</strong><br><pressinfo>Galileo Computing<br>1308 S., 10., aktualisierte Auflage, geb., mit DVD<br>ca. 49,90 Euro, ISBN 978-3-8362-1802-3
+                                                         </pressinfo></span></a></dd>
+                                             </dl>
+                                          </td>
+                                          <td width="80%">
+                                             <table border="0">
+                                                <tbody>
+                                                   <tr>
+                                                      <td valign="baseline"><img src="common/pfeil_u.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="3" class="kap"><strong><a href="javainsel_03_001.html#dodtp394ff2f8-9134-4eb3-a6b4-469ed4572a74" class="navnav">3 Klassen und Objekte</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_001.html#dodtp17d1c7c6-9ac6-4fd8-939c-1b73d0443114" class="navnav">3.1 Objektorientierte Programmierung (OOP)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_001.html#dodtp87e0b434-8d3a-47c4-940f-3f5cff7edbdd" class="navnav">3.1.1 Warum überhaupt OOP?</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_001.html#dodtp4593e52b-8a04-4e87-a821-dc1499c407ff" class="navnav">3.1.2 Denk ich an Java, denk ich an Wiederverwendbarkeit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_002.html#dodtpb2cc8e77-15ca-44d7-a42c-e695c92ffc2a" class="navnav">3.2 Eigenschaften einer Klasse</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_002.html#dodtp7c05a791-0aaa-4a93-80d4-e642d4df2df7" class="navnav">3.2.1 Die Klasse Point</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_003.html#dodtp54bc8503-4380-48d2-abb3-6a6742af54d7" class="navnav">3.3 Die UML (Unified Modeling Language) *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtp69c23cc9-802f-4a60-aee9-6e4770083fde" class="navnav">3.3.1 Hintergrund und Geschichte der UML</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtpc835af77-af38-45e7-9ab8-d8b66a5f9d0f" class="navnav">3.3.2 Wichtige Diagrammtypen der UML</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_003.html#dodtp9aee7c84-6d57-4b72-ad96-c991af57b6c8" class="navnav">3.3.3 UML-Werkzeuge</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_004.html#dodtp7f27e4e3-b862-4acc-8daa-efdbe259745b" class="navnav">3.4 Neue Objekte erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp3370d33c-bdab-4ff8-bd84-550b8af47151" class="navnav">3.4.1 Ein Exemplar einer Klasse mit dem new-Operator anlegen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp35f791fc-c0e8-4c62-af3a-12ca9fc65c91" class="navnav">3.4.2 Garbage-Collector (GC) &#8211; Es ist dann mal weg</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp33da7f74-793a-4046-9460-a75648a0f89e" class="navnav">3.4.3 Deklarieren von Referenzvariablen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp926bbe14-21d2-464d-83fb-33d7c779eeb9" class="navnav">3.4.4 Zugriff auf Objektattribute und -methoden mit dem ».«</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtp32371272-c63e-4afe-96c7-7e03a945da00" class="navnav">3.4.5 Überblick über Point-Methoden</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_004.html#dodtpcd16a155-e835-43db-8722-5fdfcfea44a5" class="navnav">3.4.6 Konstruktoren nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_005.html#dodtpb94d3a89-43d4-45b2-90a6-a0371fb3ed23" class="navnav">3.5 ZZZZZnake</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_006.html#dodtp0e94edcf-f716-42af-a043-e0c9d07d7586" class="navnav">3.6 Kompilationseinheiten, Imports und Pakete schnüren</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp5b55007e-09bd-4c54-aba2-9a6f7860c9a7" class="navnav">3.6.1 Volle Qualifizierung und import-Deklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp4b68e2f1-077a-4f7d-a6ec-19377539c7bc" class="navnav">3.6.2 Mit import p1.p2.* alle Typen eines Pakets erreichen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpde0fb120-1edb-44e8-96ad-84e62c1ddb35" class="navnav">3.6.3 Hierarchische Strukturen über Pakete</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp09d24adc-3851-4aa1-85d1-001f7e3fdeb7" class="navnav">3.6.4 Die package-Deklaration</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpfcd28b6f-2f50-4b66-bee4-83ee9c438426" class="navnav">3.6.5 Unbenanntes Paket (default package)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpe163327f-0e63-4692-b3d0-21499da1ee59" class="navnav">3.6.6 Klassen mit gleichen Namen in unterschiedlichen Paketen *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpd16021f5-d550-4eb8-a153-d059a6264519" class="navnav">3.6.7 Compilationseinheit (Compilation Unit)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtpc6ea456e-292a-4264-a2e3-55ead97ded44" class="navnav">3.6.8 Statischer Import *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_006.html#dodtp56f0731b-b4dd-4f1a-8812-1596b0079a41" class="navnav">3.6.9 Eine Verzeichnisstruktur für eigene Projekte *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_007.html#dodtp3057f0ca-3eba-47da-ba0f-3517ff100a0b" class="navh">3.7 Mit Referenzen arbeiten, Identität und Gleichheit</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp2914d204-f947-4d8d-ab3f-320f556fc36b" class="navh">3.7.1 Die null-Referenz</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp4111d3df-1beb-4a22-b66b-40b0d76f237a" class="navh">3.7.2 null-Referenzen testen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp88979110-b341-458d-95f5-20444a5a6ad4" class="navh">3.7.3 Zuweisungen bei Referenzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp2a7806e2-5c81-4e05-9344-9f559eba6e72" class="navh">3.7.4 Methoden mit nicht-primitiven Parametern</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5" class="navh">3.7.5 Identität von Objekten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_007.html#dodtp60b4b83b-b280-4e66-950f-1adf13899e67" class="navh">3.7.6 Gleichheit und die Methode equals()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_008.html#dodtp9894e88c-16e7-4052-8cc7-1f947e09e784" class="navnav">3.8 Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpbe0848d3-5f0b-4a95-a16e-84b7dd79fd50" class="navnav">3.8.1 Grundbestandteile</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp758015c7-7a6a-4a3f-86cf-19780ce92286" class="navnav">3.8.2 Deklaration von Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp08bd4281-c13d-4f5a-b2fe-ffa623c2aeb3" class="navnav">3.8.3 Arrays mit Inhalt</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpc22a1578-bd15-4f12-aa78-dc9c0fd55532" class="navnav">3.8.4 Die Länge eines Arrays über das Attribut length auslesen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp3ee641a8-4253-4829-8755-f06ba12ac0f8" class="navnav">3.8.5 Zugriff auf die Elemente über den Index</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp51093125-6053-465c-9772-3643dfe87846" class="navnav">3.8.6 Array-Objekte mit new erzeugen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp838ce87c-8c3c-426a-bc8f-8adbb0417a4c" class="navnav">3.8.7 Typische Feldfehler</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpaa3321ba-d8b5-4b88-a390-bc8051507d31" class="navnav">3.8.8 Feld-Objekte als Parametertyp</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpca25c434-c39a-48e4-9be6-b14ce0d6eab8" class="navnav">3.8.9 Vorinitialisierte Arrays</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpda3a858b-09a5-48d4-ac23-05326336430b" class="navnav">3.8.10 Die erweiterte for-Schleife</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpeaa8ed4c-1ec8-4a6f-a1f6-5d872ee53a4b" class="navnav">3.8.11 Arrays mit nicht-primitiven Elementen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp1d6dded8-17de-4120-a92a-a795061c7a46" class="navnav">3.8.12 Mehrdimensionale Arrays *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp578891d6-57f2-4535-8c3c-e7dadb2a7df9" class="navnav">3.8.13 Nichtrechteckige Arrays *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpd3d69c99-9b69-472b-a42e-7c874ecc078a" class="navnav">3.8.14 Die Wahrheit über die Array-Initialisierung *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp04d38ffe-e684-412d-b842-912ebe459181" class="navnav">3.8.15 Mehrere Rückgabewerte *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtpf7c77f49-759f-456b-a1b2-b9add80da278" class="navnav">3.8.16 Methode mit variabler Argumentanzahl (Vararg)</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp5415b2df-a8c3-42c7-94be-e5ffc907f72c" class="navnav">3.8.17 Klonen kann sich lohnen &#8211; Arrays vermehren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp349262f1-51ce-4dd7-90e9-af1a633fe416" class="navnav">3.8.18 Feldinhalte kopieren *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp5af27dfb-6309-4364-bcb8-99d7420f50ab" class="navnav">3.8.19 Die Klasse Arrays zum Vergleichen, Füllen, Suchen, Sortieren nutzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_008.html#dodtp1ab70d5c-60b8-41be-9bca-a8a27973dfb3" class="navnav">3.8.20 Eine lange Schlange</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_009.html#dodtpd196d0e8-dbd1-4033-a10e-ee4a18c49329" class="navnav">3.9 Der Einstiegspunkt für das Laufzeitsystem: main()</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtp9c106829-4aba-45d8-bc6b-5a1c4f1ec3fc" class="navnav">3.9.1 Korrekte Deklaration der Startmethode</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtp70f5c4ba-dad8-42c9-b23b-1c780abcc999" class="navnav">3.9.2 Kommandozeilenargumente verarbeiten</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_009.html#dodtpebc38ab3-66e2-4e61-8313-88c3dc83d281" class="navnav">3.9.3 Der Rückgabetyp von main() und System.exit() *</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_010.html#dodtpb461357a-d25a-4c95-9e3f-2a693348fcec" class="navnav">3.10 Annotationen und Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpd451af66-52be-482f-b215-441c78eb0c01" class="navnav">3.10.1 Generics</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpc2cd6c23-8d8b-43d6-a6ac-3d0fbbb3047d" class="navnav">3.10.2 Annotationen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtpa2ec2821-04bc-4263-af41-dd5813039477" class="navnav">3.10.3 Eigene Metadaten setzen</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline"><strong><a href="javainsel_03_010.html#dodtp8568ffe3-6122-450f-b033-7eaf9cc65dc2" class="navnav">3.10.4 Annotationstypen @Override, @Deprecated, @SuppressWarnings</a></strong></td>
+                                                   </tr>
+                                                   <tr>
+                                                      <td valign="baseline" width="10"></td>
+                                                      <td valign="baseline" width="10"><img src="common/pfeil_rechts5.gif" width="10" height="10" border="0" alt="Pfeil"></td>
+                                                      <td valign="baseline" colspan="2"><strong><a href="javainsel_03_011.html#dodtp94286bb6-aada-482a-ac1c-13101d509a33" class="navnav">3.11 Zum Weiterlesen</a></strong></td>
+                                                   </tr>
+                                                </tbody>
+                                             </table>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                                 <table width="100%" cellpadding="20" cellspacing="0" border="0" bgcolor="#eeeeee">
+                                    <tbody>
+                                       <tr>
+                                          <td>
+                                             <div class="main"><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp3057f0ca-3eba-47da-ba0f-3517ff100a0b" name="dodtp3057f0ca-3eba-47da-ba0f-3517ff100a0b"></a><h2 class="t2"><span class="cfett">3.7</span><span class="cfett"> Mit Referenzen arbeiten, Identität und Gleichheit</span><a href="#dodtp2914d204-f947-4d8d-ab3f-320f556fc36b"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a></h2>
+                                                <p>In Java gibt es mit <span class="clisting">null</span> eine sehr spezielle Referenz, die Auslöser vieler Probleme ist. Doch ohne sie geht
+                                                   es nicht, und warum das so ist, wird der folgende Abschnitt zeigen. Anschließend wollen
+                                                   wir sehen, wie Objektvergleiche funktionieren und was der Unterschied zwischen Identität
+                                                   und Gleichheit ist.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2914d204-f947-4d8d-ab3f-320f556fc36b" name="dodtp2914d204-f947-4d8d-ab3f-320f556fc36b"></a><h3 class="t3"><span class="cfett">3.7.1</span><span class="cfett"> Die null-Referenz</span><a href="#dodtp4111d3df-1beb-4a22-b66b-40b0d76f237a"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp3057f0ca-3eba-47da-ba0f-3517ff100a0b"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>In Java gibt es drei spezielle Referenzen: <span class="clisting">null</span>, <span class="clisting">this</span> und <span class="clisting">super</span>. (Wir verschieben <span class="clisting">this</span> und <span class="clisting">super</span> auf Kapitel 5, »Eigene Klassen schreiben«.) Das spezielle Literal <span class="clisting">null</span><a class="indexterm" id="dodtp19ccfabb-1ce9-4615-b70c-48f5c37e6d8e"></a> lässt sich zur Initialisierung von Referenzvariablen verwenden. Die <span class="clisting">null</span>-Referenz<a class="indexterm" id="dodtp971ed783-6bf0-4499-9c33-93493220fb43"></a> ist typenlos, kann also jeder Referenzvariablen zugewiesen und jeder Methode übergeben
+                                                   werden, die ein Objekt erwartet.<span class="footnote"><a id="dodtpd14f69e6-8da8-4a86-8a73-5c5c52dde375">[100](null verhält sich also so, als ob es ein Untertyp jedes anderen Typs wäre.)</a></span></p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Deklaration und Initialisierung zweier Objektvariablen mit <span class="clisting">null</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Point  p = null;<br>String s = null;<br>System.out.println( p );   // null<br></pre></div>
+                                                               Die Konsolenausgabe über die letzte Zeile liefert kurz »null«.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Da es nur ein <span class="clisting">null</span> gibt, ist zum Beispiel <span class="clisting">(Point) null == (String) null</span>. Der Wert ist ausschließlich für Referenzen vorgesehen und kann in keinen primitiven
+                                                   Typ wie die Ganzzahl 0 umgewandelt werden.<span class="footnote"><a id="dodtp932804bb-08c0-4b94-b243-62a6a8206b7c">[101](Hier unterscheiden sich C(++) und Java.)</a></span></p>
+                                                <p>Mit <span class="clisting">null</span> lässt sich eine ganze Menge machen. Der Haupteinsatzzweck sieht vor, damit uninitialisierte
+                                                   Referenzvariablen zu kennzeichnen, also auszudrücken, dass eine Referenzvariable auf
+                                                   kein Objekt verweist. In Listen oder Bäumen kennzeichnet <span class="clisting">null</span> zum Beispiel das Fehlen eines gültigen Nachfolgers; <span class="clisting">null</span> ist dann ein gültiger Indikator und kein Fehlerfall.
+                                                </p><a id="dodtp731743d0-ec4d-44b4-aa56-b3dcc0be59f7" name="dodtp731743d0-ec4d-44b4-aa56-b3dcc0be59f7"></a><h4 class="t4"><span class="cfett"> Auf null geht nix, nur die NullPointerException</span></h4>
+                                                <p>Da sich hinter <span class="clisting">null</span> kein Objekt verbirgt, ist es auch nicht möglich, eine Methode aufzurufen oder von der <span class="clisting">null</span> ein Attribut zu erfragen. Der Compiler
+                                                   kennt zwar den Typ jedes Objekts, aber erst die Laufzeitumgebung (JVM) weiß, was referenziert
+                                                   wird. Wird versucht, über die <span class="clisting">null</span>-Referenz auf eine Eigenschaft eines Objekts zuzugreifen, löst eine JVM eine <span class="clisting">NullPointerException</span><a class="indexterm" id="dodtpd0bc6c64-a176-4b66-bada-b8788440e61c"></a><span class="footnote"><a id="dodtp8bab3ec5-588c-4e28-b54c-b87b7db59464">[102](Der Name zeigt das Überbleibsel von Zeigern. Zwar haben wir es in Java nicht mit Zeigern zu tun,
+sondern mit Referenzen, doch heißt es NullPointerException und nicht NullReferenceException. Das
+erinnert daran, dass eine Referenz ein Objekt identifiziert und eine Referenz auf ein Objekt ein Pointer
+ist. Das .NET Framework ist hier konsequenter und nennt die Ausnahme NullReferenceException.)</a></span> aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.12: </strong>NullPointer.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">/*  1 */public class NullPointer<br>/*  2 */{<br>/*  3 */  public static void main( String[] args )<br>/*  4 */  {<br>/*  5 */    java.awt.Point p = null;<br>/*  6 */    String         s = null;<br>/*  7 */<br>/*  8 */   <span class="cfett"> p.setLocation( 1, 2 );</span><br>/*  9 */    s.length();<br>/* 10 */  }<br>/* 11 */}<br></pre></div>
+                                                <p>Wir beobachten eine <span class="clisting">NullPointerException</span>, denn das Programm bricht bei <span class="clisting">p.setLocation()</span> mit folgender Ausgabe ab:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">java.lang.NullPointerException<br>    at NullPointer.main(NullPointer.java:<span class="cfett">8</span>)<br> Exception in thread "main"<br></pre></div>
+                                                <p>Die Laufzeitumgebung teilt uns in der Fehlermeldung mit, dass sich der Fehler, die
+                                                   <span class="clisting">NullPointerException</span>, in Zeile 8 befindet.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp4111d3df-1beb-4a22-b66b-40b0d76f237a" name="dodtp4111d3df-1beb-4a22-b66b-40b0d76f237a"></a><h3 class="t3"><span class="cfett">3.7.2</span><span class="cfett"> null-Referenzen testen</span><a href="#dodtp88979110-b341-458d-95f5-20444a5a6ad4"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp731743d0-ec4d-44b4-aa56-b3dcc0be59f7"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Mit dem Vergleichsoperator <span class="clisting">==</span> oder dem Test auf Ungleichheit mit <span class="clisting">!=</span> lässt sich leicht herausfinden, ob eine Referenzvariable wirklich ein Objekt referenziert
+                                                   oder nicht:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">if ( object == null )<br>  // Variable referenziert nichts, ist aber gültig mit null initialisiert<br>else<br>  // Variable referenziert ein Objekt<br></pre></div><a id="dodtp180e5477-c8ac-4e6e-9f86-06064f9e26e9" name="dodtp180e5477-c8ac-4e6e-9f86-06064f9e26e9"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> null-Test und Kurzschluss-Operatoren</span></h4>
+                                                <p>Wir wollen an dieser Stelle noch einmal auf die üblichen logischen Kurzschluss-Operatoren
+                                                   und den logischen, nicht kurzschließenden Operator zu sprechen kommen. Erstere werten
+                                                   Operanden nur so lange von links nach rechts aus, bis das Ergebnis der Operation feststeht.
+                                                   Auf den ersten Blick scheint es nicht viel auszumachen, ob alle Teilausdrücke ausgewertet
+                                                   werden oder nicht, in einigen Ausdrücken ist dies aber wichtig, wie das folgende Beispiel
+                                                   für die Variable <span class="clisting">s</span> vom Typ <span class="clisting">String</span> zeigt:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.13: </strong>NullCheck.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class NullCheck<br>{<br>  public static void main( String[] args )<br>  {<br>    String s = javax.swing.JOptionPane.showInputDialog( "Eingabe" );<br>    if (<span class="cfett"> s != null &amp;&amp; ! s.isEmpty()</span> )<br>      System.out.println( "Eingabe: " + s );<br>    else<br>      System.out.println( "Abbruch oder keine Eingabe" );<br>  }<br>}<br></pre></div>
+                                                <p>Die Rückgabe von <span class="clisting">showInputDialog()</span> ist <span class="clisting">null</span>, wenn der Benutzer den Dialog abbricht. Das soll unser Programm berücksichtigen.
+                                                   Daher testet die <span class="clisting">if</span>-Bedingung, ob <span class="clisting">s</span> überhaupt auf ein Objekt verweist, und prüft gleichzeitig, ob die Länge größer 0
+                                                   ist. Dann folgt eine Ausgabe.
+                                                </p>
+                                                <p>Diese Schreibweise tritt häufig auf, und der Und-Operator zur Verknüpfung muss ein
+                                                   Kurzschluss-Operator sein, da es in diesem Fall ausdrücklich darauf ankommt, dass
+                                                   die Länge nur dann bestimmt wird, wenn die Variable <span class="clisting">s</span> überhaupt auf ein <span class="clisting">String</span>-Objekt verweist und nicht <span class="clisting">null</span> ist. Andernfalls bekämen wir bei <span class="clisting">s.isEmpty()</span> eine <span class="clisting">NullPointerException</span>, wenn jeder Teilausdruck ausgewertet würde und <span class="clisting">s</span> gleich <span class="clisting">null</span> wäre.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               »null« in anderen Programmiersprachen
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ist Java eine pure objektorientiere Programmiersprache? Nein, da Java einen Unterschied
+                                                               zwischen primitiven Typen und Referenztypen macht. Nehmen wir für einen Moment an,
+                                                               dass es primitive Typen nicht gibt. Wäre Java dann eine reine objektorientierte Programmiersprache,
+                                                               bei der jede Referenz ein pures Objekt referenziert? Die Antwort ist immer noch nein,
+                                                               da es mit <span class="clisting">null</span> etwas gibt, mit dem Referenzvariablen initialisiert werden können, aber was kein
+                                                               Objekt repräsentiert und keine Methoden besitzt. Und das kann bei der Dereferenzierung
+                                                               eine <span class="clisting">NullPointerException</span> geben. Andere Programmiersprachen haben andere Lösungsansätze, und <span class="clisting">null</span>-Referenzierungen sind nicht möglich. In der Sprache Ruby zum Beispiel ist immer alles
+                                                               ein Objekt. Wo Java mit null ein »nicht belegt« ausdrückt, macht das Ruby mit <span class="clisting">nil</span>. Der feine Unterschied ist, dass <span class="clisting">nil</span> ein Exemplar der Klasse <span class="clisting">NilClass</span> ist, genau genommen ein Singleton, was es im System nur einmal gibt. <span class="clisting">nil</span> hat auch ein paar öffentliche Methoden wie <span class="clisting">to_s</span> (wie Javas <span class="clisting">toString()</span>), was dann einen leeren String liefert. Mit <span class="clisting">nil</span> gibt es keine <span class="clisting">NullPointerException</span> mehr, aber natürlich immer noch einen Fehler, wenn auf diesem Objekt vom Typ <span class="clisting">NilClass</span> eine Methode aufgerufen wird, die es nicht gibt. 
+                                                               In Objective-C, der Standardsprache für iPhone-Programme, gibt es das Null-Objekt
+                                                               <span class="clisting">nil</span>. Üblicherweise passiert nichts, wenn eine Nachricht an das <span class="clisting">nil</span>-Objekt gesendet wird; die Nachricht wird einfach ignoriert.<span class="footnote"><a id="dodtp256d5a11-0655-45b8-986b-9f383fa45817">[103](Es gibt auch Compiler wie den GCC, der mit der Option -fno-nil-receivers dieses Verhalten abschaltet,
+um schnelleren Maschinencode zu erzeugen. Denn letztendlich muss in Maschinencode immer
+ein Test stehen, der auf 0 prüft.)</a></span>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp88979110-b341-458d-95f5-20444a5a6ad4" name="dodtp88979110-b341-458d-95f5-20444a5a6ad4"></a><h3 class="t3"><span class="cfett">3.7.3</span><span class="cfett"> Zuweisungen bei Referenzen</span><a href="#dodtp2a7806e2-5c81-4e05-9344-9f559eba6e72"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp180e5477-c8ac-4e6e-9f86-06064f9e26e9"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Eine Referenz erlaubt den Zugriff auf das referenzierte Objekt. Es kann durchaus mehrere
+                                                   Kopien dieser Referenz geben, die in Variablen mit unterschiedlichen Namen abgelegt
+                                                   sind &#8211; so wie eine Person von den Mitarbeitern als »Chefin« angesprochen wird, aber
+                                                   von ihrem Mann als »Schnuckiputzi«. Dies nennt sich auch <span class="cbegriff">Alias</span><a class="indexterm" id="dodtpbcbff50d-08dc-4d8c-9374-bce493650a36"></a>.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Ein Punkt-Objekt wollen wir unter einem alternativen Variablennamen ansprechen:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Point p = new Point();<br>Point q = p;<br></pre></div>
+                                                               Ein Punkt-Objekt wird erzeugt und mit der Variablen <span class="clisting">p</span> referenziert. Die zweite Zeile speichert nun dieselbe Referenz in der Variablen <span class="clisting">q</span>. Danach verweisen <span class="clisting">p</span> und <span class="clisting">q</span> auf dasselbe Objekt.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a href="bilder/03_008.png" rel="lightbox" title=""><img class="bild" border="1" src="bilderklein/klein03_008.png" alt="Abbildung"></a><p>Verweisen zwei Objektvariablen auf das gleiche Objekt, hat das natürlich zur Konsequenz,
+                                                   dass über zwei Wege Objektzustände ausgelesen und modifiziert werden können. Heißt
+                                                   die gleiche Person in der Firma »Chefin« und zu Hause »Schnuckiputzi«, wird der Mann
+                                                   sich freuen, wenn die Frau in der Firma keinen Stress hat.
+                                                </p>
+                                                <p>Wir können das Beispiel auch gut bei Punkt-Objekten nachverfolgen. Zeigen <span class="clisting">p</span> und <span class="clisting">q</span> auf dasselbe Punkt-Objekt, können Änderungen über <span class="clisting">p</span> auch über die Variable <span class="clisting">q</span> beobachtet werden:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.14: </strong>ItsTheSame.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.awt.Point;<br><br>public class ItsTheSame<br>{<br>  public static void main( String[] args )<br>  {<br>   <span class="cfett"> Point p = new Point();</span><br>   <span class="cfett"> Point q = p;</span><br>   <span class="cfett"> </span>p.x = 10;<br>    System.out.println( q.x ); // 10<br>    q.y = 5;<br>    System.out.println( p.y ); // 5<br>  }<br>}<br></pre></div><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp2a7806e2-5c81-4e05-9344-9f559eba6e72" name="dodtp2a7806e2-5c81-4e05-9344-9f559eba6e72"></a><h3 class="t3"><span class="cfett">3.7.4</span><span class="cfett"> Methoden mit Referenztypen als Parametern</span><a href="#dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp88979110-b341-458d-95f5-20444a5a6ad4"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Dass sich das gleiche Objekt unter zwei Namen (über zwei verschiedene Variablen) ansprechen
+                                                   lässt, können wir gut bei Methoden beobachten. Eine Methode, die über den Parameter
+                                                   eine Objektreferenz erhält, kann auf das übergebene Objekt zugreifen. Das bedeutet,
+                                                   die Methode kann dieses Objekt mit den angebotenen Methoden ändern oder auf die Attribute
+                                                   zugreifen.
+                                                </p>
+                                                <p>Im folgenden Beispiel deklarieren wir zwei Methoden. Die erste Methode, <span class="clisting">initializeToken(Point)</span>, soll einen Punkt mit Zufallskoordinaten initialisieren. Übergeben werden wir dann
+                                                   zwei <span class="clisting">Point</span>-Objekte: einmal für einen Spieler und einmal für eine Schlange. Die zweite Methode,
+                                                   <span class="clisting">printScreen(Point, Point)</span>, gibt das Spielfeld auf dem Bildschirm aus, und gibt dann, wenn die Koordinate einen
+                                                   Spieler trifft, ein »&amp;« aus und bei der Schlange ein »S«.
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.15: </strong>DrawPlayerAndSnake.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.awt.Point;<br><br>public class DrawPlayerAndSnake<br>{<br>  static void initializeToken(<span class="cfett"> Point p</span> )<br>  {<br>    int randomX = (int)(Math.random() * 40); // 0 &lt;= x &lt; 40<br>    int randomY = (int)(Math.random() * 10); // 0 &lt;= y &lt; 10<br>   <span class="cfett"> p.setLocation( randomX, randomY );</span><br>  }<br><br>  static void printScreen(<span class="cfett"> Point playerPosition,</span><br>                           <span class="cfett">Point snakePosition</span> )<br>  {<br>    for ( int y = 0; y &lt; 10; y++ )<br>    {<br>      for ( int x = 0; x &lt; 40; x++ )<br>      {<br>        if (<span class="cfett"> playerPosition.distanceSq( x, y )</span> == 0 )<br>          System.out.print( '&amp;' );<br>        else if (<span class="cfett"> snakePosition.distanceSq( x, y )</span> == 0 )<br>          System.out.print( 'S' );<br>        else System.out.print( '.' );<br>      }<br>      System.out.println();<br>    }<br>  }<br><br>  public static void main( String[] args )<br>  {<br>    Point playerPosition = new Point();<br>    Point snakePosition  = new Point();<br>    System.out.println( playerPosition );<br>    System.out.println( snakePosition );<br>   <span class="cfett"> initializeToken( playerPosition );</span><br>    <span class="cfett">initializeToken( snakePosition );</span><br>    System.out.println( playerPosition );<br>    System.out.println( snakePosition );<br>   <span class="cfett"> printScreen( playerPosition, snakePosition );</span><br>  }<br>}<br></pre></div>
+                                                <p>Die Ausgabe kann so aussehen:</p>
+                                                <div class="listing"><pre class="prettyprint">java.awt.Point[x=0,y=0]<br>java.awt.Point[x=0,y=0]<br>java.awt.Point[x=38,y=1]<br>java.awt.Point[x=19,y=8]<br>........................................<br>......................................&amp;.<br>........................................<br>........................................<br>........................................<br>........................................<br>........................................<br>........................................<br>...................S....................<br>........................................<br></pre></div>
+                                                <p>In dem Moment, in dem <span class="clisting">main()</span> die statische Methode <span class="clisting">initializeToken()</span> aufruft, gibt es sozusagen zwei Namen für das <span class="clisting">Point</span>-Objekt: <span class="clisting">playerPosition</span> und <span class="clisting">p</span>. Allerdings ist das nur innerhalb der virtuellen Maschine so, denn <span class="clisting">initializeToken()</span> kennt das Objekt nur unter unter <span class="clisting">p</span>, aber kennt die Variable <span class="clisting">playerPosition</span> nicht. Bei <span class="clisting">main()</span> ist es umgekehrt: Nur der Variablenname <span class="clisting">playerPosition</span> ist in <span class="clisting">main()</span> bekannt, er hat aber vom Namen <span class="clisting">p</span> keine Ahnung.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Hinweis
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Der Name einer Parametervariablen darf durchaus mit dem Namen der Argument-Variablen
+                                                               übereinstimmen, was die Semantik nicht verändert. Die Namensräume sind völlig getrennt,
+                                                               und Missverständnisse gibt es nicht, da beide &#8211; die aufrufende Methode und die aufgerufene
+                                                               Methode &#8211; komplett getrennte lokale Variablen haben.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp2ddc4564-7524-436b-93c5-2136678285d5" name="dodtp2ddc4564-7524-436b-93c5-2136678285d5"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Wertübergabe und Referenzübergabe per »Call by Value«</span></h4>
+                                                <p>Primitive Variablen werden immer per Wert kopiert (engl. <span class="cbegriff">Call by Value</span><a class="indexterm" id="dodtp3033194e-e041-496c-ba5c-3c65b71e876f"></a>). Das Gleiche gilt für Referenzen. Daher hat auch die folgende statische Methode
+                                                   keine Nebenwirkungen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.16: </strong>JavaIsAlwaysCallByValue.java
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">import java.awt.Point;<br><br>public class JavaIsAlwaysCallByValue<br>{<br> <span class="cfett"> static void clear( Point p )</span><br> <span class="cfett"> {</span><br>   <span class="cfett"> p = new Point();</span><br> <span class="cfett"> }<br><br> </span> public static void main( String[] args )<br>  {<br>    Point p = new Point( 10, 20 );<br>    clear( p );<br>    System.out.println( p );  //<span class="cfett"> java.awt.Point[x=10,y=20]</span><br>  }<br>}<br></pre></div>
+                                                <p>Nach der Zuweisung in der <span class="clisting">clear()</span>-Methode referenziert die Parameter-Variable <span class="clisting">p</span> ein anderes Punkt-Objekt, und der der Methode übergebene Verweis geht damit verloren.
+                                                   Diese Änderung wird nach außen hin natürlich nicht sichtbar, denn das Methoden-<span class="clisting">p</span> ist ja nur ein temporärer alternativer Name für das <span class="clisting">main</span>-<span class="clisting">p</span>; eine Neuzuweisung an das Methoden-<span class="clisting">p</span> ändert nicht das <span class="clisting">main</span>-<span class="clisting">p</span>, was bedeutet, dass der Aufrufer von <span class="clisting">clear()</span> kein neues Objekt unter sich hat.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               »Call by Reference« gibt es in Java nicht &#8211; ein Blick auf C und C++
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>In C++ gibt es eine weitere Argumentübergabe, die sich <span class="cbegriff">Call by Reference</span><a class="indexterm" id="dodtp2725beda-3bfa-439e-8214-1dc47fa89116"></a> nennt. Würde eine Methode wie <span class="clisting">clear()</span> mit Referenzsemantik deklariert, würde die Variable <span class="clisting">p</span> ein Synonym darstellen, also einen anderen Namen für eine Variable &#8211; in unserem Fall
+                                                               <span class="clisting">q</span>. Damit würde die Zuweisung im Rumpf den Zeiger auf ein neues Objekt legen. Die <span class="clisting">swap()</span>-Funktion ist ein gutes Beispiel für die Nützlichkeit von Call by Reference:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">void swap( int&amp; a, int&amp; b ) { int tmp = a; a = b; b = tmp; }<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zeiger und Referenzen sind in C++ etwas anderes, was Spracheinsteiger leicht irritiert.
+                                                               Denn in C++ und auch in C hätte eine vergleichbare <span class="clisting">swap()</span>-Funktion auch mit Zeigern implementiert werden können:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">void swap( int *a, int *b ) { int tmp = *a; *a = *b; *b = tmp; }<br></pre></div>
+                                                               Die Implementierung gibt in C(++) einen Verweis auf das Argument.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtpe6b7bf56-185b-4732-9b26-7e92716cc4ee" name="dodtpe6b7bf56-185b-4732-9b26-7e92716cc4ee"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Final deklarierte Referenz-Parameter und das fehlende const</span></h4>
+                                                <p><a class="indexterm" id="dodtpda359237-d9b6-40dc-8ba3-6e90f00b1bab"></a>Wir haben gesehen, dass finale Variablen dem Programmierer vorgeben, dass er Variablen
+                                                   nicht beschreiben darf. Das heißt, Zuweisungen sind tabu. Dabei ist es egal, ob die
+                                                   Parametervariable vom primitiven Typ oder vom Referenztyp ist. Bei einer Methodendeklaration
+                                                   der folgenden Art wäre also eine Zuweisung an <span class="clisting">i</span> und auch an <span class="clisting">s</span> verboten:
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public void foo(<span class="cfett"> final</span> int i,<span class="cfett"> final</span> String s )<br></pre></div>
+                                                <p>Ist die Parametervariable ein Referenztyp (und nicht <span class="clisting">final</span>), so würden wir mit einer Zuweisung den Verweis auf das ursprüngliche Objekt verlieren,
+                                                   und das wäre wenig sinnvoll.
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public void foo( String s )<br>{<br>  s = "Keine Feier ohne Geier.";<br>}<br></pre></div>
+                                                <p>Halten wir fest: Ist ein Parameter mit <span class="clisting">final</span> deklariert, sind keine Zuweisungen möglich. <span class="clisting">final</span> verbietet aber keine Änderungen an Objekten &#8211; und so könnte <span class="clisting">final</span> im Sinne der Übersetzung »endgültig« verstanden werden. Mit der Referenz des Objekts
+                                                   können wir sehr wohl den Zustand verändern, so wie wir es auch im letzten Beispielprogramm
+                                                   taten.
+                                                </p>
+                                                <p><span class="clisting">final</span> erfüllt demnach nicht die Aufgabe, schreibende Objektzugriffe zu verhindern. Eine
+                                                   Methode mit übergebenen Referenzen kann also Objektveränderungen vornehmen, wenn es
+                                                   etwa <span class="clisting">setXXX()</span>-Methoden oder Variablen gibt, auf die zugegriffen werden kann. Die Dokumentation
+                                                   muss also immer ausdrücklich beschreiben, wann die Methode den Zustand eines Objekts
+                                                   modifiziert.
+                                                </p>
+                                                <p>In C++ gibt es für Parameter den Zusatz <span class="clisting">const</span><a class="indexterm" id="dodtpc67ea74d-8ed6-49f4-aaf1-c826f26e73e5"></a>, an dem der Compiler erkennen kann, dass Objektzustände nicht verändert werden sollen.
+                                                   Ein Programm nennt sich <span class="cbegriff">const-korrekt</span><a class="indexterm" id="dodtp2ddeed8c-0421-4df4-8511-cfb3103c0fa2"></a>, wenn es niemals ein konstantes Objekt verändert. Dieses <span class="clisting">const</span> ist in C++ eine Erweiterung des Objekttyps, die es in Java nicht gibt. Zwar haben
+                                                   die Java-Entwickler das Schlüsselwort <span class="clisting">const</span> reserviert, doch genutzt wird es bisher nicht.
+                                                </p><a id="dodtp196aab96-e838-4ccb-bf65-0cd434f9e22e" name="dodtp196aab96-e838-4ccb-bf65-0cd434f9e22e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Finale Parameter in der Vererbung *</span></h4>
+                                                <p>In der Vererbung von Methoden spielen finale Parametervariablen keine Rolle. Wir können
+                                                   es als zusätzliche Information für die jeweilige Methode betrachten. Eine Unterklasse
+                                                   kann demnach beliebig das <span class="clisting">final</span> hinzufügen oder auch wegnehmen. Alte Bibliotheken lassen sich so leicht weiterverwenden.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5" name="dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5"></a><h3 class="t3"><span class="cfett">3.7.5</span><span class="cfett"> Identität von Objekten</span><a href="#dodtp60b4b83b-b280-4e66-950f-1adf13899e67"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp196aab96-e838-4ccb-bf65-0cd434f9e22e"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Der Vergleichsoperator <span class="clisting">==</span><a class="indexterm" id="dodtp41cd572f-22b3-46b2-9353-bb2ef24c2168"></a> ist für alle Datentypen so definiert (natürlich auch !=), dass er die vollständige Übereinstimmung zweier
+                                                   Werte testet. Bei primitiven Datentypen ist das einfach einzusehen und bei Referenztyp<a class="indexterm" id="dodtp36837633-d188-44b3-842e-21d163e36e9c"></a>en im Prinzip genauso. Der Operator <span class="clisting">==</span> testet bei Referenzen, ob diese übereinstimmen, also auf das gleiche Objekt verweisen.
+                                                   Demnach sagt der Test etwas über die Identität der referenzierten Objekte aus, aber
+                                                   nichts darüber, ob zwei verschiedene Objekte möglicherweise den gleichen Inhalt haben.
+                                                   Der Inhalt der Objekte spielt bei <span class="clisting">==</span> keine Rolle.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zwei Objekte mit drei unterschiedlichen Punktvariablen <span class="clisting">p</span>, <span class="clisting">q</span>, <span class="clisting">r</span> und die Bedeutung von <span class="clisting">==</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Point p = new Point( 10, 10 );<br>Point q = p;<br>Point r = new Point( 10, 10 );<br>System.out.println( p == q ); // true, da p und q dasselbe Objekt referenzieren<br>System.out.println( p == r ); // false, da p und r zwei verschiedene Punkt-<br>                              // Objekte referenzieren, die zufällig dieselben<br>                              // Koordinaten haben<br></pre></div>
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Da <span class="clisting">p</span> und <span class="clisting">q</span> auf dasselbe Objekt verweisen, ergibt der Vergleich <span class="clisting">true</span>. <span class="clisting">p</span> und <span class="clisting">r</span> referenzieren unterschiedliche Objekte, die aber zufälligerweise den gleichen Inhalt
+                                                   haben. Doch woher soll der Compiler wissen, wann zwei Punkt-Objekte inhaltlich gleich
+                                                   sind? Weil sich ein Punkt durch die Attribute <span class="clisting">x</span> und <span class="clisting">y</span> auszeichnet? Die Laufzeitumgebung könnte voreilig die Belegung jeder Objektvariablen
+                                                   vergleichen, doch das entspricht nicht immer einem korrekten Vergleich, so wie wir
+                                                   ihn uns wünschen. Ein Punkt-Objekt könnte etwa zusätzlich die Anzahl der Zugriffe
+                                                   zählen, die jedoch für einen Vergleich, der auf der Lage zweier Punkte basiert, nicht
+                                                   berücksichtigt werden darf.
+                                                </p><br><div align="center"><a href="#top"><img src="common/jupiters.gif" border="0" alt="Galileo Computing - Zum Seitenanfang"></a></div><a id="dodtp60b4b83b-b280-4e66-950f-1adf13899e67" name="dodtp60b4b83b-b280-4e66-950f-1adf13899e67"></a><h3 class="t3"><span class="cfett">3.7.6</span><span class="cfett"> Gleichheit und die Methode equals()</span><a href="#"><img src="common/down.gif" width="15" height="15" border="0" alt="Zur nächsten Überschrift"></a><a href="#dodtp5627e601-6ed9-4a2f-a9f0-b3665763f2b5"><img src="common/top.gif" width="15" height="15" border="0" alt="Zur vorigen Überschrift"></a></h3>
+                                                <p>Die allgemein gültige Lösung besteht darin, die Klasse festlegen zu lassen, wann Objekte
+                                                   gleich sind. Dazu kann jede Klasse eine Methode <span class="clisting">equals()</span><a class="indexterm" id="dodtp07c17020-0fa5-448a-aec6-dd5b42ffd27f"></a> implementieren, die Exemplare dieser Klasse mit beliebigen anderen Objekten vergleichen
+                                                   kann. Die Klassen entscheiden immer nach Anwendungsfall, welche Attribute sie für
+                                                   einen Gleichheitstest heranziehen, und <span class="clisting">equals()</span> liefert <span class="clisting">true</span>, wenn die gewünschten Zustände (Objektvariablen) übereinstimmen.
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">
+                                                               
+                                                               Beispiel
+                                                               </span></td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellentext">
+                                                            <p>Zwei inhaltlich gleiche Punkt-Objekte, verglichen mit <span class="clisting">==</span> und <span class="clisting">equals()</span>:
+                                                               
+                                                               <div class="listing"><pre class="prettyprint">Point p = new Point( 10, 10 );<br>Point q = new Point( 10, 10 );<br>System.out.println( p <span class="cfett">==</span> q );      // false<br>System.out.println( p.<span class="cfett">equals</span>(q) ); // true. Da symmetrisch auch q.<span class="cfett">equals</span>(p)<br></pre></div>
+                                                               Nur <span class="clisting">equals()</span> testet in diesem Fall die inhaltliche Gleichheit.
+                                                               
+                                                            </p>
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      
+                                                   </tbody>
+                                                </table>
+                                                <p>Bei den unterschiedlichen Bedeutungen müssen wir demnach die Begriffe <span class="cbegriff">Identität</span> und <span class="cbegriff">Gleichheit</span> von Objekten sorgfältig unterscheiden. Daher noch einmal eine Zusammenfassung:
+                                                </p>
+                                                <table width="100%" border="0" cellspacing="1" cellpadding="3">
+                                                   <caption class="tabunter">
+                                                      <p class="ptabellenunter"><strong>Tabelle 3.4: </strong>Identität und Gleichheit von Objekten
+                                                      </p>
+                                                   </caption>
+                                                   <tbody>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td>
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Getestet mit</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Implementierung</span>
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Identität der Referenzen</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp68110195-1427-4648-ba80-1b6c78f24725"></a><span class="clisting">==</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">nichts zu tun
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                      <tr>
+                                                         
+                                                         <td class="tabellenkopf"><span class="cfett">Gleichheit der Zustände</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext"><a class="indexterm" id="dodtp1bed4640-c897-405a-b353-62c0c1b57b72"></a><span class="clisting">equals()</span>
+                                                            
+                                                         </td>
+                                                         
+                                                         <td class="tabellentext">abhängig von der Klasse
+                                                            
+                                                         </td>
+                                                         
+                                                      </tr>
+                                                      
+                                                   </tbody>
+                                                </table><a id="dodtp0b770d2a-5b82-450a-a7ec-c0d5bd7e38ba" name="dodtp0b770d2a-5b82-450a-a7ec-c0d5bd7e38ba"></a>
+                                                <h4 class="t4"><span class="cfett">equals()-Implementierung von Point *</span></h4>
+                                                <p>Die Klasse <span class="clisting">Point</span> deklariert <span class="clisting">equals()</span>, wie die API-Dokumentation zeigt. Werfen wir einen Blick auf die Implementierung,
+                                                   um eine Vorstellung von der Arbeitsweise zu bekommen:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.17: </strong>java/awt/Point.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Point ...<br>{<br>  public int x;<br>  public int y;<br><br>  public boolean equals( Object obj )<br>  {<br>    if ( obj instanceof Point ) {<br>      Point pt = (Point) obj;<br>      return<span class="cfett"> (x == pt.x) &amp;&amp; (y == pt.y)</span>;      // (*)<br>    }<br>    return super.equals( obj );<br>  }<br>  ...<br>}<br></pre></div>
+                                                <p>Obwohl bei diesem Beispiel für uns einiges neu ist, erkennen wir den Vergleich in
+                                                   der Zeile (*). Hier vergleicht das <span class="clisting">Point</span>-Objekt seine eigenen Attribute mit den Attributen des Objekts, das als Argument an
+                                                   <span class="clisting">equals()</span> übergeben wurde.
+                                                </p><a id="dodtp91f40775-fa3d-4aa0-82e6-58b83f81858e" name="dodtp91f40775-fa3d-4aa0-82e6-58b83f81858e"></a><h4 class="t4"><span class="cfett"></span><span class="cfett"> Es gibt immer ein equals(): die Oberklasse Object und ihr equals() *</span></h4>
+                                                <p>Glücklicherweise müssen wir als Programmierer nicht lange darüber nachdenken, ob eine
+                                                   Klasse eine <span class="clisting">equals()</span>-Methode anbieten soll oder nicht. Jede Klasse besitzt sie, da die universelle Oberklasse
+                                                   <span class="clisting">Object</span> sie vererbt. Wir greifen hier auf Kapitel 5, »Eigene Klassen schreiben«, vor; der
+                                                   Abschnitt kann aber übersprungen werden. Wenn eine Klasse also keine eigene <span class="clisting">equals()</span>-Methode angibt, dann erbt sie eine Implementierung aus der Klasse <span class="clisting">Object</span>. Die sieht wie folgt aus:
+                                                </p>
+                                                <p class="plistingunter"><strong>Listing 3.18: </strong>java/lang/Object.java, Ausschnitt
+                                                </p>
+                                                <div class="listing"><pre class="prettyprint">public class Object<br>{<br>  public boolean equals( Object obj )<br>  {<br>    return (<span class="cfett"> this == obj</span> );<br>  }<br>  ...<br>}<br></pre></div>
+                                                <p>Wir erkennen, dass hier die Gleichheit auf die Gleichheit der Referenzen abgebildet
+                                                   wird. Ein inhaltlicher Vergleich findet nicht statt. Das ist das einzige, was die
+                                                   vorgegebene Implementierung machen kann, denn sind die Referenzen identisch, sind
+                                                   die Objekte logischerweise auch gleich. Nur über Zustände »weiß« die Basisklasse <span class="clisting">Object</span> nichts.
+                                                </p><br><hr><a name="kommentar"></a><h3>Ihr Kommentar</h3>
+                                                <p>Wie hat Ihnen das &lt;openbook&gt; gefallen? Wir freuen uns immer über Ihre freundlichen
+                                                   und kritischen Rückmeldungen.
+                                                </p>
+                                                <form action="http://www.galileo-press.de/feedback/openbook" method="post" style="text-align: center; margin-top: 10px;"><input type="hidden" name="openbookurl" value="javainsel/javainsel_03_007.html"><input type="hidden" name="buchtitel" value="Java ist auch eine Insel"><input type="hidden" name="Kapitel" value="3 Klassen und Objekte"><table border="0">
+                                                      <tbody>
+                                                         <tr>
+                                                            <td><label for="name">Name</label><br></td>
+                                                            <td><input type="text" name="name" id="name" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td><label for="email">E-Mail</label><br></td>
+                                                            <td><input type="text" name="email" id="email" size="40"><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td valign="top"><label for="comment">Ihr Kommentar</label><br></td>
+                                                            <td><textarea name="comment" id="comment" rows="10" cols="40"></textarea><br></td>
+                                                         </tr>
+                                                         <tr>
+                                                            <td></td>
+                                                            <td><input type="submit" value="Kommentar absenden"></td>
+                                                         </tr>
+                                                      </tbody>
+                                                   </table>
+                                                </form>
+                                             </div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                           <tr>
+                              <td width="100%" class="start" colspan="1" height="22" align="center">
+                                 <table width="100%" border="0" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                       <tr>
+                                          <td width="25%"><a href="javainsel_03_006.html" class="navnav"> &lt;&lt; zurück</a></td>
+                                          <td width="49%">
+                                             <div align="center"><a class="navnav" href="#">&lt;top&gt;</a></div>
+                                          </td>
+                                          <td align="right" width="25%">
+                                             <div align="right"><a href="javainsel_03_008.html" class="navnav">vor &gt;&gt;
+                                                   </a></div>
+                                          </td>
+                                       </tr>
+                                    </tbody>
+                                 </table>
+                              </td>
+                           </tr>
+                        </tbody>
+                     </table>
+                  </div>
+               </td>
+               <td width="10" valign="top"></td>
+              <td width="160" valign="top">
+<table border="0" cellpadding="0" cellspacing="0" width="160">
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">
+&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor">
+<strong>Zum Katalog</strong></a>
+
+</td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2">
+<img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><a href="http://www.galileocomputing.de/2672?GPP=opjiX">
+<img src="common/9783836218023.jpg" width="119" height="90" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java ist auch eine Insel" title="Zum Katalog: Java ist auch eine Insel">
+<br><br><br><br><br><br><strong>Java ist auch eine Insel</strong><br><img src="common/pfeil_rechts5.gif" border="0" alt="">Jetzt bestellen</a><br /><br />
+</td>
+</tr>
+</table>
+</td>
+
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Ihre Meinung?</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+
+<table cellspacing="3">
+<tr>
+<td>Wie hat Ihnen das &lt;openbook&gt; gefallen?<br><a href="#kommentar"><img src="common/pfeil_rechts5.gif" border="0" alt="">Ihre Meinung</a>
+<br><br></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+</td>
+</tr>
+
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2">&nbsp;<a href="http://www.galileocomputing.de/katalog/buecher/?GPP=opjiX" class="autor"><strong>Buchempfehlungen</strong></a></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2253?GPP=opjiX">
+<img src="common/1507.png" width="119" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Java 7 – Mehr als eine Insel"><br><br><br><br><br><br>&nbsp;Java 7 –<br>&nbsp;Mehr als eine Insel</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2516?GPP=opjiX">
+<img src="common/1697.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android 3"><br><br><br><br><br><br><br>&nbsp;Android 3</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2950?GPP=opjiX">
+<img src="common/1813.png" width="122" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Android-Apps entwickeln"><br><br><br><br><br><br><br>&nbsp;Android-Apps<br>&nbsp;entwickeln</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2620?GPP=opjiX">
+
+<img src="common/1731.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: NetBeans Platform 7"><br><br><br><br><br><br><br>&nbsp;NetBeans<br>&nbsp;Platform 7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2463?GPP=opjiX">
+<img src="common/1668.png" width="124" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Eclipse 3.7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbspEclipse 3.7</a><br><br></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2346?GPP=opjiX">
+<img src="common/1568.png" width="120" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java"><br><br><br><br><br><br><br>&nbsp;Einstieg<br>&nbsp;in Java</a><br><br></td>
+</tr>
+
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td><td valign="top">
+<a href="http://www.galileocomputing.de/2452?GPP=opjiX">
+<img src="common/1662.png" width="116" height="100" border="0" align="left" hspace="4" vspace="8" alt="Zum Katalog: Einstieg in Java 7"><br><br><br><br><br><br><br>&nbsp;Einstieg in<br>&nbsp;Java 7</a><br><br></td>
+</tr>
+</table></td>
+</tr>
+<tr>
+<td><img src="common/leer.gif" height="2" width="1" border="0" /></img></td>
+</tr>
+
+<tr>
+<td>
+<table border="0" cellpadding="0" cellspacing="0" width="100%">
+<tr>
+<td class="start" height="20" colspan="2"><span class="autor"><strong>&nbsp;Shopping</strong></span></td>
+</tr>
+<tr>
+<td valign="top" class="tbl4" width="2"><img src="common/leer.gif" border="0" height="1" width="1"></td>
+<td valign="top">
+<table cellspacing="3">
+<tr>
+<td><b>Versandkostenfrei</b> bestellen in Deutschland und &Ouml;sterreich<br><a href="http://www.galileocomputing.de/hilfe/Shop/?GPP=opjiX"><img src="common/pfeil_rechts5.gif" border="0" alt="Info">Info</a><br><br></td>
+
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+</table>
+<br><br><hr width="70%" align="center">
+<div align="center">
+<p class="standard"><strong>Copyright © Galileo Press 2011</strong><br>
+        Für Ihren privaten Gebrauch dürfen Sie die Online-Version natürlich ausdrucken.
+        Ansonsten unterliegt das &lt;openbook&gt; denselben Bestimmungen, wie die
+        gebundene Ausgabe: Das Werk einschließlich aller seiner Teile ist urheberrechtlich
+        geschützt. Alle Rechte vorbehalten einschließlich der Vervielfältigung, Übersetzung,
+        Mikroverfilmung sowie Einspeicherung und Verarbeitung in elektronischen Systemen.</p><br><a href="http://www.galileocomputing.de/?GPP=opjiX">[Galileo Computing]</a><br><br>
+      Galileo Press, Rheinwerkallee 4, 53227 Bonn, Tel.: 0228.42150.0, Fax 0228.42150.77, <a href="mailto:info@galileo-press.de">info@galileo-press.de</a></div><br><br></body>
+</html>
