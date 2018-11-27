@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.Scanner;		// Import der Scanner Klasse
 
 public class Eingaben {
 
@@ -6,7 +6,8 @@ public class Eingaben {
 //		String meinText = "Beispiel Text";
 //		System.out.println(meinText);
 //		
-		Scanner derScanner = new Scanner(System.in);
+		Scanner derScanner = new Scanner(System.in);		// Neues Objekt derScanner von Klasse Scanner
+		
 //		
 //		// String meineEingabe = Eingabe von der Konsole übernehmen
 //		System.out.print("Eingabe: ");
@@ -73,7 +74,7 @@ public class Eingaben {
 		switch (operator) {
 		case '+':
 			ergebnis = z1 + z2;
-			System.out.println(z1 + " " + operator + " " + z2 + " = " + ergebnis);
+			System.out.println(String.valueOf(z1) + " " + operator + " " + z2 + " = " + ergebnis);
 			break;
 		case '-':
 			ergebnis = z1 - z2;
@@ -94,6 +95,8 @@ public class Eingaben {
 		default:
 			System.out.println("Operator nicht definiert");
 		}
+		
+		derScanner.close();			// Scanner sollte immer geschlossen werden.
 
 	}
 
