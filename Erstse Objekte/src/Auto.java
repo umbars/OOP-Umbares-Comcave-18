@@ -8,13 +8,40 @@ public class Auto {
 	int hubRaum;
 	int anzahlSitze;
 	int tankVolumen = 60;
-	int verbrauch = 8;
+	// int tankStand ??
+	int verbrauch = 11;
 	int reichweite;
 	
 	// Methoden		=	Fähigkeiten
 	void druckeMarkeUndModell() {
 		System.out.println(marke + " " + modell);
 		System.out.println(serienNummer);
+	}
+	
+	void setzeAttribute(String marke, String modell, String serienNummer,int tankVolumen,int verbrauch,int kw,int hubRaum, int anzahlSitze ) {
+		this.modell = modell;
+		this.marke = marke;
+		this.serienNummer=serienNummer;
+		this.tankVolumen=tankVolumen;
+		this.verbrauch= verbrauch;
+		if (anzahlSitze >=2 && anzahlSitze <=2)
+			this.anzahlSitze=anzahlSitze;
+		else 
+			this.anzahlSitze=0;
+		this.kw=kw;
+		if (hubRaum>0)
+			this.hubRaum=hubRaum;
+		else
+			this.hubRaum=0;
+		
+	}
+	
+	void fahre() {
+		// nimmt Strecke in Kilometer an
+		// Berechnet tankstand neu
+		// Nutzen sie dazu den verbrauch 
+		
+		
 	}
 	
 	void berechneReichweite() {
