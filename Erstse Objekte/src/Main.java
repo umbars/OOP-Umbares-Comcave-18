@@ -17,32 +17,20 @@ public class Main {
 //		auto2.druckeInfo();
 //		auto3.druckeInfo();
 		
-//		System.out.println();
-//		auto1.druckeSerienNummer();	
-//		auto1.druckeMarke();
-		
-		
-		// String test2 = auto1.getSerienNummer();
-		
-		auto1.druckeSerienNummer();
-		
 		
 		System.out.println("Die Seriennummer lautet " + auto1.getSerienNummer());
 		System.out.println("Wir haben insgesamt " + (auto1.getAnzahlSitze() + auto2.getAnzahlSitze() + auto3.getAnzahlSitze()) + " Sitzplätze.");
 		
 		System.out.println();
 		System.out.println(auto1.fehlerAuslesen("SuperGeheimesPasswort"));
+		
 		// Auto1 KW ausgeben
 		
 		// Auto1 KW ändern
 		
 		// Auto1 KW wieder ausgeben
 		
-		// Hat sich was verändert?
-		
-		
-		
-		//"Die Seriennummer von Audi A6 lautet FA284932"
+		// Hat sich was verändert? => JA
 		
 	}
 

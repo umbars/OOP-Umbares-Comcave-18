@@ -7,6 +7,9 @@ public class Eingaben {
 //		System.out.println(meinText);
 //		
 		Scanner derScanner = new Scanner(System.in);		// Neues Objekt derScanner von Klasse Scanner
+		int meineZahl = 5;
+		
+		
 		
 //		
 //		// String meineEingabe = Eingabe von der Konsole übernehmen
