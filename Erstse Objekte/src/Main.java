@@ -7,28 +7,30 @@ public class Main {
 		Auto auto2 = new Auto();
 		Auto auto3 = new Auto();
 		
-		auto1.marke = "Audi";
-		auto1.modell = "A6";
-		auto2.marke = "Mercedes";
-		auto2.modell = "C-Klasse";
-		auto3.marke = "BMW";
-		auto3.modell = "3er";
+		int meineZahl = 3;
 		
-		auto1.serienNummer = "4894078963";
-		auto3.anzahlSitze = 5;
+		auto1.setzeAttribute("Audi", "A6", "FA284932", 72, 8, 160, 2000, 5);
+		auto2.setzeAttribute("Mercedes", "E-Klasse", "FM12312332", 68, 9, 180, 3000, 7);
+		auto3.setzeAttribute("BMW", "4er", "FB239021", 54, 7, 165, 2250, 4);
 		
-		auto1.tankVolumen = 72;		// Angaben in l
-		auto1.verbrauch = 8;		// Angaben in l
+//		auto1.druckeInfo();	
+//		auto2.druckeInfo();
+//		auto3.druckeInfo();
 		
-		auto2.tankVolumen = 90;
 		
-//		auto1.druckeMarkeUndModell();
-//		auto1.berechneReichweite();
-//		auto1.druckeReichweite();
-//		Wurde in druckeInfo() zusammengefasst		
-		auto1.druckeInfo();	// Gibt das selbe aus, wie Zeile die letzen Zeilen
-		auto2.druckeInfo();
-		auto3.druckeInfo();
+		System.out.println("Die Seriennummer lautet " + auto1.getSerienNummer());
+		System.out.println("Wir haben insgesamt " + (auto1.getAnzahlSitze() + auto2.getAnzahlSitze() + auto3.getAnzahlSitze()) + " Sitzplätze.");
+		
+		System.out.println();
+		System.out.println(auto1.fehlerAuslesen("SuperGeheimesPasswort"));
+		
+		// Auto1 KW ausgeben
+		
+		// Auto1 KW ändern
+		
+		// Auto1 KW wieder ausgeben
+		
+		// Hat sich was verändert? => JA
 		
 	}
 
