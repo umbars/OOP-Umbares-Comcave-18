@@ -10,10 +10,10 @@ public class Spieler {
 	public Spieler(String name, char spielStein) {
 		
 		this.name = name;
-		this.spielStein = spielStein;
+		this.spielStein = Character.toUpperCase(spielStein);
 		this.anzahlSiege = 0;
 	}
- // Methode
+ // Methoden
 
 	public String getName() {
 		return name;
