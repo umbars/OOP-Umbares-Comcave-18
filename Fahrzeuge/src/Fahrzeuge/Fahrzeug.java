@@ -1,6 +1,6 @@
 package Fahrzeuge;
 
-public class Fahrzeug {
+public abstract class Fahrzeug {
 	// Attribute
 	protected int anzahlRaeder;
 	protected String farbe;
@@ -12,77 +12,76 @@ public class Fahrzeug {
 	protected double verbrauch;
 
 	// Konstruktor
-	public Fahrzeug() {
-		System.out.println("Fahrzeug");
-	
-		System.out.println("Konstruktor von Fahrzeug wurde genutzt!");
+	public Fahrzeug(int anzahlRaeder, String farbe, 
+			String marke, String modell, double motorLeistung,
+			double tankVolumen, double verbrauch) {
+		// Parameter den Attributen zuweisen
+		this.anzahlRaeder = anzahlRaeder;
+		this.farbe = farbe;
+		this.marke = marke;
+		this.modell = modell;
+		this.motorLeistung = motorLeistung;
+		this.tankVolumen = tankVolumen;
+		this.tankStand = tankVolumen;
+		this.verbrauch = verbrauch;
+		
+		System.out.println("Ein neues Fahrzeug wurde erstellt!");
 	}
-    public double gebeReichweite() {
-    	
-    }
-    
+
+	// Methoden	
+	public double gebeReichweite() {
+		return this.tankStand / this.verbrauch * 100;
+	}
+	
+	// Farbe
 	public String getFarbe() {
 		return farbe;
 	}
-
 	public void setFarbe(String farbe) {
 		this.farbe = farbe;
 	}
-
-	public String getModell() {
-		return modell;
-	}
-
-	public void setModell(String modell) {
-		this.modell = modell;
-	}
-
+	
+	// Motorleistung 
 	public double getMotorLeistung() {
 		return motorLeistung;
 	}
-
 	public void setMotorLeistung(double motorLeistung) {
 		this.motorLeistung = motorLeistung;
 	}
-
-	public double getTankVolumen() {
-		return tankVolumen;
-	}
-
-	public void setTankVolumen(double tankVolumen) {
-		this.tankVolumen = tankVolumen;
-	}
-
+	
+	// Tankstand
 	public double getTankStand() {
 		return tankStand;
 	}
-
 	public void setTankStand(double tankStand) {
 		this.tankStand = tankStand;
 	}
-
+	
+	// Verbrauch
 	public double getVerbrauch() {
 		return verbrauch;
 	}
-
 	public void setVerbrauch(double verbrauch) {
 		this.verbrauch = verbrauch;
 	}
-
+	
+	// Anzahl Räder
 	public int getAnzahlRaeder() {
 		return anzahlRaeder;
 	}
-
+	
+	// Marke
 	public String getMarke() {
 		return marke;
 	}
-
-	// Methoden
 	
-	
-	
-	
+	// Modell
+	public String getModell() {
+		return modell;
 	}
-
 	
-
+	// Tankvolumen
+	public double getTankVolumen() {
+		return tankVolumen;
+	}
+}

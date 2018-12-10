@@ -3,20 +3,22 @@ package Fahrzeuge.Motorbetrieben;
 import Fahrzeuge.Fahrzeug;
 
 public class Traktor extends Fahrzeug{
-	public Traktor() {
-		//super();
-		System.out.println("Traktor");
-		
-	}
+	// Attribute
+	private double zugKraft;
+	
+	// Konstruktor
 	public Traktor(int anzahlRaeder, String farbe, String marke, String modell, double motorLeistung,
 			double tankVolumen, double verbrauch, double zugKraft) {
 		super(anzahlRaeder, farbe, marke, modell, motorLeistung, tankVolumen, verbrauch);
-		// TODO Auto-generated constructor stub
+	
+		this.zugKraft = zugKraft;
+	}
+	
+	
+	// Methoden
+	public double getZugKraft() {
+		return this.zugKraft;
 	}
 
-	private double zugKraft;
 	
-	public void test2() {
-		System.out.println("Test2");
-	}
 }

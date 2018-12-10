@@ -47,5 +47,17 @@ public class Spielfeld {
 	public int gebeHoehe() {
 		return spielfeld[1].length;
 	}
+	public boolean pruefeVoll() {
+		for(int y = 0; y < spielfeld[1].length; y++) {
+			// spielfeld.length gibt uns die Spielfeldbreite, also den ersten Wert aus Zeile 4
+			for(int x = 0; x < spielfeld.length; x++) {
+				if (spielfeld[x][y]==0 ) {
+					return false;
+				}
+				
+			}
+		}
+		 return true;
+	}
 
 }

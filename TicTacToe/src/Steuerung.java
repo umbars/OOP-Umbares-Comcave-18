@@ -30,27 +30,15 @@ public class Steuerung {
 			case 0:
 				spielfeldAusgeben();
 				feldSetzen();
-
-				// Spieler wechseln
-				// Entweder if else oder ternärer Operator
+				pruefeGewonnen();
 				spielerWechseln();
-
-				// aktSpieler == 1
-				// aktSpieler = 0;
-				// aktSpieler != 1
-				// aktSpieler = 1;
-
-//				if (aktSpieler == 1) {
-//					aktSpieler = 0;
-//				} else {
-//					aktSpieler = 1;
-//				}
-
+				
 				break;
 
 			// Spieler 1 gewinnt
 			case 1:
 				// Name von Spieler 1 und " hat gewonnen!" ausgeben
+				spielfeldAusgeben();
 				dieOberflaeche.gebeText(spieler[0].getName() + " hat gewonnen!", true);
 				zustand = 4;
 				break;
@@ -58,6 +46,7 @@ public class Steuerung {
 			// Spieler 2 gewinnt
 			case 2:
 				// Name von Spieler 1 und " hat gewonnen!" ausgeben
+				spielfeldAusgeben();
 				dieOberflaeche.gebeText(spieler[1].getName() + " hat gewonnen!", true);
 				zustand = 4;
 				break;
@@ -161,4 +150,64 @@ public class Steuerung {
 	private void spielerWechseln() {
 		aktSpieler = (aktSpieler == 1) ? 0 : 1;
 	}
-}
+
+	private void pruefeGewonnen() {
+		// Wir müssen das Spielfeld einholen
+		// also in der Methode zwischenspeichern
+		int[][] feld = dasSpielfeld.getSpielfeld();
+		
+		// Prüfen Sie ob...
+		// die Reihen 3 oder -3 ergeben
+		int summeR1 = 0;
+		int summeR2 = 0;
+		int summeR3 = 0;
+		
+		int summeS1 = 0;
+		int summeS2 = 0;
+		int summeS3 = 0;
+		
+		int summeD1 = 0;
+		int summeD2 = 0;
+		
+		for(int j=0;j<3;j++) {
+			summeD1 += feld[j][j];
+			summeD2 += feld[j][2-j];
+			
+		}
+		
+		for(int i = 0;i<3;i++) {
+			summeS1 += feld[0][i];
+			summeS2 += feld[1][i];
+			summeS3 += feld[2][i];
+			
+			
+		}
+		// Summe der Reihen bilden
+		for(int x = 0; x < 3; x++) {
+			summeR1 += feld[x][0];
+			summeR2 += feld[x][1];
+			summeR3 += feld[x][2];
+			
+			
+			
+		}
+			if(summeR1 == 3 || summeR2 ==3 || summeR3==3|| summeS1==3||summeS2==3||summeS3==3||summeD1==3||summeD2==3) {
+				// Spieler 1 hat gewonnen
+				zustand = 1;
+				
+		} 
+			else if (summeR1 == -3|| summeR2==-3 || summeR3==-3||summeS1==-3||summeS2==-3||summeS3==-3||summeD1==-3||summeD2==-3) {
+				// Spieler 2 hat gewonnen 
+				zustand = 2;
+		}   
+		
+				
+		
+			
+			   	
+		}
+		
+		// die Spalte 3 oder -3 ergeben
+		// die Diagonalen 3 oder -3 ergeben
+	}
+
